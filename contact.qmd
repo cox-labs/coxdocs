@@ -18,4 +18,4 @@ If you have a general usage question, ask it on [the appropriate Google group](h
 
 We are also always on the lookout for promising canditates. In case you are interested in becoming a Master's/PhD student or a postdoc, we encourage you to apply at all time via e-mail to [Jürgen Cox](mailto:cox@biochem.mpg.de).
 
-Or connect with us on GitHub, Twitter, or Linkedin (links in top right).
+Or connect with us on GitHub or Twitter (links in top right).
