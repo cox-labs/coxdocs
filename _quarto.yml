@@ -1,0 +1,36 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  navbar:
+    logo: advanced/coxlab_logo2.png
+    search: true
+    left:
+      - text: "HOME"
+        file: index.qmd
+      - text: "MaxQuant"
+        href: maxquant_functions.html
+      - text: "Perseus"
+        href: perseus_instructions.html
+      - text: "Andromeda"
+        href: andromeda_instructions.html
+    right:
+      - icon: envelope
+        href: contact.html
+      - icon: github
+        url: https://github.com/cox-labs/CoxLab_Bug_Reporting
+      - icon: twitter
+        file: https://twitter.com/TheCoxLab
+      - icon: fa-linkedin fa-lg
+        url: https://www.linkedin.com/in/juergen-cox-2437ba17/
+  page-footer: 
+    center: "© 2023, created by and maintained by Cox lab" 
+
+format:
+  html:
+    theme: yeti
+    css: styles.css
+    toc: true
+
+    

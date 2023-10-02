@@ -1,0 +1,31 @@
+---
+title: "Viewer - Getting started"
+author: "[Assa Yeroslaviz](https://github.com/yeroslaviz)"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: true
+    number-sections: true
+    number-depth: 4
+editor: visual
+date: today
+execute:
+  eval: true
+bibliography: references.bib
+csl: nature.csl
+---
+
+The Viewer module can either be used to get some prior information out of loaded raw files or to find some follow up hypotheses after raw files have already been processed.
+
+# Raw files prior processing
+
+To view MS spectra of raw files, load the files using the `Load` (to load single files) or `Load folder` (to load a whole folder) options.
+
+![Load raw files](Figures/loadrawfiles_wiki1.png){#fig-load-raw-files}
+
+# Raw files post processing with MaxQuant
+
+File organization is important for the correct display of annotated spectra. Raw files should be in the same folder as all index files, the `mqpar.xml` file and all output folders created by MaxQuant during the processing (that includes the combined folder). The easiest way to load the entire data is to load the `mqpar.xml` file. Make sure that the file paths are correct if using this option.
+
+![Load mqpar.xml](Figures/loadparams_wiki2.png){#fig-load-mqpar}

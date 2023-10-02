@@ -1,0 +1,23 @@
+---
+title: "contact"
+editor: visual
+---
+
+<link rel="stylesheet" href="styles.css" type="text/css">
+
+
+MaxQuant, Perseus, and related software packages are developed by the [Computational Systems Biochemistry](http://www.biochem.mpg.de/cox/index.html) under Prof. Jürgen Cox.
+
+If you need to contact the developers, you have a few options to proceed:
+
+- If you think something is misspelled or unclear in the documentation, consider changing it yourself (creating a pull request is quite easy).
+- If you have found a bug in the software or want to make a feature request, please create an issue on [our github repository](https://github.com/cox-labs/CoxLab_Bug_Reporting).
+
+If you have a general usage question, ask it on [the appropriate Google group](https://maxquant.org/community/).
+
+----
+
+
+We are also always on the lookout for promising canditates. In case you are interested in becoming a Master's/PhD student or a postdoc, we encourage you to apply at all time via e-mail to [Jürgen Cox](mailto:cox@biochem.mpg.de).
+
+Or connect with us on GitHub, Twitter, or Linkedin (links in top right).

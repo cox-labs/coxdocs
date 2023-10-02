@@ -1,0 +1,53 @@
+---
+title: "Andromeda Enzymes - the proteases table"
+author: "[Assa Yeroslaviz](https://github.com/yeroslaviz)"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: visual
+date: today
+bibliography: references.bib
+csl: nature.csl
+---
+
+# Configure the proteases table
+
+For the here shown step by step description Andromeda was used within MaxQuant (version 1.5.3.8). 
+
+## Open the proteases table
+
+Open MaxQuant and go to the Andromeda configuration tab. There select the Data type "Proteases" (s. [@fig-add-prote]). 
+
+![Adding new Proteases](Figures/configproteases-01-open_tab-edited.png){#fig-add-prote}
+
+## Viewing examples
+
+In most studies samples are digested using Trypsin. In the "Proteases" table you will find two different definitions for Trypsin. The first definition cleaves at the carboxyl side of the amino acids lysine or arginine, except when either is followed by proline (see Description on the right hand side of the Andromeda window). That’s the classical definition. Additional comments in [@fig-view-trypsin] are in black and blue.
+
+![An example of added Trypsin protease to the table](Figures/configproteases-02-viewing_trypsin-edited.png){#fig-view-trypsin}
+
+However the commonly used definition is "Trypsin/P", which also cleaves at carboxyl side of the amino acids lysine or arginine, also if a proline follows (highlighted in red in @fig-trypsinP). Additional comments in @fig-trypsinP are in black and blue.
+
+![TrypsinP cleaves at the carboxyl side of the AA](Figures/configproteases-02-viewing_trypsin-p-edited.png){#fig-trypsinP}
+
+## Adding a new protease
+
+Let's assume Chymotrypsin is not yet provided in Andromeda and we want to add it. From the literature we know Chymotrypsin cleaves c-terminal after Phenylalanine (F), Tryptophan (W) and Tyrosine (Y). 
+
+First click the "Add" button as shown in @fig-chymotrypsin. Then a new row will be added at the end of the table and a new protease form will appear on the right hand side that can be edited. 
+
+![Adding Chymotrypsin ](Figures/configproteases-03-adding_form-edited.png){#fig-chymotrypsin}
+
+Then you just have to fill in the form by defining a name, a description and the specificity. Don't forget to click the "Modify table" button when your done to transfer the changes you made in the form to the table on the left. And to save the table you have to click the "Save changes" button. Additional comments on the screenshot are in black and blue in @fig-save-chymotrypsin.
+
+To have the added modification available in MaxQuant you have to open a new MaxQuant window.
+
+![save added protease ](Figures/configproteases-04-adding_filled_in_params-edited.png){#fig-save-chymotrypsin}
+
+__Comment:__ Note that you also can do completely unspecific searches in MaxQuant. For this no definition of an enzyme is necessary.
+
+

@@ -1,0 +1,44 @@
+---
+title: "Perseus"
+author: "[Assa Yeroslaviz](https://github.com/yeroslaviz)"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: visual
+date: today
+bibliography: references.bib
+---
+
+The Perseus software platform supports biological and biomedical researchers in interpreting protein quantification, interaction and post-translational modification data. Perseus contains a comprehensive portfolio of statistical tools for high-dimensional omics data analysis covering normalization, pattern recognition, time-series analysis, cross-omics comparisons and multiple-hypothesis testing (for an overview see @fig-perseus). A machine learning module supports the classification and validation of patient groups for diagnosis and prognosis, and it also detects predictive protein signatures. Central to Perseus is a user-friendly, interactive workflow environment that provides complete documentation of computational methods used in a publication[@tyanova2016].
+
+![Perseus overview](Figures/perseus_figure1.jpg){#fig-perseus}
+
+## Learn
+
+-   Hands-on tutorials and theoretical lectures are available on the [MaxQuant youtube channel](https://www.youtube.com/channel/UCKYzYTm1cnmc0CFAMhxDO8w).
+-   Participate in our annual [MaxQuant summer school](http://summerschool.maxquant.de) to gain even deeper insights into MaxQuant and Perseus. Read the protocol-style book chapter ([@tyanova2018] on Perseus. 
+- Join the discussion around Perseus and data analysis on the [perseus google group](https://groups.google.com/g/perseus-list) -- a great place to ask any question and get answers from the community.
+
+## Download
+
+Perseus is freely available to commercial and academic users, just follow the [download and installation guide](perseus_download_guide.html)
+
+## Cite
+
+If you use Perseus in your project, please cite one of the papers listed below:
+
+-   The Perseus computational platform for comprehensive analysis of (prote)omics data [@tyanova2016_1]
+
+-   A network module for the Perseus software for computational proteomics facilitates proteome interaction graph analysis [@rudolph2019]
+
+-   Proteomic maps of breast cancer subtypes [@tyanova2016a]
+
+-   1D and 2D annotation enrichment: a statistical method integrating quantitative proteomics with complementary high-throughput data [@cox2012]
+
+## Report a bug
+
+For question we would love to hear from you under [Contact](contact.html)

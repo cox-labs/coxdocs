@@ -1,0 +1,25 @@
+---
+title: "The Viewer"
+author: "[Assa Yeroslaviz](https://github.com/yeroslaviz)"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: true
+    number-sections: true
+    number-depth: 4
+editor: visual
+date: today
+execute:
+  eval: true
+bibliography: references.bib
+csl: nature.csl
+---
+
+The user interface of the Viewer, which is packed with MaxQuant is located at the "Viewer" tab of the MaxQuant software (highlighted by a red rectangle in @fig-ribbon-edited). The title bar along the top has the MaxQuant logo on the left, followed by an icon that can be used to rename the session, which will be displayed and is by default **Session 1 - MaxQuant - name of the currently displayed raw file**. The ribbon of the "Viewer" tab contains three groups of functions: the **Map controls** (highlighted by a petrol blue rectangle to the left), the **Feature controls** (highlighted by a yellow rectangle in the middle) and the **Table navigation** (highlighted by a red-brown rectangle on the right hand side). The functionalities of all buttons within each category can be obtained from their tool tips.
+
+![Viewer Ribbon](Figures/ribbon-edited.png){#fig-ribbon-edited}
+
+The Viewer window (s. @fig-viewer-window) is split into four different areas: the **map view** (top left), the **MS-feature view** (bottom left), the **table view** (top right) and the **protein view** (bottome right). Each view can be manipulated with the corresponding buttons. The left window with the map view and the MS-feature view can be either split horizontally or vertically by the button highlighted by the blue rectangle in @fig-ribbon-edited.
+
+![Viewer window](Figures/featureView.png){#fig-viewer-window}

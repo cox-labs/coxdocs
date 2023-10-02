@@ -1,0 +1,47 @@
+---
+title: "Viewer - Tutorials"
+author: "[Assa Yeroslaviz](https://github.com/yeroslaviz)"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: true
+    number-sections: true
+    number-depth: 4
+editor: visual
+date: today
+execute:
+  eval: true
+bibliography: references.bib
+csl: nature.csl
+---
+
+Tutorials explaining how to use the viewer can be found in our [YouTube channel](https://www.youtube.com/c/MaxQuantChannel).
+
+A few examples are listed below:
+
+**MaxQuant Viewer tutorials**
+
+From our 2023 MaxQunat Summer School in Boston
+
+{{< video https://youtu.be/jh0tQD-MaHU?si=rP__AsFdIehqMWj1 >}}
+
+**MaxQuant basic I + II**
+
+From our 2022 MaxQunat Summer School in Barcelona
+
+{{< video https://youtu.be/-f9XZXiZPiQ?si=iFppseL76Z_sllg5 >}}
+
+**MaxQuant Basics I and II**
+
+From our online MaxQunat SummerSchool in 2021.
+
+{{< video https://youtu.be/H_vClGghnNo?si=Cg3Pu3aaJqi2uU5z >}}
+
+{{< video https://youtu.be/qwAxgDEpo6c?si=xpnt5pwc4_3aUI6- >}}
+
+**MaxQuant Viewer**
+
+From our 2019 MaxQunat Summer School in Madison
+
+{{< video https://youtu.be/wT-T1Eb459w?si=rQQ7uVfgvIz3fsx2 >}}
