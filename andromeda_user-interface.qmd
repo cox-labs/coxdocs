@@ -1,0 +1,53 @@
+---
+title: "Andromeda User Interface"
+author: "[Assa Yeroslaviz](https://github.com/yeroslaviz)"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: true
+    number-sections: true
+    number-depth: 4
+editor: visual
+date: today
+bibliography: references.bib
+csl: nature.csl
+---
+
+There are two way to run Andromeda, within the MaxQuant or as a stand-alone tool.
+
+# Andromeda within MaxQuant
+The user interface of the Andromeda search engine (s. @fig-andromedaUI) packaged with MaxQuant is located at the last tab of the MaxQuant software (highlighted by a red rectangle). The title bar along the top has the MaxQuant logo on the left, followed by an icon that can be used to rename the session, which will be displayed and is by default "Session 1 - MaxQuant". The ribbon of the "Andromeda configuration" tab contains three groups of functions: the **Data type** (highlighted by a green rectangle), the **Table actions** (highlighted by a blue rectangle) and the **Actions** (highlighted by a orange rectangle).
+
+![Andromeda User Interface within MaxQuant](Figures/andromeda_maxquant_ui.png){#fig-andromedaUI}
+
+- The **Data type** is the category you are interested in, either to look up some configurations or to add, remove or modify the list of items of that category.
+- **Table actions** contain all the functions that can be applied to a table of chosen Data type.
+- **Actions** are the functions that are applied to all tables. 
+
+The window below the ribbon is split into two, where the left hand side contains the list of all modifications, proteases or sequence databases depending on the chosen Data type. The right hand side contains the information of one selected row of the left window by clicking on it.
+
+In the bottom right corner of the MaxQuant window are a progress bar and the version number. 
+
+# Stand-alone Andromeda
+
+Andromeda's stand-alone version can either be used with a user interface or as a command line tool. 
+
+##  Andromeda with GUI
+
+The user interface of the Andromeda stand-alone version has the MaxQuant logo on the top left. The functionality buttons can be found on the right (highlighted green rectangle in @fig-andromeda-sa). 
+
+Loading "Source Files" is possible with the "Browse" button. The corresponding "Parameter Files" can be loaded by clicking on the source files and using the "Select .apar" button. It can also be defined, whether a protein summary should be reported, whether the results should have a minimal score and how many threads should be used for the calculation. 
+
+![Andromeda User Interface standalone](Figures/user_interface-standalone-gui-edited.png){#fig-andromeda-sa}
+
+## Andromeda as command line tool
+
+To figure out how to specify the parameters in the command line tool, follow the steps below:
+
+- Open a `cmd`
+- Go to the unziped Andromeda folder
+- Run the executable `AndromedaCmd.exe` without parameters (highlighted by a cyan rectangle in @fig-andromeda-cmd) to figure out the Andromeda settings (highlighted by a red rectangle in @fig-andromeda-cmd).
+
+
+![Andromeda User Interface standalone](Figures/user_interface-standalone-cmd-edited.png){#fig-andromeda-cmd}

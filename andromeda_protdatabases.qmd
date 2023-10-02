@@ -1,0 +1,50 @@
+---
+title: "Andromeda Protdatabases - the (protein) sequence databases table"
+author: "[Assa Yeroslaviz](https://github.com/yeroslaviz)"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: visual
+date: today
+bibliography: references.bib
+csl: nature.csl
+---
+
+# Configure the sequence databases table
+
+For the here shown step by step description Andromeda was used within MaxQuant (version 1.5.3.8). 
+
+## Open the sequence databases table
+
+Open MaxQuant and go to the Andromeda configuration tab. There select the Data type "Sequence databases" (s. @fig-open-db).
+
+![opening the databases table](Figures/configprotseq-01-open_tab-edited.png){#fig-open-db}
+
+## Viewing an example
+
+Let's assume we have to analyze human proteome measurements and we are interested which human database is used and how it is used (see Description on the right hand side of the Andromeda window in @fig-human-db).
+
+![example human protease DB](Figures/configprotseq-02-view_example-edited.png){#fig-human-db}
+
+## Adding a new database
+
+Now we are assuming that a reviewer asks us to search our human proteome measurements against the tasmanian devil proteome ( _Sarcophilus harrisii_ ) - for some reason - and we downloaded the corresponding fasta file from Uniprot.
+
+After downloading the file, we are including the database into MaxQuant. First, click the "Add" button (highlithed in @fig-add-entry). Then a new row will be added at the end of the table and a new sequence database form will appear on the right hand side that can be edited. 
+
+![Adding a new entry to database](Figures/configprotseq-03-add_form-edited.png){#fig-add-entry}
+
+Then you just have to fill in the form by defining the fasta file that should be used, the parsing rule that should be applied to retrieve the identifiers, the source of the fasta file, the taxonomy and the organism name. To define the parsing rule regular expressions are used. A regular expression is a sequence of characters that forms a search pattern with a special syntax. A good general introduction can be found, as always, on [Wikipedia](http://en.wikipedia.org/wiki/Regular_expression). If you already know generally how regular expressions work, you may only need to glance at a [this Quick Reference](http://msdn.microsoft.com/en-us/library/az24scfc.aspx) or at an even quicker [Cheat Sheet](http://www.mikesdotnetting.com/Article/46/CSharp-Regular-Expressions-Cheat-Sheet). Also you don't have to know the taxonomy of your organism, just type in the name and use the arrows in the taxonomy line and MaxQuant will complete the form.
+
+Don't forget to click the "Modify table" button ([@fig-save-entry]) when you're done to transfer the changes you made in the form to the table on the left. And to save the table you have to click the "Save changes" button. 
+
+To have the added sequence database available in MaxQuant you have to open a new MaxQuant window. 
+
+![Saving the entry in the database](Figures/configprotseq-04-add_filled_in_form-edited.png){#fig-save-entry}
+
+
+
