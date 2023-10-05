@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.294">
+<meta name="generator" content="quarto-1.4.315">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Assa Yeroslaviz">
-<meta name="dcterms.date" content="2023-09-29">
+<meta name="author" content="Cox Lab">
+<meta name="dcterms.date" content="2023-10-04">
 
 <title>Andromeda modifications table</title>
 <style>
@@ -91,42 +91,42 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html" rel="" target="">
- <span class="menu-text">HOME</span></a>
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">HOME</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./maxquant_functions.html" rel="" target="">
- <span class="menu-text">MaxQuant</span></a>
+    <a class="nav-link" href="./maxquant_functions.html"> 
+<span class="menu-text">MaxQuant</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./perseus_instructions.html" rel="" target="">
- <span class="menu-text">Perseus</span></a>
+    <a class="nav-link" href="./perseus_instructions.html"> 
+<span class="menu-text">Perseus</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./andromeda_instructions.html" rel="" target="">
- <span class="menu-text">Andromeda</span></a>
+    <a class="nav-link" href="./andromeda_instructions.html"> 
+<span class="menu-text">Andromeda</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="./contact.html" rel="" target=""><i class="bi bi-envelope" role="img">
+    <a class="nav-link" href="./contact.html"> <i class="bi bi-envelope" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/cox-labs/CoxLab_Bug_Reporting" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/cox-labs/CoxLab_Bug_Reporting"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/TheCoxLab" rel="" target=""><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com/TheCoxLab"> <i class="bi bi-twitter" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/in/juergen-cox-2437ba17/" rel="" target=""><i class="bi bi-fa-linkedin fa-lg" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/in/juergen-cox-2437ba17/"> <i class="bi bi-fa-linkedin fa-lg" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -171,14 +171,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p><a href="https://github.com/yeroslaviz">Assa Yeroslaviz</a> </p>
+             <p>Cox Lab </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 29, 2023</p>
+      <p class="date">October 4, 2023</p>
     </div>
   </div>
   
@@ -528,6 +528,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        console.log("RESIZE");
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {

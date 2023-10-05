@@ -1,6 +1,6 @@
 ---
 title: "Andromeda Configurations"
-author: "[Assa Yeroslaviz](https://github.com/yeroslaviz)"
+author: "Cox Lab"
 format: 
   html:
     toc: true

@@ -1,6 +1,6 @@
 ---
 title: "Cox Docs"
-author: "[Assa Yeroslaviz](https://github.com/yeroslaviz)"
+author: "Cox Lab"
 format: 
   html:
     toc: true
@@ -10,20 +10,20 @@ format:
     number-depth: 4
 editor: visual
 date: today
-
 ---
 
-----
+------------------------------------------------------------------------
 
 Welcome to coxdocs.org, the home of the documentation for
 
-* [MaxQuant](maxquant_instructions.html)
-* [Perseus](perseus_instructions.html)
-* [Andromeda](andromeda_instructions.html)
+-   [MaxQuant](maxquant_instructions.html)
+-   [Perseus](perseus_instructions.html)
+-   [Andromeda](andromeda_instructions.html)
 
----- 
+------------------------------------------------------------------------
 
-|  <div class="watermark">Cox Lab</div>
-<div class="watermarked">
-  <img src="advanced/coxlab_logo2.png" alt="Photo">
-</div>
+| 
+
+::: watermarked
+<img src="advanced/coxlab_logo2.png" alt="Photo"/>
+:::

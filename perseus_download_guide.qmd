@@ -1,5 +1,6 @@
 ---
 title: "Perseus Download and Installation"
+author: "Cox Lab"
 format: 
   html:
     toc: true
@@ -12,8 +13,7 @@ date: today
 bibliography: references.bib
 ---
 
-
-The latest Perseus release is: **2.0.11** [date: 29.09.2023]
+The latest Perseus release is: **2.0.11** \[date: 29.09.2023\]
 
 ## Download
 
@@ -21,9 +21,9 @@ Downloading and using the software is free of charge.
 
 Simply download from [our MQ home page](https://maxquant.org/perseus/) and unpack the compressed file `Perseus.zip`.
 
-## requierments 
+## requierments
 
-Supported operation system versions (64 bit is required) are Windows  10 or 11 or Windows Server 2016, 2019, 2022.
+Supported operation system versions (64 bit is required) are Windows 10 or 11 or Windows Server 2016, 2019, 2022.
 
 **Install .NET Framework 4.7.2 or higher** - To find out whether you already have it, follow the instructions on [How to Determine Which .NET Framework Versions Are Installed](http://msdn.microsoft.com/en-us/library/hh925568%28v=vs.110%29.aspx#net_b). If you need to, you can download the software and get installation instructions at the [Microsoft Download Center](http://www.microsoft.com/en-us/download/details.aspx?id=30653).
 
@@ -31,10 +31,9 @@ Supported operation system versions (64 bit is required) are Windows  10 or 11 o
 
 To run Perseus the GUI just double click on `Perseus.exe` in the Perseus folder.
 
-
 ## Hardware requirements
 
-  * Intel Pentium III/800 MHz or higher (or compatible) although one should probably not go below a dual core processor.
-  * 2 GB RAM minimum.
-  * 2 GB RAM per thread that is executed in parallel is required.
-  * There is no upper limit on the number of cores. Whatever you can fit into a shared memory machine will work as long as the disk performance scales up with it.
+-   Intel Pentium III/800 MHz or higher (or compatible) although one should probably not go below a dual core processor.
+-   2 GB RAM minimum.
+-   2 GB RAM per thread that is executed in parallel is required.
+-   There is no upper limit on the number of cores. Whatever you can fit into a shared memory machine will work as long as the disk performance scales up with it.

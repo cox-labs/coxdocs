@@ -1,6 +1,6 @@
 ---
 title: "Perseus"
-author: "[Assa Yeroslaviz](https://github.com/yeroslaviz)"
+author: "Cox Lab"
 format: 
   html:
     toc: true
@@ -20,8 +20,8 @@ The Perseus software platform supports biological and biomedical researchers in 
 ## Learn
 
 -   Hands-on tutorials and theoretical lectures are available on the [MaxQuant youtube channel](https://www.youtube.com/channel/UCKYzYTm1cnmc0CFAMhxDO8w).
--   Participate in our annual [MaxQuant summer school](http://summerschool.maxquant.de) to gain even deeper insights into MaxQuant and Perseus. Read the protocol-style book chapter ([@tyanova2018] on Perseus. 
-- Join the discussion around Perseus and data analysis on the [perseus google group](https://groups.google.com/g/perseus-list) -- a great place to ask any question and get answers from the community.
+-   Participate in our annual [MaxQuant summer school](http://summerschool.maxquant.de) to gain even deeper insights into MaxQuant and Perseus. Read the protocol-style book chapter ([@tyanova2018] on Perseus.
+-   Join the discussion around Perseus and data analysis on the [perseus google group](https://groups.google.com/g/perseus-list) -- a great place to ask any question and get answers from the community.
 
 ## Download
 
