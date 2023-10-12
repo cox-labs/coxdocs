@@ -10,7 +10,7 @@ website:
       - text: "HOME"
         file: index.qmd
       - text: "MaxQuant"
-        href: maxquant_functions.html
+        href: maxquant_instructions.html
       - text: "Perseus"
         href: perseus_instructions.html
       - text: "Andromeda"
