@@ -10,7 +10,7 @@ format:
     number-depth: 4
     code-fold: true
     strip-comments: true
-editor: visual
+editor: source
 date: today
 execute:
   eval: true
@@ -22,7 +22,7 @@ csl: nature.csl
 ---
 
 ```{r}
-getwd()
+
 # install.packages("devtools")
 #install.packages("glossary")
 library(glossary)
