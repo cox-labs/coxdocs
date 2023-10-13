@@ -1,0 +1,1180 @@
+---
+title: "Output Tables"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+csl: nature.csl
+---
+
+MaxQuant produces multiple Output tables:
+
+## Summary Table
+			
+The summary file contains summary information for all the raw files processed with a single MaxQuant run. The 
+summary information consists of some MaxQuant parameters, information of the raw file contents, and statistics on 
+the peak detection. Based on this file a quick overview can be gathered on the quality of the data in the raw file.
+
+The last row in this file contains the summary information for each column on each of the processed files.
+
+| Name | Description |
+|------|-------------|
+| Raw file | The raw file processed. |
+| Experiment | Experiment name assigned to this LC-MS run in the experimental design. |
+| Fraction | Fraction assigned to this LC-MS run in the experimental design. |
+| Enzyme | The protease used to digest the protein sample. |
+| Enzyme mode | The protease used to digest the protein sample. |
+| Enzyme first search | The protease used for the first search. |
+| Enzyme mode first search | The protease used for the first search. |
+| Use enzyme first search | Marked with '+' when a different protease setup was used for the first search. |
+| Variable modifications | The variable modification(s) used during the identification of peptides. |
+| Multi modifications | The multi modification(s) used during the identification of peptides. |
+| Variable modifications first search | The variable modification(s) used during the first search. |
+| Use variable modifications first search | Marked with '+' when different variable modifications were used for the first search. |
+| Requantify | The number of labels used. |
+| Multiplicity | The number of labels used. |
+| Max. missed cleavages | The maximum allowed number of missed cleavages. |
+| Max. labeled AAs | The maximum allowed of labeled amino acids in a peptide amino acid sequence. |
+| "Labels" + i | The labels used in the labeling experiment. Allowed values for X: 0=light; 1=medium; 2=heavy label partner. |
+| LC-MS run type | The type of LC-MS run. Usually it will be 'Standard' which refers to a conventional shotgun proteomics run with data-dependent MS/MS. |
+| Time-dependent recalibration | When marked with '+', time-dependent recalibration was applied to improve the data quality. |
+| MS | The number of MS spectra recorded in this raw file. |
+| MS/MS | The number of MS/MS spectra recorded in this raw file. |
+| MS3 | The number of MS3 spectra recorded in this raw file. |
+| MS/MS Submitted | The number of tandem MS spectra submitted for analysis. |
+| MS/MS Submitted (SIL) | The number of tandem MS spectra submitted for analysis, where the precursor ion was detected as part of a labeling cluster. |
+| MS/MS Submitted (ISO) | The number of tandem MS spectra submitted for analysis, where the precursor ion was detected as an isotopic pattern. |
+| MS/MS Submitted (PEAK) | The number of tandem MS spectra submitted for analysis, where the precursor ion was detected as a single peak. |
+| MS/MS Identified | The total number of identified tandem MS spectra. |
+| MS/MS Identified (SIL) | The total number of identified tandem MS spectra, where the precursor ion was detected as part of a labeling cluster. |
+| MS/MS Identified (ISO) | The total number of identified tandem MS spectra, where the precursor ion was detected as an isotopic pattern. |
+| MS/MS Identified (PEAK) | The total number of identified tandem MS spectra, where the precursor ion was detected as a single peak. |
+| MS/MS Identified [%] | The percentage of identified tandem MS spectra. |
+| MS/MS Identified (SIL) [%] | The percentage of identified tandem MS spectra, where the precursor ion was detected as part of a labeling cluster. |
+| MS/MS Identified (ISO) [%] | The percentage of identified tandem MS spectra, where the precursor ion was detected as an isotopic pattern. |
+| MS/MS Identified (PEAK) [%] | The percentage of identified tandem MS spectra, where the precursor ion was detected as a single peak. |
+| Peptide Sequences Identified | The total number of unique peptide amino acid sequences identified from the recorded tandem mass spectra. |
+| Peaks | The total number of peaks detected in the full scans. |
+| Peaks Sequenced | The total number of peaks sequenced by tandem MS. |
+| Peaks Sequenced [%] | The percentage of peaks sequenced by tandem MS. |
+| Peaks Repeatedly Sequenced | The total number of peaks repeatedly sequenced (i.e. 1 or more times) by tandem MS. |
+| Peaks Repeatedly Sequenced [%] | The percentage of peaks repeatedly sequenced (i.e. 1 or more times) by tandem MS. |
+| Isotope Patterns | The total number of detected isotope patterns. |
+| Isotope Patterns Sequenced | The total number of isotope patterns sequenced by tandem MS. |
+| Isotope Patterns Sequenced (z>1) | The total number of isotope patterns sequenced by tandem MS with a charge state of 2 or more. |
+| Isotope Patterns Sequenced [%] | The percentage of isotope patterns sequenced by tandem MS. |
+| Isotope Patterns Sequenced (z>1) [%] | The percentage of isotope patterns sequenced by tandem MS with a charge state of 2 or more. |
+| Isotope Patterns Repeatedly Sequenced | The total number of isotope patterns repeatedly sequenced (i.e. 1 or more times) by tandem MS. |
+| Isotope Patterns Repeatedly Sequenced [%] | The percentage of isotope patterns repeatedly sequenced (i.e. 1 or more times) by tandem MS. |
+| Multiplets | The total number of detected labeling pairs. |
+| "Multiplets z=" + z | "The total number of detected labeling pairs with a charge state of " + z + "." |
+| Multiplets Sequenced | The total number of labeling pairs sequenced by tandem MS. |
+| Multiplets Sequenced [%] | The percentage of labeling pairs sequenced by tandem MS. |
+| Multiplets Repeatedly Sequenced | The total number of labeling pairs repeatedly sequenced (i.e. 1 or more times) by tandem MS. |
+| Multiplets Repeatedly Sequenced [%] | The percentage of labeling pairs repeatedly sequenced (i.e. 1 or more times) by tandem MS. |
+| Multiplets Identified | The total number of labeling pairs identified. |
+| Multiplets Identified [%] | The percentage of labeling pairs identified. |
+| Multiplets | The total number of detected labeling triplets. |
+| "Multiplets z=" + z | "The total number of detected labeling triplets with a charge state of " + z + "." |
+| Multiplets Sequenced | The total number of labeling triplets sequenced by tandem MS. |
+| Multiplets Sequenced [%] | The percentage of labeling triplets sequenced by tandem MS. |
+| Multiplets Repeatedly Sequenced | The total number of labeling triplets repeatedly sequenced (i.e. 1 or more times) by tandem MS. |
+| Multiplets Repeatedly Sequenced [%] | The percentage of labeling triplets repeatedly sequenced (i.e. 1 or more times) by tandem MS. |
+| Multiplets Identified | The total number of labeling triplets identified. |
+| Multiplets Identified [%] | The percentage of labeling triplets identified. |
+| Recalibrated | When marked with '+', the masses taken from the raw file were recalibrated. |
+| Av. Absolute Mass Deviation [ppm] | The average absolute mass deviation found comparing to the identification mass in parts per million. |
+| Mass Standard Deviation [ppm] | The standard deviation of the mass deviation found comparing to the identification mass in parts per million. |
+| Av. Absolute Mass Deviation [mDa] | The average absolute mass deviation found comparing to the identification mass in milli-Dalton. |
+| Mass Standard Deviation [mDa] | The standard deviation of the mass deviation found comparing to the identification mass in milli-Dalton. |
+| Label free norm param | The normalization factor used to scale the intensity values in a label-free experiment. |
+| MBRFDR | False discovery rate for matching between runs. |
+
+
+
+--------
+
+## Evidence Table 
+			
+The evidence file combines all the information about the identified peptides and normally is the only file required 
+for processing the results. Additional information about the peptides, modifications, proteins, etc. can be found 
+in the other files by unique identifier linkage.
+
+| Name | Description |
+|------|-------------|
+| Sequence | The identified AA sequence of the peptide. |
+| Length | The length of the sequence stored in the column 'Sequence'. |
+| aa + " Count" | "The number of instances of " + aa + " contained within the sequence. The value for this can reliably be determined in the case of labeling partners based on the distance between the partners. These counts are used to solidify the peptide identification process." |
+| Modifications | Post-translational modifications contained within the identified peptide sequence. |
+| Modified sequence | Sequence representation including the post-translational modifications (abbreviation of the modification in brackets before the modified AA). The sequence is always surrounded by underscore characters ('_'). |
+| title + " Probabilities" | "Sequence representation of the peptide including PTM positioning probabilities ([0..1], where 1 is best match) for '" + title + "'." |
+| title + " Score Diffs" | Sequence representation for each of the possible PTM positions in each possible configuration, the difference is calculated between the identification score with the PTM added to that position and the best scoring identification where no PTM is added to that position. When this value is negative, it is unlikely that the particular modification is located at this position. |
+| title | "The number of occurrences of the modification '" + title + "'." |
+| "Missed cleavages (" + enzyme + ")" | Number of missed enzymatic cleavages. |
+| Missed cleavages | Number of missed enzymatic cleavages. |
+| Proteins | The identifiers of the proteins this particular peptide is associated with. |
+| Leading proteins | The identifiers of the proteins in the proteinGroups file, with this protein as best match, this particular peptide is associated with. When multiple matches are found here, the best scoring protein can be found in the 'Leading Razor Protein' column. |
+| Leading razor protein | The identifier of the best scoring protein, from the proteinGroups file this, this peptide is associated to. |
+| Gene names | Names of genes this peptide is associated with. |
+| Protein names | Names of proteins this peptide is associated with. |
+| Type | The type of the feature. 'MSMS' - for an MS/MS spectrum without an MS1 isotope pattern assigned. 'ISO-MSMS' - MS1 isotope cluster identified by MS/MS. 'MULTI-MSMS' - MS1 labeling cluster identified by MS/MS. 'MULTI-SECPEP' - MS1 labeling cluster identified by MS/MS as second peptide. 'MULTI-MATCH' - MS1 labeling cluster identified by matching between runs. In case of label-free data there is no difference between 'MULTI' and 'ISO'. |
+| Labeling State | Labeling state of the precursor isotope pattern used to identify the peptide. |
+| Raw file | The name of the RAW-file the mass spectral data was derived from. |
+| Fraction | The fraction in which this peptide was detected. |
+| colName |  |
+| MS/MS m/z | The m/z used for fragmentation (not necessarily the mono-isotopic m/z). |
+| Charge | The charge-state of the precursor ion. |
+| m/z | The recalibrated mass-over-charge value of the precursor ion. |
+| Mass | The predicted monoisotopic mass of the identified peptide sequence. |
+| Resolution | The resolution of precursor ion measured in Full Width at Half Maximum (FWHM). |
+| Uncalibrated - Calibrated m/z [ppm] | The difference between the uncalibrated and recalibrated mass-over-charge value of the precursor ion measured in parts-per-million. This gives an indication of the mass drift in the original data, which was automatically corrected by MaxQuant. |
+| Uncalibrated - Calibrated m/z [Da] | The difference between the uncalibrated and recalibrated mass-over-charge value of the precursor ion measured in parts-per-million. This gives an indication of the mass drift in the original data, which was automatically corrected by MaxQuant. |
+| Mass Error [ppm] | Mass error of the recalibrated mass-over-charge value of the precursor ion in comparison to the predicted monoisotopic mass of the identified peptide sequence in parts per million. |
+| Mass Error [Da] | Mass error of the recalibrated mass-over-charge value of the precursor ion in comparison to the predicted monoisotopic mass of the identified peptide sequence in milli-Dalton. |
+| Uncalibrated Mass Error [ppm] | Mass error of the uncalibrated mass-over-charge value of the precursor ion in comparison to the predicted monoisotopic mass of the identified peptide sequence.  Note: This column can contain missing values (denoted as NaN). |
+| Uncalibrated Mass Error [Da] | Mass error of the uncalibrated mass-over-charge value of the precursor ion in comparison to the predicted monoisotopic mass of the identified peptide sequence.  Note: This column can contain missing values (denoted as NaN). |
+| Max intensity m/z 0 | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| Max intensity m/z 0 | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| Max intensity m/z 1 | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| Max intensity m/z 0 | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| Max intensity m/z 1 | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| Max intensity m/z 2 | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| Retention time | The uncalibrated retention time in minutes in the elution profile of the precursor ion. |
+| Retention length | The total retention time of the peak (last timepoint - first timepoint). |
+| Calibrated retention time | The recalibrated retention time in minutes in the elution profile of the precursor ion. |
+| Calibrated retention time start | The recalibrated retention start in minutes in the elution profile of the precursor ion. |
+| Calibrated retention time finish | The recalibrated retention finish in minutes in the elution profile of the precursor ion. |
+| Retention time calibration | The difference in minutes between the uncalibrated and recalibrated retention time. This gives an indication of the retention time drift in the original data, which was automatically corrected by MaxQuant.  Note: This column can contain missing values (NaN). |
+| Match time difference | When the option 'match between runs' is used in MaxQuant, this value indicates the time difference between the feature from the raw file it was taken from and the feature from the raw file it was matched to. |
+| Match m/z difference | When the option 'match between runs' is used in MaxQuant, this value indicates the m/z difference between the feature from the raw file it was taken from and the feature from the raw file it was matched to. |
+| Match q-value | This is the q-value for features that have been identified by 'matching between runs'. |
+| Match score | The andromeda score of the MS/MS identification that is the source of this identification by 'matching between runs'. |
+| Number of data points | The number of data points (peak centroids) collected for this peptide feature. |
+| Number of scans | The number of MS scans that the 3d peaks of this peptide feature are overlapping with. |
+| Number of isotopic peaks | The number of isotopic peaks contained in this peptide feature. |
+| PIF | Short for Parent Ion Fraction; indicates the fraction the target peak makes up of the total intensity in the inclusion window. |
+| Fraction of total spectrum | The percentage the ion intensity makes up of the total intensity of the whole spectrum. |
+| Base peak fraction | The percentage the parent ion intensity in comparison to the highest peak in the MS spectrum. |
+| PEP | Posterior Error Probability of the identification. This value essentially operates as a p-value, where smaller is more significant. |
+| MS/MS Count | The number of sequencing events for this sequence, which matches the number of identifiers stored in the column 'MS/MS IDs'. This number is independent of the times the AA sequence has been identified through (other) modifications (e.g. heavy label, oxidation, etc.), about which information can be found in the columns 'Labeling State' and 'Modification'. |
+| MS/MS Scan Number | The RAW-file derived scan number of the MS/MS with the highest peptide identification score (the highest score is stored in the column 'Score'). |
+| Score | Andromeda score for the best associated MS/MS spectrum. |
+| Delta score | Score difference to the second best identified peptide. |
+| Combinatorics | Number of possible distributions of the modifications over the peptide sequence. |
+| Ratio H/L | The ratio between two heavy and light label partners. |
+| Ratio H/L normalized | Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1. |
+| Ratio H/L shift |  |
+| Ratio M/L | The ratio between two medium and light label partners. |
+| Ratio M/L normalized | Normalized ratio between two heavy and light label partners. The median of the total ratio population was shifted to 1. |
+| Ratio M/L shift |  |
+| Ratio H/L | The ratio between two heavy and light label partners. |
+| Ratio H/L normalized | Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1. |
+| Ratio H/L shift |  |
+| Ratio H/M | The ratio between two heavy and medium label partners. |
+| Ratio H/M normalized | Normalized ratio between two heavy and medium label partners. The median of the total ratio population was shifted to 1. |
+| Ratio H/M shift |  |
+| Intensity | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| Intensity | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| Intensity L | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner. |
+| Intensity H | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner. |
+| Intensity | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| Intensity L | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner. |
+| Intensity M | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the medium label partner. |
+| Intensity H | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner. |
+| Reverse | When marked with '+', this particular peptide was found to be part of a protein derived from the reversed part of the decoy database. These should be removed for further data analysis. |
+| Potential contaminant | When marked with '+', this particular peptide was found to be part of a commonly occurring contaminant. These should be removed for further data analysis. |
+| id | A unique (consecutive) identifier for each row in the evidence table, which is used to cross-link the information in this file with the information stored in the other files. |
+| Protein group IDs | The identifier of the protein-group this redundant peptide sequence is associated with, which can be used to look up the extended protein information in the file 'proteinGroups.txt'. As a single peptide can be linked to multiple proteins (e.g. in the case of razor-proteins), multiple id's can be stored here separated by a semicolon. As a protein can be identified by multiple peptides, the same id can be found in different rows. |
+| Peptide ID | The identifier of the non-redundant peptide sequence. |
+| Mod. peptide ID | Identifier of the associated modification summary stored in the file 'modificationSpecificPeptides.txt'. |
+| MS/MS IDs | Identifier(s) of the associated MS/MS summary(s) stored in the file 'msms.txt'. |
+| Best MS/MS | Identifier(s) of the best MS/MS associated spectrum stored in the file 'msms.txt'. |
+| AIF MS/MS IDs | Identifier(s) of the associated All Ion Fragmentation MS/MS summary(s) stored in the file 'aifMsms.txt'. |
+| t + " site IDs" | "Identifier(s) of the modification summary stored in the file '" + t + "Sites.txt'." |
+| "Reporter intensity " + i |  |
+| "Reporter intensity not corrected " + i |  |
+| "Reporter intensity count " + i |  |
+| Reporter PIF |  |
+| Reporter fraction |  |
+
+
+
+--------
+
+## Peptide Table
+
+The peptides table contains information on the identified peptides in the processed raw-files.
+
+| Name | Description |
+|------|-------------|
+| Sequence | The amino acid sequence of the identified peptide. |
+| N-term cleavage window | "Sequence window from -" + cleaveWindowHalf + " to " + cleaveWindowHalf + " around the N-terminal cleavage site of this peptide." |
+| C-term cleavage window | "Sequence window from -" + cleaveWindowHalf + " to " + cleaveWindowHalf + " around the C-terminal cleavage site of this peptide." |
+| Amino acid before | The amino acid in the protein sequence before the peptide. |
+| First amino acid | The amino acid in the first position of the peptide sequence. |
+| Second amino acid | The amino acid in the first position of the peptide sequence. |
+| Second last amino acid | The amino acid in the last position of the peptide sequence. |
+| Last amino acid | The amino acid in the last position of the peptide sequence. |
+| Amino acid after | The amino acid in the protein sequence after the peptide. |
+| aa + " Count" | "The number of instances of the '" + aa + "' amino acid contained within the sequence." |
+| Length | The length of the sequence stored in the column "Sequence". |
+| Mutated |  |
+| Mutation names |  |
+| "Missed cleavages (" + enzyme + ")" | Number of missed enzymatic cleavages. |
+| Missed cleavages | Number of missed enzymatic cleavages. |
+| Mass | Monoisotopic mass of the peptide. |
+| Proteins | Identifiers of proteins this peptide is associated with. |
+| Leading razor protein | Identifiers of the best scoring protein this peptide is associated with. |
+| Start position | Position of the first amino acid of this peptide in the protein sequence. (one-based) |
+| End position | Position of the last amino acid of this peptide in the protein sequence. (one-based) |
+| Gene names | Names of genes this peptide is associated with. |
+| Protein names | Names of proteins this peptide is associated with. |
+| Unique (Groups) | When marked with '+', this particular peptide is unique to a single protein group in the proteinGroups file. |
+| Unique (Proteins) | When marked with '+', this particular peptide is unique to a single protein sequence in the fasta file(s). |
+| Charges | All charge states that have been observed. |
+| PEP | Posterior Error Probability of the identification. This value essentially operates as a p-value, where smaller is more significant. |
+| Score | Highest Andromeda score for the associated MS/MS spectra. |
+| "Identification type " + exp | Indicates whether this experiment was identified by MS/MS or only by matching between runs. |
+| Fraction Average |  |
+| Fraction Std. Dev. |  |
+| "Fraction " + t |  |
+| colName + " " + t | Number of evidence entries for this 'Experiment'. |
+| Reverse | When marked with '+', this particular peptide was found to be part of a protein derived from the reversed part of the decoy database. These should be removed for further data analysis. |
+| Potential contaminant | When marked with '+', this particular peptide was found to be part of a commonly occurring contaminant. These should be removed for further data analysis. |
+| id | A unique (consecutive) identifier for each row in the peptides table, which is used to cross-link the information in this table with the information stored in the other tables. |
+| Protein group IDs | The identifiers of the protein groups this peptide was linked to, referenced against the proteinGroups table. |
+| Mod. peptide IDs | Identifier(s) for peptide sequence(s), associated with the peptide, referenced against the corresponding modified peptides table. |
+| Evidence IDs | Identifier(s) for analyzed peptide evidence associated with the protein group referenced against the evidences table. |
+| MS/MS IDs | The identifiers of the MS/MS scans identifying this peptide, referenced against the msms table. |
+| Best MS/MS | The identifier of the best (in terms of quality) MS/MS scan identifying this peptide, referenced against the msms table. |
+| t + " site IDs" | Identifier(s) for site(s) associated with the protein group, which show(s) evidence of the modification, referenced against the appropriate modification site file. |
+| MS/MS Count |  |
+| "Reporter intensity " + i |  |
+| "Reporter intensity not corrected " + i |  |
+| "Reporter intensity count " + i |  |
+| "Reporter intensity " + i + " " + exp |  |
+| "Reporter intensity not corrected " + i + " " + exp |  |
+| "Reporter intensity count " + i + " " + exp |  |
+| "Intensity " + exp | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| "Intensity L " + exp | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner. |
+| "Intensity M " + exp | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the medium label partner. |
+| "Intensity H " + exp | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner. |
+| Intensity | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| Intensity L | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner. |
+| Intensity M | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the medium label partner. |
+| Intensity H | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner. |
+| "Intensity " + exp | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| "Intensity L " + exp | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner. |
+| "Intensity H " + exp | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner. |
+| Intensity | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| Intensity L | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner. |
+| Intensity H | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner. |
+| "Intensity " + exp | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| Intensity | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| "Ratio M/L " + exp | The ratio between two medium and light label partners. |
+| "Ratio M/L normalized " + exp | The ratio between two medium and light label partners. |
+| "Ratio M/L variability [%] " + exp | Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100. |
+| "Ratio M/L count " + exp | Number of redundant peptides (MS1 features) used for quantitation. |
+| "Ratio M/L iso-count " + exp | Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method. |
+| "Ratio M/L type " + exp |  |
+| "Ratio H/L " + exp | The ratio between two heavy and light label partners. |
+| "Ratio H/L normalized " + exp | Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1. |
+| "Ratio H/L variability [%] " + exp | Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100. |
+| "Ratio H/L count " + exp | Number of redundant peptides (MS1 features) used for quantitation. |
+| "Ratio H/L iso-count " + exp | Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method. |
+| "Ratio H/L type " + exp |  |
+| "Ratio H/M " + exp | The ratio between two heavy and medium label partners. |
+| "Ratio H/M normalized " + exp | Normalized ratio between two heavy and medium label partners. The median of the total ratio population was shifted to 1. |
+| "Ratio H/M variability [%] " + exp | Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100. |
+| "Ratio H/M count " + exp | Number of redundant peptides (MS1 features) used for quantitation. |
+| "Ratio H/M iso-count " + exp | Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method. |
+| "Ratio H/M type " + exp |  |
+| "Ratio H/L " + exp | The ratio between two heavy and light label partners. |
+| "Ratio H/L normalized " + exp | Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1. |
+| "Ratio H/L variability [%] " + exp | Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100. |
+| "Ratio H/L count " + exp | Number of redundant peptides (MS1 features) used for quantitation. |
+| "Ratio H/L iso-count " + exp | Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method. |
+| "Ratio H/L type " + exp |  |
+| Ratio M/L | The ratio between two medium and light label partners. |
+| Ratio M/L normalized | Normalized ratio between two heavy and light label partners. The median of the total ratio population was shifted to 1. |
+| Ratio M/L variability [%] | Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100. |
+| Ratio M/L count | Number of redundant peptides (MS1 features) used for quantitation. |
+| Ratio M/L iso-count | Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method. |
+| Ratio M/L type |  |
+| Ratio H/L | The ratio between two heavy and light label partners. |
+| Ratio H/L normalized | Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1. |
+| Ratio H/L variability [%] | Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100. |
+| Ratio H/L count | Number of redundant peptides (MS1 features) used for quantitation. |
+| Ratio H/L iso-count | Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method. |
+| Ratio H/L type |  |
+| Ratio H/M | The ratio between two heavy and medium label partners. |
+| Ratio H/M normalized | Normalized ratio between two heavy and medium label partners. The median of the total ratio population was shifted to 1. |
+| Ratio H/M variability [%] | Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100. |
+| Ratio H/M count | Number of redundant peptides (MS1 features) used for quantitation. |
+| Ratio H/M iso-count | Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method. |
+| Ratio H/M type |  |
+| Ratio H/L | The ratio between two heavy and light label partners. |
+| Ratio H/L normalized | Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1. |
+| Ratio H/L variability [%] | Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100. |
+| Ratio H/L count | Number of redundant peptides (MS1 features) used for quantitation. |
+| Ratio H/L iso-count | Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method. |
+| Ratio H/L type |  |
+
+
+--------
+
+## Modification-Specific Peptide Table
+
+
+| Name | Description |
+|------|-------------|
+| Sequence | The identified AA sequence of the peptide. |
+| aa + " Count" | "The number of instances of the '" + aa + "' AA contained within the sequence. The value for this can reliably be determined in the case of SILAC partners based on the distance between the partners. These counts are used to solidify the peptide identification process." |
+| Modifications | Post-translational modifications contained within the sequence. When no modifications exist, this is set to 'unmodified'. |
+| Mass | Charge corrected mass of the precursor ion. |
+| Mass Fractional Part | The values after the decimal point (ie value - floor(value)<nowiki></nowiki>). |
+| Protein Groups | IDs of the protein groups to whoch this peptide belongs. |
+| Proteins | The identifiers of the proteins this particular peptide is associated with. |
+| Gene Names | Names of genes this peptide is associated with. |
+| Protein Names | Names of proteins this peptide is associated with. |
+| Unique (Groups) | When marked with '+', this particular peptide is unique to a single protein group in the proteinGroups file. |
+| Unique (Proteins) | When marked with '+', this particular peptide is unique to a single protein sequence in the fasta file(s). |
+| modName | "Number of " + modName + " on this peptide." |
+| "Missed cleavages (" + enzyme + ")" | Number of missed enzymatic cleavages. |
+| Missed cleavages | Number of missed enzymatic cleavages. |
+| "Identification type " + exp | Indicates whether this experiment was identified by MS/MS or only by matching between runs. |
+| Fraction Average |  |
+| Fraction Std. Dev. |  |
+| "Fraction " + t |  |
+| colName + " " + t | Number of evidence entries for this 'Experiment'. |
+| Retention time | Retention time in minutes averaged over the evidence entries belonging to this modification-specific peptide. |
+| Calibrated retention time | Calibrated retention time averaged over the evidence entries belonging to this modification-specific peptide. Obviously this only makes sense if retention time recalibration has been performed which is the case when matching between run is selected. |
+| Charges | All charge states that have been observed. |
+| PEP | Posterior Error Probability of the identification. This value essentially operates as a p-value, where smaller is more significant. |
+| MS/MS scan number | The RAW-file derived scan number of the MS/MS with the highest peptide identification score (the highest score is stored in the column 'Score'). |
+| Raw file | The name of the RAW-file the mass spectral data was derived from. |
+| Score | Andromeda score for the best identified among the associated MS/MS spectra. |
+| Delta score | Score difference to the second best identified peptide. |
+| Reverse | When marked with '+', this particular peptide was found to be part of a protein derived from the reversed part of the decoy database. These should be removed for further data analysis. |
+| Potential contaminant | When marked with '+', this particular peptide was found to be part of a commonly occurring contaminant. These should be removed for further data analysis. |
+| id | A unique (consecutive) identifier for each row in the peptides table, which is used to cross-link the information in this table with the information stored in the other tables. |
+| Protein group IDs | The identifiers of the protein groups this peptide was linked to, referenced against the proteinGroups table. |
+| Peptide ID | Identifier of the associated peptide sequence summary, which can be found in the file 'peptides.txt'. |
+| Evidence IDs | Identifier(s) for analyzed peptide evidence associated with the protein group referenced against the evidences table. |
+| MS/MS IDs | The identifiers of the MS/MS scans identifying this peptide, referenced against the msms table. |
+| Best MS/MS | The identifier of the best (in terms of quality) MS/MS scan identifying this peptide, referenced against the msms table. |
+| t + " site IDs" | Identifier(s) for site(s) associated with this peptide, which show(s) evidence of the modification, referenced against the appropriate modification site file. |
+| MS/MS Count |  |
+| "Reporter intensity " + i |  |
+| "Reporter intensity not corrected " + i |  |
+| "Reporter intensity count " + i |  |
+| "Reporter intensity " + i + " " + exp |  |
+| "Reporter intensity not corrected " + i + " " + exp |  |
+| "Reporter intensity count " + i + " " + exp |  |
+| "Intensity " + exp | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| "Intensity L " + exp | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner. |
+| "Intensity M " + exp | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the medium label partner. |
+| "Intensity H " + exp | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner. |
+| "Intensity " + exp | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| "Intensity L " + exp | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner. |
+| "Intensity H " + exp | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner. |
+| "Intensity " + exp | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| Intensity | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| Intensity L | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner. |
+| Intensity M | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the medium label partner. |
+| Intensity H | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner. |
+| Intensity | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| Intensity L | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner. |
+| Intensity H | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner. |
+| Intensity | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| "Ratio M/L " + exp | The ratio between two medium and light label partners. |
+| "Ratio M/L normalized " + exp | Normalized ratio between two heavy and light label partners. The median of the total ratio population was shifted to 1. |
+| "Ratio M/L variability [%] " + exp | Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100. |
+| "Ratio M/L count " + exp | Number of redundant peptides (MS1 features) used for quantitation. |
+| "Ratio M/L iso-count " + exp | Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method. |
+| "Ratio M/L type " + exp |  |
+| "Ratio H/L " + exp | The ratio between two heavy and light label partners. |
+| "Ratio H/L normalized " + exp | Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1. |
+| "Ratio H/L variability [%] " + exp | Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100. |
+| "Ratio H/L count " + exp | Number of redundant peptides (MS1 features) used for quantitation. |
+| "Ratio H/L iso-count " + exp | Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method. |
+| "Ratio H/L type " + exp |  |
+| "Ratio H/M " + exp | The ratio between two heavy and medium label partners. |
+| "Ratio H/M normalized " + exp | Normalized ratio between two heavy and medium label partners. The median of the total ratio population was shifted to 1. |
+| "Ratio H/M variability [%] " + exp | Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100. |
+| "Ratio H/M count " + exp | Number of redundant peptides (MS1 features) used for quantitation. |
+| "Ratio H/M iso-count " + exp | Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method. |
+| "Ratio H/M type " + exp |  |
+| "Ratio H/L " + exp | The ratio between two heavy and light label partners. |
+| "Ratio H/L normalized " + exp | Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1. |
+| "Ratio H/L variability [%] " + exp | Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100. |
+| "Ratio H/L count " + exp | Number of redundant peptides (MS1 features) used for quantitation. |
+| "Ratio H/L iso-count " + exp | Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method. |
+| "Ratio H/L type " + exp |  |
+| Ratio M/L | The ratio between two medium and light label partners. |
+| Ratio M/L normalized | Normalized ratio between two heavy and light label partners. The median of the total ratio population was shifted to 1. |
+| Ratio M/L variability [%] | Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100. |
+| Ratio M/L count | Number of redundant peptides (MS1 features) used for quantitation. |
+| Ratio M/L iso-count | Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method. |
+| Ratio M/L type |  |
+| Ratio H/L | The ratio between two heavy and light label partners. |
+| Ratio H/L normalized | Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1. |
+| Ratio H/L variability [%] | Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100. |
+| Ratio H/L count | Number of redundant peptides (MS1 features) used for quantitation. |
+| Ratio H/L iso-count | Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method. |
+| Ratio H/L type |  |
+| Ratio H/M | The ratio between two heavy and medium label partners. |
+| Ratio H/M normalized | Normalized ratio between two heavy and medium label partners. The median of the total ratio population was shifted to 1. |
+| Ratio H/M variability [%] | Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100. |
+| Ratio H/M count | Number of redundant peptides (MS1 features) used for quantitation. |
+| Ratio H/M iso-count | Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method. |
+| Ratio H/M type |  |
+| Ratio H/L | The ratio between two heavy and light label partners. |
+| Ratio H/L normalized | Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1. |
+| Ratio H/L variability [%] | Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100. |
+| Ratio H/L count | Number of redundant peptides (MS1 features) used for quantitation. |
+| Ratio H/L iso-count | Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method. |
+| Ratio H/L type |  |
+
+
+--------
+
+## Site Table
+
+| Name | Description |
+|------|-------------|
+| Proteins | Identifiers of proteins this site is associated with. |
+| Positions within proteins | For each protein identifier in the 'Proteins' column you find here the psoition of the site in the respective protein sequence. The index of the first amino acid in the sequence is 1. |
+| Leading proteins |  |
+| Protein | Identifier of the protein this peptide is associated with. |
+| Protein names | Names of proteins this peptide is associated with. |
+| Gene names | Names of genes this peptide is associated with. |
+| Fasta headers | Descriptions of proteins this peptide is associated with. |
+| Localization prob |  |
+| Score diff |  |
+| PEP | The posterior error probability (PEP) of the best identified modified peptide containing this site. |
+| Score | The Andromeda score of the best identified modified peptide containing this site. |
+| Delta score | The Andromeda delta score of the best identified modified peptide containing this site. |
+| Score for localization | The Andromeda score of the MS/MS spectrum used for calculating the localization score for this site. |
+| "Localization prob " + exp |  |
+| "Score diff " + exp |  |
+| "PEP " + exp |  |
+| "Score " + exp |  |
+| Diagnostic peak |  |
+| "Number of " + mod | "Different numbers of " + mod + " on peptides that this site is involved in." |
+| Amino acid |  |
+| Sequence window |  |
+| Modification window |  |
+| Peptide window coverage |  |
+| mod + " Probabilities" |  |
+| mod + " Score diffs" |  |
+| Position in peptide |  |
+| Charge | Charge state of the precursor ion. |
+| Mass error [ppm] | Mass error of the recalibrated mass-over-charge value of the precursor ion in comparison to the predicted monoisotopic mass of the identified peptide sequence. |
+| "Identification type " + exp | Indicates whether this experiment was identified by MS/MS or only by matching between runs. |
+| Reverse | When marked with '+', this particular peptide was found to be part of a protein derived from the reversed part of the protein sequence database. These should be removed for further data analysis. |
+| Potential contaminant | When marked with '+', this particular peptide was found to be part of a commonly occurring contaminant. These should be removed for further data analysis. |
+| id | A unique (consecutive) identifier for each row in the site table, which is used to cross-link the information in this file with the information stored in the other files. |
+| Protein group IDs | The identifier of the protein-group this peptide sequence is associated with, which can be used to look up the extended protein information in the file 'proteinGroups.txt'. As a single peptide can be linked to multiple proteins (e.g. in the case of razor-proteins), multiple id's can be stored here separated by a semicolon. As a protein can be identified by multiple peptides, the same id can be found in different rows. |
+| Positions | The positions of the modifications in the protein amino acid sequence. |
+| Position | The position of the modification in the protein amino acid sequence. |
+| Peptide IDs | Identifier(s) of the associated peptide sequence(s) summary, which can be found in the file 'peptides.txt'. |
+| Mod. peptide IDs | Identifier(s) of the associated peptide sequence(s) summary, which can be found in the file 'modificationSpecificPeptides.txt'. |
+| Evidence IDs | Identifier(s) for analyzed peptide evidence associated with the protein group referenced against the evidences table. |
+| MS/MS IDs | The identifiers of the MS/MS scans identifying this peptide, referenced against the msms table. |
+| Best localization evidence ID |  |
+| Best localization MS/MS ID |  |
+| Best localization raw file |  |
+| Best localization scan number |  |
+| Best score evidence ID |  |
+| Best score MS/MS ID |  |
+| Best score raw file |  |
+| Best score scan number |  |
+| Best PEP evidence ID |  |
+| Best PEP MS/MS ID |  |
+| Best PEP raw file |  |
+| Best PEP scan number |  |
+| "Reporter intensity " + i |  |
+| "Reporter intensity not corrected " + i |  |
+| "Reporter intensity count " + i |  |
+| "Reporter intensity " + i + " " + exp |  |
+| "Reporter intensity not corrected " + i + " " + exp |  |
+| "Reporter intensity count " + i + " " + exp |  |
+| "Intensity " + exp | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| "Intensity L " + exp | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner. |
+| "Intensity M " + exp | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the medium label partner. |
+| "Intensity H " + exp | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner. |
+| "Ratio mod/base L " + exp |  |
+| "Ratio mod/base M " + exp |  |
+| "Ratio mod/base H " + exp |  |
+| "Intensity " + exp | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| "Intensity L " + exp | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner. |
+| "Intensity H " + exp | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner. |
+| "Ratio mod/base L " + exp |  |
+| "Ratio mod/base H " + exp |  |
+| "Intensity " + exp | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| "Ratio mod/base " + exp |  |
+| "Intensity " + exp + "<nowiki>___</nowiki>" + j | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| "Occupancy " + exp |  |
+| "Occupancy ratio" + exp |  |
+| "Occupancy error scale " + exp |  |
+| Intensity | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| Intensity L | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner. |
+| Intensity M | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the medium label partner. |
+| Intensity H | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner. |
+| Ratio mod/base L |  |
+| Ratio mod/base M |  |
+| Ratio mod/base H |  |
+| Intensity | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| Intensity L | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner. |
+| Intensity H | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner. |
+| Ratio mod/base L |  |
+| Ratio mod/base H |  |
+| Intensity | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| "Intensity<nowiki>___</nowiki>" + j | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| Ratio mod/base |  |
+| "Ratio M/L " + exp | The ratio between two medium and light label partners. |
+| "Ratio M/L " + exp + "<nowiki>___</nowiki>" + i | The ratio between two medium and light label partners. |
+| "Ratio M/L normalized " + exp | Normalized ratio between two heavy and light label partners. The median of the total ratio population was shifted to 1. |
+| "Ratio M/L normalized " + exp + "<nowiki>___</nowiki>" + i | Normalized ratio between two heavy and light label partners. The median of the total ratio population was shifted to 1. |
+| "Ratio M/L unmod. pep. " + exp |  |
+| "Ratio M/L localized " + exp |  |
+| "Ratio M/L nmods " + exp |  |
+| "Ratio M/L variability [%] " + exp | Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100. |
+| "Ratio M/L count " + exp | Number of redundant peptides (MS1 features) used for quantitation. |
+| "Ratio M/L iso-count " + exp | Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method. |
+| "Ratio M/L type " + exp |  |
+| "Ratio H/L " + exp | The ratio between two heavy and light label partners. |
+| "Ratio H/L " + exp + "<nowiki>___</nowiki>" + i | The ratio between two heavy and light label partners. |
+| "Ratio H/L normalized " + exp | Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1. |
+| "Ratio H/L normalized " + exp + "<nowiki>___</nowiki>" + i | Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1. |
+| "Ratio H/L unmod. pep. " + exp |  |
+| "Ratio H/L localized " + exp |  |
+| "Ratio H/L nmods " + exp |  |
+| "Ratio H/L variability [%] " + exp | Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100. |
+| "Ratio H/L count " + exp | Number of redundant peptides (MS1 features) used for quantitation. |
+| "Ratio H/L iso-count " + exp | Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method. |
+| "Ratio H/L type " + exp |  |
+| "Ratio H/M " + exp | The ratio between two heavy and medium label partners. |
+| "Ratio H/M " + exp + "<nowiki>___</nowiki>" + i | The ratio between two heavy and medium label partners. |
+| "Ratio H/M normalized " + exp | Normalized ratio between two heavy and medium label partners. The median of the total ratio population was shifted to 1. |
+| "Ratio H/M normalized " + exp + "<nowiki>___</nowiki>" + i | Normalized ratio between two heavy and medium label partners. The median of the total ratio population was shifted to 1. |
+| "Ratio H/M unmod. pep. " + exp |  |
+| "Ratio H/M localized " + exp |  |
+| "Ratio H/M nmods " + exp |  |
+| "Ratio H/M variability [%] " + exp | Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100. |
+| "Ratio H/M count " + exp | Number of redundant peptides (MS1 features) used for quantitation. |
+| "Ratio H/M iso-count " + exp | Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method. |
+| "Ratio H/M type " + exp |  |
+| "Occupancy L " + exp |  |
+| "Occupancy M " + exp |  |
+| "Occupancy H " + exp |  |
+| "Ratio H/L " + exp | The ratio between two heavy and light label partners. |
+| "Ratio H/L " + exp + "<nowiki>___</nowiki>" + i | The ratio between two heavy and light label partners. |
+| "Ratio H/L normalized " + exp | Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1. |
+| "Ratio H/L normalized " + exp + "<nowiki>___</nowiki>" + i | Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1. |
+| "Ratio H/L unmod. pep. " + exp |  |
+| "Ratio H/L localized " + exp |  |
+| "Ratio H/L nmods " + exp |  |
+| "Ratio H/L variability [%] " + exp |  |
+| "Ratio H/L count " + exp | Number of redundant peptides (MS1 features) used for quantitation. |
+| "Ratio H/L iso-count " + exp | Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method. |
+| "Ratio H/L type " + exp |  |
+| "Occupancy L " + exp |  |
+| "Occupancy H " + exp |  |
+| Ratio M/L | The ratio between two medium and light label partners. |
+| "Ratio M/L<nowiki>___</nowiki>" + i | The ratio between two medium and light label partners. |
+| Ratio M/L normalized | Normalized ratio between two heavy and light label partners. The median of the total ratio population was shifted to 1. |
+| "Ratio M/L normalized<nowiki>___</nowiki>" + i | Normalized ratio between two heavy and light label partners. The median of the total ratio population was shifted to 1. |
+| Ratio M/L unmod. pep. |  |
+| Ratio M/L localized |  |
+| Ratio M/L nmods |  |
+| Ratio M/L variability [%] | Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100. |
+| Ratio M/L count | Number of redundant peptides (MS1 features) used for quantitation. |
+| Ratio M/L iso-count | Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method. |
+| Ratio M/L type |  |
+| Ratio H/L | The ratio between two heavy and light label partners. |
+| "Ratio H/L<nowiki>___</nowiki>" + i | The ratio between two heavy and light label partners. |
+| Ratio H/L normalized | Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1. |
+| "Ratio H/L normalized<nowiki>___</nowiki>" + i | Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1. |
+| Ratio H/L unmod. pep. |  |
+| Ratio H/L localized |  |
+| Ratio H/L nmods |  |
+| Ratio H/L variability [%] | Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100. |
+| Ratio H/L type |  |
+| Ratio H/L count | Number of redundant peptides (MS1 features) used for quantitation. |
+| Ratio H/L iso-count | Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method. |
+| Ratio H/M | The ratio between two heavy and medium label partners. |
+| "Ratio H/M<nowiki>___</nowiki>" + i | The ratio between two heavy and medium label partners. |
+| Ratio H/M normalized | Normalized ratio between two heavy and medium label partners. The median of the total ratio population was shifted to 1. |
+| "Ratio H/M normalized<nowiki>___</nowiki>" + i | Normalized ratio between two heavy and medium label partners. The median of the total ratio population was shifted to 1. |
+| Ratio H/M unmod. pep. |  |
+| Ratio H/M localized |  |
+| Ratio H/M nmods |  |
+| Ratio H/M variability [%] | Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100. |
+| Ratio H/M count | Number of redundant peptides (MS1 features) used for quantitation. |
+| Ratio H/M iso-count | Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method. |
+| Ratio H/M type |  |
+| Occupancy L |  |
+| Occupancy M |  |
+| Occupancy H |  |
+| Ratio H/L | The ratio between two heavy and light label partners. |
+| "Ratio H/L<nowiki>___</nowiki>" + i | The ratio between two heavy and light label partners. |
+| Ratio H/L normalized | Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1. |
+| "Ratio H/L normalized<nowiki>___</nowiki>" + i | Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1. |
+| Ratio H/L unmod. pep. |  |
+| Ratio H/L localized |  |
+| Ratio H/L nmods |  |
+| Ratio H/L variability [%] | Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100. |
+| Ratio H/L count | Number of redundant peptides (MS1 features) used for quantitation. |
+| Ratio H/L iso-count | Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method. |
+| Ratio H/L type |  |
+| Occupancy L |  |
+| Occupancy H |  |
+
+
+--------
+
+## Protein Groups
+
+The Protein Groups table contains information on the identified proteins in the processed raw-files. Each single row 
+contains the group of proteins that could be reconstructed from a set of peptides.
+
+| Name | Description |
+|------|-------------|
+| Protein IDs | Identifier(s) of protein(s) contained in the protein group. They are sorted by number of identified peptides in descending order. |
+| Majority protein IDs | These are the IDs of those proteins that have at least half of the peptides that the leading protein has. |
+| Peptide counts (all) | Number of peptides associated with each protein in protein group, occuring in the order as the protein IDs occur in the 'Protein IDs' column. Here distinct peptide sequences are counted. Modified forms or different charges are counted as one peptide. |
+| Peptide counts (razor+unique) | Number of peptides associated with each protein in protein group, occuring in the order as the protein IDs occur in the 'Protein IDs' column. Here distinct peptide sequences are counted. Modified forms or different charges are counted as one peptide. |
+| Peptide counts (unique) | Number of peptides associated with each protein in protein group, occuring in the order as the protein IDs occur in the 'Protein IDs' column. Here distinct peptide sequences are counted. Modified forms or different charges are counted as one peptide. |
+| Protein names | Name(s) of protein(s) contained within the group. |
+| Gene names | Name(s) of the gene(s) associated to the protein(s) contained within the group. |
+| Mutated peptide count |  |
+| Mutation names |  |
+| "Mutated peptide count " + exp |  |
+| "Mutation names " + exp |  |
+| Fasta headers | Fasta headers(s) of protein(s) contained within the group. |
+| Number of proteins | Number of proteins contained within the group. This corresponds to the number of entries in the colum 'Protein IDs'. |
+| Peptides | The total number of peptide sequences associated with the protein group (i.e. for all the proteins in the group). |
+| Razor + unique peptides | The total number of razor + unique peptides associated with the protein group (i.e. these peptides are shared with another protein group). |
+| Unique peptides | The total number of unique peptides associated with the protein group (i.e. these peptides are not shared with another protein group). |
+| "Peptides " + exp | "Number of peptides (distinct peptide sequences) in experiment " + exp |
+| "Razor + unique peptides " + exp | "Number of  razor + unique peptides (distinct peptide sequences) in experiment " + exp |
+| "Unique peptides " + exp | "Number of unique peptides (distinct peptide sequences) in experiment " + exp |
+| Sequence coverage [%] | Percentage of the sequence that is covered by the identified peptides of the best protein sequence contained in the group. |
+| Unique + razor sequence coverage [%] | Percentage of the sequence that is covered by the identified unique and razor peptides of the best protein sequence contained in the group. |
+| Unique sequence coverage [%] | Percentage of the sequence that is covered by the identified unique peptides of the best protein sequence contained in the group. |
+| Mol. weight [kDa] | Molecular weight of the leading protein sequence contained in the protein group. |
+| Sequence length | The length of the leading protein sequence contained in the group. |
+| Sequence lengths | The length of all sequences of the proteins contained in the group. |
+| Fraction average |  |
+| "Fraction " + t |  |
+| Q-value | This is the ratio of reverse to forward protein groups. |
+| Score | Protein score which is derived from peptide posterior error probabilities. |
+| "Identification type " + exp | Indicates whether this experiment was identified by MS/MS or only by matching between runs. |
+| "Sequence coverage " + exp + " [%]" | Percentage of the sequence that is covered by the identified peptides in this sample of the longest protein sequence contained within the group. |
+| Only identified by site | When marked with '+', this particular protein group was identified only by a modification site. |
+| Reverse | When marked with '+', this particular protein group contains no protein, made up of at least 50% of the peptides of the leading protein, with a peptide derived from the reversed part of the decoy database. These should be removed for further data analysis. The 50% rule is in place to prevent spurious protein hits to erroneously flag the protein group as reverse. |
+| Potential contaminant | When marked with '+', this particular protein group was found to be a commonly occurring contaminant. These should be removed for further data analysis. |
+| id | A unique (consecutive) identifier for each row in the proteinGroups table, which is used to cross-link the information in this file with the information stored in the other files. |
+| Peptide IDs | Identifier(s) of the associated peptide sequence(s) summary, which can be found in the file 'peptides.txt'. |
+| Peptide is razor | Indicates for each peptide ID if it is a razor or group unique peptide (true) or a non unique non razor peptide (false). |
+| Mod. peptide IDs |  |
+| Evidence IDs |  |
+| MS/MS IDs |  |
+| Best MS/MS | The identifier of the best (in terms of quality) MS/MS scans identifying the peptides of this protein, referenced against the msms table. |
+| t + " site IDs" | Identifier(s) for site(s) associated with the protein group, which show(s) evidence of the modification, referenced against the appropriate modification site file. |
+| t + " site positions" | Positions of the sites in the leading protein of this group. |
+| "LFQ intensity L " + exp |  |
+| "LFQ intensity M " + exp |  |
+| "LFQ intensity H " + exp |  |
+| "LFQ intensity L " + exp |  |
+| "LFQ intensity H " + exp |  |
+| "LFQ intensity " + exp |  |
+| "iBAQ " + exp |  |
+| "iBAQ L " + exp |  |
+| "iBAQ M " + exp |  |
+| "iBAQ H " + exp |  |
+| iBAQ |  |
+| iBAQ L |  |
+| iBAQ M |  |
+| iBAQ H |  |
+| "iBAQ " + exp |  |
+| "iBAQ L " + exp |  |
+| "iBAQ H " + exp |  |
+| iBAQ |  |
+| iBAQ L |  |
+| iBAQ H |  |
+| "iBAQ " + exp |  |
+| iBAQ |  |
+| AVALON |  |
+| MS/MS Count |  |
+| "MS/MS Count " + exp |  |
+| "Intensity " + exp | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| "Intensity L " + exp | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner. |
+| "Intensity M " + exp | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the medium label partner. |
+| "Intensity H " + exp | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner. |
+| Intensity | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| Intensity L | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner. |
+| Intensity M | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the medium label partner. |
+| Intensity H | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner. |
+| "Intensity " + exp | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| "Intensity L " + exp | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner. |
+| "Intensity H " + exp | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner. |
+| Intensity | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| Intensity L | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner. |
+| Intensity H | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner. |
+| "Intensity " + exp | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| Intensity | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| "Ratio M/L " + exp | The ratio between two medium and light label partners. |
+| "Ratio M/L normalized " + exp | Normalized ratio between two heavy and light label partners. The median of the total ratio population was shifted to 1. |
+| "Ratio M/L variability [%] " + exp | Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100. |
+| "Ratio M/L count " + exp | Number of redundant peptides (MS1 features) used for quantitation. |
+| "Ratio M/L iso-count " + exp | Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method. |
+| "Ratio M/L type " + exp |  |
+| "Ratio H/L " + exp | The ratio between two heavy and light label partners. |
+| "Ratio H/L normalized " + exp | Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1. |
+| "Ratio H/L variability [%] " + exp | Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100. |
+| "Ratio H/L count " + exp | Number of redundant peptides (MS1 features) used for quantitation. |
+| "Ratio H/L iso-count " + exp | Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method. |
+| "Ratio H/L type " + exp |  |
+| "Ratio H/M " + exp | The ratio between two heavy and medium label partners. |
+| "Ratio H/M normalized " + exp | Normalized ratio between two heavy and medium label partners. The median of the total ratio population was shifted to 1. |
+| "Ratio H/M variability [%] " + exp | Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100. |
+| "Ratio H/M count " + exp | Number of redundant peptides (MS1 features) used for quantitation. |
+| "Ratio H/M iso-count " + exp | Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method. |
+| "Ratio H/M type " + exp |  |
+| Ratio M/L | The ratio between two medium and light label partners. |
+| Ratio M/L normalized | Normalized ratio between two heavy and light label partners. The median of the total ratio population was shifted to 1. |
+| Ratio M/L variability [%] | Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100. |
+| Ratio M/L count | Number of redundant peptides (MS1 features) used for quantitation. |
+| Ratio M/L iso-count | Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method. |
+| Ratio M/L type |  |
+| Ratio H/L | The ratio between two heavy and light label partners. |
+| Ratio H/L normalized | Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1. |
+| Ratio H/L variability [%] | Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100. |
+| Ratio H/L count | Number of redundant peptides (MS1 features) used for quantitation. |
+| Ratio H/L iso-count | Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method. |
+| Ratio H/L type |  |
+| Ratio H/M | The ratio between two heavy and medium label partners. |
+| Ratio H/M normalized | Normalized ratio between two heavy and medium label partners. The median of the total ratio population was shifted to 1. |
+| Ratio H/M variability [%] | Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100. |
+| Ratio H/M count | Number of redundant peptides (MS1 features) used for quantitation. |
+| Ratio H/M iso-count | Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method. |
+| Ratio H/M type |  |
+| "Ratio H/L " + exp | The ratio between two heavy and light label partners. |
+| "Ratio H/L normalized " + exp | Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1. |
+| "Ratio H/L variability [%] " + exp | Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100. |
+| "Ratio H/L count " + exp | Number of redundant peptides (MS1 features) used for quantitation. |
+| "Ratio H/L iso-count " + exp | Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method. |
+| "Ratio H/L type " + exp |  |
+| Ratio H/L | The ratio between two heavy and light label partners. |
+| Ratio H/L normalized | Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1. |
+| Ratio H/L variability [%] | Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100. |
+| Ratio H/L count | Number of redundant peptides (MS1 features) used for quantitation. |
+| Ratio H/L iso-count | Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method. |
+| Ratio H/L type |  |
+| "Reporter intensity " + i |  |
+| "Reporter intensity not corrected " + i |  |
+| "Reporter intensity count " + i |  |
+| "Reporter intensity " + i + " " + exp |  |
+| "Reporter intensity not corrected " + i + " " + exp |  |
+| "Reporter intensity count " + i + " " + exp |  |
+
+--------
+
+## All Peptides
+
+| Name | Description |
+|------|-------------|
+| Raw file | Name of the raw file the spectral data was extracted from. |
+| Type | The type of detection for the peptide. MULTI - A labeling multiplet was detected. ISO - An isotope pattern was detected. |
+| Charge | The charge state of the peptide. |
+| m/z | The mass divided by the charge of the charged peptide. |
+| Mass | The mass of the neutral peptide ((m/z-proton) * charge). |
+| Uncalibrated m/z | m/z before recalibrations have been applied. |
+| Resolution | The resolution of the peak detected for the peptide measured in Full Width at Half Maximum (FWHM). |
+| Number of data points | The number of data points (peak centroids) collected for this peptide feature. |
+| Number of scans | The number of MS scans that the 3d peaks of this peptide feature are overlapping with. |
+| Number of isotopic peaks | The number of isotopic peaks contained in this peptide feature. |
+| PIF | Short for Parent Ion Fraction; indicates the fraction the target peak makes up of the total intensity in the inclusion window. |
+| Mass fractional part | The values after the radix point (ie value - floor(value)<nowiki></nowiki>). |
+| Mass deficit | Empirically derived deviation measure to the next nearest integer scaled to center around 0. Can be used to visually detect contaminants in a plot setting Mass against this value.  m*a+b - round(m*a+b) m: the peptide mass a: 0.999555 b: -0.10 |
+| Mass precision [ppm] | The precision of the mass detection of the peptide in parts-per-million. |
+| Max intensity m/z 0 | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| Max intensity m/z 0 | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| Max intensity m/z 1 | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| Max intensity m/z 0 | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| Max intensity m/z 1 | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| Max intensity m/z 2 | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| Retention time | The retention time of the peak detected for the peptide measured in minutes. |
+| Retention length | The total retention time width of the peak (last timepoint - first timepoint) in seconds. |
+| Retention length (FWHM) | The full width at half maximum value retention time width of the peak in seconds. |
+| Min scan number | The first scan-number at which the peak was encountered. |
+| Max scan number | The last scan-number at which the peak was encountered. |
+| Identified | When marked with '+' this particular MS/MS scan was identified as a peptide; when marked with '-' no identification was made. |
+| MS/MS IDs | Unique identifier linking this identification to the MS/MS scans. |
+| Sequence | The identified AA sequence of the peptide. |
+| Length | "The length of the sequence stored in the column Sequence." |
+| Modifications | Post-translational modifications contained within the sequence. When no modifications exist, this is set to 'unmodified'.  Note: This column only set when this MS/MS spectrum has been identified. |
+| Modified sequence | Sequence representation of the peptide including location(s) of modified AAs.  Note: This column only set when this MS/MS spectrum has been identified. |
+| Proteins | Identifiers of proteins this peptide is associated with.  Note: This column only set when this MS/MS spectrum has been identified. |
+| Score | The score of the identification (higher is better).  Note: This column only set when this MS/MS spectrum has been identified. |
+| t.Abbreviation + " Count" | "The number of instances of " + t.Abbreviation + " contained within the sequence. The value for this can reliably be determined in the case of label partners, based on the distance between the partners. These counts are used to solidify the peptide identification process." |
+| Ratio H/L | The ratio between two heavy and light multiplet members. |
+| Ratio H/L normalized | Normalized ratio between two heavy and light multiplet members. The median of the total ratio population was shifted to 1. |
+| Ratio M/L | The ratio between two medium and light multiplet members. |
+| Ratio M/L normalized | Normalized ratio between two medium and light multiplet members. The median of the total ratio population was shifted to 1. |
+| Ratio H/L | The ratio between two heavy and light multiplet members. |
+| Ratio H/L normalized | Normalized ratio between two heavy and light multiplet members. The median of the total ratio population was shifted to 1. |
+| Ratio H/M | The ratio between two heavy and medium multiplet members. |
+| Ratio H/M normalized | Normalized ratio between two heavy and medium multiplet members. The median of the total ratio population was shifted to 1. |
+| Intensity | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| Intensity | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| Intensity L | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner. |
+| Intensity H | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner. |
+| Intensity | Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster. |
+| Intensity L | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner. |
+| Intensity M | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the medium label partner. |
+| Intensity H | Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner. |
+| Intensities | The intensity values of the isotopes. |
+| Intensities L | The intensity values of the light label partner isotopes. |
+| Intensities H | The intensity values of the heavy label partner isotopes. |
+| Intensities L | The intensity values of the light label partner isotopes. |
+| Intensities M | The intensity values of the medium label partner isotopes. |
+| Intensities H | The intensity values of the heavy label partner isotopes. |
+| MS/MS Count | The number of MS/MS spectra recorded for the peptide. |
+| MSMS Scan Numbers | The scan numbers where the MS/MS spectra were recorded. |
+| MSMS label States | The label partner detected for the peptide. The value 0 is always the light partner. In the case of double label labeling 1 is the heavy partner. In the case of triple label labeling 1 is the medium and 2 the heavy partner. |
+| MSMS Isotope Indices | Indices of the isotopic peaks that the MS/MS spectra reside on. A value of 0 corresponds to the monoisotopic peak. |
+| DP Mass Difference |  |
+| DP Time Difference |  |
+| DP Score |  |
+| DP PEP |  |
+| DP Positional Probability |  |
+| DP Base Sequence |  |
+| DP Probabilities |  |
+| DP AA |  |
+| DP Base Scan Number |  |
+| DP Mod Scan Number |  |
+| DP Decoy |  |
+| DP Proteins |  |
+| DP Cluster Index |  |
+| DP Cluster Mass |  |
+| DP Cluster Mass SD |  |
+| DP Cluster Size Total |  |
+| DP Cluster Size Forward |  |
+| DP Cluster Size Reverse |  |
+| DP Modification |  |
+| DP Peptide Length Difference |  |
+| DP Gene Names |  |
+| DP Protein Names |  |
+| DP Ratio mod/base |  |
+| DP Ratio mod/base |  |
+| DP Base Ratio H/L |  |
+| DP Base Ratio H/L Normalized |  |
+| DP Occupancy L |  |
+| DP Occupancy H |  |
+| DP Ratio mod/base |  |
+| DP Base Ratio M/L |  |
+| DP Base Ratio M/L Normalized |  |
+| DP Base Ratio H/L |  |
+| DP Base Ratio H/L Normalized |  |
+| DP Base Ratio H/M |  |
+| DP Base Ratio H/M Normalized |  |
+| DP Occupancy L |  |
+| DP Occupancy M |  |
+| DP Occupancy H |  |
+| MD modification |  |
+| MD mass error |  |
+| MD time difference |  |
+| MD sequence |  |
+| MD base scan number |  |
+| MD proteins |  |
+| MD gene names |  |
+| MD protein names |  |
+| Centroid mass differences [Da] |  |
+| Centroid mass differences [ppm] |  |
+| Isotope mass differences [Da] |  |
+| Isotope mass differences [ppm] |  |
+
+--------
+
+##  msScans Table
+
+The msScans table contains information about the full scans, which can be used to verify data quality and generated 
+useful statistics about the interaction between the samples and LC.
+
+| Name | Description |
+|------|-------------|
+| Raw file | The name of the RAW-file the mass spectral data originates from. |
+| Scan number | The scan number (defined in the raw-file) at which the full scan was made. |
+| Scan index | The consecutive index of this full scan. |
+| Retention time | The retention time at which the full scan was made. |
+| Cycle time | The total time (full scan including the tandem MS scans) this full scan has taken up. |
+| Ion injection time | The total injection time that was required to capture the specified amount of ions. This value is limited by a maximum, which can be used to determine whether the time has maxed out (indicative of a bad acquisition). |
+| Base peak intensity | The intensity of the most intense ion in the spectrum. |
+| Total ion current | The total intensity acquired in the full scan. |
+| MS/MS count | The number of tandem MS scans that were made based on this full scan (e.g. a top 10 method selects the top 10 most intense ions in the scan and fragments those). |
+| Mass calibration | The applied mass correction in Th to the full scan. |
+| Fraction | The fraction measured with this full scan. |
+| colName |  |
+| Peak length | The average time between the start and the end of the peaks detected in the full scan. |
+| Isotope pattern length | The average time between the start and the end of the isotope patterns detected in the full scan. |
+| Multiplet length | The average time between the start and the end of the isotope patterns of the labeling multiplets detected in the full scan. |
+| Peaks / s | The average number of peaks detected per second of chromatography. |
+| Single peaks / s | The average number of single peaks detected per second of chromatography. |
+| Isotope patterns / s | The average number of isotope patterns detected per second of chromatography. |
+| Single isotope patterns / s | The average number of single isotope patterns detected per of second chromatography. |
+| Multiplets / s | The average number of labeling multiplets detected per of second chromatography. |
+| Identified multiplets / s | The percentage of labeling multiplets actually identified. |
+| Multiplet identification rate [%] | The percentage of the detected labeling multiplets that were identified. |
+| AIF peaks / s | The average number of AIF peaks detected per second of chromatography. |
+| AIF single peaks / s | The average number of AIF single peaks detected per second of chromatography. |
+| AIF isotope patterns / s | The average number of AIF isotope patterns detected per second of chromatography. |
+| AIF single isotope patterns / s | The average number of AIF single isotope patterns detected per of second chromatography. |
+| AIF multiplets / s | The average number of AIF labeling multiplets detected per of second chromatography. |
+| MS/MS / s | The average number of MS/MS events per second of chromatography. |
+| Identified MS/MS / s | The average number of identified MS/MS events per second of chromatography. |
+| MS/MS identification rate [%] | The percentage of tandem MS scans that were identified. |
+| Intens Comp Factor | Taken from the Thermo RAW file. |
+| CTCD Comp | Taken from the Thermo RAW file. |
+| RawOvFtT | For Thermo Fisher only. TIC estimation done with the orbitrap cell. |
+| AGC Fill | Taken from the Thermo RAW file. |
+
+--------
+
+## MzRange Table
+
+| Name | Description |
+|------|-------------|
+| Raw file | The name of the RAW-file the mass spectral data was derived from. |
+| m/z | The mass-over-charge value. |
+| Peaks / Da | The average number of peaks detected per Dalton. |
+| Single peaks / Da | The average number of single peaks detected per Dalton. |
+| Isotope patterns / Da | The average number of isotope patterns detected per Dalton. |
+| Single isotope patterns / Da | The average number of single isotope patterns detected per Dalton. |
+| SILAC pairs / Da | The average number of SILAC pairs detected per Dalton. |
+| Identified SILAC pairs / Da | The percentage of SILAC pairs actually identified. |
+| SILAC identification rate [%] | The percentage of the detected SILAC pairs that were identified. |
+| AIF Peaks / Da | The average number of AIF peaks detected per Dalton. |
+| AIF Single peaks / Da | The average number of AIF single peaks detected per Dalton. |
+| AIF Isotope patterns / Da | The average number of AIF isotope patterns detected per Dalton. |
+| AIF Single isotope patterns / Da | The average number of AIF single isotope patterns detected per Dalton. |
+| AIF SILAC pairs / Da | The average number of AIF SILAC pairs detected per Dalton. |
+| MS/MS / Da | The average number of MS/MS events per Dalton. |
+| Identified MS/MS / Da | The average number of identified MS/MS events per Dalton. |
+| Identification rate [%] | The percentage of tandem MS scans that were identified. |
+
+
+
+--------
+
+## ms/ms Scans Table
+
+| Name | Description |
+|------|-------------|
+| Raw file | Name of the RAW file the spectral MS/MS data was extracted from. |
+| Scan number | RAW file derived scan number for the MS/MS spectrum. |
+| Retention time | Time point along the elution profile at which the MS/MS data was recorded. |
+| Ion injection time | The ion inject time for the MS/MS scan. This can be used to determine if this time equals to the maximum ion inject time, general indicative of a lower quality spectrum. |
+| Total ion current | The total ion current of the MS/MS scan. For Thermo data this value is calculated by summing all the intensity values found in the mass spectral data, which is different from the Xcalibur reported TIC (Xcalibur TIC is about 25% of the value reported here). |
+| Collision energy | The collision energy used for the fragmentation that resulted in this MS/MS scan. |
+| Summations | For time of flight instruments only. |
+| Base peak intensity | The intensity of the most intense ion in the spectrum. |
+| Elapsed time | The time the MS/MS scan took to complete. |
+| Identified | When marked with '+' this particular MS/MS scan was identified as a peptide; when marked with '-' no identification was made. |
+| MS/MS IDs | Unique identifier linking this identification to the MS/MS scans. |
+| Sequence | The identified AA sequence of the peptide. |
+| Length | "The length of the sequence stored in the column Sequence." |
+| Filtered peaks | Number of peaks after the 'top X per 100 Da' filtering. |
+| m/z | Recalibrated m/z of the precursor ion. |
+| Mass | Charge corrected mass of the precursor ion. |
+| Charge | Charge state of the precursor ion. |
+| Type | The type of precursor ion as identified by MaxQuant. ISO - isotopic cluster. PEAK - single peak. MULTI - labeling cluster. |
+| Fragmentation | The type of fragmentation used to create the MS/MS spectrum. CID - Collision Induced Dissociation. HCD - High energy Collision induced Dissociation. ETD - Electron Transfer Dissociation. |
+| Mass analyzer | The mass analyzer used to record the MS/MS spectrum. ITMS - Ion trap. FTMS - Fourier transform ICR or orbitrap cell. TOF - Time of flight. |
+| Parent intensity fraction | The percentage the parent ion intensity makes up of the total intensity in the selection window. |
+| Fraction of total spectrum | The percentage the parent ion intensity makes up of the total intensity of the whole MS spectrum. |
+| Base peak fraction | The percentage the parent ion intensity in comparison to the highest peak in he MS spectrum. |
+| Precursor full scan number | The full scan number where the precursor ion was selected for fragmentation. |
+| Precursor intensity | The intensity of the precursor ion at the scannumber it was selected. |
+| Precursor apex fraction | The fraction the intensity of the precursor ion makes up of the peak (apex) intensity. |
+| Precursor apex offset | How many full scans the precursor ion is offset from the peak (apex) position. |
+| Precursor apex offset time | How much time the precursor ion is offset from the peak (apex) position. |
+| Scan event number | This number indicates which MS/MS scan this one is in the consecutive order of the MS/MS scans that are acquired after an MS scan. |
+| Modifications | Post-translational modifications contained within the sequence. When no modifications exist, this is set to 'unmodified'.  Note: This column only set when this MS/MS spectrum has been identified. |
+| Modified sequence | Sequence representation of the peptide including location(s) of modified AAs.  Note: This column only set when this MS/MS spectrum has been identified. |
+| Proteins | Identifiers of proteins this peptide is associated with.  Note: This column only set when this MS/MS spectrum has been identified. |
+| Score | The score of the identification (higher is better).  Note: This column only set when this MS/MS spectrum has been identified. |
+| Fraction | The identifier of the fraction the sample was taken from. |
+| colName |  |
+| DN Sequence |  |
+| DN Score |  |
+| DN Normalized Score |  |
+| DN nterm mass |  |
+| DN cterm mass |  |
+| DN missing mass |  |
+| DN Sequence2 |  |
+| DN Score2 |  |
+| DN Normalized Score2 |  |
+| DN nterm mass2 |  |
+| DN cterm mass2 |  |
+| DN missing mass2 |  |
+| DN Score diff |  |
+| DP Mass Difference | This dependent peptide's mass difference to the associated identified peptide. |
+| DP Time Difference | This dependent peptide's time difference to the associated identified peptide. |
+| DP Score | The andromeda identification score. |
+| DP PEP | Posterior Error Probability of the identification. This value essentially operates as a p-value, where smaller is more significant. |
+| DP Positional Probability |  |
+| DP Base Sequence |  |
+| DP Probabilities |  |
+| DP AA |  |
+| DP Base Scan Number |  |
+| DP Mod Scan Number |  |
+| DP Decoy |  |
+| DP Proteins |  |
+| DP Cluster Index |  |
+| DP Cluster Mass |  |
+| DP Cluster Mass SD |  |
+| DP Cluster Size Total |  |
+| DP Cluster Size Forward |  |
+| DP Cluster Size Reverse |  |
+| DP Modification | Post-translational modifications contained within the sequence. When no modifications exist, this is set to 'unmodified'. |
+| DP Peptide Length Difference |  |
+| DP Gene Names | Names of proteins the identified peptide is associated with. |
+| DP Protein Names | Descriptions of the proteins the identified peptide is associated with. |
+| Intens Comp Factor | Taken from the Thermo RAW file. |
+| CTCD Comp | Taken from the Thermo RAW file. |
+| RawOvFtT | For Thermo Fisher only. TIC estimation done with the orbitrap cell. |
+| AGC Fill | Taken from the Thermo RAW file. |
+| Scan index | Consecutive index of the MS/MS spectrum. |
+| MS scan index | Consecutive index of the MS spectrum prior to this MS/MS spectrum. |
+| MS scan number | Scan number of the MS spectrum prior to this MS/MS spectrum. |
+
+
+--------
+
+## ms/ms Table
+
+| Name | Description |
+|------|-------------|
+| Raw file | The name of the RAW file the mass spectral data was read from. |
+| Scan number | The RAW-file derived scan number of the MS/MS spectrum. |
+| Scan index | The consecutive index of the MS/MS spectrum. |
+| Sequence | The identified AA sequence of the peptide. |
+| Length | The length of the sequence stored in the column "Sequence". |
+| "Missed cleavages (" + enzyme + ")" | Number of missed enzymatic cleavages. |
+| Missed cleavages | Number of missed enzymatic cleavages. |
+| Modifications | Post-translational modifications contained within the identified peptide sequence. |
+| Modified sequence | Sequence representation including the post-translational modifications (abbreviation of the modification in brackets before the modified AA). The sequence is always surrounded by underscore characters ('_'). |
+| title + " Probabilities" | "Sequence representation of the peptide including PTM positioning probabilities ([0..1], where 1 is best match) for '" + title + "'." |
+| title + " Score Diffs" |  |
+| Tables.ModificationList[t].Name |  |
+| Proteins | The identifiers of the proteins the identified peptide is associated with. |
+| Gene Names | Names of genes the identified peptide is associated with. |
+| Protein Names | Descriptions of the proteins the identified peptide is associated with. |
+| Charge | The charge state of the precursor ion. |
+| Fragmentation | The type of fragmentation used to create the MS/MS spectrum. CID - Collision Induced Dissociation. HCD - High energy Collision induced Dissociation. ETD - Electron Transfer Dissociation. |
+| Mass analyzer | The mass analyzer used to record the MS/MS spectrum. ITMS - Ion trap. FTMS - Fourier transform ICR or orbitrap cell. TOF - Time of flight. |
+| Type | The type of precursor ion as identified by MaxQuant. ISO - isotopic cluster. PEAK - single peak. MULTI - labeling cluster. |
+| Scan event number |  |
+| Isotope index |  |
+| m/z | The mass-over-charge of the precursor ion. |
+| Mass | The charge corrected mass of the precursor ion. |
+| Mass Error [ppm] | Mass error of the recalibrated mass-over-charge value of the precursor ion in comparison to the predicted monoisotopic mass of the identified peptide sequence. |
+| Simple Mass Error [ppm] |  |
+| Retention time | The uncalibrated retention time in minutes where the MS/MS spectrum has been acquired. |
+| PEP | Posterior Error Probability of the identification. This value essentially operates as a p-value, where smaller is more significant. |
+| Score | Andromeda score for the best associated MS/MS spectrum. |
+| Delta score | Score difference to the second best identified peptide with a different amino acid sequence. |
+| Score diff | Score difference to the second best positioning of modifications identified peptide with the same amino acid sequence. |
+| Localization prob |  |
+| Combinatorics | Number of possible distributions of the modifications over the peptide sequence. |
+| Labeling State | Labeling state of the precursor isotope pattern used to identify the peptide. |
+| PIF | Short for Parent Ion Fraction; indicates the fraction the target peak makes up of the total intensity in the inclusion window. |
+| Fraction of total spectrum | The percentage the parent ion intensity makes up of the total intensity of the whole spectrum. |
+| Base peak fraction | The percentage the parent ion intensity in comparison to the highest peak in he MS spectrum. |
+| Precursor Full ScanNumber | The full scannumber where the precursor ion was selected for fragmentation. |
+| Precursor Intensity | The intensity of the precursor ion at the scannumber it was selected. |
+| Precursor Apex Fraction | The fraction the intensity of the precursor ion makes up of the peak (apex) intensity. |
+| Precursor Apex Offset | How many full scans the precursor ion is offset from the peak (apex) position. |
+| Precursor Apex Offset Time | How much time the precursor ion is offset from the peak (apex) position. |
+| "Diagnostic peak " + modName + " " + diagAa[i] |  |
+| Matches | The species of the peaks in the fragmentation spectrum after TopN filtering. |
+| Intensities | The intensities of the peaks in the fragmentation spectrum after TopN filtering. |
+| Mass Deviations [Da] | The mass deviation of each peak in the fragmentation spectrum in absolute mass units. |
+| Mass Deviations [ppm] | The mass deviation of each peak in the fragmentation spectrum in parts per million. |
+| Masses | The masses-over-charge of the peaks in the fragmentation spectrum. |
+| Number of Matches | The number of peaks matching to the predicted fragmentation spectrum. |
+| Intensity coverage | The fraction of intensity in the MS/MS spectrum that is annotated. |
+| Peak coverage | The fraction of peaks in the MS/MS spectrum that are annotated. |
+| Neutral loss level | How many neutral losses were applied to each fragment in the Andromeda scoring. |
+| ETD identification type | For ETD spectra several different combinations of ion series are scored. Here the highest scoring combination is indicated |
+| Reverse | When marked with '+', this particular peptide was found to be part of a protein derived from the reversed part of the decoy database. These should be removed for further data analysis. |
+| All scores |  |
+| All sequences |  |
+| All modified sequences |  |
+| id | A unique (consecutive) identifier for each row in the msms table, which is used to cross-link the information in this file with the information stored in the other files. |
+| Protein group IDs | The identifier of the protein-group this redundant peptide sequence is associated with, which can be used to look up the extended protein information in the file 'proteinGroups.txt'. As a single peptide can be linked to multiple proteins (e.g. in the case of razor-proteins), multiple id's can be stored here separated by a semicolon. As a protein can be identified by multiple peptides, the same id can be found in different rows. |
+| Peptide ID | The identifier of the non-redundant peptide sequence. |
+| Mod. peptide ID | Identifier of the associated modification summary stored in the file 'modificationSpecificPeptides.txt'. |
+| Evidence ID | Identifier of the associated evidence stored in the file 'evidence.txt'. |
+| t + " site IDs" | "Identifier of the oxidation summary stored in the file '" + t + "Sites.txt'." |
+| "Reporter intensity " + i |  |
+| "Reporter intensity not corrected " + i |  |
+| Reporter PIF |  |
+| Reporter fraction |  |
+
+
+--------
+
+## AIF ms/ms Table
+
+====== AIF MS/MS ======
+
+| Name | Description |
+|------|-------------|
+| id | A unique (consecutive) identifier for each row in the AIF MS/MS table, which is used to cross-link the information in this file with the information stored in the other files. |
+| Protein group IDs | The identifier of the protein group this redundant peptide sequence is associated with, which can be used to look up the extended protein information in the file 'proteinGroups.txt'. As a single peptide can be linked to multiple proteins (e.g. in the case of razor-proteins), multiple id's can be stored here separated by a semicolon. As a protein can be identified by multiple peptides, the same id can be found in different rows. |
+| Peptide ID | The identifier of the non-redundant peptide sequence. |
+| Mod. peptide ID | Identifier of the associated modification summary stored in the file 'modificationSpecificPeptides.txt'. |
+| Evidence ID | Identifier for analyzed peptide evidence associated with the protein group referenced against the evidences table. |
+| t + " site IDs" |  |
+| Raw file | Name of the RAW file the spectral data was extracted from, which led to the identification of this peptide. |
+| Sequence | The identified AA sequence of the peptide. |
+| Length | The length of the sequence stored in the column "Sequence". |
+| "Missed Cleavages (" + enzyme + ")" | Number of missed enzymatic cleavages. |
+| Missed Cleavages | Number of missed enzymatic cleavages. |
+| Modifications | Post-translational modifications contained within the sequence. When no modifications exist, this is set to 'unmodified'. Note: This column only set when this MS/MS spectrum has been identified. |
+| Modified Sequence | Sequence representation of the peptide including location(s) of modified AAs. Note: This column only set when this MS/MS spectrum has been identified. |
+| Tables.ModificationList[t].Name + " Probabilities" |  |
+| Tables.ModificationList[t].Name + " Score Diffs" |  |
+| Tables.ModificationList[t].Name |  |
+| Proteins | The IPI identifiers of the proteins the identified peptide is associated with. |
+| Charge | The charge of the precursor ion. |
+| m/z | The mass-over-charge of the precursor ion. |
+| Mass | The charge corrected mass of the precursor ion. |
+| Retention time | The uncalibrated retention time in minutes in the elution profile of the precursor ion. |
+| Precursor intensity | The intensity of the precursor ion. |
+| PEP | Posterior Error Probability of the identification. This value essentially operates as a p-value, where smaller is more significant. |
+| Score | Andromeda identification score for the MS/MS spectrum. |
+| Delta score | Score difference to the second best identified peptide. |
+| Combinatorics | Number of possible distributions of the modifications over the peptide sequence. |
+| Matches |  |
+| Intensities | The intensities of the peaks in the fragmentation spectrum after top-N filtering. |
+| Mass Deviations | The search engine allowed mass deviations of the peaks in the fragmentation spectrum. |
+| Masses | The masses-over-charge of the peaks in the fragmentation spectrum. |
+| Charges |  |
+| Correlations |  |
+| Number of Matches |  |
+| Reverse | When marked with '+', this particular peptide was found to be part of a protein derived from the reversed part of the decoy database. These should be removed for further data analysis. |
+
+

@@ -3,6 +3,8 @@ project:
   output-dir: docs
 
 website:
+  page-navigation: true
+  sidebar: true
   navbar:
     logo: Figures/coxlab_logo2.png
     search: true
@@ -24,6 +26,7 @@ website:
         file: https://twitter.com/TheCoxLab
       - icon: fa-linkedin fa-lg
         url: https://www.linkedin.com/in/juergen-cox-2437ba17/
+  
   page-footer: 
     center: "© 2023, created by and maintained by Cox lab" 
 

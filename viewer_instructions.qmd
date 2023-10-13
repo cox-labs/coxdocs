@@ -16,9 +16,14 @@ bibliography: references.bib
 csl: nature.csl
 ---
 
-Modern software platforms enable the analysis of shotgun proteomics data in an automated fashion resulting in high quality identification and quantification results. Additional understanding of the underlying data can be gained with the help of advanced visualization tools that allow for easy navigation through large LC-MS/MS datasets potentially consisting of terabytes of raw data. The updated [MaxQuant](index.html) version has a map navigation component that steers the users through mass and retention time-dependent mass spectrometric signals. It can be used to monitor a peptide feature used in label-free quantification over many LC-MS runs and visualize it with advanced 3D graphic models. An expert annotation system aids the interpretation of the MS/MS spectra used for the identification of these peptide features.
+Modern software platforms enable the analysis of shotgun proteomics data in an automated fashion resulting in high quality identification and quantification results.
+Additional understanding of the underlying data can be gained with the help of advanced visualization tools that allow for easy navigation through large LC-MS/MS datasets potentially consisting of terabytes of raw data.
+The updated [MaxQuant](index.html) version has a map navigation component that steers the users through mass and retention time-dependent mass spectrometric signals.
+It can be used to monitor a peptide feature used in label-free quantification over many LC-MS runs and visualize it with advanced 3D graphic models.
+An expert annotation system aids the interpretation of the MS/MS spectra used for the identification of these peptide features.
 
-To run MaxQuant with its Viewer module, you will need .NET framework 4.5. If you use Windows you should have Windows 10 or newer.
+To run MaxQuant with its Viewer module, you will need .NET framework 4.5.
+If you use Windows you should have Windows 10 or newer.
 
 # Documentation outline
 
@@ -33,7 +38,8 @@ To run MaxQuant with its Viewer module, you will need .NET framework 4.5. If you
 
 You can find raw files and processed data to test the Viewer (v. 1.5.2.8) [here](https://datashare.biochem.mpg.de/s/nOJZoCv8Y4FZMQH).
 
-**Important note:** If you load the `mqpar.xml` file, make sure all file paths are correct! If needed, update them using the "Change folder" option.
+**Important note:** If you load the `mqpar.xml` file, make sure all file paths are correct!
+If needed, update them using the "Change folder" option.
 
 For additional training, consider attending our annual [MaxQuant Summer School](https://maxquant.org/summer_school/).
 

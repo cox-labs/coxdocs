@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Cox Lab">
-<meta name="dcterms.date" content="2023-10-04">
+<meta name="dcterms.date" content="2023-10-13">
 
 <title>Download &amp; Installation</title>
 <style>
@@ -115,7 +115,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./advanced/coxlab_logo2.png" alt="" class="navbar-logo">
+    <img src="./Figures/coxlab_logo2.png" alt="" class="navbar-logo">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -129,7 +129,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">HOME</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./maxquant_functions.html"> 
+    <a class="nav-link" href="./maxquant_instructions.html"> 
 <span class="menu-text">MaxQuant</span></a>
   </li>  
   <li class="nav-item">
@@ -184,7 +184,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#sec-mq-windows" id="toc-sec-mq-windows" class="nav-link" data-scroll-target="#sec-mq-windows"><span class="header-section-number">2.1</span> MaxQuant on Windows</a></li>
   <li><a href="#maxquant-on-linux" id="toc-maxquant-on-linux" class="nav-link" data-scroll-target="#maxquant-on-linux"><span class="header-section-number">2.2</span> MaxQuant on Linux</a></li>
   </ul></li>
-  <li><a href="#hardware-requirements" id="toc-hardware-requirements" class="nav-link" data-scroll-target="#hardware-requirements"><span class="header-section-number">3</span> Hardware requirements</a></li>
+  <li><a href="#hardware-requirements" id="toc-hardware-requirements" class="nav-link" data-scroll-target="#hardware-requirements"><span class="header-section-number">3</span> Hardware requirements</a>
+  <ul>
+  <li><a href="#dell-poweredge-r820-intel" id="toc-dell-poweredge-r820-intel" class="nav-link" data-scroll-target="#dell-poweredge-r820-intel"><span class="header-section-number">3.0.1</span> Dell PowerEdge R820 (Intel)</a></li>
+  <li><a href="#standard-pc" id="toc-standard-pc" class="nav-link" data-scroll-target="#standard-pc"><span class="header-section-number">3.0.2</span> Standard PC</a></li>
+  <li><a href="#monster-pc" id="toc-monster-pc" class="nav-link" data-scroll-target="#monster-pc"><span class="header-section-number">3.0.3</span> ‘Monster’ PC</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -210,7 +215,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 4, 2023</p>
+      <p class="date">October 13, 2023</p>
     </div>
   </div>
   
@@ -277,10 +282,56 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>4 GB RAM per thread that is executed in parallel is required.</li>
 <li>There is no upper limit on the number of cores. Whatever you can fit into a shared memory machine will work as long as the disk performance scales up with it.</li>
 </ul>
+<p>Here we list some example hardware configurations that we are using in the lab and that we are quite happy with. These are mere examples and there is no reason to prefer specific vendors or brands.</p>
+<section id="dell-poweredge-r820-intel" class="level3" data-number="3.0.1">
+<h3 data-number="3.0.1" class="anchored" data-anchor-id="dell-poweredge-r820-intel"><span class="header-section-number">3.0.1</span> Dell PowerEdge R820 (Intel)</h3>
+<ul>
+<li>4x Intel® Xeon® E5-4640 2.40GHz, 20M Cache, 8.0GT/s QPI, Turbo, 8C, 95W</li>
+<li>128GB Memory for 4CPU (16x8GB RDIMM, 1600 MHz, Standard Volt, Dual Rank, x4)</li>
+<li>PERC H710p integrated RAID Controller, 1GB NV Cache</li>
+<li>6x 900GB, SAS 6Gbps, 2.5-in, 10K RPM Hard Drive (Hot Plug)</li>
+<li>RAID-0</li>
+<li>OS: Microsoft Windows Server 2012 Standard</li>
+</ul>
+</section>
+<section id="standard-pc" class="level3" data-number="3.0.2">
+<h3 data-number="3.0.2" class="anchored" data-anchor-id="standard-pc"><span class="header-section-number">3.0.2</span> Standard PC</h3>
+<ul>
+<li>Processor: Intel® Core i7-2600 Processor (8M Cache,3.40 GHz)</li>
+<li>OS: English original Windows® 7 Professional(64-Bit)</li>
+<li>RAM: 16GB (4X4GB) 1333 MHz DDR3 Non-ECC 489916 1 [370-20205] 3</li>
+<li>Primary Hard Drive: 256GB SSD Solid State Drive</li>
+<li>Additional Hard Drive: 2TB (7.2k rpm) Serial ATA II with NCQ and 16MB Data Burst Cache</li>
+<li>Graphics card: 512MB AMD Radeon HD 6350</li>
+<li>USB 3.0: USB 3.0 PCI-Card</li>
+<li>To improve the processing speed the SSD can also be used exclusively for MaxQuant</li>
+<li>USB 3.0 convenient for fast file transfer, 500MByte/s (USB 2.0 = 60MByte/s)</li>
+<li>Hard drives can of course be larger depending on the respective sizes of your projects and wallet.</li>
+</ul>
+</section>
+<section id="monster-pc" class="level3" data-number="3.0.3">
+<h3 data-number="3.0.3" class="anchored" data-anchor-id="monster-pc"><span class="header-section-number">3.0.3</span> ‘Monster’ PC</h3>
+<ul>
+<li>Coolermaster HAF 922 Black Tower Case</li>
+<li>2 x Front USB 2.0 and Audio ports</li>
+<li>750W EPS12V Quiet power supply</li>
+<li>Additional Red LED 200mm Case Fans</li>
+<li>Asus Sabertooth P67 Intel i7 Skt1155ATX motherboard With 2 x 16x 2.0 PCI-Express slot, 3 x PCI-e x1 slot, SATAIII 4 x DDR3 memory slots, Audio, 10/100/1000 LAN, SATAII, &amp; USB 3.0/USB 2.0 ports</li>
+<li>Intel i7 2600K 3.4GHz Quad Core 8MB cache Skt1155 Unlocked processor</li>
+<li>Corsair Vengeance 32GB (4 x 8GB) DDR3 1866MHz Quad Channel memory</li>
+<li>Western Digital 500GB Caviar Black SATAIII disk drive</li>
+<li>1GB Nvidia Geforce GT430 PCI-e x16 2.0 graphics card</li>
+<li>Black DVD+/- R RW Dual Layer drive</li>
+<li>LSI 9260-8i 8port SAS 6Gb/s PCI-Express RAID controller</li>
+<li>Battery Backup for RAID controller</li>
+<li>2 x Crucial 512MB Solid State Disks</li>
+<li>Thanks to Peter McHardy for assembling this configuration</li>
+</ul>
 <hr>
 <p>For question or problems with the installation we would love to hear from you under <a href="contact.html">Contact</a>.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

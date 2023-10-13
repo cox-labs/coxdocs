@@ -22,6 +22,7 @@ csl: nature.csl
 ---
 
 ```{r}
+getwd()
 # install.packages("devtools")
 #install.packages("glossary")
 library(glossary)
@@ -145,7 +146,9 @@ glossary_table() # show table as kable
 
 ------------------------------------------------------------------------
 
-We welcome suggestions for additional entries to this glossary, or corrections to existing entries. For technical reasons, we have not made this page editable by users. Please use the following [contact](contact.html) possibilities instead.
+We welcome suggestions for additional entries to this glossary, or corrections to existing entries.
+For technical reasons, we have not made this page editable by users.
+Please use the following [contact](contact.html) possibilities instead.
 
 ------------------------------------------------------------------------
 

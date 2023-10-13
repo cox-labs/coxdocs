@@ -1,0 +1,4970 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.315">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Cox Lab">
+<meta name="dcterms.date" content="2023-10-13">
+
+<title>Output Tables</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./Figures/coxlab_logo2.png" alt="" class="navbar-logo">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">HOME</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./maxquant_instructions.html"> 
+<span class="menu-text">MaxQuant</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./perseus_instructions.html"> 
+<span class="menu-text">Perseus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./andromeda_instructions.html"> 
+<span class="menu-text">Andromeda</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="./contact.html"> <i class="bi bi-envelope" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/cox-labs/CoxLab_Bug_Reporting"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/TheCoxLab"> <i class="bi bi-twitter" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/juergen-cox-2437ba17/"> <i class="bi bi-fa-linkedin fa-lg" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="-1">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#summary-table" id="toc-summary-table" class="nav-link active" data-scroll-target="#summary-table"><span class="header-section-number">1</span> Summary Table</a></li>
+  <li><a href="#evidence-table" id="toc-evidence-table" class="nav-link" data-scroll-target="#evidence-table"><span class="header-section-number">2</span> Evidence Table</a></li>
+  <li><a href="#peptide-table" id="toc-peptide-table" class="nav-link" data-scroll-target="#peptide-table"><span class="header-section-number">3</span> Peptide Table</a></li>
+  <li><a href="#modification-specific-peptide-table" id="toc-modification-specific-peptide-table" class="nav-link" data-scroll-target="#modification-specific-peptide-table"><span class="header-section-number">4</span> Modification-Specific Peptide Table</a></li>
+  <li><a href="#site-table" id="toc-site-table" class="nav-link" data-scroll-target="#site-table"><span class="header-section-number">5</span> Site Table</a></li>
+  <li><a href="#protein-groups" id="toc-protein-groups" class="nav-link" data-scroll-target="#protein-groups"><span class="header-section-number">6</span> Protein Groups</a></li>
+  <li><a href="#all-peptides" id="toc-all-peptides" class="nav-link" data-scroll-target="#all-peptides"><span class="header-section-number">7</span> All Peptides</a></li>
+  <li><a href="#msscans-table" id="toc-msscans-table" class="nav-link" data-scroll-target="#msscans-table"><span class="header-section-number">8</span> msScans Table</a></li>
+  <li><a href="#mzrange-table" id="toc-mzrange-table" class="nav-link" data-scroll-target="#mzrange-table"><span class="header-section-number">9</span> MzRange Table</a></li>
+  <li><a href="#msms-scans-table" id="toc-msms-scans-table" class="nav-link" data-scroll-target="#msms-scans-table"><span class="header-section-number">10</span> ms/ms Scans Table</a></li>
+  <li><a href="#msms-table" id="toc-msms-table" class="nav-link" data-scroll-target="#msms-table"><span class="header-section-number">11</span> ms/ms Table</a></li>
+  <li><a href="#aif-msms-table" id="toc-aif-msms-table" class="nav-link" data-scroll-target="#aif-msms-table"><span class="header-section-number">12</span> AIF ms/ms Table</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Output Tables</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Cox Lab </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 13, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+<p>MaxQuant produces multiple Output tables:</p>
+<section id="summary-table" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="summary-table"><span class="header-section-number">1</span> Summary Table</h2>
+<p>The summary file contains summary information for all the raw files processed with a single MaxQuant run. The summary information consists of some MaxQuant parameters, information of the raw file contents, and statistics on the peak detection. Based on this file a quick overview can be gathered on the quality of the data in the raw file.</p>
+<p>The last row in this file contains the summary information for each column on each of the processed files.</p>
+<table class="table">
+<colgroup>
+<col style="width: 31%">
+<col style="width: 68%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Raw file</td>
+<td>The raw file processed.</td>
+</tr>
+<tr class="even">
+<td>Experiment</td>
+<td>Experiment name assigned to this LC-MS run in the experimental design.</td>
+</tr>
+<tr class="odd">
+<td>Fraction</td>
+<td>Fraction assigned to this LC-MS run in the experimental design.</td>
+</tr>
+<tr class="even">
+<td>Enzyme</td>
+<td>The protease used to digest the protein sample.</td>
+</tr>
+<tr class="odd">
+<td>Enzyme mode</td>
+<td>The protease used to digest the protein sample.</td>
+</tr>
+<tr class="even">
+<td>Enzyme first search</td>
+<td>The protease used for the first search.</td>
+</tr>
+<tr class="odd">
+<td>Enzyme mode first search</td>
+<td>The protease used for the first search.</td>
+</tr>
+<tr class="even">
+<td>Use enzyme first search</td>
+<td>Marked with ‘+’ when a different protease setup was used for the first search.</td>
+</tr>
+<tr class="odd">
+<td>Variable modifications</td>
+<td>The variable modification(s) used during the identification of peptides.</td>
+</tr>
+<tr class="even">
+<td>Multi modifications</td>
+<td>The multi modification(s) used during the identification of peptides.</td>
+</tr>
+<tr class="odd">
+<td>Variable modifications first search</td>
+<td>The variable modification(s) used during the first search.</td>
+</tr>
+<tr class="even">
+<td>Use variable modifications first search</td>
+<td>Marked with ‘+’ when different variable modifications were used for the first search.</td>
+</tr>
+<tr class="odd">
+<td>Requantify</td>
+<td>The number of labels used.</td>
+</tr>
+<tr class="even">
+<td>Multiplicity</td>
+<td>The number of labels used.</td>
+</tr>
+<tr class="odd">
+<td>Max. missed cleavages</td>
+<td>The maximum allowed number of missed cleavages.</td>
+</tr>
+<tr class="even">
+<td>Max. labeled AAs</td>
+<td>The maximum allowed of labeled amino acids in a peptide amino acid sequence.</td>
+</tr>
+<tr class="odd">
+<td>“Labels” + i</td>
+<td>The labels used in the labeling experiment. Allowed values for X: 0=light; 1=medium; 2=heavy label partner.</td>
+</tr>
+<tr class="even">
+<td>LC-MS run type</td>
+<td>The type of LC-MS run. Usually it will be ‘Standard’ which refers to a conventional shotgun proteomics run with data-dependent MS/MS.</td>
+</tr>
+<tr class="odd">
+<td>Time-dependent recalibration</td>
+<td>When marked with ‘+’, time-dependent recalibration was applied to improve the data quality.</td>
+</tr>
+<tr class="even">
+<td>MS</td>
+<td>The number of MS spectra recorded in this raw file.</td>
+</tr>
+<tr class="odd">
+<td>MS/MS</td>
+<td>The number of MS/MS spectra recorded in this raw file.</td>
+</tr>
+<tr class="even">
+<td>MS3</td>
+<td>The number of MS3 spectra recorded in this raw file.</td>
+</tr>
+<tr class="odd">
+<td>MS/MS Submitted</td>
+<td>The number of tandem MS spectra submitted for analysis.</td>
+</tr>
+<tr class="even">
+<td>MS/MS Submitted (SIL)</td>
+<td>The number of tandem MS spectra submitted for analysis, where the precursor ion was detected as part of a labeling cluster.</td>
+</tr>
+<tr class="odd">
+<td>MS/MS Submitted (ISO)</td>
+<td>The number of tandem MS spectra submitted for analysis, where the precursor ion was detected as an isotopic pattern.</td>
+</tr>
+<tr class="even">
+<td>MS/MS Submitted (PEAK)</td>
+<td>The number of tandem MS spectra submitted for analysis, where the precursor ion was detected as a single peak.</td>
+</tr>
+<tr class="odd">
+<td>MS/MS Identified</td>
+<td>The total number of identified tandem MS spectra.</td>
+</tr>
+<tr class="even">
+<td>MS/MS Identified (SIL)</td>
+<td>The total number of identified tandem MS spectra, where the precursor ion was detected as part of a labeling cluster.</td>
+</tr>
+<tr class="odd">
+<td>MS/MS Identified (ISO)</td>
+<td>The total number of identified tandem MS spectra, where the precursor ion was detected as an isotopic pattern.</td>
+</tr>
+<tr class="even">
+<td>MS/MS Identified (PEAK)</td>
+<td>The total number of identified tandem MS spectra, where the precursor ion was detected as a single peak.</td>
+</tr>
+<tr class="odd">
+<td>MS/MS Identified [%]</td>
+<td>The percentage of identified tandem MS spectra.</td>
+</tr>
+<tr class="even">
+<td>MS/MS Identified (SIL) [%]</td>
+<td>The percentage of identified tandem MS spectra, where the precursor ion was detected as part of a labeling cluster.</td>
+</tr>
+<tr class="odd">
+<td>MS/MS Identified (ISO) [%]</td>
+<td>The percentage of identified tandem MS spectra, where the precursor ion was detected as an isotopic pattern.</td>
+</tr>
+<tr class="even">
+<td>MS/MS Identified (PEAK) [%]</td>
+<td>The percentage of identified tandem MS spectra, where the precursor ion was detected as a single peak.</td>
+</tr>
+<tr class="odd">
+<td>Peptide Sequences Identified</td>
+<td>The total number of unique peptide amino acid sequences identified from the recorded tandem mass spectra.</td>
+</tr>
+<tr class="even">
+<td>Peaks</td>
+<td>The total number of peaks detected in the full scans.</td>
+</tr>
+<tr class="odd">
+<td>Peaks Sequenced</td>
+<td>The total number of peaks sequenced by tandem MS.</td>
+</tr>
+<tr class="even">
+<td>Peaks Sequenced [%]</td>
+<td>The percentage of peaks sequenced by tandem MS.</td>
+</tr>
+<tr class="odd">
+<td>Peaks Repeatedly Sequenced</td>
+<td>The total number of peaks repeatedly sequenced (i.e.&nbsp;1 or more times) by tandem MS.</td>
+</tr>
+<tr class="even">
+<td>Peaks Repeatedly Sequenced [%]</td>
+<td>The percentage of peaks repeatedly sequenced (i.e.&nbsp;1 or more times) by tandem MS.</td>
+</tr>
+<tr class="odd">
+<td>Isotope Patterns</td>
+<td>The total number of detected isotope patterns.</td>
+</tr>
+<tr class="even">
+<td>Isotope Patterns Sequenced</td>
+<td>The total number of isotope patterns sequenced by tandem MS.</td>
+</tr>
+<tr class="odd">
+<td>Isotope Patterns Sequenced (z&gt;1)</td>
+<td>The total number of isotope patterns sequenced by tandem MS with a charge state of 2 or more.</td>
+</tr>
+<tr class="even">
+<td>Isotope Patterns Sequenced [%]</td>
+<td>The percentage of isotope patterns sequenced by tandem MS.</td>
+</tr>
+<tr class="odd">
+<td>Isotope Patterns Sequenced (z&gt;1) [%]</td>
+<td>The percentage of isotope patterns sequenced by tandem MS with a charge state of 2 or more.</td>
+</tr>
+<tr class="even">
+<td>Isotope Patterns Repeatedly Sequenced</td>
+<td>The total number of isotope patterns repeatedly sequenced (i.e.&nbsp;1 or more times) by tandem MS.</td>
+</tr>
+<tr class="odd">
+<td>Isotope Patterns Repeatedly Sequenced [%]</td>
+<td>The percentage of isotope patterns repeatedly sequenced (i.e.&nbsp;1 or more times) by tandem MS.</td>
+</tr>
+<tr class="even">
+<td>Multiplets</td>
+<td>The total number of detected labeling pairs.</td>
+</tr>
+<tr class="odd">
+<td>“Multiplets z=” + z</td>
+<td>“The total number of detected labeling pairs with a charge state of” + z + “.”</td>
+</tr>
+<tr class="even">
+<td>Multiplets Sequenced</td>
+<td>The total number of labeling pairs sequenced by tandem MS.</td>
+</tr>
+<tr class="odd">
+<td>Multiplets Sequenced [%]</td>
+<td>The percentage of labeling pairs sequenced by tandem MS.</td>
+</tr>
+<tr class="even">
+<td>Multiplets Repeatedly Sequenced</td>
+<td>The total number of labeling pairs repeatedly sequenced (i.e.&nbsp;1 or more times) by tandem MS.</td>
+</tr>
+<tr class="odd">
+<td>Multiplets Repeatedly Sequenced [%]</td>
+<td>The percentage of labeling pairs repeatedly sequenced (i.e.&nbsp;1 or more times) by tandem MS.</td>
+</tr>
+<tr class="even">
+<td>Multiplets Identified</td>
+<td>The total number of labeling pairs identified.</td>
+</tr>
+<tr class="odd">
+<td>Multiplets Identified [%]</td>
+<td>The percentage of labeling pairs identified.</td>
+</tr>
+<tr class="even">
+<td>Multiplets</td>
+<td>The total number of detected labeling triplets.</td>
+</tr>
+<tr class="odd">
+<td>“Multiplets z=” + z</td>
+<td>“The total number of detected labeling triplets with a charge state of” + z + “.”</td>
+</tr>
+<tr class="even">
+<td>Multiplets Sequenced</td>
+<td>The total number of labeling triplets sequenced by tandem MS.</td>
+</tr>
+<tr class="odd">
+<td>Multiplets Sequenced [%]</td>
+<td>The percentage of labeling triplets sequenced by tandem MS.</td>
+</tr>
+<tr class="even">
+<td>Multiplets Repeatedly Sequenced</td>
+<td>The total number of labeling triplets repeatedly sequenced (i.e.&nbsp;1 or more times) by tandem MS.</td>
+</tr>
+<tr class="odd">
+<td>Multiplets Repeatedly Sequenced [%]</td>
+<td>The percentage of labeling triplets repeatedly sequenced (i.e.&nbsp;1 or more times) by tandem MS.</td>
+</tr>
+<tr class="even">
+<td>Multiplets Identified</td>
+<td>The total number of labeling triplets identified.</td>
+</tr>
+<tr class="odd">
+<td>Multiplets Identified [%]</td>
+<td>The percentage of labeling triplets identified.</td>
+</tr>
+<tr class="even">
+<td>Recalibrated</td>
+<td>When marked with ‘+’, the masses taken from the raw file were recalibrated.</td>
+</tr>
+<tr class="odd">
+<td>Av. Absolute Mass Deviation [ppm]</td>
+<td>The average absolute mass deviation found comparing to the identification mass in parts per million.</td>
+</tr>
+<tr class="even">
+<td>Mass Standard Deviation [ppm]</td>
+<td>The standard deviation of the mass deviation found comparing to the identification mass in parts per million.</td>
+</tr>
+<tr class="odd">
+<td>Av. Absolute Mass Deviation [mDa]</td>
+<td>The average absolute mass deviation found comparing to the identification mass in milli-Dalton.</td>
+</tr>
+<tr class="even">
+<td>Mass Standard Deviation [mDa]</td>
+<td>The standard deviation of the mass deviation found comparing to the identification mass in milli-Dalton.</td>
+</tr>
+<tr class="odd">
+<td>Label free norm param</td>
+<td>The normalization factor used to scale the intensity values in a label-free experiment.</td>
+</tr>
+<tr class="even">
+<td>MBRFDR</td>
+<td>False discovery rate for matching between runs.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="evidence-table" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="evidence-table"><span class="header-section-number">2</span> Evidence Table</h2>
+<p>The evidence file combines all the information about the identified peptides and normally is the only file required for processing the results. Additional information about the peptides, modifications, proteins, etc. can be found in the other files by unique identifier linkage.</p>
+<table class="table">
+<colgroup>
+<col style="width: 31%">
+<col style="width: 68%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Sequence</td>
+<td>The identified AA sequence of the peptide.</td>
+</tr>
+<tr class="even">
+<td>Length</td>
+<td>The length of the sequence stored in the column ‘Sequence’.</td>
+</tr>
+<tr class="odd">
+<td>aa + ” Count”</td>
+<td>“The number of instances of” + aa + ” contained within the sequence. The value for this can reliably be determined in the case of labeling partners based on the distance between the partners. These counts are used to solidify the peptide identification process.”</td>
+</tr>
+<tr class="even">
+<td>Modifications</td>
+<td>Post-translational modifications contained within the identified peptide sequence.</td>
+</tr>
+<tr class="odd">
+<td>Modified sequence</td>
+<td>Sequence representation including the post-translational modifications (abbreviation of the modification in brackets before the modified AA). The sequence is always surrounded by underscore characters (’_’).</td>
+</tr>
+<tr class="even">
+<td>title + ” Probabilities”</td>
+<td>“Sequence representation of the peptide including PTM positioning probabilities ([0..1], where 1 is best match) for ’” + title + “’.”</td>
+</tr>
+<tr class="odd">
+<td>title + ” Score Diffs”</td>
+<td>Sequence representation for each of the possible PTM positions in each possible configuration, the difference is calculated between the identification score with the PTM added to that position and the best scoring identification where no PTM is added to that position. When this value is negative, it is unlikely that the particular modification is located at this position.</td>
+</tr>
+<tr class="even">
+<td>title</td>
+<td>“The number of occurrences of the modification ’” + title + “’.”</td>
+</tr>
+<tr class="odd">
+<td>“Missed cleavages (” + enzyme + “)”</td>
+<td>Number of missed enzymatic cleavages.</td>
+</tr>
+<tr class="even">
+<td>Missed cleavages</td>
+<td>Number of missed enzymatic cleavages.</td>
+</tr>
+<tr class="odd">
+<td>Proteins</td>
+<td>The identifiers of the proteins this particular peptide is associated with.</td>
+</tr>
+<tr class="even">
+<td>Leading proteins</td>
+<td>The identifiers of the proteins in the proteinGroups file, with this protein as best match, this particular peptide is associated with. When multiple matches are found here, the best scoring protein can be found in the ‘Leading Razor Protein’ column.</td>
+</tr>
+<tr class="odd">
+<td>Leading razor protein</td>
+<td>The identifier of the best scoring protein, from the proteinGroups file this, this peptide is associated to.</td>
+</tr>
+<tr class="even">
+<td>Gene names</td>
+<td>Names of genes this peptide is associated with.</td>
+</tr>
+<tr class="odd">
+<td>Protein names</td>
+<td>Names of proteins this peptide is associated with.</td>
+</tr>
+<tr class="even">
+<td>Type</td>
+<td>The type of the feature. ‘MSMS’ - for an MS/MS spectrum without an MS1 isotope pattern assigned. ‘ISO-MSMS’ - MS1 isotope cluster identified by MS/MS. ‘MULTI-MSMS’ - MS1 labeling cluster identified by MS/MS. ‘MULTI-SECPEP’ - MS1 labeling cluster identified by MS/MS as second peptide. ‘MULTI-MATCH’ - MS1 labeling cluster identified by matching between runs. In case of label-free data there is no difference between ‘MULTI’ and ‘ISO’.</td>
+</tr>
+<tr class="odd">
+<td>Labeling State</td>
+<td>Labeling state of the precursor isotope pattern used to identify the peptide.</td>
+</tr>
+<tr class="even">
+<td>Raw file</td>
+<td>The name of the RAW-file the mass spectral data was derived from.</td>
+</tr>
+<tr class="odd">
+<td>Fraction</td>
+<td>The fraction in which this peptide was detected.</td>
+</tr>
+<tr class="even">
+<td>colName</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>MS/MS m/z</td>
+<td>The m/z used for fragmentation (not necessarily the mono-isotopic m/z).</td>
+</tr>
+<tr class="even">
+<td>Charge</td>
+<td>The charge-state of the precursor ion.</td>
+</tr>
+<tr class="odd">
+<td>m/z</td>
+<td>The recalibrated mass-over-charge value of the precursor ion.</td>
+</tr>
+<tr class="even">
+<td>Mass</td>
+<td>The predicted monoisotopic mass of the identified peptide sequence.</td>
+</tr>
+<tr class="odd">
+<td>Resolution</td>
+<td>The resolution of precursor ion measured in Full Width at Half Maximum (FWHM).</td>
+</tr>
+<tr class="even">
+<td>Uncalibrated - Calibrated m/z [ppm]</td>
+<td>The difference between the uncalibrated and recalibrated mass-over-charge value of the precursor ion measured in parts-per-million. This gives an indication of the mass drift in the original data, which was automatically corrected by MaxQuant.</td>
+</tr>
+<tr class="odd">
+<td>Uncalibrated - Calibrated m/z [Da]</td>
+<td>The difference between the uncalibrated and recalibrated mass-over-charge value of the precursor ion measured in parts-per-million. This gives an indication of the mass drift in the original data, which was automatically corrected by MaxQuant.</td>
+</tr>
+<tr class="even">
+<td>Mass Error [ppm]</td>
+<td>Mass error of the recalibrated mass-over-charge value of the precursor ion in comparison to the predicted monoisotopic mass of the identified peptide sequence in parts per million.</td>
+</tr>
+<tr class="odd">
+<td>Mass Error [Da]</td>
+<td>Mass error of the recalibrated mass-over-charge value of the precursor ion in comparison to the predicted monoisotopic mass of the identified peptide sequence in milli-Dalton.</td>
+</tr>
+<tr class="even">
+<td>Uncalibrated Mass Error [ppm]</td>
+<td>Mass error of the uncalibrated mass-over-charge value of the precursor ion in comparison to the predicted monoisotopic mass of the identified peptide sequence. Note: This column can contain missing values (denoted as NaN).</td>
+</tr>
+<tr class="odd">
+<td>Uncalibrated Mass Error [Da]</td>
+<td>Mass error of the uncalibrated mass-over-charge value of the precursor ion in comparison to the predicted monoisotopic mass of the identified peptide sequence. Note: This column can contain missing values (denoted as NaN).</td>
+</tr>
+<tr class="even">
+<td>Max intensity m/z 0</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="odd">
+<td>Max intensity m/z 0</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="even">
+<td>Max intensity m/z 1</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="odd">
+<td>Max intensity m/z 0</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="even">
+<td>Max intensity m/z 1</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="odd">
+<td>Max intensity m/z 2</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="even">
+<td>Retention time</td>
+<td>The uncalibrated retention time in minutes in the elution profile of the precursor ion.</td>
+</tr>
+<tr class="odd">
+<td>Retention length</td>
+<td>The total retention time of the peak (last timepoint - first timepoint).</td>
+</tr>
+<tr class="even">
+<td>Calibrated retention time</td>
+<td>The recalibrated retention time in minutes in the elution profile of the precursor ion.</td>
+</tr>
+<tr class="odd">
+<td>Calibrated retention time start</td>
+<td>The recalibrated retention start in minutes in the elution profile of the precursor ion.</td>
+</tr>
+<tr class="even">
+<td>Calibrated retention time finish</td>
+<td>The recalibrated retention finish in minutes in the elution profile of the precursor ion.</td>
+</tr>
+<tr class="odd">
+<td>Retention time calibration</td>
+<td>The difference in minutes between the uncalibrated and recalibrated retention time. This gives an indication of the retention time drift in the original data, which was automatically corrected by MaxQuant. Note: This column can contain missing values (NaN).</td>
+</tr>
+<tr class="even">
+<td>Match time difference</td>
+<td>When the option ‘match between runs’ is used in MaxQuant, this value indicates the time difference between the feature from the raw file it was taken from and the feature from the raw file it was matched to.</td>
+</tr>
+<tr class="odd">
+<td>Match m/z difference</td>
+<td>When the option ‘match between runs’ is used in MaxQuant, this value indicates the m/z difference between the feature from the raw file it was taken from and the feature from the raw file it was matched to.</td>
+</tr>
+<tr class="even">
+<td>Match q-value</td>
+<td>This is the q-value for features that have been identified by ‘matching between runs’.</td>
+</tr>
+<tr class="odd">
+<td>Match score</td>
+<td>The andromeda score of the MS/MS identification that is the source of this identification by ‘matching between runs’.</td>
+</tr>
+<tr class="even">
+<td>Number of data points</td>
+<td>The number of data points (peak centroids) collected for this peptide feature.</td>
+</tr>
+<tr class="odd">
+<td>Number of scans</td>
+<td>The number of MS scans that the 3d peaks of this peptide feature are overlapping with.</td>
+</tr>
+<tr class="even">
+<td>Number of isotopic peaks</td>
+<td>The number of isotopic peaks contained in this peptide feature.</td>
+</tr>
+<tr class="odd">
+<td>PIF</td>
+<td>Short for Parent Ion Fraction; indicates the fraction the target peak makes up of the total intensity in the inclusion window.</td>
+</tr>
+<tr class="even">
+<td>Fraction of total spectrum</td>
+<td>The percentage the ion intensity makes up of the total intensity of the whole spectrum.</td>
+</tr>
+<tr class="odd">
+<td>Base peak fraction</td>
+<td>The percentage the parent ion intensity in comparison to the highest peak in the MS spectrum.</td>
+</tr>
+<tr class="even">
+<td>PEP</td>
+<td>Posterior Error Probability of the identification. This value essentially operates as a p-value, where smaller is more significant.</td>
+</tr>
+<tr class="odd">
+<td>MS/MS Count</td>
+<td>The number of sequencing events for this sequence, which matches the number of identifiers stored in the column ‘MS/MS IDs’. This number is independent of the times the AA sequence has been identified through (other) modifications (e.g.&nbsp;heavy label, oxidation, etc.), about which information can be found in the columns ‘Labeling State’ and ‘Modification’.</td>
+</tr>
+<tr class="even">
+<td>MS/MS Scan Number</td>
+<td>The RAW-file derived scan number of the MS/MS with the highest peptide identification score (the highest score is stored in the column ‘Score’).</td>
+</tr>
+<tr class="odd">
+<td>Score</td>
+<td>Andromeda score for the best associated MS/MS spectrum.</td>
+</tr>
+<tr class="even">
+<td>Delta score</td>
+<td>Score difference to the second best identified peptide.</td>
+</tr>
+<tr class="odd">
+<td>Combinatorics</td>
+<td>Number of possible distributions of the modifications over the peptide sequence.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/L</td>
+<td>The ratio between two heavy and light label partners.</td>
+</tr>
+<tr class="odd">
+<td>Ratio H/L normalized</td>
+<td>Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/L shift</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Ratio M/L</td>
+<td>The ratio between two medium and light label partners.</td>
+</tr>
+<tr class="even">
+<td>Ratio M/L normalized</td>
+<td>Normalized ratio between two heavy and light label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="odd">
+<td>Ratio M/L shift</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Ratio H/L</td>
+<td>The ratio between two heavy and light label partners.</td>
+</tr>
+<tr class="odd">
+<td>Ratio H/L normalized</td>
+<td>Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/L shift</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Ratio H/M</td>
+<td>The ratio between two heavy and medium label partners.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/M normalized</td>
+<td>Normalized ratio between two heavy and medium label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="odd">
+<td>Ratio H/M shift</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Intensity</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="odd">
+<td>Intensity</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="even">
+<td>Intensity L</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner.</td>
+</tr>
+<tr class="odd">
+<td>Intensity H</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner.</td>
+</tr>
+<tr class="even">
+<td>Intensity</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="odd">
+<td>Intensity L</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner.</td>
+</tr>
+<tr class="even">
+<td>Intensity M</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the medium label partner.</td>
+</tr>
+<tr class="odd">
+<td>Intensity H</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner.</td>
+</tr>
+<tr class="even">
+<td>Reverse</td>
+<td>When marked with ‘+’, this particular peptide was found to be part of a protein derived from the reversed part of the decoy database. These should be removed for further data analysis.</td>
+</tr>
+<tr class="odd">
+<td>Potential contaminant</td>
+<td>When marked with ‘+’, this particular peptide was found to be part of a commonly occurring contaminant. These should be removed for further data analysis.</td>
+</tr>
+<tr class="even">
+<td>id</td>
+<td>A unique (consecutive) identifier for each row in the evidence table, which is used to cross-link the information in this file with the information stored in the other files.</td>
+</tr>
+<tr class="odd">
+<td>Protein group IDs</td>
+<td>The identifier of the protein-group this redundant peptide sequence is associated with, which can be used to look up the extended protein information in the file ‘proteinGroups.txt’. As a single peptide can be linked to multiple proteins (e.g.&nbsp;in the case of razor-proteins), multiple id’s can be stored here separated by a semicolon. As a protein can be identified by multiple peptides, the same id can be found in different rows.</td>
+</tr>
+<tr class="even">
+<td>Peptide ID</td>
+<td>The identifier of the non-redundant peptide sequence.</td>
+</tr>
+<tr class="odd">
+<td>Mod. peptide ID</td>
+<td>Identifier of the associated modification summary stored in the file ‘modificationSpecificPeptides.txt’.</td>
+</tr>
+<tr class="even">
+<td>MS/MS IDs</td>
+<td>Identifier(s) of the associated MS/MS summary(s) stored in the file ‘msms.txt’.</td>
+</tr>
+<tr class="odd">
+<td>Best MS/MS</td>
+<td>Identifier(s) of the best MS/MS associated spectrum stored in the file ‘msms.txt’.</td>
+</tr>
+<tr class="even">
+<td>AIF MS/MS IDs</td>
+<td>Identifier(s) of the associated All Ion Fragmentation MS/MS summary(s) stored in the file ‘aifMsms.txt’.</td>
+</tr>
+<tr class="odd">
+<td>t + ” site IDs”</td>
+<td>“Identifier(s) of the modification summary stored in the file ’” + t + “Sites.txt’.”</td>
+</tr>
+<tr class="even">
+<td>“Reporter intensity” + i</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Reporter intensity not corrected” + i</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“Reporter intensity count” + i</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Reporter PIF</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Reporter fraction</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="peptide-table" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="peptide-table"><span class="header-section-number">3</span> Peptide Table</h2>
+<p>The peptides table contains information on the identified peptides in the processed raw-files.</p>
+<table class="table">
+<colgroup>
+<col style="width: 31%">
+<col style="width: 68%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Sequence</td>
+<td>The amino acid sequence of the identified peptide.</td>
+</tr>
+<tr class="even">
+<td>N-term cleavage window</td>
+<td>“Sequence window from -” + cleaveWindowHalf + ” to ” + cleaveWindowHalf + ” around the N-terminal cleavage site of this peptide.”</td>
+</tr>
+<tr class="odd">
+<td>C-term cleavage window</td>
+<td>“Sequence window from -” + cleaveWindowHalf + ” to ” + cleaveWindowHalf + ” around the C-terminal cleavage site of this peptide.”</td>
+</tr>
+<tr class="even">
+<td>Amino acid before</td>
+<td>The amino acid in the protein sequence before the peptide.</td>
+</tr>
+<tr class="odd">
+<td>First amino acid</td>
+<td>The amino acid in the first position of the peptide sequence.</td>
+</tr>
+<tr class="even">
+<td>Second amino acid</td>
+<td>The amino acid in the first position of the peptide sequence.</td>
+</tr>
+<tr class="odd">
+<td>Second last amino acid</td>
+<td>The amino acid in the last position of the peptide sequence.</td>
+</tr>
+<tr class="even">
+<td>Last amino acid</td>
+<td>The amino acid in the last position of the peptide sequence.</td>
+</tr>
+<tr class="odd">
+<td>Amino acid after</td>
+<td>The amino acid in the protein sequence after the peptide.</td>
+</tr>
+<tr class="even">
+<td>aa + ” Count”</td>
+<td>“The number of instances of the ’” + aa + “’ amino acid contained within the sequence.”</td>
+</tr>
+<tr class="odd">
+<td>Length</td>
+<td>The length of the sequence stored in the column “Sequence”.</td>
+</tr>
+<tr class="even">
+<td>Mutated</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Mutation names</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“Missed cleavages (” + enzyme + “)”</td>
+<td>Number of missed enzymatic cleavages.</td>
+</tr>
+<tr class="odd">
+<td>Missed cleavages</td>
+<td>Number of missed enzymatic cleavages.</td>
+</tr>
+<tr class="even">
+<td>Mass</td>
+<td>Monoisotopic mass of the peptide.</td>
+</tr>
+<tr class="odd">
+<td>Proteins</td>
+<td>Identifiers of proteins this peptide is associated with.</td>
+</tr>
+<tr class="even">
+<td>Leading razor protein</td>
+<td>Identifiers of the best scoring protein this peptide is associated with.</td>
+</tr>
+<tr class="odd">
+<td>Start position</td>
+<td>Position of the first amino acid of this peptide in the protein sequence. (one-based)</td>
+</tr>
+<tr class="even">
+<td>End position</td>
+<td>Position of the last amino acid of this peptide in the protein sequence. (one-based)</td>
+</tr>
+<tr class="odd">
+<td>Gene names</td>
+<td>Names of genes this peptide is associated with.</td>
+</tr>
+<tr class="even">
+<td>Protein names</td>
+<td>Names of proteins this peptide is associated with.</td>
+</tr>
+<tr class="odd">
+<td>Unique (Groups)</td>
+<td>When marked with ‘+’, this particular peptide is unique to a single protein group in the proteinGroups file.</td>
+</tr>
+<tr class="even">
+<td>Unique (Proteins)</td>
+<td>When marked with ‘+’, this particular peptide is unique to a single protein sequence in the fasta file(s).</td>
+</tr>
+<tr class="odd">
+<td>Charges</td>
+<td>All charge states that have been observed.</td>
+</tr>
+<tr class="even">
+<td>PEP</td>
+<td>Posterior Error Probability of the identification. This value essentially operates as a p-value, where smaller is more significant.</td>
+</tr>
+<tr class="odd">
+<td>Score</td>
+<td>Highest Andromeda score for the associated MS/MS spectra.</td>
+</tr>
+<tr class="even">
+<td>“Identification type” + exp</td>
+<td>Indicates whether this experiment was identified by MS/MS or only by matching between runs.</td>
+</tr>
+<tr class="odd">
+<td>Fraction Average</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Fraction Std. Dev.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Fraction” + t</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>colName + ” ” + t</td>
+<td>Number of evidence entries for this ‘Experiment’.</td>
+</tr>
+<tr class="odd">
+<td>Reverse</td>
+<td>When marked with ‘+’, this particular peptide was found to be part of a protein derived from the reversed part of the decoy database. These should be removed for further data analysis.</td>
+</tr>
+<tr class="even">
+<td>Potential contaminant</td>
+<td>When marked with ‘+’, this particular peptide was found to be part of a commonly occurring contaminant. These should be removed for further data analysis.</td>
+</tr>
+<tr class="odd">
+<td>id</td>
+<td>A unique (consecutive) identifier for each row in the peptides table, which is used to cross-link the information in this table with the information stored in the other tables.</td>
+</tr>
+<tr class="even">
+<td>Protein group IDs</td>
+<td>The identifiers of the protein groups this peptide was linked to, referenced against the proteinGroups table.</td>
+</tr>
+<tr class="odd">
+<td>Mod. peptide IDs</td>
+<td>Identifier(s) for peptide sequence(s), associated with the peptide, referenced against the corresponding modified peptides table.</td>
+</tr>
+<tr class="even">
+<td>Evidence IDs</td>
+<td>Identifier(s) for analyzed peptide evidence associated with the protein group referenced against the evidences table.</td>
+</tr>
+<tr class="odd">
+<td>MS/MS IDs</td>
+<td>The identifiers of the MS/MS scans identifying this peptide, referenced against the msms table.</td>
+</tr>
+<tr class="even">
+<td>Best MS/MS</td>
+<td>The identifier of the best (in terms of quality) MS/MS scan identifying this peptide, referenced against the msms table.</td>
+</tr>
+<tr class="odd">
+<td>t + ” site IDs”</td>
+<td>Identifier(s) for site(s) associated with the protein group, which show(s) evidence of the modification, referenced against the appropriate modification site file.</td>
+</tr>
+<tr class="even">
+<td>MS/MS Count</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Reporter intensity” + i</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“Reporter intensity not corrected” + i</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Reporter intensity count” + i</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“Reporter intensity” + i + ” ” + exp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Reporter intensity not corrected” + i + ” ” + exp</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“Reporter intensity count” + i + ” ” + exp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Intensity” + exp</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="even">
+<td>“Intensity L” + exp</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner.</td>
+</tr>
+<tr class="odd">
+<td>“Intensity M” + exp</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the medium label partner.</td>
+</tr>
+<tr class="even">
+<td>“Intensity H” + exp</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner.</td>
+</tr>
+<tr class="odd">
+<td>Intensity</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="even">
+<td>Intensity L</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner.</td>
+</tr>
+<tr class="odd">
+<td>Intensity M</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the medium label partner.</td>
+</tr>
+<tr class="even">
+<td>Intensity H</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner.</td>
+</tr>
+<tr class="odd">
+<td>“Intensity” + exp</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="even">
+<td>“Intensity L” + exp</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner.</td>
+</tr>
+<tr class="odd">
+<td>“Intensity H” + exp</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner.</td>
+</tr>
+<tr class="even">
+<td>Intensity</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="odd">
+<td>Intensity L</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner.</td>
+</tr>
+<tr class="even">
+<td>Intensity H</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner.</td>
+</tr>
+<tr class="odd">
+<td>“Intensity” + exp</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="even">
+<td>Intensity</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio M/L” + exp</td>
+<td>The ratio between two medium and light label partners.</td>
+</tr>
+<tr class="even">
+<td>“Ratio M/L normalized” + exp</td>
+<td>The ratio between two medium and light label partners.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio M/L variability [%]” + exp</td>
+<td>Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100.</td>
+</tr>
+<tr class="even">
+<td>“Ratio M/L count” + exp</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio M/L iso-count” + exp</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method.</td>
+</tr>
+<tr class="even">
+<td>“Ratio M/L type” + exp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/L” + exp</td>
+<td>The ratio between two heavy and light label partners.</td>
+</tr>
+<tr class="even">
+<td>“Ratio H/L normalized” + exp</td>
+<td>Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/L variability [%]” + exp</td>
+<td>Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100.</td>
+</tr>
+<tr class="even">
+<td>“Ratio H/L count” + exp</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/L iso-count” + exp</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method.</td>
+</tr>
+<tr class="even">
+<td>“Ratio H/L type” + exp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/M” + exp</td>
+<td>The ratio between two heavy and medium label partners.</td>
+</tr>
+<tr class="even">
+<td>“Ratio H/M normalized” + exp</td>
+<td>Normalized ratio between two heavy and medium label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/M variability [%]” + exp</td>
+<td>Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100.</td>
+</tr>
+<tr class="even">
+<td>“Ratio H/M count” + exp</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/M iso-count” + exp</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method.</td>
+</tr>
+<tr class="even">
+<td>“Ratio H/M type” + exp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/L” + exp</td>
+<td>The ratio between two heavy and light label partners.</td>
+</tr>
+<tr class="even">
+<td>“Ratio H/L normalized” + exp</td>
+<td>Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/L variability [%]” + exp</td>
+<td>Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100.</td>
+</tr>
+<tr class="even">
+<td>“Ratio H/L count” + exp</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/L iso-count” + exp</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method.</td>
+</tr>
+<tr class="even">
+<td>“Ratio H/L type” + exp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Ratio M/L</td>
+<td>The ratio between two medium and light label partners.</td>
+</tr>
+<tr class="even">
+<td>Ratio M/L normalized</td>
+<td>Normalized ratio between two heavy and light label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="odd">
+<td>Ratio M/L variability [%]</td>
+<td>Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100.</td>
+</tr>
+<tr class="even">
+<td>Ratio M/L count</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation.</td>
+</tr>
+<tr class="odd">
+<td>Ratio M/L iso-count</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method.</td>
+</tr>
+<tr class="even">
+<td>Ratio M/L type</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Ratio H/L</td>
+<td>The ratio between two heavy and light label partners.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/L normalized</td>
+<td>Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="odd">
+<td>Ratio H/L variability [%]</td>
+<td>Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/L count</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation.</td>
+</tr>
+<tr class="odd">
+<td>Ratio H/L iso-count</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/L type</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Ratio H/M</td>
+<td>The ratio between two heavy and medium label partners.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/M normalized</td>
+<td>Normalized ratio between two heavy and medium label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="odd">
+<td>Ratio H/M variability [%]</td>
+<td>Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/M count</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation.</td>
+</tr>
+<tr class="odd">
+<td>Ratio H/M iso-count</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/M type</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Ratio H/L</td>
+<td>The ratio between two heavy and light label partners.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/L normalized</td>
+<td>Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="odd">
+<td>Ratio H/L variability [%]</td>
+<td>Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/L count</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation.</td>
+</tr>
+<tr class="odd">
+<td>Ratio H/L iso-count</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/L type</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="modification-specific-peptide-table" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="modification-specific-peptide-table"><span class="header-section-number">4</span> Modification-Specific Peptide Table</h2>
+<table class="table">
+<colgroup>
+<col style="width: 31%">
+<col style="width: 68%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Sequence</td>
+<td>The identified AA sequence of the peptide.</td>
+</tr>
+<tr class="even">
+<td>aa + ” Count”</td>
+<td>“The number of instances of the ’” + aa + “’ AA contained within the sequence. The value for this can reliably be determined in the case of SILAC partners based on the distance between the partners. These counts are used to solidify the peptide identification process.”</td>
+</tr>
+<tr class="odd">
+<td>Modifications</td>
+<td>Post-translational modifications contained within the sequence. When no modifications exist, this is set to ‘unmodified’.</td>
+</tr>
+<tr class="even">
+<td>Mass</td>
+<td>Charge corrected mass of the precursor ion.</td>
+</tr>
+<tr class="odd">
+<td>Mass Fractional Part</td>
+<td>The values after the decimal point (ie value - floor(value)<nowiki></nowiki>).</td>
+</tr>
+<tr class="even">
+<td>Protein Groups</td>
+<td>IDs of the protein groups to whoch this peptide belongs.</td>
+</tr>
+<tr class="odd">
+<td>Proteins</td>
+<td>The identifiers of the proteins this particular peptide is associated with.</td>
+</tr>
+<tr class="even">
+<td>Gene Names</td>
+<td>Names of genes this peptide is associated with.</td>
+</tr>
+<tr class="odd">
+<td>Protein Names</td>
+<td>Names of proteins this peptide is associated with.</td>
+</tr>
+<tr class="even">
+<td>Unique (Groups)</td>
+<td>When marked with ‘+’, this particular peptide is unique to a single protein group in the proteinGroups file.</td>
+</tr>
+<tr class="odd">
+<td>Unique (Proteins)</td>
+<td>When marked with ‘+’, this particular peptide is unique to a single protein sequence in the fasta file(s).</td>
+</tr>
+<tr class="even">
+<td>modName</td>
+<td>“Number of” + modName + ” on this peptide.”</td>
+</tr>
+<tr class="odd">
+<td>“Missed cleavages (” + enzyme + “)”</td>
+<td>Number of missed enzymatic cleavages.</td>
+</tr>
+<tr class="even">
+<td>Missed cleavages</td>
+<td>Number of missed enzymatic cleavages.</td>
+</tr>
+<tr class="odd">
+<td>“Identification type” + exp</td>
+<td>Indicates whether this experiment was identified by MS/MS or only by matching between runs.</td>
+</tr>
+<tr class="even">
+<td>Fraction Average</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Fraction Std. Dev.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“Fraction” + t</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>colName + ” ” + t</td>
+<td>Number of evidence entries for this ‘Experiment’.</td>
+</tr>
+<tr class="even">
+<td>Retention time</td>
+<td>Retention time in minutes averaged over the evidence entries belonging to this modification-specific peptide.</td>
+</tr>
+<tr class="odd">
+<td>Calibrated retention time</td>
+<td>Calibrated retention time averaged over the evidence entries belonging to this modification-specific peptide. Obviously this only makes sense if retention time recalibration has been performed which is the case when matching between run is selected.</td>
+</tr>
+<tr class="even">
+<td>Charges</td>
+<td>All charge states that have been observed.</td>
+</tr>
+<tr class="odd">
+<td>PEP</td>
+<td>Posterior Error Probability of the identification. This value essentially operates as a p-value, where smaller is more significant.</td>
+</tr>
+<tr class="even">
+<td>MS/MS scan number</td>
+<td>The RAW-file derived scan number of the MS/MS with the highest peptide identification score (the highest score is stored in the column ‘Score’).</td>
+</tr>
+<tr class="odd">
+<td>Raw file</td>
+<td>The name of the RAW-file the mass spectral data was derived from.</td>
+</tr>
+<tr class="even">
+<td>Score</td>
+<td>Andromeda score for the best identified among the associated MS/MS spectra.</td>
+</tr>
+<tr class="odd">
+<td>Delta score</td>
+<td>Score difference to the second best identified peptide.</td>
+</tr>
+<tr class="even">
+<td>Reverse</td>
+<td>When marked with ‘+’, this particular peptide was found to be part of a protein derived from the reversed part of the decoy database. These should be removed for further data analysis.</td>
+</tr>
+<tr class="odd">
+<td>Potential contaminant</td>
+<td>When marked with ‘+’, this particular peptide was found to be part of a commonly occurring contaminant. These should be removed for further data analysis.</td>
+</tr>
+<tr class="even">
+<td>id</td>
+<td>A unique (consecutive) identifier for each row in the peptides table, which is used to cross-link the information in this table with the information stored in the other tables.</td>
+</tr>
+<tr class="odd">
+<td>Protein group IDs</td>
+<td>The identifiers of the protein groups this peptide was linked to, referenced against the proteinGroups table.</td>
+</tr>
+<tr class="even">
+<td>Peptide ID</td>
+<td>Identifier of the associated peptide sequence summary, which can be found in the file ‘peptides.txt’.</td>
+</tr>
+<tr class="odd">
+<td>Evidence IDs</td>
+<td>Identifier(s) for analyzed peptide evidence associated with the protein group referenced against the evidences table.</td>
+</tr>
+<tr class="even">
+<td>MS/MS IDs</td>
+<td>The identifiers of the MS/MS scans identifying this peptide, referenced against the msms table.</td>
+</tr>
+<tr class="odd">
+<td>Best MS/MS</td>
+<td>The identifier of the best (in terms of quality) MS/MS scan identifying this peptide, referenced against the msms table.</td>
+</tr>
+<tr class="even">
+<td>t + ” site IDs”</td>
+<td>Identifier(s) for site(s) associated with this peptide, which show(s) evidence of the modification, referenced against the appropriate modification site file.</td>
+</tr>
+<tr class="odd">
+<td>MS/MS Count</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“Reporter intensity” + i</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Reporter intensity not corrected” + i</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“Reporter intensity count” + i</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Reporter intensity” + i + ” ” + exp</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“Reporter intensity not corrected” + i + ” ” + exp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Reporter intensity count” + i + ” ” + exp</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“Intensity” + exp</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="odd">
+<td>“Intensity L” + exp</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner.</td>
+</tr>
+<tr class="even">
+<td>“Intensity M” + exp</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the medium label partner.</td>
+</tr>
+<tr class="odd">
+<td>“Intensity H” + exp</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner.</td>
+</tr>
+<tr class="even">
+<td>“Intensity” + exp</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="odd">
+<td>“Intensity L” + exp</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner.</td>
+</tr>
+<tr class="even">
+<td>“Intensity H” + exp</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner.</td>
+</tr>
+<tr class="odd">
+<td>“Intensity” + exp</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="even">
+<td>Intensity</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="odd">
+<td>Intensity L</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner.</td>
+</tr>
+<tr class="even">
+<td>Intensity M</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the medium label partner.</td>
+</tr>
+<tr class="odd">
+<td>Intensity H</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner.</td>
+</tr>
+<tr class="even">
+<td>Intensity</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="odd">
+<td>Intensity L</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner.</td>
+</tr>
+<tr class="even">
+<td>Intensity H</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner.</td>
+</tr>
+<tr class="odd">
+<td>Intensity</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="even">
+<td>“Ratio M/L” + exp</td>
+<td>The ratio between two medium and light label partners.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio M/L normalized” + exp</td>
+<td>Normalized ratio between two heavy and light label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="even">
+<td>“Ratio M/L variability [%]” + exp</td>
+<td>Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio M/L count” + exp</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation.</td>
+</tr>
+<tr class="even">
+<td>“Ratio M/L iso-count” + exp</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio M/L type” + exp</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“Ratio H/L” + exp</td>
+<td>The ratio between two heavy and light label partners.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/L normalized” + exp</td>
+<td>Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="even">
+<td>“Ratio H/L variability [%]” + exp</td>
+<td>Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/L count” + exp</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation.</td>
+</tr>
+<tr class="even">
+<td>“Ratio H/L iso-count” + exp</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/L type” + exp</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“Ratio H/M” + exp</td>
+<td>The ratio between two heavy and medium label partners.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/M normalized” + exp</td>
+<td>Normalized ratio between two heavy and medium label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="even">
+<td>“Ratio H/M variability [%]” + exp</td>
+<td>Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/M count” + exp</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation.</td>
+</tr>
+<tr class="even">
+<td>“Ratio H/M iso-count” + exp</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/M type” + exp</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“Ratio H/L” + exp</td>
+<td>The ratio between two heavy and light label partners.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/L normalized” + exp</td>
+<td>Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="even">
+<td>“Ratio H/L variability [%]” + exp</td>
+<td>Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/L count” + exp</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation.</td>
+</tr>
+<tr class="even">
+<td>“Ratio H/L iso-count” + exp</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/L type” + exp</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Ratio M/L</td>
+<td>The ratio between two medium and light label partners.</td>
+</tr>
+<tr class="odd">
+<td>Ratio M/L normalized</td>
+<td>Normalized ratio between two heavy and light label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="even">
+<td>Ratio M/L variability [%]</td>
+<td>Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100.</td>
+</tr>
+<tr class="odd">
+<td>Ratio M/L count</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation.</td>
+</tr>
+<tr class="even">
+<td>Ratio M/L iso-count</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method.</td>
+</tr>
+<tr class="odd">
+<td>Ratio M/L type</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Ratio H/L</td>
+<td>The ratio between two heavy and light label partners.</td>
+</tr>
+<tr class="odd">
+<td>Ratio H/L normalized</td>
+<td>Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/L variability [%]</td>
+<td>Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100.</td>
+</tr>
+<tr class="odd">
+<td>Ratio H/L count</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/L iso-count</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method.</td>
+</tr>
+<tr class="odd">
+<td>Ratio H/L type</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Ratio H/M</td>
+<td>The ratio between two heavy and medium label partners.</td>
+</tr>
+<tr class="odd">
+<td>Ratio H/M normalized</td>
+<td>Normalized ratio between two heavy and medium label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/M variability [%]</td>
+<td>Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100.</td>
+</tr>
+<tr class="odd">
+<td>Ratio H/M count</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/M iso-count</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method.</td>
+</tr>
+<tr class="odd">
+<td>Ratio H/M type</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Ratio H/L</td>
+<td>The ratio between two heavy and light label partners.</td>
+</tr>
+<tr class="odd">
+<td>Ratio H/L normalized</td>
+<td>Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/L variability [%]</td>
+<td>Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100.</td>
+</tr>
+<tr class="odd">
+<td>Ratio H/L count</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/L iso-count</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method.</td>
+</tr>
+<tr class="odd">
+<td>Ratio H/L type</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="site-table" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="site-table"><span class="header-section-number">5</span> Site Table</h2>
+<table class="table">
+<colgroup>
+<col style="width: 31%">
+<col style="width: 68%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Proteins</td>
+<td>Identifiers of proteins this site is associated with.</td>
+</tr>
+<tr class="even">
+<td>Positions within proteins</td>
+<td>For each protein identifier in the ‘Proteins’ column you find here the psoition of the site in the respective protein sequence. The index of the first amino acid in the sequence is 1.</td>
+</tr>
+<tr class="odd">
+<td>Leading proteins</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Protein</td>
+<td>Identifier of the protein this peptide is associated with.</td>
+</tr>
+<tr class="odd">
+<td>Protein names</td>
+<td>Names of proteins this peptide is associated with.</td>
+</tr>
+<tr class="even">
+<td>Gene names</td>
+<td>Names of genes this peptide is associated with.</td>
+</tr>
+<tr class="odd">
+<td>Fasta headers</td>
+<td>Descriptions of proteins this peptide is associated with.</td>
+</tr>
+<tr class="even">
+<td>Localization prob</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Score diff</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>PEP</td>
+<td>The posterior error probability (PEP) of the best identified modified peptide containing this site.</td>
+</tr>
+<tr class="odd">
+<td>Score</td>
+<td>The Andromeda score of the best identified modified peptide containing this site.</td>
+</tr>
+<tr class="even">
+<td>Delta score</td>
+<td>The Andromeda delta score of the best identified modified peptide containing this site.</td>
+</tr>
+<tr class="odd">
+<td>Score for localization</td>
+<td>The Andromeda score of the MS/MS spectrum used for calculating the localization score for this site.</td>
+</tr>
+<tr class="even">
+<td>“Localization prob” + exp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Score diff” + exp</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“PEP” + exp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Score” + exp</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Diagnostic peak</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Number of” + mod</td>
+<td>“Different numbers of” + mod + ” on peptides that this site is involved in.”</td>
+</tr>
+<tr class="even">
+<td>Amino acid</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Sequence window</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Modification window</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Peptide window coverage</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>mod + ” Probabilities”</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>mod + ” Score diffs”</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Position in peptide</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Charge</td>
+<td>Charge state of the precursor ion.</td>
+</tr>
+<tr class="even">
+<td>Mass error [ppm]</td>
+<td>Mass error of the recalibrated mass-over-charge value of the precursor ion in comparison to the predicted monoisotopic mass of the identified peptide sequence.</td>
+</tr>
+<tr class="odd">
+<td>“Identification type” + exp</td>
+<td>Indicates whether this experiment was identified by MS/MS or only by matching between runs.</td>
+</tr>
+<tr class="even">
+<td>Reverse</td>
+<td>When marked with ‘+’, this particular peptide was found to be part of a protein derived from the reversed part of the protein sequence database. These should be removed for further data analysis.</td>
+</tr>
+<tr class="odd">
+<td>Potential contaminant</td>
+<td>When marked with ‘+’, this particular peptide was found to be part of a commonly occurring contaminant. These should be removed for further data analysis.</td>
+</tr>
+<tr class="even">
+<td>id</td>
+<td>A unique (consecutive) identifier for each row in the site table, which is used to cross-link the information in this file with the information stored in the other files.</td>
+</tr>
+<tr class="odd">
+<td>Protein group IDs</td>
+<td>The identifier of the protein-group this peptide sequence is associated with, which can be used to look up the extended protein information in the file ‘proteinGroups.txt’. As a single peptide can be linked to multiple proteins (e.g.&nbsp;in the case of razor-proteins), multiple id’s can be stored here separated by a semicolon. As a protein can be identified by multiple peptides, the same id can be found in different rows.</td>
+</tr>
+<tr class="even">
+<td>Positions</td>
+<td>The positions of the modifications in the protein amino acid sequence.</td>
+</tr>
+<tr class="odd">
+<td>Position</td>
+<td>The position of the modification in the protein amino acid sequence.</td>
+</tr>
+<tr class="even">
+<td>Peptide IDs</td>
+<td>Identifier(s) of the associated peptide sequence(s) summary, which can be found in the file ‘peptides.txt’.</td>
+</tr>
+<tr class="odd">
+<td>Mod. peptide IDs</td>
+<td>Identifier(s) of the associated peptide sequence(s) summary, which can be found in the file ‘modificationSpecificPeptides.txt’.</td>
+</tr>
+<tr class="even">
+<td>Evidence IDs</td>
+<td>Identifier(s) for analyzed peptide evidence associated with the protein group referenced against the evidences table.</td>
+</tr>
+<tr class="odd">
+<td>MS/MS IDs</td>
+<td>The identifiers of the MS/MS scans identifying this peptide, referenced against the msms table.</td>
+</tr>
+<tr class="even">
+<td>Best localization evidence ID</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Best localization MS/MS ID</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Best localization raw file</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Best localization scan number</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Best score evidence ID</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Best score MS/MS ID</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Best score raw file</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Best score scan number</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Best PEP evidence ID</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Best PEP MS/MS ID</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Best PEP raw file</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Best PEP scan number</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“Reporter intensity” + i</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Reporter intensity not corrected” + i</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“Reporter intensity count” + i</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Reporter intensity” + i + ” ” + exp</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“Reporter intensity not corrected” + i + ” ” + exp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Reporter intensity count” + i + ” ” + exp</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“Intensity” + exp</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="odd">
+<td>“Intensity L” + exp</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner.</td>
+</tr>
+<tr class="even">
+<td>“Intensity M” + exp</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the medium label partner.</td>
+</tr>
+<tr class="odd">
+<td>“Intensity H” + exp</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner.</td>
+</tr>
+<tr class="even">
+<td>“Ratio mod/base L” + exp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Ratio mod/base M” + exp</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“Ratio mod/base H” + exp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Intensity” + exp</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="even">
+<td>“Intensity L” + exp</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner.</td>
+</tr>
+<tr class="odd">
+<td>“Intensity H” + exp</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner.</td>
+</tr>
+<tr class="even">
+<td>“Ratio mod/base L” + exp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Ratio mod/base H” + exp</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“Intensity” + exp</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio mod/base” + exp</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“Intensity” + exp + “<nowiki>___</nowiki>” + j</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="odd">
+<td>“Occupancy” + exp</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“Occupancy ratio” + exp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Occupancy error scale” + exp</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Intensity</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="odd">
+<td>Intensity L</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner.</td>
+</tr>
+<tr class="even">
+<td>Intensity M</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the medium label partner.</td>
+</tr>
+<tr class="odd">
+<td>Intensity H</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner.</td>
+</tr>
+<tr class="even">
+<td>Ratio mod/base L</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Ratio mod/base M</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Ratio mod/base H</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Intensity</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="even">
+<td>Intensity L</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner.</td>
+</tr>
+<tr class="odd">
+<td>Intensity H</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner.</td>
+</tr>
+<tr class="even">
+<td>Ratio mod/base L</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Ratio mod/base H</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Intensity</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="odd">
+<td>“Intensity<nowiki>___</nowiki>” + j</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="even">
+<td>Ratio mod/base</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Ratio M/L” + exp</td>
+<td>The ratio between two medium and light label partners.</td>
+</tr>
+<tr class="even">
+<td>“Ratio M/L” + exp + “<nowiki>___</nowiki>” + i</td>
+<td>The ratio between two medium and light label partners.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio M/L normalized” + exp</td>
+<td>Normalized ratio between two heavy and light label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="even">
+<td>“Ratio M/L normalized” + exp + “<nowiki>___</nowiki>” + i</td>
+<td>Normalized ratio between two heavy and light label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio M/L unmod. pep.” + exp</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“Ratio M/L localized” + exp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Ratio M/L nmods” + exp</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“Ratio M/L variability [%]” + exp</td>
+<td>Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio M/L count” + exp</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation.</td>
+</tr>
+<tr class="even">
+<td>“Ratio M/L iso-count” + exp</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio M/L type” + exp</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“Ratio H/L” + exp</td>
+<td>The ratio between two heavy and light label partners.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/L” + exp + “<nowiki>___</nowiki>” + i</td>
+<td>The ratio between two heavy and light label partners.</td>
+</tr>
+<tr class="even">
+<td>“Ratio H/L normalized” + exp</td>
+<td>Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/L normalized” + exp + “<nowiki>___</nowiki>” + i</td>
+<td>Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="even">
+<td>“Ratio H/L unmod. pep.” + exp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/L localized” + exp</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“Ratio H/L nmods” + exp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/L variability [%]” + exp</td>
+<td>Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100.</td>
+</tr>
+<tr class="even">
+<td>“Ratio H/L count” + exp</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/L iso-count” + exp</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method.</td>
+</tr>
+<tr class="even">
+<td>“Ratio H/L type” + exp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/M” + exp</td>
+<td>The ratio between two heavy and medium label partners.</td>
+</tr>
+<tr class="even">
+<td>“Ratio H/M” + exp + “<nowiki>___</nowiki>” + i</td>
+<td>The ratio between two heavy and medium label partners.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/M normalized” + exp</td>
+<td>Normalized ratio between two heavy and medium label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="even">
+<td>“Ratio H/M normalized” + exp + “<nowiki>___</nowiki>” + i</td>
+<td>Normalized ratio between two heavy and medium label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/M unmod. pep.” + exp</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“Ratio H/M localized” + exp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/M nmods” + exp</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“Ratio H/M variability [%]” + exp</td>
+<td>Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/M count” + exp</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation.</td>
+</tr>
+<tr class="even">
+<td>“Ratio H/M iso-count” + exp</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/M type” + exp</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“Occupancy L” + exp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Occupancy M” + exp</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“Occupancy H” + exp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/L” + exp</td>
+<td>The ratio between two heavy and light label partners.</td>
+</tr>
+<tr class="even">
+<td>“Ratio H/L” + exp + “<nowiki>___</nowiki>” + i</td>
+<td>The ratio between two heavy and light label partners.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/L normalized” + exp</td>
+<td>Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="even">
+<td>“Ratio H/L normalized” + exp + “<nowiki>___</nowiki>” + i</td>
+<td>Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/L unmod. pep.” + exp</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“Ratio H/L localized” + exp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/L nmods” + exp</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“Ratio H/L variability [%]” + exp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/L count” + exp</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation.</td>
+</tr>
+<tr class="even">
+<td>“Ratio H/L iso-count” + exp</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/L type” + exp</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“Occupancy L” + exp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Occupancy H” + exp</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Ratio M/L</td>
+<td>The ratio between two medium and light label partners.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio M/L<nowiki>___</nowiki>” + i</td>
+<td>The ratio between two medium and light label partners.</td>
+</tr>
+<tr class="even">
+<td>Ratio M/L normalized</td>
+<td>Normalized ratio between two heavy and light label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio M/L normalized<nowiki>___</nowiki>” + i</td>
+<td>Normalized ratio between two heavy and light label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="even">
+<td>Ratio M/L unmod. pep.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Ratio M/L localized</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Ratio M/L nmods</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Ratio M/L variability [%]</td>
+<td>Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100.</td>
+</tr>
+<tr class="even">
+<td>Ratio M/L count</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation.</td>
+</tr>
+<tr class="odd">
+<td>Ratio M/L iso-count</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method.</td>
+</tr>
+<tr class="even">
+<td>Ratio M/L type</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Ratio H/L</td>
+<td>The ratio between two heavy and light label partners.</td>
+</tr>
+<tr class="even">
+<td>“Ratio H/L<nowiki>___</nowiki>” + i</td>
+<td>The ratio between two heavy and light label partners.</td>
+</tr>
+<tr class="odd">
+<td>Ratio H/L normalized</td>
+<td>Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="even">
+<td>“Ratio H/L normalized<nowiki>___</nowiki>” + i</td>
+<td>Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="odd">
+<td>Ratio H/L unmod. pep.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Ratio H/L localized</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Ratio H/L nmods</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Ratio H/L variability [%]</td>
+<td>Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100.</td>
+</tr>
+<tr class="odd">
+<td>Ratio H/L type</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Ratio H/L count</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation.</td>
+</tr>
+<tr class="odd">
+<td>Ratio H/L iso-count</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/M</td>
+<td>The ratio between two heavy and medium label partners.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/M<nowiki>___</nowiki>” + i</td>
+<td>The ratio between two heavy and medium label partners.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/M normalized</td>
+<td>Normalized ratio between two heavy and medium label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/M normalized<nowiki>___</nowiki>” + i</td>
+<td>Normalized ratio between two heavy and medium label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/M unmod. pep.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Ratio H/M localized</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Ratio H/M nmods</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Ratio H/M variability [%]</td>
+<td>Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/M count</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation.</td>
+</tr>
+<tr class="odd">
+<td>Ratio H/M iso-count</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/M type</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Occupancy L</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Occupancy M</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Occupancy H</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Ratio H/L</td>
+<td>The ratio between two heavy and light label partners.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/L<nowiki>___</nowiki>” + i</td>
+<td>The ratio between two heavy and light label partners.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/L normalized</td>
+<td>Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/L normalized<nowiki>___</nowiki>” + i</td>
+<td>Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/L unmod. pep.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Ratio H/L localized</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Ratio H/L nmods</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Ratio H/L variability [%]</td>
+<td>Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/L count</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation.</td>
+</tr>
+<tr class="odd">
+<td>Ratio H/L iso-count</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/L type</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Occupancy L</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Occupancy H</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="protein-groups" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="protein-groups"><span class="header-section-number">6</span> Protein Groups</h2>
+<p>The Protein Groups table contains information on the identified proteins in the processed raw-files. Each single row contains the group of proteins that could be reconstructed from a set of peptides.</p>
+<table class="table">
+<colgroup>
+<col style="width: 31%">
+<col style="width: 68%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Protein IDs</td>
+<td>Identifier(s) of protein(s) contained in the protein group. They are sorted by number of identified peptides in descending order.</td>
+</tr>
+<tr class="even">
+<td>Majority protein IDs</td>
+<td>These are the IDs of those proteins that have at least half of the peptides that the leading protein has.</td>
+</tr>
+<tr class="odd">
+<td>Peptide counts (all)</td>
+<td>Number of peptides associated with each protein in protein group, occuring in the order as the protein IDs occur in the ‘Protein IDs’ column. Here distinct peptide sequences are counted. Modified forms or different charges are counted as one peptide.</td>
+</tr>
+<tr class="even">
+<td>Peptide counts (razor+unique)</td>
+<td>Number of peptides associated with each protein in protein group, occuring in the order as the protein IDs occur in the ‘Protein IDs’ column. Here distinct peptide sequences are counted. Modified forms or different charges are counted as one peptide.</td>
+</tr>
+<tr class="odd">
+<td>Peptide counts (unique)</td>
+<td>Number of peptides associated with each protein in protein group, occuring in the order as the protein IDs occur in the ‘Protein IDs’ column. Here distinct peptide sequences are counted. Modified forms or different charges are counted as one peptide.</td>
+</tr>
+<tr class="even">
+<td>Protein names</td>
+<td>Name(s) of protein(s) contained within the group.</td>
+</tr>
+<tr class="odd">
+<td>Gene names</td>
+<td>Name(s) of the gene(s) associated to the protein(s) contained within the group.</td>
+</tr>
+<tr class="even">
+<td>Mutated peptide count</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Mutation names</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“Mutated peptide count” + exp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Mutation names” + exp</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Fasta headers</td>
+<td>Fasta headers(s) of protein(s) contained within the group.</td>
+</tr>
+<tr class="odd">
+<td>Number of proteins</td>
+<td>Number of proteins contained within the group. This corresponds to the number of entries in the colum ‘Protein IDs’.</td>
+</tr>
+<tr class="even">
+<td>Peptides</td>
+<td>The total number of peptide sequences associated with the protein group (i.e.&nbsp;for all the proteins in the group).</td>
+</tr>
+<tr class="odd">
+<td>Razor + unique peptides</td>
+<td>The total number of razor + unique peptides associated with the protein group (i.e.&nbsp;these peptides are shared with another protein group).</td>
+</tr>
+<tr class="even">
+<td>Unique peptides</td>
+<td>The total number of unique peptides associated with the protein group (i.e.&nbsp;these peptides are not shared with another protein group).</td>
+</tr>
+<tr class="odd">
+<td>“Peptides” + exp</td>
+<td>“Number of peptides (distinct peptide sequences) in experiment” + exp</td>
+</tr>
+<tr class="even">
+<td>“Razor + unique peptides” + exp</td>
+<td>“Number of razor + unique peptides (distinct peptide sequences) in experiment” + exp</td>
+</tr>
+<tr class="odd">
+<td>“Unique peptides” + exp</td>
+<td>“Number of unique peptides (distinct peptide sequences) in experiment” + exp</td>
+</tr>
+<tr class="even">
+<td>Sequence coverage [%]</td>
+<td>Percentage of the sequence that is covered by the identified peptides of the best protein sequence contained in the group.</td>
+</tr>
+<tr class="odd">
+<td>Unique + razor sequence coverage [%]</td>
+<td>Percentage of the sequence that is covered by the identified unique and razor peptides of the best protein sequence contained in the group.</td>
+</tr>
+<tr class="even">
+<td>Unique sequence coverage [%]</td>
+<td>Percentage of the sequence that is covered by the identified unique peptides of the best protein sequence contained in the group.</td>
+</tr>
+<tr class="odd">
+<td>Mol. weight [kDa]</td>
+<td>Molecular weight of the leading protein sequence contained in the protein group.</td>
+</tr>
+<tr class="even">
+<td>Sequence length</td>
+<td>The length of the leading protein sequence contained in the group.</td>
+</tr>
+<tr class="odd">
+<td>Sequence lengths</td>
+<td>The length of all sequences of the proteins contained in the group.</td>
+</tr>
+<tr class="even">
+<td>Fraction average</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Fraction” + t</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Q-value</td>
+<td>This is the ratio of reverse to forward protein groups.</td>
+</tr>
+<tr class="odd">
+<td>Score</td>
+<td>Protein score which is derived from peptide posterior error probabilities.</td>
+</tr>
+<tr class="even">
+<td>“Identification type” + exp</td>
+<td>Indicates whether this experiment was identified by MS/MS or only by matching between runs.</td>
+</tr>
+<tr class="odd">
+<td>“Sequence coverage” + exp + ” [%]”</td>
+<td>Percentage of the sequence that is covered by the identified peptides in this sample of the longest protein sequence contained within the group.</td>
+</tr>
+<tr class="even">
+<td>Only identified by site</td>
+<td>When marked with ‘+’, this particular protein group was identified only by a modification site.</td>
+</tr>
+<tr class="odd">
+<td>Reverse</td>
+<td>When marked with ‘+’, this particular protein group contains no protein, made up of at least 50% of the peptides of the leading protein, with a peptide derived from the reversed part of the decoy database. These should be removed for further data analysis. The 50% rule is in place to prevent spurious protein hits to erroneously flag the protein group as reverse.</td>
+</tr>
+<tr class="even">
+<td>Potential contaminant</td>
+<td>When marked with ‘+’, this particular protein group was found to be a commonly occurring contaminant. These should be removed for further data analysis.</td>
+</tr>
+<tr class="odd">
+<td>id</td>
+<td>A unique (consecutive) identifier for each row in the proteinGroups table, which is used to cross-link the information in this file with the information stored in the other files.</td>
+</tr>
+<tr class="even">
+<td>Peptide IDs</td>
+<td>Identifier(s) of the associated peptide sequence(s) summary, which can be found in the file ‘peptides.txt’.</td>
+</tr>
+<tr class="odd">
+<td>Peptide is razor</td>
+<td>Indicates for each peptide ID if it is a razor or group unique peptide (true) or a non unique non razor peptide (false).</td>
+</tr>
+<tr class="even">
+<td>Mod. peptide IDs</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Evidence IDs</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>MS/MS IDs</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Best MS/MS</td>
+<td>The identifier of the best (in terms of quality) MS/MS scans identifying the peptides of this protein, referenced against the msms table.</td>
+</tr>
+<tr class="even">
+<td>t + ” site IDs”</td>
+<td>Identifier(s) for site(s) associated with the protein group, which show(s) evidence of the modification, referenced against the appropriate modification site file.</td>
+</tr>
+<tr class="odd">
+<td>t + ” site positions”</td>
+<td>Positions of the sites in the leading protein of this group.</td>
+</tr>
+<tr class="even">
+<td>“LFQ intensity L” + exp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“LFQ intensity M” + exp</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“LFQ intensity H” + exp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“LFQ intensity L” + exp</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“LFQ intensity H” + exp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“LFQ intensity” + exp</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“iBAQ” + exp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“iBAQ L” + exp</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“iBAQ M” + exp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“iBAQ H” + exp</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>iBAQ</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>iBAQ L</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>iBAQ M</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>iBAQ H</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“iBAQ” + exp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“iBAQ L” + exp</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“iBAQ H” + exp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>iBAQ</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>iBAQ L</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>iBAQ H</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“iBAQ” + exp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>iBAQ</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>AVALON</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>MS/MS Count</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“MS/MS Count” + exp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Intensity” + exp</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="even">
+<td>“Intensity L” + exp</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner.</td>
+</tr>
+<tr class="odd">
+<td>“Intensity M” + exp</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the medium label partner.</td>
+</tr>
+<tr class="even">
+<td>“Intensity H” + exp</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner.</td>
+</tr>
+<tr class="odd">
+<td>Intensity</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="even">
+<td>Intensity L</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner.</td>
+</tr>
+<tr class="odd">
+<td>Intensity M</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the medium label partner.</td>
+</tr>
+<tr class="even">
+<td>Intensity H</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner.</td>
+</tr>
+<tr class="odd">
+<td>“Intensity” + exp</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="even">
+<td>“Intensity L” + exp</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner.</td>
+</tr>
+<tr class="odd">
+<td>“Intensity H” + exp</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner.</td>
+</tr>
+<tr class="even">
+<td>Intensity</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="odd">
+<td>Intensity L</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner.</td>
+</tr>
+<tr class="even">
+<td>Intensity H</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner.</td>
+</tr>
+<tr class="odd">
+<td>“Intensity” + exp</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="even">
+<td>Intensity</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio M/L” + exp</td>
+<td>The ratio between two medium and light label partners.</td>
+</tr>
+<tr class="even">
+<td>“Ratio M/L normalized” + exp</td>
+<td>Normalized ratio between two heavy and light label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio M/L variability [%]” + exp</td>
+<td>Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100.</td>
+</tr>
+<tr class="even">
+<td>“Ratio M/L count” + exp</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio M/L iso-count” + exp</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method.</td>
+</tr>
+<tr class="even">
+<td>“Ratio M/L type” + exp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/L” + exp</td>
+<td>The ratio between two heavy and light label partners.</td>
+</tr>
+<tr class="even">
+<td>“Ratio H/L normalized” + exp</td>
+<td>Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/L variability [%]” + exp</td>
+<td>Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100.</td>
+</tr>
+<tr class="even">
+<td>“Ratio H/L count” + exp</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/L iso-count” + exp</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method.</td>
+</tr>
+<tr class="even">
+<td>“Ratio H/L type” + exp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/M” + exp</td>
+<td>The ratio between two heavy and medium label partners.</td>
+</tr>
+<tr class="even">
+<td>“Ratio H/M normalized” + exp</td>
+<td>Normalized ratio between two heavy and medium label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/M variability [%]” + exp</td>
+<td>Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100.</td>
+</tr>
+<tr class="even">
+<td>“Ratio H/M count” + exp</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/M iso-count” + exp</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method.</td>
+</tr>
+<tr class="even">
+<td>“Ratio H/M type” + exp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Ratio M/L</td>
+<td>The ratio between two medium and light label partners.</td>
+</tr>
+<tr class="even">
+<td>Ratio M/L normalized</td>
+<td>Normalized ratio between two heavy and light label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="odd">
+<td>Ratio M/L variability [%]</td>
+<td>Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100.</td>
+</tr>
+<tr class="even">
+<td>Ratio M/L count</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation.</td>
+</tr>
+<tr class="odd">
+<td>Ratio M/L iso-count</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method.</td>
+</tr>
+<tr class="even">
+<td>Ratio M/L type</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Ratio H/L</td>
+<td>The ratio between two heavy and light label partners.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/L normalized</td>
+<td>Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="odd">
+<td>Ratio H/L variability [%]</td>
+<td>Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/L count</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation.</td>
+</tr>
+<tr class="odd">
+<td>Ratio H/L iso-count</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/L type</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Ratio H/M</td>
+<td>The ratio between two heavy and medium label partners.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/M normalized</td>
+<td>Normalized ratio between two heavy and medium label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="odd">
+<td>Ratio H/M variability [%]</td>
+<td>Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/M count</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation.</td>
+</tr>
+<tr class="odd">
+<td>Ratio H/M iso-count</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/M type</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/L” + exp</td>
+<td>The ratio between two heavy and light label partners.</td>
+</tr>
+<tr class="even">
+<td>“Ratio H/L normalized” + exp</td>
+<td>Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/L variability [%]” + exp</td>
+<td>Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100.</td>
+</tr>
+<tr class="even">
+<td>“Ratio H/L count” + exp</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation.</td>
+</tr>
+<tr class="odd">
+<td>“Ratio H/L iso-count” + exp</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method.</td>
+</tr>
+<tr class="even">
+<td>“Ratio H/L type” + exp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Ratio H/L</td>
+<td>The ratio between two heavy and light label partners.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/L normalized</td>
+<td>Normalized ratio between two medium and light label partners. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="odd">
+<td>Ratio H/L variability [%]</td>
+<td>Coefficient of variability over all redundant quantifiable peptides. It is calculated as the standard deviation of the naturally logarithmized ratios times 100.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/L count</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation.</td>
+</tr>
+<tr class="odd">
+<td>Ratio H/L iso-count</td>
+<td>Number of redundant peptides (MS1 features) used for quantitation that are quantified with the re-quantify method.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/L type</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Reporter intensity” + i</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“Reporter intensity not corrected” + i</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Reporter intensity count” + i</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“Reporter intensity” + i + ” ” + exp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Reporter intensity not corrected” + i + ” ” + exp</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“Reporter intensity count” + i + ” ” + exp</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="all-peptides" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="all-peptides"><span class="header-section-number">7</span> All Peptides</h2>
+<table class="table">
+<colgroup>
+<col style="width: 31%">
+<col style="width: 68%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Raw file</td>
+<td>Name of the raw file the spectral data was extracted from.</td>
+</tr>
+<tr class="even">
+<td>Type</td>
+<td>The type of detection for the peptide. MULTI - A labeling multiplet was detected. ISO - An isotope pattern was detected.</td>
+</tr>
+<tr class="odd">
+<td>Charge</td>
+<td>The charge state of the peptide.</td>
+</tr>
+<tr class="even">
+<td>m/z</td>
+<td>The mass divided by the charge of the charged peptide.</td>
+</tr>
+<tr class="odd">
+<td>Mass</td>
+<td>The mass of the neutral peptide ((m/z-proton) * charge).</td>
+</tr>
+<tr class="even">
+<td>Uncalibrated m/z</td>
+<td>m/z before recalibrations have been applied.</td>
+</tr>
+<tr class="odd">
+<td>Resolution</td>
+<td>The resolution of the peak detected for the peptide measured in Full Width at Half Maximum (FWHM).</td>
+</tr>
+<tr class="even">
+<td>Number of data points</td>
+<td>The number of data points (peak centroids) collected for this peptide feature.</td>
+</tr>
+<tr class="odd">
+<td>Number of scans</td>
+<td>The number of MS scans that the 3d peaks of this peptide feature are overlapping with.</td>
+</tr>
+<tr class="even">
+<td>Number of isotopic peaks</td>
+<td>The number of isotopic peaks contained in this peptide feature.</td>
+</tr>
+<tr class="odd">
+<td>PIF</td>
+<td>Short for Parent Ion Fraction; indicates the fraction the target peak makes up of the total intensity in the inclusion window.</td>
+</tr>
+<tr class="even">
+<td>Mass fractional part</td>
+<td>The values after the radix point (ie value - floor(value)<nowiki></nowiki>).</td>
+</tr>
+<tr class="odd">
+<td>Mass deficit</td>
+<td>Empirically derived deviation measure to the next nearest integer scaled to center around 0. Can be used to visually detect contaminants in a plot setting Mass against this value. m<em>a+b - round(m</em>a+b) m: the peptide mass a: 0.999555 b: -0.10</td>
+</tr>
+<tr class="even">
+<td>Mass precision [ppm]</td>
+<td>The precision of the mass detection of the peptide in parts-per-million.</td>
+</tr>
+<tr class="odd">
+<td>Max intensity m/z 0</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="even">
+<td>Max intensity m/z 0</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="odd">
+<td>Max intensity m/z 1</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="even">
+<td>Max intensity m/z 0</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="odd">
+<td>Max intensity m/z 1</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="even">
+<td>Max intensity m/z 2</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="odd">
+<td>Retention time</td>
+<td>The retention time of the peak detected for the peptide measured in minutes.</td>
+</tr>
+<tr class="even">
+<td>Retention length</td>
+<td>The total retention time width of the peak (last timepoint - first timepoint) in seconds.</td>
+</tr>
+<tr class="odd">
+<td>Retention length (FWHM)</td>
+<td>The full width at half maximum value retention time width of the peak in seconds.</td>
+</tr>
+<tr class="even">
+<td>Min scan number</td>
+<td>The first scan-number at which the peak was encountered.</td>
+</tr>
+<tr class="odd">
+<td>Max scan number</td>
+<td>The last scan-number at which the peak was encountered.</td>
+</tr>
+<tr class="even">
+<td>Identified</td>
+<td>When marked with ‘+’ this particular MS/MS scan was identified as a peptide; when marked with ‘-’ no identification was made.</td>
+</tr>
+<tr class="odd">
+<td>MS/MS IDs</td>
+<td>Unique identifier linking this identification to the MS/MS scans.</td>
+</tr>
+<tr class="even">
+<td>Sequence</td>
+<td>The identified AA sequence of the peptide.</td>
+</tr>
+<tr class="odd">
+<td>Length</td>
+<td>“The length of the sequence stored in the column Sequence”.”</td>
+</tr>
+<tr class="even">
+<td>Modifications</td>
+<td>Post-translational modifications contained within the sequence. When no modifications exist, this is set to ‘unmodified’. Note: This column only set when this MS/MS spectrum has been identified.</td>
+</tr>
+<tr class="odd">
+<td>Modified sequence</td>
+<td>Sequence representation of the peptide including location(s) of modified AAs. Note: This column only set when this MS/MS spectrum has been identified.</td>
+</tr>
+<tr class="even">
+<td>Proteins</td>
+<td>Identifiers of proteins this peptide is associated with. Note: This column only set when this MS/MS spectrum has been identified.</td>
+</tr>
+<tr class="odd">
+<td>Score</td>
+<td>The score of the identification (higher is better). Note: This column only set when this MS/MS spectrum has been identified.</td>
+</tr>
+<tr class="even">
+<td>t.Abbreviation + ” Count”</td>
+<td>“The number of instances of” + t.Abbreviation + ” contained within the sequence. The value for this can reliably be determined in the case of label partners, based on the distance between the partners. These counts are used to solidify the peptide identification process.”</td>
+</tr>
+<tr class="odd">
+<td>Ratio H/L</td>
+<td>The ratio between two heavy and light multiplet members.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/L normalized</td>
+<td>Normalized ratio between two heavy and light multiplet members. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="odd">
+<td>Ratio M/L</td>
+<td>The ratio between two medium and light multiplet members.</td>
+</tr>
+<tr class="even">
+<td>Ratio M/L normalized</td>
+<td>Normalized ratio between two medium and light multiplet members. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="odd">
+<td>Ratio H/L</td>
+<td>The ratio between two heavy and light multiplet members.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/L normalized</td>
+<td>Normalized ratio between two heavy and light multiplet members. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="odd">
+<td>Ratio H/M</td>
+<td>The ratio between two heavy and medium multiplet members.</td>
+</tr>
+<tr class="even">
+<td>Ratio H/M normalized</td>
+<td>Normalized ratio between two heavy and medium multiplet members. The median of the total ratio population was shifted to 1.</td>
+</tr>
+<tr class="odd">
+<td>Intensity</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="even">
+<td>Intensity</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="odd">
+<td>Intensity L</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner.</td>
+</tr>
+<tr class="even">
+<td>Intensity H</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner.</td>
+</tr>
+<tr class="odd">
+<td>Intensity</td>
+<td>Summed up eXtracted Ion Current (XIC) of all isotopic clusters associated with the identified AA sequence. In case of a labeled experiment this is the total intensity of all the isotopic patterns in the label cluster.</td>
+</tr>
+<tr class="even">
+<td>Intensity L</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the light label partner.</td>
+</tr>
+<tr class="odd">
+<td>Intensity M</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the medium label partner.</td>
+</tr>
+<tr class="even">
+<td>Intensity H</td>
+<td>Summed up eXtracted Ion Current (XIC) of the isotopic cluster linked to the heavy label partner.</td>
+</tr>
+<tr class="odd">
+<td>Intensities</td>
+<td>The intensity values of the isotopes.</td>
+</tr>
+<tr class="even">
+<td>Intensities L</td>
+<td>The intensity values of the light label partner isotopes.</td>
+</tr>
+<tr class="odd">
+<td>Intensities H</td>
+<td>The intensity values of the heavy label partner isotopes.</td>
+</tr>
+<tr class="even">
+<td>Intensities L</td>
+<td>The intensity values of the light label partner isotopes.</td>
+</tr>
+<tr class="odd">
+<td>Intensities M</td>
+<td>The intensity values of the medium label partner isotopes.</td>
+</tr>
+<tr class="even">
+<td>Intensities H</td>
+<td>The intensity values of the heavy label partner isotopes.</td>
+</tr>
+<tr class="odd">
+<td>MS/MS Count</td>
+<td>The number of MS/MS spectra recorded for the peptide.</td>
+</tr>
+<tr class="even">
+<td>MSMS Scan Numbers</td>
+<td>The scan numbers where the MS/MS spectra were recorded.</td>
+</tr>
+<tr class="odd">
+<td>MSMS label States</td>
+<td>The label partner detected for the peptide. The value 0 is always the light partner. In the case of double label labeling 1 is the heavy partner. In the case of triple label labeling 1 is the medium and 2 the heavy partner.</td>
+</tr>
+<tr class="even">
+<td>MSMS Isotope Indices</td>
+<td>Indices of the isotopic peaks that the MS/MS spectra reside on. A value of 0 corresponds to the monoisotopic peak.</td>
+</tr>
+<tr class="odd">
+<td>DP Mass Difference</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>DP Time Difference</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>DP Score</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>DP PEP</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>DP Positional Probability</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>DP Base Sequence</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>DP Probabilities</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>DP AA</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>DP Base Scan Number</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>DP Mod Scan Number</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>DP Decoy</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>DP Proteins</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>DP Cluster Index</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>DP Cluster Mass</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>DP Cluster Mass SD</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>DP Cluster Size Total</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>DP Cluster Size Forward</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>DP Cluster Size Reverse</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>DP Modification</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>DP Peptide Length Difference</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>DP Gene Names</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>DP Protein Names</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>DP Ratio mod/base</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>DP Ratio mod/base</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>DP Base Ratio H/L</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>DP Base Ratio H/L Normalized</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>DP Occupancy L</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>DP Occupancy H</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>DP Ratio mod/base</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>DP Base Ratio M/L</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>DP Base Ratio M/L Normalized</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>DP Base Ratio H/L</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>DP Base Ratio H/L Normalized</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>DP Base Ratio H/M</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>DP Base Ratio H/M Normalized</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>DP Occupancy L</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>DP Occupancy M</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>DP Occupancy H</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>MD modification</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>MD mass error</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>MD time difference</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>MD sequence</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>MD base scan number</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>MD proteins</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>MD gene names</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>MD protein names</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Centroid mass differences [Da]</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Centroid mass differences [ppm]</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Isotope mass differences [Da]</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Isotope mass differences [ppm]</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="msscans-table" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="msscans-table"><span class="header-section-number">8</span> msScans Table</h2>
+<p>The msScans table contains information about the full scans, which can be used to verify data quality and generated useful statistics about the interaction between the samples and LC.</p>
+<table class="table">
+<colgroup>
+<col style="width: 31%">
+<col style="width: 68%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Raw file</td>
+<td>The name of the RAW-file the mass spectral data originates from.</td>
+</tr>
+<tr class="even">
+<td>Scan number</td>
+<td>The scan number (defined in the raw-file) at which the full scan was made.</td>
+</tr>
+<tr class="odd">
+<td>Scan index</td>
+<td>The consecutive index of this full scan.</td>
+</tr>
+<tr class="even">
+<td>Retention time</td>
+<td>The retention time at which the full scan was made.</td>
+</tr>
+<tr class="odd">
+<td>Cycle time</td>
+<td>The total time (full scan including the tandem MS scans) this full scan has taken up.</td>
+</tr>
+<tr class="even">
+<td>Ion injection time</td>
+<td>The total injection time that was required to capture the specified amount of ions. This value is limited by a maximum, which can be used to determine whether the time has maxed out (indicative of a bad acquisition).</td>
+</tr>
+<tr class="odd">
+<td>Base peak intensity</td>
+<td>The intensity of the most intense ion in the spectrum.</td>
+</tr>
+<tr class="even">
+<td>Total ion current</td>
+<td>The total intensity acquired in the full scan.</td>
+</tr>
+<tr class="odd">
+<td>MS/MS count</td>
+<td>The number of tandem MS scans that were made based on this full scan (e.g.&nbsp;a top 10 method selects the top 10 most intense ions in the scan and fragments those).</td>
+</tr>
+<tr class="even">
+<td>Mass calibration</td>
+<td>The applied mass correction in Th to the full scan.</td>
+</tr>
+<tr class="odd">
+<td>Fraction</td>
+<td>The fraction measured with this full scan.</td>
+</tr>
+<tr class="even">
+<td>colName</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Peak length</td>
+<td>The average time between the start and the end of the peaks detected in the full scan.</td>
+</tr>
+<tr class="even">
+<td>Isotope pattern length</td>
+<td>The average time between the start and the end of the isotope patterns detected in the full scan.</td>
+</tr>
+<tr class="odd">
+<td>Multiplet length</td>
+<td>The average time between the start and the end of the isotope patterns of the labeling multiplets detected in the full scan.</td>
+</tr>
+<tr class="even">
+<td>Peaks / s</td>
+<td>The average number of peaks detected per second of chromatography.</td>
+</tr>
+<tr class="odd">
+<td>Single peaks / s</td>
+<td>The average number of single peaks detected per second of chromatography.</td>
+</tr>
+<tr class="even">
+<td>Isotope patterns / s</td>
+<td>The average number of isotope patterns detected per second of chromatography.</td>
+</tr>
+<tr class="odd">
+<td>Single isotope patterns / s</td>
+<td>The average number of single isotope patterns detected per of second chromatography.</td>
+</tr>
+<tr class="even">
+<td>Multiplets / s</td>
+<td>The average number of labeling multiplets detected per of second chromatography.</td>
+</tr>
+<tr class="odd">
+<td>Identified multiplets / s</td>
+<td>The percentage of labeling multiplets actually identified.</td>
+</tr>
+<tr class="even">
+<td>Multiplet identification rate [%]</td>
+<td>The percentage of the detected labeling multiplets that were identified.</td>
+</tr>
+<tr class="odd">
+<td>AIF peaks / s</td>
+<td>The average number of AIF peaks detected per second of chromatography.</td>
+</tr>
+<tr class="even">
+<td>AIF single peaks / s</td>
+<td>The average number of AIF single peaks detected per second of chromatography.</td>
+</tr>
+<tr class="odd">
+<td>AIF isotope patterns / s</td>
+<td>The average number of AIF isotope patterns detected per second of chromatography.</td>
+</tr>
+<tr class="even">
+<td>AIF single isotope patterns / s</td>
+<td>The average number of AIF single isotope patterns detected per of second chromatography.</td>
+</tr>
+<tr class="odd">
+<td>AIF multiplets / s</td>
+<td>The average number of AIF labeling multiplets detected per of second chromatography.</td>
+</tr>
+<tr class="even">
+<td>MS/MS / s</td>
+<td>The average number of MS/MS events per second of chromatography.</td>
+</tr>
+<tr class="odd">
+<td>Identified MS/MS / s</td>
+<td>The average number of identified MS/MS events per second of chromatography.</td>
+</tr>
+<tr class="even">
+<td>MS/MS identification rate [%]</td>
+<td>The percentage of tandem MS scans that were identified.</td>
+</tr>
+<tr class="odd">
+<td>Intens Comp Factor</td>
+<td>Taken from the Thermo RAW file.</td>
+</tr>
+<tr class="even">
+<td>CTCD Comp</td>
+<td>Taken from the Thermo RAW file.</td>
+</tr>
+<tr class="odd">
+<td>RawOvFtT</td>
+<td>For Thermo Fisher only. TIC estimation done with the orbitrap cell.</td>
+</tr>
+<tr class="even">
+<td>AGC Fill</td>
+<td>Taken from the Thermo RAW file.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="mzrange-table" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="mzrange-table"><span class="header-section-number">9</span> MzRange Table</h2>
+<table class="table">
+<colgroup>
+<col style="width: 31%">
+<col style="width: 68%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Raw file</td>
+<td>The name of the RAW-file the mass spectral data was derived from.</td>
+</tr>
+<tr class="even">
+<td>m/z</td>
+<td>The mass-over-charge value.</td>
+</tr>
+<tr class="odd">
+<td>Peaks / Da</td>
+<td>The average number of peaks detected per Dalton.</td>
+</tr>
+<tr class="even">
+<td>Single peaks / Da</td>
+<td>The average number of single peaks detected per Dalton.</td>
+</tr>
+<tr class="odd">
+<td>Isotope patterns / Da</td>
+<td>The average number of isotope patterns detected per Dalton.</td>
+</tr>
+<tr class="even">
+<td>Single isotope patterns / Da</td>
+<td>The average number of single isotope patterns detected per Dalton.</td>
+</tr>
+<tr class="odd">
+<td>SILAC pairs / Da</td>
+<td>The average number of SILAC pairs detected per Dalton.</td>
+</tr>
+<tr class="even">
+<td>Identified SILAC pairs / Da</td>
+<td>The percentage of SILAC pairs actually identified.</td>
+</tr>
+<tr class="odd">
+<td>SILAC identification rate [%]</td>
+<td>The percentage of the detected SILAC pairs that were identified.</td>
+</tr>
+<tr class="even">
+<td>AIF Peaks / Da</td>
+<td>The average number of AIF peaks detected per Dalton.</td>
+</tr>
+<tr class="odd">
+<td>AIF Single peaks / Da</td>
+<td>The average number of AIF single peaks detected per Dalton.</td>
+</tr>
+<tr class="even">
+<td>AIF Isotope patterns / Da</td>
+<td>The average number of AIF isotope patterns detected per Dalton.</td>
+</tr>
+<tr class="odd">
+<td>AIF Single isotope patterns / Da</td>
+<td>The average number of AIF single isotope patterns detected per Dalton.</td>
+</tr>
+<tr class="even">
+<td>AIF SILAC pairs / Da</td>
+<td>The average number of AIF SILAC pairs detected per Dalton.</td>
+</tr>
+<tr class="odd">
+<td>MS/MS / Da</td>
+<td>The average number of MS/MS events per Dalton.</td>
+</tr>
+<tr class="even">
+<td>Identified MS/MS / Da</td>
+<td>The average number of identified MS/MS events per Dalton.</td>
+</tr>
+<tr class="odd">
+<td>Identification rate [%]</td>
+<td>The percentage of tandem MS scans that were identified.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="msms-scans-table" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="msms-scans-table"><span class="header-section-number">10</span> ms/ms Scans Table</h2>
+<table class="table">
+<colgroup>
+<col style="width: 31%">
+<col style="width: 68%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Raw file</td>
+<td>Name of the RAW file the spectral MS/MS data was extracted from.</td>
+</tr>
+<tr class="even">
+<td>Scan number</td>
+<td>RAW file derived scan number for the MS/MS spectrum.</td>
+</tr>
+<tr class="odd">
+<td>Retention time</td>
+<td>Time point along the elution profile at which the MS/MS data was recorded.</td>
+</tr>
+<tr class="even">
+<td>Ion injection time</td>
+<td>The ion inject time for the MS/MS scan. This can be used to determine if this time equals to the maximum ion inject time, general indicative of a lower quality spectrum.</td>
+</tr>
+<tr class="odd">
+<td>Total ion current</td>
+<td>The total ion current of the MS/MS scan. For Thermo data this value is calculated by summing all the intensity values found in the mass spectral data, which is different from the Xcalibur reported TIC (Xcalibur TIC is about 25% of the value reported here).</td>
+</tr>
+<tr class="even">
+<td>Collision energy</td>
+<td>The collision energy used for the fragmentation that resulted in this MS/MS scan.</td>
+</tr>
+<tr class="odd">
+<td>Summations</td>
+<td>For time of flight instruments only.</td>
+</tr>
+<tr class="even">
+<td>Base peak intensity</td>
+<td>The intensity of the most intense ion in the spectrum.</td>
+</tr>
+<tr class="odd">
+<td>Elapsed time</td>
+<td>The time the MS/MS scan took to complete.</td>
+</tr>
+<tr class="even">
+<td>Identified</td>
+<td>When marked with ‘+’ this particular MS/MS scan was identified as a peptide; when marked with ‘-’ no identification was made.</td>
+</tr>
+<tr class="odd">
+<td>MS/MS IDs</td>
+<td>Unique identifier linking this identification to the MS/MS scans.</td>
+</tr>
+<tr class="even">
+<td>Sequence</td>
+<td>The identified AA sequence of the peptide.</td>
+</tr>
+<tr class="odd">
+<td>Length</td>
+<td>“The length of the sequence stored in the column Sequence”.”</td>
+</tr>
+<tr class="even">
+<td>Filtered peaks</td>
+<td>Number of peaks after the ‘top X per 100 Da’ filtering.</td>
+</tr>
+<tr class="odd">
+<td>m/z</td>
+<td>Recalibrated m/z of the precursor ion.</td>
+</tr>
+<tr class="even">
+<td>Mass</td>
+<td>Charge corrected mass of the precursor ion.</td>
+</tr>
+<tr class="odd">
+<td>Charge</td>
+<td>Charge state of the precursor ion.</td>
+</tr>
+<tr class="even">
+<td>Type</td>
+<td>The type of precursor ion as identified by MaxQuant. ISO - isotopic cluster. PEAK - single peak. MULTI - labeling cluster.</td>
+</tr>
+<tr class="odd">
+<td>Fragmentation</td>
+<td>The type of fragmentation used to create the MS/MS spectrum. CID - Collision Induced Dissociation. HCD - High energy Collision induced Dissociation. ETD - Electron Transfer Dissociation.</td>
+</tr>
+<tr class="even">
+<td>Mass analyzer</td>
+<td>The mass analyzer used to record the MS/MS spectrum. ITMS - Ion trap. FTMS - Fourier transform ICR or orbitrap cell. TOF - Time of flight.</td>
+</tr>
+<tr class="odd">
+<td>Parent intensity fraction</td>
+<td>The percentage the parent ion intensity makes up of the total intensity in the selection window.</td>
+</tr>
+<tr class="even">
+<td>Fraction of total spectrum</td>
+<td>The percentage the parent ion intensity makes up of the total intensity of the whole MS spectrum.</td>
+</tr>
+<tr class="odd">
+<td>Base peak fraction</td>
+<td>The percentage the parent ion intensity in comparison to the highest peak in he MS spectrum.</td>
+</tr>
+<tr class="even">
+<td>Precursor full scan number</td>
+<td>The full scan number where the precursor ion was selected for fragmentation.</td>
+</tr>
+<tr class="odd">
+<td>Precursor intensity</td>
+<td>The intensity of the precursor ion at the scannumber it was selected.</td>
+</tr>
+<tr class="even">
+<td>Precursor apex fraction</td>
+<td>The fraction the intensity of the precursor ion makes up of the peak (apex) intensity.</td>
+</tr>
+<tr class="odd">
+<td>Precursor apex offset</td>
+<td>How many full scans the precursor ion is offset from the peak (apex) position.</td>
+</tr>
+<tr class="even">
+<td>Precursor apex offset time</td>
+<td>How much time the precursor ion is offset from the peak (apex) position.</td>
+</tr>
+<tr class="odd">
+<td>Scan event number</td>
+<td>This number indicates which MS/MS scan this one is in the consecutive order of the MS/MS scans that are acquired after an MS scan.</td>
+</tr>
+<tr class="even">
+<td>Modifications</td>
+<td>Post-translational modifications contained within the sequence. When no modifications exist, this is set to ‘unmodified’. Note: This column only set when this MS/MS spectrum has been identified.</td>
+</tr>
+<tr class="odd">
+<td>Modified sequence</td>
+<td>Sequence representation of the peptide including location(s) of modified AAs. Note: This column only set when this MS/MS spectrum has been identified.</td>
+</tr>
+<tr class="even">
+<td>Proteins</td>
+<td>Identifiers of proteins this peptide is associated with. Note: This column only set when this MS/MS spectrum has been identified.</td>
+</tr>
+<tr class="odd">
+<td>Score</td>
+<td>The score of the identification (higher is better). Note: This column only set when this MS/MS spectrum has been identified.</td>
+</tr>
+<tr class="even">
+<td>Fraction</td>
+<td>The identifier of the fraction the sample was taken from.</td>
+</tr>
+<tr class="odd">
+<td>colName</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>DN Sequence</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>DN Score</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>DN Normalized Score</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>DN nterm mass</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>DN cterm mass</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>DN missing mass</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>DN Sequence2</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>DN Score2</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>DN Normalized Score2</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>DN nterm mass2</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>DN cterm mass2</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>DN missing mass2</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>DN Score diff</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>DP Mass Difference</td>
+<td>This dependent peptide’s mass difference to the associated identified peptide.</td>
+</tr>
+<tr class="even">
+<td>DP Time Difference</td>
+<td>This dependent peptide’s time difference to the associated identified peptide.</td>
+</tr>
+<tr class="odd">
+<td>DP Score</td>
+<td>The andromeda identification score.</td>
+</tr>
+<tr class="even">
+<td>DP PEP</td>
+<td>Posterior Error Probability of the identification. This value essentially operates as a p-value, where smaller is more significant.</td>
+</tr>
+<tr class="odd">
+<td>DP Positional Probability</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>DP Base Sequence</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>DP Probabilities</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>DP AA</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>DP Base Scan Number</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>DP Mod Scan Number</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>DP Decoy</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>DP Proteins</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>DP Cluster Index</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>DP Cluster Mass</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>DP Cluster Mass SD</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>DP Cluster Size Total</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>DP Cluster Size Forward</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>DP Cluster Size Reverse</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>DP Modification</td>
+<td>Post-translational modifications contained within the sequence. When no modifications exist, this is set to ‘unmodified’.</td>
+</tr>
+<tr class="even">
+<td>DP Peptide Length Difference</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>DP Gene Names</td>
+<td>Names of proteins the identified peptide is associated with.</td>
+</tr>
+<tr class="even">
+<td>DP Protein Names</td>
+<td>Descriptions of the proteins the identified peptide is associated with.</td>
+</tr>
+<tr class="odd">
+<td>Intens Comp Factor</td>
+<td>Taken from the Thermo RAW file.</td>
+</tr>
+<tr class="even">
+<td>CTCD Comp</td>
+<td>Taken from the Thermo RAW file.</td>
+</tr>
+<tr class="odd">
+<td>RawOvFtT</td>
+<td>For Thermo Fisher only. TIC estimation done with the orbitrap cell.</td>
+</tr>
+<tr class="even">
+<td>AGC Fill</td>
+<td>Taken from the Thermo RAW file.</td>
+</tr>
+<tr class="odd">
+<td>Scan index</td>
+<td>Consecutive index of the MS/MS spectrum.</td>
+</tr>
+<tr class="even">
+<td>MS scan index</td>
+<td>Consecutive index of the MS spectrum prior to this MS/MS spectrum.</td>
+</tr>
+<tr class="odd">
+<td>MS scan number</td>
+<td>Scan number of the MS spectrum prior to this MS/MS spectrum.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="msms-table" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="msms-table"><span class="header-section-number">11</span> ms/ms Table</h2>
+<table class="table">
+<colgroup>
+<col style="width: 31%">
+<col style="width: 68%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Raw file</td>
+<td>The name of the RAW file the mass spectral data was read from.</td>
+</tr>
+<tr class="even">
+<td>Scan number</td>
+<td>The RAW-file derived scan number of the MS/MS spectrum.</td>
+</tr>
+<tr class="odd">
+<td>Scan index</td>
+<td>The consecutive index of the MS/MS spectrum.</td>
+</tr>
+<tr class="even">
+<td>Sequence</td>
+<td>The identified AA sequence of the peptide.</td>
+</tr>
+<tr class="odd">
+<td>Length</td>
+<td>The length of the sequence stored in the column “Sequence”.</td>
+</tr>
+<tr class="even">
+<td>“Missed cleavages (” + enzyme + “)”</td>
+<td>Number of missed enzymatic cleavages.</td>
+</tr>
+<tr class="odd">
+<td>Missed cleavages</td>
+<td>Number of missed enzymatic cleavages.</td>
+</tr>
+<tr class="even">
+<td>Modifications</td>
+<td>Post-translational modifications contained within the identified peptide sequence.</td>
+</tr>
+<tr class="odd">
+<td>Modified sequence</td>
+<td>Sequence representation including the post-translational modifications (abbreviation of the modification in brackets before the modified AA). The sequence is always surrounded by underscore characters (’_’).</td>
+</tr>
+<tr class="even">
+<td>title + ” Probabilities”</td>
+<td>“Sequence representation of the peptide including PTM positioning probabilities ([0..1], where 1 is best match) for ’” + title + “’.”</td>
+</tr>
+<tr class="odd">
+<td>title + ” Score Diffs”</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Tables.ModificationList[t].Name</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Proteins</td>
+<td>The identifiers of the proteins the identified peptide is associated with.</td>
+</tr>
+<tr class="even">
+<td>Gene Names</td>
+<td>Names of genes the identified peptide is associated with.</td>
+</tr>
+<tr class="odd">
+<td>Protein Names</td>
+<td>Descriptions of the proteins the identified peptide is associated with.</td>
+</tr>
+<tr class="even">
+<td>Charge</td>
+<td>The charge state of the precursor ion.</td>
+</tr>
+<tr class="odd">
+<td>Fragmentation</td>
+<td>The type of fragmentation used to create the MS/MS spectrum. CID - Collision Induced Dissociation. HCD - High energy Collision induced Dissociation. ETD - Electron Transfer Dissociation.</td>
+</tr>
+<tr class="even">
+<td>Mass analyzer</td>
+<td>The mass analyzer used to record the MS/MS spectrum. ITMS - Ion trap. FTMS - Fourier transform ICR or orbitrap cell. TOF - Time of flight.</td>
+</tr>
+<tr class="odd">
+<td>Type</td>
+<td>The type of precursor ion as identified by MaxQuant. ISO - isotopic cluster. PEAK - single peak. MULTI - labeling cluster.</td>
+</tr>
+<tr class="even">
+<td>Scan event number</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Isotope index</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>m/z</td>
+<td>The mass-over-charge of the precursor ion.</td>
+</tr>
+<tr class="odd">
+<td>Mass</td>
+<td>The charge corrected mass of the precursor ion.</td>
+</tr>
+<tr class="even">
+<td>Mass Error [ppm]</td>
+<td>Mass error of the recalibrated mass-over-charge value of the precursor ion in comparison to the predicted monoisotopic mass of the identified peptide sequence.</td>
+</tr>
+<tr class="odd">
+<td>Simple Mass Error [ppm]</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Retention time</td>
+<td>The uncalibrated retention time in minutes where the MS/MS spectrum has been acquired.</td>
+</tr>
+<tr class="odd">
+<td>PEP</td>
+<td>Posterior Error Probability of the identification. This value essentially operates as a p-value, where smaller is more significant.</td>
+</tr>
+<tr class="even">
+<td>Score</td>
+<td>Andromeda score for the best associated MS/MS spectrum.</td>
+</tr>
+<tr class="odd">
+<td>Delta score</td>
+<td>Score difference to the second best identified peptide with a different amino acid sequence.</td>
+</tr>
+<tr class="even">
+<td>Score diff</td>
+<td>Score difference to the second best positioning of modifications identified peptide with the same amino acid sequence.</td>
+</tr>
+<tr class="odd">
+<td>Localization prob</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Combinatorics</td>
+<td>Number of possible distributions of the modifications over the peptide sequence.</td>
+</tr>
+<tr class="odd">
+<td>Labeling State</td>
+<td>Labeling state of the precursor isotope pattern used to identify the peptide.</td>
+</tr>
+<tr class="even">
+<td>PIF</td>
+<td>Short for Parent Ion Fraction; indicates the fraction the target peak makes up of the total intensity in the inclusion window.</td>
+</tr>
+<tr class="odd">
+<td>Fraction of total spectrum</td>
+<td>The percentage the parent ion intensity makes up of the total intensity of the whole spectrum.</td>
+</tr>
+<tr class="even">
+<td>Base peak fraction</td>
+<td>The percentage the parent ion intensity in comparison to the highest peak in he MS spectrum.</td>
+</tr>
+<tr class="odd">
+<td>Precursor Full ScanNumber</td>
+<td>The full scannumber where the precursor ion was selected for fragmentation.</td>
+</tr>
+<tr class="even">
+<td>Precursor Intensity</td>
+<td>The intensity of the precursor ion at the scannumber it was selected.</td>
+</tr>
+<tr class="odd">
+<td>Precursor Apex Fraction</td>
+<td>The fraction the intensity of the precursor ion makes up of the peak (apex) intensity.</td>
+</tr>
+<tr class="even">
+<td>Precursor Apex Offset</td>
+<td>How many full scans the precursor ion is offset from the peak (apex) position.</td>
+</tr>
+<tr class="odd">
+<td>Precursor Apex Offset Time</td>
+<td>How much time the precursor ion is offset from the peak (apex) position.</td>
+</tr>
+<tr class="even">
+<td>“Diagnostic peak” + modName + ” ” + diagAa[i]</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Matches</td>
+<td>The species of the peaks in the fragmentation spectrum after TopN filtering.</td>
+</tr>
+<tr class="even">
+<td>Intensities</td>
+<td>The intensities of the peaks in the fragmentation spectrum after TopN filtering.</td>
+</tr>
+<tr class="odd">
+<td>Mass Deviations [Da]</td>
+<td>The mass deviation of each peak in the fragmentation spectrum in absolute mass units.</td>
+</tr>
+<tr class="even">
+<td>Mass Deviations [ppm]</td>
+<td>The mass deviation of each peak in the fragmentation spectrum in parts per million.</td>
+</tr>
+<tr class="odd">
+<td>Masses</td>
+<td>The masses-over-charge of the peaks in the fragmentation spectrum.</td>
+</tr>
+<tr class="even">
+<td>Number of Matches</td>
+<td>The number of peaks matching to the predicted fragmentation spectrum.</td>
+</tr>
+<tr class="odd">
+<td>Intensity coverage</td>
+<td>The fraction of intensity in the MS/MS spectrum that is annotated.</td>
+</tr>
+<tr class="even">
+<td>Peak coverage</td>
+<td>The fraction of peaks in the MS/MS spectrum that are annotated.</td>
+</tr>
+<tr class="odd">
+<td>Neutral loss level</td>
+<td>How many neutral losses were applied to each fragment in the Andromeda scoring.</td>
+</tr>
+<tr class="even">
+<td>ETD identification type</td>
+<td>For ETD spectra several different combinations of ion series are scored. Here the highest scoring combination is indicated</td>
+</tr>
+<tr class="odd">
+<td>Reverse</td>
+<td>When marked with ‘+’, this particular peptide was found to be part of a protein derived from the reversed part of the decoy database. These should be removed for further data analysis.</td>
+</tr>
+<tr class="even">
+<td>All scores</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>All sequences</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>All modified sequences</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>id</td>
+<td>A unique (consecutive) identifier for each row in the msms table, which is used to cross-link the information in this file with the information stored in the other files.</td>
+</tr>
+<tr class="even">
+<td>Protein group IDs</td>
+<td>The identifier of the protein-group this redundant peptide sequence is associated with, which can be used to look up the extended protein information in the file ‘proteinGroups.txt’. As a single peptide can be linked to multiple proteins (e.g.&nbsp;in the case of razor-proteins), multiple id’s can be stored here separated by a semicolon. As a protein can be identified by multiple peptides, the same id can be found in different rows.</td>
+</tr>
+<tr class="odd">
+<td>Peptide ID</td>
+<td>The identifier of the non-redundant peptide sequence.</td>
+</tr>
+<tr class="even">
+<td>Mod. peptide ID</td>
+<td>Identifier of the associated modification summary stored in the file ‘modificationSpecificPeptides.txt’.</td>
+</tr>
+<tr class="odd">
+<td>Evidence ID</td>
+<td>Identifier of the associated evidence stored in the file ‘evidence.txt’.</td>
+</tr>
+<tr class="even">
+<td>t + ” site IDs”</td>
+<td>“Identifier of the oxidation summary stored in the file ’” + t + “Sites.txt’.”</td>
+</tr>
+<tr class="odd">
+<td>“Reporter intensity” + i</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“Reporter intensity not corrected” + i</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Reporter PIF</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Reporter fraction</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="aif-msms-table" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="aif-msms-table"><span class="header-section-number">12</span> AIF ms/ms Table</h2>
+<p>====== AIF MS/MS ======</p>
+<table class="table">
+<colgroup>
+<col style="width: 31%">
+<col style="width: 68%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>id</td>
+<td>A unique (consecutive) identifier for each row in the AIF MS/MS table, which is used to cross-link the information in this file with the information stored in the other files.</td>
+</tr>
+<tr class="even">
+<td>Protein group IDs</td>
+<td>The identifier of the protein group this redundant peptide sequence is associated with, which can be used to look up the extended protein information in the file ‘proteinGroups.txt’. As a single peptide can be linked to multiple proteins (e.g.&nbsp;in the case of razor-proteins), multiple id’s can be stored here separated by a semicolon. As a protein can be identified by multiple peptides, the same id can be found in different rows.</td>
+</tr>
+<tr class="odd">
+<td>Peptide ID</td>
+<td>The identifier of the non-redundant peptide sequence.</td>
+</tr>
+<tr class="even">
+<td>Mod. peptide ID</td>
+<td>Identifier of the associated modification summary stored in the file ‘modificationSpecificPeptides.txt’.</td>
+</tr>
+<tr class="odd">
+<td>Evidence ID</td>
+<td>Identifier for analyzed peptide evidence associated with the protein group referenced against the evidences table.</td>
+</tr>
+<tr class="even">
+<td>t + ” site IDs”</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Raw file</td>
+<td>Name of the RAW file the spectral data was extracted from, which led to the identification of this peptide.</td>
+</tr>
+<tr class="even">
+<td>Sequence</td>
+<td>The identified AA sequence of the peptide.</td>
+</tr>
+<tr class="odd">
+<td>Length</td>
+<td>The length of the sequence stored in the column “Sequence”.</td>
+</tr>
+<tr class="even">
+<td>“Missed Cleavages (” + enzyme + “)”</td>
+<td>Number of missed enzymatic cleavages.</td>
+</tr>
+<tr class="odd">
+<td>Missed Cleavages</td>
+<td>Number of missed enzymatic cleavages.</td>
+</tr>
+<tr class="even">
+<td>Modifications</td>
+<td>Post-translational modifications contained within the sequence. When no modifications exist, this is set to ‘unmodified’. Note: This column only set when this MS/MS spectrum has been identified.</td>
+</tr>
+<tr class="odd">
+<td>Modified Sequence</td>
+<td>Sequence representation of the peptide including location(s) of modified AAs. Note: This column only set when this MS/MS spectrum has been identified.</td>
+</tr>
+<tr class="even">
+<td>Tables.ModificationList[t].Name + ” Probabilities”</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Tables.ModificationList[t].Name + ” Score Diffs”</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Tables.ModificationList[t].Name</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Proteins</td>
+<td>The IPI identifiers of the proteins the identified peptide is associated with.</td>
+</tr>
+<tr class="even">
+<td>Charge</td>
+<td>The charge of the precursor ion.</td>
+</tr>
+<tr class="odd">
+<td>m/z</td>
+<td>The mass-over-charge of the precursor ion.</td>
+</tr>
+<tr class="even">
+<td>Mass</td>
+<td>The charge corrected mass of the precursor ion.</td>
+</tr>
+<tr class="odd">
+<td>Retention time</td>
+<td>The uncalibrated retention time in minutes in the elution profile of the precursor ion.</td>
+</tr>
+<tr class="even">
+<td>Precursor intensity</td>
+<td>The intensity of the precursor ion.</td>
+</tr>
+<tr class="odd">
+<td>PEP</td>
+<td>Posterior Error Probability of the identification. This value essentially operates as a p-value, where smaller is more significant.</td>
+</tr>
+<tr class="even">
+<td>Score</td>
+<td>Andromeda identification score for the MS/MS spectrum.</td>
+</tr>
+<tr class="odd">
+<td>Delta score</td>
+<td>Score difference to the second best identified peptide.</td>
+</tr>
+<tr class="even">
+<td>Combinatorics</td>
+<td>Number of possible distributions of the modifications over the peptide sequence.</td>
+</tr>
+<tr class="odd">
+<td>Matches</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Intensities</td>
+<td>The intensities of the peaks in the fragmentation spectrum after top-N filtering.</td>
+</tr>
+<tr class="odd">
+<td>Mass Deviations</td>
+<td>The search engine allowed mass deviations of the peaks in the fragmentation spectrum.</td>
+</tr>
+<tr class="even">
+<td>Masses</td>
+<td>The masses-over-charge of the peaks in the fragmentation spectrum.</td>
+</tr>
+<tr class="odd">
+<td>Charges</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Correlations</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Number of Matches</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Reverse</td>
+<td>When marked with ‘+’, this particular peptide was found to be part of a protein derived from the reversed part of the decoy database. These should be removed for further data analysis.</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        for (let i = 0; i < 2; i++) {
+          container.appendChild(note.children[i].cloneNode(true));
+        }
+        return container.innerHTML
+      } else {
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        console.log("RESIZE");
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>© 2023, created by and maintained by Cox lab</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
