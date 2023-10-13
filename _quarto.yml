@@ -4,7 +4,7 @@ project:
 
 website:
   navbar:
-    logo: advanced/coxlab_logo2.png
+    logo: Figures/coxlab_logo2.png
     search: true
     left:
       - text: "HOME"

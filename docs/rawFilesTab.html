@@ -6,8 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="AY">
-<meta name="dcterms.date" content="2023-10-02">
+<meta name="author" content="Cox Lab">
+<meta name="dcterms.date" content="2023-10-13">
 
 <title>Raw files tab</title>
 <style>
@@ -79,7 +79,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./advanced/coxlab_logo2.png" alt="" class="navbar-logo">
+    <img src="./Figures/coxlab_logo2.png" alt="" class="navbar-logo">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -93,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">HOME</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./maxquant_functions.html"> 
+    <a class="nav-link" href="./maxquant_instructions.html"> 
 <span class="menu-text">MaxQuant</span></a>
   </li>  
   <li class="nav-item">
@@ -138,7 +138,33 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="-1">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#raw-files-table" id="toc-raw-files-table" class="nav-link active" data-scroll-target="#raw-files-table"><span class="header-section-number">1</span> Raw files table</a></li>
+  <li><a href="#raw-files-functions" id="toc-raw-files-functions" class="nav-link" data-scroll-target="#raw-files-functions"><span class="header-section-number">2</span> Raw files functions</a>
+  <ul>
+  <li><a href="#input-data-group" id="toc-input-data-group" class="nav-link" data-scroll-target="#input-data-group"><span class="header-section-number">2.1</span> Input data group</a></li>
+  <li><a href="#load-button" id="toc-load-button" class="nav-link" data-scroll-target="#load-button"><span class="header-section-number">2.2</span> Load button</a></li>
+  <li><a href="#remove-button" id="toc-remove-button" class="nav-link" data-scroll-target="#remove-button"><span class="header-section-number">2.3</span> Remove button</a></li>
+  <li><a href="#sec-load-folder" id="toc-sec-load-folder" class="nav-link" data-scroll-target="#sec-load-folder"><span class="header-section-number">2.4</span> Load folder button</a></li>
+  <li><a href="#change-folder-button" id="toc-change-folder-button" class="nav-link" data-scroll-target="#change-folder-button"><span class="header-section-number">2.5</span> Change folder button</a></li>
+  </ul></li>
+  <li><a href="#experimental-design-file-group" id="toc-experimental-design-file-group" class="nav-link" data-scroll-target="#experimental-design-file-group"><span class="header-section-number">3</span> Experimental design file group</a>
+  <ul>
+  <li><a href="#write-template-button" id="toc-write-template-button" class="nav-link" data-scroll-target="#write-template-button"><span class="header-section-number">3.1</span> Write template button</a></li>
+  <li><a href="#read-from-file-button" id="toc-read-from-file-button" class="nav-link" data-scroll-target="#read-from-file-button"><span class="header-section-number">3.2</span> Read from file button</a></li>
+  </ul></li>
+  <li><a href="#edit-experimental-design-group" id="toc-edit-experimental-design-group" class="nav-link" data-scroll-target="#edit-experimental-design-group"><span class="header-section-number">4</span> Edit experimental design group</a>
+  <ul>
+  <li><a href="#set-experiment-button" id="toc-set-experiment-button" class="nav-link" data-scroll-target="#set-experiment-button"><span class="header-section-number">4.1</span> Set experiment button</a></li>
+  <li><a href="#set-parameter-group-button" id="toc-set-parameter-group-button" class="nav-link" data-scroll-target="#set-parameter-group-button"><span class="header-section-number">4.2</span> Set parameter group button</a></li>
+  <li><a href="#set-fractions-button" id="toc-set-fractions-button" class="nav-link" data-scroll-target="#set-fractions-button"><span class="header-section-number">4.3</span> Set fractions button</a></li>
+  <li><a href="#no-fractions-button" id="toc-no-fractions-button" class="nav-link" data-scroll-target="#no-fractions-button"><span class="header-section-number">4.4</span> No fractions button</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -155,14 +181,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>AY </p>
+             <p>Cox Lab </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 2, 2023</p>
+      <p class="date">October 13, 2023</p>
     </div>
   </div>
   
@@ -173,8 +199,100 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<p>The <strong>Raw files</strong> tab displays information about your raw data sources and offers functions for dealing with those sources and the specification of your experimental design. This page first describes the columns of the raw files table and then the functions available to change it, organized following the buttons and button groups.</p>
+<p>We often refer to a source of raw data as a raw <em>file</em>, but in some data formats the source is actually a <em>folder</em>. Currently, the file-based raw data formats supported and their (case insensitive) extensions are:</p>
+<ul>
+<li>ABSciex (*.wiff)</li>
+<li>MzXml (*.mzxml)</li>
+<li>Thermo (*.raw)</li>
+<li>Uimf (*.uimf)</li>
+</ul>
+<p>The folder.based raw data formats and their extensions are:</p>
+<ul>
+<li>Agilent (*.d)</li>
+<li>Bruker (*.d)</li>
+</ul>
+<section id="raw-files-table" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="raw-files-table"><span class="header-section-number">1</span> Raw files table</h2>
+<p>The table displaying information about the raw data sources has seven columns.</p>
+<ul>
+<li><strong>File</strong>: the absolute path to the file or folder containing the raw data.</li>
+<li><strong>Exists</strong>: whether the file or folder currently exists at that location on the file system.</li>
+<li><strong>Size</strong>: if the path points to an existing file (not a folder), the size of that file.</li>
+<li><strong>Data format</strong>: the vendor or standard defining the format in which the data is stored, and whether it is file-based or folder-based.</li>
+<li><strong>Parameter group</strong>: The data files may be organized at the user’s discretion in groups, which may be given different parameters.</li>
+<li><strong>Experiment</strong>: The experiment is text that the user can choose and use however convenient, for example to group raw data or to remind him of the characteristics of the samples from which the data was taken.</li>
+<li><strong>Fraction</strong>: Often the samples will be pre-processed with a procedure, for example centrifugation, that produces several sub-samples in a particular sequence. These sub-samples can be labeled with integers in the fractions column.</li>
+</ul>
+</section>
+<section id="raw-files-functions" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="raw-files-functions"><span class="header-section-number">2</span> Raw files functions</h2>
+<section id="input-data-group" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="input-data-group"><span class="header-section-number">2.1</span> Input data group</h3>
+<p>The <strong>Load</strong> and <strong>Load folder</strong> buttons are described here, but you should be aware that there are two other ways to load raw files.</p>
+<p>One is by loading parameters stored in an <code>*.xml</code> file, usually named <code>mqpar.xml</code>. To do this, use the <strong>Load parameters</strong> item on the drop-down menu just left of the <strong>Raw files</strong> tab. A file browser will open so you can load the parameters you want, including the raw data files.</p>
+<p>The other way to load raw files is by <strong>drag-and-drop</strong> from a file explorer. The behavior will depend on what you select.</p>
+<ul>
+<li>If you select a single file with an <code>*.xml</code> extension (usually <code>mqpar.xml</code>), the raw data files and other parameters stored there will be loaded.</li>
+<li>If all of the items you select are recognized as raw data files, then these will be loaded.</li>
+<li>If any of the items you select is not recognized as a raw data file, then each folder among the selected items will be searched recursively for raw data files. All files found will be loaded. If there are also files which are not recognized as raw data, they will be silently passed over.</li>
+</ul>
+</section>
+<section id="load-button" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="load-button"><span class="header-section-number">2.2</span> Load button</h3>
+<p>Pressing the <strong>Load</strong> button will open a file chooser window. The filter at the lower right may be selected to choose which type of file-based raw data source is visible and may be selected. Folder-based raw data sources cannot be loaded with this button, but the <strong>Load folder</strong> button (<a href="#sec-load-folder" class="quarto-xref">Section&nbsp;2.4</a>) can be used for these. The folders may be browsed and single or multiple files can be chosen in the usual way. When you have made your selection, press Open. (Remember, if you have chosen a folder, it will be opened for browsing. To load files, you must have only files selected.) The file or files chosen will be added to the table, unless they are already present there.</p>
+</section>
+<section id="remove-button" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="remove-button"><span class="header-section-number">2.3</span> Remove button</h3>
+<p>This button removes the selected raw data rows from the table.</p>
+</section>
+<section id="sec-load-folder" class="level3" data-number="2.4">
+<h3 data-number="2.4" class="anchored" data-anchor-id="sec-load-folder"><span class="header-section-number">2.4</span> Load folder button</h3>
+<p>The <strong>Load folder</strong> button can be used in three ways:</p>
+<ul>
+<li>to open a single, folder-based raw data source,</li>
+<li>to open all the raw data sources of any sort (whether file-based or folder based) in the chosen folder, or</li>
+<li>to open all the raw data sources of any sort anywhere under the chosen folder, that is, recursively.</li>
+</ul>
+<p>Because there could be many items in a directory that are not raw data sources, all such items are silently ignored.</p>
+</section>
+<section id="change-folder-button" class="level3" data-number="2.5">
+<h3 data-number="2.5" class="anchored" data-anchor-id="change-folder-button"><span class="header-section-number">2.5</span> Change folder button</h3>
+<p>Raw data files loaded by the buttons or with drag-and-drop will, naturally, exist. When an <code>mqpar.xml</code> file is loaded, however, the files mentioned may no longer exist. For example, some processing of the files may have been done and a parameter file saved, but the files subsequently moved to another folder or drive. If the files are still together, the situation may be saved by telling MaxQuant where to find them now. When you press the <strong>Change folder</strong> button you will be presented with the part of the path that the files in the table have in common and given the opportunity to change it to the path that is currently correct, either by editing or by browsing.</p>
+</section>
+</section>
+<section id="experimental-design-file-group" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="experimental-design-file-group"><span class="header-section-number">3</span> Experimental design file group</h2>
+<section id="write-template-button" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="write-template-button"><span class="header-section-number">3.1</span> Write template button</h3>
+<p><em>No documentation yet.</em></p>
+</section>
+<section id="read-from-file-button" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="read-from-file-button"><span class="header-section-number">3.2</span> Read from file button</h3>
+<p><em>No documentation yet.</em></p>
+</section>
+</section>
+<section id="edit-experimental-design-group" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="edit-experimental-design-group"><span class="header-section-number">4</span> Edit experimental design group</h2>
+<section id="set-experiment-button" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="set-experiment-button"><span class="header-section-number">4.1</span> Set experiment button</h3>
+<p>Normally the experiment is left blank when raw data is loaded. The exception is when data is loaded recursively from a folder, in which case MaxQuant generates an value for the experiment from the paths to the files. To set or change the value of experiment, choose one or more files and press the <strong>Set experiment</strong> button. You will see a pop-up window where you can enter the new value.</p>
+</section>
+<section id="set-parameter-group-button" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="set-parameter-group-button"><span class="header-section-number">4.2</span> Set parameter group button</h3>
+<p>This button allows you to set or change the value of the parameter group for the selected files to anything from Group 0 to Group 19.</p>
+</section>
+<section id="set-fractions-button" class="level3" data-number="4.3">
+<h3 data-number="4.3" class="anchored" data-anchor-id="set-fractions-button"><span class="header-section-number">4.3</span> Set fractions button</h3>
+<p>When you press the <strong>Set fractions</strong> button, you will be given the opportunity to set two integer values. The value you put in the lower box must be greater than or equal to the value you put in the upper box. The raw data files you have selected will be assigned fraction numbers cyclically from the lower value to the higher value, e.g 1, 2, 3, 1, 2, 3, … .</p>
+</section>
+<section id="no-fractions-button" class="level3" data-number="4.4">
+<h3 data-number="4.4" class="anchored" data-anchor-id="no-fractions-button"><span class="header-section-number">4.4</span> No fractions button</h3>
+<p>Pressing this button will remove all values in the fraction column. (Not just the values for the selected files!) It will also recalculate the values in the Experiment column.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

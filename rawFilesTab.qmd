@@ -1,0 +1,106 @@
+---
+title: "Raw files tab"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+csl: nature.csl
+---
+
+
+The __Raw files__ tab displays information about your raw data sources and offers functions for dealing with those sources and the specification of your experimental design. This page first describes the columns of the raw files table and then the functions available to change it, organized following the buttons and button groups.
+
+We often refer to a source of raw data as a raw _file_, but in some data formats the source is actually a _folder_. Currently, the file-based raw data formats supported and their (case insensitive) extensions are:
+
+  * ABSciex (*.wiff)
+  * MzXml (*.mzxml)
+  * Thermo (*.raw)
+  * Uimf (*.uimf)
+  
+The folder.based raw data formats and their extensions are:
+
+  * Agilent (*.d)
+  * Bruker (*.d)
+
+## Raw files table
+
+The table displaying information about the raw data sources has seven columns.
+
+  - **File**: the absolute path to the file or folder containing the raw data.
+  - **Exists**: whether the file or folder currently exists at that location on the file system.
+  - **Size**: if the path points to an existing file (not a folder), the size of that file.
+  - **Data format**: the vendor or standard defining the format in which the data is stored, and whether it is file-based or folder-based.
+  - **Parameter group**: The data files may be organized at the user's discretion in groups, which may be given different parameters.
+  - **Experiment**: The experiment is text that the user can choose and use however convenient, for example to group raw data or to remind him of the characteristics of the samples from which the data was taken.
+  - **Fraction**: Often the samples will be pre-processed with a procedure, for example centrifugation, that produces several sub-samples in a particular sequence. These sub-samples can be labeled with integers in the fractions column.
+
+## Raw files functions
+
+### Input data group
+
+The __Load__ and __Load folder__ buttons are described here, but you should be aware that there are two other ways to load raw files.
+
+One is by loading parameters stored in an `*.xml` file, usually named `mqpar.xml`. To do this, use the **Load parameters** item on the drop-down menu just left of the __Raw files__ tab. A file browser will open so you can load the parameters you want, including the raw data files.
+
+The other way to load raw files is by **drag-and-drop** from a file explorer. The behavior will depend on what you select.
+
+  * If you select a single file with an `*.xml` extension (usually `mqpar.xml`), the raw data files and other parameters stored there will be loaded.
+  * If all of the items you select are recognized as raw data files, then these will be loaded.
+  * If any of the items you select is not recognized as a raw data file, then each folder among the selected items will be searched recursively for raw data files. All files found will be loaded. If there are also files which are not recognized as raw data, they will be silently passed over.
+
+### Load button
+
+Pressing the __Load__ button will open a file chooser window. The filter at the lower right may be selected to choose which type of file-based raw data source is visible and may be selected. Folder-based raw data sources cannot be loaded with this button, but the __Load folder__ button (@sec-load-folder) can be used for these. The folders may be browsed and single or multiple files can be chosen in the usual way. When you have made your selection, press Open. (Remember, if you have chosen a folder, it will be opened for browsing. To load files, you must have only files selected.) The file or files chosen will be added to the table, unless they are already present there.
+
+### Remove button
+
+This button removes the selected raw data rows from the table.
+
+### Load folder button {#sec-load-folder}
+
+The __Load folder__ button can be used in three ways:
+
+  - to open a single, folder-based raw data source,
+  - to open all the raw data sources of any sort (whether file-based or folder based) in the chosen folder, or
+  - to open all the raw data sources of any sort anywhere under the chosen folder, that is, recursively.
+  
+Because there could be many items in a directory that are not raw data sources, all such items are silently ignored.
+
+### Change folder button
+
+Raw data files loaded by the buttons or with drag-and-drop will, naturally, exist. When an `mqpar.xml` file is loaded, however, the files mentioned may no longer exist. For example, some processing of the files may have been done and a parameter file saved, but the files subsequently moved to another folder or drive. If the files are still together, the situation may be saved by telling MaxQuant where to find them now. When you press the __Change folder__ button you will be presented with the part of the path that the files in the table have in common and given the opportunity to change it to the path that is currently correct, either by editing or by browsing.
+
+## Experimental design file group
+
+### Write template button
+
+_No documentation yet._
+
+### Read from file button
+
+_No documentation yet._
+
+## Edit experimental design group
+
+### Set experiment button
+
+Normally the experiment is left blank when raw data is loaded. The exception is when data is loaded recursively from a folder, in which case MaxQuant generates an value for the experiment from the paths to the files. To set or change the value of experiment, choose one or more files and press the __Set experiment__ button. You will see a pop-up window where you can enter the new value.
+
+### Set parameter group button
+
+This button allows you to set or change the value of the parameter group for the selected files to anything from Group 0 to Group 19.
+
+### Set fractions button
+
+When you press the __Set fractions__ button, you will be given the opportunity to set two integer values. The value you put in the lower box must be greater than or equal to the value you put in the upper box. The raw data files you have selected will be assigned fraction numbers cyclically from the lower value to the higher value, e.g 1, 2, 3, 1, 2, 3, ... .
+
+### No fractions button
+
+Pressing this button will remove all values in the fraction column. (Not just the values for the selected files!) It will also recalculate the values in the Experiment column.

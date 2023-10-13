@@ -8,13 +8,18 @@ format:
     toc-expand: false
     number-sections: true
     number-depth: 4
-editor: visual
+editor: source
 date: today
 bibliography: references.bib
 csl: nature.csl
 ---
 
-The Andromeda search engine[@cox2011a] offers a large variety of already defined modifications, proteases and sequence databases. But sometimes for specialized studies additional configurations are necessary. Therefore it is possible to configure the search engine according to special needs. You can add, remove, duplicate or modify modifications, enzymes and protein sequence databases. Also rearranging the order in the lists is possible to e.g. easier compare things. This rearrangements have no effect on the later analyses.
+The Andromeda search engine[@cox2011a] offers a large variety of already defined modifications, proteases and sequence databases.
+But sometimes for specialized studies additional configurations are necessary.
+Therefore it is possible to configure the search engine according to special needs.
+You can add, remove, duplicate or modify modifications, enzymes and protein sequence databases.
+Also rearranging the order in the lists is possible to e.g. easier compare things.
+This rearrangements have no effect on the later analyses.
 
 On the following pages are step by step descriptions how to configure...
 

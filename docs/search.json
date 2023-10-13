@@ -369,5 +369,40 @@
     "title": "Perseus Download and Installation",
     "section": "4 Hardware requirements",
     "text": "4 Hardware requirements\n\nIntel Pentium III/800 MHz or higher (or compatible) although one should probably not go below a dual core processor.\n2 GB RAM minimum.\n2 GB RAM per thread that is executed in parallel is required.\nThere is no upper limit on the number of cores. Whatever you can fit into a shared memory machine will work as long as the disk performance scales up with it."
+  },
+  {
+    "objectID": "rawFilesTab.html",
+    "href": "rawFilesTab.html",
+    "title": "Raw files tab",
+    "section": "",
+    "text": "The Raw files tab displays information about your raw data sources and offers functions for dealing with those sources and the specification of your experimental design. This page first describes the columns of the raw files table and then the functions available to change it, organized following the buttons and button groups.\nWe often refer to a source of raw data as a raw file, but in some data formats the source is actually a folder. Currently, the file-based raw data formats supported and their (case insensitive) extensions are:\nThe folder.based raw data formats and their extensions are:"
+  },
+  {
+    "objectID": "rawFilesTab.html#raw-files-table",
+    "href": "rawFilesTab.html#raw-files-table",
+    "title": "Raw files tab",
+    "section": "1 Raw files table",
+    "text": "1 Raw files table\nThe table displaying information about the raw data sources has seven columns.\n\nFile: the absolute path to the file or folder containing the raw data.\nExists: whether the file or folder currently exists at that location on the file system.\nSize: if the path points to an existing file (not a folder), the size of that file.\nData format: the vendor or standard defining the format in which the data is stored, and whether it is file-based or folder-based.\nParameter group: The data files may be organized at the user’s discretion in groups, which may be given different parameters.\nExperiment: The experiment is text that the user can choose and use however convenient, for example to group raw data or to remind him of the characteristics of the samples from which the data was taken.\nFraction: Often the samples will be pre-processed with a procedure, for example centrifugation, that produces several sub-samples in a particular sequence. These sub-samples can be labeled with integers in the fractions column."
+  },
+  {
+    "objectID": "rawFilesTab.html#raw-files-functions",
+    "href": "rawFilesTab.html#raw-files-functions",
+    "title": "Raw files tab",
+    "section": "2 Raw files functions",
+    "text": "2 Raw files functions\n\n2.1 Input data group\nThe Load and Load folder buttons are described here, but you should be aware that there are two other ways to load raw files.\nOne is by loading parameters stored in an *.xml file, usually named mqpar.xml. To do this, use the Load parameters item on the drop-down menu just left of the Raw files tab. A file browser will open so you can load the parameters you want, including the raw data files.\nThe other way to load raw files is by drag-and-drop from a file explorer. The behavior will depend on what you select.\n\nIf you select a single file with an *.xml extension (usually mqpar.xml), the raw data files and other parameters stored there will be loaded.\nIf all of the items you select are recognized as raw data files, then these will be loaded.\nIf any of the items you select is not recognized as a raw data file, then each folder among the selected items will be searched recursively for raw data files. All files found will be loaded. If there are also files which are not recognized as raw data, they will be silently passed over.\n\n\n\n2.2 Load button\nPressing the Load button will open a file chooser window. The filter at the lower right may be selected to choose which type of file-based raw data source is visible and may be selected. Folder-based raw data sources cannot be loaded with this button, but the Load folder button (Section 2.4) can be used for these. The folders may be browsed and single or multiple files can be chosen in the usual way. When you have made your selection, press Open. (Remember, if you have chosen a folder, it will be opened for browsing. To load files, you must have only files selected.) The file or files chosen will be added to the table, unless they are already present there.\n\n\n2.3 Remove button\nThis button removes the selected raw data rows from the table.\n\n\n2.4 Load folder button\nThe Load folder button can be used in three ways:\n\nto open a single, folder-based raw data source,\nto open all the raw data sources of any sort (whether file-based or folder based) in the chosen folder, or\nto open all the raw data sources of any sort anywhere under the chosen folder, that is, recursively.\n\nBecause there could be many items in a directory that are not raw data sources, all such items are silently ignored.\n\n\n2.5 Change folder button\nRaw data files loaded by the buttons or with drag-and-drop will, naturally, exist. When an mqpar.xml file is loaded, however, the files mentioned may no longer exist. For example, some processing of the files may have been done and a parameter file saved, but the files subsequently moved to another folder or drive. If the files are still together, the situation may be saved by telling MaxQuant where to find them now. When you press the Change folder button you will be presented with the part of the path that the files in the table have in common and given the opportunity to change it to the path that is currently correct, either by editing or by browsing."
+  },
+  {
+    "objectID": "rawFilesTab.html#experimental-design-file-group",
+    "href": "rawFilesTab.html#experimental-design-file-group",
+    "title": "Raw files tab",
+    "section": "3 Experimental design file group",
+    "text": "3 Experimental design file group\n\n3.1 Write template button\nNo documentation yet.\n\n\n3.2 Read from file button\nNo documentation yet."
+  },
+  {
+    "objectID": "rawFilesTab.html#edit-experimental-design-group",
+    "href": "rawFilesTab.html#edit-experimental-design-group",
+    "title": "Raw files tab",
+    "section": "4 Edit experimental design group",
+    "text": "4 Edit experimental design group\n\n4.1 Set experiment button\nNormally the experiment is left blank when raw data is loaded. The exception is when data is loaded recursively from a folder, in which case MaxQuant generates an value for the experiment from the paths to the files. To set or change the value of experiment, choose one or more files and press the Set experiment button. You will see a pop-up window where you can enter the new value.\n\n\n4.2 Set parameter group button\nThis button allows you to set or change the value of the parameter group for the selected files to anything from Group 0 to Group 19.\n\n\n4.3 Set fractions button\nWhen you press the Set fractions button, you will be given the opportunity to set two integer values. The value you put in the lower box must be greater than or equal to the value you put in the upper box. The raw data files you have selected will be assigned fraction numbers cyclically from the lower value to the higher value, e.g 1, 2, 3, 1, 2, 3, … .\n\n\n4.4 No fractions button\nPressing this button will remove all values in the fraction column. (Not just the values for the selected files!) It will also recalculate the values in the Experiment column."
   }
 ]
