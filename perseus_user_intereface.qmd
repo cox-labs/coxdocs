@@ -21,9 +21,13 @@ The activities can be divided into five main categories. The icons of the catego
 
 ## Load
 
---\> Load \* \[\[perseus:user:activities:matrixupload:genericmatrixupload\|Generic Matrix Upload\]\] \* \[\[perseus:user:activities:matrixupload:creategenelist\|Create Gene list\]\] \* \[\[perseus:user:activities:matrixupload:createrandommatrix\|Create Random matrix\]\] \* \[\[perseus:user:activities:matrixupload:unstructuredtxtupload\|Raw upload\]\] \* \[\[perseus:user:activities:matrixupload:binaryupload\|Binary upload\]\]
+* [Generic Matrix Upload](genericmatrixupload.html) 
+* [Create Gene list](creategenelist.html)
+* [Create Random matrix](createrandommatrix.html) 
+* [Raw upload](unstructuredtxtupload.html) 
+* [Binary upload](binaryupload.html)
+* [NGS upload](ngsupload.html)
 
-\<--
 
 ## Processing
 

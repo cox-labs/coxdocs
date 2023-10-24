@@ -1,0 +1,139 @@
+---
+title: "NGS Upload"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Background
+
+Next-generation sequencing (NGS) methods are a set of different strategies to sequence DNA and related molecules. Because of extreme price reduction of sequencing per basepair as well as the huge spectrum of implementation, NGS is becoming a method of choice for many studies. Particularly, expression analysis is one of the most common tasks. In this sense NGS data is complementary to mass spectrometry-based proteomics data. We can therefore cover all steps of expression regulation starting from epigenetics to the protein level. That's why it is important to include an NGS upload activity to the Perseus workflow.
+
+# Parameters
+
+## Experiment
+
+It specifies the type of NGS experiment the data is derived from (default: RNA sequencing and ribosome profiling).
+
+## Files
+
+With the two buttons "Add file" and "Remove file" it is possible to select [BAM Binary-sequence Alignment Format](https://samtools.github.io/hts-specs/SAMv1.pdf) files. This format is generally used as a compact way to save an alignment and at the same time allowing efficient random access.
+
+Perseus doesn't require an index file.
+
+## Strand specificity
+
+It describes which RNA library preparation method was used. Depending on this, reads will mostly be aligned to the same (sense) or opposite (anti-sense) strand as the feature. Alternatively, reads can be aligned to both strands (not stranded).
+
+Let's demonstrate an expected distribution of reads according to an imaginary gene, consisting of one transcript, using each type of strand specificity. All reads marked red are those which we will take into account. Reads marked grey will be excluded from the coverage calculation.
+
+-   We rule out reads with **a** mark because there is no intersection between them and the gene.
+-   Also, we skip **b** marked reads because they have an opposite direction to that which we expect.
+-   Lastly, we eliminate reads which don't fit with the annotation (**c**) although such reads can potentially be evidence for another isoform of the gene.
+
+![Stranded Single End Reads. Expected distribution of reads in a case of stranded and sense assay](images/singlestrandedfor1.png){#fig-singlestrandedfor1}
+
+![Stranded (anti-sense). Expected distribution of reads in a case of stranded and anti-sense assay](images/singlestrandedrev1.png){#fig-singlestrandedrev1}
+
+![Not-Stranded reads. Expected distribution of reads in a case of non-stranded assay](images/singlenotstranded1.png){#fig-singlenotstranded1}
+
+**Paired end** sequencing produces two reads from one fragment and they should be from different strands (if reads is aligned to the same strand, we exclude such pairs).
+
+For simplicity of visualization let's represent paired end reads like this (@fig-pairedEnd)
+
+![Paired-end reads](images/descriptionfinal.png){#fig-pairedEnd}
+
+We represent the paired end read like this for short. Definition of **a**, **b** and **c** marked reads is similar to single end reads' case.
+
+![Paired End Reads, Stranded (sense) or irst read from the pair is on sense strand. Expected distribution of reads in a case of stranded and sense assay](images/pairedstrandedfirst1.png){#fig-pairedstrandedfirst}
+
+![Stranded (anti-sense)or first read is on anti-sense strand. Expected distribution of reads in a case of stranded and anti-sense assay](images/pairedstrandedsecond1.png){#fig-pairedstrandedsecond}
+
+![Not-Stranded. Expected distribution of reads in a case of non-stranded assay](images/pairedstrandedrand.png){#fig-pairedstrandedrand}
+
+It's worth to notice that for paired end reads the Persues by default calculates number of fragments for each gene, in other words it doesn't count twice two reads of one pair.
+
+**Hint:** In case the experimental design isn't known, we recommend to use "Not stranded" as "Strand specificity".
+
+## Genome annotation
+
+Currently the plugin supports GTF file format containing coordinates of genome regions for which the coverage will be calculated. We strongly recommend to download an annotation from [the ensemble FTP server](http://www.ensembl.org/info/data/ftp/index.html).
+
+**GTF (General Feature Format)**: GTF file can start from several browser/track lines (information specific to genome browser) and comment lines (line should begin with the `#` character). The rest of the file consists of one line per feature, each consists of nine columns
+
+-   **seqname** - name of chromosome of scaffold
+-   **source** - name of the program that generated this feature, or the data source (database or project name)
+-   **feature** - the current version of Perseus takes into account just "cds" and "exon" features
+-   **start** - start position of the feature (1-based coordinate)
+-   **end** - end position of the feature (1-based coordinate)
+-   **score** - a floating point value
+-   **strand** - valid entries include '+' (forward) or '-' (reverse)
+-   **attributes** - a semicolon-separated list of tag-value pairs
+
+"empty" columns are denoted with a ".". Each line with "cds" and "exon" feature should contain "gene_id" or "transcript_id" tags.
+
+## File
+
+Specified file path to the genome annotation.
+
+## Feature type name
+
+It is possible to specify a feature name that will be used (third column of GTF).
+
+**Hint:** It makes sense to set "Feature type name" parameter to "Exons" for RNA-seq analysis and choose "CDS" for ribosome profiling.
+
+## Number of threads
+
+Specifies the number of used threads for uploading NGS data.
+
+# Parameter window
+
+![NGS upload interface](images/ngsuploadinterface.png)
+
+# Examples
+
+## Calculate RPKM/FPKM
+
+-   Upload bam files to Perseus. The Required annotation (gtf file) can be found on [ensemble' FTP server](http://www.ensembl.org/info/data/ftp/index.html) (annotation should be in agreement with version of genome which was used for alignment). For the example we took publically available RNA-seq data of cultured primary human lung fibroblast which done in two replicates [GSM759890](http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM759890) and [GSM759891](http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM759891)
+-   Filter rows based on categorical 'Gene biotype' column
+-   select just **protein_coding group**.
+-   Make normalization dividing columns by \$sum(Normalization) -\> Divide \$
+-   By definition of RPKM, divide previous result by gene length, multiply on $10^9$ and finally take the $log_2(Basic -> Combine\ main\ columns)$.
+-   To get TPM, normalise columns of RPKM/FPKM by sum and multiply on $10^6$ .
+
+![Upload bam files to Perseus](images/example.png){#fig-upload-bam}
+
+# Comparison with HTSeq-count
+
+![Comparing HTSeq-counts against Perseus](images/htseqvsperseus.multiscatter.png){#fig-htseqvsperseus}
+
+HTSeq-count[@anders2014] is part of the HTSeq suite, a python library to facilitate and represent data, such as genomic coordinates, sequences, sequencing reads, alignments, gene model information and variant calls. `htseq-count` can be used to pre-processes RNA-Seq data for differential expression analysis by counting the overlap of reads with genes.
+
+{{:perseus:user:activities:matrixupload:htseqvsperseus.table.rar\|}}
+
+
+```{=html}
+<!-- ==== Parameters specific for "Chromatin IP" experiment ====
+The most popular way to deal with Chromatin IP experiment is sequence relatively small part of a read - enough for unique alignment - and already in silico extend such read until expected length.
+{{ :user:activities:matrixupload:chipseqextend.png?500 |}}
+But for certain purposes it's important to have exact boarders of fragments. Paired end sequencing complies with this condition. Due not full length reading of them it's important for coverage analysis to fill a gap between reads.
+{{ :user:activities:matrixupload:chipseqsplit.png?500 |}}
+! -->
+```

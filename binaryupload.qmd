@@ -1,0 +1,34 @@
+---
+title: "Binary Upload"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## File
+
+Specifies the file path of the binary file that should be uploaded (default: empty). It can be specified manually by typing in the path or the file can be browsed by using the "Select" button. All file extensions are supported.
+
+# Parameter window
+
+![Binary upload](images/binary_upload-edited.png)
+

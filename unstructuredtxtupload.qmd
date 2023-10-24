@@ -1,0 +1,47 @@
+---
+title: "Unstructured Text Upload"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## File
+
+Specifies the file path of the text file that should be uploaded (default: empty). It can be specified manually by typing in the path or the file can be browsed by using the "Select" button.
+
+## Split into columns
+
+If checked the lines of the specified text file are split into several columns (default: FALSE).
+
+## Separator
+
+This parameter is just relevant, if the parameter "Split into columns" is TRUE. 
+
+It specifies how the values within a row of the text file are separated (default: Tab). The separation type can be selected from a predefined list: 
+
+* Tab 
+* Comma
+
+## Parameter window
+
+![Raw upload](images/raw_upload-edited.png)
+

@@ -1,0 +1,40 @@
+---
+title: "Generic Matrix Upload"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+## Parameters
+
+### File
+
+Specifies the file path of the tab separated file that should be uploaded (default: empty). It can be specified manually by typing in the path or the file can be browsed by using the "Select" button.
+
+### Main/Numerical/Categorical/Text/Multi-numerical
+
+Each of the listed columns in the left panel that should be loaded need to be distributed among the five different column types depending on the analysis that should be applied.
+
+**Hint:** If necessary, column types can also be changed later using [Change column type](changecolumntype.html).
+
+### Parameter window
+
+![ Generic matrix upload](images/generic_matrix_upload-edited.png)
+

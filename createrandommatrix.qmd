@@ -1,0 +1,61 @@
+---
+title: "Create randome matrix"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+{{page\>perseus:noedit:user:activities:matrixupload:createrandommatrix}} <!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+
+# Parameters
+
+## Number of rows
+
+Specifies the number of rows the randomly created matrix should have (default: 100). Rows are called "Row 1", Row 2", etc.
+
+## Number of columns
+
+Specifies the number of columns the randomly created matrix should have (default: 10). Columns are called "Column 1", "Column 2", etc.
+
+## Percentage of missing values
+
+Specifies the percentage of missing values the created matrix should contain (default: 0).
+
+## Mode
+
+Defines how many normal distributions should be included in the matrix (default: One normal distribution). The number of normal distributions can be specified from a predefined list:
+
+* One normal distribution (parameter window A) 
+* Two normal distributions (parameter window B) 
+* Many normal distributions (parameter window C)
+
+### Distance
+
+This parameter is just relevant, if the parameter "Mode" is set to "Two normal distributions". It defines the distance between the two generated normal distributions (default: 2).
+
+### How many
+
+This parameter is just relevant, if the parameter "Mode" is set to "Many normal distributions". It defines how many normal distributions should be in the generated matrix (default: 3).
+
+### Box size
+
+This parameter is just relevant, if the parameter "Mode" is set to "Many normal distributions". It specifies the edge length of the hyper cubes in which the centers of the normal distributions are placed at random (default: 2). </block>
+
+## Parameter window
+
+![Create random matrix](images/create_random_matrix-edited.png)
+

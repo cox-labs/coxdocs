@@ -1,0 +1,33 @@
+---
+title: "Create Gene list"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Organism
+
+Specification of the organism for which a gene list should be created (default: first file in `\conf\perseus\genelists`). The organisms or the corresponding text files that should be uploaded can be selected from all files, which are located in `\conf\perseus\genelists` in your Perseus folder.
+
+## Parameter window
+
+![Create Gene list windows](images/create_gene_list-edited.png)
