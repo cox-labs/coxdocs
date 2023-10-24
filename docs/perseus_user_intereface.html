@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.294">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Cox Lab">
+<meta name="dcterms.date" content="2023-10-24">
+
+<title>Perseus</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./Figures/coxlab_logo2.png" alt="" class="navbar-logo">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html" rel="" target="">
+ <span class="menu-text">HOME</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./maxquant_instructions.html" rel="" target="">
+ <span class="menu-text">MaxQuant</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./perseus_instructions.html" rel="" target="">
+ <span class="menu-text">Perseus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./andromeda_instructions.html" rel="" target="">
+ <span class="menu-text">Andromeda</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="./contact.html" rel="" target=""><i class="bi bi-envelope" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/cox-labs/CoxLab_Bug_Reporting" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/TheCoxLab" rel="" target=""><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/juergen-cox-2437ba17/" rel="" target=""><i class="bi bi-fa-linkedin fa-lg" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="-1">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#load" id="toc-load" class="nav-link active" data-scroll-target="#load"><span class="header-section-number">1</span> Load</a></li>
+  <li><a href="#processing" id="toc-processing" class="nav-link" data-scroll-target="#processing"><span class="header-section-number">2</span> Processing</a>
+  <ul>
+  <li><a href="#basic" id="toc-basic" class="nav-link" data-scroll-target="#basic"><span class="header-section-number">2.1</span> Basic</a></li>
+  <li><a href="#rearrange" id="toc-rearrange" class="nav-link" data-scroll-target="#rearrange"><span class="header-section-number">2.2</span> Rearrange</a></li>
+  <li><a href="#normalization" id="toc-normalization" class="nav-link" data-scroll-target="#normalization"><span class="header-section-number">2.3</span> Normalization</a></li>
+  <li><a href="#filter-rows" id="toc-filter-rows" class="nav-link" data-scroll-target="#filter-rows"><span class="header-section-number">2.4</span> Filter rows</a></li>
+  <li><a href="#filter-columns" id="toc-filter-columns" class="nav-link" data-scroll-target="#filter-columns"><span class="header-section-number">2.5</span> Filter columns</a></li>
+  <li><a href="#annot.-columns" id="toc-annot.-columns" class="nav-link" data-scroll-target="#annot.-columns"><span class="header-section-number">2.6</span> Annot. columns</a></li>
+  <li><a href="#annot.-rows" id="toc-annot.-rows" class="nav-link" data-scroll-target="#annot.-rows"><span class="header-section-number">2.7</span> Annot. rows</a></li>
+  <li><a href="#tests" id="toc-tests" class="nav-link" data-scroll-target="#tests"><span class="header-section-number">2.8</span> Tests</a></li>
+  <li><a href="#imputation" id="toc-imputation" class="nav-link" data-scroll-target="#imputation"><span class="header-section-number">2.9</span> Imputation</a></li>
+  <li><a href="#modifications" id="toc-modifications" class="nav-link" data-scroll-target="#modifications"><span class="header-section-number">2.10</span> Modifications</a></li>
+  <li><a href="#clustering" id="toc-clustering" class="nav-link" data-scroll-target="#clustering"><span class="header-section-number">2.11</span> Clustering</a></li>
+  </ul></li>
+  <li><a href="#analysis" id="toc-analysis" class="nav-link" data-scroll-target="#analysis"><span class="header-section-number">3</span> Analysis</a>
+  <ul>
+  <li><a href="#visualization" id="toc-visualization" class="nav-link" data-scroll-target="#visualization"><span class="header-section-number">3.1</span> Visualization</a></li>
+  <li><a href="#clusteringpca" id="toc-clusteringpca" class="nav-link" data-scroll-target="#clusteringpca"><span class="header-section-number">3.2</span> Clustering/PCA</a></li>
+  <li><a href="#misc." id="toc-misc." class="nav-link" data-scroll-target="#misc."><span class="header-section-number">3.3</span> Misc.</a></li>
+  </ul></li>
+  <li><a href="#multi-proc." id="toc-multi-proc." class="nav-link" data-scroll-target="#multi-proc."><span class="header-section-number">4</span> Multi-proc.</a>
+  <ul>
+  <li><a href="#basic-1" id="toc-basic-1" class="nav-link" data-scroll-target="#basic-1"><span class="header-section-number">4.1</span> Basic</a></li>
+  </ul></li>
+  <li><a href="#export" id="toc-export" class="nav-link" data-scroll-target="#export"><span class="header-section-number">5</span> Export</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Perseus</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Cox Lab </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 24, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+<p>The title bar along the top has the Perseus logo on the left, followed by an icon that can be used to rename the session, which will be displayed and is by default “Session 1 - Perseus”. The bar below (<a href="#fig-perseus-interface" class="quarto-xref">Figure&nbsp;1</a>) has on the left a menu (indicated by the blue box with a white arrow on it) with the usual sorts of file functions (Save, Save as, Save as PDF, Open, New, New Window, Annotation Download, Help, Exit), followed by a tab label “Matrix”. On the right are buttons to split/join the Perseus window, minimize/maximize the ribbon with all the activities and the last button redirects to the documentation. The ribbon of the “Matrix” tab contains all the activities (highlighted by a cyan rectangle) that can be applied to loaded matrices.</p>
+<div id="fig-perseus-interface" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="Figures/interface-functionbar01_edited.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;1: Perseus interface ribbon</figcaption>
+</figure>
+</div>
+<p>The activities can be divided into five main categories. The icons of the categories Processing, Analysis and Multi-proc. are frequently used activities, which are also listed in one of the drop down menus of each category. To figure out the function behind the icon just hover over it. For simplicity the icons of these three categories are ignored in the listing below:</p>
+<section id="load" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="load"><span class="header-section-number">1</span> Load</h2>
+<p>–&gt; Load * [[perseus:user:activities:matrixupload:genericmatrixupload|Generic Matrix Upload]] * [[perseus:user:activities:matrixupload:creategenelist|Create Gene list]] * [[perseus:user:activities:matrixupload:createrandommatrix|Create Random matrix]] * [[perseus:user:activities:matrixupload:unstructuredtxtupload|Raw upload]] * [[perseus:user:activities:matrixupload:binaryupload|Binary upload]]</p>
+<p>&lt;–</p>
+</section>
+<section id="processing" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="processing"><span class="header-section-number">2</span> Processing</h2>
+<section id="basic" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="basic"><span class="header-section-number">2.1</span> Basic</h3>
+<p>* [[perseus:user:activities:matrixprocessing:basic:transformationproc|Transform]] * [[perseus:user:activities:matrixprocessing:basic:combineexpressioncolumns|Combine expression columns]] * [[perseus:user:activities:matrixprocessing:basic:columncorrelations|Column correlation]] * [[perseus:user:activities:matrixprocessing:basic:rowcorrelations|Row correlation]] * [[perseus:user:activities:matrixprocessing:basic:summarystatisticscolumns|Summary statistics (columns)]] * [[perseus:user:activities:matrixprocessing:basic:summarystatisticsrows|Summary statistics (rows)]] * [[perseus:user:activities:matrixprocessing:basic:quantiles|Quantiles]] * [[perseus:user:activities:matrixprocessing:basic:densityestimationprocessing|Density estimation]] * [[perseus:user:activities:matrixprocessing:basic:performancecurves|Performance curve]] * [[perseus:user:activities:matrixprocessing:basic:cloneprocessing|Clone]] * [[perseus:user:activities:matrixprocessing:outliers:significancea|Significance A]] * [[perseus:user:activities:matrixprocessing:outliers:significanceb|Significance B]] * [[perseus:user:activities:matrixprocessing:basic:addnoise|Add noise]]</p>
+</section>
+<section id="rearrange" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="rearrange"><span class="header-section-number">2.2</span> Rearrange</h3>
+<p>* [[perseus:user:activities:matrixprocessing:rearrange:changecolumntype|Change column type]] * [[perseus:user:activities:matrixprocessing:rearrange:renamecolumns|Rename columns]] * [[perseus:user:activities:matrixprocessing:rearrange:renamecolumnsregexp|Rename columns [reg. ex.]]] * [[perseus:user:activities:matrixprocessing:rearrange:combineannotations|Combine annotations]] * [[perseus:user:activities:matrixprocessing:rearrange:duplicatecolumns|Duplicate columns]] * [[perseus:user:activities:matrixprocessing:rearrange:reorderremovecolumns|Reorder/remove columns]] * [[perseus:user:activities:matrixprocessing:rearrange:removeemptycolumns|Remove empty columns]] * [[perseus:user:activities:matrixprocessing:rearrange:transpose|Transpose]] * [[perseus:user:activities:matrixprocessing:rearrange:sortbycolumn|Sort by column]] * [[perseus:user:activities:matrixprocessing:rearrange:expandmultinumeric|Expand multi-numeric and string columns]] * [[perseus:user:activities:matrixprocessing:rearrange:uniquevalues|Unique values]] * [[perseus:user:activities:matrixprocessing:rearrange:convertmultinumeric|Convert multi-numeric column]] * [[perseus:user:activities:matrixprocessing:rearrange:combinecategoricalcolumns|Combine categorical columns]] * [[perseus:user:activities:matrixprocessing:rearrange:processtextcolumns|Process text column]] * [[perseus:user:activities:matrixprocessing:rearrange:searchtextcolumns|Search text column]]</p>
+</section>
+<section id="normalization" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="normalization"><span class="header-section-number">2.3</span> Normalization</h3>
+<p>[[perseus:user:activities:matrixprocessing:normalization:zscore|Z-score]] * [[perseus:user:activities:matrixprocessing:normalization:rank|Rank]] * [[perseus:user:activities:matrixprocessing:normalization:unitvector|Unit vectors]] * [[perseus:user:activities:matrixprocessing:normalization:scaletointerval|Scale to interval]] * [[perseus:user:activities:matrixprocessing:normalization:widthadjustment|Width adjustment]] * [[perseus:user:activities:matrixprocessing:normalization:subtract|Subtract]] * [[perseus:user:activities:matrixprocessing:normalization:divide|Divide]] * [[perseus:user:activities:matrixprocessing:normalization:normalizebycolumn|Modify by column]] * [[perseus:user:activities:matrixprocessing:normalization:subtractrowcluster|Subtract row cluster]] * [[perseus:user:activities:matrixprocessing:normalization:unzscore|Un-Z-score]]</p>
+</section>
+<section id="filter-rows" class="level3" data-number="2.4">
+<h3 data-number="2.4" class="anchored" data-anchor-id="filter-rows"><span class="header-section-number">2.4</span> Filter rows</h3>
+<p>[[perseus:user:activities:matrixprocessing:filterrows:filtercategoricalcolumn|Filter rows based on categorical column]] * [[perseus:user:activities:matrixprocessing:filterrows:filternumericalcolumn|Filter rows based on numerical/expression column]] * [[perseus:user:activities:matrixprocessing:filterrows:filtertextualcolumn|Filter rows based on text column]] * [[perseus:user:activities:matrixprocessing:filterrows:filtervalidvaluesrows|Filter rows based on valid values]] * [[perseus:user:activities:matrixprocessing:filterrows:filterrandomrows|Filter rows based on random sampling]]</p>
+</section>
+<section id="filter-columns" class="level3" data-number="2.5">
+<h3 data-number="2.5" class="anchored" data-anchor-id="filter-columns"><span class="header-section-number">2.5</span> Filter columns</h3>
+<p>[[perseus:user:activities:matrixprocessing:filtercolumns:filtercategoricalrow|Filter rows based on categorical row]] * [[perseus:user:activities:matrixprocessing:filterrows:filtervalidvaluesrows|Filter rows based on valid values]]</p>
+<p>&lt;– –&gt; Quality * [[perseus:user:activities:matrixprocessing:quality:createqualitymatrix|Create quality matrix]] * [[perseus:user:activities:matrixprocessing:quality:filterquality|Filter quality]] * [[perseus:user:activities:matrixprocessing:quality:converttonan|Convert to NaN]]</p>
+</section>
+<section id="annot.-columns" class="level3" data-number="2.6">
+<h3 data-number="2.6" class="anchored" data-anchor-id="annot.-columns"><span class="header-section-number">2.6</span> Annot. columns</h3>
+<p>[[perseus:user:activities:matrixprocessing:annotcolumns:addannotationtomatrix|Add annotation]] * [[perseus:user:activities:matrixprocessing:annotcolumns:backtobaseidentifiers|To base identifiers]] * [[perseus:user:activities:matrixprocessing:annotcolumns:fisherexacttestproces|Fisher exact test]] * [[perseus:user:activities:matrixprocessing:annotcolumns:averagecategories|Average categories]] * [[perseus:user:activities:matrixprocessing:annotcolumns:categorycounting|Category counting]] * [[perseus:user:activities:matrixprocessing:annotcolumns:onedimannotationenrichment|1D annotation enrichment]] * [[perseus:user:activities:matrixprocessing:annotcolumns:twodimannotationenrichment|2D annotation enrichment]]</p>
+</section>
+<section id="annot.-rows" class="level3" data-number="2.7">
+<h3 data-number="2.7" class="anchored" data-anchor-id="annot.-rows"><span class="header-section-number">2.7</span> Annot. rows</h3>
+<p>[[perseus:user:activities:matrixprocessing:annotrows:createcategoricalannotrow|Categorical annotation rows]] * [[perseus:user:activities:matrixprocessing:annotrows:createnumericalannotrow|Numerical annotation rows]] * [[perseus:user:activities:matrixprocessing:annotrows:averagegroups|Average groups]] * [[perseus:user:activities:matrixprocessing:annotrows:jointermsincategoricalrow|Join terms in categorical row]]</p>
+</section>
+<section id="tests" class="level3" data-number="2.8">
+<h3 data-number="2.8" class="anchored" data-anchor-id="tests"><span class="header-section-number">2.8</span> Tests</h3>
+<ul>
+<li>[[perseus:user:activities:matrixprocessing:tests:onesampletestprocessing|One-sample tests]]</li>
+<li>[[perseus:user:activities:matrixprocessing:tests:twosampletestprocessing|Two-samples tests]]</li>
+<li>[[perseus:user:activities:matrixprocessing:tests:multiplesampletestprocessing|Multiple-samples tests]]</li>
+<li>[[perseus:user:activities:matrixprocessing:tests:twowayanova|Two-way ANOVA]]</li>
+</ul>
+</section>
+<section id="imputation" class="level3" data-number="2.9">
+<h3 data-number="2.9" class="anchored" data-anchor-id="imputation"><span class="header-section-number">2.9</span> Imputation</h3>
+<ul>
+<li>[[perseus:user:activities:matrixprocessing:imputation:replacemissingfromgaussian|Replace missing values from normal distribution]]</li>
+<li>[[perseus:user:activities:matrixprocessing:imputation:replaceimputedbynan|Replace imputed values by NaN]]</li>
+<li>[[perseus:user:activities:matrixprocessing:imputation:replacemissingbyconstant|Replace missing values by constant]]</li>
+</ul>
+</section>
+<section id="modifications" class="level3" data-number="2.10">
+<h3 data-number="2.10" class="anchored" data-anchor-id="modifications"><span class="header-section-number">2.10</span> Modifications</h3>
+<p>[[perseus:user:activities:matrixprocessing:modifications:expandsitetable|Expand site table]] * [[perseus:user:activities:matrixprocessing:modifications:addlinearmotifs|Add linear motifs]] * [[perseus:user:activities:matrixprocessing:modifications:addmodificationcounts|Add modification counts]] * [[perseus:user:activities:matrixprocessing:modifications:addknownsites|Add known sites]] * [[perseus:user:activities:matrixprocessing:modifications:kinasesubstraterelations|Kinase-substrate relations]] * [[perseus:user:activities:matrixprocessing:modifications:addsequencefeatures|Add sequence features]] * [[perseus:user:activities:matrixprocessing:modifications:addregulatorysites|Add regulatory sites]] * [[perseus:user:activities:matrixprocessing:modifications:shortenmotifs|Shorten motif length]]</p>
+</section>
+<section id="clustering" class="level3" data-number="2.11">
+<h3 data-number="2.11" class="anchored" data-anchor-id="clustering"><span class="header-section-number">2.11</span> Clustering</h3>
+<p>[[perseus:user:activities:matrixprocessing:clustering:genericclusteringproc|Generic clustering]]</p>
+</section>
+</section>
+<section id="analysis" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="analysis"><span class="header-section-number">3</span> Analysis</h2>
+<section id="visualization" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="visualization"><span class="header-section-number">3.1</span> Visualization</h3>
+<p>[[perseus:user:activities:matrixanalysis:visualization:scatterplotanalysis|Scatter plot]] * [[perseus:user:activities:matrixanalysis:visualization:profileplot|Profile plot]] * [[perseus:user:activities:matrixanalysis:visualization:histogram|Histogram]] * [[perseus:user:activities:matrixanalysis:visualization:multiscatteranalysis|Multi scatter plot]] * [[perseus:user:activities:matrixanalysis:visualization:scatterplot3danalysis|3D plot]]</p>
+</section>
+<section id="clusteringpca" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="clusteringpca"><span class="header-section-number">3.2</span> Clustering/PCA</h3>
+<p>[[perseus:user:activities:matrixanalysis:clusteringpca:hierarchicalcluster|Hierarchical clustering]] * [[perseus:user:activities:matrixanalysis:clusteringpca:principalcomponentanalysis|Principle component analysis]]</p>
+</section>
+<section id="misc." class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="misc."><span class="header-section-number">3.3</span> Misc.</h3>
+<p>[[perseus:user:activities:matrixanalysis:misc:volcanoplotanalysis|Volcano plot]] * [[perseus:user:activities:matrixanalysis:misc:selectrowsmanually|Select rows manually]] * [[perseus:user:activities:matrixanalysis:misc:sequencelogo|Sequence logos]] * [[perseus:user:activities:matrixanalysis:misc:numericvenndiagram|Numeric venn diagram]]</p>
+</section>
+</section>
+<section id="multi-proc." class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="multi-proc."><span class="header-section-number">4</span> Multi-proc.</h2>
+<section id="basic-1" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="basic-1"><span class="header-section-number">4.1</span> Basic</h3>
+<p>[[perseus:user:activities:matrixmultiprocessing:basic:matchingrowsbyname|Matching rows by name]] * [[perseus:user:activities:matrixmultiprocessing:basic:matchingcolumnsbyname|Matching columns by name]]</p>
+</section>
+</section>
+<section id="export" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="export"><span class="header-section-number">5</span> Export</h2>
+<p>[[perseus:user:activities:matrixexport:tabseparatedexport|Generic matrix export]]</p>
+<p>The remainder of the window is divided into scrollable panes (<a href="#fig-persues-overview" class="quarto-xref">Figure&nbsp;2</a>):</p>
+<ul>
+<li>The <strong>matrix pane</strong> (highlighted by a pink rectangle)</li>
+<li>The <strong>workflow pane</strong> (highlighted by a blue rectangle)</li>
+<li>The <strong>meta-data pane</strong> (highlighted by a green rectangle).</li>
+</ul>
+<div id="fig-persues-overview" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="Figures/interface-overview_edited.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;2: Perseus interface overview</figcaption>
+</figure>
+</div>
+<p>The <strong>matrix pane</strong> on the left, displays the matrix that is currently selected in the workflow pane including all the columns and rows of that matrix. In the bottom left corner of that pane you can find the number of rows (items) of the shown matrix.</p>
+<p>The <strong>workflow pane</strong> in the middle, shows all the processing steps that have been applied to your data up to here including the parameter values that have been used. The generated workflow can be rearranged using the drag and drop function. Also matrices can be renamed and highlighted using different colors by right clicking on the node of choice. At the top of this pane you can find important buttons to manipulate the workflow:</p>
+<ul>
+<li>Re-layout: Re-formats the whole workflow to the default arrangement of the workflow</li>
+<li>Stop activity: Stops a currently running process</li>
+<li>Remove selected nodes</li>
+<li>Complete selection downstream: Selects all nodes downstream starting at the picked node</li>
+<li>Complete selection upstream: Selects all nodes upstream starting at the picked node</li>
+<li>Export graphics: Exports the workflow as a graphic</li>
+</ul>
+<p>The <strong>meta-data pane</strong> on the right, gives meta-information of a selected node. If a matrix node is selected you get information about the matrix, its creator and when it was created, how many rows and columns it contains, etc. In case an activity node is selected information about the used parameters can be retrieved and if necessary be double checked.</p>
+<!--The pane on the lower right contains information about the currently running processes with the number of used threads.-->
+<p>In the bottom right corner of the Perseus window are a progress bar and the version number.</p>
+<p><strong>Comment:</strong> In the newest Perseus version we changed the terminology of expression columns to main columns. The functionality of these columns is equivalent.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        for (let i = 0; i < 2; i++) {
+          container.appendChild(note.children[i].cloneNode(true));
+        }
+        return container.innerHTML
+      } else {
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>© 2023, created by and maintained by Cox lab</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

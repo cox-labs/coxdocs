@@ -8,7 +8,7 @@ format:
     toc-expand: false
     number-sections: true
     number-depth: 4
-editor: visual
+editor: source
 date: today
 bibliography: references.bib
 ---
@@ -17,17 +17,33 @@ The Perseus software platform supports biological and biomedical researchers in 
 
 ![Perseus overview](Figures/perseus_figure1.jpg){#fig-perseus}
 
-## Learn
+# Documentation outline
+
+-   [Download and installation](perseus_download_guide.html)
+-   [User interface](perseus_user_intereface.html)
+-   [Activities](perseus_activities.html)
+-   [Plug Ins](perseus_plugins.html)
+-   [Tutorials](perseus_tutorials.html)
+-   [Use cases](perseus_usecases.html)
+-   [maxquant Bug reporting](https://github.com/cox-labs/CoxLab_Bug_Reporting)
+-   [Glossary](docs/Glossary.html)
+
+
+# Pronunciation of Perseus
+
+Most biologists and informaticians are a little weak in the classical languages. Fortunately, Google helps you catch up on any lessons you missed. The developers in Germany tend to say _pair-SAY-oos_, with the accent on the second of three syllables, which seems reasonably close to the Greek pronunciation [given here](http://www.greek-gods.info/greek-heroes/sounds/perseus_greek.mp3)] or [here](http://www.youtube.com/watch?v=Uhtz6nCGXcM).
+(This pronunciation is distinct from how Germans usually call the Greek hero, which is _PAIR-soys_.)
+
+The English pronunciation uniformly puts the accent on the first syllable: PER-see-uhs, as in the examples [here](http://www.oxforddictionaries.com/pronounce/english/Perseus), [here](http://www.greek-gods.info/greek-heroes/sounds/perseus_english.mp3), or [here](http://www.youtube.com/watch?v=Uo96zYcmE0Q). For the software there is no official pronunciation, so no one will tell you you are wrong, as long as you say it with confidence.
+
+
+# Learn
 
 -   Hands-on tutorials and theoretical lectures are available on the [MaxQuant youtube channel](https://www.youtube.com/channel/UCKYzYTm1cnmc0CFAMhxDO8w).
 -   Participate in our annual [MaxQuant summer school](http://summerschool.maxquant.de) to gain even deeper insights into MaxQuant and Perseus. Read the protocol-style book chapter ([@tyanova2018] on Perseus.
 -   Join the discussion around Perseus and data analysis on the [perseus google group](https://groups.google.com/g/perseus-list) -- a great place to ask any question and get answers from the community.
 
-## Download
-
-Perseus is freely available to commercial and academic users, just follow the [download and installation guide](perseus_download_guide.html)
-
-## Cite
+# Cite
 
 If you use Perseus in your project, please cite one of the papers listed below:
 

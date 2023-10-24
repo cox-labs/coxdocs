@@ -1,0 +1,130 @@
+---
+title: "Perseus"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+The title bar along the top has the Perseus logo on the left, followed by an icon that can be used to rename the session, which will be displayed and is by default "Session 1 - Perseus". The bar below (@fig-perseus-interface) has on the left a menu (indicated by the blue box with a white arrow on it) with the usual sorts of file functions (Save, Save as, Save as PDF, Open, New, New Window, Annotation Download, Help, Exit), followed by a tab label "Matrix". On the right are buttons to split/join the Perseus window, minimize/maximize the ribbon with all the activities and the last button redirects to the documentation. The ribbon of the "Matrix" tab contains all the activities (highlighted by a cyan rectangle) that can be applied to loaded matrices.
+
+![Perseus interface ribbon](Figures/interface-functionbar01_edited.png){#fig-perseus-interface}
+
+The activities can be divided into five main categories. The icons of the categories Processing, Analysis and Multi-proc. are frequently used activities, which are also listed in one of the drop down menus of each category. To figure out the function behind the icon just hover over it. For simplicity the icons of these three categories are ignored in the listing below:
+
+## Load
+
+--\> Load \* \[\[perseus:user:activities:matrixupload:genericmatrixupload\|Generic Matrix Upload\]\] \* \[\[perseus:user:activities:matrixupload:creategenelist\|Create Gene list\]\] \* \[\[perseus:user:activities:matrixupload:createrandommatrix\|Create Random matrix\]\] \* \[\[perseus:user:activities:matrixupload:unstructuredtxtupload\|Raw upload\]\] \* \[\[perseus:user:activities:matrixupload:binaryupload\|Binary upload\]\]
+
+\<--
+
+## Processing
+
+### Basic
+
+\* \[\[perseus:user:activities:matrixprocessing:basic:transformationproc\|Transform\]\] \* \[\[perseus:user:activities:matrixprocessing:basic:combineexpressioncolumns\|Combine expression columns\]\] \* \[\[perseus:user:activities:matrixprocessing:basic:columncorrelations\|Column correlation\]\] \* \[\[perseus:user:activities:matrixprocessing:basic:rowcorrelations\|Row correlation\]\] \* \[\[perseus:user:activities:matrixprocessing:basic:summarystatisticscolumns\|Summary statistics (columns)\]\] \* \[\[perseus:user:activities:matrixprocessing:basic:summarystatisticsrows\|Summary statistics (rows)\]\] \* \[\[perseus:user:activities:matrixprocessing:basic:quantiles\|Quantiles\]\] \* \[\[perseus:user:activities:matrixprocessing:basic:densityestimationprocessing\|Density estimation\]\] \* \[\[perseus:user:activities:matrixprocessing:basic:performancecurves\|Performance curve\]\] \* \[\[perseus:user:activities:matrixprocessing:basic:cloneprocessing\|Clone\]\] \* \[\[perseus:user:activities:matrixprocessing:outliers:significancea\|Significance A\]\] \* \[\[perseus:user:activities:matrixprocessing:outliers:significanceb\|Significance B\]\] \* \[\[perseus:user:activities:matrixprocessing:basic:addnoise\|Add noise\]\]
+
+### Rearrange
+
+\* \[\[perseus:user:activities:matrixprocessing:rearrange:changecolumntype\|Change column type\]\] \* \[\[perseus:user:activities:matrixprocessing:rearrange:renamecolumns\|Rename columns\]\] \* \[\[perseus:user:activities:matrixprocessing:rearrange:renamecolumnsregexp\|Rename columns \[reg. ex.\]\]\] \* \[\[perseus:user:activities:matrixprocessing:rearrange:combineannotations\|Combine annotations\]\] \* \[\[perseus:user:activities:matrixprocessing:rearrange:duplicatecolumns\|Duplicate columns\]\] \* \[\[perseus:user:activities:matrixprocessing:rearrange:reorderremovecolumns\|Reorder/remove columns\]\] \* \[\[perseus:user:activities:matrixprocessing:rearrange:removeemptycolumns\|Remove empty columns\]\] \* \[\[perseus:user:activities:matrixprocessing:rearrange:transpose\|Transpose\]\] \* \[\[perseus:user:activities:matrixprocessing:rearrange:sortbycolumn\|Sort by column\]\] \* \[\[perseus:user:activities:matrixprocessing:rearrange:expandmultinumeric\|Expand multi-numeric and string columns\]\] \* \[\[perseus:user:activities:matrixprocessing:rearrange:uniquevalues\|Unique values\]\] \* \[\[perseus:user:activities:matrixprocessing:rearrange:convertmultinumeric\|Convert multi-numeric column\]\] \* \[\[perseus:user:activities:matrixprocessing:rearrange:combinecategoricalcolumns\|Combine categorical columns\]\] \* \[\[perseus:user:activities:matrixprocessing:rearrange:processtextcolumns\|Process text column\]\] \* \[\[perseus:user:activities:matrixprocessing:rearrange:searchtextcolumns\|Search text column\]\]
+
+### Normalization
+
+\[\[perseus:user:activities:matrixprocessing:normalization:zscore\|Z-score\]\] \* \[\[perseus:user:activities:matrixprocessing:normalization:rank\|Rank\]\] \* \[\[perseus:user:activities:matrixprocessing:normalization:unitvector\|Unit vectors\]\] \* \[\[perseus:user:activities:matrixprocessing:normalization:scaletointerval\|Scale to interval\]\] \* \[\[perseus:user:activities:matrixprocessing:normalization:widthadjustment\|Width adjustment\]\] \* \[\[perseus:user:activities:matrixprocessing:normalization:subtract\|Subtract\]\] \* \[\[perseus:user:activities:matrixprocessing:normalization:divide\|Divide\]\] \* \[\[perseus:user:activities:matrixprocessing:normalization:normalizebycolumn\|Modify by column\]\] \* \[\[perseus:user:activities:matrixprocessing:normalization:subtractrowcluster\|Subtract row cluster\]\] \* \[\[perseus:user:activities:matrixprocessing:normalization:unzscore\|Un-Z-score\]\]
+
+### Filter rows
+
+\[\[perseus:user:activities:matrixprocessing:filterrows:filtercategoricalcolumn\|Filter rows based on categorical column\]\] \* \[\[perseus:user:activities:matrixprocessing:filterrows:filternumericalcolumn\|Filter rows based on numerical/expression column\]\] \* \[\[perseus:user:activities:matrixprocessing:filterrows:filtertextualcolumn\|Filter rows based on text column\]\] \* \[\[perseus:user:activities:matrixprocessing:filterrows:filtervalidvaluesrows\|Filter rows based on valid values\]\] \* \[\[perseus:user:activities:matrixprocessing:filterrows:filterrandomrows\|Filter rows based on random sampling\]\]
+
+### Filter columns
+
+\[\[perseus:user:activities:matrixprocessing:filtercolumns:filtercategoricalrow\|Filter rows based on categorical row\]\] \* \[\[perseus:user:activities:matrixprocessing:filterrows:filtervalidvaluesrows\|Filter rows based on valid values\]\]
+
+\<-- --\> Quality \* \[\[perseus:user:activities:matrixprocessing:quality:createqualitymatrix\|Create quality matrix\]\] \* \[\[perseus:user:activities:matrixprocessing:quality:filterquality\|Filter quality\]\] \* \[\[perseus:user:activities:matrixprocessing:quality:converttonan\|Convert to NaN\]\]
+
+### Annot. columns
+
+\[\[perseus:user:activities:matrixprocessing:annotcolumns:addannotationtomatrix\|Add annotation\]\] \* \[\[perseus:user:activities:matrixprocessing:annotcolumns:backtobaseidentifiers\|To base identifiers\]\] \* \[\[perseus:user:activities:matrixprocessing:annotcolumns:fisherexacttestproces\|Fisher exact test\]\] \* \[\[perseus:user:activities:matrixprocessing:annotcolumns:averagecategories\|Average categories\]\] \* \[\[perseus:user:activities:matrixprocessing:annotcolumns:categorycounting\|Category counting\]\] \* \[\[perseus:user:activities:matrixprocessing:annotcolumns:onedimannotationenrichment\|1D annotation enrichment\]\] \* \[\[perseus:user:activities:matrixprocessing:annotcolumns:twodimannotationenrichment\|2D annotation enrichment\]\]
+
+### Annot. rows
+
+\[\[perseus:user:activities:matrixprocessing:annotrows:createcategoricalannotrow\|Categorical annotation rows\]\] \* \[\[perseus:user:activities:matrixprocessing:annotrows:createnumericalannotrow\|Numerical annotation rows\]\] \* \[\[perseus:user:activities:matrixprocessing:annotrows:averagegroups\|Average groups\]\] \* \[\[perseus:user:activities:matrixprocessing:annotrows:jointermsincategoricalrow\|Join terms in categorical row\]\]
+
+### Tests
+
+-   \[\[perseus:user:activities:matrixprocessing:tests:onesampletestprocessing\|One-sample tests\]\]
+-   \[\[perseus:user:activities:matrixprocessing:tests:twosampletestprocessing\|Two-samples tests\]\]
+-   \[\[perseus:user:activities:matrixprocessing:tests:multiplesampletestprocessing\|Multiple-samples tests\]\]
+-   \[\[perseus:user:activities:matrixprocessing:tests:twowayanova\|Two-way ANOVA\]\]
+
+### Imputation
+
+-   \[\[perseus:user:activities:matrixprocessing:imputation:replacemissingfromgaussian\|Replace missing values from normal distribution\]\]
+-   \[\[perseus:user:activities:matrixprocessing:imputation:replaceimputedbynan\|Replace imputed values by NaN\]\]
+-   \[\[perseus:user:activities:matrixprocessing:imputation:replacemissingbyconstant\|Replace missing values by constant\]\]
+
+### Modifications
+
+\[\[perseus:user:activities:matrixprocessing:modifications:expandsitetable\|Expand site table\]\] \* \[\[perseus:user:activities:matrixprocessing:modifications:addlinearmotifs\|Add linear motifs\]\] \* \[\[perseus:user:activities:matrixprocessing:modifications:addmodificationcounts\|Add modification counts\]\] \* \[\[perseus:user:activities:matrixprocessing:modifications:addknownsites\|Add known sites\]\] \* \[\[perseus:user:activities:matrixprocessing:modifications:kinasesubstraterelations\|Kinase-substrate relations\]\] \* \[\[perseus:user:activities:matrixprocessing:modifications:addsequencefeatures\|Add sequence features\]\] \* \[\[perseus:user:activities:matrixprocessing:modifications:addregulatorysites\|Add regulatory sites\]\] \* \[\[perseus:user:activities:matrixprocessing:modifications:shortenmotifs\|Shorten motif length\]\]
+
+### Clustering
+
+\[\[perseus:user:activities:matrixprocessing:clustering:genericclusteringproc\|Generic clustering\]\]
+
+## Analysis
+
+### Visualization
+
+\[\[perseus:user:activities:matrixanalysis:visualization:scatterplotanalysis\|Scatter plot\]\] \* \[\[perseus:user:activities:matrixanalysis:visualization:profileplot\|Profile plot\]\] \* \[\[perseus:user:activities:matrixanalysis:visualization:histogram\|Histogram\]\] \* \[\[perseus:user:activities:matrixanalysis:visualization:multiscatteranalysis\|Multi scatter plot\]\] \* \[\[perseus:user:activities:matrixanalysis:visualization:scatterplot3danalysis\|3D plot\]\]
+
+### Clustering/PCA
+
+\[\[perseus:user:activities:matrixanalysis:clusteringpca:hierarchicalcluster\|Hierarchical clustering\]\] \* \[\[perseus:user:activities:matrixanalysis:clusteringpca:principalcomponentanalysis\|Principle component analysis\]\]
+
+### Misc.
+
+\[\[perseus:user:activities:matrixanalysis:misc:volcanoplotanalysis\|Volcano plot\]\] \* \[\[perseus:user:activities:matrixanalysis:misc:selectrowsmanually\|Select rows manually\]\] \* \[\[perseus:user:activities:matrixanalysis:misc:sequencelogo\|Sequence logos\]\] \* \[\[perseus:user:activities:matrixanalysis:misc:numericvenndiagram\|Numeric venn diagram\]\]
+
+## Multi-proc.
+
+### Basic
+
+\[\[perseus:user:activities:matrixmultiprocessing:basic:matchingrowsbyname\|Matching rows by name\]\] \* \[\[perseus:user:activities:matrixmultiprocessing:basic:matchingcolumnsbyname\|Matching columns by name\]\]
+
+## Export
+
+\[\[perseus:user:activities:matrixexport:tabseparatedexport\|Generic matrix export\]\]
+
+The remainder of the window is divided into scrollable panes (@fig-persues-overview):
+
+-   The **matrix pane** (highlighted by a pink rectangle)
+-   The **workflow pane** (highlighted by a blue rectangle)
+-   The **meta-data pane** (highlighted by a green rectangle).
+
+![Perseus interface overview](Figures/interface-overview_edited.png){#fig-persues-overview}
+
+The **matrix pane** on the left, displays the matrix that is currently selected in the workflow pane including all the columns and rows of that matrix. In the bottom left corner of that pane you can find the number of rows (items) of the shown matrix.
+
+The **workflow pane** in the middle, shows all the processing steps that have been applied to your data up to here including the parameter values that have been used. The generated workflow can be rearranged using the drag and drop function. Also matrices can be renamed and highlighted using different colors by right clicking on the node of choice. At the top of this pane you can find important buttons to manipulate the workflow:
+
+-   Re-layout: Re-formats the whole workflow to the default arrangement of the workflow
+-   Stop activity: Stops a currently running process
+-   Remove selected nodes
+-   Complete selection downstream: Selects all nodes downstream starting at the picked node
+-   Complete selection upstream: Selects all nodes upstream starting at the picked node
+-   Export graphics: Exports the workflow as a graphic
+
+The **meta-data pane** on the right, gives meta-information of a selected node. If a matrix node is selected you get information about the matrix, its creator and when it was created, how many rows and columns it contains, etc. In case an activity node is selected information about the used parameters can be retrieved and if necessary be double checked.
+
+<!--The pane on the lower right contains information about the currently running processes with the number of used threads.-->
+
+In the bottom right corner of the Perseus window are a progress bar and the version number.
+
+**Comment:** In the newest Perseus version we changed the terminology of expression columns to main columns. The functionality of these columns is equivalent.
