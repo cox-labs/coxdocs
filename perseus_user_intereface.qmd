@@ -1,5 +1,5 @@
 ---
-title: "Perseus"
+title: "Perseus User Interface"
 author: "Cox Lab"
 format: 
   html:
@@ -33,7 +33,19 @@ The activities can be divided into five main categories. The icons of the catego
 
 ### Basic
 
-\* \[\[perseus:user:activities:matrixprocessing:basic:transformationproc\|Transform\]\] \* \[\[perseus:user:activities:matrixprocessing:basic:combineexpressioncolumns\|Combine expression columns\]\] \* \[\[perseus:user:activities:matrixprocessing:basic:columncorrelations\|Column correlation\]\] \* \[\[perseus:user:activities:matrixprocessing:basic:rowcorrelations\|Row correlation\]\] \* \[\[perseus:user:activities:matrixprocessing:basic:summarystatisticscolumns\|Summary statistics (columns)\]\] \* \[\[perseus:user:activities:matrixprocessing:basic:summarystatisticsrows\|Summary statistics (rows)\]\] \* \[\[perseus:user:activities:matrixprocessing:basic:quantiles\|Quantiles\]\] \* \[\[perseus:user:activities:matrixprocessing:basic:densityestimationprocessing\|Density estimation\]\] \* \[\[perseus:user:activities:matrixprocessing:basic:performancecurves\|Performance curve\]\] \* \[\[perseus:user:activities:matrixprocessing:basic:cloneprocessing\|Clone\]\] \* \[\[perseus:user:activities:matrixprocessing:outliers:significancea\|Significance A\]\] \* \[\[perseus:user:activities:matrixprocessing:outliers:significanceb\|Significance B\]\] \* \[\[perseus:user:activities:matrixprocessing:basic:addnoise\|Add noise\]\]
+* [Transform](transformationproc.html)
+* [Combine expression columns](combineexpressioncolumns.html)
+* [Column correlation](columncorrelations.html)
+* [Row correlation](rowcorrelations.html)
+* [Summary statistics (columns)](summarystatisticscolumns.html)
+* [Summary statistics (rows)](summarystatisticsrows.html)
+* [Quantiles](quantiles.html)
+* [Density estimation](densityestimationprocessing.html)
+* [Performance curve](performancecurves.html) 
+* [Clone](cloneprocessing.html) 
+* [Significance A](significancea.html) 
+* [Significance B](significanceb.html)
+* [Add noise](addnoise.html)
 
 ### Rearrange
 

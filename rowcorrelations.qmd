@@ -1,0 +1,69 @@
+---
+title: "Row Correlations"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Type
+
+Defines the measure of correlation that should be calculated between the selected rows (default: Pearson correlation). It can be selected from a list of correlation coefficients:
+
+-   Log2(Absence-presence enrichment factor)
+-   Absence-presence -Log10(p-value)
+-   Numbers of valid pairs
+-   Valid pairs percentage
+-   Pearson correlation
+-   -Log10(Pearson p-value)
+-   -Log10(Pearson p-value) \[correlation\]
+-   -Log10(Pearson p-value) \[anti-correlation\]
+-   R squared
+-   Spearman rank correlation
+-   -Log10(Spearman p-value)
+-   -Log10(Spearman p-value) \[correlation\]
+-   -Log10(Spearman p-value) \[anti-correlation\]
+-   Kendall rank correlation
+-   Distance correlation
+-   Mutual information
+-   Euclidean distance
+-   Manhattan distance
+-   Maximum distance
+
+## Select columns based on
+
+Selected categorical/text column that filters the rows of the input matrix (default: <None>). If <None> is chosen, all rows of the original matrix will become columns of the correlation matrix .
+
+## Column terms
+
+Filtering option to only include rows, which match the specified input term(s) in the selected column in "Select columns based on" (default: empty). Inclusion of multiple terms is possible in the predefined field and have to be separated by new lines. Each row is one term.
+
+## Select rows based on
+
+Selected categorical/text column that filters the rows of the input matrix (default: <None>). If <None> is chosen, all rows of the original matrix will become rows of the correlation matrix .
+
+## Row terms
+
+Filtering option to only include rows, which match the specified input term(s) in the previously selected column in "Select rows based on" (default: empty). Inclusion of multiple terms is possible in the predefined field and have to be separated by new lines. Each row is one term.
+
+# Parameter window
+
+![Perseus pop-up window: Basic -\> Row correlation](images/basic-row_correlation-edited.png)

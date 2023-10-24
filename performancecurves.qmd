@@ -1,0 +1,60 @@
+---
+title: "Performance curves"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+#Parameters
+
+## Indicated are
+
+Specification whether rows containing the "Indicator" in the categorical column specified in "In column" correspond to the class under observation or not (default: False).
+
+## In column
+
+Selected categorical column containing the class membership of each instance (row) of the class under observation (default: first categorical column in the matrix).
+
+## Indicator
+
+Rows containing the defined string are counted as true or false depending on the selection in "Indicated are" (default: $+$).
+
+## Scores
+
+Selected expression columns containing the scores by which the rows are ranked to calculate the specified quantities (default: first expression column of the matrix is selected).
+
+## Large values are good
+
+If checked the larger the score value the better (default: checked). Otherwise the lower the value the better.
+
+## Display quantity
+
+Selected quantities that will be calculated (default: no quantities are selected). The quantities can be selected from a predefined list:
+
+-   $TP/(TP+FP)$ (Precision)
+-   $TP/(TP+FN)$ (Recall)
+-   $FP/TP$
+-   $TP/NP$
+-   $TP/(TP+FN)$ (Sensitivity)
+-   $TN/(TN+FP)$ (Specificity)
+
+# Parameter window
+
+![Perseus pop-up window: Basic -\> Performance curve](images/basic-performance_curves-edited.png)

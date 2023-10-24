@@ -1,0 +1,60 @@
+---
+title: "Column Correlations"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+{{page\>perseus:noedit:user:activities:matrixprocessing:basic:columncorrelations}} <!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+
+# Parameters
+
+## Type
+
+Defines the measure of correlation that should be calculated between the selected columns (default: Pearson correlation). It can be selected from a list of correlation coefficients:
+
+-   Log2(Absence-presence enrichment factor)
+-   Absence-presence -Log10(p-value)
+-   Numbers of valid pairs
+-   Valid pairs percentage
+-   Pearson correlation
+-   -Log10(Pearson p-value)
+-   -Log10(Pearson p-value) \[correlation\]
+-   -Log10(Pearson p-value) \[anti-correlation\]
+-   R squared
+-   Spearman rank correlation
+-   -Log10(Spearman p-value)
+-   -Log10(Spearman p-value) \[correlation\]
+-   -Log10(Spearman p-value) \[anti-correlation\]
+-   Kendall rank correlation
+-   Distance correlation
+-   Mutual information
+-   Euclidean distance
+-   Manhattan distance
+-   Maximum distance
+
+## Rows
+
+Selected expression/numerical columns that will be the rows of the generated correlation matrix (default: all expression columns are selected).
+
+## Columns
+
+Selected expression/numerical columns that will be the columns of the generated correlation matrix (default: all expression columns are selected).
+
+# Parameter window
+
+![Perseus pop-up window: Basic -\> Column correlation](images/basic-column_correlation-edited.png)

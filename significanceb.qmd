@@ -1,0 +1,53 @@
+---
+title: "Significance B"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Ratio columns
+
+Selected expression columns containing the ratios for which "Significance B" should be calculated (default: no columns are selected).
+
+**Hint:** The number of selected ratio columns must be the same as the number of selected intensity columns.
+
+## Intensity columns
+
+Selected expression/numerical columns containing the intensities for which "Significance B" should be calculated (default: no columns are selected).
+
+**Hint:** The number of selected intensity columns must be the same as the number of selected ratio columns.
+
+## Side
+
+To apply a two-sided test, where the null hypothesis can be rejected regardless of the direction of the effect "both" has to be selected (default). "left" and "right" are the respective one-sided tests.
+
+### Use for truncation
+
+The truncation can be based on p-values or the Benjamini-Hochberg correction for multiple hypothesis testing (default: Benjamini-Hochberg FDR). Rows with a test result below a specified value (parameter below) are reported as significant.
+
+## Threshold value
+
+Based on a specified threshold a specific row is reported as significant (default: 0.05). Depending on the chosen truncation score this threshold value is applied to the p-value or to the Benjamini-Hochberg FDR.
+
+# Parameter window
+
+![Perseus pop-up window: Basic -\> Significance B](images/basic-significance_b-edited.png)

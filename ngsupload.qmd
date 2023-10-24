@@ -124,9 +124,24 @@ Specifies the number of used threads for uploading NGS data.
 
 ![Comparing HTSeq-counts against Perseus](images/htseqvsperseus.multiscatter.png){#fig-htseqvsperseus}
 
-HTSeq-count[@anders2014] is part of the HTSeq suite, a python library to facilitate and represent data, such as genomic coordinates, sequences, sequencing reads, alignments, gene model information and variant calls. `htseq-count` can be used to pre-processes RNA-Seq data for differential expression analysis by counting the overlap of reads with genes.
+`HTSeq-count` [@anders2014] is part of the HTSeq suite, a python library to facilitate and represent data, such as genomic coordinates, sequences, sequencing reads, alignments, gene model information and variant calls. `htseq-count` can be used to pre-processes RNA-Seq data for differential expression analysis by counting the overlap of reads with genes. To recreate the plot, one can download the data table below [@downloadthis]
 
-{{:perseus:user:activities:matrixupload:htseqvsperseus.table.rar\|}}
+```{r}
+#| echo: false
+#| eval: true
+
+# remotes::install_github("fmmattioni/downloadthis")
+library(downloadthis)
+download_file(
+  path = "htseqvsperseus.table.rar",
+  output_name = "HTSeq vs. Persues Table",
+  button_label = "Download data table",
+  button_type = "info",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  self_contained = FALSE
+)
+```
 
 
 ```{=html}

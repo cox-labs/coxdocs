@@ -1,0 +1,45 @@
+---
+title: "Combine Expression Columns"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+
+# Parameters
+
+## Operation
+
+Specifies the operation (default: $x-y$), how a pair of columns should be combined into a single column. Numbers with $.$ as decimal point, $+$, $-$, $*$, $/$ and \^ as well as scientific notation (e.g. $5.4e{-12}$) can be used. A set of predefined functions are also available, whose argument has to be enclosed by round brackets, e.g. $sin(2*x-y)$.
+
+## x
+
+Selected expression columns that are the first partners of pairs of columns (default: no expression columns are selected). The number of selected columns in the "x" and "y" field must be the same.
+
+## y
+
+Selected expression columns that are the second partners of pairs of columns (default: no expression columns are selected). The number of selected columns in the "x" and "y" field must be the same.
+
+## Keep original columns
+
+If checked the original columns will be retained in the output matrix (default: checked).
+
+# Parameter window
+
+![Perseus pop-up window: Basic -\> Combine expression columns ](images/basic-combine_expression_columns-edited.png)
+

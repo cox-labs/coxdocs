@@ -1,0 +1,37 @@
+---
+title: "Transformation processes"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Transformation
+
+The specified transformation formula (default: $log_2(x)$) that should be applied to all cells in the selected columns. The variable name is $x$. Numbers with $.$ are reagrded decimal point, $+$, $-$, $*$, $/$ and \^ can be used as well as scientific notation (e.g. $2.9e^{-15}$) is supported. Predefined functions can also be used, whose argument has to be enclosed by round brackets, e.g. $sin(2*x)$.
+
+## Columns
+
+Selected expression and/or numerical columns, where the transformation should be applied (default: all columns are selected).
+
+#Parameter window
+
+![Perseus pop-up window: Basic -> Transform](images/basic-transform-edited.png)

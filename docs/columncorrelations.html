@@ -9,7 +9,7 @@
 <meta name="author" content="Cox Lab">
 <meta name="dcterms.date" content="2023-10-24">
 
-<title>Glossary</title>
+<title>Column Correlations</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,26 +22,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -85,8 +66,6 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
-<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
-<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="styles.css">
@@ -159,14 +138,26 @@ div.csl-indent {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="-1">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#parameters" id="toc-parameters" class="nav-link active" data-scroll-target="#parameters"><span class="header-section-number">1</span> Parameters</a>
+  <ul>
+  <li><a href="#type" id="toc-type" class="nav-link" data-scroll-target="#type"><span class="header-section-number">1.1</span> Type</a></li>
+  <li><a href="#rows" id="toc-rows" class="nav-link" data-scroll-target="#rows"><span class="header-section-number">1.2</span> Rows</a></li>
+  <li><a href="#columns" id="toc-columns" class="nav-link" data-scroll-target="#columns"><span class="header-section-number">1.3</span> Columns</a></li>
+  </ul></li>
+  <li><a href="#parameter-window" id="toc-parameter-window" class="nav-link" data-scroll-target="#parameter-window"><span class="header-section-number">2</span> Parameter window</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Glossary</h1>
+<h1 class="title">Column Correlations</h1>
 </div>
 
 
@@ -194,209 +185,62 @@ div.csl-indent {
 
 </header>
 
-<p>===== A =====</p>
-<p>===== B =====</p>
-<p>===== C =====</p>
-<p>===== D =====</p>
-<p>===== E =====</p>
-<p>===== F =====</p>
-<div class="cell">
-<div class="cell-output-display">
-<table class="table table-sm table-striped small" data-quarto-postprocess="true">
-<thead>
-<tr class="header">
-<th style="text-align: left;" data-quarto-table-cell-role="th">term</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">definition</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">FDR</td>
-<td style="text-align: left;">False Discovery Rate</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">FTICR</td>
-<td style="text-align: left;">Fourier transform ion cyclotron resonance mass spectrometry</td>
-</tr>
-</tbody>
-</table>
-
-
+<p>{{page&gt;perseus:noedit:user:activities:matrixprocessing:basic:columncorrelations}} <!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! --></p>
+<section id="parameters" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Parameters</h1>
+<section id="type" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="type"><span class="header-section-number">1.1</span> Type</h2>
+<p>Defines the measure of correlation that should be calculated between the selected columns (default: Pearson correlation). It can be selected from a list of correlation coefficients:</p>
+<ul>
+<li>Log2(Absence-presence enrichment factor)</li>
+<li>Absence-presence -Log10(p-value)</li>
+<li>Numbers of valid pairs</li>
+<li>Valid pairs percentage</li>
+<li>Pearson correlation</li>
+<li>-Log10(Pearson p-value)</li>
+<li>-Log10(Pearson p-value) [correlation]</li>
+<li>-Log10(Pearson p-value) [anti-correlation]</li>
+<li>R squared</li>
+<li>Spearman rank correlation</li>
+<li>-Log10(Spearman p-value)</li>
+<li>-Log10(Spearman p-value) [correlation]</li>
+<li>-Log10(Spearman p-value) [anti-correlation]</li>
+<li>Kendall rank correlation</li>
+<li>Distance correlation</li>
+<li>Mutual information</li>
+<li>Euclidean distance</li>
+<li>Manhattan distance</li>
+<li>Maximum distance</li>
+</ul>
+</section>
+<section id="rows" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="rows"><span class="header-section-number">1.2</span> Rows</h2>
+<p>Selected expression/numerical columns that will be the rows of the generated correlation matrix (default: all expression columns are selected).</p>
+</section>
+<section id="columns" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="columns"><span class="header-section-number">1.3</span> Columns</h2>
+<p>Selected expression/numerical columns that will be the columns of the generated correlation matrix (default: all expression columns are selected).</p>
+</section>
+</section>
+<section id="parameter-window" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Parameter window</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/basic-column_correlation-edited.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Perseus pop-up window: Basic -&gt; Column correlation</figcaption>
+</figure>
 </div>
-</div>
-<p>===== G =====</p>
-<p>===== H =====</p>
-<p>===== I =====</p>
-<div class="cell">
-<div class="cell-output-display">
-<table class="table table-sm table-striped small" data-quarto-postprocess="true">
-<thead>
-<tr class="header">
-<th style="text-align: left;" data-quarto-table-cell-role="th">term</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">definition</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">iBAQ</td>
-<td style="text-align: left;">Intensity Based Absolute Quantification</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">ICAT</td>
-<td style="text-align: left;">Isotope-coded affinity tag</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">iTRAQ</td>
-<td style="text-align: left;">Isobaric tag for relative and absolute quantitation</td>
-</tr>
-</tbody>
-</table>
 
 
-</div>
-</div>
-<p>===== J =====</p>
-<p>===== K =====</p>
-<p>===== L =====</p>
-<div class="cell">
-<div class="cell-output-display">
-<table class="table table-sm table-striped small" data-quarto-postprocess="true">
-<thead>
-<tr class="header">
-<th style="text-align: left;" data-quarto-table-cell-role="th">term</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">definition</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">LFQ</td>
-<td style="text-align: left;">Label-free quantification</td>
-</tr>
-</tbody>
-</table>
+</section>
 
-
-</div>
-</div>
-<p>===== M =====</p>
-<div class="cell">
-<div class="cell-output-display">
-<table class="table table-sm table-striped small" data-quarto-postprocess="true">
-<thead>
-<tr class="header">
-<th style="text-align: left;" data-quarto-table-cell-role="th">term</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">definition</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">MALDI</td>
-<td style="text-align: left;">Matrix-assisted laser desorption/ionization</td>
-</tr>
-</tbody>
-</table>
-
-
-</div>
-</div>
-<p>===== N =====</p>
-<p>===== O =====</p>
-<p>===== P =====</p>
-<div class="cell">
-<div class="cell-output-display">
-<table class="table table-sm table-striped small" data-quarto-postprocess="true">
-<thead>
-<tr class="header">
-<th style="text-align: left;" data-quarto-table-cell-role="th">term</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">definition</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">PAGE</td>
-<td style="text-align: left;">Polyacrylamide gel electrophoresis</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">PEP</td>
-<td style="text-align: left;">Posterior Error Probability</td>
-</tr>
-</tbody>
-</table>
-
-
-</div>
-</div>
-<p>===== Q =====</p>
-<p>===== R =====</p>
-<p>===== S =====</p>
-<div class="cell">
-<div class="cell-output-display">
-<table class="table table-sm table-striped small" data-quarto-postprocess="true">
-<thead>
-<tr class="header">
-<th style="text-align: left;" data-quarto-table-cell-role="th">term</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">definition</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">SDS</td>
-<td style="text-align: left;">sodium dodecyl sulfate</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">SILAC</td>
-<td style="text-align: left;">stable isotope labeling by/with amino acids in cell culture</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">SWIFT</td>
-<td style="text-align: left;">Stored waveform inverse Fourier transform</td>
-</tr>
-</tbody>
-</table>
-
-
-</div>
-</div>
-<p>===== T =====</p>
-<div class="cell">
-<div class="cell-output-display">
-<table class="table table-sm table-striped small" data-quarto-postprocess="true">
-<thead>
-<tr class="header">
-<th style="text-align: left;" data-quarto-table-cell-role="th">term</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">definition</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">TMT</td>
-<td style="text-align: left;">Tandem mass tag</td>
-</tr>
-</tbody>
-</table>
-
-
-</div>
-</div>
-<p>===== U =====</p>
-<p>===== V =====</p>
-<p>===== W =====</p>
-<p>===== X =====</p>
-<p>===== Y =====</p>
-<p>===== Z =====</p>
-<hr>
-<p>We welcome suggestions for additional entries to this glossary, or corrections to existing entries. For technical reasons, we have not made this page editable by users. Please use the following <a href="contact.html">contact</a> possibilities instead.</p>
-<hr>
-<p>The glossary was created using the <a href="https://debruine.github.io/glossary/">glossary</a> package<span class="citation" data-cites="glossary"><sup><a href="#ref-glossary" role="doc-biblioref">1</a></sup></span></p>
-
-
-
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-line-spacing="2" role="list">
-<div id="ref-glossary" class="csl-entry" role="listitem">
-<div class="csl-left-margin">1. </div><div class="csl-right-inline">DeBruine, L. <em>Glossary: Glossaries for markdown and quarto documents</em>. (2023).</div>
-</div>
-</div></section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

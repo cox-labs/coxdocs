@@ -1,0 +1,51 @@
+---
+title: "Density Estimation Processing"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## x
+
+Selected expression columns for the first dimension of the generated density map(s) (default: first expression column in the matrix). Multiple columns can be chosen for each dimension leading to the creation of multiple density maps, but the number of columns have to be the same in both dimensions.
+
+## y
+
+Selected expression columns for the second dimension of the generated density map(s) (default: second expression column in the matrix). Multiple columns can be chosen for each dimension leading to the creation of multiple density maps, but the number of columns have to be the same in both dimensions.
+
+## Number of points
+
+The specified number of points defines the resolution of the density map (default: 300). It reflects the number of pixel per dimension.
+
+## Distribution type
+
+Each data point is smoothed out by a suitable Gaussian kernel, which is defined in the "Distribution type" (default: $P(x,y)$. The function can be selected out of a predefined list:
+
+-   $P(x,y)$
+-   $P(y|x)$
+-   $P(x|y)$
+-   $P(x,y)/(P(x)*P(y))$
+
+# Parameter window
+
+![Perseus pop-up window: Basic -\> Density estimation](images/basic-density_estimation-edited.png)
+

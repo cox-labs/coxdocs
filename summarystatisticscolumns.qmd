@@ -1,0 +1,53 @@
+---
+title: "Summary statistics (columns)"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+#Parameters
+
+## Columns
+
+Selected expression/numerical columns for which the later defined quantities should be calculated.
+
+## Calculate
+
+List of quantities that are calculated for the selected columns (default: all of the below listed quantities are selected). The available quantities are:
+
+-   Sum
+-   Mean
+-   Turkey biweight
+-   Standard deviation
+-   Coefficient of variation
+-   Median absolute deviation
+-   Minimum
+-   Maximum
+-   Range
+-   Valid values
+-   Inter-quartile range
+-   1st quartile
+-   3rd quartile
+-   Skewness
+-   Kurtosis
+
+# Parameter window
+
+![Perseus pop-up window: Basic -\> Summary statistics (columns)](images/basic-summary_statistics_columns-edited.png)
