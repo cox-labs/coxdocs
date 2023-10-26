@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Cox Lab">
-<meta name="dcterms.date" content="2023-10-24">
+<meta name="dcterms.date" content="2023-10-26">
 
 <title>Summary statistics (rows)</title>
 <style>
@@ -142,13 +142,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#expression-column-selection" id="toc-expression-column-selection" class="nav-link active" data-scroll-target="#expression-column-selection"><span class="header-section-number">0.1</span> Expression column selection</a>
+  <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general"><span class="header-section-number">1</span> General</a></li>
+  <li><a href="#brief-description" id="toc-brief-description" class="nav-link" data-scroll-target="#brief-description"><span class="header-section-number">2</span> Brief description</a></li>
+  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters"><span class="header-section-number">3</span> Parameters</a>
   <ul>
-  <li><a href="#columns" id="toc-columns" class="nav-link" data-scroll-target="#columns"><span class="header-section-number">0.1.1</span> Columns</a></li>
-  <li><a href="#group" id="toc-group" class="nav-link" data-scroll-target="#group"><span class="header-section-number">0.1.2</span> Group</a></li>
+  <li><a href="#expression-column-selection" id="toc-expression-column-selection" class="nav-link" data-scroll-target="#expression-column-selection"><span class="header-section-number">3.1</span> Expression column selection</a>
+  <ul class="collapse">
+  <li><a href="#columns" id="toc-columns" class="nav-link" data-scroll-target="#columns"><span class="header-section-number">3.1.1</span> Columns</a></li>
+  <li><a href="#group" id="toc-group" class="nav-link" data-scroll-target="#group"><span class="header-section-number">3.1.2</span> Group</a></li>
   </ul></li>
-  <li><a href="#calculate" id="toc-calculate" class="nav-link" data-scroll-target="#calculate"><span class="header-section-number">0.2</span> Calculate</a></li>
-  <li><a href="#parameter-window" id="toc-parameter-window" class="nav-link" data-scroll-target="#parameter-window"><span class="header-section-number">1</span> Parameter window</a></li>
+  <li><a href="#calculate" id="toc-calculate" class="nav-link" data-scroll-target="#calculate"><span class="header-section-number">3.2</span> Calculate</a></li>
+  </ul></li>
+  <li><a href="#parameter-window" id="toc-parameter-window" class="nav-link" data-scroll-target="#parameter-window"><span class="header-section-number">4</span> Parameter window</a></li>
   </ul>
 </nav>
     </div>
@@ -174,7 +179,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 24, 2023</p>
+      <p class="date">October 26, 2023</p>
     </div>
   </div>
   
@@ -185,6 +190,18 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="general" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> General</h1>
+<ul>
+<li><strong>Type:</strong> - Matrix Processing</li>
+<li><strong>Heading:</strong> - Basic (Processing)</li>
+<li><strong>Source code:</strong> <a href="https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Basic/SummaryStatisticsRows.cs">SummaryStatisticsRows.cs</a></li>
+</ul>
+</section>
+<section id="brief-description" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Brief description</h1>
+<p>A set of simple descriptive quantities are calculated that help summarizing the expression data in each row.</p>
+<p>Output: For each selected summary statistic, a numerical column is added containing the specific quantitiy for each row of expression values. <code>NaN</code> and <code>Infinity</code> values are ignored for all calculations.</p>
 <!-- This comment and the line above it must be preserved when editing this file!
 The recommended sections are these, but they may be changed on a case by case basis.
 ===== Detailed description =====
@@ -192,26 +209,28 @@ The recommended sections are these, but they may be changed on a case by case ba
 ===== Theoretical background =====
 ===== Examples =====
 Make changes only below this line! -->
-<p>#Parameters</p>
-<section id="expression-column-selection" class="level2" data-number="0.1">
-<h2 data-number="0.1" class="anchored" data-anchor-id="expression-column-selection"><span class="header-section-number">0.1</span> Expression column selection</h2>
+</section>
+<section id="parameters" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Parameters</h1>
+<section id="expression-column-selection" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="expression-column-selection"><span class="header-section-number">3.1</span> Expression column selection</h2>
 <p>Selected expression columns that are used to summarize each row (default: use all expression columns). The way of choosing the expression columns can be specified by selecting one of the three options:</p>
 <ul>
 <li>Use all expression columns</li>
 <li>Select columns</li>
 <li>Within groups</li>
 </ul>
-<section id="columns" class="level3" data-number="0.1.1">
-<h3 data-number="0.1.1" class="anchored" data-anchor-id="columns"><span class="header-section-number">0.1.1</span> Columns</h3>
+<section id="columns" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="columns"><span class="header-section-number">3.1.1</span> Columns</h3>
 <p>This parameter is just relevant, if “Expression column selection” is set to “Select columns”. Manually selected expression columns, whose values in each row should be used for the calculation of the defined operations (default: all expression columns are selected).</p>
 </section>
-<section id="group" class="level3" data-number="0.1.2">
-<h3 data-number="0.1.2" class="anchored" data-anchor-id="group"><span class="header-section-number">0.1.2</span> Group</h3>
+<section id="group" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="group"><span class="header-section-number">3.1.2</span> Group</h3>
 <p>This parameter is just relevant, if “Expression column selection” is set to “Within groups”. Selected categorical row that defines which values in a row are grouped together to calculate the specified summary values (default: first categorical row in the matrix).</p>
 </section>
 </section>
-<section id="calculate" class="level2" data-number="0.2">
-<h2 data-number="0.2" class="anchored" data-anchor-id="calculate"><span class="header-section-number">0.2</span> Calculate</h2>
+<section id="calculate" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="calculate"><span class="header-section-number">3.2</span> Calculate</h2>
 <p>List of quantities that are calculated for the selected columns (default: all of the below listed quantities are selected). The available quantities are:</p>
 <ul>
 <li>Sum</li>
@@ -231,8 +250,9 @@ Make changes only below this line! -->
 <li>Kurtosis</li>
 </ul>
 </section>
-<section id="parameter-window" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Parameter window</h1>
+</section>
+<section id="parameter-window" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Parameter window</h1>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/basic-summary_statistics_rows-edited.png" class="img-fluid figure-img"></p>

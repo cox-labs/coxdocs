@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Cox Lab">
-<meta name="dcterms.date" content="2023-10-24">
+<meta name="dcterms.date" content="2023-10-26">
 
 <title>Significance A</title>
 <style>
@@ -22,7 +22,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -142,11 +161,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#columns" id="toc-columns" class="nav-link active" data-scroll-target="#columns"><span class="header-section-number">0.1</span> Columns</a></li>
-  <li><a href="#side" id="toc-side" class="nav-link" data-scroll-target="#side"><span class="header-section-number">0.2</span> Side</a></li>
-  <li><a href="#use-for-truncation" id="toc-use-for-truncation" class="nav-link" data-scroll-target="#use-for-truncation"><span class="header-section-number">0.3</span> Use for truncation</a></li>
-  <li><a href="#threshold-value" id="toc-threshold-value" class="nav-link" data-scroll-target="#threshold-value"><span class="header-section-number">0.4</span> Threshold value</a></li>
-  <li><a href="#parameter-window" id="toc-parameter-window" class="nav-link" data-scroll-target="#parameter-window"><span class="header-section-number">1</span> Parameter window</a></li>
+  <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general"><span class="header-section-number">1</span> General</a></li>
+  <li><a href="#brief-description" id="toc-brief-description" class="nav-link" data-scroll-target="#brief-description"><span class="header-section-number">2</span> Brief description</a></li>
+  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters"><span class="header-section-number">3</span> Parameters</a>
+  <ul>
+  <li><a href="#columns" id="toc-columns" class="nav-link" data-scroll-target="#columns"><span class="header-section-number">3.1</span> Columns</a></li>
+  <li><a href="#side" id="toc-side" class="nav-link" data-scroll-target="#side"><span class="header-section-number">3.2</span> Side</a></li>
+  <li><a href="#use-for-truncation" id="toc-use-for-truncation" class="nav-link" data-scroll-target="#use-for-truncation"><span class="header-section-number">3.3</span> Use for truncation</a></li>
+  <li><a href="#threshold-value" id="toc-threshold-value" class="nav-link" data-scroll-target="#threshold-value"><span class="header-section-number">3.4</span> Threshold value</a></li>
+  </ul></li>
+  <li><a href="#parameter-window" id="toc-parameter-window" class="nav-link" data-scroll-target="#parameter-window"><span class="header-section-number">4</span> Parameter window</a></li>
   </ul>
 </nav>
     </div>
@@ -172,7 +196,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 24, 2023</p>
+      <p class="date">October 26, 2023</p>
     </div>
   </div>
   
@@ -183,6 +207,18 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="general" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> General</h1>
+<ul>
+<li><strong>Type:</strong> - Matrix Processing</li>
+<li><strong>Heading:</strong> - Outliers</li>
+<li><strong>Source code:</strong> <a href="https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Significance/SignificanceA.cs">SignificanceA.cs</a></li>
+</ul>
+</section>
+<section id="brief-description" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Brief description</h1>
+<p>Determines which values are significant outliers relative to a certain population. For details see Cox and Mann <span class="citation" data-cites="cox2008">(<a href="#ref-cox2008" role="doc-biblioref">Cox and Mann 2008</a>)</span></p>
+<p>Output: A numerical column is added containing the significance A value. Furthermore, a categorical column is added indicating by ‘+’ if a row is significant.</p>
 <!-- This comment and the line above it must be preserved when editing this file!
 The recommended sections are these, but they may be changed on a case by case basis.
 ===== Detailed description =====
@@ -190,25 +226,28 @@ The recommended sections are these, but they may be changed on a case by case ba
 ===== Theoretical background =====
 ===== Examples =====
 Make changes only below this line! -->
-<p>#Parameters</p>
-<section id="columns" class="level2" data-number="0.1">
-<h2 data-number="0.1" class="anchored" data-anchor-id="columns"><span class="header-section-number">0.1</span> Columns</h2>
+</section>
+<section id="parameters" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Parameters</h1>
+<section id="columns" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="columns"><span class="header-section-number">3.1</span> Columns</h2>
 <p>Selected expression columns for which “Significance A” should be calculated (default: no expression columns are selected).</p>
 </section>
-<section id="side" class="level2" data-number="0.2">
-<h2 data-number="0.2" class="anchored" data-anchor-id="side"><span class="header-section-number">0.2</span> Side</h2>
+<section id="side" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="side"><span class="header-section-number">3.2</span> Side</h2>
 <p>To apply a two-sided test, where the null hypothesis can be rejected regardless of the direction of the effect “both” has to be selected (default). “left” and “right” are the respective one-sided tests.</p>
 </section>
-<section id="use-for-truncation" class="level2" data-number="0.3">
-<h2 data-number="0.3" class="anchored" data-anchor-id="use-for-truncation"><span class="header-section-number">0.3</span> Use for truncation</h2>
+<section id="use-for-truncation" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="use-for-truncation"><span class="header-section-number">3.3</span> Use for truncation</h2>
 <p>The truncation can be based on p-values or the Benjamini-Hochberg correction for multiple hypothesis testing (default: Benjamini-Hochberg FDR). Rows with a test result below a specified value (parameter below) are reported as significant.</p>
 </section>
-<section id="threshold-value" class="level2" data-number="0.4">
-<h2 data-number="0.4" class="anchored" data-anchor-id="threshold-value"><span class="header-section-number">0.4</span> Threshold value</h2>
+<section id="threshold-value" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="threshold-value"><span class="header-section-number">3.4</span> Threshold value</h2>
 <p>Based on a specified threshold a specific row is reported as significant (default: 0.05). Depending on the chosen truncation score this threshold value is applied to the p-value or to the Benjamini-Hochberg FDR.</p>
 </section>
-<section id="parameter-window" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Parameter window</h1>
+</section>
+<section id="parameter-window" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Parameter window</h1>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/basic-significance_a-edited.png" class="img-fluid figure-img"></p>
@@ -217,9 +256,14 @@ Make changes only below this line! -->
 </div>
 
 
+
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-cox2008" class="csl-entry" role="listitem">
+Cox, Jürgen, and Matthias Mann. 2008. <span>“MaxQuant Enables High Peptide Identification Rates, Individualized p.p.b.-Range Mass Accuracies and Proteome-Wide Protein Quantification.”</span> <em>Nature Biotechnology</em> 26 (12): 1367–72. <a href="https://doi.org/10.1038/nbt.1511">https://doi.org/10.1038/nbt.1511</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

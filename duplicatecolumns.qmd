@@ -1,0 +1,46 @@
+---
+title: "Duplicate Columns"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+
+# General
+
+  * **Type:** - Matrix Processing
+  * **Heading:** - Rearrange
+  * **Source code:** [DuplicateColumns.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Rearrange/DuplicateColumns.cs)
+
+# Brief description
+
+Columns of all types can be duplicated.
+
+Output: Same matrix but with duplicated columns added.
+
+
+# Parameters
+
+The selected expression/numerical/multi numerical/categorical/text columns will be duplicated and included in the new generated matrix at the end of each group of column types (default: no columns are selected). The name of the new columns is the old column name with the string "\_1" attached to the end.
+
+# Parameter window
+
+![Rearrange duplicate columns](images/rearrange-duplicate_columns-edited.png)
+

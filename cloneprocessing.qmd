@@ -13,6 +13,18 @@ date: today
 bibliography: references.bib
 ---
 
+# General =====
+
+  * **Type:** - Matrix Processing
+  * **Heading:** - Basic (Processing)
+  * **Source code:** [CloneProcessing.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Basic/CloneProcessing.cs)
+
+# Brief description
+
+A copy of the input matrix is generated.
+
+Output: Same as input matrix.
+
 
 <!-- This comment and the line above it must be preserved when editing this file!
 The recommended sections are these, but they may be changed on a case by case basis.

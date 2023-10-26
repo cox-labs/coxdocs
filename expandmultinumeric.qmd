@@ -1,0 +1,53 @@
+---
+title: "Expand Multi Numeric and string columns"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+
+# General
+
+  * **Type:** - Matrix Processing
+  * **Heading:** - Rearrange
+  * **Source code:** [ExpandMultiNumeric.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Rearrange/ExpandMultiNumeric.cs)
+
+# Brief description
+
+Distribute multiple values per cell in a multi-numeric column over multiple rows. For each row in the original matrix there will be as many rows created as there are numbers in the cell of the multi-numeric column. 
+If multiple multi-numeric columns are selected they have to have the same number of values in every row. Elements of text columns, if one is selected, are interpreted as semicolon-separated. They also have to have the same number of semicolon-separated elements as there are values in the cell(s) of the multi-numeric columns(s).
+
+Output: Columns are the same. The number of rows increases due to the expansion.
+
+
+# Parameters
+
+## Multi-numeric columns
+
+Selected multi-numeric columns that should be expanded using the procedure mentioned in the description section above (default: no columns are selected).
+
+## Text columns
+
+Selected text columns that should be expanded using the procedure mentioned in the description section above (default: no columns are selected).
+
+# Parameter window
+
+![Expand multi numeric and string columns](images/rearrange-expand_multi-numeric_and_text_columns-edited.png)
+

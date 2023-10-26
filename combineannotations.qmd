@@ -1,0 +1,59 @@
+---
+title: "Combine annotations"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+
+# General
+
+  * **Type:** - Matrix Processing
+  * **Heading:** - Rearrange
+  * **Source code:** [CombineAnnotations.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Basic/CombineAnnotations.cs)
+
+===== Brief description =====
+
+Search multiple categorical or string columns for the occurrence of a set of terms.
+
+Output: A new categorical column is generated indicating the presence of any of these terms.
+
+
+# Parameters
+
+## Categories
+
+Select categorical and/or text columns that should be searched for the specified "Search terms" (default: no columns selected).
+
+## Search terms
+
+Specified terms will be searched in the previously defined categorical and/or text columns (default: empty). Multiple terms are possible and must be separated by new lines, so each line in the "Search terms" field will be searched in each column. In the newly generated categorical column rows containing one of the search terms in one of the selected columns are indicated by a "$+$".
+
+## Name of new column
+
+The name of the new generated categorical column containing a "$+$" if one one "Search terms" matches one of the selected columns.
+
+## Inverse
+
+If checked, rows not matching the "Search terms" are indicated by a "$+$" (default: unchecked).
+
+# Parameter window
+
+![](images/rearrange-combine_annotations-edited.png)

@@ -13,6 +13,19 @@ date: today
 bibliography: references.bib
 ---
 
+# General
+
+  * **Type:** - Matrix Processing
+  * **Heading:** - Basic (Processing)
+  * **Source code:** not public.
+
+===== Brief description =====
+
+All values in the specified columns are transformed according to the given formula.
+
+Output: The output matrix has the same structure as the input matrix. Values in the selected columns will be transformed.
+
+
 ```{=html}
 <!-- This comment and the line above it must be preserved when editing this file!
 The recommended sections are these, but they may be changed on a case by case basis.

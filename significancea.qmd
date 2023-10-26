@@ -13,6 +13,20 @@ date: today
 bibliography: references.bib
 ---
 
+# General
+
+  * **Type:** - Matrix Processing
+  * **Heading:** - Outliers
+  * **Source code:** [SignificanceA.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Significance/SignificanceA.cs)
+
+# Brief description
+
+Determines which values are significant outliers relative to a certain population. For details see Cox and Mann [@cox2008]
+
+
+Output: A numerical column is added containing the significance A value. Furthermore, a categorical column is added indicating by '+' if a row is significant.
+
+
 ```{=html}
 <!-- This comment and the line above it must be preserved when editing this file!
 The recommended sections are these, but they may be changed on a case by case basis.
@@ -22,7 +36,7 @@ The recommended sections are these, but they may be changed on a case by case ba
 ===== Examples =====
 Make changes only below this line! -->
 ```
-#Parameters
+# Parameters
 
 ## Columns
 

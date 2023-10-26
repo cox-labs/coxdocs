@@ -1,0 +1,76 @@
+---
+title: "Process text column"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+===== General =====
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Rearrange
+-   **Source code:** [ProcessTextColumns.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Rearrange/ProcessTextColumns.cs)
+
+===== Brief description =====
+
+Values in string columns can be manipulated according to a regular expression.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Columns
+
+Selected text columns, whose values should be manipulated by the defined regular expression (default: no columns are selected).
+
+## Regular expression
+
+Specified regular expression that is applied to the selected text columns (default: "\^(\[\^;\]+)").
+
+A regular expression is a sequence of characters that forms a search pattern with a special syntax. A good general introduction can be found, as always, on [Wikipedia](http://en.wikipedia.org/wiki/Regular_expression). If you already know generally how regular expressions work, you may only need to glance at [the quick reference](http://msdn.microsoft.com/en-us/library/az24scfc.aspx) or at [an even quicker one](http://www.mikesdotnetting.com/Article/46/CSharp-Regular-Expressions-Cheat-Sheet).
+
+Here are a few examples:
+
+| Regular expression                             | Effect|
+|--------------------------|----------------------------------------------|
+| \^(\[\^;\]+)                                   | Select all the characters from the beginning of the line, up to but not including the first semicolon. This is the default.                                                                |
+| TAG *=* (\[\^,; \]\*)                          | Look for the first instance of "TAG =", with any amount of whitespace (or none) around the equal sign, and return what follows after the whitespace until a comma or semicolon is reached. |
+| (\[ACTG\]+)                                    | return the first string consisting only of the letters A, C, T, and G.                                                                                                                     |
+| (20\[01\]\[0-9\]-\[01\]\[0-9\]-\[0-3\]\[0-9\]) | Select a date between 2000 and 2019 of the form 2014-08-19.                                                                                                                                |
+
+## Replacement string
+
+You can provide a replacement string here for more flexibility. Leave empty if unsure.
+
+Examples:
+
+| Regular expression | Effect|
+|--------------|----------------------------------------------|
+| \$1                | Replace the original string with the first capture group, i.e. the part of the original string inside the first parentheses ''(..)''. |
+
+## Keep original columns
+
+If checked, the original columns are retained unchanged, and new columns are appended to hold the results (default: unchecked). The name of a new column is created by appending underscores to the name of the original column until it is unique. If this box is not checked, then the strings in the original columns are overwritten by the results.
+
+## Strings separated by semicolons are independent
+
+If checked, each string is split into substrings at the semicolons, and the regular expression is applied independently to each substring (default: unchecked). The results are separated by semicolons and concatenated into a single string, which is returned. This is useful for columns where any row may contain multiple entries. If not checked, the string is evaluated as a whole and the only first match returned.
+
+# Parameter window
+
+![Process text column](images/rearrange-process_text_column-edited.png)

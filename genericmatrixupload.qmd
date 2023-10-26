@@ -13,6 +13,18 @@ date: today
 bibliography: references.bib
 ---
 
+# General
+
+  * **Type:** - Matrix Upload
+  * **Source code:** [GenericMatrixUpload.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Load/GenericMatrixUpload.cs)
+
+# Brief description
+
+Load data from a tab-separated file. The first row should contain the column names, also separated by tab characters. 
+
+All following rows contain the tab-separated values. Such a file can for instance be generated from an excel sheet by using the export as a tab-separated _.txt_ file.
+
+
 ```{=html}
 <!-- This comment and the line above it must be preserved when editing this file!
 The recommended sections are these, but they may be changed on a case by case basis.

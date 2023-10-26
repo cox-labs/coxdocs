@@ -1,0 +1,56 @@
+---
+title: "Search text column"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Rearrange
+-   **Source code:** [SearchTextColumns.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Rearrange/SearchTextColumns.cs)
+
+# Brief description
+
+A new categorical column is generated representing search results in a text column.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Find what
+
+Specified text/term that is searched in a selected text column (default: empty).
+
+## Look in
+
+Selected text column that should be searched for the specified term (default: first text column of the matrix).
+
+## Match case
+
+The cells of the text column will be searched for a matching substring (default: checked). The results will be in a new generated categorical column called "Search: original column name". "+" indicates, whether a match was successful.
+
+## Match whole word
+
+The cells of the text column will be searched to match the whole word of the specified term (default: unchecked). The results will be in a new generated categorical column called "Search: original column name". "+" indicates, whether a match was successful.
+
+# Parameter window
+
+![Search text column](images/rearrange-search_text_column-edited-01.png)
+

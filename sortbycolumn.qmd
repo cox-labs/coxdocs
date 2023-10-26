@@ -1,0 +1,51 @@
+---
+title: "Sort by Column"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+
+# General
+
+  * **Type:** - Matrix Processing
+  * **Heading:**  - Rearrange
+  * **Source code:** [SortByColumn.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Rearrange/SortByColumn.cs)
+
+# Brief description
+
+Simple sorting by a column.
+
+Output: The same matrix but sorted by the specified column.
+
+# Parameters
+
+## Column
+
+Selected expression/numerical column, whose values should be sorted (default: first expression column in the matrix).
+
+## Descending
+
+If checked, the matrix is sorted in descending order (largest to smallest value) by the defined expression/numerical column (default: unchecked). 
+By default the matrix is sorted in ascending order (smallest to largest value) by the defined expression/numerical column.
+
+# Parameter window
+
+![Sort by column](images/rearrange-sort_by_column-edited.png)

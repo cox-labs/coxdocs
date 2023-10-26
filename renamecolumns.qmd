@@ -1,0 +1,46 @@
+---
+title: "Rename Columns"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+
+# General
+
+  * **Type:** - Matrix Processing
+  * **Heading:** - Rearrange
+  * **Source code:** [RenameColumns.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Rearrange/RenameColumns.cs)
+
+===== Brief description =====
+
+New names can be specified for each expression column. The new names are typed in explicitly.
+
+Output: Same matrix but with the new expression column names.
+
+# Parameters
+
+For each column in the matrix regardless of the type, the name can be changed manually by typing the new name for the column in the predefined text field.
+
+# Parameter window
+
+![](images/rearrange-rename_columns-edited.png)
+
+{{perseus:user:activities:matrixprocessing:rearrange:rearrange-rename_columns-edited.png?direct\|Perseus pop-up window: Rearrange -\> Rename columns}}

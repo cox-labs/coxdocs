@@ -13,6 +13,18 @@ date: today
 bibliography: references.bib
 ---
 
+# General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Outliers
+-   **Source code:** [SignificanceB.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Significance/SignificanceB.cs)
+
+# Brief description
+
+Same as Significance A, but intensity-dependent. For details see Cox and Mann (2008) [@cox2008].
+
+Output: A numerical column is added containing the significance A value. Furthermore, a categorical column is added indicating by '+' if a row is significant.
+
 ```{=html}
 <!-- This comment and the line above it must be preserved when editing this file!
 The recommended sections are these, but they may be changed on a case by case basis.

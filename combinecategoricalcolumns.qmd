@@ -1,0 +1,50 @@
+---
+title: "Combine categorical columns"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Rearrange
+-   **Source code:** [CombineCategoricalColumns.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Rearrange/CombineCategoricalColumns.cs)
+
+# Brief description
+
+Combine the terms in two categorical columns to form a new categorical column.
+
+Output: A new categorical column is generated with combined terms.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## First column
+
+First selected categorical column, whose values should be concatenated to the second one (default: first categorical column of the matrix). The new generated categorical column contains the two values concatenated with a "\_" in between.
+
+## Second column
+
+Second selected categorical column, whose values should be concatenated to the first one (default: first categorical column of the matrix). The new generated categorical column contains the two values concatenated with a "\_" in between.
+
+# Parameter window
+
+![Combine categorical columns](images/rearrange-combine_categorical_columns-edited.png)
+

@@ -1,0 +1,48 @@
+---
+title: "Change Column type"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+<!-- This comment and the line above it must be preserved when editing this file! The recommended sections are these, but they may be changed on a case by case basis. ===== Detailed description ===== ===== Parameters ===== ===== Theoretical background ===== ===== Examples ===== Make changes only below this line! -->
+
+# General
+
+  * **Type:** -Matrix Processing
+  * **Heading:** - Rearrange
+  * **Source code:** [ChangeColumnType.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Rearrange/ChangeColumnType.cs)
+
+# Brief description
+
+Convert the type of selected columns to another desired type.
+
+# Parameters
+
+## Find what
+
+Specified text/term that is searched in a selected text column (default: empty).
+
+## Look in
+
+Selected text column that should be searched for the specified term (default: first text column of the matrix).
+
+## Match case
+
+The cells of the text column will be searched for a matching substring (default: checked). The results will be in a new generated categorical column called "Search: original column name". "$+$" indicates, whether a match was successful.
+
+## Match whole word
+
+The cells of the text column will be searched to match the whole word of the specified term (default: unchecked). The results will be in a new generated categorical column called "Search: original column name". "$+$" indicates, whether a match was successful.
+
+# Parameter window
+
+![](images/rearrange-search_text_column-edited.png)

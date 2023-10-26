@@ -1,0 +1,48 @@
+---
+title: "Transpose"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+
+# General
+
+  * **Type:** - Matrix Processing
+  * **Heading:** - Rearrange
+  * **Source code:** [Transpose.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Rearrange/Transpose.cs)
+
+# Brief description =====
+
+The matrix of expression values is being transposed, i.e. rows become columns and columns become rows.
+
+Output: The transpose of the matrix of expression values. One string column can be selected to become the new column names.
+
+
+
+# Parameters
+
+## New column names
+
+Selected text column that specifies the new column names of the transposed matrix (default: first text column in the matrix).
+
+# Parameter window
+
+![](images/rearrange-transpose-edited.png)

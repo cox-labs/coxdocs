@@ -13,6 +13,18 @@ date: today
 bibliography: references.bib
 ---
 
+#  General
+
+  * **Type:** - Matrix Processing
+  * **Heading:** - Basic (Processing)
+  * **Source code:** [AddNoise.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Basic/AddNoise.cs)
+
+# Brief description
+
+Modulate the data with Gaussian noise.
+
+Output: Same as input matrix with random noise added to the expression columns.
+
 ```{=html}
 <!-- This comment and the line above it must be preserved when editing this file!
 The recommended sections are these, but they may be changed on a case by case basis.

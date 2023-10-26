@@ -1,0 +1,55 @@
+---
+title: "Convert multi-numeric column"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Rearrange
+-   **Source code:** [ConvertMultiNumeric.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Rearrange/ConvertMultiNumeric.cs)
+
+# Brief description
+
+Creates for the specified multi-numeric columns a numeric column containing the result of the specified operation applied to the items in each cell of each selected multi-numeric column.
+
+Output: If n multi-numeric columns are selected, n numeric columns will be added to the matrix.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Operation
+
+Selected operations that should be applied to multi-numeric columns to gain a numeric column with one value per row (default: no operations are selected). For each selected operation a separate numeric column is generated. The operations can be selected from a predefined list:
+
+-   Count
+-   Sum
+-   Product
+-   Average
+-   Median
+
+## Columns
+
+Selected multi-numeric columns that will be transformed applying each of the selected operations (default: all multi-numeric columns are selected).
+
+# Parameter window
+
+![Convert multi numeric column](images/rearrange-convert_multi-numeric_column-edited.png)

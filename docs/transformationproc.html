@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Cox Lab">
-<meta name="dcterms.date" content="2023-10-24">
+<meta name="dcterms.date" content="2023-10-26">
 
 <title>Transformation processes</title>
 <style>
@@ -144,10 +144,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#parameters" id="toc-parameters" class="nav-link active" data-scroll-target="#parameters"><span class="header-section-number">1</span> Parameters</a>
+  <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general"><span class="header-section-number">1</span> General</a></li>
+  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters"><span class="header-section-number">2</span> Parameters</a>
   <ul>
-  <li><a href="#transformation" id="toc-transformation" class="nav-link" data-scroll-target="#transformation"><span class="header-section-number">1.1</span> Transformation</a></li>
-  <li><a href="#columns" id="toc-columns" class="nav-link" data-scroll-target="#columns"><span class="header-section-number">1.2</span> Columns</a></li>
+  <li><a href="#transformation" id="toc-transformation" class="nav-link" data-scroll-target="#transformation"><span class="header-section-number">2.1</span> Transformation</a></li>
+  <li><a href="#columns" id="toc-columns" class="nav-link" data-scroll-target="#columns"><span class="header-section-number">2.2</span> Columns</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -174,7 +175,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 24, 2023</p>
+      <p class="date">October 26, 2023</p>
     </div>
   </div>
   
@@ -185,6 +186,16 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="general" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> General</h1>
+<ul>
+<li><strong>Type:</strong> - Matrix Processing</li>
+<li><strong>Heading:</strong> - Basic (Processing)</li>
+<li><strong>Source code:</strong> not public.</li>
+</ul>
+<p>===== Brief description =====</p>
+<p>All values in the specified columns are transformed according to the given formula.</p>
+<p>Output: The output matrix has the same structure as the input matrix. Values in the selected columns will be transformed.</p>
 <!-- This comment and the line above it must be preserved when editing this file!
 The recommended sections are these, but they may be changed on a case by case basis.
 ===== Detailed description =====
@@ -192,14 +203,15 @@ The recommended sections are these, but they may be changed on a case by case ba
 ===== Theoretical background =====
 ===== Examples =====
 Make changes only below this line! -->
-<section id="parameters" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Parameters</h1>
-<section id="transformation" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="transformation"><span class="header-section-number">1.1</span> Transformation</h2>
+</section>
+<section id="parameters" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Parameters</h1>
+<section id="transformation" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="transformation"><span class="header-section-number">2.1</span> Transformation</h2>
 <p>The specified transformation formula (default: <span class="math inline">\(log_2(x)\)</span>) that should be applied to all cells in the selected columns. The variable name is <span class="math inline">\(x\)</span>. Numbers with <span class="math inline">\(.\)</span> are reagrded decimal point, <span class="math inline">\(+\)</span>, <span class="math inline">\(-\)</span>, <span class="math inline">\(*\)</span>, <span class="math inline">\(/\)</span> and ^ can be used as well as scientific notation (e.g.&nbsp;<span class="math inline">\(2.9e^{-15}\)</span>) is supported. Predefined functions can also be used, whose argument has to be enclosed by round brackets, e.g.&nbsp;<span class="math inline">\(sin(2*x)\)</span>.</p>
 </section>
-<section id="columns" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="columns"><span class="header-section-number">1.2</span> Columns</h2>
+<section id="columns" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="columns"><span class="header-section-number">2.2</span> Columns</h2>
 <p>Selected expression and/or numerical columns, where the transformation should be applied (default: all columns are selected).</p>
 <p>#Parameter window</p>
 <div class="quarto-figure quarto-figure-center">

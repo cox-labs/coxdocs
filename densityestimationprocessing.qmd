@@ -13,6 +13,19 @@ date: today
 bibliography: references.bib
 ---
 
+# General
+
+  * **Type:** - Matrix Processing
+  * **Heading:** - Basic (Processing)
+  * **Source code:** [DensityEstimationProcessing.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Basic/DensityEstimationProcessing.cs)
+
+# Brief description
+
+The density of data points in two dimensions is calculated. Each data point is smoothed out
+ by a suitable Gaussian kernel.
+
+Output: A copy of the input matrix with two numerical columns added containing the density information.
+
 ```{=html}
 <!-- This comment and the line above it must be preserved when editing this file!
 The recommended sections are these, but they may be changed on a case by case basis.

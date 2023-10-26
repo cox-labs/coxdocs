@@ -13,6 +13,19 @@ date: today
 bibliography: references.bib
 ---
 
+# General
+
+  * **Type:** - Matrix Processing
+  * **Heading:** - Basic (Processing)
+  * **Source code:** not public.
+
+# Brief description
+
+Correlation coefficients are calculated between rows of the matrix. Which rows of the original matrix become rows or columns of the correlation matrix can be configured in the parameter panel.
+
+Output: A matrix containing the correlation coefficients.
+
+
 ```{=html}
 <!-- This comment and the line above it must be preserved when editing this file!
 The recommended sections are these, but they may be changed on a case by case basis.

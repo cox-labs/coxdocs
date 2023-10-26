@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Cox Lab">
-<meta name="dcterms.date" content="2023-10-24">
+<meta name="dcterms.date" content="2023-10-26">
 
 <title>Row Correlations</title>
 <style>
@@ -142,15 +142,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#parameters" id="toc-parameters" class="nav-link active" data-scroll-target="#parameters"><span class="header-section-number">1</span> Parameters</a>
+  <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general"><span class="header-section-number">1</span> General</a></li>
+  <li><a href="#brief-description" id="toc-brief-description" class="nav-link" data-scroll-target="#brief-description"><span class="header-section-number">2</span> Brief description</a></li>
+  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters"><span class="header-section-number">3</span> Parameters</a>
   <ul>
-  <li><a href="#type" id="toc-type" class="nav-link" data-scroll-target="#type"><span class="header-section-number">1.1</span> Type</a></li>
-  <li><a href="#select-columns-based-on" id="toc-select-columns-based-on" class="nav-link" data-scroll-target="#select-columns-based-on"><span class="header-section-number">1.2</span> Select columns based on</a></li>
-  <li><a href="#column-terms" id="toc-column-terms" class="nav-link" data-scroll-target="#column-terms"><span class="header-section-number">1.3</span> Column terms</a></li>
-  <li><a href="#select-rows-based-on" id="toc-select-rows-based-on" class="nav-link" data-scroll-target="#select-rows-based-on"><span class="header-section-number">1.4</span> Select rows based on</a></li>
-  <li><a href="#row-terms" id="toc-row-terms" class="nav-link" data-scroll-target="#row-terms"><span class="header-section-number">1.5</span> Row terms</a></li>
+  <li><a href="#type" id="toc-type" class="nav-link" data-scroll-target="#type"><span class="header-section-number">3.1</span> Type</a></li>
+  <li><a href="#select-columns-based-on" id="toc-select-columns-based-on" class="nav-link" data-scroll-target="#select-columns-based-on"><span class="header-section-number">3.2</span> Select columns based on</a></li>
+  <li><a href="#column-terms" id="toc-column-terms" class="nav-link" data-scroll-target="#column-terms"><span class="header-section-number">3.3</span> Column terms</a></li>
+  <li><a href="#select-rows-based-on" id="toc-select-rows-based-on" class="nav-link" data-scroll-target="#select-rows-based-on"><span class="header-section-number">3.4</span> Select rows based on</a></li>
+  <li><a href="#row-terms" id="toc-row-terms" class="nav-link" data-scroll-target="#row-terms"><span class="header-section-number">3.5</span> Row terms</a></li>
   </ul></li>
-  <li><a href="#parameter-window" id="toc-parameter-window" class="nav-link" data-scroll-target="#parameter-window"><span class="header-section-number">2</span> Parameter window</a></li>
+  <li><a href="#parameter-window" id="toc-parameter-window" class="nav-link" data-scroll-target="#parameter-window"><span class="header-section-number">4</span> Parameter window</a></li>
   </ul>
 </nav>
     </div>
@@ -176,7 +178,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 24, 2023</p>
+      <p class="date">October 26, 2023</p>
     </div>
   </div>
   
@@ -187,6 +189,18 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="general" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> General</h1>
+<ul>
+<li><strong>Type:</strong> - Matrix Processing</li>
+<li><strong>Heading:</strong> - Basic (Processing)</li>
+<li><strong>Source code:</strong> not public.</li>
+</ul>
+</section>
+<section id="brief-description" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Brief description</h1>
+<p>Correlation coefficients are calculated between rows of the matrix. Which rows of the original matrix become rows or columns of the correlation matrix can be configured in the parameter panel.</p>
+<p>Output: A matrix containing the correlation coefficients.</p>
 <!-- This comment and the line above it must be preserved when editing this file!
 The recommended sections are these, but they may be changed on a case by case basis.
 ===== Detailed description =====
@@ -194,10 +208,11 @@ The recommended sections are these, but they may be changed on a case by case ba
 ===== Theoretical background =====
 ===== Examples =====
 Make changes only below this line! -->
-<section id="parameters" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Parameters</h1>
-<section id="type" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="type"><span class="header-section-number">1.1</span> Type</h2>
+</section>
+<section id="parameters" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Parameters</h1>
+<section id="type" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="type"><span class="header-section-number">3.1</span> Type</h2>
 <p>Defines the measure of correlation that should be calculated between the selected rows (default: Pearson correlation). It can be selected from a list of correlation coefficients:</p>
 <ul>
 <li>Log2(Absence-presence enrichment factor)</li>
@@ -221,25 +236,25 @@ Make changes only below this line! -->
 <li>Maximum distance</li>
 </ul>
 </section>
-<section id="select-columns-based-on" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="select-columns-based-on"><span class="header-section-number">1.2</span> Select columns based on</h2>
+<section id="select-columns-based-on" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="select-columns-based-on"><span class="header-section-number">3.2</span> Select columns based on</h2>
 <p>Selected categorical/text column that filters the rows of the input matrix (default: <none>). If <none> is chosen, all rows of the original matrix will become columns of the correlation matrix .</none></none></p>
 </section>
-<section id="column-terms" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="column-terms"><span class="header-section-number">1.3</span> Column terms</h2>
+<section id="column-terms" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="column-terms"><span class="header-section-number">3.3</span> Column terms</h2>
 <p>Filtering option to only include rows, which match the specified input term(s) in the selected column in “Select columns based on” (default: empty). Inclusion of multiple terms is possible in the predefined field and have to be separated by new lines. Each row is one term.</p>
 </section>
-<section id="select-rows-based-on" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="select-rows-based-on"><span class="header-section-number">1.4</span> Select rows based on</h2>
+<section id="select-rows-based-on" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="select-rows-based-on"><span class="header-section-number">3.4</span> Select rows based on</h2>
 <p>Selected categorical/text column that filters the rows of the input matrix (default: <none>). If <none> is chosen, all rows of the original matrix will become rows of the correlation matrix .</none></none></p>
 </section>
-<section id="row-terms" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="row-terms"><span class="header-section-number">1.5</span> Row terms</h2>
+<section id="row-terms" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="row-terms"><span class="header-section-number">3.5</span> Row terms</h2>
 <p>Filtering option to only include rows, which match the specified input term(s) in the previously selected column in “Select rows based on” (default: empty). Inclusion of multiple terms is possible in the predefined field and have to be separated by new lines. Each row is one term.</p>
 </section>
 </section>
-<section id="parameter-window" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Parameter window</h1>
+<section id="parameter-window" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Parameter window</h1>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/basic-row_correlation-edited.png" class="img-fluid figure-img"></p>

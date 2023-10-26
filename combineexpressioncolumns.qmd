@@ -13,6 +13,19 @@ date: today
 bibliography: references.bib
 ---
 
+# General
+
+  * **Type:** - Matrix Processing
+  * **Heading:** - Basic (Processing)
+  * **Source code:** not public.
+
+# Brief description
+
+Pairs of columns are combined into single columns. Please make sure that the numbers of columns 
+that are selected in the 'x' and 'y' boxes are equal.
+
+Output: Expression columns are exchanged by the new combined columns. The original columns are also kept in the output, if 'Keep original columns' is checked.
+
 <!-- This comment and the line above it must be preserved when editing this file!
 The recommended sections are these, but they may be changed on a case by case basis.
 ===== Detailed description =====

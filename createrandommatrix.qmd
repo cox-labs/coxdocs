@@ -13,7 +13,16 @@ date: today
 bibliography: references.bib
 ---
 
-{{page\>perseus:noedit:user:activities:matrixupload:createrandommatrix}} <!-- This comment and the line above it must be preserved when editing this file!
+# General
+
+  * **Type:** - Matrix Upload
+  * **Source code:** [CreateRandomMatrix.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Load/CreateRandomMatrix.cs)
+
+# Brief description
+
+Create a matrix of given dimensions containing random numbers drawn from a single or a superposition of several normal distributions.
+
+<!-- This comment and the line above it must be preserved when editing this file!
 The recommended sections are these, but they may be changed on a case by case basis.
 ===== Detailed description =====
 ===== Parameters =====

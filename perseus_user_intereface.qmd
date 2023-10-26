@@ -49,7 +49,21 @@ The activities can be divided into five main categories. The icons of the catego
 
 ### Rearrange
 
-\* \[\[perseus:user:activities:matrixprocessing:rearrange:changecolumntype\|Change column type\]\] \* \[\[perseus:user:activities:matrixprocessing:rearrange:renamecolumns\|Rename columns\]\] \* \[\[perseus:user:activities:matrixprocessing:rearrange:renamecolumnsregexp\|Rename columns \[reg. ex.\]\]\] \* \[\[perseus:user:activities:matrixprocessing:rearrange:combineannotations\|Combine annotations\]\] \* \[\[perseus:user:activities:matrixprocessing:rearrange:duplicatecolumns\|Duplicate columns\]\] \* \[\[perseus:user:activities:matrixprocessing:rearrange:reorderremovecolumns\|Reorder/remove columns\]\] \* \[\[perseus:user:activities:matrixprocessing:rearrange:removeemptycolumns\|Remove empty columns\]\] \* \[\[perseus:user:activities:matrixprocessing:rearrange:transpose\|Transpose\]\] \* \[\[perseus:user:activities:matrixprocessing:rearrange:sortbycolumn\|Sort by column\]\] \* \[\[perseus:user:activities:matrixprocessing:rearrange:expandmultinumeric\|Expand multi-numeric and string columns\]\] \* \[\[perseus:user:activities:matrixprocessing:rearrange:uniquevalues\|Unique values\]\] \* \[\[perseus:user:activities:matrixprocessing:rearrange:convertmultinumeric\|Convert multi-numeric column\]\] \* \[\[perseus:user:activities:matrixprocessing:rearrange:combinecategoricalcolumns\|Combine categorical columns\]\] \* \[\[perseus:user:activities:matrixprocessing:rearrange:processtextcolumns\|Process text column\]\] \* \[\[perseus:user:activities:matrixprocessing:rearrange:searchtextcolumns\|Search text column\]\]
+* [Change column type](changecolumntype.html)
+* [Rename columns](renamecolumns.html)
+* [Rename columns (reg. ex.)](renamecolumnsregexp.html)
+* [Combine annotations](combineannotations.html)
+* [Duplicate columns](duplicatecolumns.html)
+* [Reorder/remove columns](reorderremovecolumns.html)
+* [Remove empty columns](removeemptycolumns.html)
+* [Transpose](transpose.html)
+* [Sort by column](sortbycolumn.html)
+* [Expand multi-numeric and string columns](expandmultinumeric.html)
+* [Unique values](uniquevalues.html) 
+* [Convert multi-numeric column](convertmultinumeric.html)
+* [Combine categorical columns](combinecategoricalcolumns.html)
+* [Process text column](processtextcolumns.html)
+* [Search text column](searchtextcolumns.html)
 
 ### Normalization
 

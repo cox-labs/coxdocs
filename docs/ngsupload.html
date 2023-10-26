@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Cox Lab">
-<meta name="dcterms.date" content="2023-10-24">
+<meta name="dcterms.date" content="2023-10-26">
 
 <title>NGS Upload</title>
 <style>
@@ -164,23 +164,25 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background"><span class="header-section-number">1</span> Background</a></li>
-  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters"><span class="header-section-number">2</span> Parameters</a>
+  <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general"><span class="header-section-number">1</span> General</a></li>
+  <li><a href="#brief-description" id="toc-brief-description" class="nav-link" data-scroll-target="#brief-description"><span class="header-section-number">2</span> Brief description</a></li>
+  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background"><span class="header-section-number">3</span> Background</a></li>
+  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters"><span class="header-section-number">4</span> Parameters</a>
   <ul>
-  <li><a href="#experiment" id="toc-experiment" class="nav-link" data-scroll-target="#experiment"><span class="header-section-number">2.1</span> Experiment</a></li>
-  <li><a href="#files" id="toc-files" class="nav-link" data-scroll-target="#files"><span class="header-section-number">2.2</span> Files</a></li>
-  <li><a href="#strand-specificity" id="toc-strand-specificity" class="nav-link" data-scroll-target="#strand-specificity"><span class="header-section-number">2.3</span> Strand specificity</a></li>
-  <li><a href="#genome-annotation" id="toc-genome-annotation" class="nav-link" data-scroll-target="#genome-annotation"><span class="header-section-number">2.4</span> Genome annotation</a></li>
-  <li><a href="#file" id="toc-file" class="nav-link" data-scroll-target="#file"><span class="header-section-number">2.5</span> File</a></li>
-  <li><a href="#feature-type-name" id="toc-feature-type-name" class="nav-link" data-scroll-target="#feature-type-name"><span class="header-section-number">2.6</span> Feature type name</a></li>
-  <li><a href="#number-of-threads" id="toc-number-of-threads" class="nav-link" data-scroll-target="#number-of-threads"><span class="header-section-number">2.7</span> Number of threads</a></li>
+  <li><a href="#experiment" id="toc-experiment" class="nav-link" data-scroll-target="#experiment"><span class="header-section-number">4.1</span> Experiment</a></li>
+  <li><a href="#files" id="toc-files" class="nav-link" data-scroll-target="#files"><span class="header-section-number">4.2</span> Files</a></li>
+  <li><a href="#strand-specificity" id="toc-strand-specificity" class="nav-link" data-scroll-target="#strand-specificity"><span class="header-section-number">4.3</span> Strand specificity</a></li>
+  <li><a href="#genome-annotation" id="toc-genome-annotation" class="nav-link" data-scroll-target="#genome-annotation"><span class="header-section-number">4.4</span> Genome annotation</a></li>
+  <li><a href="#file" id="toc-file" class="nav-link" data-scroll-target="#file"><span class="header-section-number">4.5</span> File</a></li>
+  <li><a href="#feature-type-name" id="toc-feature-type-name" class="nav-link" data-scroll-target="#feature-type-name"><span class="header-section-number">4.6</span> Feature type name</a></li>
+  <li><a href="#number-of-threads" id="toc-number-of-threads" class="nav-link" data-scroll-target="#number-of-threads"><span class="header-section-number">4.7</span> Number of threads</a></li>
   </ul></li>
-  <li><a href="#parameter-window" id="toc-parameter-window" class="nav-link" data-scroll-target="#parameter-window"><span class="header-section-number">3</span> Parameter window</a></li>
-  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples"><span class="header-section-number">4</span> Examples</a>
+  <li><a href="#parameter-window" id="toc-parameter-window" class="nav-link" data-scroll-target="#parameter-window"><span class="header-section-number">5</span> Parameter window</a></li>
+  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples"><span class="header-section-number">6</span> Examples</a>
   <ul>
-  <li><a href="#calculate-rpkmfpkm" id="toc-calculate-rpkmfpkm" class="nav-link" data-scroll-target="#calculate-rpkmfpkm"><span class="header-section-number">4.1</span> Calculate RPKM/FPKM</a></li>
+  <li><a href="#calculate-rpkmfpkm" id="toc-calculate-rpkmfpkm" class="nav-link" data-scroll-target="#calculate-rpkmfpkm"><span class="header-section-number">6.1</span> Calculate RPKM/FPKM</a></li>
   </ul></li>
-  <li><a href="#comparison-with-htseq-count" id="toc-comparison-with-htseq-count" class="nav-link" data-scroll-target="#comparison-with-htseq-count"><span class="header-section-number">5</span> Comparison with HTSeq-count</a></li>
+  <li><a href="#comparison-with-htseq-count" id="toc-comparison-with-htseq-count" class="nav-link" data-scroll-target="#comparison-with-htseq-count"><span class="header-section-number">7</span> Comparison with HTSeq-count</a></li>
   </ul>
 </nav>
     </div>
@@ -206,7 +208,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 24, 2023</p>
+      <p class="date">October 26, 2023</p>
     </div>
   </div>
   
@@ -217,6 +219,16 @@ div.csl-indent {
 
 </header>
 
+<section id="general" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> General</h1>
+<ul>
+<li><strong>Type:</strong> - Matrix Upload</li>
+<li><strong>Source code:</strong> not public.</li>
+</ul>
+</section>
+<section id="brief-description" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Brief description</h1>
+<p>Load information from NGS data.</p>
 <!-- This comment and the line above it must be preserved when editing this file!
 The recommended sections are these, but they may be changed on a case by case basis.
 ===== Detailed description =====
@@ -224,23 +236,24 @@ The recommended sections are these, but they may be changed on a case by case ba
 ===== Theoretical background =====
 ===== Examples =====
 Make changes only below this line! -->
-<section id="background" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Background</h1>
+</section>
+<section id="background" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Background</h1>
 <p>Next-generation sequencing (NGS) methods are a set of different strategies to sequence DNA and related molecules. Because of extreme price reduction of sequencing per basepair as well as the huge spectrum of implementation, NGS is becoming a method of choice for many studies. Particularly, expression analysis is one of the most common tasks. In this sense NGS data is complementary to mass spectrometry-based proteomics data. We can therefore cover all steps of expression regulation starting from epigenetics to the protein level. That’s why it is important to include an NGS upload activity to the Perseus workflow.</p>
 </section>
-<section id="parameters" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Parameters</h1>
-<section id="experiment" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="experiment"><span class="header-section-number">2.1</span> Experiment</h2>
+<section id="parameters" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Parameters</h1>
+<section id="experiment" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="experiment"><span class="header-section-number">4.1</span> Experiment</h2>
 <p>It specifies the type of NGS experiment the data is derived from (default: RNA sequencing and ribosome profiling).</p>
 </section>
-<section id="files" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="files"><span class="header-section-number">2.2</span> Files</h2>
+<section id="files" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="files"><span class="header-section-number">4.2</span> Files</h2>
 <p>With the two buttons “Add file” and “Remove file” it is possible to select <a href="https://samtools.github.io/hts-specs/SAMv1.pdf">BAM Binary-sequence Alignment Format</a> files. This format is generally used as a compact way to save an alignment and at the same time allowing efficient random access.</p>
 <p>Perseus doesn’t require an index file.</p>
 </section>
-<section id="strand-specificity" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="strand-specificity"><span class="header-section-number">2.3</span> Strand specificity</h2>
+<section id="strand-specificity" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="strand-specificity"><span class="header-section-number">4.3</span> Strand specificity</h2>
 <p>It describes which RNA library preparation method was used. Depending on this, reads will mostly be aligned to the same (sense) or opposite (anti-sense) strand as the feature. Alternatively, reads can be aligned to both strands (not stranded).</p>
 <p>Let’s demonstrate an expected distribution of reads according to an imaginary gene, consisting of one transcript, using each type of strand specificity. All reads marked red are those which we will take into account. Reads marked grey will be excluded from the coverage calculation.</p>
 <ul>
@@ -296,8 +309,8 @@ Make changes only below this line! -->
 <p>It’s worth to notice that for paired end reads the Persues by default calculates number of fragments for each gene, in other words it doesn’t count twice two reads of one pair.</p>
 <p><strong>Hint:</strong> In case the experimental design isn’t known, we recommend to use “Not stranded” as “Strand specificity”.</p>
 </section>
-<section id="genome-annotation" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="genome-annotation"><span class="header-section-number">2.4</span> Genome annotation</h2>
+<section id="genome-annotation" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="genome-annotation"><span class="header-section-number">4.4</span> Genome annotation</h2>
 <p>Currently the plugin supports GTF file format containing coordinates of genome regions for which the coverage will be calculated. We strongly recommend to download an annotation from <a href="http://www.ensembl.org/info/data/ftp/index.html">the ensemble FTP server</a>.</p>
 <p><strong>GTF (General Feature Format)</strong>: GTF file can start from several browser/track lines (information specific to genome browser) and comment lines (line should begin with the <code>#</code> character). The rest of the file consists of one line per feature, each consists of nine columns</p>
 <ul>
@@ -312,22 +325,22 @@ Make changes only below this line! -->
 </ul>
 <p>“empty” columns are denoted with a “.”. Each line with “cds” and “exon” feature should contain “gene_id” or “transcript_id” tags.</p>
 </section>
-<section id="file" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="file"><span class="header-section-number">2.5</span> File</h2>
+<section id="file" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="file"><span class="header-section-number">4.5</span> File</h2>
 <p>Specified file path to the genome annotation.</p>
 </section>
-<section id="feature-type-name" class="level2" data-number="2.6">
-<h2 data-number="2.6" class="anchored" data-anchor-id="feature-type-name"><span class="header-section-number">2.6</span> Feature type name</h2>
+<section id="feature-type-name" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="feature-type-name"><span class="header-section-number">4.6</span> Feature type name</h2>
 <p>It is possible to specify a feature name that will be used (third column of GTF).</p>
 <p><strong>Hint:</strong> It makes sense to set “Feature type name” parameter to “Exons” for RNA-seq analysis and choose “CDS” for ribosome profiling.</p>
 </section>
-<section id="number-of-threads" class="level2" data-number="2.7">
-<h2 data-number="2.7" class="anchored" data-anchor-id="number-of-threads"><span class="header-section-number">2.7</span> Number of threads</h2>
+<section id="number-of-threads" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="number-of-threads"><span class="header-section-number">4.7</span> Number of threads</h2>
 <p>Specifies the number of used threads for uploading NGS data.</p>
 </section>
 </section>
-<section id="parameter-window" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Parameter window</h1>
+<section id="parameter-window" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Parameter window</h1>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/ngsuploadinterface.png" class="img-fluid figure-img"></p>
@@ -335,10 +348,10 @@ Make changes only below this line! -->
 </figure>
 </div>
 </section>
-<section id="examples" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Examples</h1>
-<section id="calculate-rpkmfpkm" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="calculate-rpkmfpkm"><span class="header-section-number">4.1</span> Calculate RPKM/FPKM</h2>
+<section id="examples" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Examples</h1>
+<section id="calculate-rpkmfpkm" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="calculate-rpkmfpkm"><span class="header-section-number">6.1</span> Calculate RPKM/FPKM</h2>
 <ul>
 <li>Upload bam files to Perseus. The Required annotation (gtf file) can be found on <a href="http://www.ensembl.org/info/data/ftp/index.html">ensemble’ FTP server</a> (annotation should be in agreement with version of genome which was used for alignment). For the example we took publically available RNA-seq data of cultured primary human lung fibroblast which done in two replicates <a href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM759890">GSM759890</a> and <a href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM759891">GSM759891</a></li>
 <li>Filter rows based on categorical ‘Gene biotype’ column</li>
@@ -355,8 +368,8 @@ Make changes only below this line! -->
 </div>
 </section>
 </section>
-<section id="comparison-with-htseq-count" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Comparison with HTSeq-count</h1>
+<section id="comparison-with-htseq-count" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Comparison with HTSeq-count</h1>
 <div id="fig-htseqvsperseus" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/htseqvsperseus.multiscatter.png" class="img-fluid figure-img"></p>

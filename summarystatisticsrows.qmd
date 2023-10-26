@@ -13,6 +13,19 @@ date: today
 bibliography: references.bib
 ---
 
+# General
+
+  * **Type:** - Matrix Processing
+  * **Heading:** - Basic (Processing)
+  * **Source code:** [SummaryStatisticsRows.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Basic/SummaryStatisticsRows.cs)
+
+# Brief description
+
+A set of simple descriptive quantities are calculated that help summarizing the expression data in each row.
+
+Output: For each selected summary statistic, a numerical column is added containing the specific quantitiy for each row of expression values. `NaN` and `Infinity` values are ignored for all calculations.
+
+
 ```{=html}
 <!-- This comment and the line above it must be preserved when editing this file!
 The recommended sections are these, but they may be changed on a case by case basis.
@@ -22,7 +35,8 @@ The recommended sections are these, but they may be changed on a case by case ba
 ===== Examples =====
 Make changes only below this line! -->
 ```
-#Parameters
+
+# Parameters
 
 ## Expression column selection
 

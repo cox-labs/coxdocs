@@ -13,6 +13,16 @@ date: today
 bibliography: references.bib
 ---
 
+# General
+
+  * **Type:** - Matrix Upload
+  * **Source code:** [BinaryUpload.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Load/BinaryUpload.cs)
+
+# Brief description
+
+Load all bytes from a binary file and display them as hexadecimal numbers.
+
+
 ```{=html}
 <!-- This comment and the line above it must be preserved when editing this file!
 The recommended sections are these, but they may be changed on a case by case basis.

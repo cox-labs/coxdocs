@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Cox Lab">
-<meta name="dcterms.date" content="2023-10-24">
+<meta name="dcterms.date" content="2023-10-26">
 
 <title>Performance curves</title>
 <style>
@@ -144,13 +144,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#indicated-are" id="toc-indicated-are" class="nav-link active" data-scroll-target="#indicated-are"><span class="header-section-number">0.1</span> Indicated are</a></li>
-  <li><a href="#in-column" id="toc-in-column" class="nav-link" data-scroll-target="#in-column"><span class="header-section-number">0.2</span> In column</a></li>
-  <li><a href="#indicator" id="toc-indicator" class="nav-link" data-scroll-target="#indicator"><span class="header-section-number">0.3</span> Indicator</a></li>
-  <li><a href="#scores" id="toc-scores" class="nav-link" data-scroll-target="#scores"><span class="header-section-number">0.4</span> Scores</a></li>
-  <li><a href="#large-values-are-good" id="toc-large-values-are-good" class="nav-link" data-scroll-target="#large-values-are-good"><span class="header-section-number">0.5</span> Large values are good</a></li>
-  <li><a href="#display-quantity" id="toc-display-quantity" class="nav-link" data-scroll-target="#display-quantity"><span class="header-section-number">0.6</span> Display quantity</a></li>
-  <li><a href="#parameter-window" id="toc-parameter-window" class="nav-link" data-scroll-target="#parameter-window"><span class="header-section-number">1</span> Parameter window</a></li>
+  <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general"><span class="header-section-number">1</span> General</a></li>
+  <li><a href="#brief-description" id="toc-brief-description" class="nav-link" data-scroll-target="#brief-description"><span class="header-section-number">2</span> Brief description</a>
+  <ul>
+  <li><a href="#indicated-are" id="toc-indicated-are" class="nav-link" data-scroll-target="#indicated-are"><span class="header-section-number">2.1</span> Indicated are</a></li>
+  <li><a href="#in-column" id="toc-in-column" class="nav-link" data-scroll-target="#in-column"><span class="header-section-number">2.2</span> In column</a></li>
+  <li><a href="#indicator" id="toc-indicator" class="nav-link" data-scroll-target="#indicator"><span class="header-section-number">2.3</span> Indicator</a></li>
+  <li><a href="#scores" id="toc-scores" class="nav-link" data-scroll-target="#scores"><span class="header-section-number">2.4</span> Scores</a></li>
+  <li><a href="#large-values-are-good" id="toc-large-values-are-good" class="nav-link" data-scroll-target="#large-values-are-good"><span class="header-section-number">2.5</span> Large values are good</a></li>
+  <li><a href="#display-quantity" id="toc-display-quantity" class="nav-link" data-scroll-target="#display-quantity"><span class="header-section-number">2.6</span> Display quantity</a></li>
+  </ul></li>
+  <li><a href="#parameter-window" id="toc-parameter-window" class="nav-link" data-scroll-target="#parameter-window"><span class="header-section-number">3</span> Parameter window</a></li>
   </ul>
 </nav>
     </div>
@@ -176,7 +180,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 24, 2023</p>
+      <p class="date">October 26, 2023</p>
     </div>
   </div>
   
@@ -187,6 +191,17 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="general" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> General</h1>
+<ul>
+<li><strong>Type:</strong> - Matrix Processing</li>
+<li><strong>Heading:</strong> - Basic (Processing)</li>
+<li><strong>Source code:</strong> <a href="https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Basic/PerformanceCurves.cs">PerformanceCurves.cs</a></li>
+</ul>
+</section>
+<section id="brief-description" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Brief description</h1>
+<p>Calculation of predictive performance measures like precision-recall or ROC curves.</p>
 <!-- This comment and the line above it must be preserved when editing this file!
 The recommended sections are these, but they may be changed on a case by case basis.
 ===== Detailed description =====
@@ -195,28 +210,28 @@ The recommended sections are these, but they may be changed on a case by case ba
 ===== Examples =====
 Make changes only below this line! -->
 <p>#Parameters</p>
-<section id="indicated-are" class="level2" data-number="0.1">
-<h2 data-number="0.1" class="anchored" data-anchor-id="indicated-are"><span class="header-section-number">0.1</span> Indicated are</h2>
+<section id="indicated-are" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="indicated-are"><span class="header-section-number">2.1</span> Indicated are</h2>
 <p>Specification whether rows containing the “Indicator” in the categorical column specified in “In column” correspond to the class under observation or not (default: False).</p>
 </section>
-<section id="in-column" class="level2" data-number="0.2">
-<h2 data-number="0.2" class="anchored" data-anchor-id="in-column"><span class="header-section-number">0.2</span> In column</h2>
+<section id="in-column" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="in-column"><span class="header-section-number">2.2</span> In column</h2>
 <p>Selected categorical column containing the class membership of each instance (row) of the class under observation (default: first categorical column in the matrix).</p>
 </section>
-<section id="indicator" class="level2" data-number="0.3">
-<h2 data-number="0.3" class="anchored" data-anchor-id="indicator"><span class="header-section-number">0.3</span> Indicator</h2>
+<section id="indicator" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="indicator"><span class="header-section-number">2.3</span> Indicator</h2>
 <p>Rows containing the defined string are counted as true or false depending on the selection in “Indicated are” (default: <span class="math inline">\(+\)</span>).</p>
 </section>
-<section id="scores" class="level2" data-number="0.4">
-<h2 data-number="0.4" class="anchored" data-anchor-id="scores"><span class="header-section-number">0.4</span> Scores</h2>
+<section id="scores" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="scores"><span class="header-section-number">2.4</span> Scores</h2>
 <p>Selected expression columns containing the scores by which the rows are ranked to calculate the specified quantities (default: first expression column of the matrix is selected).</p>
 </section>
-<section id="large-values-are-good" class="level2" data-number="0.5">
-<h2 data-number="0.5" class="anchored" data-anchor-id="large-values-are-good"><span class="header-section-number">0.5</span> Large values are good</h2>
+<section id="large-values-are-good" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="large-values-are-good"><span class="header-section-number">2.5</span> Large values are good</h2>
 <p>If checked the larger the score value the better (default: checked). Otherwise the lower the value the better.</p>
 </section>
-<section id="display-quantity" class="level2" data-number="0.6">
-<h2 data-number="0.6" class="anchored" data-anchor-id="display-quantity"><span class="header-section-number">0.6</span> Display quantity</h2>
+<section id="display-quantity" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="display-quantity"><span class="header-section-number">2.6</span> Display quantity</h2>
 <p>Selected quantities that will be calculated (default: no quantities are selected). The quantities can be selected from a predefined list:</p>
 <ul>
 <li><span class="math inline">\(TP/(TP+FP)\)</span> (Precision)</li>
@@ -227,8 +242,9 @@ Make changes only below this line! -->
 <li><span class="math inline">\(TN/(TN+FP)\)</span> (Specificity)</li>
 </ul>
 </section>
-<section id="parameter-window" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Parameter window</h1>
+</section>
+<section id="parameter-window" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Parameter window</h1>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/basic-performance_curves-edited.png" class="img-fluid figure-img"></p>

@@ -13,6 +13,17 @@ date: today
 bibliography: references.bib
 ---
 
+# General
+
+  * **Type:** - Matrix Processing
+  * **Heading:** - Basic (Processing)
+  * **Source code:** [PerformanceCurves.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Basic/PerformanceCurves.cs)
+
+# Brief description
+
+Calculation of predictive performance measures like precision-recall or ROC curves.
+
+
 ```{=html}
 <!-- This comment and the line above it must be preserved when editing this file!
 The recommended sections are these, but they may be changed on a case by case basis.

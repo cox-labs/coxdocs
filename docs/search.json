@@ -1,38 +1,164 @@
 [
   {
-    "objectID": "maxquant_instructions.html",
-    "href": "maxquant_instructions.html",
-    "title": "MaxQuant",
+    "objectID": "expandmultinumeric.html",
+    "href": "expandmultinumeric.html",
+    "title": "Expand Multi Numeric and string columns",
     "section": "",
-    "text": "MaxQuant is a proteomics software package designed for analyzing large mass-spectrometric data sets. It is specifically aimed at high-resolution MS data. Several labeling techniques as well as label-free quantification are supported. MaxQuant is freely available and can be downloaded from this site. The download includes the search engine Andromeda, which is integrated into MaxQuant as well as the viewer application for inspection of raw data and identification and quantification results. For statistical analysis of MaxQuant output, we offer the Perseus framework.\n\n1 Documentation outline\n\nDownload and installation\nFirst steps in MaxQuant\nViewer\nAndromeda\nOutput Tables\nGoogle groups\nmaxquant Bug reporting\nGlossary\n\nFor additional training, consider attending the annual MaxQuant Summer School. Also watching some MaxQuant videos provides more insight.\n\nFor question we would love to hear from you under Contact\n\n\n2 Bibliography\nFor a deep-dive into the technique and progress behind MaxQuant, many papers of varying degrees of details were published over the last decades. For further reading, you can look at a small list of the more important corner stones of the MaxQuant development history.1 (Note that the paper has a large supplement containing in-depth descriptions of algorithms),2,3,4,5,6 (Note that this paper explains how to run MaxQuant in detail.),7\n\n\n\n\n\nReferences\n\n1. Cox, J. & Mann, M. MaxQuant enables high peptide identification rates, individualized p.p.b.-range mass accuracies and proteome-wide protein quantification. Nature Biotechnology 26, 1367–1372 (2008).\n\n\n2. Cox, J., Michalski, A. & Mann, M. Software Lock Mass by Two-Dimensional Minimization of Peptide Mass Errors. Journal of the American Society for Mass Spectrometry 22, 1373–1380 (2011).\n\n\n3. Schaab, C., Geiger, T., Stoehr, G., Cox, J. & Mann, M. Analysis of High Accuracy, Quantitative Proteomics Data in the MaxQB Database. Molecular & Cellular Proteomics 11, M111.014068 (2012).\n\n\n4. Cox, J. et al. Accurate Proteome-wide Label-free Quantification by Delayed Normalization and Maximal Peptide Ratio Extraction, Termed MaxLFQ. Molecular & Cellular Proteomics 13, 2513–2526 (2014).\n\n\n5. Tyanova, S. et al. Visualization of LC-MS/MS proteomics data in MaxQuant. PROTEOMICS 15, 1453–1456 (2015).\n\n\n6. Tyanova, S., Temu, T. & Cox, J. The MaxQuant computational platform for mass spectrometry-based shotgun proteomics. Nature Protocols 11, 2301–2319 (2016).\n\n\n7. Sinitcyn, P. et al. MaxQuant goes Linux. Nature Methods 15, 401–401 (2018)."
+    "text": "Type: - Matrix Processing\nHeading: - Rearrange\nSource code: ExpandMultiNumeric.cs"
   },
   {
-    "objectID": "andromeda_tutorial.html",
-    "href": "andromeda_tutorial.html",
-    "title": "Andromeda Tutorial",
-    "section": "",
-    "text": "Tutorials explaining how to use the Andromeda search tool can be found in our YouTube channel.\nA few examples are listed below:\nConfiguration of the Andromeda search engine\nFrom our online MaxQunat Summer in 2021\n\nAndromeda search engine\nFrom our 2018 MaxQunat Summer in Madison\n\nTutorial - Configuration of the Andromeda search engine\nFrom our 2018 MaxQunat Summer in Barcelona"
+    "objectID": "expandmultinumeric.html#multi-numeric-columns",
+    "href": "expandmultinumeric.html#multi-numeric-columns",
+    "title": "Expand Multi Numeric and string columns",
+    "section": "3.1 Multi-numeric columns",
+    "text": "3.1 Multi-numeric columns\nSelected multi-numeric columns that should be expanded using the procedure mentioned in the description section above (default: no columns are selected)."
   },
   {
-    "objectID": "viewer_gettingStarted.html",
-    "href": "viewer_gettingStarted.html",
-    "title": "Viewer - Getting started",
-    "section": "",
-    "text": "The Viewer module can either be used to get some prior information out of loaded raw files or to find some follow up hypotheses after raw files have already been processed.\n\n1 Raw files prior processing\nTo view MS spectra of raw files, load the files using the Load (to load single files) or Load folder (to load a whole folder) options.\n\n\n\nFigure 1: Load raw files\n\n\n\n\n2 Raw files post processing with MaxQuant\nFile organization is important for the correct display of annotated spectra. Raw files should be in the same folder as all index files, the mqpar.xml file and all output folders created by MaxQuant during the processing (that includes the combined folder). The easiest way to load the entire data is to load the mqpar.xml file. Make sure that the file paths are correct if using this option.\n\n\n\nFigure 2: Load mqpar.xml"
+    "objectID": "expandmultinumeric.html#text-columns",
+    "href": "expandmultinumeric.html#text-columns",
+    "title": "Expand Multi Numeric and string columns",
+    "section": "3.2 Text columns",
+    "text": "3.2 Text columns\nSelected text columns that should be expanded using the procedure mentioned in the description section above (default: no columns are selected)."
   },
   {
-    "objectID": "perseus_instructions.html",
-    "href": "perseus_instructions.html",
-    "title": "Perseus",
+    "objectID": "ngsupload.html",
+    "href": "ngsupload.html",
+    "title": "NGS Upload",
     "section": "",
-    "text": "The Perseus software platform supports biological and biomedical researchers in interpreting protein quantification, interaction and post-translational modification data. Perseus contains a comprehensive portfolio of statistical tools for high-dimensional omics data analysis covering normalization, pattern recognition, time-series analysis, cross-omics comparisons and multiple-hypothesis testing (for an overview see Figure 1). A machine learning module supports the classification and validation of patient groups for diagnosis and prognosis, and it also detects predictive protein signatures. Central to Perseus is a user-friendly, interactive workflow environment that provides complete documentation of computational methods used in a publication(Tyanova, Temu, and Cox 2016)."
+    "text": "Type: - Matrix Upload\nSource code: not public."
   },
   {
-    "objectID": "perseus_instructions.html#report-a-bug",
-    "href": "perseus_instructions.html#report-a-bug",
-    "title": "Perseus",
-    "section": "4.1 Report a bug",
-    "text": "4.1 Report a bug\nFor question we would love to hear from you under Contact"
+    "objectID": "ngsupload.html#experiment",
+    "href": "ngsupload.html#experiment",
+    "title": "NGS Upload",
+    "section": "4.1 Experiment",
+    "text": "4.1 Experiment\nIt specifies the type of NGS experiment the data is derived from (default: RNA sequencing and ribosome profiling)."
+  },
+  {
+    "objectID": "ngsupload.html#files",
+    "href": "ngsupload.html#files",
+    "title": "NGS Upload",
+    "section": "4.2 Files",
+    "text": "4.2 Files\nWith the two buttons “Add file” and “Remove file” it is possible to select BAM Binary-sequence Alignment Format files. This format is generally used as a compact way to save an alignment and at the same time allowing efficient random access.\nPerseus doesn’t require an index file."
+  },
+  {
+    "objectID": "ngsupload.html#strand-specificity",
+    "href": "ngsupload.html#strand-specificity",
+    "title": "NGS Upload",
+    "section": "4.3 Strand specificity",
+    "text": "4.3 Strand specificity\nIt describes which RNA library preparation method was used. Depending on this, reads will mostly be aligned to the same (sense) or opposite (anti-sense) strand as the feature. Alternatively, reads can be aligned to both strands (not stranded).\nLet’s demonstrate an expected distribution of reads according to an imaginary gene, consisting of one transcript, using each type of strand specificity. All reads marked red are those which we will take into account. Reads marked grey will be excluded from the coverage calculation.\n\nWe rule out reads with a mark because there is no intersection between them and the gene.\nAlso, we skip b marked reads because they have an opposite direction to that which we expect.\nLastly, we eliminate reads which don’t fit with the annotation (c) although such reads can potentially be evidence for another isoform of the gene.\n\n\n\n\nFigure 1: Stranded Single End Reads. Expected distribution of reads in a case of stranded and sense assay\n\n\n\n\n\nFigure 2: Stranded (anti-sense). Expected distribution of reads in a case of stranded and anti-sense assay\n\n\n\n\n\nFigure 3: Not-Stranded reads. Expected distribution of reads in a case of non-stranded assay\n\n\nPaired end sequencing produces two reads from one fragment and they should be from different strands (if reads is aligned to the same strand, we exclude such pairs).\nFor simplicity of visualization let’s represent paired end reads like this (Figure 4)\n\n\n\nFigure 4: Paired-end reads\n\n\nWe represent the paired end read like this for short. Definition of a, b and c marked reads is similar to single end reads’ case.\n\n\n\nFigure 5: Paired End Reads, Stranded (sense) or irst read from the pair is on sense strand. Expected distribution of reads in a case of stranded and sense assay\n\n\n\n\n\nFigure 6: Stranded (anti-sense)or first read is on anti-sense strand. Expected distribution of reads in a case of stranded and anti-sense assay\n\n\n\n\n\nFigure 7: Not-Stranded. Expected distribution of reads in a case of non-stranded assay\n\n\nIt’s worth to notice that for paired end reads the Persues by default calculates number of fragments for each gene, in other words it doesn’t count twice two reads of one pair.\nHint: In case the experimental design isn’t known, we recommend to use “Not stranded” as “Strand specificity”."
+  },
+  {
+    "objectID": "ngsupload.html#genome-annotation",
+    "href": "ngsupload.html#genome-annotation",
+    "title": "NGS Upload",
+    "section": "4.4 Genome annotation",
+    "text": "4.4 Genome annotation\nCurrently the plugin supports GTF file format containing coordinates of genome regions for which the coverage will be calculated. We strongly recommend to download an annotation from the ensemble FTP server.\nGTF (General Feature Format): GTF file can start from several browser/track lines (information specific to genome browser) and comment lines (line should begin with the # character). The rest of the file consists of one line per feature, each consists of nine columns\n\nseqname - name of chromosome of scaffold\nsource - name of the program that generated this feature, or the data source (database or project name)\nfeature - the current version of Perseus takes into account just “cds” and “exon” features\nstart - start position of the feature (1-based coordinate)\nend - end position of the feature (1-based coordinate)\nscore - a floating point value\nstrand - valid entries include ‘+’ (forward) or ‘-’ (reverse)\nattributes - a semicolon-separated list of tag-value pairs\n\n“empty” columns are denoted with a “.”. Each line with “cds” and “exon” feature should contain “gene_id” or “transcript_id” tags."
+  },
+  {
+    "objectID": "ngsupload.html#file",
+    "href": "ngsupload.html#file",
+    "title": "NGS Upload",
+    "section": "4.5 File",
+    "text": "4.5 File\nSpecified file path to the genome annotation."
+  },
+  {
+    "objectID": "ngsupload.html#feature-type-name",
+    "href": "ngsupload.html#feature-type-name",
+    "title": "NGS Upload",
+    "section": "4.6 Feature type name",
+    "text": "4.6 Feature type name\nIt is possible to specify a feature name that will be used (third column of GTF).\nHint: It makes sense to set “Feature type name” parameter to “Exons” for RNA-seq analysis and choose “CDS” for ribosome profiling."
+  },
+  {
+    "objectID": "ngsupload.html#number-of-threads",
+    "href": "ngsupload.html#number-of-threads",
+    "title": "NGS Upload",
+    "section": "4.7 Number of threads",
+    "text": "4.7 Number of threads\nSpecifies the number of used threads for uploading NGS data."
+  },
+  {
+    "objectID": "ngsupload.html#calculate-rpkmfpkm",
+    "href": "ngsupload.html#calculate-rpkmfpkm",
+    "title": "NGS Upload",
+    "section": "6.1 Calculate RPKM/FPKM",
+    "text": "6.1 Calculate RPKM/FPKM\n\nUpload bam files to Perseus. The Required annotation (gtf file) can be found on ensemble’ FTP server (annotation should be in agreement with version of genome which was used for alignment). For the example we took publically available RNA-seq data of cultured primary human lung fibroblast which done in two replicates GSM759890 and GSM759891\nFilter rows based on categorical ‘Gene biotype’ column\nselect just protein_coding group.\nMake normalization dividing columns by $sum(Normalization) -&gt; Divide $\nBy definition of RPKM, divide previous result by gene length, multiply on \\(10^9\\) and finally take the \\(log_2(Basic -&gt; Combine\\ main\\ columns)\\).\nTo get TPM, normalise columns of RPKM/FPKM by sum and multiply on \\(10^6\\) .\n\n\n\n\nFigure 8: Upload bam files to Perseus"
+  },
+  {
+    "objectID": "addnoise.html",
+    "href": "addnoise.html",
+    "title": "Add Noise",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Basic (Processing)\nSource code: AddNoise.cs"
+  },
+  {
+    "objectID": "addnoise.html#standard-deviation",
+    "href": "addnoise.html#standard-deviation",
+    "title": "Add Noise",
+    "section": "3.1 Standard deviation",
+    "text": "3.1 Standard deviation\nDefines the standard deviation of the noise distribution that will be added (default: 0.1)."
+  },
+  {
+    "objectID": "sortbycolumn.html",
+    "href": "sortbycolumn.html",
+    "title": "Sort by Column",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Rearrange\nSource code: SortByColumn.cs"
+  },
+  {
+    "objectID": "sortbycolumn.html#column",
+    "href": "sortbycolumn.html#column",
+    "title": "Sort by Column",
+    "section": "3.1 Column",
+    "text": "3.1 Column\nSelected expression/numerical column, whose values should be sorted (default: first expression column in the matrix)."
+  },
+  {
+    "objectID": "sortbycolumn.html#descending",
+    "href": "sortbycolumn.html#descending",
+    "title": "Sort by Column",
+    "section": "3.2 Descending",
+    "text": "3.2 Descending\nIf checked, the matrix is sorted in descending order (largest to smallest value) by the defined expression/numerical column (default: unchecked). By default the matrix is sorted in ascending order (smallest to largest value) by the defined expression/numerical column."
+  },
+  {
+    "objectID": "transpose.html",
+    "href": "transpose.html",
+    "title": "Transpose",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Rearrange\nSource code: Transpose.cs"
+  },
+  {
+    "objectID": "transpose.html#new-column-names",
+    "href": "transpose.html#new-column-names",
+    "title": "Transpose",
+    "section": "3.1 New column names",
+    "text": "3.1 New column names\nSelected text column that specifies the new column names of the transposed matrix (default: first text column in the matrix)."
+  },
+  {
+    "objectID": "transformationproc.html",
+    "href": "transformationproc.html",
+    "title": "Transformation processes",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Basic (Processing)\nSource code: not public.\n\n===== Brief description =====\nAll values in the specified columns are transformed according to the given formula.\nOutput: The output matrix has the same structure as the input matrix. Values in the selected columns will be transformed."
+  },
+  {
+    "objectID": "transformationproc.html#transformation",
+    "href": "transformationproc.html#transformation",
+    "title": "Transformation processes",
+    "section": "2.1 Transformation",
+    "text": "2.1 Transformation\nThe specified transformation formula (default: \\(log_2(x)\\)) that should be applied to all cells in the selected columns. The variable name is \\(x\\). Numbers with \\(.\\) are reagrded decimal point, \\(+\\), \\(-\\), \\(*\\), \\(/\\) and ^ can be used as well as scientific notation (e.g. \\(2.9e^{-15}\\)) is supported. Predefined functions can also be used, whose argument has to be enclosed by round brackets, e.g. \\(sin(2*x)\\)."
+  },
+  {
+    "objectID": "transformationproc.html#columns",
+    "href": "transformationproc.html#columns",
+    "title": "Transformation processes",
+    "section": "2.2 Columns",
+    "text": "2.2 Columns\nSelected expression and/or numerical columns, where the transformation should be applied (default: all columns are selected).\n#Parameter window\n\n\n\nPerseus pop-up window: Basic -&gt; Transform"
+  },
+  {
+    "objectID": "renamecolumns.html",
+    "href": "renamecolumns.html",
+    "title": "Rename Columns",
+    "section": "",
+    "text": "1 General\n\nType: - Matrix Processing\nHeading: - Rearrange\nSource code: RenameColumns.cs\n\n===== Brief description =====\nNew names can be specified for each expression column. The new names are typed in explicitly.\nOutput: Same matrix but with the new expression column names.\n\n\n2 Parameters\nFor each column in the matrix regardless of the type, the name can be changed manually by typing the new name for the column in the predefined text field.\n\n\n3 Parameter window\n\n{{perseus:user:activities:matrixprocessing:rearrange:rearrange-rename_columns-edited.png?direct|Perseus pop-up window: Rearrange -&gt; Rename columns}}"
   },
   {
     "objectID": "Download_Installation.html",
@@ -67,147 +193,210 @@
     "href": "rowcorrelations.html",
     "title": "Row Correlations",
     "section": "",
-    "text": "Defines the measure of correlation that should be calculated between the selected rows (default: Pearson correlation). It can be selected from a list of correlation coefficients:\n\nLog2(Absence-presence enrichment factor)\nAbsence-presence -Log10(p-value)\nNumbers of valid pairs\nValid pairs percentage\nPearson correlation\n-Log10(Pearson p-value)\n-Log10(Pearson p-value) [correlation]\n-Log10(Pearson p-value) [anti-correlation]\nR squared\nSpearman rank correlation\n-Log10(Spearman p-value)\n-Log10(Spearman p-value) [correlation]\n-Log10(Spearman p-value) [anti-correlation]\nKendall rank correlation\nDistance correlation\nMutual information\nEuclidean distance\nManhattan distance\nMaximum distance\n\n\n\n\nSelected categorical/text column that filters the rows of the input matrix (default: ). If  is chosen, all rows of the original matrix will become columns of the correlation matrix .\n\n\n\nFiltering option to only include rows, which match the specified input term(s) in the selected column in “Select columns based on” (default: empty). Inclusion of multiple terms is possible in the predefined field and have to be separated by new lines. Each row is one term.\n\n\n\nSelected categorical/text column that filters the rows of the input matrix (default: ). If  is chosen, all rows of the original matrix will become rows of the correlation matrix .\n\n\n\nFiltering option to only include rows, which match the specified input term(s) in the previously selected column in “Select rows based on” (default: empty). Inclusion of multiple terms is possible in the predefined field and have to be separated by new lines. Each row is one term."
+    "text": "Type: - Matrix Processing\nHeading: - Basic (Processing)\nSource code: not public."
   },
   {
     "objectID": "rowcorrelations.html#type",
     "href": "rowcorrelations.html#type",
     "title": "Row Correlations",
-    "section": "",
-    "text": "Defines the measure of correlation that should be calculated between the selected rows (default: Pearson correlation). It can be selected from a list of correlation coefficients:\n\nLog2(Absence-presence enrichment factor)\nAbsence-presence -Log10(p-value)\nNumbers of valid pairs\nValid pairs percentage\nPearson correlation\n-Log10(Pearson p-value)\n-Log10(Pearson p-value) [correlation]\n-Log10(Pearson p-value) [anti-correlation]\nR squared\nSpearman rank correlation\n-Log10(Spearman p-value)\n-Log10(Spearman p-value) [correlation]\n-Log10(Spearman p-value) [anti-correlation]\nKendall rank correlation\nDistance correlation\nMutual information\nEuclidean distance\nManhattan distance\nMaximum distance"
+    "section": "3.1 Type",
+    "text": "3.1 Type\nDefines the measure of correlation that should be calculated between the selected rows (default: Pearson correlation). It can be selected from a list of correlation coefficients:\n\nLog2(Absence-presence enrichment factor)\nAbsence-presence -Log10(p-value)\nNumbers of valid pairs\nValid pairs percentage\nPearson correlation\n-Log10(Pearson p-value)\n-Log10(Pearson p-value) [correlation]\n-Log10(Pearson p-value) [anti-correlation]\nR squared\nSpearman rank correlation\n-Log10(Spearman p-value)\n-Log10(Spearman p-value) [correlation]\n-Log10(Spearman p-value) [anti-correlation]\nKendall rank correlation\nDistance correlation\nMutual information\nEuclidean distance\nManhattan distance\nMaximum distance"
   },
   {
     "objectID": "rowcorrelations.html#select-columns-based-on",
     "href": "rowcorrelations.html#select-columns-based-on",
     "title": "Row Correlations",
-    "section": "",
-    "text": "Selected categorical/text column that filters the rows of the input matrix (default: ). If  is chosen, all rows of the original matrix will become columns of the correlation matrix ."
+    "section": "3.2 Select columns based on",
+    "text": "3.2 Select columns based on\nSelected categorical/text column that filters the rows of the input matrix (default: ). If  is chosen, all rows of the original matrix will become columns of the correlation matrix ."
   },
   {
     "objectID": "rowcorrelations.html#column-terms",
     "href": "rowcorrelations.html#column-terms",
     "title": "Row Correlations",
-    "section": "",
-    "text": "Filtering option to only include rows, which match the specified input term(s) in the selected column in “Select columns based on” (default: empty). Inclusion of multiple terms is possible in the predefined field and have to be separated by new lines. Each row is one term."
+    "section": "3.3 Column terms",
+    "text": "3.3 Column terms\nFiltering option to only include rows, which match the specified input term(s) in the selected column in “Select columns based on” (default: empty). Inclusion of multiple terms is possible in the predefined field and have to be separated by new lines. Each row is one term."
   },
   {
     "objectID": "rowcorrelations.html#select-rows-based-on",
     "href": "rowcorrelations.html#select-rows-based-on",
     "title": "Row Correlations",
-    "section": "",
-    "text": "Selected categorical/text column that filters the rows of the input matrix (default: ). If  is chosen, all rows of the original matrix will become rows of the correlation matrix ."
+    "section": "3.4 Select rows based on",
+    "text": "3.4 Select rows based on\nSelected categorical/text column that filters the rows of the input matrix (default: ). If  is chosen, all rows of the original matrix will become rows of the correlation matrix ."
   },
   {
     "objectID": "rowcorrelations.html#row-terms",
     "href": "rowcorrelations.html#row-terms",
     "title": "Row Correlations",
-    "section": "",
-    "text": "Filtering option to only include rows, which match the specified input term(s) in the previously selected column in “Select rows based on” (default: empty). Inclusion of multiple terms is possible in the predefined field and have to be separated by new lines. Each row is one term."
+    "section": "3.5 Row terms",
+    "text": "3.5 Row terms\nFiltering option to only include rows, which match the specified input term(s) in the previously selected column in “Select rows based on” (default: empty). Inclusion of multiple terms is possible in the predefined field and have to be separated by new lines. Each row is one term."
   },
   {
-    "objectID": "andromeda_configurations.html",
-    "href": "andromeda_configurations.html",
-    "title": "Andromeda Configurations",
+    "objectID": "summarystatisticscolumns.html",
+    "href": "summarystatisticscolumns.html",
+    "title": "Summary statistics (columns)",
     "section": "",
-    "text": "The Andromeda search engine1 offers a large variety of already defined modifications, proteases and sequence databases. But sometimes for specialized studies additional configurations are necessary. Therefore it is possible to configure the search engine according to special needs. You can add, remove, duplicate or modify modifications, enzymes and protein sequence databases. Also rearranging the order in the lists is possible to e.g. easier compare things. This rearrangements have no effect on the later analyses.\nOn the following pages are step by step descriptions how to configure…\n\nAndromeda modifications table\nAndromeda Enzymes - the proteases table\nAndromeda Protdatabases - the (protein) sequence databases table\n\nFor question we would love to hear from you under Contact\n\n\n\n\nReferences\n\n1. Cox, J. et al. Andromeda: A Peptide Search Engine Integrated into the MaxQuant Environment. Journal of Proteome Research 10, 1794–1805 (2011)."
+    "text": "Type: - Matrix Processing\nHeading: - Basic (Processing)\nSource code: SummaryStatisticsColumns.cs"
   },
   {
-    "objectID": "significanceb.html",
-    "href": "significanceb.html",
-    "title": "Significance B",
-    "section": "",
-    "text": "Selected expression columns containing the ratios for which “Significance B” should be calculated (default: no columns are selected).\nHint: The number of selected ratio columns must be the same as the number of selected intensity columns.\n\n\n\nSelected expression/numerical columns containing the intensities for which “Significance B” should be calculated (default: no columns are selected).\nHint: The number of selected intensity columns must be the same as the number of selected ratio columns.\n\n\n\nTo apply a two-sided test, where the null hypothesis can be rejected regardless of the direction of the effect “both” has to be selected (default). “left” and “right” are the respective one-sided tests.\n\n\nThe truncation can be based on p-values or the Benjamini-Hochberg correction for multiple hypothesis testing (default: Benjamini-Hochberg FDR). Rows with a test result below a specified value (parameter below) are reported as significant.\n\n\n\n\nBased on a specified threshold a specific row is reported as significant (default: 0.05). Depending on the chosen truncation score this threshold value is applied to the p-value or to the Benjamini-Hochberg FDR."
+    "objectID": "summarystatisticscolumns.html#columns",
+    "href": "summarystatisticscolumns.html#columns",
+    "title": "Summary statistics (columns)",
+    "section": "3.1 Columns",
+    "text": "3.1 Columns\nSelected expression/numerical columns for which the later defined quantities should be calculated."
   },
   {
-    "objectID": "significanceb.html#ratio-columns",
-    "href": "significanceb.html#ratio-columns",
-    "title": "Significance B",
-    "section": "",
-    "text": "Selected expression columns containing the ratios for which “Significance B” should be calculated (default: no columns are selected).\nHint: The number of selected ratio columns must be the same as the number of selected intensity columns."
+    "objectID": "summarystatisticscolumns.html#calculate",
+    "href": "summarystatisticscolumns.html#calculate",
+    "title": "Summary statistics (columns)",
+    "section": "3.2 Calculate",
+    "text": "3.2 Calculate\nList of quantities that are calculated for the selected columns (default: all of the below listed quantities are selected). The available quantities are:\n\nSum\nMean\nTurkey biweight\nStandard deviation\nCoefficient of variation\nMedian absolute deviation\nMinimum\nMaximum\nRange\nValid values\nInter-quartile range\n1st quartile\n3rd quartile\nSkewness\nKurtosis"
   },
   {
-    "objectID": "significanceb.html#intensity-columns",
-    "href": "significanceb.html#intensity-columns",
-    "title": "Significance B",
+    "objectID": "columncorrelations.html",
+    "href": "columncorrelations.html",
+    "title": "Column Correlations",
     "section": "",
-    "text": "Selected expression/numerical columns containing the intensities for which “Significance B” should be calculated (default: no columns are selected).\nHint: The number of selected intensity columns must be the same as the number of selected ratio columns."
+    "text": "Type: - Matrix Processing\nHeading: - Basic (Processing)\nSource code: not public."
   },
   {
-    "objectID": "significanceb.html#side",
-    "href": "significanceb.html#side",
-    "title": "Significance B",
-    "section": "",
-    "text": "To apply a two-sided test, where the null hypothesis can be rejected regardless of the direction of the effect “both” has to be selected (default). “left” and “right” are the respective one-sided tests.\n\n\nThe truncation can be based on p-values or the Benjamini-Hochberg correction for multiple hypothesis testing (default: Benjamini-Hochberg FDR). Rows with a test result below a specified value (parameter below) are reported as significant."
+    "objectID": "columncorrelations.html#type",
+    "href": "columncorrelations.html#type",
+    "title": "Column Correlations",
+    "section": "3.1 Type",
+    "text": "3.1 Type\nDefines the measure of correlation that should be calculated between the selected columns (default: Pearson correlation). It can be selected from a list of correlation coefficients:\n\nLog2(Absence-presence enrichment factor)\nAbsence-presence -Log10(p-value)\nNumbers of valid pairs\nValid pairs percentage\nPearson correlation\n-Log10(Pearson p-value)\n-Log10(Pearson p-value) [correlation]\n-Log10(Pearson p-value) [anti-correlation]\nR squared\nSpearman rank correlation\n-Log10(Spearman p-value)\n-Log10(Spearman p-value) [correlation]\n-Log10(Spearman p-value) [anti-correlation]\nKendall rank correlation\nDistance correlation\nMutual information\nEuclidean distance\nManhattan distance\nMaximum distance"
   },
   {
-    "objectID": "significanceb.html#threshold-value",
-    "href": "significanceb.html#threshold-value",
-    "title": "Significance B",
-    "section": "",
-    "text": "Based on a specified threshold a specific row is reported as significant (default: 0.05). Depending on the chosen truncation score this threshold value is applied to the p-value or to the Benjamini-Hochberg FDR."
+    "objectID": "columncorrelations.html#rows",
+    "href": "columncorrelations.html#rows",
+    "title": "Column Correlations",
+    "section": "3.2 Rows",
+    "text": "3.2 Rows\nSelected expression/numerical columns that will be the rows of the generated correlation matrix (default: all expression columns are selected)."
   },
   {
-    "objectID": "binaryupload.html",
-    "href": "binaryupload.html",
-    "title": "Binary Upload",
-    "section": "",
-    "text": "Specifies the file path of the binary file that should be uploaded (default: empty). It can be specified manually by typing in the path or the file can be browsed by using the “Select” button. All file extensions are supported."
+    "objectID": "columncorrelations.html#columns",
+    "href": "columncorrelations.html#columns",
+    "title": "Column Correlations",
+    "section": "3.3 Columns",
+    "text": "3.3 Columns\nSelected expression/numerical columns that will be the columns of the generated correlation matrix (default: all expression columns are selected)."
   },
   {
-    "objectID": "binaryupload.html#file",
-    "href": "binaryupload.html#file",
-    "title": "Binary Upload",
+    "objectID": "andromeda_protdatabases.html",
+    "href": "andromeda_protdatabases.html",
+    "title": "Andromeda Protdatabases - the (protein) sequence databases table",
     "section": "",
-    "text": "Specifies the file path of the binary file that should be uploaded (default: empty). It can be specified manually by typing in the path or the file can be browsed by using the “Select” button. All file extensions are supported."
+    "text": "For the here shown step by step description Andromeda was used within MaxQuant (version 1.5.3.8).\n\n\nOpen MaxQuant and go to the Andromeda configuration tab. There select the Data type “Sequence databases” (s. Figure 1).\n\n\n\nFigure 1: opening the databases table\n\n\n\n\n\nLet’s assume we have to analyze human proteome measurements and we are interested which human database is used and how it is used (see Description on the right hand side of the Andromeda window in Figure 2).\n\n\n\nFigure 2: example human protease DB\n\n\n\n\n\nNow we are assuming that a reviewer asks us to search our human proteome measurements against the tasmanian devil proteome ( Sarcophilus harrisii ) - for some reason - and we downloaded the corresponding fasta file from Uniprot.\nAfter downloading the file, we are including the database into MaxQuant. First, click the “Add” button (highlithed in Figure 3). Then a new row will be added at the end of the table and a new sequence database form will appear on the right hand side that can be edited.\n\n\n\nFigure 3: Adding a new entry to database\n\n\nThen you just have to fill in the form by defining the fasta file that should be used, the parsing rule that should be applied to retrieve the identifiers, the source of the fasta file, the taxonomy and the organism name. To define the parsing rule regular expressions are used. A regular expression is a sequence of characters that forms a search pattern with a special syntax. A good general introduction can be found, as always, on Wikipedia. If you already know generally how regular expressions work, you may only need to glance at a this Quick Reference or at an even quicker Cheat Sheet. Also you don’t have to know the taxonomy of your organism, just type in the name and use the arrows in the taxonomy line and MaxQuant will complete the form.\nDon’t forget to click the “Modify table” button (Figure 4) when you’re done to transfer the changes you made in the form to the table on the left. And to save the table you have to click the “Save changes” button.\nTo have the added sequence database available in MaxQuant you have to open a new MaxQuant window.\n\n\n\nFigure 4: Saving the entry in the database"
+  },
+  {
+    "objectID": "andromeda_protdatabases.html#open-the-sequence-databases-table",
+    "href": "andromeda_protdatabases.html#open-the-sequence-databases-table",
+    "title": "Andromeda Protdatabases - the (protein) sequence databases table",
+    "section": "",
+    "text": "Open MaxQuant and go to the Andromeda configuration tab. There select the Data type “Sequence databases” (s. Figure 1).\n\n\n\nFigure 1: opening the databases table"
+  },
+  {
+    "objectID": "andromeda_protdatabases.html#viewing-an-example",
+    "href": "andromeda_protdatabases.html#viewing-an-example",
+    "title": "Andromeda Protdatabases - the (protein) sequence databases table",
+    "section": "",
+    "text": "Let’s assume we have to analyze human proteome measurements and we are interested which human database is used and how it is used (see Description on the right hand side of the Andromeda window in Figure 2).\n\n\n\nFigure 2: example human protease DB"
+  },
+  {
+    "objectID": "andromeda_protdatabases.html#adding-a-new-database",
+    "href": "andromeda_protdatabases.html#adding-a-new-database",
+    "title": "Andromeda Protdatabases - the (protein) sequence databases table",
+    "section": "",
+    "text": "Now we are assuming that a reviewer asks us to search our human proteome measurements against the tasmanian devil proteome ( Sarcophilus harrisii ) - for some reason - and we downloaded the corresponding fasta file from Uniprot.\nAfter downloading the file, we are including the database into MaxQuant. First, click the “Add” button (highlithed in Figure 3). Then a new row will be added at the end of the table and a new sequence database form will appear on the right hand side that can be edited.\n\n\n\nFigure 3: Adding a new entry to database\n\n\nThen you just have to fill in the form by defining the fasta file that should be used, the parsing rule that should be applied to retrieve the identifiers, the source of the fasta file, the taxonomy and the organism name. To define the parsing rule regular expressions are used. A regular expression is a sequence of characters that forms a search pattern with a special syntax. A good general introduction can be found, as always, on Wikipedia. If you already know generally how regular expressions work, you may only need to glance at a this Quick Reference or at an even quicker Cheat Sheet. Also you don’t have to know the taxonomy of your organism, just type in the name and use the arrows in the taxonomy line and MaxQuant will complete the form.\nDon’t forget to click the “Modify table” button (Figure 4) when you’re done to transfer the changes you made in the form to the table on the left. And to save the table you have to click the “Save changes” button.\nTo have the added sequence database available in MaxQuant you have to open a new MaxQuant window.\n\n\n\nFigure 4: Saving the entry in the database"
+  },
+  {
+    "objectID": "changecolumntype.html",
+    "href": "changecolumntype.html",
+    "title": "Change Column type",
+    "section": "",
+    "text": "Type: -Matrix Processing\nHeading: - Rearrange\nSource code: ChangeColumnType.cs"
+  },
+  {
+    "objectID": "changecolumntype.html#find-what",
+    "href": "changecolumntype.html#find-what",
+    "title": "Change Column type",
+    "section": "3.1 Find what",
+    "text": "3.1 Find what\nSpecified text/term that is searched in a selected text column (default: empty)."
+  },
+  {
+    "objectID": "changecolumntype.html#look-in",
+    "href": "changecolumntype.html#look-in",
+    "title": "Change Column type",
+    "section": "3.2 Look in",
+    "text": "3.2 Look in\nSelected text column that should be searched for the specified term (default: first text column of the matrix)."
+  },
+  {
+    "objectID": "changecolumntype.html#match-case",
+    "href": "changecolumntype.html#match-case",
+    "title": "Change Column type",
+    "section": "3.3 Match case",
+    "text": "3.3 Match case\nThe cells of the text column will be searched for a matching substring (default: checked). The results will be in a new generated categorical column called “Search: original column name”. “\\(+\\)” indicates, whether a match was successful."
+  },
+  {
+    "objectID": "changecolumntype.html#match-whole-word",
+    "href": "changecolumntype.html#match-whole-word",
+    "title": "Change Column type",
+    "section": "3.4 Match whole word",
+    "text": "3.4 Match whole word\nThe cells of the text column will be searched to match the whole word of the specified term (default: unchecked). The results will be in a new generated categorical column called “Search: original column name”. “\\(+\\)” indicates, whether a match was successful."
   },
   {
     "objectID": "significancea.html",
     "href": "significancea.html",
     "title": "Significance A",
     "section": "",
-    "text": "#Parameters"
+    "text": "Type: - Matrix Processing\nHeading: - Outliers\nSource code: SignificanceA.cs"
   },
   {
     "objectID": "significancea.html#columns",
     "href": "significancea.html#columns",
     "title": "Significance A",
-    "section": "0.1 Columns",
-    "text": "0.1 Columns\nSelected expression columns for which “Significance A” should be calculated (default: no expression columns are selected)."
+    "section": "3.1 Columns",
+    "text": "3.1 Columns\nSelected expression columns for which “Significance A” should be calculated (default: no expression columns are selected)."
   },
   {
     "objectID": "significancea.html#side",
     "href": "significancea.html#side",
     "title": "Significance A",
-    "section": "0.2 Side",
-    "text": "0.2 Side\nTo apply a two-sided test, where the null hypothesis can be rejected regardless of the direction of the effect “both” has to be selected (default). “left” and “right” are the respective one-sided tests."
+    "section": "3.2 Side",
+    "text": "3.2 Side\nTo apply a two-sided test, where the null hypothesis can be rejected regardless of the direction of the effect “both” has to be selected (default). “left” and “right” are the respective one-sided tests."
   },
   {
     "objectID": "significancea.html#use-for-truncation",
     "href": "significancea.html#use-for-truncation",
     "title": "Significance A",
-    "section": "0.3 Use for truncation",
-    "text": "0.3 Use for truncation\nThe truncation can be based on p-values or the Benjamini-Hochberg correction for multiple hypothesis testing (default: Benjamini-Hochberg FDR). Rows with a test result below a specified value (parameter below) are reported as significant."
+    "section": "3.3 Use for truncation",
+    "text": "3.3 Use for truncation\nThe truncation can be based on p-values or the Benjamini-Hochberg correction for multiple hypothesis testing (default: Benjamini-Hochberg FDR). Rows with a test result below a specified value (parameter below) are reported as significant."
   },
   {
     "objectID": "significancea.html#threshold-value",
     "href": "significancea.html#threshold-value",
     "title": "Significance A",
-    "section": "0.4 Threshold value",
-    "text": "0.4 Threshold value\nBased on a specified threshold a specific row is reported as significant (default: 0.05). Depending on the chosen truncation score this threshold value is applied to the p-value or to the Benjamini-Hochberg FDR."
+    "section": "3.4 Threshold value",
+    "text": "3.4 Threshold value\nBased on a specified threshold a specific row is reported as significant (default: 0.05). Depending on the chosen truncation score this threshold value is applied to the p-value or to the Benjamini-Hochberg FDR."
+  },
+  {
+    "objectID": "duplicatecolumns.html",
+    "href": "duplicatecolumns.html",
+    "title": "Duplicate Columns",
+    "section": "",
+    "text": "1 General\n\nType: - Matrix Processing\nHeading: - Rearrange\nSource code: DuplicateColumns.cs\n\n\n\n2 Brief description\nColumns of all types can be duplicated.\nOutput: Same matrix but with duplicated columns added.\n\n\n3 Parameters\nThe selected expression/numerical/multi numerical/categorical/text columns will be duplicated and included in the new generated matrix at the end of each group of column types (default: no columns are selected). The name of the new columns is the old column name with the string “_1” attached to the end.\n\n\n4 Parameter window\n\n\n\nRearrange duplicate columns"
   },
   {
     "objectID": "genericmatrixupload.html",
     "href": "genericmatrixupload.html",
     "title": "Generic Matrix Upload",
     "section": "",
-    "text": "Specifies the file path of the tab separated file that should be uploaded (default: empty). It can be specified manually by typing in the path or the file can be browsed by using the “Select” button.\n\n\n\nEach of the listed columns in the left panel that should be loaded need to be distributed among the five different column types depending on the analysis that should be applied.\nHint: If necessary, column types can also be changed later using Change column type.\n\n\n\n\n\n\nGeneric matrix upload"
+    "text": "Type: - Matrix Upload\nSource code: GenericMatrixUpload.cs"
   },
   {
     "objectID": "genericmatrixupload.html#parameters",
     "href": "genericmatrixupload.html#parameters",
     "title": "Generic Matrix Upload",
-    "section": "",
-    "text": "Specifies the file path of the tab separated file that should be uploaded (default: empty). It can be specified manually by typing in the path or the file can be browsed by using the “Select” button.\n\n\n\nEach of the listed columns in the left panel that should be loaded need to be distributed among the five different column types depending on the analysis that should be applied.\nHint: If necessary, column types can also be changed later using Change column type.\n\n\n\n\n\n\nGeneric matrix upload"
+    "section": "2.1 Parameters",
+    "text": "2.1 Parameters\n\n2.1.1 File\nSpecifies the file path of the tab separated file that should be uploaded (default: empty). It can be specified manually by typing in the path or the file can be browsed by using the “Select” button.\n\n\n2.1.2 Main/Numerical/Categorical/Text/Multi-numerical\nEach of the listed columns in the left panel that should be loaded need to be distributed among the five different column types depending on the analysis that should be applied.\nHint: If necessary, column types can also be changed later using Change column type.\n\n\n2.1.3 Parameter window\n\n\n\nGeneric matrix upload"
   },
   {
     "objectID": "perseus_user_intereface.html",
@@ -228,7 +417,7 @@
     "href": "perseus_user_intereface.html#processing",
     "title": "Perseus User Interface",
     "section": "2 Processing",
-    "text": "2 Processing\n\n2.1 Basic\n\nTransform\nCombine expression columns\nColumn correlation\nRow correlation\nSummary statistics (columns)\nSummary statistics (rows)\nQuantiles\nDensity estimation\nPerformance curve\nClone\nSignificance A\nSignificance B\nAdd noise\n\n\n\n2.2 Rearrange\n* [[perseus:user:activities:matrixprocessing:rearrange:changecolumntype|Change column type]] * [[perseus:user:activities:matrixprocessing:rearrange:renamecolumns|Rename columns]] * [[perseus:user:activities:matrixprocessing:rearrange:renamecolumnsregexp|Rename columns [reg. ex.]]] * [[perseus:user:activities:matrixprocessing:rearrange:combineannotations|Combine annotations]] * [[perseus:user:activities:matrixprocessing:rearrange:duplicatecolumns|Duplicate columns]] * [[perseus:user:activities:matrixprocessing:rearrange:reorderremovecolumns|Reorder/remove columns]] * [[perseus:user:activities:matrixprocessing:rearrange:removeemptycolumns|Remove empty columns]] * [[perseus:user:activities:matrixprocessing:rearrange:transpose|Transpose]] * [[perseus:user:activities:matrixprocessing:rearrange:sortbycolumn|Sort by column]] * [[perseus:user:activities:matrixprocessing:rearrange:expandmultinumeric|Expand multi-numeric and string columns]] * [[perseus:user:activities:matrixprocessing:rearrange:uniquevalues|Unique values]] * [[perseus:user:activities:matrixprocessing:rearrange:convertmultinumeric|Convert multi-numeric column]] * [[perseus:user:activities:matrixprocessing:rearrange:combinecategoricalcolumns|Combine categorical columns]] * [[perseus:user:activities:matrixprocessing:rearrange:processtextcolumns|Process text column]] * [[perseus:user:activities:matrixprocessing:rearrange:searchtextcolumns|Search text column]]\n\n\n2.3 Normalization\n[[perseus:user:activities:matrixprocessing:normalization:zscore|Z-score]] * [[perseus:user:activities:matrixprocessing:normalization:rank|Rank]] * [[perseus:user:activities:matrixprocessing:normalization:unitvector|Unit vectors]] * [[perseus:user:activities:matrixprocessing:normalization:scaletointerval|Scale to interval]] * [[perseus:user:activities:matrixprocessing:normalization:widthadjustment|Width adjustment]] * [[perseus:user:activities:matrixprocessing:normalization:subtract|Subtract]] * [[perseus:user:activities:matrixprocessing:normalization:divide|Divide]] * [[perseus:user:activities:matrixprocessing:normalization:normalizebycolumn|Modify by column]] * [[perseus:user:activities:matrixprocessing:normalization:subtractrowcluster|Subtract row cluster]] * [[perseus:user:activities:matrixprocessing:normalization:unzscore|Un-Z-score]]\n\n\n2.4 Filter rows\n[[perseus:user:activities:matrixprocessing:filterrows:filtercategoricalcolumn|Filter rows based on categorical column]] * [[perseus:user:activities:matrixprocessing:filterrows:filternumericalcolumn|Filter rows based on numerical/expression column]] * [[perseus:user:activities:matrixprocessing:filterrows:filtertextualcolumn|Filter rows based on text column]] * [[perseus:user:activities:matrixprocessing:filterrows:filtervalidvaluesrows|Filter rows based on valid values]] * [[perseus:user:activities:matrixprocessing:filterrows:filterrandomrows|Filter rows based on random sampling]]\n\n\n2.5 Filter columns\n[[perseus:user:activities:matrixprocessing:filtercolumns:filtercategoricalrow|Filter rows based on categorical row]] * [[perseus:user:activities:matrixprocessing:filterrows:filtervalidvaluesrows|Filter rows based on valid values]]\n&lt;– –&gt; Quality * [[perseus:user:activities:matrixprocessing:quality:createqualitymatrix|Create quality matrix]] * [[perseus:user:activities:matrixprocessing:quality:filterquality|Filter quality]] * [[perseus:user:activities:matrixprocessing:quality:converttonan|Convert to NaN]]\n\n\n2.6 Annot. columns\n[[perseus:user:activities:matrixprocessing:annotcolumns:addannotationtomatrix|Add annotation]] * [[perseus:user:activities:matrixprocessing:annotcolumns:backtobaseidentifiers|To base identifiers]] * [[perseus:user:activities:matrixprocessing:annotcolumns:fisherexacttestproces|Fisher exact test]] * [[perseus:user:activities:matrixprocessing:annotcolumns:averagecategories|Average categories]] * [[perseus:user:activities:matrixprocessing:annotcolumns:categorycounting|Category counting]] * [[perseus:user:activities:matrixprocessing:annotcolumns:onedimannotationenrichment|1D annotation enrichment]] * [[perseus:user:activities:matrixprocessing:annotcolumns:twodimannotationenrichment|2D annotation enrichment]]\n\n\n2.7 Annot. rows\n[[perseus:user:activities:matrixprocessing:annotrows:createcategoricalannotrow|Categorical annotation rows]] * [[perseus:user:activities:matrixprocessing:annotrows:createnumericalannotrow|Numerical annotation rows]] * [[perseus:user:activities:matrixprocessing:annotrows:averagegroups|Average groups]] * [[perseus:user:activities:matrixprocessing:annotrows:jointermsincategoricalrow|Join terms in categorical row]]\n\n\n2.8 Tests\n\n[[perseus:user:activities:matrixprocessing:tests:onesampletestprocessing|One-sample tests]]\n[[perseus:user:activities:matrixprocessing:tests:twosampletestprocessing|Two-samples tests]]\n[[perseus:user:activities:matrixprocessing:tests:multiplesampletestprocessing|Multiple-samples tests]]\n[[perseus:user:activities:matrixprocessing:tests:twowayanova|Two-way ANOVA]]\n\n\n\n2.9 Imputation\n\n[[perseus:user:activities:matrixprocessing:imputation:replacemissingfromgaussian|Replace missing values from normal distribution]]\n[[perseus:user:activities:matrixprocessing:imputation:replaceimputedbynan|Replace imputed values by NaN]]\n[[perseus:user:activities:matrixprocessing:imputation:replacemissingbyconstant|Replace missing values by constant]]\n\n\n\n2.10 Modifications\n[[perseus:user:activities:matrixprocessing:modifications:expandsitetable|Expand site table]] * [[perseus:user:activities:matrixprocessing:modifications:addlinearmotifs|Add linear motifs]] * [[perseus:user:activities:matrixprocessing:modifications:addmodificationcounts|Add modification counts]] * [[perseus:user:activities:matrixprocessing:modifications:addknownsites|Add known sites]] * [[perseus:user:activities:matrixprocessing:modifications:kinasesubstraterelations|Kinase-substrate relations]] * [[perseus:user:activities:matrixprocessing:modifications:addsequencefeatures|Add sequence features]] * [[perseus:user:activities:matrixprocessing:modifications:addregulatorysites|Add regulatory sites]] * [[perseus:user:activities:matrixprocessing:modifications:shortenmotifs|Shorten motif length]]\n\n\n2.11 Clustering\n[[perseus:user:activities:matrixprocessing:clustering:genericclusteringproc|Generic clustering]]"
+    "text": "2 Processing\n\n2.1 Basic\n\nTransform\nCombine expression columns\nColumn correlation\nRow correlation\nSummary statistics (columns)\nSummary statistics (rows)\nQuantiles\nDensity estimation\nPerformance curve\nClone\nSignificance A\nSignificance B\nAdd noise\n\n\n\n2.2 Rearrange\n\nChange column type\nRename columns\nRename columns (reg. ex.)\nCombine annotations\nDuplicate columns\nReorder/remove columns\nRemove empty columns\nTranspose\nSort by column\nExpand multi-numeric and string columns\nUnique values\nConvert multi-numeric column\nCombine categorical columns\nProcess text column\nSearch text column\n\n\n\n2.3 Normalization\n[[perseus:user:activities:matrixprocessing:normalization:zscore|Z-score]] * [[perseus:user:activities:matrixprocessing:normalization:rank|Rank]] * [[perseus:user:activities:matrixprocessing:normalization:unitvector|Unit vectors]] * [[perseus:user:activities:matrixprocessing:normalization:scaletointerval|Scale to interval]] * [[perseus:user:activities:matrixprocessing:normalization:widthadjustment|Width adjustment]] * [[perseus:user:activities:matrixprocessing:normalization:subtract|Subtract]] * [[perseus:user:activities:matrixprocessing:normalization:divide|Divide]] * [[perseus:user:activities:matrixprocessing:normalization:normalizebycolumn|Modify by column]] * [[perseus:user:activities:matrixprocessing:normalization:subtractrowcluster|Subtract row cluster]] * [[perseus:user:activities:matrixprocessing:normalization:unzscore|Un-Z-score]]\n\n\n2.4 Filter rows\n[[perseus:user:activities:matrixprocessing:filterrows:filtercategoricalcolumn|Filter rows based on categorical column]] * [[perseus:user:activities:matrixprocessing:filterrows:filternumericalcolumn|Filter rows based on numerical/expression column]] * [[perseus:user:activities:matrixprocessing:filterrows:filtertextualcolumn|Filter rows based on text column]] * [[perseus:user:activities:matrixprocessing:filterrows:filtervalidvaluesrows|Filter rows based on valid values]] * [[perseus:user:activities:matrixprocessing:filterrows:filterrandomrows|Filter rows based on random sampling]]\n\n\n2.5 Filter columns\n[[perseus:user:activities:matrixprocessing:filtercolumns:filtercategoricalrow|Filter rows based on categorical row]] * [[perseus:user:activities:matrixprocessing:filterrows:filtervalidvaluesrows|Filter rows based on valid values]]\n&lt;– –&gt; Quality * [[perseus:user:activities:matrixprocessing:quality:createqualitymatrix|Create quality matrix]] * [[perseus:user:activities:matrixprocessing:quality:filterquality|Filter quality]] * [[perseus:user:activities:matrixprocessing:quality:converttonan|Convert to NaN]]\n\n\n2.6 Annot. columns\n[[perseus:user:activities:matrixprocessing:annotcolumns:addannotationtomatrix|Add annotation]] * [[perseus:user:activities:matrixprocessing:annotcolumns:backtobaseidentifiers|To base identifiers]] * [[perseus:user:activities:matrixprocessing:annotcolumns:fisherexacttestproces|Fisher exact test]] * [[perseus:user:activities:matrixprocessing:annotcolumns:averagecategories|Average categories]] * [[perseus:user:activities:matrixprocessing:annotcolumns:categorycounting|Category counting]] * [[perseus:user:activities:matrixprocessing:annotcolumns:onedimannotationenrichment|1D annotation enrichment]] * [[perseus:user:activities:matrixprocessing:annotcolumns:twodimannotationenrichment|2D annotation enrichment]]\n\n\n2.7 Annot. rows\n[[perseus:user:activities:matrixprocessing:annotrows:createcategoricalannotrow|Categorical annotation rows]] * [[perseus:user:activities:matrixprocessing:annotrows:createnumericalannotrow|Numerical annotation rows]] * [[perseus:user:activities:matrixprocessing:annotrows:averagegroups|Average groups]] * [[perseus:user:activities:matrixprocessing:annotrows:jointermsincategoricalrow|Join terms in categorical row]]\n\n\n2.8 Tests\n\n[[perseus:user:activities:matrixprocessing:tests:onesampletestprocessing|One-sample tests]]\n[[perseus:user:activities:matrixprocessing:tests:twosampletestprocessing|Two-samples tests]]\n[[perseus:user:activities:matrixprocessing:tests:multiplesampletestprocessing|Multiple-samples tests]]\n[[perseus:user:activities:matrixprocessing:tests:twowayanova|Two-way ANOVA]]\n\n\n\n2.9 Imputation\n\n[[perseus:user:activities:matrixprocessing:imputation:replacemissingfromgaussian|Replace missing values from normal distribution]]\n[[perseus:user:activities:matrixprocessing:imputation:replaceimputedbynan|Replace imputed values by NaN]]\n[[perseus:user:activities:matrixprocessing:imputation:replacemissingbyconstant|Replace missing values by constant]]\n\n\n\n2.10 Modifications\n[[perseus:user:activities:matrixprocessing:modifications:expandsitetable|Expand site table]] * [[perseus:user:activities:matrixprocessing:modifications:addlinearmotifs|Add linear motifs]] * [[perseus:user:activities:matrixprocessing:modifications:addmodificationcounts|Add modification counts]] * [[perseus:user:activities:matrixprocessing:modifications:addknownsites|Add known sites]] * [[perseus:user:activities:matrixprocessing:modifications:kinasesubstraterelations|Kinase-substrate relations]] * [[perseus:user:activities:matrixprocessing:modifications:addsequencefeatures|Add sequence features]] * [[perseus:user:activities:matrixprocessing:modifications:addregulatorysites|Add regulatory sites]] * [[perseus:user:activities:matrixprocessing:modifications:shortenmotifs|Shorten motif length]]\n\n\n2.11 Clustering\n[[perseus:user:activities:matrixprocessing:clustering:genericclusteringproc|Generic clustering]]"
   },
   {
     "objectID": "perseus_user_intereface.html#analysis",
@@ -256,7 +445,7 @@
     "href": "cloneprocessing.html",
     "title": "Clone Processing",
     "section": "",
-    "text": "1 Parameters\n“Clone” has no parameters."
+    "text": "1 General =====\n\nType: - Matrix Processing\nHeading: - Basic (Processing)\nSource code: CloneProcessing.cs\n\n\n\n2 Brief description\nA copy of the input matrix is generated.\nOutput: Same as input matrix.\n\n\n\n3 Parameters\n“Clone” has no parameters."
   },
   {
     "objectID": "rawFilesTab.html",
@@ -292,6 +481,13 @@
     "title": "Raw files tab",
     "section": "4 Edit experimental design group",
     "text": "4 Edit experimental design group\n\n4.1 Set experiment button\nNormally the experiment is left blank when raw data is loaded. The exception is when data is loaded recursively from a folder, in which case MaxQuant generates an value for the experiment from the paths to the files. To set or change the value of experiment, choose one or more files and press the Set experiment button. You will see a pop-up window where you can enter the new value.\n\n\n4.2 Set parameter group button\nThis button allows you to set or change the value of the parameter group for the selected files to anything from Group 0 to Group 19.\n\n\n4.3 Set fractions button\nWhen you press the Set fractions button, you will be given the opportunity to set two integer values. The value you put in the lower box must be greater than or equal to the value you put in the upper box. The raw data files you have selected will be assigned fraction numbers cyclically from the lower value to the higher value, e.g 1, 2, 3, 1, 2, 3, … .\n\n\n4.4 No fractions button\nPressing this button will remove all values in the fraction column. (Not just the values for the selected files!) It will also recalculate the values in the Experiment column."
+  },
+  {
+    "objectID": "viewer_instructions.html",
+    "href": "viewer_instructions.html",
+    "title": "The Viewer",
+    "section": "",
+    "text": "Modern software platforms enable the analysis of shotgun proteomics data in an automated fashion resulting in high quality identification and quantification results. Additional understanding of the underlying data can be gained with the help of advanced visualization tools that allow for easy navigation through large LC-MS/MS datasets potentially consisting of terabytes of raw data. The updated MaxQuant version has a map navigation component that steers the users through mass and retention time-dependent mass spectrometric signals. It can be used to monitor a peptide feature used in label-free quantification over many LC-MS runs and visualize it with advanced 3D graphic models. An expert annotation system aids the interpretation of the MS/MS spectra used for the identification of these peptide features.\nTo run MaxQuant with its Viewer module, you will need .NET framework 4.5. If you use Windows you should have Windows 10 or newer.\n\n1 Documentation outline\n\nDownload and installation\nUser interface\nGetting started\nTutorial\nTrouble shooting\nGoogle groups\nmaxquant Bug reporting\nGlossary\n\nYou can find raw files and processed data to test the Viewer (v. 1.5.2.8) here.\nImportant note: If you load the mqpar.xml file, make sure all file paths are correct! If needed, update them using the “Change folder” option.\nFor additional training, consider attending our annual MaxQuant Summer School.\nAlso watching some MaxQuant videos on our video channel provides more insight.\nFor more details and better understanding of the viewer, you might be interested in reading our publication1.\n\n\n\n\n\nReferences\n\n1. Tyanova, S. et al. Visualization of LC-MS/MS proteomics data in MaxQuant. PROTEOMICS 15, 1453–1456 (2015)."
   },
   {
     "objectID": "MQ_FirstSteps.html",
@@ -336,46 +532,81 @@
     "text": "5 Start the Analysis\nAfter you press the Start button, you can monitor the progress of the analysis under the fourth tab, Performance. A popup window saying ‘Done’ will appear when MaxQuant is finished. All result files will appear in the folder …\\combined\\txt as tab-delimited text files. A pdf document with a description of all columns in all tables will be written to …\\combined\\txt\\tables.pdf.\nThe fifth tab is the Viewer, used to examine the results of the analysis, which will be the topic of the viewer tutorial. All columns have interactive descriptions in the Viewer program. Just move the mouse over the beginning of the column title and click on the question mark that will appear.\nThe sixth and final tab is Andromeda configuration. Andromeda is the peptide search engine, which needs to know what modifications, proteases, and sequence databases to take into consideration. Almost all that you will ever need are pre-configured, but you can use the buttons under this tab to add more, if your experiment requires it.\nThat’s how easy it can be!\n\nFor question or problems with the running MqxQuant we would love to hear from you under Contact."
   },
   {
-    "objectID": "viewer_tutorials.html",
-    "href": "viewer_tutorials.html",
-    "title": "Viewer - Tutorials",
+    "objectID": "perseus_download_guide.html",
+    "href": "perseus_download_guide.html",
+    "title": "Perseus Download and Installation",
     "section": "",
-    "text": "Tutorials explaining how to use the viewer can be found in our YouTube channel.\nA few examples are listed below:\nMaxQuant Viewer tutorials\nFrom our 2023 MaxQunat Summer School in Boston\n\nMaxQuant basic I + II\nFrom our 2022 MaxQunat Summer School in Barcelona\n\nMaxQuant Basics I and II\nFrom our online MaxQunat SummerSchool in 2021.\n\n\nMaxQuant Viewer\nFrom our 2019 MaxQunat Summer School in Madison"
+    "text": "The latest Perseus release is: 2.0.11 [date: 29.09.2023]"
+  },
+  {
+    "objectID": "perseus_download_guide.html#download",
+    "href": "perseus_download_guide.html#download",
+    "title": "Perseus Download and Installation",
+    "section": "1 Download",
+    "text": "1 Download\nDownloading and using the software is free of charge.\nSimply download from our MQ home page and unpack the compressed file Perseus.zip."
+  },
+  {
+    "objectID": "perseus_download_guide.html#requierments",
+    "href": "perseus_download_guide.html#requierments",
+    "title": "Perseus Download and Installation",
+    "section": "2 requierments",
+    "text": "2 requierments\nSupported operation system versions (64 bit is required) are Windows 10 or 11 or Windows Server 2016, 2019, 2022.\nInstall .NET Framework 4.7.2 or higher - To find out whether you already have it, follow the instructions on How to Determine Which .NET Framework Versions Are Installed. If you need to, you can download the software and get installation instructions at the Microsoft Download Center."
+  },
+  {
+    "objectID": "perseus_download_guide.html#running",
+    "href": "perseus_download_guide.html#running",
+    "title": "Perseus Download and Installation",
+    "section": "3 Running",
+    "text": "3 Running\nTo run Perseus the GUI just double click on Perseus.exe in the Perseus folder."
+  },
+  {
+    "objectID": "perseus_download_guide.html#hardware-requirements",
+    "href": "perseus_download_guide.html#hardware-requirements",
+    "title": "Perseus Download and Installation",
+    "section": "4 Hardware requirements",
+    "text": "4 Hardware requirements\n\nIntel Pentium III/800 MHz or higher (or compatible) although one should probably not go below a dual core processor.\n2 GB RAM minimum.\n2 GB RAM per thread that is executed in parallel is required.\nThere is no upper limit on the number of cores. Whatever you can fit into a shared memory machine will work as long as the disk performance scales up with it."
+  },
+  {
+    "objectID": "reorderremovecolumns.html",
+    "href": "reorderremovecolumns.html",
+    "title": "Reorder / Remove Columns",
+    "section": "",
+    "text": "1 General\n\nType: - Matrix Processing\nHeading: - Rearrange\nSource code: ReorderRemoveAnnotRows.cs\n\n\n\n2 Brief description\nAnnotation rows can be removed with this activity.\nOutput: Same matrix but with annotation rows removed or in new order.\n\n\n3 Parameters\nA new matrix is generated with the specified columns by selecting/deselecting expression/numerical/multi numerical/categorical/text columns (default: all columns are selected).\n\n\n4 Parameter window\n\n\n\nReorder remove columns\n\n\n{{perseus:user:activities:matrixprocessing:rearrange:rearrange-reorder_remove_columns-edited.png?direct|Perseus pop-up window: Rearrange -&gt; Reorder/remove columns}}"
   },
   {
     "objectID": "densityestimationprocessing.html",
     "href": "densityestimationprocessing.html",
     "title": "Density Estimation Processing",
     "section": "",
-    "text": "Selected expression columns for the first dimension of the generated density map(s) (default: first expression column in the matrix). Multiple columns can be chosen for each dimension leading to the creation of multiple density maps, but the number of columns have to be the same in both dimensions.\n\n\n\nSelected expression columns for the second dimension of the generated density map(s) (default: second expression column in the matrix). Multiple columns can be chosen for each dimension leading to the creation of multiple density maps, but the number of columns have to be the same in both dimensions.\n\n\n\nThe specified number of points defines the resolution of the density map (default: 300). It reflects the number of pixel per dimension.\n\n\n\nEach data point is smoothed out by a suitable Gaussian kernel, which is defined in the “Distribution type” (default: \\(P(x,y)\\). The function can be selected out of a predefined list:\n\n\\(P(x,y)\\)\n\\(P(y|x)\\)\n\\(P(x|y)\\)\n\\(P(x,y)/(P(x)*P(y))\\)"
+    "text": "Type: - Matrix Processing\nHeading: - Basic (Processing)\nSource code: DensityEstimationProcessing.cs"
   },
   {
     "objectID": "densityestimationprocessing.html#x",
     "href": "densityestimationprocessing.html#x",
     "title": "Density Estimation Processing",
-    "section": "",
-    "text": "Selected expression columns for the first dimension of the generated density map(s) (default: first expression column in the matrix). Multiple columns can be chosen for each dimension leading to the creation of multiple density maps, but the number of columns have to be the same in both dimensions."
+    "section": "3.1 x",
+    "text": "3.1 x\nSelected expression columns for the first dimension of the generated density map(s) (default: first expression column in the matrix). Multiple columns can be chosen for each dimension leading to the creation of multiple density maps, but the number of columns have to be the same in both dimensions."
   },
   {
     "objectID": "densityestimationprocessing.html#y",
     "href": "densityestimationprocessing.html#y",
     "title": "Density Estimation Processing",
-    "section": "",
-    "text": "Selected expression columns for the second dimension of the generated density map(s) (default: second expression column in the matrix). Multiple columns can be chosen for each dimension leading to the creation of multiple density maps, but the number of columns have to be the same in both dimensions."
+    "section": "3.2 y",
+    "text": "3.2 y\nSelected expression columns for the second dimension of the generated density map(s) (default: second expression column in the matrix). Multiple columns can be chosen for each dimension leading to the creation of multiple density maps, but the number of columns have to be the same in both dimensions."
   },
   {
     "objectID": "densityestimationprocessing.html#number-of-points",
     "href": "densityestimationprocessing.html#number-of-points",
     "title": "Density Estimation Processing",
-    "section": "",
-    "text": "The specified number of points defines the resolution of the density map (default: 300). It reflects the number of pixel per dimension."
+    "section": "3.3 Number of points",
+    "text": "3.3 Number of points\nThe specified number of points defines the resolution of the density map (default: 300). It reflects the number of pixel per dimension."
   },
   {
     "objectID": "densityestimationprocessing.html#distribution-type",
     "href": "densityestimationprocessing.html#distribution-type",
     "title": "Density Estimation Processing",
-    "section": "",
-    "text": "Each data point is smoothed out by a suitable Gaussian kernel, which is defined in the “Distribution type” (default: \\(P(x,y)\\). The function can be selected out of a predefined list:\n\n\\(P(x,y)\\)\n\\(P(y|x)\\)\n\\(P(x|y)\\)\n\\(P(x,y)/(P(x)*P(y))\\)"
+    "section": "3.4 Distribution type",
+    "text": "3.4 Distribution type\nEach data point is smoothed out by a suitable Gaussian kernel, which is defined in the “Distribution type” (default: \\(P(x,y)\\). The function can be selected out of a predefined list:\n\n\\(P(x,y)\\)\n\\(P(y|x)\\)\n\\(P(x|y)\\)\n\\(P(x,y)/(P(x)*P(y))\\)"
   },
   {
     "objectID": "contact.html",
@@ -404,6 +635,62 @@
     "title": "Andromeda User Interface",
     "section": "2.2 Andromeda as command line tool",
     "text": "2.2 Andromeda as command line tool\nTo figure out how to specify the parameters in the command line tool, follow the steps below:\n\nOpen a cmd\nGo to the unziped Andromeda folder\nRun the executable AndromedaCmd.exe without parameters (highlighted by a cyan rectangle in Figure 3) to figure out the Andromeda settings (highlighted by a red rectangle in Figure 3).\n\n\n\n\nFigure 3: Andromeda User Interface standalone"
+  },
+  {
+    "objectID": "combineannotations.html",
+    "href": "combineannotations.html",
+    "title": "Combine annotations",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Rearrange\nSource code: CombineAnnotations.cs\n\n===== Brief description =====\nSearch multiple categorical or string columns for the occurrence of a set of terms.\nOutput: A new categorical column is generated indicating the presence of any of these terms."
+  },
+  {
+    "objectID": "combineannotations.html#categories",
+    "href": "combineannotations.html#categories",
+    "title": "Combine annotations",
+    "section": "2.1 Categories",
+    "text": "2.1 Categories\nSelect categorical and/or text columns that should be searched for the specified “Search terms” (default: no columns selected)."
+  },
+  {
+    "objectID": "combineannotations.html#search-terms",
+    "href": "combineannotations.html#search-terms",
+    "title": "Combine annotations",
+    "section": "2.2 Search terms",
+    "text": "2.2 Search terms\nSpecified terms will be searched in the previously defined categorical and/or text columns (default: empty). Multiple terms are possible and must be separated by new lines, so each line in the “Search terms” field will be searched in each column. In the newly generated categorical column rows containing one of the search terms in one of the selected columns are indicated by a “\\(+\\)”."
+  },
+  {
+    "objectID": "combineannotations.html#name-of-new-column",
+    "href": "combineannotations.html#name-of-new-column",
+    "title": "Combine annotations",
+    "section": "2.3 Name of new column",
+    "text": "2.3 Name of new column\nThe name of the new generated categorical column containing a “\\(+\\)” if one one “Search terms” matches one of the selected columns."
+  },
+  {
+    "objectID": "combineannotations.html#inverse",
+    "href": "combineannotations.html#inverse",
+    "title": "Combine annotations",
+    "section": "2.4 Inverse",
+    "text": "2.4 Inverse\nIf checked, rows not matching the “Search terms” are indicated by a “\\(+\\)” (default: unchecked)."
+  },
+  {
+    "objectID": "summarystatisticsrows.html",
+    "href": "summarystatisticsrows.html",
+    "title": "Summary statistics (rows)",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Basic (Processing)\nSource code: SummaryStatisticsRows.cs"
+  },
+  {
+    "objectID": "summarystatisticsrows.html#expression-column-selection",
+    "href": "summarystatisticsrows.html#expression-column-selection",
+    "title": "Summary statistics (rows)",
+    "section": "3.1 Expression column selection",
+    "text": "3.1 Expression column selection\nSelected expression columns that are used to summarize each row (default: use all expression columns). The way of choosing the expression columns can be specified by selecting one of the three options:\n\nUse all expression columns\nSelect columns\nWithin groups\n\n\n3.1.1 Columns\nThis parameter is just relevant, if “Expression column selection” is set to “Select columns”. Manually selected expression columns, whose values in each row should be used for the calculation of the defined operations (default: all expression columns are selected).\n\n\n3.1.2 Group\nThis parameter is just relevant, if “Expression column selection” is set to “Within groups”. Selected categorical row that defines which values in a row are grouped together to calculate the specified summary values (default: first categorical row in the matrix)."
+  },
+  {
+    "objectID": "summarystatisticsrows.html#calculate",
+    "href": "summarystatisticsrows.html#calculate",
+    "title": "Summary statistics (rows)",
+    "section": "3.2 Calculate",
+    "text": "3.2 Calculate\nList of quantities that are calculated for the selected columns (default: all of the below listed quantities are selected). The available quantities are:\n\nSum\nMean\nTurkey biweight\nStandard deviation\nCoefficient of variation\nMedian absolute deviation\nMinimum\nMaximum\nRange\nValid values\nInter-quartile range\n1st quartile\n3rd quartile\nSkewness\nKurtosis"
   },
   {
     "objectID": "output_tables.html",
@@ -497,60 +784,39 @@
     "text": "12 AIF ms/ms Table\n====== AIF MS/MS ======\n\n\n\n\n\n\n\nName\nDescription\n\n\n\n\nid\nA unique (consecutive) identifier for each row in the AIF MS/MS table, which is used to cross-link the information in this file with the information stored in the other files.\n\n\nProtein group IDs\nThe identifier of the protein group this redundant peptide sequence is associated with, which can be used to look up the extended protein information in the file ‘proteinGroups.txt’. As a single peptide can be linked to multiple proteins (e.g. in the case of razor-proteins), multiple id’s can be stored here separated by a semicolon. As a protein can be identified by multiple peptides, the same id can be found in different rows.\n\n\nPeptide ID\nThe identifier of the non-redundant peptide sequence.\n\n\nMod. peptide ID\nIdentifier of the associated modification summary stored in the file ‘modificationSpecificPeptides.txt’.\n\n\nEvidence ID\nIdentifier for analyzed peptide evidence associated with the protein group referenced against the evidences table.\n\n\nt + ” site IDs”\n\n\n\nRaw file\nName of the RAW file the spectral data was extracted from, which led to the identification of this peptide.\n\n\nSequence\nThe identified AA sequence of the peptide.\n\n\nLength\nThe length of the sequence stored in the column “Sequence”.\n\n\n“Missed Cleavages (” + enzyme + “)”\nNumber of missed enzymatic cleavages.\n\n\nMissed Cleavages\nNumber of missed enzymatic cleavages.\n\n\nModifications\nPost-translational modifications contained within the sequence. When no modifications exist, this is set to ‘unmodified’. Note: This column only set when this MS/MS spectrum has been identified.\n\n\nModified Sequence\nSequence representation of the peptide including location(s) of modified AAs. Note: This column only set when this MS/MS spectrum has been identified.\n\n\nTables.ModificationList[t].Name + ” Probabilities”\n\n\n\nTables.ModificationList[t].Name + ” Score Diffs”\n\n\n\nTables.ModificationList[t].Name\n\n\n\nProteins\nThe IPI identifiers of the proteins the identified peptide is associated with.\n\n\nCharge\nThe charge of the precursor ion.\n\n\nm/z\nThe mass-over-charge of the precursor ion.\n\n\nMass\nThe charge corrected mass of the precursor ion.\n\n\nRetention time\nThe uncalibrated retention time in minutes in the elution profile of the precursor ion.\n\n\nPrecursor intensity\nThe intensity of the precursor ion.\n\n\nPEP\nPosterior Error Probability of the identification. This value essentially operates as a p-value, where smaller is more significant.\n\n\nScore\nAndromeda identification score for the MS/MS spectrum.\n\n\nDelta score\nScore difference to the second best identified peptide.\n\n\nCombinatorics\nNumber of possible distributions of the modifications over the peptide sequence.\n\n\nMatches\n\n\n\nIntensities\nThe intensities of the peaks in the fragmentation spectrum after top-N filtering.\n\n\nMass Deviations\nThe search engine allowed mass deviations of the peaks in the fragmentation spectrum.\n\n\nMasses\nThe masses-over-charge of the peaks in the fragmentation spectrum.\n\n\nCharges\n\n\n\nCorrelations\n\n\n\nNumber of Matches\n\n\n\nReverse\nWhen marked with ‘+’, this particular peptide was found to be part of a protein derived from the reversed part of the decoy database. These should be removed for further data analysis."
   },
   {
-    "objectID": "summarystatisticsrows.html",
-    "href": "summarystatisticsrows.html",
-    "title": "Summary statistics (rows)",
-    "section": "",
-    "text": "#Parameters"
-  },
-  {
-    "objectID": "summarystatisticsrows.html#expression-column-selection",
-    "href": "summarystatisticsrows.html#expression-column-selection",
-    "title": "Summary statistics (rows)",
-    "section": "0.1 Expression column selection",
-    "text": "0.1 Expression column selection\nSelected expression columns that are used to summarize each row (default: use all expression columns). The way of choosing the expression columns can be specified by selecting one of the three options:\n\nUse all expression columns\nSelect columns\nWithin groups\n\n\n0.1.1 Columns\nThis parameter is just relevant, if “Expression column selection” is set to “Select columns”. Manually selected expression columns, whose values in each row should be used for the calculation of the defined operations (default: all expression columns are selected).\n\n\n0.1.2 Group\nThis parameter is just relevant, if “Expression column selection” is set to “Within groups”. Selected categorical row that defines which values in a row are grouped together to calculate the specified summary values (default: first categorical row in the matrix)."
-  },
-  {
-    "objectID": "summarystatisticsrows.html#calculate",
-    "href": "summarystatisticsrows.html#calculate",
-    "title": "Summary statistics (rows)",
-    "section": "0.2 Calculate",
-    "text": "0.2 Calculate\nList of quantities that are calculated for the selected columns (default: all of the below listed quantities are selected). The available quantities are:\n\nSum\nMean\nTurkey biweight\nStandard deviation\nCoefficient of variation\nMedian absolute deviation\nMinimum\nMaximum\nRange\nValid values\nInter-quartile range\n1st quartile\n3rd quartile\nSkewness\nKurtosis"
-  },
-  {
     "objectID": "unstructuredtxtupload.html",
     "href": "unstructuredtxtupload.html",
     "title": "Unstructured Text Upload",
     "section": "",
-    "text": "Specifies the file path of the text file that should be uploaded (default: empty). It can be specified manually by typing in the path or the file can be browsed by using the “Select” button.\n\n\n\nIf checked the lines of the specified text file are split into several columns (default: FALSE).\n\n\n\nThis parameter is just relevant, if the parameter “Split into columns” is TRUE.\nIt specifies how the values within a row of the text file are separated (default: Tab). The separation type can be selected from a predefined list:\n\nTab\nComma\n\n\n\n\n\n\n\nRaw upload"
+    "text": "Type: - Matrix Upload\nSource code: UnstructuredTxtUpload.cs"
   },
   {
     "objectID": "unstructuredtxtupload.html#file",
     "href": "unstructuredtxtupload.html#file",
     "title": "Unstructured Text Upload",
-    "section": "",
-    "text": "Specifies the file path of the text file that should be uploaded (default: empty). It can be specified manually by typing in the path or the file can be browsed by using the “Select” button."
+    "section": "3.1 File",
+    "text": "3.1 File\nSpecifies the file path of the text file that should be uploaded (default: empty). It can be specified manually by typing in the path or the file can be browsed by using the “Select” button."
   },
   {
     "objectID": "unstructuredtxtupload.html#split-into-columns",
     "href": "unstructuredtxtupload.html#split-into-columns",
     "title": "Unstructured Text Upload",
-    "section": "",
-    "text": "If checked the lines of the specified text file are split into several columns (default: FALSE)."
+    "section": "3.2 Split into columns",
+    "text": "3.2 Split into columns\nIf checked the lines of the specified text file are split into several columns (default: FALSE)."
   },
   {
     "objectID": "unstructuredtxtupload.html#separator",
     "href": "unstructuredtxtupload.html#separator",
     "title": "Unstructured Text Upload",
-    "section": "",
-    "text": "This parameter is just relevant, if the parameter “Split into columns” is TRUE.\nIt specifies how the values within a row of the text file are separated (default: Tab). The separation type can be selected from a predefined list:\n\nTab\nComma"
+    "section": "3.3 Separator",
+    "text": "3.3 Separator\nThis parameter is just relevant, if the parameter “Split into columns” is TRUE.\nIt specifies how the values within a row of the text file are separated (default: Tab). The separation type can be selected from a predefined list:\n\nTab\nComma"
   },
   {
     "objectID": "unstructuredtxtupload.html#parameter-window",
     "href": "unstructuredtxtupload.html#parameter-window",
     "title": "Unstructured Text Upload",
-    "section": "",
-    "text": "Raw upload"
+    "section": "3.4 Parameter window",
+    "text": "3.4 Parameter window\n\n\n\nRaw upload"
   },
   {
     "objectID": "andromeda_modifications_table.html",
@@ -578,63 +844,70 @@
     "href": "quantiles.html",
     "title": "Quantiles",
     "section": "",
-    "text": "Defined number of quantiles (default: 5), each of the selected expression/numerical columns will be transformed into.\n\n\n\nSelected expression/numerical columns that should be transformed into quantiles (default: all expression columns are selected)."
+    "text": "Type: - Matrix Processing\nHeading: - Basic (Processing)\nSource code: Quantiles.cs"
   },
   {
     "objectID": "quantiles.html#number-of-quantiles",
     "href": "quantiles.html#number-of-quantiles",
     "title": "Quantiles",
-    "section": "",
-    "text": "Defined number of quantiles (default: 5), each of the selected expression/numerical columns will be transformed into."
+    "section": "3.1 Number of quantiles",
+    "text": "3.1 Number of quantiles\nDefined number of quantiles (default: 5), each of the selected expression/numerical columns will be transformed into."
   },
   {
     "objectID": "quantiles.html#columns",
     "href": "quantiles.html#columns",
     "title": "Quantiles",
+    "section": "3.2 Columns",
+    "text": "3.2 Columns\nSelected expression/numerical columns that should be transformed into quantiles (default: all expression columns are selected)."
+  },
+  {
+    "objectID": "viewer_tutorials.html",
+    "href": "viewer_tutorials.html",
+    "title": "Viewer - Tutorials",
     "section": "",
-    "text": "Selected expression/numerical columns that should be transformed into quantiles (default: all expression columns are selected)."
+    "text": "Tutorials explaining how to use the viewer can be found in our YouTube channel.\nA few examples are listed below:\nMaxQuant Viewer tutorials\nFrom our 2023 MaxQunat Summer School in Boston\n\nMaxQuant basic I + II\nFrom our 2022 MaxQunat Summer School in Barcelona\n\nMaxQuant Basics I and II\nFrom our online MaxQunat SummerSchool in 2021.\n\n\nMaxQuant Viewer\nFrom our 2019 MaxQunat Summer School in Madison"
   },
   {
-    "objectID": "perseus_download_guide.html",
-    "href": "perseus_download_guide.html",
-    "title": "Perseus Download and Installation",
+    "objectID": "uniquevalues.html",
+    "href": "uniquevalues.html",
+    "title": "Unique Values",
     "section": "",
-    "text": "The latest Perseus release is: 2.0.11 [date: 29.09.2023]"
+    "text": "Type: - Matrix Processing\nHeading: - Rearrange\nSource code: UniqueValues.cs"
   },
   {
-    "objectID": "perseus_download_guide.html#download",
-    "href": "perseus_download_guide.html#download",
-    "title": "Perseus Download and Installation",
-    "section": "1 Download",
-    "text": "1 Download\nDownloading and using the software is free of charge.\nSimply download from our MQ home page and unpack the compressed file Perseus.zip."
+    "objectID": "uniquevalues.html#text-columns",
+    "href": "uniquevalues.html#text-columns",
+    "title": "Unique Values",
+    "section": "3.1 Text columns",
+    "text": "3.1 Text columns\nSelected text columns, whose values should be made unique (default: no columns are selected)."
   },
   {
-    "objectID": "perseus_download_guide.html#requierments",
-    "href": "perseus_download_guide.html#requierments",
-    "title": "Perseus Download and Installation",
-    "section": "2 requierments",
-    "text": "2 requierments\nSupported operation system versions (64 bit is required) are Windows 10 or 11 or Windows Server 2016, 2019, 2022.\nInstall .NET Framework 4.7.2 or higher - To find out whether you already have it, follow the instructions on How to Determine Which .NET Framework Versions Are Installed. If you need to, you can download the software and get installation instructions at the Microsoft Download Center."
-  },
-  {
-    "objectID": "perseus_download_guide.html#running",
-    "href": "perseus_download_guide.html#running",
-    "title": "Perseus Download and Installation",
-    "section": "3 Running",
-    "text": "3 Running\nTo run Perseus the GUI just double click on Perseus.exe in the Perseus folder."
-  },
-  {
-    "objectID": "perseus_download_guide.html#hardware-requirements",
-    "href": "perseus_download_guide.html#hardware-requirements",
-    "title": "Perseus Download and Installation",
-    "section": "4 Hardware requirements",
-    "text": "4 Hardware requirements\n\nIntel Pentium III/800 MHz or higher (or compatible) although one should probably not go below a dual core processor.\n2 GB RAM minimum.\n2 GB RAM per thread that is executed in parallel is required.\nThere is no upper limit on the number of cores. Whatever you can fit into a shared memory machine will work as long as the disk performance scales up with it."
-  },
-  {
-    "objectID": "viewer_instructions.html",
-    "href": "viewer_instructions.html",
-    "title": "The Viewer",
+    "objectID": "convertmultinumeric.html",
+    "href": "convertmultinumeric.html",
+    "title": "Convert multi-numeric column",
     "section": "",
-    "text": "Modern software platforms enable the analysis of shotgun proteomics data in an automated fashion resulting in high quality identification and quantification results. Additional understanding of the underlying data can be gained with the help of advanced visualization tools that allow for easy navigation through large LC-MS/MS datasets potentially consisting of terabytes of raw data. The updated MaxQuant version has a map navigation component that steers the users through mass and retention time-dependent mass spectrometric signals. It can be used to monitor a peptide feature used in label-free quantification over many LC-MS runs and visualize it with advanced 3D graphic models. An expert annotation system aids the interpretation of the MS/MS spectra used for the identification of these peptide features.\nTo run MaxQuant with its Viewer module, you will need .NET framework 4.5. If you use Windows you should have Windows 10 or newer.\n\n1 Documentation outline\n\nDownload and installation\nUser interface\nGetting started\nTutorial\nTrouble shooting\nGoogle groups\nmaxquant Bug reporting\nGlossary\n\nYou can find raw files and processed data to test the Viewer (v. 1.5.2.8) here.\nImportant note: If you load the mqpar.xml file, make sure all file paths are correct! If needed, update them using the “Change folder” option.\nFor additional training, consider attending our annual MaxQuant Summer School.\nAlso watching some MaxQuant videos on our video channel provides more insight.\nFor more details and better understanding of the viewer, you might be interested in reading our publication1.\n\n\n\n\n\nReferences\n\n1. Tyanova, S. et al. Visualization of LC-MS/MS proteomics data in MaxQuant. PROTEOMICS 15, 1453–1456 (2015)."
+    "text": "Type: - Matrix Processing\nHeading: - Rearrange\nSource code: ConvertMultiNumeric.cs"
+  },
+  {
+    "objectID": "convertmultinumeric.html#operation",
+    "href": "convertmultinumeric.html#operation",
+    "title": "Convert multi-numeric column",
+    "section": "3.1 Operation",
+    "text": "3.1 Operation\nSelected operations that should be applied to multi-numeric columns to gain a numeric column with one value per row (default: no operations are selected). For each selected operation a separate numeric column is generated. The operations can be selected from a predefined list:\n\nCount\nSum\nProduct\nAverage\nMedian"
+  },
+  {
+    "objectID": "convertmultinumeric.html#columns",
+    "href": "convertmultinumeric.html#columns",
+    "title": "Convert multi-numeric column",
+    "section": "3.2 Columns",
+    "text": "3.2 Columns\nSelected multi-numeric columns that will be transformed applying each of the selected operations (default: all multi-numeric columns are selected)."
+  },
+  {
+    "objectID": "removeemptycolumns.html",
+    "href": "removeemptycolumns.html",
+    "title": "Remove Empty Columns",
+    "section": "",
+    "text": "1 General\n\nType: - Matrix Processing\nHeading: - Rearrange\nSource code: RemoveEmptyColumns.cs\n\n\n\n2 Brief description\nColumns containing no values or only invalid values will be removed.\nOutput: Same matrix but with empty columns removed.\n\n\n\n3 Parameters\n“Remove empty columns” has no parameters."
   },
   {
     "objectID": "andromeda_instructions.html",
@@ -662,49 +935,63 @@
     "href": "performancecurves.html",
     "title": "Performance curves",
     "section": "",
-    "text": "#Parameters"
+    "text": "Type: - Matrix Processing\nHeading: - Basic (Processing)\nSource code: PerformanceCurves.cs"
   },
   {
     "objectID": "performancecurves.html#indicated-are",
     "href": "performancecurves.html#indicated-are",
     "title": "Performance curves",
-    "section": "0.1 Indicated are",
-    "text": "0.1 Indicated are\nSpecification whether rows containing the “Indicator” in the categorical column specified in “In column” correspond to the class under observation or not (default: False)."
+    "section": "2.1 Indicated are",
+    "text": "2.1 Indicated are\nSpecification whether rows containing the “Indicator” in the categorical column specified in “In column” correspond to the class under observation or not (default: False)."
   },
   {
     "objectID": "performancecurves.html#in-column",
     "href": "performancecurves.html#in-column",
     "title": "Performance curves",
-    "section": "0.2 In column",
-    "text": "0.2 In column\nSelected categorical column containing the class membership of each instance (row) of the class under observation (default: first categorical column in the matrix)."
+    "section": "2.2 In column",
+    "text": "2.2 In column\nSelected categorical column containing the class membership of each instance (row) of the class under observation (default: first categorical column in the matrix)."
   },
   {
     "objectID": "performancecurves.html#indicator",
     "href": "performancecurves.html#indicator",
     "title": "Performance curves",
-    "section": "0.3 Indicator",
-    "text": "0.3 Indicator\nRows containing the defined string are counted as true or false depending on the selection in “Indicated are” (default: \\(+\\))."
+    "section": "2.3 Indicator",
+    "text": "2.3 Indicator\nRows containing the defined string are counted as true or false depending on the selection in “Indicated are” (default: \\(+\\))."
   },
   {
     "objectID": "performancecurves.html#scores",
     "href": "performancecurves.html#scores",
     "title": "Performance curves",
-    "section": "0.4 Scores",
-    "text": "0.4 Scores\nSelected expression columns containing the scores by which the rows are ranked to calculate the specified quantities (default: first expression column of the matrix is selected)."
+    "section": "2.4 Scores",
+    "text": "2.4 Scores\nSelected expression columns containing the scores by which the rows are ranked to calculate the specified quantities (default: first expression column of the matrix is selected)."
   },
   {
     "objectID": "performancecurves.html#large-values-are-good",
     "href": "performancecurves.html#large-values-are-good",
     "title": "Performance curves",
-    "section": "0.5 Large values are good",
-    "text": "0.5 Large values are good\nIf checked the larger the score value the better (default: checked). Otherwise the lower the value the better."
+    "section": "2.5 Large values are good",
+    "text": "2.5 Large values are good\nIf checked the larger the score value the better (default: checked). Otherwise the lower the value the better."
   },
   {
     "objectID": "performancecurves.html#display-quantity",
     "href": "performancecurves.html#display-quantity",
     "title": "Performance curves",
-    "section": "0.6 Display quantity",
-    "text": "0.6 Display quantity\nSelected quantities that will be calculated (default: no quantities are selected). The quantities can be selected from a predefined list:\n\n\\(TP/(TP+FP)\\) (Precision)\n\\(TP/(TP+FN)\\) (Recall)\n\\(FP/TP\\)\n\\(TP/NP\\)\n\\(TP/(TP+FN)\\) (Sensitivity)\n\\(TN/(TN+FP)\\) (Specificity)"
+    "section": "2.6 Display quantity",
+    "text": "2.6 Display quantity\nSelected quantities that will be calculated (default: no quantities are selected). The quantities can be selected from a predefined list:\n\n\\(TP/(TP+FP)\\) (Precision)\n\\(TP/(TP+FN)\\) (Recall)\n\\(FP/TP\\)\n\\(TP/NP\\)\n\\(TP/(TP+FN)\\) (Sensitivity)\n\\(TN/(TN+FP)\\) (Specificity)"
+  },
+  {
+    "objectID": "renamecolumnsregexp.html",
+    "href": "renamecolumnsregexp.html",
+    "title": "Rename Column by Reg. Exp.",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Rearrange\nSource code: RenameColumnsRegexp.cs"
+  },
+  {
+    "objectID": "renamecolumnsregexp.html#regular-expression",
+    "href": "renamecolumnsregexp.html#regular-expression",
+    "title": "Rename Column by Reg. Exp.",
+    "section": "3.1 Regular expression",
+    "text": "3.1 Regular expression\nSpecified regular expression that is applied to all column names to rename them (default: no string).\nThe general concept of regular expressions can be found under Regular_expression. If you already know generally how regular expressions work, you may only need to glance at a the Quick Reference or at an even quicker Cheat Sheet.\n\\"
   },
   {
     "objectID": "andromeda_enzymes.html",
@@ -735,276 +1022,290 @@
     "text": "Let’s assume Chymotrypsin is not yet provided in Andromeda and we want to add it. From the literature we know Chymotrypsin cleaves c-terminal after Phenylalanine (F), Tryptophan (W) and Tyrosine (Y).\nFirst click the “Add” button as shown in Figure 4. Then a new row will be added at the end of the table and a new protease form will appear on the right hand side that can be edited.\n\n\n\nFigure 4: Adding Chymotrypsin\n\n\nThen you just have to fill in the form by defining a name, a description and the specificity. Don’t forget to click the “Modify table” button when your done to transfer the changes you made in the form to the table on the left. And to save the table you have to click the “Save changes” button. Additional comments on the screenshot are in black and blue in Figure 5.\nTo have the added modification available in MaxQuant you have to open a new MaxQuant window.\n\n\n\nFigure 5: save added protease\n\n\nComment: Note that you also can do completely unspecific searches in MaxQuant. For this no definition of an enzyme is necessary."
   },
   {
-    "objectID": "andromeda_protdatabases.html",
-    "href": "andromeda_protdatabases.html",
-    "title": "Andromeda Protdatabases - the (protein) sequence databases table",
+    "objectID": "binaryupload.html",
+    "href": "binaryupload.html",
+    "title": "Binary Upload",
     "section": "",
-    "text": "For the here shown step by step description Andromeda was used within MaxQuant (version 1.5.3.8).\n\n\nOpen MaxQuant and go to the Andromeda configuration tab. There select the Data type “Sequence databases” (s. Figure 1).\n\n\n\nFigure 1: opening the databases table\n\n\n\n\n\nLet’s assume we have to analyze human proteome measurements and we are interested which human database is used and how it is used (see Description on the right hand side of the Andromeda window in Figure 2).\n\n\n\nFigure 2: example human protease DB\n\n\n\n\n\nNow we are assuming that a reviewer asks us to search our human proteome measurements against the tasmanian devil proteome ( Sarcophilus harrisii ) - for some reason - and we downloaded the corresponding fasta file from Uniprot.\nAfter downloading the file, we are including the database into MaxQuant. First, click the “Add” button (highlithed in Figure 3). Then a new row will be added at the end of the table and a new sequence database form will appear on the right hand side that can be edited.\n\n\n\nFigure 3: Adding a new entry to database\n\n\nThen you just have to fill in the form by defining the fasta file that should be used, the parsing rule that should be applied to retrieve the identifiers, the source of the fasta file, the taxonomy and the organism name. To define the parsing rule regular expressions are used. A regular expression is a sequence of characters that forms a search pattern with a special syntax. A good general introduction can be found, as always, on Wikipedia. If you already know generally how regular expressions work, you may only need to glance at a this Quick Reference or at an even quicker Cheat Sheet. Also you don’t have to know the taxonomy of your organism, just type in the name and use the arrows in the taxonomy line and MaxQuant will complete the form.\nDon’t forget to click the “Modify table” button (Figure 4) when you’re done to transfer the changes you made in the form to the table on the left. And to save the table you have to click the “Save changes” button.\nTo have the added sequence database available in MaxQuant you have to open a new MaxQuant window.\n\n\n\nFigure 4: Saving the entry in the database"
+    "text": "Type: - Matrix Upload\nSource code: BinaryUpload.cs"
   },
   {
-    "objectID": "andromeda_protdatabases.html#open-the-sequence-databases-table",
-    "href": "andromeda_protdatabases.html#open-the-sequence-databases-table",
-    "title": "Andromeda Protdatabases - the (protein) sequence databases table",
+    "objectID": "binaryupload.html#file",
+    "href": "binaryupload.html#file",
+    "title": "Binary Upload",
+    "section": "3.1 File",
+    "text": "3.1 File\nSpecifies the file path of the binary file that should be uploaded (default: empty). It can be specified manually by typing in the path or the file can be browsed by using the “Select” button. All file extensions are supported."
+  },
+  {
+    "objectID": "significanceb.html",
+    "href": "significanceb.html",
+    "title": "Significance B",
     "section": "",
-    "text": "Open MaxQuant and go to the Andromeda configuration tab. There select the Data type “Sequence databases” (s. Figure 1).\n\n\n\nFigure 1: opening the databases table"
+    "text": "Type: - Matrix Processing\nHeading: - Outliers\nSource code: SignificanceB.cs"
   },
   {
-    "objectID": "andromeda_protdatabases.html#viewing-an-example",
-    "href": "andromeda_protdatabases.html#viewing-an-example",
-    "title": "Andromeda Protdatabases - the (protein) sequence databases table",
+    "objectID": "significanceb.html#ratio-columns",
+    "href": "significanceb.html#ratio-columns",
+    "title": "Significance B",
+    "section": "3.1 Ratio columns",
+    "text": "3.1 Ratio columns\nSelected expression columns containing the ratios for which “Significance B” should be calculated (default: no columns are selected).\nHint: The number of selected ratio columns must be the same as the number of selected intensity columns."
+  },
+  {
+    "objectID": "significanceb.html#intensity-columns",
+    "href": "significanceb.html#intensity-columns",
+    "title": "Significance B",
+    "section": "3.2 Intensity columns",
+    "text": "3.2 Intensity columns\nSelected expression/numerical columns containing the intensities for which “Significance B” should be calculated (default: no columns are selected).\nHint: The number of selected intensity columns must be the same as the number of selected ratio columns."
+  },
+  {
+    "objectID": "significanceb.html#side",
+    "href": "significanceb.html#side",
+    "title": "Significance B",
+    "section": "3.3 Side",
+    "text": "3.3 Side\nTo apply a two-sided test, where the null hypothesis can be rejected regardless of the direction of the effect “both” has to be selected (default). “left” and “right” are the respective one-sided tests.\n\n3.3.1 Use for truncation\nThe truncation can be based on p-values or the Benjamini-Hochberg correction for multiple hypothesis testing (default: Benjamini-Hochberg FDR). Rows with a test result below a specified value (parameter below) are reported as significant."
+  },
+  {
+    "objectID": "significanceb.html#threshold-value",
+    "href": "significanceb.html#threshold-value",
+    "title": "Significance B",
+    "section": "3.4 Threshold value",
+    "text": "3.4 Threshold value\nBased on a specified threshold a specific row is reported as significant (default: 0.05). Depending on the chosen truncation score this threshold value is applied to the p-value or to the Benjamini-Hochberg FDR."
+  },
+  {
+    "objectID": "andromeda_configurations.html",
+    "href": "andromeda_configurations.html",
+    "title": "Andromeda Configurations",
     "section": "",
-    "text": "Let’s assume we have to analyze human proteome measurements and we are interested which human database is used and how it is used (see Description on the right hand side of the Andromeda window in Figure 2).\n\n\n\nFigure 2: example human protease DB"
+    "text": "The Andromeda search engine1 offers a large variety of already defined modifications, proteases and sequence databases. But sometimes for specialized studies additional configurations are necessary. Therefore it is possible to configure the search engine according to special needs. You can add, remove, duplicate or modify modifications, enzymes and protein sequence databases. Also rearranging the order in the lists is possible to e.g. easier compare things. This rearrangements have no effect on the later analyses.\nOn the following pages are step by step descriptions how to configure…\n\nAndromeda modifications table\nAndromeda Enzymes - the proteases table\nAndromeda Protdatabases - the (protein) sequence databases table\n\nFor question we would love to hear from you under Contact\n\n\n\n\nReferences\n\n1. Cox, J. et al. Andromeda: A Peptide Search Engine Integrated into the MaxQuant Environment. Journal of Proteome Research 10, 1794–1805 (2011)."
   },
   {
-    "objectID": "andromeda_protdatabases.html#adding-a-new-database",
-    "href": "andromeda_protdatabases.html#adding-a-new-database",
-    "title": "Andromeda Protdatabases - the (protein) sequence databases table",
+    "objectID": "combinecategoricalcolumns.html",
+    "href": "combinecategoricalcolumns.html",
+    "title": "Combine categorical columns",
     "section": "",
-    "text": "Now we are assuming that a reviewer asks us to search our human proteome measurements against the tasmanian devil proteome ( Sarcophilus harrisii ) - for some reason - and we downloaded the corresponding fasta file from Uniprot.\nAfter downloading the file, we are including the database into MaxQuant. First, click the “Add” button (highlithed in Figure 3). Then a new row will be added at the end of the table and a new sequence database form will appear on the right hand side that can be edited.\n\n\n\nFigure 3: Adding a new entry to database\n\n\nThen you just have to fill in the form by defining the fasta file that should be used, the parsing rule that should be applied to retrieve the identifiers, the source of the fasta file, the taxonomy and the organism name. To define the parsing rule regular expressions are used. A regular expression is a sequence of characters that forms a search pattern with a special syntax. A good general introduction can be found, as always, on Wikipedia. If you already know generally how regular expressions work, you may only need to glance at a this Quick Reference or at an even quicker Cheat Sheet. Also you don’t have to know the taxonomy of your organism, just type in the name and use the arrows in the taxonomy line and MaxQuant will complete the form.\nDon’t forget to click the “Modify table” button (Figure 4) when you’re done to transfer the changes you made in the form to the table on the left. And to save the table you have to click the “Save changes” button.\nTo have the added sequence database available in MaxQuant you have to open a new MaxQuant window.\n\n\n\nFigure 4: Saving the entry in the database"
+    "text": "Type: - Matrix Processing\nHeading: - Rearrange\nSource code: CombineCategoricalColumns.cs"
   },
   {
-    "objectID": "columncorrelations.html",
-    "href": "columncorrelations.html",
-    "title": "Column Correlations",
-    "section": "",
-    "text": "{{page&gt;perseus:noedit:user:activities:matrixprocessing:basic:columncorrelations}}"
+    "objectID": "combinecategoricalcolumns.html#first-column",
+    "href": "combinecategoricalcolumns.html#first-column",
+    "title": "Combine categorical columns",
+    "section": "3.1 First column",
+    "text": "3.1 First column\nFirst selected categorical column, whose values should be concatenated to the second one (default: first categorical column of the matrix). The new generated categorical column contains the two values concatenated with a “_” in between."
   },
   {
-    "objectID": "columncorrelations.html#type",
-    "href": "columncorrelations.html#type",
-    "title": "Column Correlations",
-    "section": "1.1 Type",
-    "text": "1.1 Type\nDefines the measure of correlation that should be calculated between the selected columns (default: Pearson correlation). It can be selected from a list of correlation coefficients:\n\nLog2(Absence-presence enrichment factor)\nAbsence-presence -Log10(p-value)\nNumbers of valid pairs\nValid pairs percentage\nPearson correlation\n-Log10(Pearson p-value)\n-Log10(Pearson p-value) [correlation]\n-Log10(Pearson p-value) [anti-correlation]\nR squared\nSpearman rank correlation\n-Log10(Spearman p-value)\n-Log10(Spearman p-value) [correlation]\n-Log10(Spearman p-value) [anti-correlation]\nKendall rank correlation\nDistance correlation\nMutual information\nEuclidean distance\nManhattan distance\nMaximum distance"
-  },
-  {
-    "objectID": "columncorrelations.html#rows",
-    "href": "columncorrelations.html#rows",
-    "title": "Column Correlations",
-    "section": "1.2 Rows",
-    "text": "1.2 Rows\nSelected expression/numerical columns that will be the rows of the generated correlation matrix (default: all expression columns are selected)."
-  },
-  {
-    "objectID": "columncorrelations.html#columns",
-    "href": "columncorrelations.html#columns",
-    "title": "Column Correlations",
-    "section": "1.3 Columns",
-    "text": "1.3 Columns\nSelected expression/numerical columns that will be the columns of the generated correlation matrix (default: all expression columns are selected)."
-  },
-  {
-    "objectID": "summarystatisticscolumns.html",
-    "href": "summarystatisticscolumns.html",
-    "title": "Summary statistics (columns)",
-    "section": "",
-    "text": "#Parameters"
-  },
-  {
-    "objectID": "summarystatisticscolumns.html#columns",
-    "href": "summarystatisticscolumns.html#columns",
-    "title": "Summary statistics (columns)",
-    "section": "0.1 Columns",
-    "text": "0.1 Columns\nSelected expression/numerical columns for which the later defined quantities should be calculated."
-  },
-  {
-    "objectID": "summarystatisticscolumns.html#calculate",
-    "href": "summarystatisticscolumns.html#calculate",
-    "title": "Summary statistics (columns)",
-    "section": "0.2 Calculate",
-    "text": "0.2 Calculate\nList of quantities that are calculated for the selected columns (default: all of the below listed quantities are selected). The available quantities are:\n\nSum\nMean\nTurkey biweight\nStandard deviation\nCoefficient of variation\nMedian absolute deviation\nMinimum\nMaximum\nRange\nValid values\nInter-quartile range\n1st quartile\n3rd quartile\nSkewness\nKurtosis"
+    "objectID": "combinecategoricalcolumns.html#second-column",
+    "href": "combinecategoricalcolumns.html#second-column",
+    "title": "Combine categorical columns",
+    "section": "3.2 Second column",
+    "text": "3.2 Second column\nSecond selected categorical column, whose values should be concatenated to the first one (default: first categorical column of the matrix). The new generated categorical column contains the two values concatenated with a “_” in between."
   },
   {
     "objectID": "creategenelist.html",
     "href": "creategenelist.html",
     "title": "Create Gene list",
     "section": "",
-    "text": "Specification of the organism for which a gene list should be created (default: first file in \\conf\\perseus\\genelists). The organisms or the corresponding text files that should be uploaded can be selected from all files, which are located in \\conf\\perseus\\genelists in your Perseus folder.\n\n\n\n\n\n\nCreate Gene list windows"
+    "text": "Type: - Matrix Upload\nSource code: CreateGeneList.cs\n\n===== Brief description =====\nStart with a list of all protein-coding genes from an organism."
   },
   {
     "objectID": "creategenelist.html#organism",
     "href": "creategenelist.html#organism",
     "title": "Create Gene list",
-    "section": "",
-    "text": "Specification of the organism for which a gene list should be created (default: first file in \\conf\\perseus\\genelists). The organisms or the corresponding text files that should be uploaded can be selected from all files, which are located in \\conf\\perseus\\genelists in your Perseus folder."
+    "section": "2.1 Organism",
+    "text": "2.1 Organism\nSpecification of the organism for which a gene list should be created (default: first file in \\conf\\perseus\\genelists). The organisms or the corresponding text files that should be uploaded can be selected from all files, which are located in \\conf\\perseus\\genelists in your Perseus folder."
   },
   {
     "objectID": "creategenelist.html#parameter-window",
     "href": "creategenelist.html#parameter-window",
     "title": "Create Gene list",
-    "section": "",
-    "text": "Create Gene list windows"
+    "section": "2.2 Parameter window",
+    "text": "2.2 Parameter window\n\n\n\nCreate Gene list windows"
   },
   {
     "objectID": "createrandommatrix.html",
     "href": "createrandommatrix.html",
     "title": "Create randome matrix",
     "section": "",
-    "text": "{{page&gt;perseus:noedit:user:activities:matrixupload:createrandommatrix}}"
+    "text": "Type: - Matrix Upload\nSource code: CreateRandomMatrix.cs"
   },
   {
     "objectID": "createrandommatrix.html#number-of-rows",
     "href": "createrandommatrix.html#number-of-rows",
     "title": "Create randome matrix",
-    "section": "1.1 Number of rows",
-    "text": "1.1 Number of rows\nSpecifies the number of rows the randomly created matrix should have (default: 100). Rows are called “Row 1”, Row 2”, etc."
+    "section": "3.1 Number of rows",
+    "text": "3.1 Number of rows\nSpecifies the number of rows the randomly created matrix should have (default: 100). Rows are called “Row 1”, Row 2”, etc."
   },
   {
     "objectID": "createrandommatrix.html#number-of-columns",
     "href": "createrandommatrix.html#number-of-columns",
     "title": "Create randome matrix",
-    "section": "1.2 Number of columns",
-    "text": "1.2 Number of columns\nSpecifies the number of columns the randomly created matrix should have (default: 10). Columns are called “Column 1”, “Column 2”, etc."
+    "section": "3.2 Number of columns",
+    "text": "3.2 Number of columns\nSpecifies the number of columns the randomly created matrix should have (default: 10). Columns are called “Column 1”, “Column 2”, etc."
   },
   {
     "objectID": "createrandommatrix.html#percentage-of-missing-values",
     "href": "createrandommatrix.html#percentage-of-missing-values",
     "title": "Create randome matrix",
-    "section": "1.3 Percentage of missing values",
-    "text": "1.3 Percentage of missing values\nSpecifies the percentage of missing values the created matrix should contain (default: 0)."
+    "section": "3.3 Percentage of missing values",
+    "text": "3.3 Percentage of missing values\nSpecifies the percentage of missing values the created matrix should contain (default: 0)."
   },
   {
     "objectID": "createrandommatrix.html#mode",
     "href": "createrandommatrix.html#mode",
     "title": "Create randome matrix",
-    "section": "1.4 Mode",
-    "text": "1.4 Mode\nDefines how many normal distributions should be included in the matrix (default: One normal distribution). The number of normal distributions can be specified from a predefined list:\n\nOne normal distribution (parameter window A)\nTwo normal distributions (parameter window B)\nMany normal distributions (parameter window C)\n\n\n1.4.1 Distance\nThis parameter is just relevant, if the parameter “Mode” is set to “Two normal distributions”. It defines the distance between the two generated normal distributions (default: 2).\n\n\n1.4.2 How many\nThis parameter is just relevant, if the parameter “Mode” is set to “Many normal distributions”. It defines how many normal distributions should be in the generated matrix (default: 3).\n\n\n1.4.3 Box size\nThis parameter is just relevant, if the parameter “Mode” is set to “Many normal distributions”. It specifies the edge length of the hyper cubes in which the centers of the normal distributions are placed at random (default: 2)."
+    "section": "3.4 Mode",
+    "text": "3.4 Mode\nDefines how many normal distributions should be included in the matrix (default: One normal distribution). The number of normal distributions can be specified from a predefined list:\n\nOne normal distribution (parameter window A)\nTwo normal distributions (parameter window B)\nMany normal distributions (parameter window C)\n\n\n3.4.1 Distance\nThis parameter is just relevant, if the parameter “Mode” is set to “Two normal distributions”. It defines the distance between the two generated normal distributions (default: 2).\n\n\n3.4.2 How many\nThis parameter is just relevant, if the parameter “Mode” is set to “Many normal distributions”. It defines how many normal distributions should be in the generated matrix (default: 3).\n\n\n3.4.3 Box size\nThis parameter is just relevant, if the parameter “Mode” is set to “Many normal distributions”. It specifies the edge length of the hyper cubes in which the centers of the normal distributions are placed at random (default: 2)."
   },
   {
     "objectID": "createrandommatrix.html#parameter-window",
     "href": "createrandommatrix.html#parameter-window",
     "title": "Create randome matrix",
-    "section": "1.5 Parameter window",
-    "text": "1.5 Parameter window\n\n\n\nCreate random matrix"
+    "section": "3.5 Parameter window",
+    "text": "3.5 Parameter window\n\n\n\nCreate random matrix"
   },
   {
-    "objectID": "transformationproc.html",
-    "href": "transformationproc.html",
-    "title": "Transformation processes",
+    "objectID": "processtextcolumns.html",
+    "href": "processtextcolumns.html",
+    "title": "Process text column",
     "section": "",
-    "text": "The specified transformation formula (default: \\(log_2(x)\\)) that should be applied to all cells in the selected columns. The variable name is \\(x\\). Numbers with \\(.\\) are reagrded decimal point, \\(+\\), \\(-\\), \\(*\\), \\(/\\) and ^ can be used as well as scientific notation (e.g. \\(2.9e^{-15}\\)) is supported. Predefined functions can also be used, whose argument has to be enclosed by round brackets, e.g. \\(sin(2*x)\\).\n\n\n\nSelected expression and/or numerical columns, where the transformation should be applied (default: all columns are selected).\n#Parameter window\n\n\n\nPerseus pop-up window: Basic -&gt; Transform"
+    "text": "===== General =====\n===== Brief description =====\nValues in string columns can be manipulated according to a regular expression."
   },
   {
-    "objectID": "transformationproc.html#transformation",
-    "href": "transformationproc.html#transformation",
-    "title": "Transformation processes",
-    "section": "",
-    "text": "The specified transformation formula (default: \\(log_2(x)\\)) that should be applied to all cells in the selected columns. The variable name is \\(x\\). Numbers with \\(.\\) are reagrded decimal point, \\(+\\), \\(-\\), \\(*\\), \\(/\\) and ^ can be used as well as scientific notation (e.g. \\(2.9e^{-15}\\)) is supported. Predefined functions can also be used, whose argument has to be enclosed by round brackets, e.g. \\(sin(2*x)\\)."
+    "objectID": "processtextcolumns.html#columns",
+    "href": "processtextcolumns.html#columns",
+    "title": "Process text column",
+    "section": "1.1 Columns",
+    "text": "1.1 Columns\nSelected text columns, whose values should be manipulated by the defined regular expression (default: no columns are selected)."
   },
   {
-    "objectID": "transformationproc.html#columns",
-    "href": "transformationproc.html#columns",
-    "title": "Transformation processes",
+    "objectID": "processtextcolumns.html#regular-expression",
+    "href": "processtextcolumns.html#regular-expression",
+    "title": "Process text column",
+    "section": "1.2 Regular expression",
+    "text": "1.2 Regular expression\nSpecified regular expression that is applied to the selected text columns (default: “^([^;]+)”).\nA regular expression is a sequence of characters that forms a search pattern with a special syntax. A good general introduction can be found, as always, on Wikipedia. If you already know generally how regular expressions work, you may only need to glance at the quick reference or at an even quicker one.\nHere are a few examples:\n\n\n\n\n\n\n\nRegular expression\nEffect\n\n\n\n\n^([^;]+)\nSelect all the characters from the beginning of the line, up to but not including the first semicolon. This is the default.\n\n\nTAG = ([^,; ]*)\nLook for the first instance of “TAG =”, with any amount of whitespace (or none) around the equal sign, and return what follows after the whitespace until a comma or semicolon is reached.\n\n\n([ACTG]+)\nreturn the first string consisting only of the letters A, C, T, and G.\n\n\n(20[01][0-9]-[01][0-9]-[0-3][0-9])\nSelect a date between 2000 and 2019 of the form 2014-08-19."
+  },
+  {
+    "objectID": "processtextcolumns.html#replacement-string",
+    "href": "processtextcolumns.html#replacement-string",
+    "title": "Process text column",
+    "section": "1.3 Replacement string",
+    "text": "1.3 Replacement string\nYou can provide a replacement string here for more flexibility. Leave empty if unsure.\nExamples:\n\n\n\n\n\n\n\nRegular expression\nEffect\n\n\n\n\n$1\nReplace the original string with the first capture group, i.e. the part of the original string inside the first parentheses ’‘(..)’’."
+  },
+  {
+    "objectID": "processtextcolumns.html#keep-original-columns",
+    "href": "processtextcolumns.html#keep-original-columns",
+    "title": "Process text column",
+    "section": "1.4 Keep original columns",
+    "text": "1.4 Keep original columns\nIf checked, the original columns are retained unchanged, and new columns are appended to hold the results (default: unchecked). The name of a new column is created by appending underscores to the name of the original column until it is unique. If this box is not checked, then the strings in the original columns are overwritten by the results."
+  },
+  {
+    "objectID": "processtextcolumns.html#strings-separated-by-semicolons-are-independent",
+    "href": "processtextcolumns.html#strings-separated-by-semicolons-are-independent",
+    "title": "Process text column",
+    "section": "1.5 Strings separated by semicolons are independent",
+    "text": "1.5 Strings separated by semicolons are independent\nIf checked, each string is split into substrings at the semicolons, and the regular expression is applied independently to each substring (default: unchecked). The results are separated by semicolons and concatenated into a single string, which is returned. This is useful for columns where any row may contain multiple entries. If not checked, the string is evaluated as a whole and the only first match returned."
+  },
+  {
+    "objectID": "searchtextcolumns.html",
+    "href": "searchtextcolumns.html",
+    "title": "Search text column",
     "section": "",
-    "text": "Selected expression and/or numerical columns, where the transformation should be applied (default: all columns are selected).\n#Parameter window\n\n\n\nPerseus pop-up window: Basic -&gt; Transform"
+    "text": "Type: - Matrix Processing\nHeading: - Rearrange\nSource code: SearchTextColumns.cs"
+  },
+  {
+    "objectID": "searchtextcolumns.html#find-what",
+    "href": "searchtextcolumns.html#find-what",
+    "title": "Search text column",
+    "section": "3.1 Find what",
+    "text": "3.1 Find what\nSpecified text/term that is searched in a selected text column (default: empty)."
+  },
+  {
+    "objectID": "searchtextcolumns.html#look-in",
+    "href": "searchtextcolumns.html#look-in",
+    "title": "Search text column",
+    "section": "3.2 Look in",
+    "text": "3.2 Look in\nSelected text column that should be searched for the specified term (default: first text column of the matrix)."
+  },
+  {
+    "objectID": "searchtextcolumns.html#match-case",
+    "href": "searchtextcolumns.html#match-case",
+    "title": "Search text column",
+    "section": "3.3 Match case",
+    "text": "3.3 Match case\nThe cells of the text column will be searched for a matching substring (default: checked). The results will be in a new generated categorical column called “Search: original column name”. “+” indicates, whether a match was successful."
+  },
+  {
+    "objectID": "searchtextcolumns.html#match-whole-word",
+    "href": "searchtextcolumns.html#match-whole-word",
+    "title": "Search text column",
+    "section": "3.4 Match whole word",
+    "text": "3.4 Match whole word\nThe cells of the text column will be searched to match the whole word of the specified term (default: unchecked). The results will be in a new generated categorical column called “Search: original column name”. “+” indicates, whether a match was successful."
+  },
+  {
+    "objectID": "perseus_instructions.html",
+    "href": "perseus_instructions.html",
+    "title": "Perseus",
+    "section": "",
+    "text": "The Perseus software platform supports biological and biomedical researchers in interpreting protein quantification, interaction and post-translational modification data. Perseus contains a comprehensive portfolio of statistical tools for high-dimensional omics data analysis covering normalization, pattern recognition, time-series analysis, cross-omics comparisons and multiple-hypothesis testing (for an overview see Figure 1). A machine learning module supports the classification and validation of patient groups for diagnosis and prognosis, and it also detects predictive protein signatures. Central to Perseus is a user-friendly, interactive workflow environment that provides complete documentation of computational methods used in a publication(Tyanova, Temu, and Cox 2016)."
+  },
+  {
+    "objectID": "perseus_instructions.html#report-a-bug",
+    "href": "perseus_instructions.html#report-a-bug",
+    "title": "Perseus",
+    "section": "4.1 Report a bug",
+    "text": "4.1 Report a bug\nFor question we would love to hear from you under Contact"
   },
   {
     "objectID": "combineexpressioncolumns.html",
     "href": "combineexpressioncolumns.html",
     "title": "Combine Expression Columns",
     "section": "",
-    "text": "Specifies the operation (default: \\(x-y\\)), how a pair of columns should be combined into a single column. Numbers with \\(.\\) as decimal point, \\(+\\), \\(-\\), \\(*\\), \\(/\\) and ^ as well as scientific notation (e.g. \\(5.4e{-12}\\)) can be used. A set of predefined functions are also available, whose argument has to be enclosed by round brackets, e.g. \\(sin(2*x-y)\\).\n\n\n\nSelected expression columns that are the first partners of pairs of columns (default: no expression columns are selected). The number of selected columns in the “x” and “y” field must be the same.\n\n\n\nSelected expression columns that are the second partners of pairs of columns (default: no expression columns are selected). The number of selected columns in the “x” and “y” field must be the same.\n\n\n\nIf checked the original columns will be retained in the output matrix (default: checked)."
+    "text": "Type: - Matrix Processing\nHeading: - Basic (Processing)\nSource code: not public."
   },
   {
     "objectID": "combineexpressioncolumns.html#operation",
     "href": "combineexpressioncolumns.html#operation",
     "title": "Combine Expression Columns",
-    "section": "",
-    "text": "Specifies the operation (default: \\(x-y\\)), how a pair of columns should be combined into a single column. Numbers with \\(.\\) as decimal point, \\(+\\), \\(-\\), \\(*\\), \\(/\\) and ^ as well as scientific notation (e.g. \\(5.4e{-12}\\)) can be used. A set of predefined functions are also available, whose argument has to be enclosed by round brackets, e.g. \\(sin(2*x-y)\\)."
+    "section": "3.1 Operation",
+    "text": "3.1 Operation\nSpecifies the operation (default: \\(x-y\\)), how a pair of columns should be combined into a single column. Numbers with \\(.\\) as decimal point, \\(+\\), \\(-\\), \\(*\\), \\(/\\) and ^ as well as scientific notation (e.g. \\(5.4e{-12}\\)) can be used. A set of predefined functions are also available, whose argument has to be enclosed by round brackets, e.g. \\(sin(2*x-y)\\)."
   },
   {
     "objectID": "combineexpressioncolumns.html#x",
     "href": "combineexpressioncolumns.html#x",
     "title": "Combine Expression Columns",
-    "section": "",
-    "text": "Selected expression columns that are the first partners of pairs of columns (default: no expression columns are selected). The number of selected columns in the “x” and “y” field must be the same."
+    "section": "3.2 x",
+    "text": "3.2 x\nSelected expression columns that are the first partners of pairs of columns (default: no expression columns are selected). The number of selected columns in the “x” and “y” field must be the same."
   },
   {
     "objectID": "combineexpressioncolumns.html#y",
     "href": "combineexpressioncolumns.html#y",
     "title": "Combine Expression Columns",
-    "section": "",
-    "text": "Selected expression columns that are the second partners of pairs of columns (default: no expression columns are selected). The number of selected columns in the “x” and “y” field must be the same."
+    "section": "3.3 y",
+    "text": "3.3 y\nSelected expression columns that are the second partners of pairs of columns (default: no expression columns are selected). The number of selected columns in the “x” and “y” field must be the same."
   },
   {
     "objectID": "combineexpressioncolumns.html#keep-original-columns",
     "href": "combineexpressioncolumns.html#keep-original-columns",
     "title": "Combine Expression Columns",
+    "section": "3.4 Keep original columns",
+    "text": "3.4 Keep original columns\nIf checked the original columns will be retained in the output matrix (default: checked)."
+  },
+  {
+    "objectID": "viewer_gettingStarted.html",
+    "href": "viewer_gettingStarted.html",
+    "title": "Viewer - Getting started",
     "section": "",
-    "text": "If checked the original columns will be retained in the output matrix (default: checked)."
+    "text": "The Viewer module can either be used to get some prior information out of loaded raw files or to find some follow up hypotheses after raw files have already been processed.\n\n1 Raw files prior processing\nTo view MS spectra of raw files, load the files using the Load (to load single files) or Load folder (to load a whole folder) options.\n\n\n\nFigure 1: Load raw files\n\n\n\n\n2 Raw files post processing with MaxQuant\nFile organization is important for the correct display of annotated spectra. Raw files should be in the same folder as all index files, the mqpar.xml file and all output folders created by MaxQuant during the processing (that includes the combined folder). The easiest way to load the entire data is to load the mqpar.xml file. Make sure that the file paths are correct if using this option.\n\n\n\nFigure 2: Load mqpar.xml"
   },
   {
-    "objectID": "addnoise.html",
-    "href": "addnoise.html",
-    "title": "Add Noise",
+    "objectID": "andromeda_tutorial.html",
+    "href": "andromeda_tutorial.html",
+    "title": "Andromeda Tutorial",
     "section": "",
-    "text": "Defines the standard deviation of the noise distribution that will be added (default: 0.1)."
+    "text": "Tutorials explaining how to use the Andromeda search tool can be found in our YouTube channel.\nA few examples are listed below:\nConfiguration of the Andromeda search engine\nFrom our online MaxQunat Summer in 2021\n\nAndromeda search engine\nFrom our 2018 MaxQunat Summer in Madison\n\nTutorial - Configuration of the Andromeda search engine\nFrom our 2018 MaxQunat Summer in Barcelona"
   },
   {
-    "objectID": "addnoise.html#standard-deviation",
-    "href": "addnoise.html#standard-deviation",
-    "title": "Add Noise",
+    "objectID": "maxquant_instructions.html",
+    "href": "maxquant_instructions.html",
+    "title": "MaxQuant",
     "section": "",
-    "text": "Defines the standard deviation of the noise distribution that will be added (default: 0.1)."
-  },
-  {
-    "objectID": "ngsupload.html",
-    "href": "ngsupload.html",
-    "title": "NGS Upload",
-    "section": "",
-    "text": "Next-generation sequencing (NGS) methods are a set of different strategies to sequence DNA and related molecules. Because of extreme price reduction of sequencing per basepair as well as the huge spectrum of implementation, NGS is becoming a method of choice for many studies. Particularly, expression analysis is one of the most common tasks. In this sense NGS data is complementary to mass spectrometry-based proteomics data. We can therefore cover all steps of expression regulation starting from epigenetics to the protein level. That’s why it is important to include an NGS upload activity to the Perseus workflow."
-  },
-  {
-    "objectID": "ngsupload.html#experiment",
-    "href": "ngsupload.html#experiment",
-    "title": "NGS Upload",
-    "section": "2.1 Experiment",
-    "text": "2.1 Experiment\nIt specifies the type of NGS experiment the data is derived from (default: RNA sequencing and ribosome profiling)."
-  },
-  {
-    "objectID": "ngsupload.html#files",
-    "href": "ngsupload.html#files",
-    "title": "NGS Upload",
-    "section": "2.2 Files",
-    "text": "2.2 Files\nWith the two buttons “Add file” and “Remove file” it is possible to select BAM Binary-sequence Alignment Format files. This format is generally used as a compact way to save an alignment and at the same time allowing efficient random access.\nPerseus doesn’t require an index file."
-  },
-  {
-    "objectID": "ngsupload.html#strand-specificity",
-    "href": "ngsupload.html#strand-specificity",
-    "title": "NGS Upload",
-    "section": "2.3 Strand specificity",
-    "text": "2.3 Strand specificity\nIt describes which RNA library preparation method was used. Depending on this, reads will mostly be aligned to the same (sense) or opposite (anti-sense) strand as the feature. Alternatively, reads can be aligned to both strands (not stranded).\nLet’s demonstrate an expected distribution of reads according to an imaginary gene, consisting of one transcript, using each type of strand specificity. All reads marked red are those which we will take into account. Reads marked grey will be excluded from the coverage calculation.\n\nWe rule out reads with a mark because there is no intersection between them and the gene.\nAlso, we skip b marked reads because they have an opposite direction to that which we expect.\nLastly, we eliminate reads which don’t fit with the annotation (c) although such reads can potentially be evidence for another isoform of the gene.\n\n\n\n\nFigure 1: Stranded Single End Reads. Expected distribution of reads in a case of stranded and sense assay\n\n\n\n\n\nFigure 2: Stranded (anti-sense). Expected distribution of reads in a case of stranded and anti-sense assay\n\n\n\n\n\nFigure 3: Not-Stranded reads. Expected distribution of reads in a case of non-stranded assay\n\n\nPaired end sequencing produces two reads from one fragment and they should be from different strands (if reads is aligned to the same strand, we exclude such pairs).\nFor simplicity of visualization let’s represent paired end reads like this (Figure 4)\n\n\n\nFigure 4: Paired-end reads\n\n\nWe represent the paired end read like this for short. Definition of a, b and c marked reads is similar to single end reads’ case.\n\n\n\nFigure 5: Paired End Reads, Stranded (sense) or irst read from the pair is on sense strand. Expected distribution of reads in a case of stranded and sense assay\n\n\n\n\n\nFigure 6: Stranded (anti-sense)or first read is on anti-sense strand. Expected distribution of reads in a case of stranded and anti-sense assay\n\n\n\n\n\nFigure 7: Not-Stranded. Expected distribution of reads in a case of non-stranded assay\n\n\nIt’s worth to notice that for paired end reads the Persues by default calculates number of fragments for each gene, in other words it doesn’t count twice two reads of one pair.\nHint: In case the experimental design isn’t known, we recommend to use “Not stranded” as “Strand specificity”."
-  },
-  {
-    "objectID": "ngsupload.html#genome-annotation",
-    "href": "ngsupload.html#genome-annotation",
-    "title": "NGS Upload",
-    "section": "2.4 Genome annotation",
-    "text": "2.4 Genome annotation\nCurrently the plugin supports GTF file format containing coordinates of genome regions for which the coverage will be calculated. We strongly recommend to download an annotation from the ensemble FTP server.\nGTF (General Feature Format): GTF file can start from several browser/track lines (information specific to genome browser) and comment lines (line should begin with the # character). The rest of the file consists of one line per feature, each consists of nine columns\n\nseqname - name of chromosome of scaffold\nsource - name of the program that generated this feature, or the data source (database or project name)\nfeature - the current version of Perseus takes into account just “cds” and “exon” features\nstart - start position of the feature (1-based coordinate)\nend - end position of the feature (1-based coordinate)\nscore - a floating point value\nstrand - valid entries include ‘+’ (forward) or ‘-’ (reverse)\nattributes - a semicolon-separated list of tag-value pairs\n\n“empty” columns are denoted with a “.”. Each line with “cds” and “exon” feature should contain “gene_id” or “transcript_id” tags."
-  },
-  {
-    "objectID": "ngsupload.html#file",
-    "href": "ngsupload.html#file",
-    "title": "NGS Upload",
-    "section": "2.5 File",
-    "text": "2.5 File\nSpecified file path to the genome annotation."
-  },
-  {
-    "objectID": "ngsupload.html#feature-type-name",
-    "href": "ngsupload.html#feature-type-name",
-    "title": "NGS Upload",
-    "section": "2.6 Feature type name",
-    "text": "2.6 Feature type name\nIt is possible to specify a feature name that will be used (third column of GTF).\nHint: It makes sense to set “Feature type name” parameter to “Exons” for RNA-seq analysis and choose “CDS” for ribosome profiling."
-  },
-  {
-    "objectID": "ngsupload.html#number-of-threads",
-    "href": "ngsupload.html#number-of-threads",
-    "title": "NGS Upload",
-    "section": "2.7 Number of threads",
-    "text": "2.7 Number of threads\nSpecifies the number of used threads for uploading NGS data."
-  },
-  {
-    "objectID": "ngsupload.html#calculate-rpkmfpkm",
-    "href": "ngsupload.html#calculate-rpkmfpkm",
-    "title": "NGS Upload",
-    "section": "4.1 Calculate RPKM/FPKM",
-    "text": "4.1 Calculate RPKM/FPKM\n\nUpload bam files to Perseus. The Required annotation (gtf file) can be found on ensemble’ FTP server (annotation should be in agreement with version of genome which was used for alignment). For the example we took publically available RNA-seq data of cultured primary human lung fibroblast which done in two replicates GSM759890 and GSM759891\nFilter rows based on categorical ‘Gene biotype’ column\nselect just protein_coding group.\nMake normalization dividing columns by $sum(Normalization) -&gt; Divide $\nBy definition of RPKM, divide previous result by gene length, multiply on \\(10^9\\) and finally take the \\(log_2(Basic -&gt; Combine\\ main\\ columns)\\).\nTo get TPM, normalise columns of RPKM/FPKM by sum and multiply on \\(10^6\\) .\n\n\n\n\nFigure 8: Upload bam files to Perseus"
+    "text": "MaxQuant is a proteomics software package designed for analyzing large mass-spectrometric data sets. It is specifically aimed at high-resolution MS data. Several labeling techniques as well as label-free quantification are supported. MaxQuant is freely available and can be downloaded from this site. The download includes the search engine Andromeda, which is integrated into MaxQuant as well as the viewer application for inspection of raw data and identification and quantification results. For statistical analysis of MaxQuant output, we offer the Perseus framework.\n\n1 Documentation outline\n\nDownload and installation\nFirst steps in MaxQuant\nViewer\nAndromeda\nOutput Tables\nGoogle groups\nmaxquant Bug reporting\nGlossary\n\nFor additional training, consider attending the annual MaxQuant Summer School. Also watching some MaxQuant videos provides more insight.\n\nFor question we would love to hear from you under Contact\n\n\n2 Bibliography\nFor a deep-dive into the technique and progress behind MaxQuant, many papers of varying degrees of details were published over the last decades. For further reading, you can look at a small list of the more important corner stones of the MaxQuant development history.1 (Note that the paper has a large supplement containing in-depth descriptions of algorithms),2,3,4,5,6 (Note that this paper explains how to run MaxQuant in detail.),7\n\n\n\n\n\nReferences\n\n1. Cox, J. & Mann, M. MaxQuant enables high peptide identification rates, individualized p.p.b.-range mass accuracies and proteome-wide protein quantification. Nature Biotechnology 26, 1367–1372 (2008).\n\n\n2. Cox, J., Michalski, A. & Mann, M. Software Lock Mass by Two-Dimensional Minimization of Peptide Mass Errors. Journal of the American Society for Mass Spectrometry 22, 1373–1380 (2011).\n\n\n3. Schaab, C., Geiger, T., Stoehr, G., Cox, J. & Mann, M. Analysis of High Accuracy, Quantitative Proteomics Data in the MaxQB Database. Molecular & Cellular Proteomics 11, M111.014068 (2012).\n\n\n4. Cox, J. et al. Accurate Proteome-wide Label-free Quantification by Delayed Normalization and Maximal Peptide Ratio Extraction, Termed MaxLFQ. Molecular & Cellular Proteomics 13, 2513–2526 (2014).\n\n\n5. Tyanova, S. et al. Visualization of LC-MS/MS proteomics data in MaxQuant. PROTEOMICS 15, 1453–1456 (2015).\n\n\n6. Tyanova, S., Temu, T. & Cox, J. The MaxQuant computational platform for mass spectrometry-based shotgun proteomics. Nature Protocols 11, 2301–2319 (2016).\n\n\n7. Sinitcyn, P. et al. MaxQuant goes Linux. Nature Methods 15, 401–401 (2018)."
   }
 ]

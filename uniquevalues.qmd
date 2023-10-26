@@ -1,0 +1,44 @@
+---
+title: "Unique Values"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Rearrange
+-   **Source code:** [UniqueValues.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Rearrange/UniqueValues.cs)
+
+# Brief description
+
+Values within each row in the selected text columns are made unique by removing duplicates. The entries are interpreted as separated by semicolons.
+
+# Parameters
+
+## Text columns
+
+Selected text columns, whose values should be made unique (default: no columns are selected).
+
+# Parameter window
+
+![Unique values](images/rearrange-unique_values-edited.png)
+

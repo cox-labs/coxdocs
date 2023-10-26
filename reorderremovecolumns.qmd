@@ -1,0 +1,49 @@
+---
+title: "Reorder / Remove Columns"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+
+
+# General
+
+  * **Type:** - Matrix Processing
+  * **Heading:**  - Rearrange
+  * **Source code:** [ReorderRemoveAnnotRows.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Rearrange/ReorderRemoveAnnotRows.cs)
+
+# Brief description
+
+Annotation rows can be removed with this activity.
+
+Output: Same matrix but with annotation rows removed or in new order.
+
+
+
+# Parameters
+
+A new matrix is generated with the specified columns by selecting/deselecting expression/numerical/multi numerical/categorical/text columns (default: all columns are selected).
+
+# Parameter window
+
+![Reorder remove columns](images/rearrange-reorder_remove_columns-edited.png)
+
+{{perseus:user:activities:matrixprocessing:rearrange:rearrange-reorder_remove_columns-edited.png?direct\|Perseus pop-up window: Rearrange -\> Reorder/remove columns}}

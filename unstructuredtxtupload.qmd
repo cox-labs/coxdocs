@@ -13,6 +13,17 @@ date: today
 bibliography: references.bib
 ---
 
+# General
+
+  * **Type:** - Matrix Upload
+  * **Source code:** [UnstructuredTxtUpload.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Load/UnstructuredTxtUpload.cs)
+
+# Brief description
+
+Load all lines from a text file and put them into a single text column or split them into 
+multiple text columns.
+
+
 ```{=html}
 <!-- This comment and the line above it must be preserved when editing this file!
 The recommended sections are these, but they may be changed on a case by case basis.

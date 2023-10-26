@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Cox Lab">
-<meta name="dcterms.date" content="2023-10-24">
+<meta name="dcterms.date" content="2023-10-26">
 
 <title>Unstructured Text Upload</title>
 <style>
@@ -142,12 +142,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#parameters" id="toc-parameters" class="nav-link active" data-scroll-target="#parameters"><span class="header-section-number">1</span> Parameters</a>
+  <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general"><span class="header-section-number">1</span> General</a></li>
+  <li><a href="#brief-description" id="toc-brief-description" class="nav-link" data-scroll-target="#brief-description"><span class="header-section-number">2</span> Brief description</a></li>
+  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters"><span class="header-section-number">3</span> Parameters</a>
   <ul>
-  <li><a href="#file" id="toc-file" class="nav-link" data-scroll-target="#file"><span class="header-section-number">1.1</span> File</a></li>
-  <li><a href="#split-into-columns" id="toc-split-into-columns" class="nav-link" data-scroll-target="#split-into-columns"><span class="header-section-number">1.2</span> Split into columns</a></li>
-  <li><a href="#separator" id="toc-separator" class="nav-link" data-scroll-target="#separator"><span class="header-section-number">1.3</span> Separator</a></li>
-  <li><a href="#parameter-window" id="toc-parameter-window" class="nav-link" data-scroll-target="#parameter-window"><span class="header-section-number">1.4</span> Parameter window</a></li>
+  <li><a href="#file" id="toc-file" class="nav-link" data-scroll-target="#file"><span class="header-section-number">3.1</span> File</a></li>
+  <li><a href="#split-into-columns" id="toc-split-into-columns" class="nav-link" data-scroll-target="#split-into-columns"><span class="header-section-number">3.2</span> Split into columns</a></li>
+  <li><a href="#separator" id="toc-separator" class="nav-link" data-scroll-target="#separator"><span class="header-section-number">3.3</span> Separator</a></li>
+  <li><a href="#parameter-window" id="toc-parameter-window" class="nav-link" data-scroll-target="#parameter-window"><span class="header-section-number">3.4</span> Parameter window</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -174,7 +176,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 24, 2023</p>
+      <p class="date">October 26, 2023</p>
     </div>
   </div>
   
@@ -185,6 +187,16 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="general" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> General</h1>
+<ul>
+<li><strong>Type:</strong> - Matrix Upload</li>
+<li><strong>Source code:</strong> <a href="https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Load/UnstructuredTxtUpload.cs">UnstructuredTxtUpload.cs</a></li>
+</ul>
+</section>
+<section id="brief-description" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Brief description</h1>
+<p>Load all lines from a text file and put them into a single text column or split them into multiple text columns.</p>
 <!-- This comment and the line above it must be preserved when editing this file!
 The recommended sections are these, but they may be changed on a case by case basis.
 ===== Detailed description =====
@@ -192,18 +204,19 @@ The recommended sections are these, but they may be changed on a case by case ba
 ===== Theoretical background =====
 ===== Examples =====
 Make changes only below this line! -->
-<section id="parameters" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Parameters</h1>
-<section id="file" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="file"><span class="header-section-number">1.1</span> File</h2>
+</section>
+<section id="parameters" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Parameters</h1>
+<section id="file" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="file"><span class="header-section-number">3.1</span> File</h2>
 <p>Specifies the file path of the text file that should be uploaded (default: empty). It can be specified manually by typing in the path or the file can be browsed by using the “Select” button.</p>
 </section>
-<section id="split-into-columns" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="split-into-columns"><span class="header-section-number">1.2</span> Split into columns</h2>
+<section id="split-into-columns" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="split-into-columns"><span class="header-section-number">3.2</span> Split into columns</h2>
 <p>If checked the lines of the specified text file are split into several columns (default: FALSE).</p>
 </section>
-<section id="separator" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="separator"><span class="header-section-number">1.3</span> Separator</h2>
+<section id="separator" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="separator"><span class="header-section-number">3.3</span> Separator</h2>
 <p>This parameter is just relevant, if the parameter “Split into columns” is TRUE.</p>
 <p>It specifies how the values within a row of the text file are separated (default: Tab). The separation type can be selected from a predefined list:</p>
 <ul>
@@ -211,8 +224,8 @@ Make changes only below this line! -->
 <li>Comma</li>
 </ul>
 </section>
-<section id="parameter-window" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="parameter-window"><span class="header-section-number">1.4</span> Parameter window</h2>
+<section id="parameter-window" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="parameter-window"><span class="header-section-number">3.4</span> Parameter window</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/raw_upload-edited.png" class="img-fluid figure-img"></p>

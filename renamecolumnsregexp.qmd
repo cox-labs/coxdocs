@@ -1,0 +1,54 @@
+---
+title: "Rename Column by Reg. Exp."
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+
+# General
+
+  * **Type:** - Matrix Processing
+  * **Heading:** - Rearrange
+  * **Source code:** [RenameColumnsRegexp.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Rearrange/RenameColumnsRegexp.cs)
+
+# Brief description
+
+Rename expression columns with the help of matching part of the name by a regular expression.
+
+
+# Parameters
+
+## Regular expression
+
+Specified regular expression that is applied to all column names to rename them (default: no string).
+
+The general concept of regular expressions can be found under [Regular_expression](http://en.wikipedia.org/wiki/Regular_expression). 
+If you already know generally how regular expressions work, you may only need to glance at a [the Quick Reference](http://msdn.microsoft.com/en-us/library/az24scfc.aspx) or at an even [quicker Cheat Sheet](http://www.mikesdotnetting.com/Article/46/CSharp-Regular-Expressions-Cheat-Sheet).
+
+\\
+
+# Parameter window
+
+![](images/rearrange-rename_columns_reg_ex_-edited.png)
+
+The regular expression shown in the screenshot was applied to columns with the name "column 1", "column 2", "column 3", "column 4", "column 5"...
+
+Thus the new generated matrix contains columns named "1", "2", "3", "4", "5"...
