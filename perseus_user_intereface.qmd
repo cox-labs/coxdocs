@@ -67,17 +67,32 @@ The activities can be divided into five main categories. The icons of the catego
 
 ### Normalization
 
-\[\[perseus:user:activities:matrixprocessing:normalization:zscore\|Z-score\]\] \* \[\[perseus:user:activities:matrixprocessing:normalization:rank\|Rank\]\] \* \[\[perseus:user:activities:matrixprocessing:normalization:unitvector\|Unit vectors\]\] \* \[\[perseus:user:activities:matrixprocessing:normalization:scaletointerval\|Scale to interval\]\] \* \[\[perseus:user:activities:matrixprocessing:normalization:widthadjustment\|Width adjustment\]\] \* \[\[perseus:user:activities:matrixprocessing:normalization:subtract\|Subtract\]\] \* \[\[perseus:user:activities:matrixprocessing:normalization:divide\|Divide\]\] \* \[\[perseus:user:activities:matrixprocessing:normalization:normalizebycolumn\|Modify by column\]\] \* \[\[perseus:user:activities:matrixprocessing:normalization:subtractrowcluster\|Subtract row cluster\]\] \* \[\[perseus:user:activities:matrixprocessing:normalization:unzscore\|Un-Z-score\]\]
+* [Z-score](zscore.html)
+* [Rank](rank.html)
+* [Unit vectors](unitvector.html)
+* [Scale to interval](scaletointerval.html)
+* [Width adjustment](widthadjustment.html)
+* [Subtract](subtract.html)
+* [Divide](divide.html)
+* [Modify by column](normalizebycolumn.html)
+* [Subtract row cluster](subtractrowcluster.html)
+* [Un-Z-score](unzscore.html)
 
 ### Filter rows
 
-\[\[perseus:user:activities:matrixprocessing:filterrows:filtercategoricalcolumn\|Filter rows based on categorical column\]\] \* \[\[perseus:user:activities:matrixprocessing:filterrows:filternumericalcolumn\|Filter rows based on numerical/expression column\]\] \* \[\[perseus:user:activities:matrixprocessing:filterrows:filtertextualcolumn\|Filter rows based on text column\]\] \* \[\[perseus:user:activities:matrixprocessing:filterrows:filtervalidvaluesrows\|Filter rows based on valid values\]\] \* \[\[perseus:user:activities:matrixprocessing:filterrows:filterrandomrows\|Filter rows based on random sampling\]\]
+* [Filter rows based on categorical column](docs/filtercategoricalcolumn.html)
+* [Filter rows based on numerical/expression column](docs/filternumericalcolumn.html)
+* [Filter rows based on text column](docs/filtertextualcolumn.html) 
+* [Filter rows based on valid values](docs/filtervalidvaluesrows.html)
+* [Filter rows based on random sampling](docs/filterrandomrows.html)
 
 ### Filter columns
 
-\[\[perseus:user:activities:matrixprocessing:filtercolumns:filtercategoricalrow\|Filter rows based on categorical row\]\] \* \[\[perseus:user:activities:matrixprocessing:filterrows:filtervalidvaluesrows\|Filter rows based on valid values\]\]
+* [Filter columns based on categorical row](docs/filtercategoricalrow.html)
+* [Filter columns based on valid values](docs/filtervalidvaluescolumns.html)
 
-\<-- --\> Quality \* \[\[perseus:user:activities:matrixprocessing:quality:createqualitymatrix\|Create quality matrix\]\] \* \[\[perseus:user:activities:matrixprocessing:quality:filterquality\|Filter quality\]\] \* \[\[perseus:user:activities:matrixprocessing:quality:converttonan\|Convert to NaN\]\]
+### Quality 
+\* \[\[perseus:user:activities:matrixprocessing:quality:createqualitymatrix\|Create quality matrix\]\] \* \[\[perseus:user:activities:matrixprocessing:quality:filterquality\|Filter quality\]\] \* \[\[perseus:user:activities:matrixprocessing:quality:converttonan\|Convert to NaN\]\]
 
 ### Annot. columns
 

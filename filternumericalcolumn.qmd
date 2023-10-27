@@ -1,0 +1,65 @@
+---
+title: "Filter rows based on numerical/expression column"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Filter rows
+-   **Source code:** [FilterNumericalColumn.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Filter/FilterNumericalColumn.cs)
+
+# Brief description
+
+Only those rows are kept that have a value in the numerical column fulfilling the equation or inequality relation.
+
+Output: The filtered matrix.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Number of columns
+
+The filtering is based on relations of expression/numerical columns.
+Up to five columns (default: 1) can be selected.
+Depending on the number of chosen columns drop down box(es) appear on the pop-up window named "x", "y", "z", "a" and "b".
+In these drop down boxes expression/numerical columns can be specified, which can then be used in the relations that should be applied for filtering the matrix.
+
+## Number of relations
+
+Up to five relations using the previously specified columns can be included in the filtering process (default:1).
+Depending on the selected number of relations text fields on the pop-up window appear named "Relation 1", "Relation 2", "Relation 3", "Relation 4" and "Relation 5".
+
+In each text field a relation for the filtering process can be defined using the variables of the parameter "Number of columns".
+For the relations numbers with "." as decimal point, "+", "-", "\*", "/" and "\^" as well as scientific notation (e.g. "5.4e-12") can be used.
+
+## Combine through
+
+Defines how the specified relations are combined (default: intersection).
+Depending on the specified combination mode either rows, which fulfill the "intersection" (default) of the relations are kept or the ones fulfilling the "union".
+
+## Filter mode
+
+The "Filter mode" defines, whether the input matrix will be reduced ("Reduce matrix" = default) or a new categorical column called "Filter" will be generated containing the categories "Keep" and "Discard" ("Filter mode" = "Add categorical column").
+
+# Parameter window
+
+![](images/filter_rows-filter_rows_based_on_numerical_expression_column-edited.png)

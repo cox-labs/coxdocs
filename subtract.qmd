@@ -1,0 +1,62 @@
+---
+title: "Subtract"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Normalization
+-   **Source code:** [Subtract.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Norm/Subtract.cs)
+
+# Brief description
+
+The specified quantity calculated on each row/column is subtracted from each value.
+
+Output: Normalized expression matrix.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Matrix access
+
+Specifies whether the subtraction is performed on rows or columns (default: Rows).
+If the subtraction is performed on rows, the "Grouping" can be specified as well (default: <No grouping>).
+
+### Grouping
+
+This parameter is just relevant, if the "Matrix access" is set to "Rows".
+It specifies, whether the normalization should be applied separately on groups (default: <No grouping>).
+
+## Subtract what
+
+Defines what value should be subtracted from all entries in expression columns (default: Median).
+The subtrahend can be selected from a predefined list:
+
+-   Mean
+-   Median
+-   Most frequent value
+-   Tukey's biweight
+
+# Parameter window
+
+![](images/normalization-subtract-edited.png)
+

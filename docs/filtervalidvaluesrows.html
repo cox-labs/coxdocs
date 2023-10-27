@@ -9,7 +9,7 @@
 <meta name="author" content="Cox Lab">
 <meta name="dcterms.date" content="2023-10-27">
 
-<title>Cox Docs</title>
+<title>Filter rows based on valid values</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -89,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">HOME</span></a>
   </li>  
   <li class="nav-item">
@@ -138,14 +138,36 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="-1">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general"><span class="header-section-number">1</span> General</a></li>
+  <li><a href="#brief-description" id="toc-brief-description" class="nav-link" data-scroll-target="#brief-description"><span class="header-section-number">2</span> Brief description</a></li>
+  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters"><span class="header-section-number">3</span> Parameters</a>
+  <ul>
+  <li><a href="#min.-number-of-values" id="toc-min.-number-of-values" class="nav-link" data-scroll-target="#min.-number-of-values"><span class="header-section-number">3.1</span> Min. number of values</a></li>
+  <li><a href="#sec-mode" id="toc-sec-mode" class="nav-link" data-scroll-target="#sec-mode"><span class="header-section-number">3.2</span> Mode</a>
+  <ul class="collapse">
+  <li><a href="#grouping" id="toc-grouping" class="nav-link" data-scroll-target="#grouping"><span class="header-section-number">3.2.1</span> Grouping</a></li>
+  </ul></li>
+  <li><a href="#values-should-be" id="toc-values-should-be" class="nav-link" data-scroll-target="#values-should-be"><span class="header-section-number">3.3</span> Values should be</a>
+  <ul class="collapse">
+  <li><a href="#minimum" id="toc-minimum" class="nav-link" data-scroll-target="#minimum"><span class="header-section-number">3.3.1</span> Minimum</a></li>
+  <li><a href="#maximum" id="toc-maximum" class="nav-link" data-scroll-target="#maximum"><span class="header-section-number">3.3.2</span> Maximum</a></li>
+  </ul></li>
+  <li><a href="#filter-mode" id="toc-filter-mode" class="nav-link" data-scroll-target="#filter-mode"><span class="header-section-number">3.4</span> Filter mode</a></li>
+  </ul></li>
+  <li><a href="#parameter-window" id="toc-parameter-window" class="nav-link" data-scroll-target="#parameter-window"><span class="header-section-number">4</span> Parameter window</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Cox Docs</h1>
+<h1 class="title">Filter rows based on valid values</h1>
 </div>
 
 
@@ -173,20 +195,77 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<hr>
-<p>Welcome to coxdocs.org, the home of the documentation for</p>
+<section id="general" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> General</h1>
 <ul>
-<li><a href="maxquant_instructions.html">MaxQuant</a></li>
-<li><a href="perseus_instructions.html">Perseus</a></li>
-<li><a href="andromeda_instructions.html">Andromeda</a></li>
+<li><strong>Type:</strong> - Matrix Processing</li>
+<li><strong>Heading:</strong> - Filter rows</li>
+<li><strong>Source code:</strong> <a href="https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Filter/FilterValidValuesRows.cs">FilterValidValuesRows.cs</a></li>
 </ul>
-<hr>
-<div class="line-block"></div>
-<div class="watermarked">
-<p><img src="Figures/coxlab_logo2.png" alt="Photo"></p>
-</div>
+</section>
+<section id="brief-description" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Brief description</h1>
+<p>Rows of the expression matrix are filtered to contain at least the specified numbers of entries that are valid in the specified way.</p>
+<p>Output: The matrix of expression values is constrained to contain only these rows that fulfill the requirement.</p>
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+</section>
+<section id="parameters" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Parameters</h1>
+<section id="min.-number-of-values" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="min.-number-of-values"><span class="header-section-number">3.1</span> Min. number of values</h2>
+<p>Defines the minimal number of valid values each row needs to have in the expression columns to survive the filtering process (default: 3).</p>
+</section>
+<section id="sec-mode" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="sec-mode"><span class="header-section-number">3.2</span> Mode</h2>
+<p>Defines, which expression columns are counted to define, if a row has enough valid values to survive the filtering process (default: In total). There are three options available:</p>
+<ul>
+<li>In total (includes all expression columns)</li>
+<li>In each group</li>
+<li>In at least one group</li>
+</ul>
+<section id="grouping" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="grouping"><span class="header-section-number">3.2.1</span> Grouping</h3>
+<p>This parameter is just relevant, if Mode (<a href="#sec-mode" class="quarto-xref">Section&nbsp;3.2</a>) is set to “In each group” or “In at least one group”. It defines the grouping of the expression columns that should be used by selecting a categorical row (default: first categorical row of the matrix).</p>
+</section>
+</section>
+<section id="values-should-be" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="values-should-be"><span class="header-section-number">3.3</span> Values should be</h2>
+<p>Defines the restriction for a value to be classified as valid (default: Valid). There are seven different possibilities to specify, which entry is counted as a valid value (default: Valid):</p>
+<ul>
+<li>Valid</li>
+<li>Greater than</li>
+<li>Greater or equal</li>
+<li>Less than</li>
+<li>Less or equal</li>
+<li>Between</li>
+<li>Outside</li>
+</ul>
+<section id="minimum" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="minimum"><span class="header-section-number">3.3.1</span> Minimum</h3>
+<p>This parameter is just relevant, if “Values should be” is set to “Greater than”, “Greater or equal”, “Between” or “Outside”. It defines a lower bound to apply the operation specified in “Values should be” (default: 0).</p>
+</section>
+<section id="maximum" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="maximum"><span class="header-section-number">3.3.2</span> Maximum</h3>
+<p>This parameter is just relevant, if “Values should be” is set to “Less than”, “Less or equal”, “Between” or “Outside”. It defines a upper bound to apply the operation specified in “Values should be” (default: 0).</p>
+</section>
+</section>
+<section id="filter-mode" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="filter-mode"><span class="header-section-number">3.4</span> Filter mode</h2>
+<p>The “Filter mode” defines, whether the input matrix will be reduced (“Reduce matrix” = default) or a new categorical column called “Filter” will be generated containing the categories “Keep” and “Discard” (“Filter mode” = “Add categorical column”).</p>
+</section>
+</section>
+<section id="parameter-window" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Parameter window</h1>
+<p><img src="images/filter_rows-filter_rows_based_on_valid_values-edited.png" class="img-fluid"></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

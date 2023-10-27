@@ -1,0 +1,62 @@
+---
+title: "Z Score"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Normalization
+-   **Source code:** [ZScore.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Norm/ZScore.cs)
+
+# Brief description
+
+The mean of each row/column is subtracted from each value.
+The result is then divided by the standard deviation of the row/column.
+
+Output: Normalized expression matrix.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Matrix access
+
+Specifies whether the z-scoring is performed on rows or columns (default: Rows).
+
+### Grouping
+
+This parameter is just relevant, if the "Matrix access" is set to "Rows".
+It specifies, whether the normalization should be applied separately on groups (default: <No grouping>).
+
+## Use median
+
+If checked, the median and not the mean of each row/column is used for the calculation of the z-score of each matrix cell (default: unchecked).
+
+## Report mean and std. dev.
+
+If checked, the mean and the standard deviation used for the calculation are reported (default: unchecked).
+In case the z-scoring is based on rows ("Matrix access" = "Rows"), the calculated mean and standard deviation appear in 2 newly generated numeric columns called "Mean" and "Std. dev." containing the mean and standard deviation of each row.
+In case the calculation is based on columns ("Matrix access" = "Columns"), 2 new numeric rows are generated containing the mean and standard deviation of each column.
+
+# Parameter window
+
+![Z-Score](images/normalization-z-score-edited.png)
+

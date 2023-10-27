@@ -1,0 +1,72 @@
+---
+title: "Filter rows based on text column"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Filter rows
+-   **Source code:** [FilterTextualColumn.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Filter/FilterTextualColumn.cs)
+
+# Brief description
+
+Only those rows are kept that have a value in the textual column that matches the search string.
+
+Output: The filtered matrix.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Column
+
+Selected text column the filtering is based on (default: first text column in the matrix).
+
+## Search string
+
+Specified text string that should be searched in the previously defined text column (default: empty).
+
+## Match case
+
+If checked, the cells of the text column will be searched for a matching substring (default: unchecked).
+The results will be in a new generated categorical column called "Search: original column name".
+"+" indicates, whether a match was successful.
+
+## Match whole word
+
+If checked, the text column will be searched to match the whole word of the specified term (default: checked).
+The results will be in a new generated categorical column called "Search: original column name".
+"+" indicates, whether a match was successful.
+
+## Mode
+
+The rows with the selected values will be kept/discarded depending on the selected "Mode" (default: "Remove matching rows").
+If "Remove matching rows" is selected, rows having the values will be removed while all other rows will be kept.
+If "Keep matching rows" is selected, the opposite will happen.
+
+## Filter mode
+
+The "Filter mode" defines, whether the input matrix will be reduced ("Reduce matrix" = default) or a new categorical column called "Filter" will be generated containing the categories "Keep" and "Discard" ("Filter mode" = "Add categorical column").
+
+# Parameter window
+
+![](images/filter_rows-filter_rows_based_on_text_column-edited.png)
+

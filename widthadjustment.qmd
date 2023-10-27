@@ -1,0 +1,39 @@
+---
+title: "Width adjustment"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+  * **Type:**  - Matrix Processing
+  * **Heading:** - Normalization
+  * **Source code:** [WidthAdjustment.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Norm/WidthAdjustment.cs)
+
+# Brief description
+
+The first, second and third quartiles ($q1$, $q2$, $q3$) are calculated from the  distribution of all values. The second quartile (which is the median) is subtracted from each value to center the distribution. Then we divide by the width in an asymmetric way. All values that are  positive after subtraction of the median are divided by $q3 - q2$ while all negative values are divided by $q2 - q1$.
+
+
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+
+# Parameters
+
+"Width adjustment" has no parameters.
+
+

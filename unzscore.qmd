@@ -1,0 +1,55 @@
+---
+title: "Un Z-Score"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Normalization
+-   **Source code:** [UnZScore.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Norm/UnZScore.cs)
+
+# Brief description
+
+Providing the means and standard deviations used in a z-score transformation the data is transformed back to what it was before z-scoring.
+
+Output: Normalized expression matrix.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Matrix access
+
+Specifies whether the un-z-scoring is performed on the rows or columns (default: Rows).
+The selection depends on what was used before in [the normalization process](docs/zscore.html).
+
+## Mean
+
+Selected numerical row/column containing the mean values that were used for the z-scoring (default: column called "Mean" or first numerical column in the matrix).
+
+## Std. dev.
+
+Selected numerical row/column containing the standard deviation values that were used for the z-scoring (default: column called "Std.dev." or first numerical column in the matrix).
+
+# Parameter window
+
+![](images/normalization-un-z-score-edited.png)
+

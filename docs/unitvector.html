@@ -9,7 +9,7 @@
 <meta name="author" content="Cox Lab">
 <meta name="dcterms.date" content="2023-10-27">
 
-<title>Cox Docs</title>
+<title>Unit Vector</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -89,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">HOME</span></a>
   </li>  
   <li class="nav-item">
@@ -138,14 +138,26 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="-1">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general"><span class="header-section-number">1</span> General</a></li>
+  <li><a href="#brief-description" id="toc-brief-description" class="nav-link" data-scroll-target="#brief-description"><span class="header-section-number">2</span> Brief description</a></li>
+  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters"><span class="header-section-number">3</span> Parameters</a>
+  <ul>
+  <li><a href="#matrix-access" id="toc-matrix-access" class="nav-link" data-scroll-target="#matrix-access"><span class="header-section-number">3.1</span> Matrix access</a></li>
+  </ul></li>
+  <li><a href="#parameter-window" id="toc-parameter-window" class="nav-link" data-scroll-target="#parameter-window"><span class="header-section-number">4</span> Parameter window</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Cox Docs</h1>
+<h1 class="title">Unit Vector</h1>
 </div>
 
 
@@ -173,20 +185,44 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<hr>
-<p>Welcome to coxdocs.org, the home of the documentation for</p>
+<section id="general" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> General</h1>
 <ul>
-<li><a href="maxquant_instructions.html">MaxQuant</a></li>
-<li><a href="perseus_instructions.html">Perseus</a></li>
-<li><a href="andromeda_instructions.html">Andromeda</a></li>
+<li><strong>Type:</strong> - Matrix Processing</li>
+<li><strong>Heading:</strong> - Normalization</li>
+<li><strong>Source code:</strong> <a href="https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Norm/UnitVector.cs">UnitVector.cs</a></li>
 </ul>
-<hr>
-<div class="line-block"></div>
-<div class="watermarked">
-<p><img src="Figures/coxlab_logo2.png" alt="Photo"></p>
+</section>
+<section id="brief-description" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Brief description</h1>
+<p>The rows/columns are regarded as high-dimensional vectors. They are divided by their lengths resulting in a matrix of unit vectors.</p>
+<p>Output: Normalized expression matrix.</p>
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+</section>
+<section id="parameters" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Parameters</h1>
+<section id="matrix-access" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="matrix-access"><span class="header-section-number">3.1</span> Matrix access</h2>
+<p>Specifies whether rows or columns should be regarded as high-dimensional vectors and be transformed into unit vectors (default: Rows).</p>
+</section>
+</section>
+<section id="parameter-window" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Parameter window</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/normalization-unit_vectors-edited.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Unit vectors</figcaption>
+</figure>
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

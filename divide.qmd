@@ -1,0 +1,56 @@
+---
+title: "Divide"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Normalization
+-   **Source code:** [Divide.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Norm/Divide.cs)
+
+# Brief description
+
+Divide all values by the specified quantity calculated on each row/column.
+
+Output: Normalized expression matrix.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Matrix access
+
+Specifies whether the division is performed on rows or columns (default: Rows).
+
+## Divide by what
+
+Defines by what value all entries in expression columns should be divided (default: Median).
+The divisor can be selected from a predefined list:
+
+-   Sum
+-   Mean
+-   Median
+-   Most frequent value
+-   Tukey's biweight
+
+# Parameter window
+
+![](images/normalization-divide-edited.png)

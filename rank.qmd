@@ -1,0 +1,45 @@
+---
+title: "Rank"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Normalization
+-   **Source code:** [Rank.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Norm/Rank.cs)
+
+# Brief description
+
+The values in each row/column are replaced by ranks.
+
+Output: Normalized expression matrix.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Matrix access
+
+Defines whether the values in expression columns or rows should be ranked (default: Rows).
+
+# Parameter window
+
+![Rank](images/normalization-rank-edited.png)

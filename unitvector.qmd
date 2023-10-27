@@ -1,0 +1,46 @@
+---
+title: "Unit Vector"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Normalization
+-   **Source code:** [UnitVector.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Norm/UnitVector.cs)
+
+# Brief description
+
+The rows/columns are regarded as high-dimensional vectors.
+They are divided by their lengths resulting in a matrix of unit vectors.
+
+Output: Normalized expression matrix.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Matrix access
+
+Specifies whether rows or columns should be regarded as high-dimensional vectors and be transformed into unit vectors (default: Rows).
+
+# Parameter window
+
+![Unit vectors](images/normalization-unit_vectors-edited.png)

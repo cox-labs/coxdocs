@@ -1,0 +1,53 @@
+---
+title: "Scale to interval"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Normalization
+-   **Source code:** [ScaleToInterval.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Norm/ScaleToInterval.cs)
+
+# Brief description
+
+A linear transformation is applied to the values in each row/column such that the minima and maxima coincide with the specified values.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Matrix access
+
+Defines if rows or columns should be scaled to an interval (default: Rows).
+The lowest value of each column/row results in the value determined at the "Minimum" parameter and the largest value of the row/column is the value determined at the "Maximum" parameter.
+
+## Minimum
+
+Defines the lower bound of the interval all the values within a row/column will be scaled to (default: 0).
+
+## Maximum
+
+Defines the upper bound of the interval all the values within a row/column will be scaled to (default: 1).
+
+# Parameter window
+
+![](images/normalization-scale_to_interval-edited.png)
+

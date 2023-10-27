@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.294">
+<meta name="generator" content="quarto-1.4.315">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Cox Lab">
-<meta name="dcterms.date" content="2023-10-26">
+<meta name="dcterms.date" content="2023-10-27">
 
 <title>Perseus User Interface</title>
 <style>
@@ -89,42 +89,42 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html" rel="" target="">
- <span class="menu-text">HOME</span></a>
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">HOME</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./maxquant_instructions.html" rel="" target="">
- <span class="menu-text">MaxQuant</span></a>
+    <a class="nav-link" href="./maxquant_instructions.html"> 
+<span class="menu-text">MaxQuant</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./perseus_instructions.html" rel="" target="">
- <span class="menu-text">Perseus</span></a>
+    <a class="nav-link" href="./perseus_instructions.html"> 
+<span class="menu-text">Perseus</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./andromeda_instructions.html" rel="" target="">
- <span class="menu-text">Andromeda</span></a>
+    <a class="nav-link" href="./andromeda_instructions.html"> 
+<span class="menu-text">Andromeda</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="./contact.html" rel="" target=""><i class="bi bi-envelope" role="img">
+    <a class="nav-link" href="./contact.html"> <i class="bi bi-envelope" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/cox-labs/CoxLab_Bug_Reporting" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/cox-labs/CoxLab_Bug_Reporting"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/TheCoxLab" rel="" target=""><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com/TheCoxLab"> <i class="bi bi-twitter" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/in/juergen-cox-2437ba17/" rel="" target=""><i class="bi bi-fa-linkedin fa-lg" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/in/juergen-cox-2437ba17/"> <i class="bi bi-fa-linkedin fa-lg" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -150,12 +150,13 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#normalization" id="toc-normalization" class="nav-link" data-scroll-target="#normalization"><span class="header-section-number">2.3</span> Normalization</a></li>
   <li><a href="#filter-rows" id="toc-filter-rows" class="nav-link" data-scroll-target="#filter-rows"><span class="header-section-number">2.4</span> Filter rows</a></li>
   <li><a href="#filter-columns" id="toc-filter-columns" class="nav-link" data-scroll-target="#filter-columns"><span class="header-section-number">2.5</span> Filter columns</a></li>
-  <li><a href="#annot.-columns" id="toc-annot.-columns" class="nav-link" data-scroll-target="#annot.-columns"><span class="header-section-number">2.6</span> Annot. columns</a></li>
-  <li><a href="#annot.-rows" id="toc-annot.-rows" class="nav-link" data-scroll-target="#annot.-rows"><span class="header-section-number">2.7</span> Annot. rows</a></li>
-  <li><a href="#tests" id="toc-tests" class="nav-link" data-scroll-target="#tests"><span class="header-section-number">2.8</span> Tests</a></li>
-  <li><a href="#imputation" id="toc-imputation" class="nav-link" data-scroll-target="#imputation"><span class="header-section-number">2.9</span> Imputation</a></li>
-  <li><a href="#modifications" id="toc-modifications" class="nav-link" data-scroll-target="#modifications"><span class="header-section-number">2.10</span> Modifications</a></li>
-  <li><a href="#clustering" id="toc-clustering" class="nav-link" data-scroll-target="#clustering"><span class="header-section-number">2.11</span> Clustering</a></li>
+  <li><a href="#quality" id="toc-quality" class="nav-link" data-scroll-target="#quality"><span class="header-section-number">2.6</span> Quality</a></li>
+  <li><a href="#annot.-columns" id="toc-annot.-columns" class="nav-link" data-scroll-target="#annot.-columns"><span class="header-section-number">2.7</span> Annot. columns</a></li>
+  <li><a href="#annot.-rows" id="toc-annot.-rows" class="nav-link" data-scroll-target="#annot.-rows"><span class="header-section-number">2.8</span> Annot. rows</a></li>
+  <li><a href="#tests" id="toc-tests" class="nav-link" data-scroll-target="#tests"><span class="header-section-number">2.9</span> Tests</a></li>
+  <li><a href="#imputation" id="toc-imputation" class="nav-link" data-scroll-target="#imputation"><span class="header-section-number">2.10</span> Imputation</a></li>
+  <li><a href="#modifications" id="toc-modifications" class="nav-link" data-scroll-target="#modifications"><span class="header-section-number">2.11</span> Modifications</a></li>
+  <li><a href="#clustering" id="toc-clustering" class="nav-link" data-scroll-target="#clustering"><span class="header-section-number">2.12</span> Clustering</a></li>
   </ul></li>
   <li><a href="#analysis" id="toc-analysis" class="nav-link" data-scroll-target="#analysis"><span class="header-section-number">3</span> Analysis</a>
   <ul>
@@ -193,7 +194,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 26, 2023</p>
+      <p class="date">October 27, 2023</p>
     </div>
   </div>
   
@@ -265,27 +266,50 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="normalization" class="level3" data-number="2.3">
 <h3 data-number="2.3" class="anchored" data-anchor-id="normalization"><span class="header-section-number">2.3</span> Normalization</h3>
-<p>[[perseus:user:activities:matrixprocessing:normalization:zscore|Z-score]] * [[perseus:user:activities:matrixprocessing:normalization:rank|Rank]] * [[perseus:user:activities:matrixprocessing:normalization:unitvector|Unit vectors]] * [[perseus:user:activities:matrixprocessing:normalization:scaletointerval|Scale to interval]] * [[perseus:user:activities:matrixprocessing:normalization:widthadjustment|Width adjustment]] * [[perseus:user:activities:matrixprocessing:normalization:subtract|Subtract]] * [[perseus:user:activities:matrixprocessing:normalization:divide|Divide]] * [[perseus:user:activities:matrixprocessing:normalization:normalizebycolumn|Modify by column]] * [[perseus:user:activities:matrixprocessing:normalization:subtractrowcluster|Subtract row cluster]] * [[perseus:user:activities:matrixprocessing:normalization:unzscore|Un-Z-score]]</p>
+<ul>
+<li><a href="zscore.html">Z-score</a></li>
+<li><a href="rank.html">Rank</a></li>
+<li><a href="unitvector.html">Unit vectors</a></li>
+<li><a href="scaletointerval.html">Scale to interval</a></li>
+<li><a href="widthadjustment.html">Width adjustment</a></li>
+<li><a href="subtract.html">Subtract</a></li>
+<li><a href="divide.html">Divide</a></li>
+<li><a href="normalizebycolumn.html">Modify by column</a></li>
+<li><a href="subtractrowcluster.html">Subtract row cluster</a></li>
+<li><a href="unzscore.html">Un-Z-score</a></li>
+</ul>
 </section>
 <section id="filter-rows" class="level3" data-number="2.4">
 <h3 data-number="2.4" class="anchored" data-anchor-id="filter-rows"><span class="header-section-number">2.4</span> Filter rows</h3>
-<p>[[perseus:user:activities:matrixprocessing:filterrows:filtercategoricalcolumn|Filter rows based on categorical column]] * [[perseus:user:activities:matrixprocessing:filterrows:filternumericalcolumn|Filter rows based on numerical/expression column]] * [[perseus:user:activities:matrixprocessing:filterrows:filtertextualcolumn|Filter rows based on text column]] * [[perseus:user:activities:matrixprocessing:filterrows:filtervalidvaluesrows|Filter rows based on valid values]] * [[perseus:user:activities:matrixprocessing:filterrows:filterrandomrows|Filter rows based on random sampling]]</p>
+<ul>
+<li><a href="docs/filtercategoricalcolumn.html">Filter rows based on categorical column</a></li>
+<li><a href="docs/filternumericalcolumn.html">Filter rows based on numerical/expression column</a></li>
+<li><a href="docs/filtertextualcolumn.html">Filter rows based on text column</a></li>
+<li><a href="docs/filtervalidvaluesrows.html">Filter rows based on valid values</a></li>
+<li><a href="docs/filterrandomrows.html">Filter rows based on random sampling</a></li>
+</ul>
 </section>
 <section id="filter-columns" class="level3" data-number="2.5">
 <h3 data-number="2.5" class="anchored" data-anchor-id="filter-columns"><span class="header-section-number">2.5</span> Filter columns</h3>
-<p>[[perseus:user:activities:matrixprocessing:filtercolumns:filtercategoricalrow|Filter rows based on categorical row]] * [[perseus:user:activities:matrixprocessing:filterrows:filtervalidvaluesrows|Filter rows based on valid values]]</p>
-<p>&lt;– –&gt; Quality * [[perseus:user:activities:matrixprocessing:quality:createqualitymatrix|Create quality matrix]] * [[perseus:user:activities:matrixprocessing:quality:filterquality|Filter quality]] * [[perseus:user:activities:matrixprocessing:quality:converttonan|Convert to NaN]]</p>
+<ul>
+<li><a href="docs/filtercategoricalrow.html">Filter columns based on categorical row</a></li>
+<li><a href="docs/filtervalidvaluescolumns.html">Filter columns based on valid values</a></li>
+</ul>
 </section>
-<section id="annot.-columns" class="level3" data-number="2.6">
-<h3 data-number="2.6" class="anchored" data-anchor-id="annot.-columns"><span class="header-section-number">2.6</span> Annot. columns</h3>
+<section id="quality" class="level3" data-number="2.6">
+<h3 data-number="2.6" class="anchored" data-anchor-id="quality"><span class="header-section-number">2.6</span> Quality</h3>
+<p>* [[perseus:user:activities:matrixprocessing:quality:createqualitymatrix|Create quality matrix]] * [[perseus:user:activities:matrixprocessing:quality:filterquality|Filter quality]] * [[perseus:user:activities:matrixprocessing:quality:converttonan|Convert to NaN]]</p>
+</section>
+<section id="annot.-columns" class="level3" data-number="2.7">
+<h3 data-number="2.7" class="anchored" data-anchor-id="annot.-columns"><span class="header-section-number">2.7</span> Annot. columns</h3>
 <p>[[perseus:user:activities:matrixprocessing:annotcolumns:addannotationtomatrix|Add annotation]] * [[perseus:user:activities:matrixprocessing:annotcolumns:backtobaseidentifiers|To base identifiers]] * [[perseus:user:activities:matrixprocessing:annotcolumns:fisherexacttestproces|Fisher exact test]] * [[perseus:user:activities:matrixprocessing:annotcolumns:averagecategories|Average categories]] * [[perseus:user:activities:matrixprocessing:annotcolumns:categorycounting|Category counting]] * [[perseus:user:activities:matrixprocessing:annotcolumns:onedimannotationenrichment|1D annotation enrichment]] * [[perseus:user:activities:matrixprocessing:annotcolumns:twodimannotationenrichment|2D annotation enrichment]]</p>
 </section>
-<section id="annot.-rows" class="level3" data-number="2.7">
-<h3 data-number="2.7" class="anchored" data-anchor-id="annot.-rows"><span class="header-section-number">2.7</span> Annot. rows</h3>
+<section id="annot.-rows" class="level3" data-number="2.8">
+<h3 data-number="2.8" class="anchored" data-anchor-id="annot.-rows"><span class="header-section-number">2.8</span> Annot. rows</h3>
 <p>[[perseus:user:activities:matrixprocessing:annotrows:createcategoricalannotrow|Categorical annotation rows]] * [[perseus:user:activities:matrixprocessing:annotrows:createnumericalannotrow|Numerical annotation rows]] * [[perseus:user:activities:matrixprocessing:annotrows:averagegroups|Average groups]] * [[perseus:user:activities:matrixprocessing:annotrows:jointermsincategoricalrow|Join terms in categorical row]]</p>
 </section>
-<section id="tests" class="level3" data-number="2.8">
-<h3 data-number="2.8" class="anchored" data-anchor-id="tests"><span class="header-section-number">2.8</span> Tests</h3>
+<section id="tests" class="level3" data-number="2.9">
+<h3 data-number="2.9" class="anchored" data-anchor-id="tests"><span class="header-section-number">2.9</span> Tests</h3>
 <ul>
 <li>[[perseus:user:activities:matrixprocessing:tests:onesampletestprocessing|One-sample tests]]</li>
 <li>[[perseus:user:activities:matrixprocessing:tests:twosampletestprocessing|Two-samples tests]]</li>
@@ -293,20 +317,20 @@ ul.task-list li input[type="checkbox"] {
 <li>[[perseus:user:activities:matrixprocessing:tests:twowayanova|Two-way ANOVA]]</li>
 </ul>
 </section>
-<section id="imputation" class="level3" data-number="2.9">
-<h3 data-number="2.9" class="anchored" data-anchor-id="imputation"><span class="header-section-number">2.9</span> Imputation</h3>
+<section id="imputation" class="level3" data-number="2.10">
+<h3 data-number="2.10" class="anchored" data-anchor-id="imputation"><span class="header-section-number">2.10</span> Imputation</h3>
 <ul>
 <li>[[perseus:user:activities:matrixprocessing:imputation:replacemissingfromgaussian|Replace missing values from normal distribution]]</li>
 <li>[[perseus:user:activities:matrixprocessing:imputation:replaceimputedbynan|Replace imputed values by NaN]]</li>
 <li>[[perseus:user:activities:matrixprocessing:imputation:replacemissingbyconstant|Replace missing values by constant]]</li>
 </ul>
 </section>
-<section id="modifications" class="level3" data-number="2.10">
-<h3 data-number="2.10" class="anchored" data-anchor-id="modifications"><span class="header-section-number">2.10</span> Modifications</h3>
+<section id="modifications" class="level3" data-number="2.11">
+<h3 data-number="2.11" class="anchored" data-anchor-id="modifications"><span class="header-section-number">2.11</span> Modifications</h3>
 <p>[[perseus:user:activities:matrixprocessing:modifications:expandsitetable|Expand site table]] * [[perseus:user:activities:matrixprocessing:modifications:addlinearmotifs|Add linear motifs]] * [[perseus:user:activities:matrixprocessing:modifications:addmodificationcounts|Add modification counts]] * [[perseus:user:activities:matrixprocessing:modifications:addknownsites|Add known sites]] * [[perseus:user:activities:matrixprocessing:modifications:kinasesubstraterelations|Kinase-substrate relations]] * [[perseus:user:activities:matrixprocessing:modifications:addsequencefeatures|Add sequence features]] * [[perseus:user:activities:matrixprocessing:modifications:addregulatorysites|Add regulatory sites]] * [[perseus:user:activities:matrixprocessing:modifications:shortenmotifs|Shorten motif length]]</p>
 </section>
-<section id="clustering" class="level3" data-number="2.11">
-<h3 data-number="2.11" class="anchored" data-anchor-id="clustering"><span class="header-section-number">2.11</span> Clustering</h3>
+<section id="clustering" class="level3" data-number="2.12">
+<h3 data-number="2.12" class="anchored" data-anchor-id="clustering"><span class="header-section-number">2.12</span> Clustering</h3>
 <p>[[perseus:user:activities:matrixprocessing:clustering:genericclusteringproc|Generic clustering]]</p>
 </section>
 </section>
@@ -624,6 +648,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        console.log("RESIZE");
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {

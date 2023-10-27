@@ -1,0 +1,51 @@
+---
+title: "Filter rows based on random sampling"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Filter rows
+-   **Source code:** [FilterRandomRows.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Filter/FilterRandomRows.cs)
+
+# Brief description
+
+A given number of rows is kept based on random decisions.
+
+Output: The filtered matrix.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Number of rows
+
+The filtering is based on random decisions, where a given number of rows is kept (default: total number of rows in the matrix).
+
+## Filter mode
+
+The "Filter mode" defines, whether the input matrix will be reduced ("Reduce matrix" = default) or a new categorical column called "Filter" will be generated containing the categories "Keep" and "Discard" ("Filter mode" = "Add categorical column").
+
+# Parameter window
+
+![](images/filter_rows-filter_rows_based_on_random_sampling-edited.png)
+
+

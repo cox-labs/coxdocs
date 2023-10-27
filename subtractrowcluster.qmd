@@ -1,0 +1,50 @@
+---
+title: "Subtract row cluster"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Normalization
+-   **Source code:** [SubtractRowCluster.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Norm/SubtractRowCluster.cs)
+
+# Brief description
+
+Subtract the average pattern of the selected rows from all rows.
+
+Output: Normalized expression matrix.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Indicator column
+
+Selected categorical column that should be used for filtering the rows that should be used to calculate the subtrahend for the normalization (default: first categorical column in the matrix).
+
+## Value
+
+Specifies the value/text term that will be searched in the previously defined "Indicator column" (default: +).
+The average of rows containing the value/text term is subtracted from all other rows.
+
+# Parameter window
+
+![](images/normalization-subtract-row_cluster-edited.png)

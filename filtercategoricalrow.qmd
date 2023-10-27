@@ -1,0 +1,59 @@
+---
+title: "Filter columns based on categorical row"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Filter columns
+-   **Source code:** [FilterCategoricalRow.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Filter/FilterCategoricalRow.cs)
+
+# Brief description
+
+Those columns are kept or removed that have the specified value in the selected categorical row.
+
+Output: The filtered matrix.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Row
+
+Selected categorical row the filtering is based on (default: first categorical row in the matrix).
+
+### Values
+
+Selected values out of all values of the specified categorical row that should be present to keep/discard the column (default: no values are selected).
+
+## Mode
+
+The columns with the selected values will be kept/discarded depending on the selected "Mode" (default: "Remove matching columns").
+If "Remove matching columns" is selected, rows having the values will be removed while all other columns will be kept.
+If "Keep matching columns" is selected, the opposite will happen.
+
+## Filter mode
+
+The "Filter mode" defines, whether the input matrix will be reduced ("Reduce matrix" = default) or a new categorical row called "Filter" will be generated containing the categories "Keep" and "Discard" ("Filter mode" = "Add categorical row").
+
+# Parameter window
+
+![](images/filter_columns-filter_columns_based_on_categorical_row-edited.png)

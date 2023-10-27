@@ -9,7 +9,7 @@
 <meta name="author" content="Cox Lab">
 <meta name="dcterms.date" content="2023-10-27">
 
-<title>Cox Docs</title>
+<title>Scale to interval</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -89,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">HOME</span></a>
   </li>  
   <li class="nav-item">
@@ -138,14 +138,28 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="-1">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general"><span class="header-section-number">1</span> General</a></li>
+  <li><a href="#brief-description" id="toc-brief-description" class="nav-link" data-scroll-target="#brief-description"><span class="header-section-number">2</span> Brief description</a></li>
+  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters"><span class="header-section-number">3</span> Parameters</a>
+  <ul>
+  <li><a href="#matrix-access" id="toc-matrix-access" class="nav-link" data-scroll-target="#matrix-access"><span class="header-section-number">3.1</span> Matrix access</a></li>
+  <li><a href="#minimum" id="toc-minimum" class="nav-link" data-scroll-target="#minimum"><span class="header-section-number">3.2</span> Minimum</a></li>
+  <li><a href="#maximum" id="toc-maximum" class="nav-link" data-scroll-target="#maximum"><span class="header-section-number">3.3</span> Maximum</a></li>
+  </ul></li>
+  <li><a href="#parameter-window" id="toc-parameter-window" class="nav-link" data-scroll-target="#parameter-window"><span class="header-section-number">4</span> Parameter window</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Cox Docs</h1>
+<h1 class="title">Scale to interval</h1>
 </div>
 
 
@@ -173,20 +187,46 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<hr>
-<p>Welcome to coxdocs.org, the home of the documentation for</p>
+<section id="general" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> General</h1>
 <ul>
-<li><a href="maxquant_instructions.html">MaxQuant</a></li>
-<li><a href="perseus_instructions.html">Perseus</a></li>
-<li><a href="andromeda_instructions.html">Andromeda</a></li>
+<li><strong>Type:</strong> - Matrix Processing</li>
+<li><strong>Heading:</strong> - Normalization</li>
+<li><strong>Source code:</strong> <a href="https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Norm/ScaleToInterval.cs">ScaleToInterval.cs</a></li>
 </ul>
-<hr>
-<div class="line-block"></div>
-<div class="watermarked">
-<p><img src="Figures/coxlab_logo2.png" alt="Photo"></p>
-</div>
+</section>
+<section id="brief-description" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Brief description</h1>
+<p>A linear transformation is applied to the values in each row/column such that the minima and maxima coincide with the specified values.</p>
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+</section>
+<section id="parameters" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Parameters</h1>
+<section id="matrix-access" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="matrix-access"><span class="header-section-number">3.1</span> Matrix access</h2>
+<p>Defines if rows or columns should be scaled to an interval (default: Rows). The lowest value of each column/row results in the value determined at the “Minimum” parameter and the largest value of the row/column is the value determined at the “Maximum” parameter.</p>
+</section>
+<section id="minimum" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="minimum"><span class="header-section-number">3.2</span> Minimum</h2>
+<p>Defines the lower bound of the interval all the values within a row/column will be scaled to (default: 0).</p>
+</section>
+<section id="maximum" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="maximum"><span class="header-section-number">3.3</span> Maximum</h2>
+<p>Defines the upper bound of the interval all the values within a row/column will be scaled to (default: 1).</p>
+</section>
+</section>
+<section id="parameter-window" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Parameter window</h1>
+<p><img src="images/normalization-scale_to_interval-edited.png" class="img-fluid"></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

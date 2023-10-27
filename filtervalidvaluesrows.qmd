@@ -1,0 +1,86 @@
+---
+title: "Filter rows based on valid values"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Filter rows
+-   **Source code:** [FilterValidValuesRows.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Filter/FilterValidValuesRows.cs)
+
+# Brief description
+
+Rows of the expression matrix are filtered to contain at least the specified numbers of entries that are valid in the specified way.
+
+Output: The matrix of expression values is constrained to contain only these rows that fulfill the requirement.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Min. number of values
+
+Defines the minimal number of valid values each row needs to have in the expression columns to survive the filtering process (default: 3).
+
+## Mode {#sec-mode}
+
+Defines, which expression columns are counted to define, if a row has enough valid values to survive the filtering process (default: In total).
+There are three options available:
+
+-   In total (includes all expression columns)
+-   In each group
+-   In at least one group
+
+### Grouping
+
+This parameter is just relevant, if Mode (@sec-mode) is set to "In each group" or "In at least one group".
+It defines the grouping of the expression columns that should be used by selecting a categorical row (default: first categorical row of the matrix).
+
+## Values should be
+
+Defines the restriction for a value to be classified as valid (default: Valid).
+There are seven different possibilities to specify, which entry is counted as a valid value (default: Valid):
+
+-   Valid
+-   Greater than
+-   Greater or equal
+-   Less than
+-   Less or equal
+-   Between
+-   Outside
+
+### Minimum
+
+This parameter is just relevant, if "Values should be" is set to "Greater than", "Greater or equal", "Between" or "Outside".
+It defines a lower bound to apply the operation specified in "Values should be" (default: 0).
+
+### Maximum
+
+This parameter is just relevant, if "Values should be" is set to "Less than", "Less or equal", "Between" or "Outside".
+It defines a upper bound to apply the operation specified in "Values should be" (default: 0).
+
+## Filter mode
+
+The "Filter mode" defines, whether the input matrix will be reduced ("Reduce matrix" = default) or a new categorical column called "Filter" will be generated containing the categories "Keep" and "Discard" ("Filter mode" = "Add categorical column").
+
+# Parameter window
+
+![](images/filter_rows-filter_rows_based_on_valid_values-edited.png)

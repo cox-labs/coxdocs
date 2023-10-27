@@ -417,7 +417,7 @@
     "href": "perseus_user_intereface.html#processing",
     "title": "Perseus User Interface",
     "section": "2 Processing",
-    "text": "2 Processing\n\n2.1 Basic\n\nTransform\nCombine expression columns\nColumn correlation\nRow correlation\nSummary statistics (columns)\nSummary statistics (rows)\nQuantiles\nDensity estimation\nPerformance curve\nClone\nSignificance A\nSignificance B\nAdd noise\n\n\n\n2.2 Rearrange\n\nChange column type\nRename columns\nRename columns (reg. ex.)\nCombine annotations\nDuplicate columns\nReorder/remove columns\nRemove empty columns\nTranspose\nSort by column\nExpand multi-numeric and string columns\nUnique values\nConvert multi-numeric column\nCombine categorical columns\nProcess text column\nSearch text column\n\n\n\n2.3 Normalization\n[[perseus:user:activities:matrixprocessing:normalization:zscore|Z-score]] * [[perseus:user:activities:matrixprocessing:normalization:rank|Rank]] * [[perseus:user:activities:matrixprocessing:normalization:unitvector|Unit vectors]] * [[perseus:user:activities:matrixprocessing:normalization:scaletointerval|Scale to interval]] * [[perseus:user:activities:matrixprocessing:normalization:widthadjustment|Width adjustment]] * [[perseus:user:activities:matrixprocessing:normalization:subtract|Subtract]] * [[perseus:user:activities:matrixprocessing:normalization:divide|Divide]] * [[perseus:user:activities:matrixprocessing:normalization:normalizebycolumn|Modify by column]] * [[perseus:user:activities:matrixprocessing:normalization:subtractrowcluster|Subtract row cluster]] * [[perseus:user:activities:matrixprocessing:normalization:unzscore|Un-Z-score]]\n\n\n2.4 Filter rows\n[[perseus:user:activities:matrixprocessing:filterrows:filtercategoricalcolumn|Filter rows based on categorical column]] * [[perseus:user:activities:matrixprocessing:filterrows:filternumericalcolumn|Filter rows based on numerical/expression column]] * [[perseus:user:activities:matrixprocessing:filterrows:filtertextualcolumn|Filter rows based on text column]] * [[perseus:user:activities:matrixprocessing:filterrows:filtervalidvaluesrows|Filter rows based on valid values]] * [[perseus:user:activities:matrixprocessing:filterrows:filterrandomrows|Filter rows based on random sampling]]\n\n\n2.5 Filter columns\n[[perseus:user:activities:matrixprocessing:filtercolumns:filtercategoricalrow|Filter rows based on categorical row]] * [[perseus:user:activities:matrixprocessing:filterrows:filtervalidvaluesrows|Filter rows based on valid values]]\n&lt;– –&gt; Quality * [[perseus:user:activities:matrixprocessing:quality:createqualitymatrix|Create quality matrix]] * [[perseus:user:activities:matrixprocessing:quality:filterquality|Filter quality]] * [[perseus:user:activities:matrixprocessing:quality:converttonan|Convert to NaN]]\n\n\n2.6 Annot. columns\n[[perseus:user:activities:matrixprocessing:annotcolumns:addannotationtomatrix|Add annotation]] * [[perseus:user:activities:matrixprocessing:annotcolumns:backtobaseidentifiers|To base identifiers]] * [[perseus:user:activities:matrixprocessing:annotcolumns:fisherexacttestproces|Fisher exact test]] * [[perseus:user:activities:matrixprocessing:annotcolumns:averagecategories|Average categories]] * [[perseus:user:activities:matrixprocessing:annotcolumns:categorycounting|Category counting]] * [[perseus:user:activities:matrixprocessing:annotcolumns:onedimannotationenrichment|1D annotation enrichment]] * [[perseus:user:activities:matrixprocessing:annotcolumns:twodimannotationenrichment|2D annotation enrichment]]\n\n\n2.7 Annot. rows\n[[perseus:user:activities:matrixprocessing:annotrows:createcategoricalannotrow|Categorical annotation rows]] * [[perseus:user:activities:matrixprocessing:annotrows:createnumericalannotrow|Numerical annotation rows]] * [[perseus:user:activities:matrixprocessing:annotrows:averagegroups|Average groups]] * [[perseus:user:activities:matrixprocessing:annotrows:jointermsincategoricalrow|Join terms in categorical row]]\n\n\n2.8 Tests\n\n[[perseus:user:activities:matrixprocessing:tests:onesampletestprocessing|One-sample tests]]\n[[perseus:user:activities:matrixprocessing:tests:twosampletestprocessing|Two-samples tests]]\n[[perseus:user:activities:matrixprocessing:tests:multiplesampletestprocessing|Multiple-samples tests]]\n[[perseus:user:activities:matrixprocessing:tests:twowayanova|Two-way ANOVA]]\n\n\n\n2.9 Imputation\n\n[[perseus:user:activities:matrixprocessing:imputation:replacemissingfromgaussian|Replace missing values from normal distribution]]\n[[perseus:user:activities:matrixprocessing:imputation:replaceimputedbynan|Replace imputed values by NaN]]\n[[perseus:user:activities:matrixprocessing:imputation:replacemissingbyconstant|Replace missing values by constant]]\n\n\n\n2.10 Modifications\n[[perseus:user:activities:matrixprocessing:modifications:expandsitetable|Expand site table]] * [[perseus:user:activities:matrixprocessing:modifications:addlinearmotifs|Add linear motifs]] * [[perseus:user:activities:matrixprocessing:modifications:addmodificationcounts|Add modification counts]] * [[perseus:user:activities:matrixprocessing:modifications:addknownsites|Add known sites]] * [[perseus:user:activities:matrixprocessing:modifications:kinasesubstraterelations|Kinase-substrate relations]] * [[perseus:user:activities:matrixprocessing:modifications:addsequencefeatures|Add sequence features]] * [[perseus:user:activities:matrixprocessing:modifications:addregulatorysites|Add regulatory sites]] * [[perseus:user:activities:matrixprocessing:modifications:shortenmotifs|Shorten motif length]]\n\n\n2.11 Clustering\n[[perseus:user:activities:matrixprocessing:clustering:genericclusteringproc|Generic clustering]]"
+    "text": "2 Processing\n\n2.1 Basic\n\nTransform\nCombine expression columns\nColumn correlation\nRow correlation\nSummary statistics (columns)\nSummary statistics (rows)\nQuantiles\nDensity estimation\nPerformance curve\nClone\nSignificance A\nSignificance B\nAdd noise\n\n\n\n2.2 Rearrange\n\nChange column type\nRename columns\nRename columns (reg. ex.)\nCombine annotations\nDuplicate columns\nReorder/remove columns\nRemove empty columns\nTranspose\nSort by column\nExpand multi-numeric and string columns\nUnique values\nConvert multi-numeric column\nCombine categorical columns\nProcess text column\nSearch text column\n\n\n\n2.3 Normalization\n\nZ-score\nRank\nUnit vectors\nScale to interval\nWidth adjustment\nSubtract\nDivide\nModify by column\nSubtract row cluster\nUn-Z-score\n\n\n\n2.4 Filter rows\n\nFilter rows based on categorical column\nFilter rows based on numerical/expression column\nFilter rows based on text column\nFilter rows based on valid values\nFilter rows based on random sampling\n\n\n\n2.5 Filter columns\n\nFilter columns based on categorical row\nFilter columns based on valid values\n\n\n\n2.6 Quality\n* [[perseus:user:activities:matrixprocessing:quality:createqualitymatrix|Create quality matrix]] * [[perseus:user:activities:matrixprocessing:quality:filterquality|Filter quality]] * [[perseus:user:activities:matrixprocessing:quality:converttonan|Convert to NaN]]\n\n\n2.7 Annot. columns\n[[perseus:user:activities:matrixprocessing:annotcolumns:addannotationtomatrix|Add annotation]] * [[perseus:user:activities:matrixprocessing:annotcolumns:backtobaseidentifiers|To base identifiers]] * [[perseus:user:activities:matrixprocessing:annotcolumns:fisherexacttestproces|Fisher exact test]] * [[perseus:user:activities:matrixprocessing:annotcolumns:averagecategories|Average categories]] * [[perseus:user:activities:matrixprocessing:annotcolumns:categorycounting|Category counting]] * [[perseus:user:activities:matrixprocessing:annotcolumns:onedimannotationenrichment|1D annotation enrichment]] * [[perseus:user:activities:matrixprocessing:annotcolumns:twodimannotationenrichment|2D annotation enrichment]]\n\n\n2.8 Annot. rows\n[[perseus:user:activities:matrixprocessing:annotrows:createcategoricalannotrow|Categorical annotation rows]] * [[perseus:user:activities:matrixprocessing:annotrows:createnumericalannotrow|Numerical annotation rows]] * [[perseus:user:activities:matrixprocessing:annotrows:averagegroups|Average groups]] * [[perseus:user:activities:matrixprocessing:annotrows:jointermsincategoricalrow|Join terms in categorical row]]\n\n\n2.9 Tests\n\n[[perseus:user:activities:matrixprocessing:tests:onesampletestprocessing|One-sample tests]]\n[[perseus:user:activities:matrixprocessing:tests:twosampletestprocessing|Two-samples tests]]\n[[perseus:user:activities:matrixprocessing:tests:multiplesampletestprocessing|Multiple-samples tests]]\n[[perseus:user:activities:matrixprocessing:tests:twowayanova|Two-way ANOVA]]\n\n\n\n2.10 Imputation\n\n[[perseus:user:activities:matrixprocessing:imputation:replacemissingfromgaussian|Replace missing values from normal distribution]]\n[[perseus:user:activities:matrixprocessing:imputation:replaceimputedbynan|Replace imputed values by NaN]]\n[[perseus:user:activities:matrixprocessing:imputation:replacemissingbyconstant|Replace missing values by constant]]\n\n\n\n2.11 Modifications\n[[perseus:user:activities:matrixprocessing:modifications:expandsitetable|Expand site table]] * [[perseus:user:activities:matrixprocessing:modifications:addlinearmotifs|Add linear motifs]] * [[perseus:user:activities:matrixprocessing:modifications:addmodificationcounts|Add modification counts]] * [[perseus:user:activities:matrixprocessing:modifications:addknownsites|Add known sites]] * [[perseus:user:activities:matrixprocessing:modifications:kinasesubstraterelations|Kinase-substrate relations]] * [[perseus:user:activities:matrixprocessing:modifications:addsequencefeatures|Add sequence features]] * [[perseus:user:activities:matrixprocessing:modifications:addregulatorysites|Add regulatory sites]] * [[perseus:user:activities:matrixprocessing:modifications:shortenmotifs|Shorten motif length]]\n\n\n2.12 Clustering\n[[perseus:user:activities:matrixprocessing:clustering:genericclusteringproc|Generic clustering]]"
   },
   {
     "objectID": "perseus_user_intereface.html#analysis",
@@ -1307,5 +1307,467 @@
     "title": "MaxQuant",
     "section": "",
     "text": "MaxQuant is a proteomics software package designed for analyzing large mass-spectrometric data sets. It is specifically aimed at high-resolution MS data. Several labeling techniques as well as label-free quantification are supported. MaxQuant is freely available and can be downloaded from this site. The download includes the search engine Andromeda, which is integrated into MaxQuant as well as the viewer application for inspection of raw data and identification and quantification results. For statistical analysis of MaxQuant output, we offer the Perseus framework.\n\n1 Documentation outline\n\nDownload and installation\nFirst steps in MaxQuant\nViewer\nAndromeda\nOutput Tables\nGoogle groups\nmaxquant Bug reporting\nGlossary\n\nFor additional training, consider attending the annual MaxQuant Summer School. Also watching some MaxQuant videos provides more insight.\n\nFor question we would love to hear from you under Contact\n\n\n2 Bibliography\nFor a deep-dive into the technique and progress behind MaxQuant, many papers of varying degrees of details were published over the last decades. For further reading, you can look at a small list of the more important corner stones of the MaxQuant development history.1 (Note that the paper has a large supplement containing in-depth descriptions of algorithms),2,3,4,5,6 (Note that this paper explains how to run MaxQuant in detail.),7\n\n\n\n\n\nReferences\n\n1. Cox, J. & Mann, M. MaxQuant enables high peptide identification rates, individualized p.p.b.-range mass accuracies and proteome-wide protein quantification. Nature Biotechnology 26, 1367–1372 (2008).\n\n\n2. Cox, J., Michalski, A. & Mann, M. Software Lock Mass by Two-Dimensional Minimization of Peptide Mass Errors. Journal of the American Society for Mass Spectrometry 22, 1373–1380 (2011).\n\n\n3. Schaab, C., Geiger, T., Stoehr, G., Cox, J. & Mann, M. Analysis of High Accuracy, Quantitative Proteomics Data in the MaxQB Database. Molecular & Cellular Proteomics 11, M111.014068 (2012).\n\n\n4. Cox, J. et al. Accurate Proteome-wide Label-free Quantification by Delayed Normalization and Maximal Peptide Ratio Extraction, Termed MaxLFQ. Molecular & Cellular Proteomics 13, 2513–2526 (2014).\n\n\n5. Tyanova, S. et al. Visualization of LC-MS/MS proteomics data in MaxQuant. PROTEOMICS 15, 1453–1456 (2015).\n\n\n6. Tyanova, S., Temu, T. & Cox, J. The MaxQuant computational platform for mass spectrometry-based shotgun proteomics. Nature Protocols 11, 2301–2319 (2016).\n\n\n7. Sinitcyn, P. et al. MaxQuant goes Linux. Nature Methods 15, 401–401 (2018)."
+  },
+  {
+    "objectID": "zscore.html",
+    "href": "zscore.html",
+    "title": "Z Score",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Normalization\nSource code: ZScore.cs"
+  },
+  {
+    "objectID": "zscore.html#matrix-access",
+    "href": "zscore.html#matrix-access",
+    "title": "Z Score",
+    "section": "3.1 Matrix access",
+    "text": "3.1 Matrix access\nSpecifies whether the z-scoring is performed on rows or columns (default: Rows).\n\n3.1.1 Grouping\nThis parameter is just relevant, if the “Matrix access” is set to “Rows”. It specifies, whether the normalization should be applied separately on groups (default: )."
+  },
+  {
+    "objectID": "zscore.html#use-median",
+    "href": "zscore.html#use-median",
+    "title": "Z Score",
+    "section": "3.2 Use median",
+    "text": "3.2 Use median\nIf checked, the median and not the mean of each row/column is used for the calculation of the z-score of each matrix cell (default: unchecked)."
+  },
+  {
+    "objectID": "zscore.html#report-mean-and-std.-dev.",
+    "href": "zscore.html#report-mean-and-std.-dev.",
+    "title": "Z Score",
+    "section": "3.3 Report mean and std. dev.",
+    "text": "3.3 Report mean and std. dev.\nIf checked, the mean and the standard deviation used for the calculation are reported (default: unchecked). In case the z-scoring is based on rows (“Matrix access” = “Rows”), the calculated mean and standard deviation appear in 2 newly generated numeric columns called “Mean” and “Std. dev.” containing the mean and standard deviation of each row. In case the calculation is based on columns (“Matrix access” = “Columns”), 2 new numeric rows are generated containing the mean and standard deviation of each column."
+  },
+  {
+    "objectID": "rank.html",
+    "href": "rank.html",
+    "title": "Rank",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Normalization\nSource code: Rank.cs"
+  },
+  {
+    "objectID": "rank.html#matrix-access",
+    "href": "rank.html#matrix-access",
+    "title": "Rank",
+    "section": "3.1 Matrix access",
+    "text": "3.1 Matrix access\nDefines whether the values in expression columns or rows should be ranked (default: Rows)."
+  },
+  {
+    "objectID": "unitvector.html",
+    "href": "unitvector.html",
+    "title": "Unit Vector",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Normalization\nSource code: UnitVector.cs"
+  },
+  {
+    "objectID": "unitvector.html#matrix-access",
+    "href": "unitvector.html#matrix-access",
+    "title": "Unit Vector",
+    "section": "3.1 Matrix access",
+    "text": "3.1 Matrix access\nSpecifies whether rows or columns should be regarded as high-dimensional vectors and be transformed into unit vectors (default: Rows)."
+  },
+  {
+    "objectID": "scaletointerval.html",
+    "href": "scaletointerval.html",
+    "title": "Scale to interval",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Normalization\nSource code: ScaleToInterval.cs"
+  },
+  {
+    "objectID": "scaletointerval.html#matrix-access",
+    "href": "scaletointerval.html#matrix-access",
+    "title": "Scale to interval",
+    "section": "3.1 Matrix access",
+    "text": "3.1 Matrix access\nDefines if rows or columns should be scaled to an interval (default: Rows). The lowest value of each column/row results in the value determined at the “Minimum” parameter and the largest value of the row/column is the value determined at the “Maximum” parameter."
+  },
+  {
+    "objectID": "scaletointerval.html#minimum",
+    "href": "scaletointerval.html#minimum",
+    "title": "Scale to interval",
+    "section": "3.2 Minimum",
+    "text": "3.2 Minimum\nDefines the lower bound of the interval all the values within a row/column will be scaled to (default: 0)."
+  },
+  {
+    "objectID": "scaletointerval.html#maximum",
+    "href": "scaletointerval.html#maximum",
+    "title": "Scale to interval",
+    "section": "3.3 Maximum",
+    "text": "3.3 Maximum\nDefines the upper bound of the interval all the values within a row/column will be scaled to (default: 1)."
+  },
+  {
+    "objectID": "widthadjustment.html",
+    "href": "widthadjustment.html",
+    "title": "Width adjustment",
+    "section": "",
+    "text": "1 General\n\nType: - Matrix Processing\nHeading: - Normalization\nSource code: WidthAdjustment.cs\n\n\n\n2 Brief description\nThe first, second and third quartiles (\\(q1\\), \\(q2\\), \\(q3\\)) are calculated from the distribution of all values. The second quartile (which is the median) is subtracted from each value to center the distribution. Then we divide by the width in an asymmetric way. All values that are positive after subtraction of the median are divided by \\(q3 - q2\\) while all negative values are divided by \\(q2 - q1\\).\n\n\n\n3 Parameters\n“Width adjustment” has no parameters."
+  },
+  {
+    "objectID": "subtract.html",
+    "href": "subtract.html",
+    "title": "Subtract",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Normalization\nSource code: Subtract.cs"
+  },
+  {
+    "objectID": "subtract.html#matrix-access",
+    "href": "subtract.html#matrix-access",
+    "title": "Subtract",
+    "section": "3.1 Matrix access",
+    "text": "3.1 Matrix access\nSpecifies whether the subtraction is performed on rows or columns (default: Rows). If the subtraction is performed on rows, the “Grouping” can be specified as well (default: ).\n\n3.1.1 Grouping\nThis parameter is just relevant, if the “Matrix access” is set to “Rows”. It specifies, whether the normalization should be applied separately on groups (default: )."
+  },
+  {
+    "objectID": "subtract.html#subtract-what",
+    "href": "subtract.html#subtract-what",
+    "title": "Subtract",
+    "section": "3.2 Subtract what",
+    "text": "3.2 Subtract what\nDefines what value should be subtracted from all entries in expression columns (default: Median). The subtrahend can be selected from a predefined list:\n\nMean\nMedian\nMost frequent value\nTukey’s biweight"
+  },
+  {
+    "objectID": "divide.html",
+    "href": "divide.html",
+    "title": "Divide",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Normalization\nSource code: Divide.cs"
+  },
+  {
+    "objectID": "divide.html#matrix-access",
+    "href": "divide.html#matrix-access",
+    "title": "Divide",
+    "section": "3.1 Matrix access",
+    "text": "3.1 Matrix access\nSpecifies whether the division is performed on rows or columns (default: Rows)."
+  },
+  {
+    "objectID": "divide.html#divide-by-what",
+    "href": "divide.html#divide-by-what",
+    "title": "Divide",
+    "section": "3.2 Divide by what",
+    "text": "3.2 Divide by what\nDefines by what value all entries in expression columns should be divided (default: Median). The divisor can be selected from a predefined list:\n\nSum\nMean\nMedian\nMost frequent value\nTukey’s biweight"
+  },
+  {
+    "objectID": "normalizebycolumn.html",
+    "href": "normalizebycolumn.html",
+    "title": "Modify by column",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Normalization\nSource code: not public."
+  },
+  {
+    "objectID": "normalizebycolumn.html#columns",
+    "href": "normalizebycolumn.html#columns",
+    "title": "Modify by column",
+    "section": "3.1 Columns",
+    "text": "3.1 Columns\nSelected expression/numerical column(s) that should be modified by the values of the “Control column” using the the action specified in “Modify by” (default: all expression columns are selected)."
+  },
+  {
+    "objectID": "normalizebycolumn.html#control-column",
+    "href": "normalizebycolumn.html#control-column",
+    "title": "Modify by column",
+    "section": "3.2 Control column",
+    "text": "3.2 Control column\nOne expression/numerical column that is used to modify all selected expression/numerical columns in the field “Columns” using the action specified in “Modify by” (default: first expression column in the matrix)."
+  },
+  {
+    "objectID": "normalizebycolumn.html#modify-by",
+    "href": "normalizebycolumn.html#modify-by",
+    "title": "Modify by column",
+    "section": "3.3 Modify by",
+    "text": "3.3 Modify by\nDefines the operation that is applied between the selected “Columns” and the “Control column” (default: Subtraction). The operation can be chosen from a predefined list of operations:\n\nAddition\nMultiplication\nSubtraction\nDivision"
+  },
+  {
+    "objectID": "subtractrowcluster.html",
+    "href": "subtractrowcluster.html",
+    "title": "Subtract row cluster",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Normalization\nSource code: SubtractRowCluster.cs"
+  },
+  {
+    "objectID": "subtractrowcluster.html#indicator-column",
+    "href": "subtractrowcluster.html#indicator-column",
+    "title": "Subtract row cluster",
+    "section": "3.1 Indicator column",
+    "text": "3.1 Indicator column\nSelected categorical column that should be used for filtering the rows that should be used to calculate the subtrahend for the normalization (default: first categorical column in the matrix)."
+  },
+  {
+    "objectID": "subtractrowcluster.html#value",
+    "href": "subtractrowcluster.html#value",
+    "title": "Subtract row cluster",
+    "section": "3.2 Value",
+    "text": "3.2 Value\nSpecifies the value/text term that will be searched in the previously defined “Indicator column” (default: +). The average of rows containing the value/text term is subtracted from all other rows."
+  },
+  {
+    "objectID": "unzscore.html",
+    "href": "unzscore.html",
+    "title": "Un Z-Score",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Normalization\nSource code: UnZScore.cs"
+  },
+  {
+    "objectID": "unzscore.html#matrix-access",
+    "href": "unzscore.html#matrix-access",
+    "title": "Un Z-Score",
+    "section": "3.1 Matrix access",
+    "text": "3.1 Matrix access\nSpecifies whether the un-z-scoring is performed on the rows or columns (default: Rows). The selection depends on what was used before in the normalization process."
+  },
+  {
+    "objectID": "unzscore.html#mean",
+    "href": "unzscore.html#mean",
+    "title": "Un Z-Score",
+    "section": "3.2 Mean",
+    "text": "3.2 Mean\nSelected numerical row/column containing the mean values that were used for the z-scoring (default: column called “Mean” or first numerical column in the matrix)."
+  },
+  {
+    "objectID": "unzscore.html#std.-dev.",
+    "href": "unzscore.html#std.-dev.",
+    "title": "Un Z-Score",
+    "section": "3.3 Std. dev.",
+    "text": "3.3 Std. dev.\nSelected numerical row/column containing the standard deviation values that were used for the z-scoring (default: column called “Std.dev.” or first numerical column in the matrix)."
+  },
+  {
+    "objectID": "filtercategoricalcolumn.html",
+    "href": "filtercategoricalcolumn.html",
+    "title": "Filter rows based on categorical column",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Filter rows\nSource code: FilterCategoricalColumn.cs"
+  },
+  {
+    "objectID": "filtercategoricalcolumn.html#column",
+    "href": "filtercategoricalcolumn.html#column",
+    "title": "Filter rows based on categorical column",
+    "section": "3.1 Column",
+    "text": "3.1 Column\nSelected categorical column the filtering is based on (default: first categorical column of the matrix)."
+  },
+  {
+    "objectID": "filtercategoricalcolumn.html#values",
+    "href": "filtercategoricalcolumn.html#values",
+    "title": "Filter rows based on categorical column",
+    "section": "3.2 Values",
+    "text": "3.2 Values\nRows with the containing values will be kept/discarded depending on the selected “Mode” (default: no values are selected)."
+  },
+  {
+    "objectID": "filtercategoricalcolumn.html#mode",
+    "href": "filtercategoricalcolumn.html#mode",
+    "title": "Filter rows based on categorical column",
+    "section": "3.3 Mode",
+    "text": "3.3 Mode\nThe rows with the selected values will be kept/discarded depending on the selected “Mode” (default: “Remove matching rows”). If “Remove matching rows” is selected, rows having the values will be removed while all other rows will be kept. If “Keep matching rows” is selected, the opposite will happen."
+  },
+  {
+    "objectID": "filtercategoricalcolumn.html#filter-mode",
+    "href": "filtercategoricalcolumn.html#filter-mode",
+    "title": "Filter rows based on categorical column",
+    "section": "3.4 Filter mode",
+    "text": "3.4 Filter mode\nThe “Filter mode” defines, whether the input matrix will be reduced (“Reduce matrix” = default) or a new categorical column called “Filter” will be generated containing the categories “Keep” and “Discard” (“Filter mode” = “Add categorical column”)."
+  },
+  {
+    "objectID": "filternumericalcolumn.html",
+    "href": "filternumericalcolumn.html",
+    "title": "Filter rows based on numerical/expression column",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Filter rows\nSource code: FilterNumericalColumn.cs"
+  },
+  {
+    "objectID": "filternumericalcolumn.html#number-of-columns",
+    "href": "filternumericalcolumn.html#number-of-columns",
+    "title": "Filter rows based on numerical/expression column",
+    "section": "3.1 Number of columns",
+    "text": "3.1 Number of columns\nThe filtering is based on relations of expression/numerical columns. Up to five columns (default: 1) can be selected. Depending on the number of chosen columns drop down box(es) appear on the pop-up window named “x”, “y”, “z”, “a” and “b”. In these drop down boxes expression/numerical columns can be specified, which can then be used in the relations that should be applied for filtering the matrix."
+  },
+  {
+    "objectID": "filternumericalcolumn.html#number-of-relations",
+    "href": "filternumericalcolumn.html#number-of-relations",
+    "title": "Filter rows based on numerical/expression column",
+    "section": "3.2 Number of relations",
+    "text": "3.2 Number of relations\nUp to five relations using the previously specified columns can be included in the filtering process (default:1). Depending on the selected number of relations text fields on the pop-up window appear named “Relation 1”, “Relation 2”, “Relation 3”, “Relation 4” and “Relation 5”.\nIn each text field a relation for the filtering process can be defined using the variables of the parameter “Number of columns”. For the relations numbers with “.” as decimal point, “+”, “-”, “*”, “/” and “^” as well as scientific notation (e.g. “5.4e-12”) can be used."
+  },
+  {
+    "objectID": "filternumericalcolumn.html#combine-through",
+    "href": "filternumericalcolumn.html#combine-through",
+    "title": "Filter rows based on numerical/expression column",
+    "section": "3.3 Combine through",
+    "text": "3.3 Combine through\nDefines how the specified relations are combined (default: intersection). Depending on the specified combination mode either rows, which fulfill the “intersection” (default) of the relations are kept or the ones fulfilling the “union”."
+  },
+  {
+    "objectID": "filternumericalcolumn.html#filter-mode",
+    "href": "filternumericalcolumn.html#filter-mode",
+    "title": "Filter rows based on numerical/expression column",
+    "section": "3.4 Filter mode",
+    "text": "3.4 Filter mode\nThe “Filter mode” defines, whether the input matrix will be reduced (“Reduce matrix” = default) or a new categorical column called “Filter” will be generated containing the categories “Keep” and “Discard” (“Filter mode” = “Add categorical column”)."
+  },
+  {
+    "objectID": "filtertextualcolumn.html",
+    "href": "filtertextualcolumn.html",
+    "title": "Filter rows based on text column",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Filter rows\nSource code: FilterTextualColumn.cs"
+  },
+  {
+    "objectID": "filtertextualcolumn.html#column",
+    "href": "filtertextualcolumn.html#column",
+    "title": "Filter rows based on text column",
+    "section": "3.1 Column",
+    "text": "3.1 Column\nSelected text column the filtering is based on (default: first text column in the matrix)."
+  },
+  {
+    "objectID": "filtertextualcolumn.html#search-string",
+    "href": "filtertextualcolumn.html#search-string",
+    "title": "Filter rows based on text column",
+    "section": "3.2 Search string",
+    "text": "3.2 Search string\nSpecified text string that should be searched in the previously defined text column (default: empty)."
+  },
+  {
+    "objectID": "filtertextualcolumn.html#match-case",
+    "href": "filtertextualcolumn.html#match-case",
+    "title": "Filter rows based on text column",
+    "section": "3.3 Match case",
+    "text": "3.3 Match case\nIf checked, the cells of the text column will be searched for a matching substring (default: unchecked). The results will be in a new generated categorical column called “Search: original column name”. “+” indicates, whether a match was successful."
+  },
+  {
+    "objectID": "filtertextualcolumn.html#match-whole-word",
+    "href": "filtertextualcolumn.html#match-whole-word",
+    "title": "Filter rows based on text column",
+    "section": "3.4 Match whole word",
+    "text": "3.4 Match whole word\nIf checked, the text column will be searched to match the whole word of the specified term (default: checked). The results will be in a new generated categorical column called “Search: original column name”. “+” indicates, whether a match was successful."
+  },
+  {
+    "objectID": "filtertextualcolumn.html#mode",
+    "href": "filtertextualcolumn.html#mode",
+    "title": "Filter rows based on text column",
+    "section": "3.5 Mode",
+    "text": "3.5 Mode\nThe rows with the selected values will be kept/discarded depending on the selected “Mode” (default: “Remove matching rows”). If “Remove matching rows” is selected, rows having the values will be removed while all other rows will be kept. If “Keep matching rows” is selected, the opposite will happen."
+  },
+  {
+    "objectID": "filtertextualcolumn.html#filter-mode",
+    "href": "filtertextualcolumn.html#filter-mode",
+    "title": "Filter rows based on text column",
+    "section": "3.6 Filter mode",
+    "text": "3.6 Filter mode\nThe “Filter mode” defines, whether the input matrix will be reduced (“Reduce matrix” = default) or a new categorical column called “Filter” will be generated containing the categories “Keep” and “Discard” (“Filter mode” = “Add categorical column”)."
+  },
+  {
+    "objectID": "filtervalidvaluesrows.html",
+    "href": "filtervalidvaluesrows.html",
+    "title": "Filter rows based on valid values",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Filter rows\nSource code: FilterValidValuesRows.cs"
+  },
+  {
+    "objectID": "filtervalidvaluesrows.html#min.-number-of-values",
+    "href": "filtervalidvaluesrows.html#min.-number-of-values",
+    "title": "Filter rows based on valid values",
+    "section": "3.1 Min. number of values",
+    "text": "3.1 Min. number of values\nDefines the minimal number of valid values each row needs to have in the expression columns to survive the filtering process (default: 3)."
+  },
+  {
+    "objectID": "filtervalidvaluesrows.html#mode-seq-mode",
+    "href": "filtervalidvaluesrows.html#mode-seq-mode",
+    "title": "Filter rows based on valid values",
+    "section": "3.2 Mode {seq-mode}",
+    "text": "3.2 Mode {seq-mode}\nDefines, which expression columns are counted to define, if a row has enough valid values to survive the filtering process (default: In total). There are three options available:\n\nIn total (includes all expression columns)\nIn each group\nIn at least one group\n\n\n3.2.1 Grouping\nThis parameter is just relevant, if (seq-mode?) is set to “In each group” or “In at least one group”. It defines the grouping of the expression columns that should be used by selecting a categorical row (default: first categorical row of the matrix)."
+  },
+  {
+    "objectID": "filtervalidvaluesrows.html#values-should-be",
+    "href": "filtervalidvaluesrows.html#values-should-be",
+    "title": "Filter rows based on valid values",
+    "section": "3.3 Values should be",
+    "text": "3.3 Values should be\nDefines the restriction for a value to be classified as valid (default: Valid). There are seven different possibilities to specify, which entry is counted as a valid value (default: Valid):\n\nValid\nGreater than\nGreater or equal\nLess than\nLess or equal\nBetween\nOutside\n\n\n3.3.1 Minimum\nThis parameter is just relevant, if “Values should be” is set to “Greater than”, “Greater or equal”, “Between” or “Outside”. It defines a lower bound to apply the operation specified in “Values should be” (default: 0).\n\n\n3.3.2 Maximum\nThis parameter is just relevant, if “Values should be” is set to “Less than”, “Less or equal”, “Between” or “Outside”. It defines a upper bound to apply the operation specified in “Values should be” (default: 0)."
+  },
+  {
+    "objectID": "filtervalidvaluesrows.html#filter-mode",
+    "href": "filtervalidvaluesrows.html#filter-mode",
+    "title": "Filter rows based on valid values",
+    "section": "3.4 Filter mode",
+    "text": "3.4 Filter mode\nThe “Filter mode” defines, whether the input matrix will be reduced (“Reduce matrix” = default) or a new categorical column called “Filter” will be generated containing the categories “Keep” and “Discard” (“Filter mode” = “Add categorical column”)."
+  },
+  {
+    "objectID": "filtervalidvaluesrows.html#seq-mode",
+    "href": "filtervalidvaluesrows.html#seq-mode",
+    "title": "Filter rows based on valid values",
+    "section": "3.2 Mode",
+    "text": "3.2 Mode\nDefines, which expression columns are counted to define, if a row has enough valid values to survive the filtering process (default: In total). There are three options available:\n\nIn total (includes all expression columns)\nIn each group\nIn at least one group\n\n\n3.2.1 Grouping\nThis parameter is just relevant, if (seq-mode?) is set to “In each group” or “In at least one group”. It defines the grouping of the expression columns that should be used by selecting a categorical row (default: first categorical row of the matrix)."
+  },
+  {
+    "objectID": "filtervalidvaluesrows.html#sec-mode",
+    "href": "filtervalidvaluesrows.html#sec-mode",
+    "title": "Filter rows based on valid values",
+    "section": "3.2 Mode",
+    "text": "3.2 Mode\nDefines, which expression columns are counted to define, if a row has enough valid values to survive the filtering process (default: In total). There are three options available:\n\nIn total (includes all expression columns)\nIn each group\nIn at least one group\n\n\n3.2.1 Grouping\nThis parameter is just relevant, if Mode (Section 3.2) is set to “In each group” or “In at least one group”. It defines the grouping of the expression columns that should be used by selecting a categorical row (default: first categorical row of the matrix)."
+  },
+  {
+    "objectID": "filterrandomrows.html",
+    "href": "filterrandomrows.html",
+    "title": "Filter rows based on random sampling",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Filter rows\nSource code: FilterRandomRows.cs"
+  },
+  {
+    "objectID": "filterrandomrows.html#number-of-rows",
+    "href": "filterrandomrows.html#number-of-rows",
+    "title": "Filter rows based on random sampling",
+    "section": "3.1 Number of rows",
+    "text": "3.1 Number of rows\nThe filtering is based on random decisions, where a given number of rows is kept (default: total number of rows in the matrix)."
+  },
+  {
+    "objectID": "filterrandomrows.html#filter-mode",
+    "href": "filterrandomrows.html#filter-mode",
+    "title": "Filter rows based on random sampling",
+    "section": "3.2 Filter mode",
+    "text": "3.2 Filter mode\nThe “Filter mode” defines, whether the input matrix will be reduced (“Reduce matrix” = default) or a new categorical column called “Filter” will be generated containing the categories “Keep” and “Discard” (“Filter mode” = “Add categorical column”)."
+  },
+  {
+    "objectID": "filtercategoricalrow.html",
+    "href": "filtercategoricalrow.html",
+    "title": "Filter columns based on categorical row",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Filter columns\nSource code: FilterCategoricalRow.cs"
+  },
+  {
+    "objectID": "filtercategoricalrow.html#row",
+    "href": "filtercategoricalrow.html#row",
+    "title": "Filter columns based on categorical row",
+    "section": "3.1 Row",
+    "text": "3.1 Row\nSelected categorical row the filtering is based on (default: first categorical row in the matrix).\n\n3.1.1 Values\nSelected values out of all values of the specified categorical row that should be present to keep/discard the column (default: no values are selected)."
+  },
+  {
+    "objectID": "filtercategoricalrow.html#mode",
+    "href": "filtercategoricalrow.html#mode",
+    "title": "Filter columns based on categorical row",
+    "section": "3.2 Mode",
+    "text": "3.2 Mode\nThe columns with the selected values will be kept/discarded depending on the selected “Mode” (default: “Remove matching columns”). If “Remove matching columns” is selected, rows having the values will be removed while all other columns will be kept. If “Keep matching columns” is selected, the opposite will happen."
+  },
+  {
+    "objectID": "filtercategoricalrow.html#filter-mode",
+    "href": "filtercategoricalrow.html#filter-mode",
+    "title": "Filter columns based on categorical row",
+    "section": "3.3 Filter mode",
+    "text": "3.3 Filter mode\nThe “Filter mode” defines, whether the input matrix will be reduced (“Reduce matrix” = default) or a new categorical row called “Filter” will be generated containing the categories “Keep” and “Discard” (“Filter mode” = “Add categorical row”)."
+  },
+  {
+    "objectID": "filtervalidvaluescolumns.html",
+    "href": "filtervalidvaluescolumns.html",
+    "title": "Filter columns based on valid values",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Filter columns\nSource code: FilterValidValuesColumns.cs"
+  },
+  {
+    "objectID": "filtervalidvaluescolumns.html#min.-number-of-values",
+    "href": "filtervalidvaluescolumns.html#min.-number-of-values",
+    "title": "Filter columns based on valid values",
+    "section": "3.1 Min. number of values",
+    "text": "3.1 Min. number of values\nSpecifies minimal number of valid values each expression column needs to contain to survive the filtering process (default: 3)."
+  },
+  {
+    "objectID": "filtervalidvaluescolumns.html#mode",
+    "href": "filtervalidvaluescolumns.html#mode",
+    "title": "Filter columns based on valid values",
+    "section": "3.2 Mode",
+    "text": "3.2 Mode\nDefines, which expression columns are counted to define, if a row has enough valid values to survive the filtering process (default: In total)."
+  },
+  {
+    "objectID": "filtervalidvaluescolumns.html#values-should-be",
+    "href": "filtervalidvaluescolumns.html#values-should-be",
+    "title": "Filter columns based on valid values",
+    "section": "3.3 Values should be",
+    "text": "3.3 Values should be\nDefines the restriction for a value to be classified as valid (default: Valid). There are seven different possibilities to specify, which entry is counted as a valid value (default: Valid):\n\nValid\nGreater than\nGreater or equal\nLess than\nLess or equal\nBetween\nOutside\n\n\n3.3.1 Minimum\nThis parameter is just relevant, if “Values should be” is set to “Greater than”, “Greater or equal”, “Between” or “Outside”. It defines a lower bound to apply the operation specified in “Values should be” (default: 0).\n\n\n3.3.2 Maximum\nThis parameter is just relevant, if “Values should be” is set to “Less than”, “Less or equal”, “Between” or “Outside”. It defines a upper bound to apply the operation specified in “Values should be” (default: 0)."
+  },
+  {
+    "objectID": "filtervalidvaluescolumns.html#filter-mode",
+    "href": "filtervalidvaluescolumns.html#filter-mode",
+    "title": "Filter columns based on valid values",
+    "section": "3.4 Filter mode",
+    "text": "3.4 Filter mode\nThe “Filter mode” defines, whether the input matrix will be reduced (“Reduce matrix” = default) or a new categorical column called “Filter” will be generated containing the categories “Keep” and “Discard” (“Filter mode” = “Add categorical column”)."
   }
 ]

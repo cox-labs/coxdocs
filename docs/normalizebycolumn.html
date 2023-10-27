@@ -9,7 +9,7 @@
 <meta name="author" content="Cox Lab">
 <meta name="dcterms.date" content="2023-10-27">
 
-<title>Cox Docs</title>
+<title>Modify by column</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -89,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">HOME</span></a>
   </li>  
   <li class="nav-item">
@@ -138,14 +138,28 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="-1">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general"><span class="header-section-number">1</span> General</a></li>
+  <li><a href="#brief-description" id="toc-brief-description" class="nav-link" data-scroll-target="#brief-description"><span class="header-section-number">2</span> Brief description</a></li>
+  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters"><span class="header-section-number">3</span> Parameters</a>
+  <ul>
+  <li><a href="#columns" id="toc-columns" class="nav-link" data-scroll-target="#columns"><span class="header-section-number">3.1</span> Columns</a></li>
+  <li><a href="#control-column" id="toc-control-column" class="nav-link" data-scroll-target="#control-column"><span class="header-section-number">3.2</span> Control column</a></li>
+  <li><a href="#modify-by" id="toc-modify-by" class="nav-link" data-scroll-target="#modify-by"><span class="header-section-number">3.3</span> Modify by</a></li>
+  </ul></li>
+  <li><a href="#parameter-window" id="toc-parameter-window" class="nav-link" data-scroll-target="#parameter-window"><span class="header-section-number">4</span> Parameter window</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Cox Docs</h1>
+<h1 class="title">Modify by column</h1>
 </div>
 
 
@@ -173,20 +187,53 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<hr>
-<p>Welcome to coxdocs.org, the home of the documentation for</p>
+<section id="general" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> General</h1>
 <ul>
-<li><a href="maxquant_instructions.html">MaxQuant</a></li>
-<li><a href="perseus_instructions.html">Perseus</a></li>
-<li><a href="andromeda_instructions.html">Andromeda</a></li>
+<li><strong>Type:</strong> - Matrix Processing</li>
+<li><strong>Heading:</strong> - Normalization</li>
+<li><strong>Source code:</strong> not public.</li>
 </ul>
-<hr>
-<div class="line-block"></div>
-<div class="watermarked">
-<p><img src="Figures/coxlab_logo2.png" alt="Photo"></p>
-</div>
+</section>
+<section id="brief-description" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Brief description</h1>
+<p>Modify all columns by the specified action and column.</p>
+<p>Output: Normalized expression matrix.</p>
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+</section>
+<section id="parameters" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Parameters</h1>
+<section id="columns" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="columns"><span class="header-section-number">3.1</span> Columns</h2>
+<p>Selected expression/numerical column(s) that should be modified by the values of the “Control column” using the the action specified in “Modify by” (default: all expression columns are selected).</p>
+</section>
+<section id="control-column" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="control-column"><span class="header-section-number">3.2</span> Control column</h2>
+<p>One expression/numerical column that is used to modify all selected expression/numerical columns in the field “Columns” using the action specified in “Modify by” (default: first expression column in the matrix).</p>
+</section>
+<section id="modify-by" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="modify-by"><span class="header-section-number">3.3</span> Modify by</h2>
+<p>Defines the operation that is applied between the selected “Columns” and the “Control column” (default: Subtraction). The operation can be chosen from a predefined list of operations:</p>
+<ul>
+<li>Addition</li>
+<li>Multiplication</li>
+<li>Subtraction</li>
+<li>Division</li>
+</ul>
+</section>
+</section>
+<section id="parameter-window" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Parameter window</h1>
+<p><img src="images/normalization-modify_by_column-edited.png" class="img-fluid"></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

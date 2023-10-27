@@ -9,7 +9,7 @@
 <meta name="author" content="Cox Lab">
 <meta name="dcterms.date" content="2023-10-27">
 
-<title>Cox Docs</title>
+<title>Filter rows based on random sampling</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -89,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">HOME</span></a>
   </li>  
   <li class="nav-item">
@@ -138,14 +138,27 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="-1">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general"><span class="header-section-number">1</span> General</a></li>
+  <li><a href="#brief-description" id="toc-brief-description" class="nav-link" data-scroll-target="#brief-description"><span class="header-section-number">2</span> Brief description</a></li>
+  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters"><span class="header-section-number">3</span> Parameters</a>
+  <ul>
+  <li><a href="#number-of-rows" id="toc-number-of-rows" class="nav-link" data-scroll-target="#number-of-rows"><span class="header-section-number">3.1</span> Number of rows</a></li>
+  <li><a href="#filter-mode" id="toc-filter-mode" class="nav-link" data-scroll-target="#filter-mode"><span class="header-section-number">3.2</span> Filter mode</a></li>
+  </ul></li>
+  <li><a href="#parameter-window" id="toc-parameter-window" class="nav-link" data-scroll-target="#parameter-window"><span class="header-section-number">4</span> Parameter window</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Cox Docs</h1>
+<h1 class="title">Filter rows based on random sampling</h1>
 </div>
 
 
@@ -173,20 +186,43 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<hr>
-<p>Welcome to coxdocs.org, the home of the documentation for</p>
+<section id="general" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> General</h1>
 <ul>
-<li><a href="maxquant_instructions.html">MaxQuant</a></li>
-<li><a href="perseus_instructions.html">Perseus</a></li>
-<li><a href="andromeda_instructions.html">Andromeda</a></li>
+<li><strong>Type:</strong> - Matrix Processing</li>
+<li><strong>Heading:</strong> - Filter rows</li>
+<li><strong>Source code:</strong> <a href="https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Filter/FilterRandomRows.cs">FilterRandomRows.cs</a></li>
 </ul>
-<hr>
-<div class="line-block"></div>
-<div class="watermarked">
-<p><img src="Figures/coxlab_logo2.png" alt="Photo"></p>
-</div>
+</section>
+<section id="brief-description" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Brief description</h1>
+<p>A given number of rows is kept based on random decisions.</p>
+<p>Output: The filtered matrix.</p>
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+</section>
+<section id="parameters" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Parameters</h1>
+<section id="number-of-rows" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="number-of-rows"><span class="header-section-number">3.1</span> Number of rows</h2>
+<p>The filtering is based on random decisions, where a given number of rows is kept (default: total number of rows in the matrix).</p>
+</section>
+<section id="filter-mode" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="filter-mode"><span class="header-section-number">3.2</span> Filter mode</h2>
+<p>The “Filter mode” defines, whether the input matrix will be reduced (“Reduce matrix” = default) or a new categorical column called “Filter” will be generated containing the categories “Keep” and “Discard” (“Filter mode” = “Add categorical column”).</p>
+</section>
+</section>
+<section id="parameter-window" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Parameter window</h1>
+<p><img src="images/filter_rows-filter_rows_based_on_random_sampling-edited.png" class="img-fluid"></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

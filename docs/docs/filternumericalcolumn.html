@@ -9,7 +9,7 @@
 <meta name="author" content="Cox Lab">
 <meta name="dcterms.date" content="2023-10-27">
 
-<title>Cox Docs</title>
+<title>Filter rows based on numerical/expression column</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -89,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">HOME</span></a>
   </li>  
   <li class="nav-item">
@@ -138,14 +138,29 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="-1">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general"><span class="header-section-number">1</span> General</a></li>
+  <li><a href="#brief-description" id="toc-brief-description" class="nav-link" data-scroll-target="#brief-description"><span class="header-section-number">2</span> Brief description</a></li>
+  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters"><span class="header-section-number">3</span> Parameters</a>
+  <ul>
+  <li><a href="#number-of-columns" id="toc-number-of-columns" class="nav-link" data-scroll-target="#number-of-columns"><span class="header-section-number">3.1</span> Number of columns</a></li>
+  <li><a href="#number-of-relations" id="toc-number-of-relations" class="nav-link" data-scroll-target="#number-of-relations"><span class="header-section-number">3.2</span> Number of relations</a></li>
+  <li><a href="#combine-through" id="toc-combine-through" class="nav-link" data-scroll-target="#combine-through"><span class="header-section-number">3.3</span> Combine through</a></li>
+  <li><a href="#filter-mode" id="toc-filter-mode" class="nav-link" data-scroll-target="#filter-mode"><span class="header-section-number">3.4</span> Filter mode</a></li>
+  </ul></li>
+  <li><a href="#parameter-window" id="toc-parameter-window" class="nav-link" data-scroll-target="#parameter-window"><span class="header-section-number">4</span> Parameter window</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Cox Docs</h1>
+<h1 class="title">Filter rows based on numerical/expression column</h1>
 </div>
 
 
@@ -173,20 +188,52 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<hr>
-<p>Welcome to coxdocs.org, the home of the documentation for</p>
+<section id="general" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> General</h1>
 <ul>
-<li><a href="maxquant_instructions.html">MaxQuant</a></li>
-<li><a href="perseus_instructions.html">Perseus</a></li>
-<li><a href="andromeda_instructions.html">Andromeda</a></li>
+<li><strong>Type:</strong> - Matrix Processing</li>
+<li><strong>Heading:</strong> - Filter rows</li>
+<li><strong>Source code:</strong> <a href="https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Filter/FilterNumericalColumn.cs">FilterNumericalColumn.cs</a></li>
 </ul>
-<hr>
-<div class="line-block"></div>
-<div class="watermarked">
-<p><img src="Figures/coxlab_logo2.png" alt="Photo"></p>
-</div>
+</section>
+<section id="brief-description" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Brief description</h1>
+<p>Only those rows are kept that have a value in the numerical column fulfilling the equation or inequality relation.</p>
+<p>Output: The filtered matrix.</p>
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+</section>
+<section id="parameters" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Parameters</h1>
+<section id="number-of-columns" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="number-of-columns"><span class="header-section-number">3.1</span> Number of columns</h2>
+<p>The filtering is based on relations of expression/numerical columns. Up to five columns (default: 1) can be selected. Depending on the number of chosen columns drop down box(es) appear on the pop-up window named “x”, “y”, “z”, “a” and “b”. In these drop down boxes expression/numerical columns can be specified, which can then be used in the relations that should be applied for filtering the matrix.</p>
+</section>
+<section id="number-of-relations" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="number-of-relations"><span class="header-section-number">3.2</span> Number of relations</h2>
+<p>Up to five relations using the previously specified columns can be included in the filtering process (default:1). Depending on the selected number of relations text fields on the pop-up window appear named “Relation 1”, “Relation 2”, “Relation 3”, “Relation 4” and “Relation 5”.</p>
+<p>In each text field a relation for the filtering process can be defined using the variables of the parameter “Number of columns”. For the relations numbers with “.” as decimal point, “+”, “-”, “*”, “/” and “^” as well as scientific notation (e.g.&nbsp;“5.4e-12”) can be used.</p>
+</section>
+<section id="combine-through" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="combine-through"><span class="header-section-number">3.3</span> Combine through</h2>
+<p>Defines how the specified relations are combined (default: intersection). Depending on the specified combination mode either rows, which fulfill the “intersection” (default) of the relations are kept or the ones fulfilling the “union”.</p>
+</section>
+<section id="filter-mode" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="filter-mode"><span class="header-section-number">3.4</span> Filter mode</h2>
+<p>The “Filter mode” defines, whether the input matrix will be reduced (“Reduce matrix” = default) or a new categorical column called “Filter” will be generated containing the categories “Keep” and “Discard” (“Filter mode” = “Add categorical column”).</p>
+</section>
+</section>
+<section id="parameter-window" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Parameter window</h1>
+<p><img src="images/filter_rows-filter_rows_based_on_numerical_expression_column-edited.png" class="img-fluid"></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

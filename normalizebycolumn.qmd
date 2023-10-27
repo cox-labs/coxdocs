@@ -1,0 +1,61 @@
+---
+title: "Modify by column"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Normalization
+-   **Source code:** not public.
+
+# Brief description
+
+Modify all columns by the specified action and column.
+
+Output: Normalized expression matrix.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Columns
+
+Selected expression/numerical column(s) that should be modified by the values of the "Control column" using the the action specified in "Modify by" (default: all expression columns are selected).
+
+## Control column
+
+One expression/numerical column that is used to modify all selected expression/numerical columns in the field "Columns" using the action specified in "Modify by" (default: first expression column in the matrix).
+
+## Modify by
+
+Defines the operation that is applied between the selected "Columns" and the "Control column" (default: Subtraction).
+The operation can be chosen from a predefined list of operations:
+
+-   Addition
+-   Multiplication
+-   Subtraction
+-   Division
+
+# Parameter window
+
+![](images/normalization-modify_by_column-edited.png)
+
+
