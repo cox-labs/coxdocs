@@ -1,0 +1,55 @@
+---
+title: "Category counting"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Annot. columns
+-   **Source code:** [CategoryCounting.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/AnnotCols/CategoryCounting.cs)
+
+# Brief description
+
+For each term in a categorical column one counts the number of occurrences.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Categories
+
+Selected categorical columns for which the absolute and relative occurrence of each term gets counted and displayed in two newly generated numerical columns called "Count" and "Percentage of total" (default: all categorical columns are selected).
+
+## Min. count
+
+Minimal occurrence of a certain term to be displayed in the output table (default: 1).
+
+## Selection
+
+Selected categorical column in which the "Value" will be searched and counted for each term in the "Categories" field specified categorical columns (default: <None>). Two new numerical columns called "Selection count" and "Selection percentage" are generated in the output table containing the absolute and relative amounts.
+
+## Value
+
+Defines the value that is searched in the categorical column specified in "Selection" (default: +).
+
+# Parameter window
+
+![](images/annot.columns-category_counting-edited.png)

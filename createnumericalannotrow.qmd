@@ -1,0 +1,92 @@
+---
+title: "Numerical annotation rows"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Annot. rows
+-   **Source code:** [CreateNumericalAnnotRow.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Group/CreateNumericalAnnotRow.cs)
+
+## Brief description
+
+Add or edit numerical annotation rows. This could for instance define the times of samples for time series data.
+
+Output: Same matrix with numerical annotation row added or modified.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Action
+
+Defines the action that should be applied to a numerical annotation row (default: Create). The action can be selected from a predefined list:
+
+-   Create
+-   Edit
+-   Rename
+-   Delete
+
+Each of the above listed options has different parameters, which are explained below in more detail and grouped according to the action.
+
+### Create
+
+#### Row name
+
+This parameter is just relevant, if "Action" is set to "Create". It defines the name of the new generated numerical annotation row (default: Quantity1).
+
+#### Here: Column 1 ... Column 12
+
+This parameter is just relevant, if "Action" is set to "Create". For each of the expression columns in the matrix the numerical value of that column in the numerical annotation row can be specified (default: each expression column has an own numerical group indicated by a number).
+
+### Edit
+
+#### Numerical row
+
+This parameter is just relevant, if "Action" is set to "Edit". It specifies the selected numerical row that should be edited (default: first numerical column in the matrix).
+
+#### Here: Column 1...Column 12
+
+This parameter is just relevant, if "Action" is set to "Edit". For each of the expression columns in the matrix the value in the numerical row can be edited by typing into the defined text field after the column name (default: numerical value of each expression column in that row).
+
+### Rename
+
+#### Numerical row
+
+This parameter is just relevant, if "Action" is set to "Rename". It specifies the selected numerical row that should be renamed (default: first numerical row in the matrix).
+
+#### New name
+
+This parameter is just relevant, if "Action" is set to "Rename". It defines the new name of the numerical row (default: empty).
+
+#### New description
+
+This parameter is just relevant, if "Action" is set to "Rename". It defines the new description of the numerical row (default: empty).
+
+### Delete
+
+#### Numerical row
+
+This parameter is just relevant, if "Action" is set to "Delete". It specifies the selected categorical row that should be deleted (default: first category row in the matrix).
+
+# Parameter window
+
+![](images/annot.rows-numerical_annotation_rows-edited.png)

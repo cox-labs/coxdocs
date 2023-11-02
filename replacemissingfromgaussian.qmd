@@ -1,0 +1,56 @@
+---
+title: "Replace missing values from normal distribution"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Imputation
+-   **Source code:** [ReplaceMissingFromGaussian.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Impute/ReplaceMissingFromGaussian.cs)
+
+# Brief description
+
+Missing values will be replaced by random numbers that are drawn from a normal distribution. The parameters of this distribution can be optimized to simulate a typical abundance region that the missing values would have if they had been measured. In the absence of any a priori knowledge, the distribution of random numbers should be similar to the valid values. Often, missing values represent low abundance measurements. The default values are chosen to mimic this case.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Width
+
+Defines the width of the Gaussian distribution relative to the standard deviation of measured values (default: 0.3). A value of 0.5 would mean that the width of the distribution used for drawing random numbers is half of the standard deviation of the data.
+
+## Down shift
+
+Specifies the amount by which the distribution used for the random numbers is shifted downwards (default: 1.8). This is in units of the standard deviation of the valid data.
+
+## Mode
+
+Specifies whether the replacement of missing values should be applied to each expression column separately (default) or on the whole matrix at once ("Total matrix").
+
+## Columns
+
+Selected expression columns, where missing values should be replaced (default: all expression columns are selected).
+
+# Parameter window
+
+![](images/imputation-replace_missing_values_from_normal_distribution-edited.png)
+

@@ -1,0 +1,44 @@
+---
+title: "Scatter plot analysis"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Analysis
+-   **Heading:** - Visualization
+-   **Source code:** not public.
+
+# Brief description
+
+Plot two columns or two rows against each other as $x$ and $y$ values in a scatter plot. Data points can be colored according to values in a third column or row.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Matrix access
+
+Specifies whether columns (default) or rows are plotted against each other.
+
+# Parameter window
+
+![](images/visualization-scatter_plot-edited.png)
+

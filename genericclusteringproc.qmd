@@ -1,0 +1,47 @@
+---
+title: "Generic clustering"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Clustering
+-   **Source code:** not public.
+
+# Brief description
+
+Collection of cluster algorithms without graphical output.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Method
+
+Selected method that should be applied to cluster the data (default: K-means). The result will be displayed in newly generated categorical column named "Clusters".
+
+## Number of clusters
+
+Defines the number of clusters the data should be clustered into (default: 10).
+
+# Parameter window
+
+![](images/clustering-generic_clustering-edited.png)

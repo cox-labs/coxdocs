@@ -1,0 +1,44 @@
+---
+title: "Histogram"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Analysis
+-   **Heading:** - Visualization
+-   **Source code:** not public.
+
+# Brief description
+
+The values are displayed in form of a histogram. Multiple columns can be displayed as separate histograms.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Columns
+
+Selected expression columns, whose values get displayed in separate histograms (default: all expression columns are selected).
+
+# Parameter window
+
+![](images/visualization-histogram-edited.png)
+

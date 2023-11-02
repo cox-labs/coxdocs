@@ -1,0 +1,127 @@
+---
+title: "Categorical annotation rows"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Annot. rows
+-   **Source code:** [CreateCategoricalAnnotRow.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Group/CreateCategoricalAnnotRow.cs)
+
+# Brief description
+
+Manage the categorical annotation rows. One important applications is to define a grouping that is later used in a t-test or ANOVA.
+
+Output: Same matrix with categorical annotation rows added or modified.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Action
+
+Defines the action that should be applied to a categorical annotation row (default: Create). The action can be selected from a predefined list:
+
+-   Create
+-   Create from experiment name
+-   Edit
+-   Rename
+-   Delete
+-   Write template file
+-   Read from file
+
+Each of the above listed options has different parameters, which are explained below in more detail and grouped according to the action.
+
+### Create
+
+#### Row name
+
+This parameter is just relevant, if "Action" is set to "Create". It defines the name of the new generated categorical annotation row (default: Group1).
+
+#### Here: Column 1 ... Column 12
+
+This parameter is just relevant, if "Action" is set to "Create". For each of the expression columns in the matrix the category value of that column in the categorical annotation row can be specified (default: each expression column has its own category indicated by the name of the expression column).
+
+### Create from experiment name
+
+#### Pattern
+
+This parameter is just relevant, if "Action" is set to "Create from experiment name". It specifies the pattern that will be applied to the column names to group the columns and generate a new categorical annotation row (default: ...\_01,02,03). The Pattern can be selected from a predefined list:
+
+-   ...\_01,02,03
+-   (LFQ) intensity ...\_01,02,03
+-   (Normalized) ratio H/L ...\_01,02,03
+-   match regular expression
+-   replace regular expression
+
+#### Regex
+
+This parameter is just relevant, if "Action" is set to "Create from experiment name" and the parameter "Pattern" is set to "match regular expression" or "replace regular expression" (default: empty text field). Here a regular expression can be typed in, which should be applied to the column names to group the columns. The general rules for regular expressions apply here.
+
+#### Replace with
+
+This parameter is just relevant, if "Action" is set to "Create from experiment name" and the parameter "Pattern" is set to "replace regular expression" (default: empty text field). Columns matching the defined regular expression in the field "Regex" get the value specified in the "Replace with" field and are therefore grouped.
+
+### Edit
+
+#### Category row
+
+This parameter is just relevant, if "Action" is set to "Edit". It specifies the selected categorical row that should be edited (default: first categorical column in the matrix).
+
+#### Here: Column 1...Column 12
+
+This parameter is just relevant, if "Action" is set to "Edit". For each of the expression columns in the matrix the value in the categorical row can be edited by typing into the defined text field after the column name (default: category values of each expression column in that row).
+
+### Rename
+
+#### Category row
+
+This parameter is just relevant, if "Action" is set to "Rename". It specifies the selected categorical row that should be renamed (default: first category row in the matrix).
+
+#### New name
+
+This parameter is just relevant, if "Action" is set to "Rename". It defines the new name of the categorical row (default: empty).
+
+#### New description
+
+This parameter is just relevant, if "Action" is set to "Rename". It defines the new description of the categorical row (default: empty).
+
+### Delete
+
+#### Category row
+
+This parameter is just relevant, if "Action" is set to "Delete". It specifies the selected categorical row that should be deleted (default: first category row in the matrix).
+
+### Write template file
+
+#### Output file
+
+This parameter is just relevant, if "Action" is set to "Write template file". It specifies the file name and path, where a grouping template of a categorical annotation rows is saved in a tab separated text file (default: Groups.txt). The first column of the output file is named "Name" and contains the names of the columns. The second column has the column names as values and can be edited manually. After editing the file can be read using "Read from file" (see below).
+
+### Read from file
+
+#### Input file
+
+This parameter is just relevant, if "Action" is set to "Read from file". It defines the file name and path of a tab separated file containing information about a new grouping of the columns of a matrix (default: empty). The first column is called "Name" and contains the names of the columns of the matrix. The second column has the name of the new grouping and contains the values of each column of the matrix.
+
+# Parameter window
+
+![](images/annot.rows-categorical_annotation_rows-edited.png)

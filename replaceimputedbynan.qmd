@@ -1,0 +1,41 @@
+---
+title: "Replace missing values by NaN"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General =====
+
+  * **Type:** - Matrix Processing
+  * **Heading:** - Imputation
+  * **Source code:** [ReplaceImputedByNan.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Impute/ReplaceImputedByNan.cs)
+
+# Brief description
+
+Replaces all values that have been imputed with `NaN`.
+
+Output: Same matrix but with imputed values deleted.
+
+
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+
+# Parameters
+
+"Replace imputed values by NaN" has no parameters.
+
+

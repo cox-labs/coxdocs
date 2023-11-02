@@ -1,0 +1,132 @@
+---
+title: "Hierarchical clustering"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Analysis
+-   **Heading:** - Clustering/PCA
+-   **Source code:** not public.
+
+# Brief description
+
+This activity performs hierarchical clustering of rows and/or columns and produces a visual heat map representation of the clustered matrix. Clustering can be performed with a choice of distances and linkages. This activity can also be used just to display your data in a heat map without performing clustering by deselecting row and column clustering.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Row tree
+
+If checked rows will be clustered and a tree (dendrogram) is generated (default: checked).
+
+### Distance
+
+Selected distance that will be used for the clustering process (default: Euclidean). The distance can be selected from a predefined list:
+
+-   Euclidean
+-   L1
+-   Maximum
+-   Lp
+-   Pearson correlation
+-   Spearman correlation
+-   Cosine
+-   Canberra
+
+### Linkage
+
+Selected clustering method that will be applied (default: Average). It can be selected from a predefined list:
+
+-   Average
+-   Complete
+-   Single
+
+### Constraint
+
+Selected constraint that should be preserved from the input data (default: None). The used constraint can be selected from a predefined list of constraints:
+
+-   None
+-   Preserve order
+-   Preserve order (periodic)
+
+### Preprocess with k-means
+
+Specifies, whether the data should be pre-processed using k-means before applying clustering and generating a heatmap (default: checked).
+
+### Number of clusters
+
+This parameter is just relevant, if the parameter "Preprocess with k-means" is checked. Defines the number of clusters that will be created by the k-means algorithm (default: 300).
+
+## Column tree
+
+If checked, columns will be clustered and a tree (dendrogram) is generated (default: checked).
+
+### Distance
+
+Selected distance that will be used for the clustering process (default: Euclidean). The distance can be selected from a predefined list:
+
+-   Euclidean
+-   L1
+-   Maximum
+-   Lp
+-   Pearson correlation
+-   Spearman correlation
+
+### Linkage
+
+Selected clustering method that will be applied (default: Average). It can be selected from a predefined list:
+
+-   Average
+-   Complete
+-   Single
+
+### Constraint
+
+Selected constraint that should be preserved from the input data (default: None). The used constraint can be selected from a predefined list of constraints:
+
+-   None
+-   Preserve order
+-   Preserve order (periodic)
+-   Preserve grouping
+
+### Preprocess with k-means
+
+Specifies, whether the data should be pre-processed using k-means before applying clustering and generating a heatmap (default: checked).
+
+### Number of clusters
+
+This parameter is just relevant, if the parameter "Preprocess with k-means" is checked. Defines the number of clusters that will be created by the k-means algorithm (default: 300).
+
+## Which columns to use
+
+List of all expression/numerical columns in the data set (default: all numerical columns; the expression columns are selected see parameter "Use for clustering").
+
+## Use for clustering
+
+Selected expression/numerical columns that should be used for the clustering (default: all expression columns are selected).
+
+## Display in heat map but do not use for clustering
+
+Selected expression/numerical columns that should be displayed in the output heat map, but are not used for the clustering (default: empty).
+
+# Parameter window
+
+![](images/clustering-pca-hierachical_clustering-edited.png)

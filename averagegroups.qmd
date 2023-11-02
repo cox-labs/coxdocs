@@ -1,0 +1,70 @@
+---
+title: "Average Groups"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Annot. rows
+-   **Source code:** [AverageGroups.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/AnnotRows/AverageGroups.cs)
+
+# Brief description
+
+Main columns are averaged over groups. This requires that at least one categorical annotation row is defined.
+
+Output: Averaged main matrix containing as many columns as there were groups defined.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Grouping
+
+Defines, which grouping specified in a categorical row should be used to average values (default: first categorical row in the matrix).
+
+## Average type
+
+Specifies which operation should be applied for the averaging (default: Median). The operation can be selected from a predefined list:
+
+-   Median
+-   Mean
+-   Sum
+-   Geometric mean
+
+## Min. valid values per group
+
+Defines the minimal values a group must contain to calculate the average (default: 1).
+
+## Keep original data
+
+If checked the original data will be kept In the output matrix (default: unchecked).
+
+## Add variation
+
+Specifies, whether a measure of group-wise variation should be calculated and displayed in a numerical column (default: `<None>`). The measure can be selected from a predefined list:
+
+-   `<None>`
+-   Standard deviation
+-   Error of mean
+
+# Parameter window
+
+![](images/annot.rows-average_groups-edited.png)

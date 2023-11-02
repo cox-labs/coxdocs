@@ -1,0 +1,53 @@
+---
+title: "Convert to NaN"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Quality
+-   **Source code:** not public.
+
+# Brief description
+
+Expression values matching the filter will be converted to `NaN`s.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Values should be
+
+Specifies how the expression values of the matrix should be compared to the defined "Threshold" (default: Greater than). The operation how to compare the values can be chosen from a predefined list:
+
+-   Greater than
+-   Greater or equal
+-   Less than
+-   Less or equal
+
+## Threshold
+
+Value defining which expression values should be converted to NaN (default: 0).
+
+# Parameter window
+
+![](images/quality-convert_to_nan-edited.png)
+

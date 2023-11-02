@@ -1,0 +1,36 @@
+---
+title: "3D plot"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+  * **Type:** - Matrix Analysis
+  * **Heading:** - Visualization
+  * **Source code:** not public.
+
+# Brief description
+
+Plot three columns or three rows against each other as x, y and z values in a scatter plot.
+
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+
+# Parameters
+
+"3D plot" has no parameters.

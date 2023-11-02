@@ -1,0 +1,45 @@
+---
+title: "Replace missing values by constant"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Imputation
+-   **Source code:** [ReplaceMissingByConstant.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Impute/ReplaceMissingByConstant.cs)
+
+# Brief description
+
+Replaces all missing values in the main columns with a constant.
+
+Output: Same matrix but with missing values replaced.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Value
+
+Specifies the value that is going to replace missing values in all expression columns.
+
+# Parameter window
+
+![](images/imputation-replace_missing_values_by_constant-edited.png)

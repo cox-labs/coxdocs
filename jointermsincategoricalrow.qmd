@@ -1,0 +1,54 @@
+---
+title: "Join terms in categorical row"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General =====
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Annot. rows
+-   **Source code:** [JoinTermsInCategoricalRow.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/AnnotRows/JoinTermsInCategoricalRow.cs)
+
+# Brief description
+
+The selected terms in the categorical row will be joined to one term.
+
+Output: The filtered matrix.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Row
+
+Selected categorical row that the filtering should be based on (default: first categorical row in the matrix).
+
+## Values
+
+Selected values that should be joined to one group (default: no values are selected).
+
+## New term
+
+Defines the new value the above joined values should get (default: empty).
+
+# Parameter window
+
+![](images/annot.rows-join_terms_in_categorical_row-edited.png)
+

@@ -1,0 +1,41 @@
+---
+title: "Create quality matrix"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Quality
+-   **Source code:** [CreateQualityMatrix.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Quality/CreateQualityMatrix.cs)
+
+# Brief description
+
+Create a matrix of quality values from a set of numerical columns. There has to be one numerical column per expression column.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+To each of the expression columns in the matrix one numerical column has to be assigned (default: to all expression columns the first numerical column in the matrix is assigned).
+
+# Parameter window
+
+![](images/quality-create_quality_matrix-edited.png)

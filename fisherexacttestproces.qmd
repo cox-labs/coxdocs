@@ -1,0 +1,73 @@
+---
+title: "Fisher exact test"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Annot. columns
+-   **Source code:** not public.
+
+# Brief description
+
+This is a test used to determine if there are non-random associations between a categorical column and all terms in the other categorical columns. Note that significantly enriched as well as depleted terms will be reported. Depleted terms will have an enrichment factor \< 1.
+
+Output: A new table is generated in which each row corresponds to a term in a categorical column that is significantly associated with a term in the selected categorical column.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Input type
+
+Specification whether the sub-population that is tested for contingency against all other categorical columns is taken directly from a categorical column ("Categorical column" is default) or, if it is defined by a threshold on a numerical/expression column ("Numerical column").
+
+### Column
+
+This parameter is just relevant, if "Input type" is set to "Categorical column". The selected categorical column is checked against all other categorical columns for association between the occurrence of terms (default: first categorical column in the matrix).
+
+### Columns
+
+This parameter is just relevant, if "Input type" is set to "Numerical column". The selected expression/numerical columns are used as a threshold to define the set of interest. The set is then checked against all categorical columns for association between the occurrence of terms (default: all expression and numerical columns are selected).
+
+### Threshold
+
+This parameter is just relevant, if "Input type" is set to "Numerical column". It defines the threshold, which rows are kept/discarded to define the set of interest (default: 2).
+
+### Selection is
+
+This parameter is just relevant, if "Input type" is set to "Numerical column". It defines, whether the values in the selected "Columns" should be "Larger than threshold" or "Less than threshold" (default: Larger than threshold).
+
+## Use for truncation {#sec-truncation}
+
+The truncation can be based on p-values or the Benjamini-Hochberg correction for multiple hypothesis testing (default: Benjamini-Hochberg, FDR). Rows with a test result below a specified value (@sec-threshold-value) are reported as significant.
+
+## Threshold value {#sec-threshold-value}
+
+Based on a specified threshold (default: 0.02) a specific row is reported as significant. Depending on the chosen truncation score (@sec-truncation) this threshold value is applied to the p-value or to the Benjamini-Hochberg FDR.
+
+## Relative enrichment
+
+Selected text column, where all rows having the same identifier will be counted as one entity in the Fisher exact test (default: <None>). The main application is for post-translational modification sites. Then one should select here protein or gene identifiers. This will make sure that multiple sites from the same protein (or gene) are counted only once for the enrichment analysis.
+
+# Parameter window
+
+![](images/annot.columns-fisher_exact_test-edited.png)

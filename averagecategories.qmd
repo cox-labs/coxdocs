@@ -1,0 +1,56 @@
+---
+title: "Average categories"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Annot. columns
+-   **Source code:** [AverageCategories.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/AnnotCols/AverageCategories.cs)
+
+# Brief description
+
+Rows that have a common term in one of the selected categorical columns are averaged. Several different summarization methods can be selected.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Categories
+
+Selected categorical columns that are used to specify, which rows should be summarized (default: all categorical columns are selected).
+
+## Average type
+
+Selected operation that should be used to average the values of the expression columns (default: median). The operation can be selected from a predefined list of operations:
+
+-   Median
+-   Mean
+-   Sum
+-   Standard deviation
+
+## Min. size
+
+The minimal occurrence of a certain term within a categorical column so that the rows will be summarized into one row (default: 3).
+
+# Parameter window
+
+![](images/annot.columns-average_categories-edited.png)

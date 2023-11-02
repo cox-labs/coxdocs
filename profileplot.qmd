@@ -1,0 +1,38 @@
+---
+title: "Profile plot "
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+  * **Type:** - Matrix Analysis
+  * **Heading:** - Visualization
+  * **Source code:** not public.
+
+# Brief description
+
+Display each row of the matrix as a quantitative profile with each column defining a data point. 
+Profiles can be queried by similarity to a reference profile.
+
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+
+# Parameters
+
+"Profile plot" has no parameters.
+

@@ -417,14 +417,14 @@
     "href": "perseus_user_intereface.html#processing",
     "title": "Perseus User Interface",
     "section": "2 Processing",
-    "text": "2 Processing\n\n2.1 Basic\n\nTransform\nCombine expression columns\nColumn correlation\nRow correlation\nSummary statistics (columns)\nSummary statistics (rows)\nQuantiles\nDensity estimation\nPerformance curve\nClone\nSignificance A\nSignificance B\nAdd noise\n\n\n\n2.2 Rearrange\n\nChange column type\nRename columns\nRename columns (reg. ex.)\nCombine annotations\nDuplicate columns\nReorder/remove columns\nRemove empty columns\nTranspose\nSort by column\nExpand multi-numeric and string columns\nUnique values\nConvert multi-numeric column\nCombine categorical columns\nProcess text column\nSearch text column\n\n\n\n2.3 Normalization\n\nZ-score\nRank\nUnit vectors\nScale to interval\nWidth adjustment\nSubtract\nDivide\nModify by column\nSubtract row cluster\nUn-Z-score\n\n\n\n2.4 Filter rows\n\nFilter rows based on categorical column\nFilter rows based on numerical/expression column\nFilter rows based on text column\nFilter rows based on valid values\nFilter rows based on random sampling\n\n\n\n2.5 Filter columns\n\nFilter columns based on categorical row\nFilter columns based on valid values\n\n\n\n2.6 Quality\n* [[perseus:user:activities:matrixprocessing:quality:createqualitymatrix|Create quality matrix]] * [[perseus:user:activities:matrixprocessing:quality:filterquality|Filter quality]] * [[perseus:user:activities:matrixprocessing:quality:converttonan|Convert to NaN]]\n\n\n2.7 Annot. columns\n[[perseus:user:activities:matrixprocessing:annotcolumns:addannotationtomatrix|Add annotation]] * [[perseus:user:activities:matrixprocessing:annotcolumns:backtobaseidentifiers|To base identifiers]] * [[perseus:user:activities:matrixprocessing:annotcolumns:fisherexacttestproces|Fisher exact test]] * [[perseus:user:activities:matrixprocessing:annotcolumns:averagecategories|Average categories]] * [[perseus:user:activities:matrixprocessing:annotcolumns:categorycounting|Category counting]] * [[perseus:user:activities:matrixprocessing:annotcolumns:onedimannotationenrichment|1D annotation enrichment]] * [[perseus:user:activities:matrixprocessing:annotcolumns:twodimannotationenrichment|2D annotation enrichment]]\n\n\n2.8 Annot. rows\n[[perseus:user:activities:matrixprocessing:annotrows:createcategoricalannotrow|Categorical annotation rows]] * [[perseus:user:activities:matrixprocessing:annotrows:createnumericalannotrow|Numerical annotation rows]] * [[perseus:user:activities:matrixprocessing:annotrows:averagegroups|Average groups]] * [[perseus:user:activities:matrixprocessing:annotrows:jointermsincategoricalrow|Join terms in categorical row]]\n\n\n2.9 Tests\n\n[[perseus:user:activities:matrixprocessing:tests:onesampletestprocessing|One-sample tests]]\n[[perseus:user:activities:matrixprocessing:tests:twosampletestprocessing|Two-samples tests]]\n[[perseus:user:activities:matrixprocessing:tests:multiplesampletestprocessing|Multiple-samples tests]]\n[[perseus:user:activities:matrixprocessing:tests:twowayanova|Two-way ANOVA]]\n\n\n\n2.10 Imputation\n\n[[perseus:user:activities:matrixprocessing:imputation:replacemissingfromgaussian|Replace missing values from normal distribution]]\n[[perseus:user:activities:matrixprocessing:imputation:replaceimputedbynan|Replace imputed values by NaN]]\n[[perseus:user:activities:matrixprocessing:imputation:replacemissingbyconstant|Replace missing values by constant]]\n\n\n\n2.11 Modifications\n[[perseus:user:activities:matrixprocessing:modifications:expandsitetable|Expand site table]] * [[perseus:user:activities:matrixprocessing:modifications:addlinearmotifs|Add linear motifs]] * [[perseus:user:activities:matrixprocessing:modifications:addmodificationcounts|Add modification counts]] * [[perseus:user:activities:matrixprocessing:modifications:addknownsites|Add known sites]] * [[perseus:user:activities:matrixprocessing:modifications:kinasesubstraterelations|Kinase-substrate relations]] * [[perseus:user:activities:matrixprocessing:modifications:addsequencefeatures|Add sequence features]] * [[perseus:user:activities:matrixprocessing:modifications:addregulatorysites|Add regulatory sites]] * [[perseus:user:activities:matrixprocessing:modifications:shortenmotifs|Shorten motif length]]\n\n\n2.12 Clustering\n[[perseus:user:activities:matrixprocessing:clustering:genericclusteringproc|Generic clustering]]"
+    "text": "2 Processing\n\n2.1 Basic\n\nTransform\nCombine expression columns\nColumn correlation\nRow correlation\nSummary statistics (columns)\nSummary statistics (rows)\nQuantiles\nDensity estimation\nPerformance curve\nClone\nSignificance A\nSignificance B\nAdd noise\n\n\n\n2.2 Rearrange\n\nChange column type\nRename columns\nRename columns (reg. ex.)\nCombine annotations\nDuplicate columns\nReorder/remove columns\nRemove empty columns\nTranspose\nSort by column\nExpand multi-numeric and string columns\nUnique values\nConvert multi-numeric column\nCombine categorical columns\nProcess text column\nSearch text column\n\n\n\n2.3 Normalization\n\nZ-score\nRank\nUnit vectors\nScale to interval\nWidth adjustment\nSubtract\nDivide\nModify by column\nSubtract row cluster\nUn-Z-score\n\n\n\n2.4 Filter rows\n\nFilter rows based on categorical column\nFilter rows based on numerical/expression column\nFilter rows based on text column\nFilter rows based on valid values\nFilter rows based on random sampling\n\n\n\n2.5 Filter columns\n\nFilter columns based on categorical row\nFilter columns based on valid values\n\n\n\n2.6 Quality\n\nCreate quality matrix\nFilter quality\nConvert to NaN\n\n\n\n2.7 Annot. columns\n\nAdd annotation\nTo base identifiers\nFisher exact test\nAverage categories\nCategory counting\n1D annotation enrichment\n2D annotation enrichment\n\n\n\n2.8 Annot. rows\n\nCategorical annotation rows\nNumerical annotation rows\nAverage groups\nJoin terms in categorical row\n\n\n\n2.9 Tests\n\nOne-sample tests\nTwo-samples tests\nMultiple-samples tests\nTwo-way ANOVA\n\n\n\n2.10 Imputation\n\nReplace missing values from normal distribution\nReplace imputed values by NaN\nReplace missing values by constant\n\n\n\n2.11 Modifications\n\nExpand site table\nAdd linear motifs\nAdd modification counts\nAdd known sites\nKinase-substrate relations\nAdd sequence features\nAdd regulatory sites\nShorten motif length\n\n\n\n2.12 Clustering\n\nGeneric clustering"
   },
   {
     "objectID": "perseus_user_intereface.html#analysis",
     "href": "perseus_user_intereface.html#analysis",
     "title": "Perseus User Interface",
     "section": "3 Analysis",
-    "text": "3 Analysis\n\n3.1 Visualization\n[[perseus:user:activities:matrixanalysis:visualization:scatterplotanalysis|Scatter plot]] * [[perseus:user:activities:matrixanalysis:visualization:profileplot|Profile plot]] * [[perseus:user:activities:matrixanalysis:visualization:histogram|Histogram]] * [[perseus:user:activities:matrixanalysis:visualization:multiscatteranalysis|Multi scatter plot]] * [[perseus:user:activities:matrixanalysis:visualization:scatterplot3danalysis|3D plot]]\n\n\n3.2 Clustering/PCA\n[[perseus:user:activities:matrixanalysis:clusteringpca:hierarchicalcluster|Hierarchical clustering]] * [[perseus:user:activities:matrixanalysis:clusteringpca:principalcomponentanalysis|Principle component analysis]]\n\n\n3.3 Misc.\n[[perseus:user:activities:matrixanalysis:misc:volcanoplotanalysis|Volcano plot]] * [[perseus:user:activities:matrixanalysis:misc:selectrowsmanually|Select rows manually]] * [[perseus:user:activities:matrixanalysis:misc:sequencelogo|Sequence logos]] * [[perseus:user:activities:matrixanalysis:misc:numericvenndiagram|Numeric venn diagram]]"
+    "text": "3 Analysis\n\n3.1 Visualization\n\nScatter plot\nProfile plot\nHistogram\nMulti scatter plot\n3D plot\n\n\n\n3.2 Clustering/PCA\n\nHierarchical clustering [[perseus:user:activities:matrixanalysis:clusteringpca:|]]\nPrinciple component analysis [[perseus:user:activities:matrixanalysis:clusteringpca:|]]\n\n\n\n3.3 Misc.\n[[perseus:user:activities:matrixanalysis:misc:volcanoplotanalysis|Volcano plot]] * [[perseus:user:activities:matrixanalysis:misc:selectrowsmanually|Select rows manually]] * [[perseus:user:activities:matrixanalysis:misc:sequencelogo|Sequence logos]] * [[perseus:user:activities:matrixanalysis:misc:numericvenndiagram|Numeric venn diagram]]"
   },
   {
     "objectID": "perseus_user_intereface.html#multi-proc.",
@@ -1769,5 +1769,901 @@
     "title": "Filter columns based on valid values",
     "section": "3.4 Filter mode",
     "text": "3.4 Filter mode\nThe “Filter mode” defines, whether the input matrix will be reduced (“Reduce matrix” = default) or a new categorical column called “Filter” will be generated containing the categories “Keep” and “Discard” (“Filter mode” = “Add categorical column”)."
+  },
+  {
+    "objectID": "createqualitymatrix.html",
+    "href": "createqualitymatrix.html",
+    "title": "Create quality matrix",
+    "section": "",
+    "text": "1 General\n\nType: - Matrix Processing\nHeading: - Quality\nSource code: CreateQualityMatrix.cs\n\n\n\n2 Brief description\nCreate a matrix of quality values from a set of numerical columns. There has to be one numerical column per expression column.\n\n\n\n3 Parameters\nTo each of the expression columns in the matrix one numerical column has to be assigned (default: to all expression columns the first numerical column in the matrix is assigned).\n\n\n4 Parameter window"
+  },
+  {
+    "objectID": "filterquality.html",
+    "href": "filterquality.html",
+    "title": "Filter quality",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Quality\nSource code: not public."
+  },
+  {
+    "objectID": "filterquality.html#filter-method",
+    "href": "filterquality.html#filter-method",
+    "title": "Filter quality",
+    "section": "3.1 Filter method",
+    "text": "3.1 Filter method\nDefines the filter method that will be applied to the values in the expression columns (default: From quality matrix). If “From quality matrix” is selected, the filtering is just based on the previously created quality matrix and a threshold must be specified (see parameter window A). If “Compare main to quality matrix” is chosen, the values of the two matrices are compared to each other in the way it is specified in “Values should be” (see parameter window B).\n\n3.1.1 Threshold\nThis parameter is just relevant, if the “Filter method” is “From quality matrix”. It specifies which values of the matrix will be kept and which ones will be discarded (default: 0). Values lower than the defined “Threshold” will be filtered.\n\n\n3.1.2 Values should be\nThis parameter is just relevant, if the “Filter method” is “Compare main to quality matrix”. It specifies how the values of the main matrix should be compared to the values of the quality matrix (default: Greater than). The operation how to compare the values of the two matrices can be chosen from a predefined list:\n\nGreater than\nGreater or equal\nLess than\nLess or equal"
+  },
+  {
+    "objectID": "converttonan.html",
+    "href": "converttonan.html",
+    "title": "Convert to NaN",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Quality\nSource code: not public."
+  },
+  {
+    "objectID": "converttonan.html#values-should-be",
+    "href": "converttonan.html#values-should-be",
+    "title": "Convert to NaN",
+    "section": "3.1 Values should be",
+    "text": "3.1 Values should be\nSpecifies how the expression values of the matrix should be compared to the defined “Threshold” (default: Greater than). The operation how to compare the values can be chosen from a predefined list:\n\nGreater than\nGreater or equal\nLess than\nLess or equal"
+  },
+  {
+    "objectID": "converttonan.html#threshold",
+    "href": "converttonan.html#threshold",
+    "title": "Convert to NaN",
+    "section": "3.2 Threshold",
+    "text": "3.2 Threshold\nValue defining which expression values should be converted to NaN (default: 0)."
+  },
+  {
+    "objectID": "addannotationtomatrix.html",
+    "href": "addannotationtomatrix.html",
+    "title": "Add annotation",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Annot. columns\nSource code: AddAnnotationToMatrix.cs"
+  },
+  {
+    "objectID": "addannotationtomatrix.html#source",
+    "href": "addannotationtomatrix.html#source",
+    "title": "Add annotation",
+    "section": "3.1 Source",
+    "text": "3.1 Source\nSpecified path to the file containing the annotations that should be added to the matrix (default: first file in Perseus-version /conf/annotations/). The file can be selected from all files in Perseus-version /conf/annotations/.\n\n3.1.1 ENSG column\nSelected text column that contains the base identifier, which are going to be matched to the annotations (default: first text column in the matrix).\n\n\n3.1.2 Annotations to be added\nSelected annotations that should be added (default: no annotations are selected). The annotations can be selected from a list of annotations defined by the tab separated columns in the file specified in “Source”."
+  },
+  {
+    "objectID": "addannotationtomatrix.html#additional-sources",
+    "href": "addannotationtomatrix.html#additional-sources",
+    "title": "Add annotation",
+    "section": "3.2 Additional sources",
+    "text": "3.2 Additional sources\nSelected files containing the annotations that should additionally be added to the matrix (default: no files are selected). Additional sources can be selected from all files in Perseus-version conf/annotations."
+  },
+  {
+    "objectID": "backtobaseidentifiers.html",
+    "href": "backtobaseidentifiers.html",
+    "title": "To base identifiers",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Annot. columns\nSource code: BackToBaseIdentifiers.cs"
+  },
+  {
+    "objectID": "backtobaseidentifiers.html#source",
+    "href": "backtobaseidentifiers.html#source",
+    "title": "To base identifiers",
+    "section": "3.1 Source",
+    "text": "3.1 Source\nSpecified path to the file containing the annotations that should be mapped back to the base identifiers (default: first file in Perseus-version /conf/annotations/). The file should be the same that was used to add the annotations, also it can be selected from all files in Perseus-version /conf/annotations/."
+  },
+  {
+    "objectID": "backtobaseidentifiers.html#identifiers",
+    "href": "backtobaseidentifiers.html#identifiers",
+    "title": "To base identifiers",
+    "section": "3.2 Identifiers",
+    "text": "3.2 Identifiers\nSelected text column containing the identifiers that should be matched back to UniProt identifiers (default: first text column in the matrix).\nComment: Only text columns can be matched back not categorical ones, because there is no unique match."
+  },
+  {
+    "objectID": "backtobaseidentifiers.html#identifier-type",
+    "href": "backtobaseidentifiers.html#identifier-type",
+    "title": "To base identifiers",
+    "section": "3.3 Identifier type",
+    "text": "3.3 Identifier type\nSelected type of the identifiers that will be mapped back (default: Gene name). The identifier type can be selected from a predefined list:\n\nENSG\nENSP\nENST\nFlybase\nGene name\nMGI\nPDB\nUniProt names\nWormbase\nEC\neggNOG\n\n==== Parameter window"
+  },
+  {
+    "objectID": "fisherexacttestproces.html",
+    "href": "fisherexacttestproces.html",
+    "title": "Fisher exact test",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Annot. columns\nSource code: not public."
+  },
+  {
+    "objectID": "fisherexacttestproces.html#input-type",
+    "href": "fisherexacttestproces.html#input-type",
+    "title": "Fisher exact test",
+    "section": "3.1 Input type",
+    "text": "3.1 Input type\nSpecification whether the sub-population that is tested for contingency against all other categorical columns is taken directly from a categorical column (“Categorical column” is default) or, if it is defined by a threshold on a numerical/expression column (“Numerical column”).\n\n3.1.1 Column\nThis parameter is just relevant, if “Input type” is set to “Categorical column”. The selected categorical column is checked against all other categorical columns for association between the occurrence of terms (default: first categorical column in the matrix).\n\n\n3.1.2 Columns\nThis parameter is just relevant, if “Input type” is set to “Numerical column”. The selected expression/numerical columns are used as a threshold to define the set of interest. The set is then checked against all categorical columns for association between the occurrence of terms (default: all expression and numerical columns are selected).\n\n\n3.1.3 Threshold\nThis parameter is just relevant, if “Input type” is set to “Numerical column”. It defines the threshold, which rows are kept/discarded to define the set of interest (default: 2).\n\n\n3.1.4 Selection is\nThis parameter is just relevant, if “Input type” is set to “Numerical column”. It defines, whether the values in the selected “Columns” should be “Larger than threshold” or “Less than threshold” (default: Larger than threshold)."
+  },
+  {
+    "objectID": "fisherexacttestproces.html#sec-truncation",
+    "href": "fisherexacttestproces.html#sec-truncation",
+    "title": "Fisher exact test",
+    "section": "3.2 Use for truncation",
+    "text": "3.2 Use for truncation\nThe truncation can be based on p-values or the Benjamini-Hochberg correction for multiple hypothesis testing (default: Benjamini-Hochberg, FDR). Rows with a test result below a specified value (Section 3.3) are reported as significant."
+  },
+  {
+    "objectID": "fisherexacttestproces.html#sec-threshold-value",
+    "href": "fisherexacttestproces.html#sec-threshold-value",
+    "title": "Fisher exact test",
+    "section": "3.3 Threshold value",
+    "text": "3.3 Threshold value\nBased on a specified threshold (default: 0.02) a specific row is reported as significant. Depending on the chosen truncation score (Section 3.2) this threshold value is applied to the p-value or to the Benjamini-Hochberg FDR."
+  },
+  {
+    "objectID": "fisherexacttestproces.html#relative-enrichment",
+    "href": "fisherexacttestproces.html#relative-enrichment",
+    "title": "Fisher exact test",
+    "section": "3.4 Relative enrichment",
+    "text": "3.4 Relative enrichment\nSelected text column, where all rows having the same identifier will be counted as one entity in the Fisher exact test (default: ). The main application is for post-translational modification sites. Then one should select here protein or gene identifiers. This will make sure that multiple sites from the same protein (or gene) are counted only once for the enrichment analysis."
+  },
+  {
+    "objectID": "averagecategories.html",
+    "href": "averagecategories.html",
+    "title": "Average categories",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Annot. columns\nSource code: AverageCategories.cs"
+  },
+  {
+    "objectID": "averagecategories.html#categories",
+    "href": "averagecategories.html#categories",
+    "title": "Average categories",
+    "section": "3.1 Categories",
+    "text": "3.1 Categories\nSelected categorical columns that are used to specify, which rows should be summarized (default: all categorical columns are selected)."
+  },
+  {
+    "objectID": "averagecategories.html#average-type",
+    "href": "averagecategories.html#average-type",
+    "title": "Average categories",
+    "section": "3.2 Average type",
+    "text": "3.2 Average type\nSelected operation that should be used to average the values of the expression columns (default: median). The operation can be selected from a predefined list of operations:\n\nMedian\nMean\nSum\nStandard deviation"
+  },
+  {
+    "objectID": "averagecategories.html#min.-size",
+    "href": "averagecategories.html#min.-size",
+    "title": "Average categories",
+    "section": "3.3 Min. size",
+    "text": "3.3 Min. size\nThe minimal occurrence of a certain term within a categorical column so that the rows will be summarized into one row (default: 3)."
+  },
+  {
+    "objectID": "categorycounting.html",
+    "href": "categorycounting.html",
+    "title": "Category counting",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Annot. columns\nSource code: CategoryCounting.cs"
+  },
+  {
+    "objectID": "categorycounting.html#categories",
+    "href": "categorycounting.html#categories",
+    "title": "Category counting",
+    "section": "3.1 Categories",
+    "text": "3.1 Categories\nSelected categorical columns for which the absolute and relative occurrence of each term gets counted and displayed in two newly generated numerical columns called “Count” and “Percentage of total” (default: all categorical columns are selected)."
+  },
+  {
+    "objectID": "categorycounting.html#min.-count",
+    "href": "categorycounting.html#min.-count",
+    "title": "Category counting",
+    "section": "3.2 Min. count",
+    "text": "3.2 Min. count\nMinimal occurrence of a certain term to be displayed in the output table (default: 1)."
+  },
+  {
+    "objectID": "categorycounting.html#selection",
+    "href": "categorycounting.html#selection",
+    "title": "Category counting",
+    "section": "3.3 Selection",
+    "text": "3.3 Selection\nSelected categorical column in which the “Value” will be searched and counted for each term in the “Categories” field specified categorical columns (default: ). Two new numerical columns called “Selection count” and “Selection percentage” are generated in the output table containing the absolute and relative amounts."
+  },
+  {
+    "objectID": "categorycounting.html#value",
+    "href": "categorycounting.html#value",
+    "title": "Category counting",
+    "section": "3.4 Value",
+    "text": "3.4 Value\nDefines the value that is searched in the categorical column specified in “Selection” (default: +)."
+  },
+  {
+    "objectID": "onedimannotationenrichment.html",
+    "href": "onedimannotationenrichment.html",
+    "title": "1D annotation enrichment",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Annot. columns\nSource code: not public."
+  },
+  {
+    "objectID": "onedimannotationenrichment.html#columns",
+    "href": "onedimannotationenrichment.html#columns",
+    "title": "1D annotation enrichment",
+    "section": "3.1 Columns",
+    "text": "3.1 Columns\nSelected expression/numerical columns that should be processed (default: no expression/numerical columns are selected)."
+  },
+  {
+    "objectID": "onedimannotationenrichment.html#use-for-truncation",
+    "href": "onedimannotationenrichment.html#use-for-truncation",
+    "title": "1D annotation enrichment",
+    "section": "3.2 Use for truncation",
+    "text": "3.2 Use for truncation\nThe truncation can be based on p-values or the Benjamini-Hochberg correction for multiple hypothesis testing (default: Benjamini-Hochberg FDR). Rows with a test result below a specified value (“Threshold value”) are reported as significant."
+  },
+  {
+    "objectID": "onedimannotationenrichment.html#side",
+    "href": "onedimannotationenrichment.html#side",
+    "title": "1D annotation enrichment",
+    "section": "3.3 Side",
+    "text": "3.3 Side\nTo apply a two-sided test, where the null hypothesis can be rejected regardless of the direction of the effect “both” has to be selected (default). “high” and “low” are the respective one-sided tests."
+  },
+  {
+    "objectID": "onedimannotationenrichment.html#threshold-value",
+    "href": "onedimannotationenrichment.html#threshold-value",
+    "title": "1D annotation enrichment",
+    "section": "3.4 Threshold value",
+    "text": "3.4 Threshold value\nBased on a specified threshold (default: 0.02) a row is reported as significant, if its test result is below the defined value. Depending on the chosen truncation score this threshold value is applied to the p-value or to the Benjamini-Hochberg FDR"
+  },
+  {
+    "objectID": "onedimannotationenrichment.html#relative-enrichment",
+    "href": "onedimannotationenrichment.html#relative-enrichment",
+    "title": "1D annotation enrichment",
+    "section": "3.5 Relative enrichment",
+    "text": "3.5 Relative enrichment\nSelected text column, where all rows having the same identifier will be counted as one entity in the 1D annotation enrichment analysis (default: &lt;None&gt;). The main application is for posttranslational modification sites. Then one should select here protein or gene identifiers. This will make sure that multiple sites from the same protein (or gene) are counted only once for the enrichment analysis."
+  },
+  {
+    "objectID": "twodimannotationenrichment.html",
+    "href": "twodimannotationenrichment.html",
+    "title": "2D annotation enrichment",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Annot. columns\nSource code: not public.\n\n\n\nFor every term in the categorical columns it is tested whether the corresponding expression values have a distribution in two-dimensional planes of expression values that is deviating from the global distribution. For details see Cox and Mann (2012) (Cox and Mann 2012) .\nOutput: The output matrix contains a list of terms from all categorical columns that are significantly biased compared to the global distribution."
+  },
+  {
+    "objectID": "twodimannotationenrichment.html#brief-description",
+    "href": "twodimannotationenrichment.html#brief-description",
+    "title": "2D annotation enrichment",
+    "section": "",
+    "text": "For every term in the categorical columns it is tested whether the corresponding expression values have a distribution in two-dimensional planes of expression values that is deviating from the global distribution. For details see Cox and Mann (2012) (Cox and Mann 2012) .\nOutput: The output matrix contains a list of terms from all categorical columns that are significantly biased compared to the global distribution."
+  },
+  {
+    "objectID": "twodimannotationenrichment.html#columns1",
+    "href": "twodimannotationenrichment.html#columns1",
+    "title": "2D annotation enrichment",
+    "section": "2.1 Columns1",
+    "text": "2.1 Columns1\nSelected numerical/expression columns that are used as x-axis for the testing of the 2D distributions (default: no expression/numerical columns are selected).\nHint: The selected number of columns in “Columns1” have to be equal to the selected ones in “Columns2”."
+  },
+  {
+    "objectID": "twodimannotationenrichment.html#columns2",
+    "href": "twodimannotationenrichment.html#columns2",
+    "title": "2D annotation enrichment",
+    "section": "2.2 Columns2",
+    "text": "2.2 Columns2\nSelected numerical/expression columns that are used as y-axis for the testing of the 2D distributions (default: no expression/numerical columns are selected).\nHint: The selected number of columns in “Columns2” have to be equal to the selected ones in “Columns1”."
+  },
+  {
+    "objectID": "twodimannotationenrichment.html#use-for-truncation",
+    "href": "twodimannotationenrichment.html#use-for-truncation",
+    "title": "2D annotation enrichment",
+    "section": "2.3 Use for truncation",
+    "text": "2.3 Use for truncation\nThe truncation can be based on p-values or the Benjamini-Hochberg correction for multiple hypothesis testing (default: Benjamini-Hochberg FDR). Rows with a test result below a specified value (“Threshold value”) are reported as significant."
+  },
+  {
+    "objectID": "twodimannotationenrichment.html#threshold-value",
+    "href": "twodimannotationenrichment.html#threshold-value",
+    "title": "2D annotation enrichment",
+    "section": "2.4 Threshold value",
+    "text": "2.4 Threshold value\nBased on a specified threshold (default: 0.02) a row is reported as significant, if its test result is below the defined value. Depending on the chosen truncation score this threshold value is applied to the p-value or to the Benjamini-Hochberg FDR."
+  },
+  {
+    "objectID": "twodimannotationenrichment.html#relative-enrichment",
+    "href": "twodimannotationenrichment.html#relative-enrichment",
+    "title": "2D annotation enrichment",
+    "section": "2.5 Relative enrichment",
+    "text": "2.5 Relative enrichment\nSelected text column, where all rows having the same identifier will be counted as one entity in the 2D annotation enrichment analysis (default: &lt;None&gt;). The main application is for post-translational modification sites. Then one should select here protein or gene identifiers.\nThis will make sure that multiple sites from the same protein (or gene) are counted only once for the enrichment analysis."
+  },
+  {
+    "objectID": "createcategoricalannotrow.html",
+    "href": "createcategoricalannotrow.html",
+    "title": "Categorical annotation rows",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Annot. rows\nSource code: CreateCategoricalAnnotRow.cs"
+  },
+  {
+    "objectID": "createcategoricalannotrow.html#action",
+    "href": "createcategoricalannotrow.html#action",
+    "title": "Categorical annotation rows",
+    "section": "3.1 Action",
+    "text": "3.1 Action\nDefines the action that should be applied to a categorical annotation row (default: Create). The action can be selected from a predefined list:\n\nCreate\nCreate from experiment name\nEdit\nRename\nDelete\nWrite template file\nRead from file\n\nEach of the above listed options has different parameters, which are explained below in more detail and grouped according to the action.\n\n3.1.1 Create\n\n3.1.1.1 Row name\nThis parameter is just relevant, if “Action” is set to “Create”. It defines the name of the new generated categorical annotation row (default: Group1).\n\n\n3.1.1.2 Here: Column 1 … Column 12\nThis parameter is just relevant, if “Action” is set to “Create”. For each of the expression columns in the matrix the category value of that column in the categorical annotation row can be specified (default: each expression column has its own category indicated by the name of the expression column).\n\n\n\n3.1.2 Create from experiment name\n\n3.1.2.1 Pattern\nThis parameter is just relevant, if “Action” is set to “Create from experiment name”. It specifies the pattern that will be applied to the column names to group the columns and generate a new categorical annotation row (default: …_01,02,03). The Pattern can be selected from a predefined list:\n\n…_01,02,03\n(LFQ) intensity …_01,02,03\n(Normalized) ratio H/L …_01,02,03\nmatch regular expression\nreplace regular expression\n\n\n\n3.1.2.2 Regex\nThis parameter is just relevant, if “Action” is set to “Create from experiment name” and the parameter “Pattern” is set to “match regular expression” or “replace regular expression” (default: empty text field). Here a regular expression can be typed in, which should be applied to the column names to group the columns. The general rules for regular expressions apply here.\n\n\n3.1.2.3 Replace with\nThis parameter is just relevant, if “Action” is set to “Create from experiment name” and the parameter “Pattern” is set to “replace regular expression” (default: empty text field). Columns matching the defined regular expression in the field “Regex” get the value specified in the “Replace with” field and are therefore grouped.\n\n\n\n3.1.3 Edit\n\n3.1.3.1 Category row\nThis parameter is just relevant, if “Action” is set to “Edit”. It specifies the selected categorical row that should be edited (default: first categorical column in the matrix).\n\n\n3.1.3.2 Here: Column 1…Column 12\nThis parameter is just relevant, if “Action” is set to “Edit”. For each of the expression columns in the matrix the value in the categorical row can be edited by typing into the defined text field after the column name (default: category values of each expression column in that row).\n\n\n\n3.1.4 Rename\n\n3.1.4.1 Category row\nThis parameter is just relevant, if “Action” is set to “Rename”. It specifies the selected categorical row that should be renamed (default: first category row in the matrix).\n\n\n3.1.4.2 New name\nThis parameter is just relevant, if “Action” is set to “Rename”. It defines the new name of the categorical row (default: empty).\n\n\n3.1.4.3 New description\nThis parameter is just relevant, if “Action” is set to “Rename”. It defines the new description of the categorical row (default: empty).\n\n\n\n3.1.5 Delete\n\n3.1.5.1 Category row\nThis parameter is just relevant, if “Action” is set to “Delete”. It specifies the selected categorical row that should be deleted (default: first category row in the matrix).\n\n\n\n3.1.6 Write template file\n\n3.1.6.1 Output file\nThis parameter is just relevant, if “Action” is set to “Write template file”. It specifies the file name and path, where a grouping template of a categorical annotation rows is saved in a tab separated text file (default: Groups.txt). The first column of the output file is named “Name” and contains the names of the columns. The second column has the column names as values and can be edited manually. After editing the file can be read using “Read from file” (see below).\n\n\n\n3.1.7 Read from file\n\n3.1.7.1 Input file\nThis parameter is just relevant, if “Action” is set to “Read from file”. It defines the file name and path of a tab separated file containing information about a new grouping of the columns of a matrix (default: empty). The first column is called “Name” and contains the names of the columns of the matrix. The second column has the name of the new grouping and contains the values of each column of the matrix."
+  },
+  {
+    "objectID": "createnumericalannotrow.html",
+    "href": "createnumericalannotrow.html",
+    "title": "Numerical annotation rows",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Annot. rows\nSource code: CreateNumericalAnnotRow.cs\n\n\n\nAdd or edit numerical annotation rows. This could for instance define the times of samples for time series data.\nOutput: Same matrix with numerical annotation row added or modified."
+  },
+  {
+    "objectID": "createnumericalannotrow.html#brief-description",
+    "href": "createnumericalannotrow.html#brief-description",
+    "title": "Numerical annotation rows",
+    "section": "",
+    "text": "Add or edit numerical annotation rows. This could for instance define the times of samples for time series data.\nOutput: Same matrix with numerical annotation row added or modified."
+  },
+  {
+    "objectID": "createnumericalannotrow.html#action",
+    "href": "createnumericalannotrow.html#action",
+    "title": "Numerical annotation rows",
+    "section": "2.1 Action",
+    "text": "2.1 Action\nDefines the action that should be applied to a numerical annotation row (default: Create). The action can be selected from a predefined list:\n\nCreate\nEdit\nRename\nDelete\n\nEach of the above listed options has different parameters, which are explained below in more detail and grouped according to the action.\n\n2.1.1 Create\n\n2.1.1.1 Row name\nThis parameter is just relevant, if “Action” is set to “Create”. It defines the name of the new generated numerical annotation row (default: Quantity1).\n\n\n2.1.1.2 Here: Column 1 … Column 12\nThis parameter is just relevant, if “Action” is set to “Create”. For each of the expression columns in the matrix the numerical value of that column in the numerical annotation row can be specified (default: each expression column has an own numerical group indicated by a number).\n\n\n\n2.1.2 Edit\n\n2.1.2.1 Numerical row\nThis parameter is just relevant, if “Action” is set to “Edit”. It specifies the selected numerical row that should be edited (default: first numerical column in the matrix).\n\n\n2.1.2.2 Here: Column 1…Column 12\nThis parameter is just relevant, if “Action” is set to “Edit”. For each of the expression columns in the matrix the value in the numerical row can be edited by typing into the defined text field after the column name (default: numerical value of each expression column in that row).\n\n\n\n2.1.3 Rename\n\n2.1.3.1 Numerical row\nThis parameter is just relevant, if “Action” is set to “Rename”. It specifies the selected numerical row that should be renamed (default: first numerical row in the matrix).\n\n\n2.1.3.2 New name\nThis parameter is just relevant, if “Action” is set to “Rename”. It defines the new name of the numerical row (default: empty).\n\n\n2.1.3.3 New description\nThis parameter is just relevant, if “Action” is set to “Rename”. It defines the new description of the numerical row (default: empty).\n\n\n\n2.1.4 Delete\n\n2.1.4.1 Numerical row\nThis parameter is just relevant, if “Action” is set to “Delete”. It specifies the selected categorical row that should be deleted (default: first category row in the matrix)."
+  },
+  {
+    "objectID": "averagegroups.html",
+    "href": "averagegroups.html",
+    "title": "Average Groups",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Annot. rows\nSource code: AverageGroups.cs"
+  },
+  {
+    "objectID": "averagegroups.html#grouping",
+    "href": "averagegroups.html#grouping",
+    "title": "Average Groups",
+    "section": "3.1 Grouping",
+    "text": "3.1 Grouping\nDefines, which grouping specified in a categorical row should be used to average values (default: first categorical row in the matrix)."
+  },
+  {
+    "objectID": "averagegroups.html#average-type",
+    "href": "averagegroups.html#average-type",
+    "title": "Average Groups",
+    "section": "3.2 Average type",
+    "text": "3.2 Average type\nSpecifies which operation should be applied for the averaging (default: Median). The operation can be selected from a predefined list:\n\nMedian\nMean\nSum\nGeometric mean"
+  },
+  {
+    "objectID": "averagegroups.html#min.-valid-values-per-group",
+    "href": "averagegroups.html#min.-valid-values-per-group",
+    "title": "Average Groups",
+    "section": "3.3 Min. valid values per group",
+    "text": "3.3 Min. valid values per group\nDefines the minimal values a group must contain to calculate the average (default: 1)."
+  },
+  {
+    "objectID": "averagegroups.html#keep-original-data",
+    "href": "averagegroups.html#keep-original-data",
+    "title": "Average Groups",
+    "section": "3.4 Keep original data",
+    "text": "3.4 Keep original data\nIf checked the original data will be kept In the output matrix (default: unchecked)."
+  },
+  {
+    "objectID": "averagegroups.html#add-variation",
+    "href": "averagegroups.html#add-variation",
+    "title": "Average Groups",
+    "section": "3.5 Add variation",
+    "text": "3.5 Add variation\nSpecifies, whether a measure of group-wise variation should be calculated and displayed in a numerical column (default: &lt;None&gt;). The measure can be selected from a predefined list:\n\n&lt;None&gt;\nStandard deviation\nError of mean"
+  },
+  {
+    "objectID": "jointermsincategoricalrow.html",
+    "href": "jointermsincategoricalrow.html",
+    "title": "Join terms in categorical row",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Annot. rows\nSource code: JoinTermsInCategoricalRow.cs"
+  },
+  {
+    "objectID": "jointermsincategoricalrow.html#row",
+    "href": "jointermsincategoricalrow.html#row",
+    "title": "Join terms in categorical row",
+    "section": "3.1 Row",
+    "text": "3.1 Row\nSelected categorical row that the filtering should be based on (default: first categorical row in the matrix)."
+  },
+  {
+    "objectID": "jointermsincategoricalrow.html#values",
+    "href": "jointermsincategoricalrow.html#values",
+    "title": "Join terms in categorical row",
+    "section": "3.2 Values",
+    "text": "3.2 Values\nSelected values that should be joined to one group (default: no values are selected)."
+  },
+  {
+    "objectID": "jointermsincategoricalrow.html#new-term",
+    "href": "jointermsincategoricalrow.html#new-term",
+    "title": "Join terms in categorical row",
+    "section": "3.3 New term",
+    "text": "3.3 New term\nDefines the new value the above joined values should get (default: empty)."
+  },
+  {
+    "objectID": "onesampletestprocessing.html",
+    "href": "onesampletestprocessing.html",
+    "title": "One-sample tests",
+    "section": "",
+    "text": "1 General\n\nType: - Matrix Processing\nHeading: - Tests\nSource code: not public.\n\n\n\n2 Brief description\nOne sample-test for determining if the mean is significantly different from a fixed value (typically 0).\nOutput: Two numerical columns are added, one containing the p-value, the other containing the difference between the mean and the fixed value (which is usually 0). In addition there is a categorical column added in which it is indicated by a ‘+’ when the row is significant with respect to the specified criteria."
+  },
+  {
+    "objectID": "twosampletestprocessing.html",
+    "href": "twosampletestprocessing.html",
+    "title": "Two-sample tests",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Tests\nSource code: not public."
+  },
+  {
+    "objectID": "twosampletestprocessing.html#grouping",
+    "href": "twosampletestprocessing.html#grouping",
+    "title": "Two-sample tests",
+    "section": "3.1 Grouping",
+    "text": "3.1 Grouping\nThe grouping(s) of columns to be used in the test. Each test takes two groups as input. Multiple tests can be performed simultaneously by specifying more than one pair of groups.\n\n3.1.1 First group (right)\nAll ‘right’ groups of the two sample tests are defined here. The number of groups selected here equals the number of different tests performed.\n\n\n3.1.2 Second groups mode\nSpecify here how the ‘left’ groups of the two sample tests are specified. Possible ways are to specify for each individual ‘right’ group the corresponding ‘left’ group, to use one single control group, or to always use the complement of each individual ‘right’ group as the ‘left’ group."
+  },
+  {
+    "objectID": "twosampletestprocessing.html#test",
+    "href": "twosampletestprocessing.html#test",
+    "title": "Two-sample tests",
+    "section": "3.2 Test",
+    "text": "3.2 Test\nDefines what kind of test should be applied (default: T-test). The test can be selected from a predefined list:\n\nT-test\nWelch test\n\n\n3.2.1 S0\nThis parameter defines the artificial within groups variance (default: 0). It controls the relative importance of the resulted p-value and difference between means. At \\(s0=0\\) only the p-value matters, while at nonzero s0 also the difference of means plays a role. See (Tusher, Tibshirani, and Chu 2001) for details.\n\n\n3.2.2 Side\nTo apply a two-sided test, where the null hypothesis can be rejected regardless of the direction of the effect “both” has to be selected (default). “left” and “right” are the respective one-sided tests."
+  },
+  {
+    "objectID": "twosampletestprocessing.html#valid-value-filter",
+    "href": "twosampletestprocessing.html#valid-value-filter",
+    "title": "Two-sample tests",
+    "section": "3.3 Valid value filter",
+    "text": "3.3 Valid value filter\nSpecify here how rows are filtered regarding the number and percentage of valid values. This criterion will be applied to each test individually, not just once to the whole matrix. The absolute number and relative percentage filters are both applied together.\n\n3.3.1 Min. number of valid values\nHere the required number of valid values is specified. How this threshold is applied (in total, per group, etc.) is specified in the next field.\n\n\n3.3.2 Min. number mode\nSpecify here how the threshold is applied.\n\n\n3.3.3 Min. percentage of valid values\nHere the required percentage of valid values is specified. How this threshold is applied (in total, per group, etc.) is specified in the next field. Values can range from 0 to 100.\n\n\n3.3.4 Min. percentage mode\nSpecify here how the above threshold is applied."
+  },
+  {
+    "objectID": "twosampletestprocessing.html#use-for-truncation",
+    "href": "twosampletestprocessing.html#use-for-truncation",
+    "title": "Two-sample tests",
+    "section": "3.4 Use for truncation",
+    "text": "3.4 Use for truncation\nDefines on what value the truncation is based on (default: Permutation-based FDR). Choose here whether the truncation should be based on the p-values, on permutation-based FDR values or, if the Benjamini-Hochberg correction for multiple hypothesis testing should be applied.\n\n3.4.1 Threshold p-value\nThis parameter is just relevant, if the parameter “Use for truncation” is set to “P-value”. Rows with a test result below this value are reported as significant (default: 0.05).\n\n\n3.4.2 FDR\nThis parameter is just relevant, if the parameter “Use for truncation” is set to “Benjamini-Hochberg FDR” or “Permutation-based FDR”. Rows with a test result below this value are reported as significant (default: 0.05).\n\n\n3.4.3 Number of randomizations\nSpecifies the number of randomizations that should be applied (default: 250).\n\n\n3.4.4 Preserve grouping in randomizations\nDefines, whether the grouping specified in a categorical row should be preserved in the randomizations (default: &lt;None&gt;). It can be selected from a list including all available groupings of the matrix."
+  },
+  {
+    "objectID": "twosampletestprocessing.html#calculate-combined-score",
+    "href": "twosampletestprocessing.html#calculate-combined-score",
+    "title": "Two-sample tests",
+    "section": "3.5 Calculate combined score",
+    "text": "3.5 Calculate combined score\nIn case multiple two sample tests are performed, the combined score helps to define a global set of significant items over all the tests combined. A global q-value can be calculated based on permutations of the whole matrix.\n\n3.5.1 Mode\nHere the user can define the combined score which is either the p-value from the best test or the product over all tests.\n\n\n3.5.2 Combined q-value\nIn case this is checked, a combined q-value based on the combined score and permutations of the whole matrix is calculated."
+  },
+  {
+    "objectID": "twosampletestprocessing.html#log10",
+    "href": "twosampletestprocessing.html#log10",
+    "title": "Two-sample tests",
+    "section": "3.6 -Log10",
+    "text": "3.6 -Log10\nIf checked, \\(-Log_{10}(test\\ value)\\) is reported in the output matrix (default). Otherwise the test-value is reported."
+  },
+  {
+    "objectID": "twosampletestprocessing.html#suffix",
+    "href": "twosampletestprocessing.html#suffix",
+    "title": "Two-sample tests",
+    "section": "3.7 Suffix",
+    "text": "3.7 Suffix\nThe entered suffix will be attached to newly generated columns (default: empty). That way columns from multiple runs of the test can be distinguished more easily."
+  },
+  {
+    "objectID": "multiplesampletestprocessing.html",
+    "href": "multiplesampletestprocessing.html",
+    "title": "Multiple-samples tests",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Tests\nSource code: not public."
+  },
+  {
+    "objectID": "multiplesampletestprocessing.html#grouping",
+    "href": "multiplesampletestprocessing.html#grouping",
+    "title": "Multiple-samples tests",
+    "section": "3.1 Grouping",
+    "text": "3.1 Grouping\nSelected categorical row that defines the grouping of columns that should be used in the test (default: first categorical row in the matrix)."
+  },
+  {
+    "objectID": "multiplesampletestprocessing.html#test",
+    "href": "multiplesampletestprocessing.html#test",
+    "title": "Multiple-samples tests",
+    "section": "3.2 Test",
+    "text": "3.2 Test\nDefines what kind of test should be applied (default: ANOVA). The test can be selected from a predefined list:\n\nANOVA\nKruskal Wallis\n\n\n3.2.1 S0\nArtificial within groups variance (default: 0). It controls the relative importance of t-test p-value and difference between means. At \\(s0=0\\) only the p-value matters, while at nonzero s0 also the difference of means plays a role. See (Tusher, Tibshirani, and Chu 2001) for details."
+  },
+  {
+    "objectID": "multiplesampletestprocessing.html#use-for-truncation",
+    "href": "multiplesampletestprocessing.html#use-for-truncation",
+    "title": "Multiple-samples tests",
+    "section": "3.3 Use for truncation",
+    "text": "3.3 Use for truncation\nDefines on what value the truncation is based on (default: Permutation-based FDR). Choose here whether the truncation should be based on the p-values, on permutation-based FDR-values or, if the Benjamini-Hochberg correction for multiple hypothesis testing should be applied.\n\n3.3.1 Threshold p-value\nThis parameter is just relevant, if the parameter “Use for truncation” is set to “P-value”. Rows with a test result below this value are reported as significant (default: 0.05).\n\n\n3.3.2 FDR\nThis parameter is just relevant, if the parameter “Use for truncation” is set to “Benjamini-Hochberg FDR” or “Permutation-based FDR”. Rows with a test result below this value are reported as significant (default: 0.05).\n\n\n3.3.3 Number of randomizations\nSpecifies the number of randomizations that should be applied (default: 250).\n\n\n3.3.4 Preserve grouping in randomizations\nDefines, whether the grouping specified in a categorical row should be preserved in the randomizations (default: &lt;None&gt;). It can be selected from a list including all available groupings of the matrix."
+  },
+  {
+    "objectID": "multiplesampletestprocessing.html#log10",
+    "href": "multiplesampletestprocessing.html#log10",
+    "title": "Multiple-samples tests",
+    "section": "3.4 Log10",
+    "text": "3.4 Log10\nIf checked, \\(-Log_{10}(test\\ value)\\) is reported in the output matrix (default). Otherwise the test-value is reported."
+  },
+  {
+    "objectID": "multiplesampletestprocessing.html#suffix",
+    "href": "multiplesampletestprocessing.html#suffix",
+    "title": "Multiple-samples tests",
+    "section": "3.5 Suffix",
+    "text": "3.5 Suffix\nThe entered suffix will be attached to newly generated columns (default: empty). That way columns from multiple runs of the test can be distinguished more easily."
+  },
+  {
+    "objectID": "twowayanova.html",
+    "href": "twowayanova.html",
+    "title": "Two-way ANOVA",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Tests\nSource code: not public."
+  },
+  {
+    "objectID": "twowayanova.html#first-grouping",
+    "href": "twowayanova.html#first-grouping",
+    "title": "Two-way ANOVA",
+    "section": "3.1 First Grouping",
+    "text": "3.1 First Grouping\nSelected categorical row that defines the first grouping of columns that should be used in the test (default: first categorical row in the matrix)."
+  },
+  {
+    "objectID": "twowayanova.html#second-grouping",
+    "href": "twowayanova.html#second-grouping",
+    "title": "Two-way ANOVA",
+    "section": "3.2 Second Grouping",
+    "text": "3.2 Second Grouping\nSelected categorical row that defines the second grouping of columns that should be used in the test (default: first categorical row in the matrix)."
+  },
+  {
+    "objectID": "twowayanova.html#third-grouping",
+    "href": "twowayanova.html#third-grouping",
+    "title": "Two-way ANOVA",
+    "section": "3.3 Third Grouping",
+    "text": "3.3 Third Grouping\nSelected categorical row that defines the third grouping of columns that should be used in the test (default: first categorical row in the matrix)."
+  },
+  {
+    "objectID": "twowayanova.html#log10",
+    "href": "twowayanova.html#log10",
+    "title": "Two-way ANOVA",
+    "section": "3.4 -Log10",
+    "text": "3.4 -Log10\nIf checked, \\(-Log_{10}(test\\ value)\\) is reported in the output matrix (default). Otherwise the test-value is reported."
+  },
+  {
+    "objectID": "twowayanova.html#suffix",
+    "href": "twowayanova.html#suffix",
+    "title": "Two-way ANOVA",
+    "section": "3.5 Suffix",
+    "text": "3.5 Suffix\nThe entered suffix will be attached to newly generated columns (default: empty). That way columns from multiple runs of the test can be distinguished more easily."
+  },
+  {
+    "objectID": "replacemissingfromgaussian.html",
+    "href": "replacemissingfromgaussian.html",
+    "title": "Replace missing values from normal distribution",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Imputation\nSource code: ReplaceMissingFromGaussian.cs"
+  },
+  {
+    "objectID": "replacemissingfromgaussian.html#width",
+    "href": "replacemissingfromgaussian.html#width",
+    "title": "Replace missing values from normal distribution",
+    "section": "3.1 Width",
+    "text": "3.1 Width\nDefines the width of the Gaussian distribution relative to the standard deviation of measured values (default: 0.3). A value of 0.5 would mean that the width of the distribution used for drawing random numbers is half of the standard deviation of the data."
+  },
+  {
+    "objectID": "replacemissingfromgaussian.html#down-shift",
+    "href": "replacemissingfromgaussian.html#down-shift",
+    "title": "Replace missing values from normal distribution",
+    "section": "3.2 Down shift",
+    "text": "3.2 Down shift\nSpecifies the amount by which the distribution used for the random numbers is shifted downwards (default: 1.8). This is in units of the standard deviation of the valid data."
+  },
+  {
+    "objectID": "replacemissingfromgaussian.html#mode",
+    "href": "replacemissingfromgaussian.html#mode",
+    "title": "Replace missing values from normal distribution",
+    "section": "3.3 Mode",
+    "text": "3.3 Mode\nSpecifies whether the replacement of missing values should be applied to each expression column separately (default) or on the whole matrix at once (“Total matrix”)."
+  },
+  {
+    "objectID": "replacemissingfromgaussian.html#columns",
+    "href": "replacemissingfromgaussian.html#columns",
+    "title": "Replace missing values from normal distribution",
+    "section": "3.4 Columns",
+    "text": "3.4 Columns\nSelected expression columns, where missing values should be replaced (default: all expression columns are selected)."
+  },
+  {
+    "objectID": "replaceimputedbynan.html",
+    "href": "replaceimputedbynan.html",
+    "title": "Replace missing values by NaN",
+    "section": "",
+    "text": "1 General =====\n\nType: - Matrix Processing\nHeading: - Imputation\nSource code: ReplaceImputedByNan.cs\n\n\n\n2 Brief description\nReplaces all values that have been imputed with NaN.\nOutput: Same matrix but with imputed values deleted.\n\n\n\n3 Parameters\n“Replace imputed values by NaN” has no parameters."
+  },
+  {
+    "objectID": "replacemissingbyconstant.html",
+    "href": "replacemissingbyconstant.html",
+    "title": "Replace missing values by constant",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Imputation\nSource code: ReplaceMissingByConstant.cs"
+  },
+  {
+    "objectID": "replacemissingbyconstant.html#value",
+    "href": "replacemissingbyconstant.html#value",
+    "title": "Replace missing values by constant",
+    "section": "3.1 Value",
+    "text": "3.1 Value\nSpecifies the value that is going to replace missing values in all expression columns."
+  },
+  {
+    "objectID": "expandsitetable.html",
+    "href": "expandsitetable.html",
+    "title": "Expand site table",
+    "section": "",
+    "text": "1 General\n\nType: - Matrix Processing\nHeading: - Modifications\nSource code: ExpandSiteTable.cs\n\n\n\n2 Brief description\nThe ___1, ___2 and ___3 versions of MaxQuant output table columns are rearranged in the matrix to become a single column each.\n\n\n\n3 Parameters\n“Expand site table” has no parameters."
+  },
+  {
+    "objectID": "addlinearmotifs.html",
+    "href": "addlinearmotifs.html",
+    "title": "Add linear motifs",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Modifications\nSource code: not public."
+  },
+  {
+    "objectID": "addlinearmotifs.html#sequence-window",
+    "href": "addlinearmotifs.html#sequence-window",
+    "title": "Add linear motifs",
+    "section": "3.1 Sequence window",
+    "text": "3.1 Sequence window\nSelected text column that contains the sequence windows around the sites (default: first text column in the matrix)."
+  },
+  {
+    "objectID": "addmodificationcounts.html",
+    "href": "addmodificationcounts.html",
+    "title": "Add modification counts",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Modifications\nSource code: AddModificationCounts.cs"
+  },
+  {
+    "objectID": "addmodificationcounts.html#modifications",
+    "href": "addmodificationcounts.html#modifications",
+    "title": "Add modification counts",
+    "section": "3.1 Modifications",
+    "text": "3.1 Modifications\nSelected modifications for which the corresponding sites are counted (default: all modifications are selected). The list of modifications includes:\n\nAcetylation\nMethylation\nO-GlcNAc\nPhosphorylation\nSumoyalation\nUbiquitination"
+  },
+  {
+    "objectID": "addmodificationcounts.html#uniprot-column",
+    "href": "addmodificationcounts.html#uniprot-column",
+    "title": "Add modification counts",
+    "section": "3.2 Uniprot column",
+    "text": "3.2 Uniprot column\nSelected text column that contains the Uniprot identifiers (default: first text column in the matrix)."
+  },
+  {
+    "objectID": "addknownsites.html",
+    "href": "addknownsites.html",
+    "title": "Add known sites",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Modifications\nSource code: AddKnownSites.cs"
+  },
+  {
+    "objectID": "addknownsites.html#modification",
+    "href": "addknownsites.html#modification",
+    "title": "Add known sites",
+    "section": "3.1 Modification",
+    "text": "3.1 Modification\nSelected modification for which the known sites should be added (default: Phosphorylation). The modification can be selected from a predefined list:\n\nAcetylation\nMethylation\nO-GlcNAc\nPhosphorylation\nSumoyalation\nUbiquitination"
+  },
+  {
+    "objectID": "addknownsites.html#uniprot-column",
+    "href": "addknownsites.html#uniprot-column",
+    "title": "Add known sites",
+    "section": "3.2 Uniprot column",
+    "text": "3.2 Uniprot column\nSelected text column that contains the Uniprot identifiers (default: first text column in the matrix)."
+  },
+  {
+    "objectID": "addknownsites.html#sequence-column",
+    "href": "addknownsites.html#sequence-column",
+    "title": "Add known sites",
+    "section": "3.3 Sequence column",
+    "text": "3.3 Sequence column\nSelected text column that contains the sequence windows around the sites (default: first text column in the matrix)."
+  },
+  {
+    "objectID": "kinasesubstraterelations.html",
+    "href": "kinasesubstraterelations.html",
+    "title": "Kinase-substrate relations",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Modifications\nSource code: KinaseSubstrateRelations.cs"
+  },
+  {
+    "objectID": "kinasesubstraterelations.html#uniprot-column",
+    "href": "kinasesubstraterelations.html#uniprot-column",
+    "title": "Kinase-substrate relations",
+    "section": "3.1 Uniprot column",
+    "text": "3.1 Uniprot column\nSelected text column that contains the Uniprot identifiers (default: first text column in the matrix)."
+  },
+  {
+    "objectID": "kinasesubstraterelations.html#sequence-window",
+    "href": "kinasesubstraterelations.html#sequence-window",
+    "title": "Kinase-substrate relations",
+    "section": "3.2 Sequence window",
+    "text": "3.2 Sequence window\nSelected text column that contains the sequence windows around the sites (default: first text column in the matrix)."
+  },
+  {
+    "objectID": "addsequencefeatures.html",
+    "href": "addsequencefeatures.html",
+    "title": "Add sequence features",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Modifications\nSource code: AddSequenceFeatures.cs"
+  },
+  {
+    "objectID": "addsequencefeatures.html#proteins",
+    "href": "addsequencefeatures.html#proteins",
+    "title": "Add sequence features",
+    "section": "3.1 Proteins",
+    "text": "3.1 Proteins\nSelected text column containing the Uniprot IDs (default: first text column of the matrix)."
+  },
+  {
+    "objectID": "addsequencefeatures.html#positions-within-proteins",
+    "href": "addsequencefeatures.html#positions-within-proteins",
+    "title": "Add sequence features",
+    "section": "3.2 Positions within proteins",
+    "text": "3.2 Positions within proteins\nSelected text column containing the positions within the proteins to add site-specific features (default: first text column of the matrix). The column is generated by MaxQuant and is called “Positions”."
+  },
+  {
+    "objectID": "addsequencefeatures.html#add-status-column",
+    "href": "addsequencefeatures.html#add-status-column",
+    "title": "Add sequence features",
+    "section": "3.3 Add status column",
+    "text": "3.3 Add status column\nIf checked additional information of Uniprot about the protein sites is added (default: unchecked)."
+  },
+  {
+    "objectID": "addregulatorysites.html",
+    "href": "addregulatorysites.html",
+    "title": "Add regulatory sites",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Modifications\nSource code: AddRegulatorySites.cs"
+  },
+  {
+    "objectID": "addregulatorysites.html#uniprot-column",
+    "href": "addregulatorysites.html#uniprot-column",
+    "title": "Add regulatory sites",
+    "section": "3.1 Uniprot column",
+    "text": "3.1 Uniprot column\nSelected text column that contains the UniProt identifiers (default: first text column in the matrix)."
+  },
+  {
+    "objectID": "addregulatorysites.html#sequence-window",
+    "href": "addregulatorysites.html#sequence-window",
+    "title": "Add regulatory sites",
+    "section": "3.2 Sequence window",
+    "text": "3.2 Sequence window\nSelected text column that contains the sequence windows around the sites (default: first text column in the matrix)."
+  },
+  {
+    "objectID": "shortenmotifs.html",
+    "href": "shortenmotifs.html",
+    "title": "Shorten motif length",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Modifications\nSource code: ShortenMotifs.cs"
+  },
+  {
+    "objectID": "shortenmotifs.html#sequence-window",
+    "href": "shortenmotifs.html#sequence-window",
+    "title": "Shorten motif length",
+    "section": "3.1 Sequence window",
+    "text": "3.1 Sequence window\nSelected text column that contains the amino acid sequences (default: first text column in the matrix)."
+  },
+  {
+    "objectID": "shortenmotifs.html#start",
+    "href": "shortenmotifs.html#start",
+    "title": "Shorten motif length",
+    "section": "3.2 Start",
+    "text": "3.2 Start\nStart position of the newly generated shorter sequences, which are displayed in a new generated text column called “Short sequence window” (default: 6). The flanks will be measured with respect to this position.\nHint: Start + Length cannot exceed the length of any protein sequence in the selected text column."
+  },
+  {
+    "objectID": "shortenmotifs.html#length",
+    "href": "shortenmotifs.html#length",
+    "title": "Shorten motif length",
+    "section": "3.3 Length",
+    "text": "3.3 Length\nLength of the newly generated sequences (default: 11). Flanking regions of this length will be kept surrounding the central position."
+  },
+  {
+    "objectID": "genericclusteringproc.html",
+    "href": "genericclusteringproc.html",
+    "title": "Generic clustering",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Clustering\nSource code: not public."
+  },
+  {
+    "objectID": "genericclusteringproc.html#method",
+    "href": "genericclusteringproc.html#method",
+    "title": "Generic clustering",
+    "section": "3.1 Method",
+    "text": "3.1 Method\nSelected method that should be applied to cluster the data (default: K-means). The result will be displayed in newly generated categorical column named “Clusters”."
+  },
+  {
+    "objectID": "genericclusteringproc.html#number-of-clusters",
+    "href": "genericclusteringproc.html#number-of-clusters",
+    "title": "Generic clustering",
+    "section": "3.2 Number of clusters",
+    "text": "3.2 Number of clusters\nDefines the number of clusters the data should be clustered into (default: 10)."
+  },
+  {
+    "objectID": "scatterplotanalysis.html",
+    "href": "scatterplotanalysis.html",
+    "title": "Scatter plot analysis",
+    "section": "",
+    "text": "Type: - Matrix Analysis\nHeading: - Visualization\nSource code: not public."
+  },
+  {
+    "objectID": "scatterplotanalysis.html#matrix-access",
+    "href": "scatterplotanalysis.html#matrix-access",
+    "title": "Scatter plot analysis",
+    "section": "3.1 Matrix access",
+    "text": "3.1 Matrix access\nSpecifies whether columns (default) or rows are plotted against each other."
+  },
+  {
+    "objectID": "profileplot.html",
+    "href": "profileplot.html",
+    "title": "Profile plot",
+    "section": "",
+    "text": "1 General\n\nType: - Matrix Analysis\nHeading: - Visualization\nSource code: not public.\n\n\n\n2 Brief description\nDisplay each row of the matrix as a quantitative profile with each column defining a data point. Profiles can be queried by similarity to a reference profile.\n\n\n\n3 Parameters\n“Profile plot” has no parameters."
+  },
+  {
+    "objectID": "histogram.html",
+    "href": "histogram.html",
+    "title": "Histogram",
+    "section": "",
+    "text": "Type: - Matrix Analysis\nHeading: - Visualization\nSource code: not public."
+  },
+  {
+    "objectID": "histogram.html#columns",
+    "href": "histogram.html#columns",
+    "title": "Histogram",
+    "section": "3.1 Columns",
+    "text": "3.1 Columns\nSelected expression columns, whose values get displayed in separate histograms (default: all expression columns are selected)."
+  },
+  {
+    "objectID": "multiscatteranalysis.html",
+    "href": "multiscatteranalysis.html",
+    "title": "Multi scatter plot",
+    "section": "",
+    "text": "Type: - Matrix Analysis\nHeading: - Visualization\nSource code: not public."
+  },
+  {
+    "objectID": "multiscatteranalysis.html#rows",
+    "href": "multiscatteranalysis.html#rows",
+    "title": "Multi scatter plot",
+    "section": "3.1 Rows",
+    "text": "3.1 Rows\nFirst partner(s) of the respective multi scatter plot(s). Selected expression columns that will appear in y-direction in the resulting multi scatter plot. (default: all expression columns are selected)."
+  },
+  {
+    "objectID": "multiscatteranalysis.html#columns",
+    "href": "multiscatteranalysis.html#columns",
+    "title": "Multi scatter plot",
+    "section": "3.2 Columns",
+    "text": "3.2 Columns\nSecond partner(s) of the respective multi scatter plot(s). Selected expression columns that will appear in x-direction in the resulting multi scatter plot. (default: all expression columns are selected)."
+  },
+  {
+    "objectID": "scatterplot3danalysis.html",
+    "href": "scatterplot3danalysis.html",
+    "title": "3D plot",
+    "section": "",
+    "text": "1 General\n\nType: - Matrix Analysis\nHeading: - Visualization\nSource code: not public.\n\n\n\n2 Brief description\nPlot three columns or three rows against each other as x, y and z values in a scatter plot.\n\n\n\n3 Parameters\n“3D plot” has no parameters."
+  },
+  {
+    "objectID": "hierarchicalcluster.html",
+    "href": "hierarchicalcluster.html",
+    "title": "Hierarchical clustering",
+    "section": "",
+    "text": "Type: - Matrix Analysis\nHeading: - Clustering/PCA\nSource code: not public."
+  },
+  {
+    "objectID": "hierarchicalcluster.html#row-tree",
+    "href": "hierarchicalcluster.html#row-tree",
+    "title": "Hierarchical clustering",
+    "section": "3.1 Row tree",
+    "text": "3.1 Row tree\nIf checked rows will be clustered and a tree (dendrogram) is generated (default: checked).\n\n3.1.1 Distance\nSelected distance that will be used for the clustering process (default: Euclidean). The distance can be selected from a predefined list:\n\nEuclidean\nL1\nMaximum\nLp\nPearson correlation\nSpearman correlation\nCosine\nCanberra\n\n\n\n3.1.2 Linkage\nSelected clustering method that will be applied (default: Average). It can be selected from a predefined list:\n\nAverage\nComplete\nSingle\n\n\n\n3.1.3 Constraint\nSelected constraint that should be preserved from the input data (default: None). The used constraint can be selected from a predefined list of constraints:\n\nNone\nPreserve order\nPreserve order (periodic)\n\n\n\n3.1.4 Preprocess with k-means\nSpecifies, whether the data should be pre-processed using k-means before applying clustering and generating a heatmap (default: checked).\n\n\n3.1.5 Number of clusters\nThis parameter is just relevant, if the parameter “Preprocess with k-means” is checked. Defines the number of clusters that will be created by the k-means algorithm (default: 300)."
+  },
+  {
+    "objectID": "hierarchicalcluster.html#column-tree",
+    "href": "hierarchicalcluster.html#column-tree",
+    "title": "Hierarchical clustering",
+    "section": "3.2 Column tree",
+    "text": "3.2 Column tree\nIf checked, columns will be clustered and a tree (dendrogram) is generated (default: checked).\n\n3.2.1 Distance\nSelected distance that will be used for the clustering process (default: Euclidean). The distance can be selected from a predefined list:\n\nEuclidean\nL1\nMaximum\nLp\nPearson correlation\nSpearman correlation\n\n\n\n3.2.2 Linkage\nSelected clustering method that will be applied (default: Average). It can be selected from a predefined list:\n\nAverage\nComplete\nSingle\n\n\n\n3.2.3 Constraint\nSelected constraint that should be preserved from the input data (default: None). The used constraint can be selected from a predefined list of constraints:\n\nNone\nPreserve order\nPreserve order (periodic)\nPreserve grouping\n\n\n\n3.2.4 Preprocess with k-means\nSpecifies, whether the data should be pre-processed using k-means before applying clustering and generating a heatmap (default: checked).\n\n\n3.2.5 Number of clusters\nThis parameter is just relevant, if the parameter “Preprocess with k-means” is checked. Defines the number of clusters that will be created by the k-means algorithm (default: 300)."
+  },
+  {
+    "objectID": "hierarchicalcluster.html#which-columns-to-use",
+    "href": "hierarchicalcluster.html#which-columns-to-use",
+    "title": "Hierarchical clustering",
+    "section": "3.3 Which columns to use",
+    "text": "3.3 Which columns to use\nList of all expression/numerical columns in the data set (default: all numerical columns; the expression columns are selected see parameter “Use for clustering”)."
+  },
+  {
+    "objectID": "hierarchicalcluster.html#use-for-clustering",
+    "href": "hierarchicalcluster.html#use-for-clustering",
+    "title": "Hierarchical clustering",
+    "section": "3.4 Use for clustering",
+    "text": "3.4 Use for clustering\nSelected expression/numerical columns that should be used for the clustering (default: all expression columns are selected)."
+  },
+  {
+    "objectID": "hierarchicalcluster.html#display-in-heat-map-but-do-not-use-for-clustering",
+    "href": "hierarchicalcluster.html#display-in-heat-map-but-do-not-use-for-clustering",
+    "title": "Hierarchical clustering",
+    "section": "3.5 Display in heat map but do not use for clustering",
+    "text": "3.5 Display in heat map but do not use for clustering\nSelected expression/numerical columns that should be displayed in the output heat map, but are not used for the clustering (default: empty)."
+  },
+  {
+    "objectID": "principalcomponentanalysis.html",
+    "href": "principalcomponentanalysis.html",
+    "title": "Principle component analysis",
+    "section": "",
+    "text": "Type: - Matrix Analysis\nHeading: - Clustering/PCA\nSource code: not public."
+  },
+  {
+    "objectID": "principalcomponentanalysis.html#category-enrichment-in-components",
+    "href": "principalcomponentanalysis.html#category-enrichment-in-components",
+    "title": "Principle component analysis",
+    "section": "3.1 Category enrichment in components",
+    "text": "3.1 Category enrichment in components\nSpecifies, whether each term in all categorical columns will be tested for enrichment at high or low values in the loadings for the first few components (default: unchecked).\n\n3.1.1 Number of components\nThis parameter is just relevant, if the parameter “Category enrichment in components” is checked. It specifies the number of principal components that will be used for the transformation (default: 5).\n\n\n3.1.2 Cutoff method\nThis parameter is just relevant, if the parameter “Category enrichment in components” is checked. It defines the method that is used to calculate the cutoff of potential principal components (default: Benjamini-Hochberg FDR) . The method can be selected from a predefined list:\n\nBenjamini-Hochberg FDR\np-value\n\n\n\n3.1.3 Threshold\nThis parameter is just relevant, if the parameter “Category enrichment in components” is checked. It defines the threshold value of the previously specified used cutoff method (default: 0.05).\n\n\n3.1.4 Relative enrichment\nThis parameter is just relevant, if the parameter “Category enrichment in components” is checked. It defines, which categorical column will be used to group rows in the enrichment test (default: &lt;None&gt;). All rows having the same identifier will be counted as one entity in the enrichment test. The main application is for posttranslational modification sites. Then one should select here protein or gene identifiers. This will make sure that multiple sites from the same protein (or gene) are counted only once for the enrichment analysis."
   }
 ]

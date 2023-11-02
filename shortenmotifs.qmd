@@ -1,0 +1,53 @@
+---
+title: "Shorten motif length"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Modifications
+-   **Source code:** [ShortenMotifs.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Mods/ShortenMotifs.cs)
+
+# Brief description
+
+Sequence windows are shortened based on start and length parameters.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Sequence window
+
+Selected text column that contains the amino acid sequences (default: first text column in the matrix).
+
+## Start
+
+Start position of the newly generated shorter sequences, which are displayed in a new generated text column called "Short sequence window" (default: 6). The flanks will be measured with respect to this position.
+
+**Hint**: Start + Length cannot exceed the length of any protein sequence in the selected text column.
+
+## Length
+
+Length of the newly generated sequences (default: 11). Flanking regions of this length will be kept surrounding the central position.
+
+# Parameter window
+
+![](images/modifications-shorten_motif_length-edited.png)

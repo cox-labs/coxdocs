@@ -1,0 +1,48 @@
+---
+title: "Multi scatter plot"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Analysis
+-   **Heading:** - Visualization
+-   **Source code:** not public.
+
+# Brief description
+
+Multiple columns or rows are used to create a matrix of scatter plots.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Rows
+
+First partner(s) of the respective multi scatter plot(s). Selected expression columns that will appear in y-direction in the resulting multi scatter plot. (default: all expression columns are selected).
+
+## Columns
+
+Second partner(s) of the respective multi scatter plot(s). Selected expression columns that will appear in x-direction in the resulting multi scatter plot. (default: all expression columns are selected).
+
+# Parameter window
+
+![](images/visualization-multi_scatter_plot-edited.png)
+

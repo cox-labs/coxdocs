@@ -1,0 +1,57 @@
+---
+title: "Filter quality"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Quality
+-   **Source code:** not public.
+
+# Brief description
+
+Filter expression values based on a previously created quality matrix. Each expression value is filtered based on the corresponding quality value.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Filter method
+
+Defines the filter method that will be applied to the values in the expression columns (default: From quality matrix). If "From quality matrix" is selected, the filtering is just based on the previously [created quality matrix](docs/createqualitymatrix.html) and a threshold must be specified (see parameter window A). If "Compare main to quality matrix" is chosen, the values of the two matrices are compared to each other in the way it is specified in "Values should be" (see parameter window B).
+
+### Threshold
+
+This parameter is just relevant, if the "Filter method" is "From quality matrix". It specifies which values of the matrix will be kept and which ones will be discarded (default: 0). Values lower than the defined "Threshold" will be filtered.
+
+### Values should be
+
+This parameter is just relevant, if the "Filter method" is "Compare main to quality matrix". It specifies how the values of the main matrix should be compared to the values of the quality matrix (default: Greater than). The operation how to compare the values of the two matrices can be chosen from a predefined list:
+
+-   Greater than
+-   Greater or equal
+-   Less than
+-   Less or equal
+
+# Parameter window
+
+![](images/quality-filter_quality-edited.png)
+

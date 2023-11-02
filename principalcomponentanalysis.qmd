@@ -1,0 +1,63 @@
+---
+title: "Principle component analysis"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Analysis
+-   **Heading:** - Clustering/PCA
+-   **Source code:** not public.
+
+# Brief description
+
+Visualize the projection of the data set defined by PCA in 1, 2 and 3 dimensional viewers.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Category enrichment in components
+
+Specifies, whether each term in all categorical columns will be tested for enrichment at high or low values in the loadings for the first few components (default: unchecked).
+
+### Number of components
+
+This parameter is just relevant, if the parameter "Category enrichment in components" is checked. It specifies the number of principal components that will be used for the transformation (default: 5).
+
+### Cutoff method
+
+This parameter is just relevant, if the parameter "Category enrichment in components" is checked. It defines the method that is used to calculate the cutoff of potential principal components (default: Benjamini-Hochberg FDR) . The method can be selected from a predefined list:
+
+-   Benjamini-Hochberg FDR
+-   p-value
+
+### Threshold
+
+This parameter is just relevant, if the parameter "Category enrichment in components" is checked. It defines the threshold value of the previously specified used cutoff method (default: 0.05).
+
+### Relative enrichment
+
+This parameter is just relevant, if the parameter "Category enrichment in components" is checked. It defines, which categorical column will be used to group rows in the enrichment test (default: `<None>`). All rows having the same identifier will be counted as one entity in the enrichment test. The main application is for posttranslational modification sites. Then one should select here protein or gene identifiers. This will make sure that multiple sites from the same protein (or gene) are counted only once for the enrichment analysis.
+
+# Parameter window
+
+![](images/clustering-pca-principal_component_analysis-edited.png)
+

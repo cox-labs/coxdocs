@@ -1,0 +1,37 @@
+---
+title: "One-sample tests"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+  * **Type:** - Matrix Processing
+  * **Heading:** - Tests
+  * **Source code:** not public.
+
+# Brief description
+
+One sample-test for determining if the mean is significantly different from a fixed value (typically 0).
+
+Output: Two numerical columns are added, one containing the p-value, the other containing the difference between the mean and the fixed value (which is usually 0). In addition there is a categorical column added in which it is indicated by a  '+' when the row is significant with respect to the specified criteria.
+
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+
+
+

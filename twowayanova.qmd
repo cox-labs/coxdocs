@@ -1,0 +1,61 @@
+---
+title: "Two-way ANOVA"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Tests
+-   **Source code:** not public.
+
+# Brief description
+
+Examines the influence of two independent categorical variables on each profile.
+
+Output: Same matrix with three p-value columns added
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## First Grouping
+
+Selected categorical row that defines the first grouping of columns that should be used in the test (default: first categorical row in the matrix).
+
+## Second Grouping
+
+Selected categorical row that defines the second grouping of columns that should be used in the test (default: first categorical row in the matrix).
+
+## Third Grouping
+
+Selected categorical row that defines the third grouping of columns that should be used in the test (default: first categorical row in the matrix).
+
+## -Log10
+
+If checked, $-Log_{10}(test\ value)$ is reported in the output matrix (default). Otherwise the test-value is reported.
+
+## Suffix
+
+The entered suffix will be attached to newly generated columns (default: empty). That way columns from multiple runs of the test can be distinguished more easily.
+
+# Parameter window
+
+![](images/tests-three-way_anova-edited.png)

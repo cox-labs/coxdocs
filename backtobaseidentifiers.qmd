@@ -1,0 +1,65 @@
+---
+title: "To base identifiers"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Annot. columns
+-   **Source code:** [BackToBaseIdentifiers.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/AnnotCols/BackToBaseIdentifiers.cs)
+
+# Brief description
+
+This activity does the inverse of the [Add annotation](docs/addannotationtomatrix.html) activity. Any of the columns that can be created by the [Add annotation](docs/addannotationtomatrix.html) activity can be mapped back to the base identifiers (typically UniProt ids).
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Source
+
+Specified path to the file containing the annotations that should be mapped back to the base identifiers (default: first file in Perseus-version `/conf/annotations/`). The file should be the same that was used to add the annotations, also it can be selected from all files in Perseus-version `/conf/annotations/`.
+
+## Identifiers
+
+Selected text column containing the identifiers that should be matched back to UniProt identifiers (default: first text column in the matrix).
+
+**Comment:** Only text columns can be matched back **not** categorical ones, because there is no unique match.
+
+## Identifier type
+
+Selected type of the identifiers that will be mapped back (default: Gene name). The identifier type can be selected from a predefined list:
+
+-   ENSG
+-   ENSP
+-   ENST
+-   Flybase
+-   Gene name
+-   MGI
+-   PDB
+-   UniProt names
+-   Wormbase
+-   EC
+-   eggNOG
+
+==== Parameter window
+
+![](images/modifications-to_base_identifiers-edited.png)

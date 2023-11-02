@@ -1,0 +1,45 @@
+---
+title: "Add linear motifs"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Modifications
+-   **Source code:** not public.
+
+# Brief description
+
+Given a column containing the sequence window centered around modification sites, linear motifs are matched to these sequences and a potential kinase or binding partner is suggested. The motifs are defined in the File `conf\motifs.txt`
+
+Output: Same matrix with a categorical column added which contains the kinases or binding partners which are recognized based on the linear sequence motif.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Sequence window
+
+Selected text column that contains the sequence windows around the sites (default: first text column in the matrix).
+
+# Parameter window
+
+![](images/modifications-add_linear_motifs-edited.png)

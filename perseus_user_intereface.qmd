@@ -92,46 +92,69 @@ The activities can be divided into five main categories. The icons of the catego
 * [Filter columns based on valid values](docs/filtervalidvaluescolumns.html)
 
 ### Quality 
-\* \[\[perseus:user:activities:matrixprocessing:quality:createqualitymatrix\|Create quality matrix\]\] \* \[\[perseus:user:activities:matrixprocessing:quality:filterquality\|Filter quality\]\] \* \[\[perseus:user:activities:matrixprocessing:quality:converttonan\|Convert to NaN\]\]
+* [Create quality matrix](docs/createqualitymatrix.html)
+* [Filter quality](docs/filterquality.html)
+* [Convert to NaN](docs/converttonan.html)
 
 ### Annot. columns
 
-\[\[perseus:user:activities:matrixprocessing:annotcolumns:addannotationtomatrix\|Add annotation\]\] \* \[\[perseus:user:activities:matrixprocessing:annotcolumns:backtobaseidentifiers\|To base identifiers\]\] \* \[\[perseus:user:activities:matrixprocessing:annotcolumns:fisherexacttestproces\|Fisher exact test\]\] \* \[\[perseus:user:activities:matrixprocessing:annotcolumns:averagecategories\|Average categories\]\] \* \[\[perseus:user:activities:matrixprocessing:annotcolumns:categorycounting\|Category counting\]\] \* \[\[perseus:user:activities:matrixprocessing:annotcolumns:onedimannotationenrichment\|1D annotation enrichment\]\] \* \[\[perseus:user:activities:matrixprocessing:annotcolumns:twodimannotationenrichment\|2D annotation enrichment\]\]
+* [Add annotation](docs/addannotationtomatrix.html)
+* [To base identifiers](docs/backtobaseidentifiers.html)
+* [Fisher exact test](docs/fisherexacttestproces.html)
+* [Average categories](docs/averagecategories.html)
+* [Category counting](docs/categorycounting.html)
+* [1D annotation enrichment](docs/onedimannotationenrichment.html)
+* [2D annotation enrichment](docs/twodimannotationenrichment.html)
 
 ### Annot. rows
 
-\[\[perseus:user:activities:matrixprocessing:annotrows:createcategoricalannotrow\|Categorical annotation rows\]\] \* \[\[perseus:user:activities:matrixprocessing:annotrows:createnumericalannotrow\|Numerical annotation rows\]\] \* \[\[perseus:user:activities:matrixprocessing:annotrows:averagegroups\|Average groups\]\] \* \[\[perseus:user:activities:matrixprocessing:annotrows:jointermsincategoricalrow\|Join terms in categorical row\]\]
+* [Categorical annotation rows](docs/createcategoricalannotrow.html)
+* [Numerical annotation rows](docs/createnumericalannotrow.html)
+* [Average groups](docs/averagegroups.html)
+* [Join terms in categorical row](docs/jointermsincategoricalrow.html)
 
 ### Tests
 
--   \[\[perseus:user:activities:matrixprocessing:tests:onesampletestprocessing\|One-sample tests\]\]
--   \[\[perseus:user:activities:matrixprocessing:tests:twosampletestprocessing\|Two-samples tests\]\]
--   \[\[perseus:user:activities:matrixprocessing:tests:multiplesampletestprocessing\|Multiple-samples tests\]\]
--   \[\[perseus:user:activities:matrixprocessing:tests:twowayanova\|Two-way ANOVA\]\]
+* [One-sample tests](docs/onesampletestprocessing.html)
+* [Two-samples tests](docs/twosampletestprocessing.html)
+* [Multiple-samples tests](docs/multiplesampletestprocessing.html)
+* [Two-way ANOVA](docs/twowayanova.html)
 
 ### Imputation
 
--   \[\[perseus:user:activities:matrixprocessing:imputation:replacemissingfromgaussian\|Replace missing values from normal distribution\]\]
--   \[\[perseus:user:activities:matrixprocessing:imputation:replaceimputedbynan\|Replace imputed values by NaN\]\]
--   \[\[perseus:user:activities:matrixprocessing:imputation:replacemissingbyconstant\|Replace missing values by constant\]\]
+* [Replace missing values from normal distribution](docs/replacemissingfromgaussian.html)
+* [Replace imputed values by NaN](docs/replaceimputedbynan.html)
+* [Replace missing values by constant](docs/replacemissingbyconstant.html)
 
 ### Modifications
 
-\[\[perseus:user:activities:matrixprocessing:modifications:expandsitetable\|Expand site table\]\] \* \[\[perseus:user:activities:matrixprocessing:modifications:addlinearmotifs\|Add linear motifs\]\] \* \[\[perseus:user:activities:matrixprocessing:modifications:addmodificationcounts\|Add modification counts\]\] \* \[\[perseus:user:activities:matrixprocessing:modifications:addknownsites\|Add known sites\]\] \* \[\[perseus:user:activities:matrixprocessing:modifications:kinasesubstraterelations\|Kinase-substrate relations\]\] \* \[\[perseus:user:activities:matrixprocessing:modifications:addsequencefeatures\|Add sequence features\]\] \* \[\[perseus:user:activities:matrixprocessing:modifications:addregulatorysites\|Add regulatory sites\]\] \* \[\[perseus:user:activities:matrixprocessing:modifications:shortenmotifs\|Shorten motif length\]\]
+* [Expand site table](docs/expandsitetable.html)
+* [Add linear motifs](docs/addlinearmotifs.html)
+* [Add modification counts](docs/addmodificationcounts.html)
+* [Add known sites](docs/addknownsites.html)
+* [Kinase-substrate relations](docs/kinasesubstraterelations.html)
+* [Add sequence features](docs/addsequencefeatures.html)
+* [Add regulatory sites](docs/addregulatorysites.html)
+* [Shorten motif length](docs/shortenmotifs.html)
 
 ### Clustering
 
-\[\[perseus:user:activities:matrixprocessing:clustering:genericclusteringproc\|Generic clustering\]\]
+* [Generic clustering](docs/genericclusteringproc.html)
 
 ## Analysis
 
 ### Visualization
 
-\[\[perseus:user:activities:matrixanalysis:visualization:scatterplotanalysis\|Scatter plot\]\] \* \[\[perseus:user:activities:matrixanalysis:visualization:profileplot\|Profile plot\]\] \* \[\[perseus:user:activities:matrixanalysis:visualization:histogram\|Histogram\]\] \* \[\[perseus:user:activities:matrixanalysis:visualization:multiscatteranalysis\|Multi scatter plot\]\] \* \[\[perseus:user:activities:matrixanalysis:visualization:scatterplot3danalysis\|3D plot\]\]
+* [Scatter plot](docs/scatterplotanalysis.html)
+* [Profile plot](docs/profileplot.html)
+* [Histogram](docs/histogram.html)
+* [Multi scatter plot](docs/multiscatteranalysis.html)
+* [3D plot](docs/scatterplot3danalysis.html)
 
 ### Clustering/PCA
 
-\[\[perseus:user:activities:matrixanalysis:clusteringpca:hierarchicalcluster\|Hierarchical clustering\]\] \* \[\[perseus:user:activities:matrixanalysis:clusteringpca:principalcomponentanalysis\|Principle component analysis\]\]
+* [Hierarchical clustering](docs/hierarchicalcluster.html)
+* [Principle component analysis](docs/principalcomponentanalysis.html)
 
 ### Misc.
 
