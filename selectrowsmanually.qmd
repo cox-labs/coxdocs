@@ -1,5 +1,5 @@
 ---
-title: "Profile plot"
+title: "Select rows manually"
 author: "Cox Lab"
 format: 
   html:
@@ -13,16 +13,16 @@ date: today
 bibliography: references.bib
 ---
 
+
 # General
 
   * **Type:** - Matrix Analysis
-  * **Heading:** - Visualization
-  * **Source code:** not public.
+  * **Heading:** - Misc. (Analysis)
+  * **Source code:** [SelectRowsManually.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Manual/SelectRowsManually.cs)
 
 # Brief description
 
-Display each row of the matrix as a quantitative profile with each column defining a data point. 
-Profiles can be queried by similarity to a reference profile.
+Rows can be selected interactively and a new matrix can be produced which contains only the selected rows or only the unselected rows.
 
 <!-- This comment and the line above it must be preserved when editing this file!
 The recommended sections are these, but they may be changed on a case by case basis.
@@ -34,5 +34,6 @@ Make changes only below this line! -->
 
 # Parameters
 
-"Profile plot" has no parameters.
+"Select rows manually" has no parameters.
+
 

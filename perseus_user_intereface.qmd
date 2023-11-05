@@ -158,17 +158,23 @@ The activities can be divided into five main categories. The icons of the catego
 
 ### Misc.
 
-\[\[perseus:user:activities:matrixanalysis:misc:volcanoplotanalysis\|Volcano plot\]\] \* \[\[perseus:user:activities:matrixanalysis:misc:selectrowsmanually\|Select rows manually\]\] \* \[\[perseus:user:activities:matrixanalysis:misc:sequencelogo\|Sequence logos\]\] \* \[\[perseus:user:activities:matrixanalysis:misc:numericvenndiagram\|Numeric venn diagram\]\]
+* [Volcano plot](docs/volcanoplotanalysis.html)
+* [Select rows manually](docs/selectrowsmanually.html)
+* [Sequence logos](docs/sequencelogo.html)
+* [Numeric venn diagram](docs/numericvenndiagram.html)
 
 ## Multi-proc.
 
 ### Basic
 
-\[\[perseus:user:activities:matrixmultiprocessing:basic:matchingrowsbyname\|Matching rows by name\]\] \* \[\[perseus:user:activities:matrixmultiprocessing:basic:matchingcolumnsbyname\|Matching columns by name\]\]
+* [Matching rows by name](docs/matchingrowsbyname.html) 
+* [Matching columns by name](docs/matchingcolumnsbyname.html)
 
 ## Export
 
-\[\[perseus:user:activities:matrixexport:tabseparatedexport\|Generic matrix export\]\]
+* [Generic matrix export](docs/tabseparatedexport.html)
+
+# Bottom part of the user Interface
 
 The remainder of the window is divided into scrollable panes (@fig-persues-overview):
 

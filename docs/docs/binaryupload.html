@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Cox Lab">
-<meta name="dcterms.date" content="2023-11-03">
+<meta name="dcterms.date" content="2023-10-26">
 
-<title>Profile plot</title>
+<title>Binary Upload</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -144,7 +144,11 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general"><span class="header-section-number">1</span> General</a></li>
   <li><a href="#brief-description" id="toc-brief-description" class="nav-link" data-scroll-target="#brief-description"><span class="header-section-number">2</span> Brief description</a></li>
-  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters"><span class="header-section-number">3</span> Parameters</a></li>
+  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters"><span class="header-section-number">3</span> Parameters</a>
+  <ul>
+  <li><a href="#file" id="toc-file" class="nav-link" data-scroll-target="#file"><span class="header-section-number">3.1</span> File</a></li>
+  </ul></li>
+  <li><a href="#parameter-window" id="toc-parameter-window" class="nav-link" data-scroll-target="#parameter-window"><span class="header-section-number">4</span> Parameter window</a></li>
   </ul>
 </nav>
     </div>
@@ -153,7 +157,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Profile plot</h1>
+<h1 class="title">Binary Upload</h1>
 </div>
 
 
@@ -170,7 +174,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 3, 2023</p>
+      <p class="date">October 26, 2023</p>
     </div>
   </div>
   
@@ -184,14 +188,13 @@ ul.task-list li input[type="checkbox"] {
 <section id="general" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> General</h1>
 <ul>
-<li><strong>Type:</strong> - Matrix Analysis</li>
-<li><strong>Heading:</strong> - Visualization</li>
-<li><strong>Source code:</strong> not public.</li>
+<li><strong>Type:</strong> - Matrix Upload</li>
+<li><strong>Source code:</strong> <a href="https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Load/BinaryUpload.cs">BinaryUpload.cs</a></li>
 </ul>
 </section>
 <section id="brief-description" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Brief description</h1>
-<p>Display each row of the matrix as a quantitative profile with each column defining a data point. Profiles can be queried by similarity to a reference profile.</p>
+<p>Load all bytes from a binary file and display them as hexadecimal numbers.</p>
 <!-- This comment and the line above it must be preserved when editing this file!
 The recommended sections are these, but they may be changed on a case by case basis.
 ===== Detailed description =====
@@ -202,7 +205,19 @@ Make changes only below this line! -->
 </section>
 <section id="parameters" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Parameters</h1>
-<p>“Profile plot” has no parameters.</p>
+<section id="file" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="file"><span class="header-section-number">3.1</span> File</h2>
+<p>Specifies the file path of the binary file that should be uploaded (default: empty). It can be specified manually by typing in the path or the file can be browsed by using the “Select” button. All file extensions are supported.</p>
+</section>
+</section>
+<section id="parameter-window" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Parameter window</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/binary_upload-edited.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Binary upload</figcaption>
+</figure>
+</div>
 
 
 </section>

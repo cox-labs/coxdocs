@@ -9,7 +9,7 @@
 <meta name="author" content="Cox Lab">
 <meta name="dcterms.date" content="2023-11-03">
 
-<title>Profile plot</title>
+<title>Sequence logos</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -142,9 +142,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general"><span class="header-section-number">1</span> General</a></li>
+  <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general"><span class="header-section-number">1</span> General =====</a></li>
   <li><a href="#brief-description" id="toc-brief-description" class="nav-link" data-scroll-target="#brief-description"><span class="header-section-number">2</span> Brief description</a></li>
-  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters"><span class="header-section-number">3</span> Parameters</a></li>
+  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters"><span class="header-section-number">3</span> Parameters</a>
+  <ul>
+  <li><a href="#sequences" id="toc-sequences" class="nav-link" data-scroll-target="#sequences"><span class="header-section-number">3.1</span> Sequences</a></li>
+  <li><a href="#column" id="toc-column" class="nav-link" data-scroll-target="#column"><span class="header-section-number">3.2</span> Column</a></li>
+  <li><a href="#compute-position-specific-p-values" id="toc-compute-position-specific-p-values" class="nav-link" data-scroll-target="#compute-position-specific-p-values"><span class="header-section-number">3.3</span> Compute position-specific p-values</a></li>
+  </ul></li>
+  <li><a href="#parameter-window" id="toc-parameter-window" class="nav-link" data-scroll-target="#parameter-window"><span class="header-section-number">4</span> Parameter window</a></li>
   </ul>
 </nav>
     </div>
@@ -153,7 +159,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Profile plot</h1>
+<h1 class="title">Sequence logos</h1>
 </div>
 
 
@@ -182,16 +188,16 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <section id="general" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> General</h1>
+<h1 data-number="1"><span class="header-section-number">1</span> General =====</h1>
 <ul>
 <li><strong>Type:</strong> - Matrix Analysis</li>
-<li><strong>Heading:</strong> - Visualization</li>
+<li><strong>Heading:</strong> - Misc. (Analysis)</li>
 <li><strong>Source code:</strong> not public.</li>
 </ul>
 </section>
 <section id="brief-description" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Brief description</h1>
-<p>Display each row of the matrix as a quantitative profile with each column defining a data point. Profiles can be queried by similarity to a reference profile.</p>
+<p>Create and display sequence logos based on a column containing protein sequence windows centered around sites of interest.</p>
 <!-- This comment and the line above it must be preserved when editing this file!
 The recommended sections are these, but they may be changed on a case by case basis.
 ===== Detailed description =====
@@ -202,7 +208,23 @@ Make changes only below this line! -->
 </section>
 <section id="parameters" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Parameters</h1>
-<p>“Profile plot” has no parameters.</p>
+<section id="sequences" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="sequences"><span class="header-section-number">3.1</span> Sequences</h2>
+<p>Selected categorical column that contains the amino acid sequences for which a Sequence logo should be generated (default: first categorical column in the matrix).</p>
+<p><strong>Hint</strong>: The sequences need to have the same length.</p>
+</section>
+<section id="column" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="column"><span class="header-section-number">3.2</span> Column</h2>
+<p>Selected categorical column that groups the rows according to their value in that column and generates one sequence logo for each value (default: <code>&lt;None&gt;</code>). If <code>&lt;None&gt;</code> is selected one Sequence logo is generated for all sequences in the column defined in the parameter “Sequences”.</p>
+</section>
+<section id="compute-position-specific-p-values" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="compute-position-specific-p-values"><span class="header-section-number">3.3</span> Compute position-specific p-values</h2>
+<p>Specifies the input to calculate the position-specific scoring matrix (PSSM) containing the p-values for each position (default: global occurrence). For each Sequence logo one PSSM is calculated containing the p-value for each amino acid at each position in the sequence. The PSSM can be obtained by clicking on the “Export aa p-values” button in the “Sequence logos” tab of the matrix that was used to generate the Sequence logo(s).</p>
+</section>
+</section>
+<section id="parameter-window" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Parameter window</h1>
+<p><img src="images/misc.-sequence_logos-edited.png" class="img-fluid"></p>
 
 
 </section>

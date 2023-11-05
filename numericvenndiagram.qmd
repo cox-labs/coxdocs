@@ -1,5 +1,5 @@
 ---
-title: "Profile plot"
+title: "Numeric venn diagram"
 author: "Cox Lab"
 format: 
   html:
@@ -13,17 +13,17 @@ date: today
 bibliography: references.bib
 ---
 
-# General
+# General =====
 
-  * **Type:** - Matrix Analysis
-  * **Heading:** - Visualization
-  * **Source code:** not public.
+-   **Type:** - Matrix Analysis
+-   **Heading:** - Misc. (Analysis)
+-   **Source code:** not public.
 
 # Brief description
 
-Display each row of the matrix as a quantitative profile with each column defining a data point. 
-Profiles can be queried by similarity to a reference profile.
+A venn diagram is calculated based on the presence and absence of values in expression columns.
 
+```{=html}
 <!-- This comment and the line above it must be preserved when editing this file!
 The recommended sections are these, but they may be changed on a case by case basis.
 ===== Detailed description =====
@@ -31,8 +31,14 @@ The recommended sections are these, but they may be changed on a case by case ba
 ===== Theoretical background =====
 ===== Examples =====
 Make changes only below this line! -->
-
+```
 # Parameters
 
-"Profile plot" has no parameters.
+## Columns
+
+Selected expression columns, for which a numeric Venn diagram should be calculated (default: all expression columns are selected).
+
+# Parameter window
+
+![](images/misc.-numeric_venn_diagram-edited.png)
 

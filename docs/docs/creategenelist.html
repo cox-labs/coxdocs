@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Cox Lab">
-<meta name="dcterms.date" content="2023-11-03">
+<meta name="dcterms.date" content="2023-10-26">
 
-<title>Profile plot</title>
+<title>Create Gene list</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -142,9 +142,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general"><span class="header-section-number">1</span> General</a></li>
-  <li><a href="#brief-description" id="toc-brief-description" class="nav-link" data-scroll-target="#brief-description"><span class="header-section-number">2</span> Brief description</a></li>
-  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters"><span class="header-section-number">3</span> Parameters</a></li>
+  <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general"><span class="header-section-number">1</span> General =====</a></li>
+  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters"><span class="header-section-number">2</span> Parameters</a>
+  <ul>
+  <li><a href="#organism" id="toc-organism" class="nav-link" data-scroll-target="#organism"><span class="header-section-number">2.1</span> Organism</a></li>
+  <li><a href="#parameter-window" id="toc-parameter-window" class="nav-link" data-scroll-target="#parameter-window"><span class="header-section-number">2.2</span> Parameter window</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -153,7 +156,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Profile plot</h1>
+<h1 class="title">Create Gene list</h1>
 </div>
 
 
@@ -170,7 +173,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 3, 2023</p>
+      <p class="date">October 26, 2023</p>
     </div>
   </div>
   
@@ -182,16 +185,13 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <section id="general" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> General</h1>
+<h1 data-number="1"><span class="header-section-number">1</span> General =====</h1>
 <ul>
-<li><strong>Type:</strong> - Matrix Analysis</li>
-<li><strong>Heading:</strong> - Visualization</li>
-<li><strong>Source code:</strong> not public.</li>
+<li><strong>Type:</strong> - Matrix Upload</li>
+<li><strong>Source code:</strong> <a href="https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Load/CreateGeneList.cs">CreateGeneList.cs</a></li>
 </ul>
-</section>
-<section id="brief-description" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Brief description</h1>
-<p>Display each row of the matrix as a quantitative profile with each column defining a data point. Profiles can be queried by similarity to a reference profile.</p>
+<p>===== Brief description =====</p>
+<p>Start with a list of all protein-coding genes from an organism.</p>
 <!-- This comment and the line above it must be preserved when editing this file!
 The recommended sections are these, but they may be changed on a case by case basis.
 ===== Detailed description =====
@@ -200,11 +200,23 @@ The recommended sections are these, but they may be changed on a case by case ba
 ===== Examples =====
 Make changes only below this line! -->
 </section>
-<section id="parameters" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Parameters</h1>
-<p>“Profile plot” has no parameters.</p>
+<section id="parameters" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Parameters</h1>
+<section id="organism" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="organism"><span class="header-section-number">2.1</span> Organism</h2>
+<p>Specification of the organism for which a gene list should be created (default: first file in <code>\conf\perseus\genelists</code>). The organisms or the corresponding text files that should be uploaded can be selected from all files, which are located in <code>\conf\perseus\genelists</code> in your Perseus folder.</p>
+</section>
+<section id="parameter-window" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="parameter-window"><span class="header-section-number">2.2</span> Parameter window</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/create_gene_list-edited.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Create Gene list windows</figcaption>
+</figure>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

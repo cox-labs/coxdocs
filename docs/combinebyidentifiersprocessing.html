@@ -9,7 +9,7 @@
 <meta name="author" content="Cox Lab">
 <meta name="dcterms.date" content="2023-11-03">
 
-<title>Profile plot</title>
+<title>Combine rows by identifiers</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -142,9 +142,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general"><span class="header-section-number">1</span> General</a></li>
-  <li><a href="#brief-description" id="toc-brief-description" class="nav-link" data-scroll-target="#brief-description"><span class="header-section-number">2</span> Brief description</a></li>
-  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters"><span class="header-section-number">3</span> Parameters</a></li>
+  <li><a href="#brief-description" id="toc-brief-description" class="nav-link active" data-scroll-target="#brief-description"><span class="header-section-number">1</span> Brief description</a></li>
+  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters"><span class="header-section-number">2</span> Parameters</a>
+  <ul>
+  <li><a href="#id-column" id="toc-id-column" class="nav-link" data-scroll-target="#id-column"><span class="header-section-number">2.1</span> ID column</a></li>
+  <li><a href="#keep-rows-without-id" id="toc-keep-rows-without-id" class="nav-link" data-scroll-target="#keep-rows-without-id"><span class="header-section-number">2.2</span> Keep rows without ID</a></li>
+  <li><a href="#average-type-for-expression-columns" id="toc-average-type-for-expression-columns" class="nav-link" data-scroll-target="#average-type-for-expression-columns"><span class="header-section-number">2.3</span> Average type for expression columns</a></li>
+  </ul></li>
+  <li><a href="#parameter-window" id="toc-parameter-window" class="nav-link" data-scroll-target="#parameter-window"><span class="header-section-number">3</span> Parameter window</a></li>
   </ul>
 </nav>
     </div>
@@ -153,7 +158,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Profile plot</h1>
+<h1 class="title">Combine rows by identifiers</h1>
 </div>
 
 
@@ -181,17 +186,16 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="general" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> General</h1>
+<p>#General</p>
 <ul>
-<li><strong>Type:</strong> - Matrix Analysis</li>
-<li><strong>Heading:</strong> - Visualization</li>
-<li><strong>Source code:</strong> not public.</li>
+<li><strong>Type:</strong> - Matrix Processing</li>
+<li><strong>Heading:</strong> - Basic (Processing)</li>
+<li><strong>Source code:</strong> <a href="https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Basic/CombineByIdentifiersProcessing.cs">CombineByIdentifiersProcessing.cs</a></li>
 </ul>
-</section>
-<section id="brief-description" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Brief description</h1>
-<p>Display each row of the matrix as a quantitative profile with each column defining a data point. Profiles can be queried by similarity to a reference profile.</p>
+<section id="brief-description" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Brief description</h1>
+<p>Collapses multiple rows with same identifiers in the specified identifier column into a single row. For numeric rows it can be specified how multiple values should be summarized, e.g.&nbsp;by mean or median.</p>
+<p>Output: Matrix with respective rows collapsed.</p>
 <!-- This comment and the line above it must be preserved when editing this file!
 The recommended sections are these, but they may be changed on a case by case basis.
 ===== Detailed description =====
@@ -200,9 +204,31 @@ The recommended sections are these, but they may be changed on a case by case ba
 ===== Examples =====
 Make changes only below this line! -->
 </section>
-<section id="parameters" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Parameters</h1>
-<p>“Profile plot” has no parameters.</p>
+<section id="parameters" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Parameters</h1>
+<section id="id-column" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="id-column"><span class="header-section-number">2.1</span> ID column</h2>
+<p>Selected text column containing the IDs that are going to be clustered (default: first text column in the matrix)</p>
+</section>
+<section id="keep-rows-without-id" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="keep-rows-without-id"><span class="header-section-number">2.2</span> Keep rows without ID</h2>
+<p>If checked, rows without ID are kept and each as a separate row (default: unchecked).</p>
+</section>
+<section id="average-type-for-expression-columns" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="average-type-for-expression-columns"><span class="header-section-number">2.3</span> Average type for expression columns</h2>
+<p>Definition how numeric values in expression columns of clustered rows should be averaged (default: Median). The average operation can be selected from a predefined list:</p>
+<ul>
+<li>Sum</li>
+<li>Mean</li>
+<li>Median</li>
+<li>Maximum</li>
+<li>Minimum</li>
+</ul>
+</section>
+</section>
+<section id="parameter-window" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Parameter window</h1>
+<p><img src="images/basic-combine_rows_by_identifiers-edited.png" class="img-fluid"></p>
 
 
 </section>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Cox Lab">
-<meta name="dcterms.date" content="2023-11-02">
+<meta name="dcterms.date" content="2023-11-03">
 
 <title>Perseus User Interface</title>
 <style>
@@ -142,33 +142,34 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#load" id="toc-load" class="nav-link active" data-scroll-target="#load"><span class="header-section-number">1</span> Load</a></li>
-  <li><a href="#processing" id="toc-processing" class="nav-link" data-scroll-target="#processing"><span class="header-section-number">2</span> Processing</a>
+  <li><a href="#load" id="toc-load" class="nav-link active" data-scroll-target="#load"><span class="header-section-number">0.1</span> Load</a></li>
+  <li><a href="#processing" id="toc-processing" class="nav-link" data-scroll-target="#processing"><span class="header-section-number">0.2</span> Processing</a>
   <ul>
-  <li><a href="#basic" id="toc-basic" class="nav-link" data-scroll-target="#basic"><span class="header-section-number">2.1</span> Basic</a></li>
-  <li><a href="#rearrange" id="toc-rearrange" class="nav-link" data-scroll-target="#rearrange"><span class="header-section-number">2.2</span> Rearrange</a></li>
-  <li><a href="#normalization" id="toc-normalization" class="nav-link" data-scroll-target="#normalization"><span class="header-section-number">2.3</span> Normalization</a></li>
-  <li><a href="#filter-rows" id="toc-filter-rows" class="nav-link" data-scroll-target="#filter-rows"><span class="header-section-number">2.4</span> Filter rows</a></li>
-  <li><a href="#filter-columns" id="toc-filter-columns" class="nav-link" data-scroll-target="#filter-columns"><span class="header-section-number">2.5</span> Filter columns</a></li>
-  <li><a href="#quality" id="toc-quality" class="nav-link" data-scroll-target="#quality"><span class="header-section-number">2.6</span> Quality</a></li>
-  <li><a href="#annot.-columns" id="toc-annot.-columns" class="nav-link" data-scroll-target="#annot.-columns"><span class="header-section-number">2.7</span> Annot. columns</a></li>
-  <li><a href="#annot.-rows" id="toc-annot.-rows" class="nav-link" data-scroll-target="#annot.-rows"><span class="header-section-number">2.8</span> Annot. rows</a></li>
-  <li><a href="#tests" id="toc-tests" class="nav-link" data-scroll-target="#tests"><span class="header-section-number">2.9</span> Tests</a></li>
-  <li><a href="#imputation" id="toc-imputation" class="nav-link" data-scroll-target="#imputation"><span class="header-section-number">2.10</span> Imputation</a></li>
-  <li><a href="#modifications" id="toc-modifications" class="nav-link" data-scroll-target="#modifications"><span class="header-section-number">2.11</span> Modifications</a></li>
-  <li><a href="#clustering" id="toc-clustering" class="nav-link" data-scroll-target="#clustering"><span class="header-section-number">2.12</span> Clustering</a></li>
+  <li><a href="#basic" id="toc-basic" class="nav-link" data-scroll-target="#basic"><span class="header-section-number">0.2.1</span> Basic</a></li>
+  <li><a href="#rearrange" id="toc-rearrange" class="nav-link" data-scroll-target="#rearrange"><span class="header-section-number">0.2.2</span> Rearrange</a></li>
+  <li><a href="#normalization" id="toc-normalization" class="nav-link" data-scroll-target="#normalization"><span class="header-section-number">0.2.3</span> Normalization</a></li>
+  <li><a href="#filter-rows" id="toc-filter-rows" class="nav-link" data-scroll-target="#filter-rows"><span class="header-section-number">0.2.4</span> Filter rows</a></li>
+  <li><a href="#filter-columns" id="toc-filter-columns" class="nav-link" data-scroll-target="#filter-columns"><span class="header-section-number">0.2.5</span> Filter columns</a></li>
+  <li><a href="#quality" id="toc-quality" class="nav-link" data-scroll-target="#quality"><span class="header-section-number">0.2.6</span> Quality</a></li>
+  <li><a href="#annot.-columns" id="toc-annot.-columns" class="nav-link" data-scroll-target="#annot.-columns"><span class="header-section-number">0.2.7</span> Annot. columns</a></li>
+  <li><a href="#annot.-rows" id="toc-annot.-rows" class="nav-link" data-scroll-target="#annot.-rows"><span class="header-section-number">0.2.8</span> Annot. rows</a></li>
+  <li><a href="#tests" id="toc-tests" class="nav-link" data-scroll-target="#tests"><span class="header-section-number">0.2.9</span> Tests</a></li>
+  <li><a href="#imputation" id="toc-imputation" class="nav-link" data-scroll-target="#imputation"><span class="header-section-number">0.2.10</span> Imputation</a></li>
+  <li><a href="#modifications" id="toc-modifications" class="nav-link" data-scroll-target="#modifications"><span class="header-section-number">0.2.11</span> Modifications</a></li>
+  <li><a href="#clustering" id="toc-clustering" class="nav-link" data-scroll-target="#clustering"><span class="header-section-number">0.2.12</span> Clustering</a></li>
   </ul></li>
-  <li><a href="#analysis" id="toc-analysis" class="nav-link" data-scroll-target="#analysis"><span class="header-section-number">3</span> Analysis</a>
+  <li><a href="#analysis" id="toc-analysis" class="nav-link" data-scroll-target="#analysis"><span class="header-section-number">0.3</span> Analysis</a>
   <ul>
-  <li><a href="#visualization" id="toc-visualization" class="nav-link" data-scroll-target="#visualization"><span class="header-section-number">3.1</span> Visualization</a></li>
-  <li><a href="#clusteringpca" id="toc-clusteringpca" class="nav-link" data-scroll-target="#clusteringpca"><span class="header-section-number">3.2</span> Clustering/PCA</a></li>
-  <li><a href="#misc." id="toc-misc." class="nav-link" data-scroll-target="#misc."><span class="header-section-number">3.3</span> Misc.</a></li>
+  <li><a href="#visualization" id="toc-visualization" class="nav-link" data-scroll-target="#visualization"><span class="header-section-number">0.3.1</span> Visualization</a></li>
+  <li><a href="#clusteringpca" id="toc-clusteringpca" class="nav-link" data-scroll-target="#clusteringpca"><span class="header-section-number">0.3.2</span> Clustering/PCA</a></li>
+  <li><a href="#misc." id="toc-misc." class="nav-link" data-scroll-target="#misc."><span class="header-section-number">0.3.3</span> Misc.</a></li>
   </ul></li>
-  <li><a href="#multi-proc." id="toc-multi-proc." class="nav-link" data-scroll-target="#multi-proc."><span class="header-section-number">4</span> Multi-proc.</a>
+  <li><a href="#multi-proc." id="toc-multi-proc." class="nav-link" data-scroll-target="#multi-proc."><span class="header-section-number">0.4</span> Multi-proc.</a>
   <ul>
-  <li><a href="#basic-1" id="toc-basic-1" class="nav-link" data-scroll-target="#basic-1"><span class="header-section-number">4.1</span> Basic</a></li>
+  <li><a href="#basic-1" id="toc-basic-1" class="nav-link" data-scroll-target="#basic-1"><span class="header-section-number">0.4.1</span> Basic</a></li>
   </ul></li>
-  <li><a href="#export" id="toc-export" class="nav-link" data-scroll-target="#export"><span class="header-section-number">5</span> Export</a></li>
+  <li><a href="#export" id="toc-export" class="nav-link" data-scroll-target="#export"><span class="header-section-number">0.5</span> Export</a></li>
+  <li><a href="#bottom-part-of-the-user-interface" id="toc-bottom-part-of-the-user-interface" class="nav-link" data-scroll-target="#bottom-part-of-the-user-interface"><span class="header-section-number">1</span> Bottom part of the user Interface</a></li>
   </ul>
 </nav>
     </div>
@@ -194,7 +195,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 2, 2023</p>
+      <p class="date">November 3, 2023</p>
     </div>
   </div>
   
@@ -213,8 +214,8 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <p>The activities can be divided into five main categories. The icons of the categories Processing, Analysis and Multi-proc. are frequently used activities, which are also listed in one of the drop down menus of each category. To figure out the function behind the icon just hover over it. For simplicity the icons of these three categories are ignored in the listing below:</p>
-<section id="load" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="load"><span class="header-section-number">1</span> Load</h2>
+<section id="load" class="level2" data-number="0.1">
+<h2 data-number="0.1" class="anchored" data-anchor-id="load"><span class="header-section-number">0.1</span> Load</h2>
 <ul>
 <li><a href="genericmatrixupload.html">Generic Matrix Upload</a></li>
 <li><a href="creategenelist.html">Create Gene list</a></li>
@@ -224,10 +225,10 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="ngsupload.html">NGS upload</a></li>
 </ul>
 </section>
-<section id="processing" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="processing"><span class="header-section-number">2</span> Processing</h2>
-<section id="basic" class="level3" data-number="2.1">
-<h3 data-number="2.1" class="anchored" data-anchor-id="basic"><span class="header-section-number">2.1</span> Basic</h3>
+<section id="processing" class="level2" data-number="0.2">
+<h2 data-number="0.2" class="anchored" data-anchor-id="processing"><span class="header-section-number">0.2</span> Processing</h2>
+<section id="basic" class="level3" data-number="0.2.1">
+<h3 data-number="0.2.1" class="anchored" data-anchor-id="basic"><span class="header-section-number">0.2.1</span> Basic</h3>
 <ul>
 <li><a href="transformationproc.html">Transform</a></li>
 <li><a href="combineexpressioncolumns.html">Combine expression columns</a></li>
@@ -244,8 +245,8 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="addnoise.html">Add noise</a></li>
 </ul>
 </section>
-<section id="rearrange" class="level3" data-number="2.2">
-<h3 data-number="2.2" class="anchored" data-anchor-id="rearrange"><span class="header-section-number">2.2</span> Rearrange</h3>
+<section id="rearrange" class="level3" data-number="0.2.2">
+<h3 data-number="0.2.2" class="anchored" data-anchor-id="rearrange"><span class="header-section-number">0.2.2</span> Rearrange</h3>
 <ul>
 <li><a href="changecolumntype.html">Change column type</a></li>
 <li><a href="renamecolumns.html">Rename columns</a></li>
@@ -264,8 +265,8 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="searchtextcolumns.html">Search text column</a></li>
 </ul>
 </section>
-<section id="normalization" class="level3" data-number="2.3">
-<h3 data-number="2.3" class="anchored" data-anchor-id="normalization"><span class="header-section-number">2.3</span> Normalization</h3>
+<section id="normalization" class="level3" data-number="0.2.3">
+<h3 data-number="0.2.3" class="anchored" data-anchor-id="normalization"><span class="header-section-number">0.2.3</span> Normalization</h3>
 <ul>
 <li><a href="zscore.html">Z-score</a></li>
 <li><a href="rank.html">Rank</a></li>
@@ -279,8 +280,8 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="unzscore.html">Un-Z-score</a></li>
 </ul>
 </section>
-<section id="filter-rows" class="level3" data-number="2.4">
-<h3 data-number="2.4" class="anchored" data-anchor-id="filter-rows"><span class="header-section-number">2.4</span> Filter rows</h3>
+<section id="filter-rows" class="level3" data-number="0.2.4">
+<h3 data-number="0.2.4" class="anchored" data-anchor-id="filter-rows"><span class="header-section-number">0.2.4</span> Filter rows</h3>
 <ul>
 <li><a href="docs/filtercategoricalcolumn.html">Filter rows based on categorical column</a></li>
 <li><a href="docs/filternumericalcolumn.html">Filter rows based on numerical/expression column</a></li>
@@ -289,23 +290,23 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="docs/filterrandomrows.html">Filter rows based on random sampling</a></li>
 </ul>
 </section>
-<section id="filter-columns" class="level3" data-number="2.5">
-<h3 data-number="2.5" class="anchored" data-anchor-id="filter-columns"><span class="header-section-number">2.5</span> Filter columns</h3>
+<section id="filter-columns" class="level3" data-number="0.2.5">
+<h3 data-number="0.2.5" class="anchored" data-anchor-id="filter-columns"><span class="header-section-number">0.2.5</span> Filter columns</h3>
 <ul>
 <li><a href="docs/filtercategoricalrow.html">Filter columns based on categorical row</a></li>
 <li><a href="docs/filtervalidvaluescolumns.html">Filter columns based on valid values</a></li>
 </ul>
 </section>
-<section id="quality" class="level3" data-number="2.6">
-<h3 data-number="2.6" class="anchored" data-anchor-id="quality"><span class="header-section-number">2.6</span> Quality</h3>
+<section id="quality" class="level3" data-number="0.2.6">
+<h3 data-number="0.2.6" class="anchored" data-anchor-id="quality"><span class="header-section-number">0.2.6</span> Quality</h3>
 <ul>
 <li><a href="docs/createqualitymatrix.html">Create quality matrix</a></li>
 <li><a href="docs/filterquality.html">Filter quality</a></li>
 <li><a href="docs/converttonan.html">Convert to NaN</a></li>
 </ul>
 </section>
-<section id="annot.-columns" class="level3" data-number="2.7">
-<h3 data-number="2.7" class="anchored" data-anchor-id="annot.-columns"><span class="header-section-number">2.7</span> Annot. columns</h3>
+<section id="annot.-columns" class="level3" data-number="0.2.7">
+<h3 data-number="0.2.7" class="anchored" data-anchor-id="annot.-columns"><span class="header-section-number">0.2.7</span> Annot. columns</h3>
 <ul>
 <li><a href="docs/addannotationtomatrix.html">Add annotation</a></li>
 <li><a href="docs/backtobaseidentifiers.html">To base identifiers</a></li>
@@ -316,8 +317,8 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="docs/twodimannotationenrichment.html">2D annotation enrichment</a></li>
 </ul>
 </section>
-<section id="annot.-rows" class="level3" data-number="2.8">
-<h3 data-number="2.8" class="anchored" data-anchor-id="annot.-rows"><span class="header-section-number">2.8</span> Annot. rows</h3>
+<section id="annot.-rows" class="level3" data-number="0.2.8">
+<h3 data-number="0.2.8" class="anchored" data-anchor-id="annot.-rows"><span class="header-section-number">0.2.8</span> Annot. rows</h3>
 <ul>
 <li><a href="docs/createcategoricalannotrow.html">Categorical annotation rows</a></li>
 <li><a href="docs/createnumericalannotrow.html">Numerical annotation rows</a></li>
@@ -325,8 +326,8 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="docs/jointermsincategoricalrow.html">Join terms in categorical row</a></li>
 </ul>
 </section>
-<section id="tests" class="level3" data-number="2.9">
-<h3 data-number="2.9" class="anchored" data-anchor-id="tests"><span class="header-section-number">2.9</span> Tests</h3>
+<section id="tests" class="level3" data-number="0.2.9">
+<h3 data-number="0.2.9" class="anchored" data-anchor-id="tests"><span class="header-section-number">0.2.9</span> Tests</h3>
 <ul>
 <li><a href="docs/onesampletestprocessing.html">One-sample tests</a></li>
 <li><a href="docs/twosampletestprocessing.html">Two-samples tests</a></li>
@@ -334,16 +335,16 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="docs/twowayanova.html">Two-way ANOVA</a></li>
 </ul>
 </section>
-<section id="imputation" class="level3" data-number="2.10">
-<h3 data-number="2.10" class="anchored" data-anchor-id="imputation"><span class="header-section-number">2.10</span> Imputation</h3>
+<section id="imputation" class="level3" data-number="0.2.10">
+<h3 data-number="0.2.10" class="anchored" data-anchor-id="imputation"><span class="header-section-number">0.2.10</span> Imputation</h3>
 <ul>
 <li><a href="docs/replacemissingfromgaussian.html">Replace missing values from normal distribution</a></li>
 <li><a href="docs/replaceimputedbynan.html">Replace imputed values by NaN</a></li>
 <li><a href="docs/replacemissingbyconstant.html">Replace missing values by constant</a></li>
 </ul>
 </section>
-<section id="modifications" class="level3" data-number="2.11">
-<h3 data-number="2.11" class="anchored" data-anchor-id="modifications"><span class="header-section-number">2.11</span> Modifications</h3>
+<section id="modifications" class="level3" data-number="0.2.11">
+<h3 data-number="0.2.11" class="anchored" data-anchor-id="modifications"><span class="header-section-number">0.2.11</span> Modifications</h3>
 <ul>
 <li><a href="docs/expandsitetable.html">Expand site table</a></li>
 <li><a href="docs/addlinearmotifs.html">Add linear motifs</a></li>
@@ -355,17 +356,17 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="docs/shortenmotifs.html">Shorten motif length</a></li>
 </ul>
 </section>
-<section id="clustering" class="level3" data-number="2.12">
-<h3 data-number="2.12" class="anchored" data-anchor-id="clustering"><span class="header-section-number">2.12</span> Clustering</h3>
+<section id="clustering" class="level3" data-number="0.2.12">
+<h3 data-number="0.2.12" class="anchored" data-anchor-id="clustering"><span class="header-section-number">0.2.12</span> Clustering</h3>
 <ul>
 <li><a href="docs/genericclusteringproc.html">Generic clustering</a></li>
 </ul>
 </section>
 </section>
-<section id="analysis" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="analysis"><span class="header-section-number">3</span> Analysis</h2>
-<section id="visualization" class="level3" data-number="3.1">
-<h3 data-number="3.1" class="anchored" data-anchor-id="visualization"><span class="header-section-number">3.1</span> Visualization</h3>
+<section id="analysis" class="level2" data-number="0.3">
+<h2 data-number="0.3" class="anchored" data-anchor-id="analysis"><span class="header-section-number">0.3</span> Analysis</h2>
+<section id="visualization" class="level3" data-number="0.3.1">
+<h3 data-number="0.3.1" class="anchored" data-anchor-id="visualization"><span class="header-section-number">0.3.1</span> Visualization</h3>
 <ul>
 <li><a href="docs/scatterplotanalysis.html">Scatter plot</a></li>
 <li><a href="docs/profileplot.html">Profile plot</a></li>
@@ -374,28 +375,41 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="docs/scatterplot3danalysis.html">3D plot</a></li>
 </ul>
 </section>
-<section id="clusteringpca" class="level3" data-number="3.2">
-<h3 data-number="3.2" class="anchored" data-anchor-id="clusteringpca"><span class="header-section-number">3.2</span> Clustering/PCA</h3>
+<section id="clusteringpca" class="level3" data-number="0.3.2">
+<h3 data-number="0.3.2" class="anchored" data-anchor-id="clusteringpca"><span class="header-section-number">0.3.2</span> Clustering/PCA</h3>
 <ul>
-<li><a href="hierarchicalcluster">Hierarchical clustering</a> [[perseus:user:activities:matrixanalysis:clusteringpca:|]]</li>
-<li><a href="principalcomponentanalysis">Principle component analysis</a> [[perseus:user:activities:matrixanalysis:clusteringpca:|]]</li>
+<li><a href="docs/hierarchicalcluster.html">Hierarchical clustering</a></li>
+<li><a href="docs/principalcomponentanalysis.html">Principle component analysis</a></li>
 </ul>
 </section>
-<section id="misc." class="level3" data-number="3.3">
-<h3 data-number="3.3" class="anchored" data-anchor-id="misc."><span class="header-section-number">3.3</span> Misc.</h3>
-<p>[[perseus:user:activities:matrixanalysis:misc:volcanoplotanalysis|Volcano plot]] * [[perseus:user:activities:matrixanalysis:misc:selectrowsmanually|Select rows manually]] * [[perseus:user:activities:matrixanalysis:misc:sequencelogo|Sequence logos]] * [[perseus:user:activities:matrixanalysis:misc:numericvenndiagram|Numeric venn diagram]]</p>
+<section id="misc." class="level3" data-number="0.3.3">
+<h3 data-number="0.3.3" class="anchored" data-anchor-id="misc."><span class="header-section-number">0.3.3</span> Misc.</h3>
+<ul>
+<li><a href="docs/volcanoplotanalysis.html">Volcano plot</a></li>
+<li><a href="docs/selectrowsmanually.html">Select rows manually</a></li>
+<li><a href="docs/sequencelogo.html">Sequence logos</a></li>
+<li><a href="docs/numericvenndiagram.html">Numeric venn diagram</a></li>
+</ul>
 </section>
 </section>
-<section id="multi-proc." class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="multi-proc."><span class="header-section-number">4</span> Multi-proc.</h2>
-<section id="basic-1" class="level3" data-number="4.1">
-<h3 data-number="4.1" class="anchored" data-anchor-id="basic-1"><span class="header-section-number">4.1</span> Basic</h3>
-<p>[[perseus:user:activities:matrixmultiprocessing:basic:matchingrowsbyname|Matching rows by name]] * [[perseus:user:activities:matrixmultiprocessing:basic:matchingcolumnsbyname|Matching columns by name]]</p>
+<section id="multi-proc." class="level2" data-number="0.4">
+<h2 data-number="0.4" class="anchored" data-anchor-id="multi-proc."><span class="header-section-number">0.4</span> Multi-proc.</h2>
+<section id="basic-1" class="level3" data-number="0.4.1">
+<h3 data-number="0.4.1" class="anchored" data-anchor-id="basic-1"><span class="header-section-number">0.4.1</span> Basic</h3>
+<ul>
+<li><a href="docs/matchingrowsbyname.html">Matching rows by name</a></li>
+<li><a href="docs/matchingcolumnsbyname.html">Matching columns by name</a></li>
+</ul>
 </section>
 </section>
-<section id="export" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="export"><span class="header-section-number">5</span> Export</h2>
-<p>[[perseus:user:activities:matrixexport:tabseparatedexport|Generic matrix export]]</p>
+<section id="export" class="level2" data-number="0.5">
+<h2 data-number="0.5" class="anchored" data-anchor-id="export"><span class="header-section-number">0.5</span> Export</h2>
+<ul>
+<li><a href="docs/tabseparatedexport.html">Generic matrix export</a></li>
+</ul>
+</section>
+<section id="bottom-part-of-the-user-interface" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Bottom part of the user Interface</h1>
 <p>The remainder of the window is divided into scrollable panes (<a href="#fig-persues-overview" class="quarto-xref">Figure&nbsp;2</a>):</p>
 <ul>
 <li>The <strong>matrix pane</strong> (highlighted by a pink rectangle)</li>

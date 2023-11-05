@@ -1,0 +1,97 @@
+---
+title: "Matching rows by name"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix MultiProcessing
+-   **Heading:** - Basic (MultiProcessing)
+-   **Source code:** [MatchingRowsByName.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Join/MatchingRowsByName.cs)
+
+# Brief description
+
+The base matrix is copied. Rows of the second matrix are associated with rows of the base matrix via matching expressions in a textual column from each matrix. Selected columns of the second matrix are attached to the first matrix. If exactly one row of the second matrix corresponds to a row of the base matrix, values are just copied. If more than one row of the second matrix matches to a row of the first matrix, the corresponding values are averaged (actually the median is taken) for numerical and expression columns and concatenated for textual and categorical columns.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Base matrix
+
+Specifies the matrix, whose rows are used as basis for the matching of the entries in a defined column. If no matrix is selected, the default value is empty, otherwise the default is the currently selected matrix. The selection can be changed by first clicking on "Base matrix" line of the pop-up window and then clicking on the matrix of choice in the middle pane (see parameter window A).
+
+## Other matrix
+
+Specifies the matrix, whose rows are matched to the ones of the "Base matrix". If no matrix is selected, the default value is empty, otherwise the default is the currently selected matrix. The selection can be changed by first clicking on "Other matrix" line of the pop-up window and then clicking on the matrix of choice in the middle pane (see parameter window A).
+
+## Matching column 1
+
+Selected text column of the "Base matrix" that is used for matching (default: first text column in the matrix).
+
+## Matching column 2
+
+Selected text column of the "Other matrix" that is used for matching (default: first text column in the matrix).
+
+## Indicator
+
+If checked, a categorical column called as the "Other matrix" will be added (default: unchecked). A "+" in the column indicates that at least one row of the second matrix matches.
+
+## Expression columns
+
+Selected expression columns of the "Other matrix" that should be added to the "Base matrix" (default: no expression columns are selected).
+
+## Combine expression column values
+
+Defines the combination of multiple expression values, in case multiple rows of the "Other matrix" match to a row of the "Base matrix" (default: Median). The combination can be selected from a predefined list of operations:
+
+-   Median
+-   Mean
+-   Minimum
+-   Maximum
+-   Sum
+
+## Categorical columns
+
+Selected categorical columns of the "Other matrix" that should be added to the "Base matrix" (default: no categorical columns are selected).
+
+## Text columns
+
+Selected text columns of the "Other matrix" that should be added to the "Base matrix" (default: no text columns are selected).
+
+## Numerical columns
+
+Selected numerical columns of the "Other matrix" that should be added to the "Base matrix" (default: no numerical columns are selected).
+
+## Combine numerical values
+
+Defines the combination of multiple numerical values, in case multiple rows of the "Other matrix" match to a row of the "Base matrix" (default: Median). The combination can be selected from a predefined list of operations:
+
+-   Median
+-   Mean
+-   Minimum
+-   Maximum
+-   Sum
+-   Keep separate
+
+# Parameter window
+
+![](images/basic-matching_rows_by_name-edited.png)
+

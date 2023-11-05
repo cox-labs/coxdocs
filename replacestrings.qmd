@@ -1,0 +1,55 @@
+---
+title: "Replace strings"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+
+
+
+# General
+
+  * **Type:** - Matrix MultiProcessing
+  * **Heading:** - Basic (MultiProcessing)
+  * **Source code:** [ReplaceStrings.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Join/ReplaceStrings.cs)
+
+# Brief description
+
+Replace strings in a text column according to a key value table. The first matrix contains the 
+column that will be edited while the second matrix is used to define the key-value table. In 
+case entries in the column that is edited contains a semicolon, the replacement happens for the 
+terms separated by these.
+
+Output: Same as first input matrix except that the selected text column has been edited.
+
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+
+# Parameters
+
+## Column in matrix 1 to be edited
+
+The column in the first matrix in which strings will be replaced according to the key-value table specified in matrix 2.
+
+## Keys in matrix 2
+
+The keys for the replacement table.
+
+## Values in matrix 2
+
+The values for the replacement table.
+

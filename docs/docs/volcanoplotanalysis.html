@@ -9,7 +9,7 @@
 <meta name="author" content="Cox Lab">
 <meta name="dcterms.date" content="2023-11-03">
 
-<title>Profile plot</title>
+<title>Volcano plot</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,7 +22,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -144,7 +163,21 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general"><span class="header-section-number">1</span> General</a></li>
   <li><a href="#brief-description" id="toc-brief-description" class="nav-link" data-scroll-target="#brief-description"><span class="header-section-number">2</span> Brief description</a></li>
-  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters"><span class="header-section-number">3</span> Parameters</a></li>
+  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters"><span class="header-section-number">3</span> Parameters</a>
+  <ul>
+  <li><a href="#grouping" id="toc-grouping" class="nav-link" data-scroll-target="#grouping"><span class="header-section-number">3.1</span> Grouping</a>
+  <ul class="collapse">
+  <li><a href="#first-group-right" id="toc-first-group-right" class="nav-link" data-scroll-target="#first-group-right"><span class="header-section-number">3.1.1</span> First Group (right)</a></li>
+  <li><a href="#second-group-left" id="toc-second-group-left" class="nav-link" data-scroll-target="#second-group-left"><span class="header-section-number">3.1.2</span> Second Group (left)</a></li>
+  </ul></li>
+  <li><a href="#test" id="toc-test" class="nav-link" data-scroll-target="#test"><span class="header-section-number">3.2</span> Test</a></li>
+  <li><a href="#side" id="toc-side" class="nav-link" data-scroll-target="#side"><span class="header-section-number">3.3</span> Side</a></li>
+  <li><a href="#number-of-randomizations" id="toc-number-of-randomizations" class="nav-link" data-scroll-target="#number-of-randomizations"><span class="header-section-number">3.4</span> Number of randomizations</a></li>
+  <li><a href="#preserve-grouping-in-randomizations" id="toc-preserve-grouping-in-randomizations" class="nav-link" data-scroll-target="#preserve-grouping-in-randomizations"><span class="header-section-number">3.5</span> Preserve grouping in randomizations</a></li>
+  <li><a href="#fdr" id="toc-fdr" class="nav-link" data-scroll-target="#fdr"><span class="header-section-number">3.6</span> FDR</a></li>
+  <li><a href="#s0" id="toc-s0" class="nav-link" data-scroll-target="#s0"><span class="header-section-number">3.7</span> S0</a></li>
+  </ul></li>
+  <li><a href="#parameter-window" id="toc-parameter-window" class="nav-link" data-scroll-target="#parameter-window"><span class="header-section-number">4</span> Parameter window</a></li>
   </ul>
 </nav>
     </div>
@@ -153,7 +186,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Profile plot</h1>
+<h1 class="title">Volcano plot</h1>
 </div>
 
 
@@ -185,13 +218,13 @@ ul.task-list li input[type="checkbox"] {
 <h1 data-number="1"><span class="header-section-number">1</span> General</h1>
 <ul>
 <li><strong>Type:</strong> - Matrix Analysis</li>
-<li><strong>Heading:</strong> - Visualization</li>
+<li><strong>Heading:</strong> - Misc. (Analysis)</li>
 <li><strong>Source code:</strong> not public.</li>
 </ul>
 </section>
 <section id="brief-description" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Brief description</h1>
-<p>Display each row of the matrix as a quantitative profile with each column defining a data point. Profiles can be queried by similarity to a reference profile.</p>
+<p>Visualize the results of a t-test in the form of a volcano plot. Determine significant data points with a permutation-based FDR calculation.</p>
 <!-- This comment and the line above it must be preserved when editing this file!
 The recommended sections are these, but they may be changed on a case by case basis.
 ===== Detailed description =====
@@ -202,12 +235,56 @@ Make changes only below this line! -->
 </section>
 <section id="parameters" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Parameters</h1>
-<p>“Profile plot” has no parameters.</p>
+<section id="grouping" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="grouping"><span class="header-section-number">3.1</span> Grouping</h2>
+<p>Selected categorical row that defines the grouping of columns that should be used in the specified “Test” (default: first categorical row in the matrix).</p>
+<section id="first-group-right" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="first-group-right"><span class="header-section-number">3.1.1</span> First Group (right)</h3>
+<p>First selected group that should be used for the specified “Test” (default: first group of the previously selected categorical row in the matrix). The group can be selected from all defined groups of the categorical row defined in “Grouping”.</p>
+</section>
+<section id="second-group-left" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="second-group-left"><span class="header-section-number">3.1.2</span> Second Group (left)</h3>
+<p>Second selected group that should be used for the specified “Test” (default: first group of the previously selected categorical row in the matrix). The group can be selected from all defined groups of the categorical row defined in “Grouping”.</p>
+</section>
+</section>
+<section id="test" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="test"><span class="header-section-number">3.2</span> Test</h2>
+<p>Defines what kind of test should be applied (default: T-test).</p>
+</section>
+<section id="side" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="side"><span class="header-section-number">3.3</span> Side</h2>
+<p>To apply a two-sided test, where the null hypothesis can be rejected regardless of the direction of the effect “both” has to be selected (default). “left” and “right” are the respective one-sided tests.</p>
+</section>
+<section id="number-of-randomizations" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="number-of-randomizations"><span class="header-section-number">3.4</span> Number of randomizations</h2>
+<p>Specifies the number of randomizations that should be applied (default: 250).</p>
+</section>
+<section id="preserve-grouping-in-randomizations" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="preserve-grouping-in-randomizations"><span class="header-section-number">3.5</span> Preserve grouping in randomizations</h2>
+<p>Defines, whether the grouping specified in a categorical row should be preserved in the randomizations (default: <code>&lt;None&gt;</code>). It can be selected from a list including all available groupings of the matrix.</p>
+</section>
+<section id="fdr" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="fdr"><span class="header-section-number">3.6</span> FDR</h2>
+<p>Rows with a test result below this value are reported as significant (default: 0.05).</p>
+</section>
+<section id="s0" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="s0"><span class="header-section-number">3.7</span> S0</h2>
+<p>Artificial within groups variance (default: 0). It controls the relative importance of t-test p-value and difference between means. At s0=0 only the p-value matters, while at nonzero s0 also the difference of means plays a role. See <span class="citation" data-cites="tusher2001">(<a href="#ref-tusher2001" role="doc-biblioref">Tusher, Tibshirani, and Chu 2001</a>)</span> for details.</p>
+</section>
+</section>
+<section id="parameter-window" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Parameter window</h1>
+<p><img src="images/misc.-volcano_plot-edited.png" class="img-fluid"></p>
+
 
 
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-tusher2001" class="csl-entry" role="listitem">
+Tusher, Virginia Goss, Robert Tibshirani, and Gilbert Chu. 2001. <span>“Significance Analysis of Microarrays Applied to the Ionizing Radiation Response.”</span> <em>Proceedings of the National Academy of Sciences</em> 98 (9): 5116–21. <a href="https://doi.org/10.1073/pnas.091062498">https://doi.org/10.1073/pnas.091062498</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

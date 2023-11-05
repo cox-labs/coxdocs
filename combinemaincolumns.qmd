@@ -1,5 +1,5 @@
 ---
-title: "Profile plot"
+title: "Combine main columns"
 author: "Cox Lab"
 format: 
   html:
@@ -13,16 +13,21 @@ date: today
 bibliography: references.bib
 ---
 
+
+
 # General
 
-  * **Type:** - Matrix Analysis
-  * **Heading:** - Visualization
+
+  * **Type:** - Matrix Processing
+  * **Heading:** - Basic (Processing)
   * **Source code:** not public.
 
 # Brief description
 
-Display each row of the matrix as a quantitative profile with each column defining a data point. 
-Profiles can be queried by similarity to a reference profile.
+Pairs of columns are combined into single columns. Please make sure that the numbers of columns 
+that are selected in the 'x' and 'y' box are equal.
+
+Output: Expression columns are exchanged by the new combined columns. The original columns are also kept in the output, if 'Keep original columns' is checked.
 
 <!-- This comment and the line above it must be preserved when editing this file!
 The recommended sections are these, but they may be changed on a case by case basis.
@@ -31,8 +36,3 @@ The recommended sections are these, but they may be changed on a case by case ba
 ===== Theoretical background =====
 ===== Examples =====
 Make changes only below this line! -->
-
-# Parameters
-
-"Profile plot" has no parameters.
-

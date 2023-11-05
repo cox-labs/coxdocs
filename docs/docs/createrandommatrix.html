@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Cox Lab">
-<meta name="dcterms.date" content="2023-11-03">
+<meta name="dcterms.date" content="2023-10-26">
 
-<title>Profile plot</title>
+<title>Create randome matrix</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -144,7 +144,19 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general"><span class="header-section-number">1</span> General</a></li>
   <li><a href="#brief-description" id="toc-brief-description" class="nav-link" data-scroll-target="#brief-description"><span class="header-section-number">2</span> Brief description</a></li>
-  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters"><span class="header-section-number">3</span> Parameters</a></li>
+  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters"><span class="header-section-number">3</span> Parameters</a>
+  <ul>
+  <li><a href="#number-of-rows" id="toc-number-of-rows" class="nav-link" data-scroll-target="#number-of-rows"><span class="header-section-number">3.1</span> Number of rows</a></li>
+  <li><a href="#number-of-columns" id="toc-number-of-columns" class="nav-link" data-scroll-target="#number-of-columns"><span class="header-section-number">3.2</span> Number of columns</a></li>
+  <li><a href="#percentage-of-missing-values" id="toc-percentage-of-missing-values" class="nav-link" data-scroll-target="#percentage-of-missing-values"><span class="header-section-number">3.3</span> Percentage of missing values</a></li>
+  <li><a href="#mode" id="toc-mode" class="nav-link" data-scroll-target="#mode"><span class="header-section-number">3.4</span> Mode</a>
+  <ul class="collapse">
+  <li><a href="#distance" id="toc-distance" class="nav-link" data-scroll-target="#distance"><span class="header-section-number">3.4.1</span> Distance</a></li>
+  <li><a href="#how-many" id="toc-how-many" class="nav-link" data-scroll-target="#how-many"><span class="header-section-number">3.4.2</span> How many</a></li>
+  <li><a href="#box-size" id="toc-box-size" class="nav-link" data-scroll-target="#box-size"><span class="header-section-number">3.4.3</span> Box size</a></li>
+  </ul></li>
+  <li><a href="#parameter-window" id="toc-parameter-window" class="nav-link" data-scroll-target="#parameter-window"><span class="header-section-number">3.5</span> Parameter window</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -153,7 +165,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Profile plot</h1>
+<h1 class="title">Create randome matrix</h1>
 </div>
 
 
@@ -170,7 +182,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 3, 2023</p>
+      <p class="date">October 26, 2023</p>
     </div>
   </div>
   
@@ -184,14 +196,13 @@ ul.task-list li input[type="checkbox"] {
 <section id="general" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> General</h1>
 <ul>
-<li><strong>Type:</strong> - Matrix Analysis</li>
-<li><strong>Heading:</strong> - Visualization</li>
-<li><strong>Source code:</strong> not public.</li>
+<li><strong>Type:</strong> - Matrix Upload</li>
+<li><strong>Source code:</strong> <a href="https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Load/CreateRandomMatrix.cs">CreateRandomMatrix.cs</a></li>
 </ul>
 </section>
 <section id="brief-description" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Brief description</h1>
-<p>Display each row of the matrix as a quantitative profile with each column defining a data point. Profiles can be queried by similarity to a reference profile.</p>
+<p>Create a matrix of given dimensions containing random numbers drawn from a single or a superposition of several normal distributions.</p>
 <!-- This comment and the line above it must be preserved when editing this file!
 The recommended sections are these, but they may be changed on a case by case basis.
 ===== Detailed description =====
@@ -202,9 +213,50 @@ Make changes only below this line! -->
 </section>
 <section id="parameters" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Parameters</h1>
-<p>“Profile plot” has no parameters.</p>
+<section id="number-of-rows" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="number-of-rows"><span class="header-section-number">3.1</span> Number of rows</h2>
+<p>Specifies the number of rows the randomly created matrix should have (default: 100). Rows are called “Row 1”, Row 2”, etc.</p>
+</section>
+<section id="number-of-columns" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="number-of-columns"><span class="header-section-number">3.2</span> Number of columns</h2>
+<p>Specifies the number of columns the randomly created matrix should have (default: 10). Columns are called “Column 1”, “Column 2”, etc.</p>
+</section>
+<section id="percentage-of-missing-values" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="percentage-of-missing-values"><span class="header-section-number">3.3</span> Percentage of missing values</h2>
+<p>Specifies the percentage of missing values the created matrix should contain (default: 0).</p>
+</section>
+<section id="mode" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="mode"><span class="header-section-number">3.4</span> Mode</h2>
+<p>Defines how many normal distributions should be included in the matrix (default: One normal distribution). The number of normal distributions can be specified from a predefined list:</p>
+<ul>
+<li>One normal distribution (parameter window A)</li>
+<li>Two normal distributions (parameter window B)</li>
+<li>Many normal distributions (parameter window C)</li>
+</ul>
+<section id="distance" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="distance"><span class="header-section-number">3.4.1</span> Distance</h3>
+<p>This parameter is just relevant, if the parameter “Mode” is set to “Two normal distributions”. It defines the distance between the two generated normal distributions (default: 2).</p>
+</section>
+<section id="how-many" class="level3" data-number="3.4.2">
+<h3 data-number="3.4.2" class="anchored" data-anchor-id="how-many"><span class="header-section-number">3.4.2</span> How many</h3>
+<p>This parameter is just relevant, if the parameter “Mode” is set to “Many normal distributions”. It defines how many normal distributions should be in the generated matrix (default: 3).</p>
+</section>
+<section id="box-size" class="level3" data-number="3.4.3">
+<h3 data-number="3.4.3" class="anchored" data-anchor-id="box-size"><span class="header-section-number">3.4.3</span> Box size</h3>
+<p>This parameter is just relevant, if the parameter “Mode” is set to “Many normal distributions”. It specifies the edge length of the hyper cubes in which the centers of the normal distributions are placed at random (default: 2). </p>
+</section>
+</section>
+<section id="parameter-window" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="parameter-window"><span class="header-section-number">3.5</span> Parameter window</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/create_random_matrix-edited.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Create random matrix</figcaption>
+</figure>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

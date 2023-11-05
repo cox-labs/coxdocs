@@ -1,0 +1,43 @@
+---
+title: "Generic matrix export"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Export
+-   **Source code:** [TabSeparatedExport.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Export/TabSeparatedExport.cs)
+
+# Brief description
+
+Save the matrix to a tab-separated text file. Information on column types will be retained.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## File
+
+Specifies the file path, where the currently selected matrix should be saved (default: empty). It can be specified manually by typing in the path or the location can be browsed by using the "Select" button.
+
+## Parameter window
+
+![](images/generic_matrix_export-edited.png)
+  

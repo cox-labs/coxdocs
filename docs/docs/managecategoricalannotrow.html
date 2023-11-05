@@ -9,7 +9,7 @@
 <meta name="author" content="Cox Lab">
 <meta name="dcterms.date" content="2023-11-03">
 
-<title>Profile plot</title>
+<title>Categorical annotation rows</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -142,9 +142,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general"><span class="header-section-number">1</span> General</a></li>
+  <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general"><span class="header-section-number">1</span> General =====</a></li>
   <li><a href="#brief-description" id="toc-brief-description" class="nav-link" data-scroll-target="#brief-description"><span class="header-section-number">2</span> Brief description</a></li>
-  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters"><span class="header-section-number">3</span> Parameters</a></li>
   </ul>
 </nav>
     </div>
@@ -153,7 +152,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Profile plot</h1>
+<h1 class="title">Categorical annotation rows</h1>
 </div>
 
 
@@ -182,16 +181,17 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <section id="general" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> General</h1>
+<h1 data-number="1"><span class="header-section-number">1</span> General =====</h1>
 <ul>
-<li><strong>Type:</strong> - Matrix Analysis</li>
-<li><strong>Heading:</strong> - Visualization</li>
-<li><strong>Source code:</strong> not public.</li>
+<li><strong>Type:</strong> - Matrix Processing</li>
+<li><strong>Heading:</strong> - Annot. rows</li>
+<li><strong>Source code:</strong> <a href="https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/AnnotRows/ManageCategoricalAnnotRow.cs">ManageCategoricalAnnotRow.cs</a></li>
 </ul>
 </section>
 <section id="brief-description" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Brief description</h1>
-<p>Display each row of the matrix as a quantitative profile with each column defining a data point. Profiles can be queried by similarity to a reference profile.</p>
+<p>Manage the categorical annotation rows. One important applications is to define a grouping that is later used in a t-test or ANOVA.</p>
+<p>Output: Same matrix with categorical annotation rows added or modified.</p>
 <!-- This comment and the line above it must be preserved when editing this file!
 The recommended sections are these, but they may be changed on a case by case basis.
 ===== Detailed description =====
@@ -199,10 +199,6 @@ The recommended sections are these, but they may be changed on a case by case ba
 ===== Theoretical background =====
 ===== Examples =====
 Make changes only below this line! -->
-</section>
-<section id="parameters" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Parameters</h1>
-<p>“Profile plot” has no parameters.</p>
 
 
 </section>

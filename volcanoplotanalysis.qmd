@@ -1,0 +1,76 @@
+---
+title: "Volcano plot"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix Analysis
+-   **Heading:** - Misc. (Analysis)
+-   **Source code:** not public.
+
+# Brief description
+
+Visualize the results of a t-test in the form of a volcano plot. Determine significant data points with a permutation-based FDR calculation.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Grouping
+
+Selected categorical row that defines the grouping of columns that should be used in the specified "Test" (default: first categorical row in the matrix).
+
+### First Group (right)
+
+First selected group that should be used for the specified "Test" (default: first group of the previously selected categorical row in the matrix). The group can be selected from all defined groups of the categorical row defined in "Grouping".
+
+### Second Group (left)
+
+Second selected group that should be used for the specified "Test" (default: first group of the previously selected categorical row in the matrix). The group can be selected from all defined groups of the categorical row defined in "Grouping".
+
+## Test
+
+Defines what kind of test should be applied (default: T-test).
+
+## Side
+
+To apply a two-sided test, where the null hypothesis can be rejected regardless of the direction of the effect "both" has to be selected (default). "left" and "right" are the respective one-sided tests.
+
+## Number of randomizations
+
+Specifies the number of randomizations that should be applied (default: 250).
+
+## Preserve grouping in randomizations
+
+Defines, whether the grouping specified in a categorical row should be preserved in the randomizations (default: `<None>`). It can be selected from a list including all available groupings of the matrix.
+
+## FDR
+
+Rows with a test result below this value are reported as significant (default: 0.05).
+
+## S0
+
+Artificial within groups variance (default: 0). It controls the relative importance of t-test p-value and difference between means. At s0=0 only the p-value matters, while at nonzero s0 also the difference of means plays a role. See [@tusher2001] for details.
+
+# Parameter window
+
+![](images/misc.-volcano_plot-edited.png)
+

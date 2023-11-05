@@ -1,0 +1,48 @@
+---
+title: "Matching columns by name"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General
+
+-   **Type:** - Matrix MultiProcessing
+-   **Heading:** - Basic (MultiProcessing)
+-   **Source code:** [MatchingColumnsByName.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Join/MatchingColumnsByName.cs)
+
+# Brief description
+
+Two matrices are merged by matching columns by their names.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Base matrix
+
+Specifies the matrix, whose columns are used as basis for the matching of the column names. If no matrix is selected the default value is empty, otherwise the default is the currently selected matrix. The selection can be changed by first clicking on "Base matrix" line of the pop-up window and then clicking on the matrix of choice in the middle pane.
+
+## Other matrix
+
+Specifies the matrix, whose columns are matched to the ones of the "Base matrix". If no matrix is selected the default value is empty, otherwise the default is the currently selected matrix. The selection can be changed by first clicking on "Other matrix" line of the pop-up window and then clicking on the matrix of choice in the middle pane.
+
+# Parameter window
+
+![](images/basic-matching_columns_by_name-edited.png)
+

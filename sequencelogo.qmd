@@ -1,0 +1,53 @@
+---
+title: "Sequence logos"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+# General =====
+
+-   **Type:** - Matrix Analysis
+-   **Heading:** - Misc. (Analysis)
+-   **Source code:** not public.
+
+# Brief description
+
+Create and display sequence logos based on a column containing protein sequence windows centered around sites of interest.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Sequences
+
+Selected categorical column that contains the amino acid sequences for which a Sequence logo should be generated (default: first categorical column in the matrix).
+
+**Hint**: The sequences need to have the same length.
+
+## Column
+
+Selected categorical column that groups the rows according to their value in that column and generates one sequence logo for each value (default: `<None>`). If `<None>` is selected one Sequence logo is generated for all sequences in the column defined in the parameter "Sequences".
+
+## Compute position-specific p-values
+
+Specifies the input to calculate the position-specific scoring matrix (PSSM) containing the p-values for each position (default: global occurrence). For each Sequence logo one PSSM is calculated containing the p-value for each amino acid at each position in the sequence. The PSSM can be obtained by clicking on the "Export aa p-values" button in the "Sequence logos" tab of the matrix that was used to generate the Sequence logo(s).
+
+# Parameter window
+
+![](images/misc.-sequence_logos-edited.png)

@@ -1,5 +1,5 @@
 ---
-title: "Profile plot"
+title: "Assert matrix equals"
 author: "Cox Lab"
 format: 
   html:
@@ -13,16 +13,16 @@ date: today
 bibliography: references.bib
 ---
 
+
 # General
 
-  * **Type:** - Matrix Analysis
-  * **Heading:** - Visualization
+  * **Type:** - Matrix MultiProcessing
+  * **Heading:** - CI
   * **Source code:** not public.
 
 # Brief description
 
-Display each row of the matrix as a quantitative profile with each column defining a data point. 
-Profiles can be queried by similarity to a reference profile.
+Throw exception if the two provided matrices are not equal. Used for regression testing.
 
 <!-- This comment and the line above it must be preserved when editing this file!
 The recommended sections are these, but they may be changed on a case by case basis.
@@ -31,8 +31,3 @@ The recommended sections are these, but they may be changed on a case by case ba
 ===== Theoretical background =====
 ===== Examples =====
 Make changes only below this line! -->
-
-# Parameters
-
-"Profile plot" has no parameters.
-

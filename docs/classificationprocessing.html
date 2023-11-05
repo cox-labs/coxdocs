@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.294">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Cox Lab">
+<meta name="dcterms.date" content="2023-11-03">
+
+<title>Classification (cross-validation and prediction</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./Figures/coxlab_logo2.png" alt="" class="navbar-logo">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html" rel="" target="">
+ <span class="menu-text">HOME</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./maxquant_instructions.html" rel="" target="">
+ <span class="menu-text">MaxQuant</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./perseus_instructions.html" rel="" target="">
+ <span class="menu-text">Perseus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./andromeda_instructions.html" rel="" target="">
+ <span class="menu-text">Andromeda</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="./contact.html" rel="" target=""><i class="bi bi-envelope" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/cox-labs/CoxLab_Bug_Reporting" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/TheCoxLab" rel="" target=""><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/juergen-cox-2437ba17/" rel="" target=""><i class="bi bi-fa-linkedin fa-lg" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="-1">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general"><span class="header-section-number">1</span> General =====</a></li>
+  <li><a href="#brief-description" id="toc-brief-description" class="nav-link" data-scroll-target="#brief-description"><span class="header-section-number">2</span> Brief description</a></li>
+  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters"><span class="header-section-number">3</span> Parameters</a>
+  <ul>
+  <li><a href="#items-are-in" id="toc-items-are-in" class="nav-link" data-scroll-target="#items-are-in"><span class="header-section-number">3.1</span> Items are in</a>
+  <ul class="collapse">
+  <li><a href="#classes" id="toc-classes" class="nav-link" data-scroll-target="#classes"><span class="header-section-number">3.1.1</span> Classes</a></li>
+  <li><a href="#sub-classes" id="toc-sub-classes" class="nav-link" data-scroll-target="#sub-classes"><span class="header-section-number">3.1.2</span> Sub-classes</a></li>
+  <li><a href="#feature-selection" id="toc-feature-selection" class="nav-link" data-scroll-target="#feature-selection"><span class="header-section-number">3.1.3</span> Feature selection</a></li>
+  <li><a href="#feature-ranking-method" id="toc-feature-ranking-method" class="nav-link" data-scroll-target="#feature-ranking-method"><span class="header-section-number">3.1.4</span> Feature ranking method</a>
+  <ul class="collapse">
+  <li><a href="#s0" id="toc-s0" class="nav-link" data-scroll-target="#s0"><span class="header-section-number">3.1.4.1</span> S0</a></li>
+  <li><a href="#c" id="toc-c" class="nav-link" data-scroll-target="#c"><span class="header-section-number">3.1.4.2</span> C</a></li>
+  <li><a href="#reduction-factor" id="toc-reduction-factor" class="nav-link" data-scroll-target="#reduction-factor"><span class="header-section-number">3.1.4.3</span> Reduction factor</a></li>
+  <li><a href="#number-of-top-anova-features" id="toc-number-of-top-anova-features" class="nav-link" data-scroll-target="#number-of-top-anova-features"><span class="header-section-number">3.1.4.4</span> Number of top ANOVA features</a></li>
+  <li><a href="#side" id="toc-side" class="nav-link" data-scroll-target="#side"><span class="header-section-number">3.1.4.5</span> Side</a></li>
+  <li><a href="#orthogonal-grouping" id="toc-orthogonal-grouping" class="nav-link" data-scroll-target="#orthogonal-grouping"><span class="header-section-number">3.1.4.6</span> Orthogonal grouping</a></li>
+  <li><a href="#min.-orthogonal-p-value" id="toc-min.-orthogonal-p-value" class="nav-link" data-scroll-target="#min.-orthogonal-p-value"><span class="header-section-number">3.1.4.7</span> Min. orthogonal p-value</a></li>
+  <li><a href="#min.-interaction-p-value" id="toc-min.-interaction-p-value" class="nav-link" data-scroll-target="#min.-interaction-p-value"><span class="header-section-number">3.1.4.8</span> Min. interaction p-value</a></li>
+  <li><a href="#skip-if-orthog.-p-value-is-better" id="toc-skip-if-orthog.-p-value-is-better" class="nav-link" data-scroll-target="#skip-if-orthog.-p-value-is-better"><span class="header-section-number">3.1.4.9</span> Skip if orthog. P-value is better</a></li>
+  <li><a href="#number-of-features" id="toc-number-of-features" class="nav-link" data-scroll-target="#number-of-features"><span class="header-section-number">3.1.4.10</span> Number of features</a></li>
+  <li><a href="#group-wise-feature-sel." id="toc-group-wise-feature-sel." class="nav-link" data-scroll-target="#group-wise-feature-sel."><span class="header-section-number">3.1.4.11</span> Group-wise feature sel.</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#classification-algorithm" id="toc-classification-algorithm" class="nav-link" data-scroll-target="#classification-algorithm"><span class="header-section-number">3.2</span> Classification algorithm</a>
+  <ul class="collapse">
+  <li><a href="#kernel" id="toc-kernel" class="nav-link" data-scroll-target="#kernel"><span class="header-section-number">3.2.1</span> Kernel</a>
+  <ul class="collapse">
+  <li><a href="#sigma" id="toc-sigma" class="nav-link" data-scroll-target="#sigma"><span class="header-section-number">3.2.1.1</span> Sigma</a></li>
+  <li><a href="#degree" id="toc-degree" class="nav-link" data-scroll-target="#degree"><span class="header-section-number">3.2.1.2</span> Degree</a></li>
+  <li><a href="#gamma" id="toc-gamma" class="nav-link" data-scroll-target="#gamma"><span class="header-section-number">3.2.1.3</span> Gamma</a></li>
+  <li><a href="#coef" id="toc-coef" class="nav-link" data-scroll-target="#coef"><span class="header-section-number">3.2.1.4</span> Coef</a></li>
+  <li><a href="#c-1" id="toc-c-1" class="nav-link" data-scroll-target="#c-1"><span class="header-section-number">3.2.1.5</span> C</a></li>
+  </ul></li>
+  <li><a href="#distance" id="toc-distance" class="nav-link" data-scroll-target="#distance"><span class="header-section-number">3.2.2</span> Distance</a></li>
+  <li><a href="#number-of-neighbours" id="toc-number-of-neighbours" class="nav-link" data-scroll-target="#number-of-neighbours"><span class="header-section-number">3.2.3</span> Number of neighbours</a></li>
+  </ul></li>
+  <li><a href="#cross-validate-assigned-items" id="toc-cross-validate-assigned-items" class="nav-link" data-scroll-target="#cross-validate-assigned-items"><span class="header-section-number">3.3</span> Cross-validate assigned items</a></li>
+  <li><a href="#cross-validation-type" id="toc-cross-validation-type" class="nav-link" data-scroll-target="#cross-validation-type"><span class="header-section-number">3.4</span> Cross-validation type</a>
+  <ul class="collapse">
+  <li><a href="#n" id="toc-n" class="nav-link" data-scroll-target="#n"><span class="header-section-number">3.4.1</span> n</a></li>
+  <li><a href="#test-set-percentage" id="toc-test-set-percentage" class="nav-link" data-scroll-target="#test-set-percentage"><span class="header-section-number">3.4.2</span> Test set percentage</a></li>
+  <li><a href="#number-of-repeats" id="toc-number-of-repeats" class="nav-link" data-scroll-target="#number-of-repeats"><span class="header-section-number">3.4.3</span> Number of repeats</a></li>
+  </ul></li>
+  <li><a href="#predict-unassigned-items" id="toc-predict-unassigned-items" class="nav-link" data-scroll-target="#predict-unassigned-items"><span class="header-section-number">3.5</span> Predict unassigned items</a></li>
+  <li><a href="#number-of-threads" id="toc-number-of-threads" class="nav-link" data-scroll-target="#number-of-threads"><span class="header-section-number">3.6</span> Number of threads</a></li>
+  </ul></li>
+  <li><a href="#parameter-window" id="toc-parameter-window" class="nav-link" data-scroll-target="#parameter-window"><span class="header-section-number">4</span> Parameter window</a></li>
+  <li><a href="#theoretical-background" id="toc-theoretical-background" class="nav-link" data-scroll-target="#theoretical-background"><span class="header-section-number">5</span> Theoretical background</a>
+  <ul>
+  <li><a href="#support-vector-machines" id="toc-support-vector-machines" class="nav-link" data-scroll-target="#support-vector-machines"><span class="header-section-number">5.1</span> Support vector machines</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Classification (cross-validation and prediction</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Cox Lab </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 3, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+<section id="general" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> General =====</h1>
+<ul>
+<li><strong>Type:</strong> - Matrix Processing</li>
+<li><strong>Heading:</strong> - Learning</li>
+<li><strong>Source code:</strong> not public.</li>
+</ul>
+</section>
+<section id="brief-description" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Brief description</h1>
+<p>This activity does cross-validation of assigned items and/or prediction of unassigned items with a classification algorithm of the user’s choice. Items can be in rows or columns.</p>
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+</section>
+<section id="parameters" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Parameters</h1>
+<section id="items-are-in" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="items-are-in"><span class="header-section-number">3.1</span> Items are in</h2>
+<p>It specifies if the items that should be used for the cross-validation or the prediction can be found in “Columns” or “Rows” (default: Columns).</p>
+<section id="classes" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="classes"><span class="header-section-number">3.1.1</span> Classes</h3>
+<p>Selected categorical row or column that contains the class of the items (default: first categorical row/column in the matrix). If items are in columns then the classes are in a categorical row, and if items are in rows the classes are in a categorical column.</p>
+</section>
+<section id="sub-classes" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="sub-classes"><span class="header-section-number">3.1.2</span> Sub-classes</h3>
+<p>This parameter is just relevant, if the parameter “Items are in” is set to “Columns”. It specifies whether an additional grouping should be taken into consideration for the cross-validation process (default: <code>&lt;None&gt;</code>). This could for instance be technical replicates.</p>
+</section>
+<section id="feature-selection" class="level3" data-number="3.1.3">
+<h3 data-number="3.1.3" class="anchored" data-anchor-id="feature-selection"><span class="header-section-number">3.1.3</span> Feature selection</h3>
+<p>Defines whether feature selection should be applied by ranking and reducing the features before the classification process (default: None).</p>
+</section>
+<section id="feature-ranking-method" class="level3" data-number="3.1.4">
+<h3 data-number="3.1.4" class="anchored" data-anchor-id="feature-ranking-method"><span class="header-section-number">3.1.4</span> Feature ranking method</h3>
+<p>This parameter is just relevant, if the parameter “Feature selection” is set to “From feature ranking”. It specifies which features method will be used to rank the features (default: ANOVA). The method can be selected from a predefined list:</p>
+<ul>
+<li>ANOVA</li>
+<li>Hybrid SVM</li>
+<li>MANOVA</li>
+<li>One-sided t-test</li>
+<li>Two-way ANOVA</li>
+<li>SVM</li>
+<li>RFE-SVM</li>
+<li>Golub</li>
+</ul>
+<p>Depending on the ranking method up to 4 parameters can be specified.</p>
+<section id="s0" class="level4" data-number="3.1.4.1">
+<h4 data-number="3.1.4.1" class="anchored" data-anchor-id="s0"><span class="header-section-number">3.1.4.1</span> S0</h4>
+<p>This parameter is just relevant, if the parameter “Feature ranking method” is set to “ANOVA”, “Hybrid SVM”, “One-sided t-test” or “MANOVA”. It defines the artificial within groups variance and controls the relative importance of resulted test p-values and difference between means (default: 0). At <span class="math inline">\(s0=0\)</span> only the p-value matters, while at nonzero <span class="math inline">\(s0\)</span> also the difference of means plays a role. See <span class="citation" data-cites="tusher2001">(<a href="#ref-tusher2001" role="doc-biblioref">Tusher, Tibshirani, and Chu 2001</a>)</span> for details.</p>
+</section>
+<section id="c" class="level4" data-number="3.1.4.2">
+<h4 data-number="3.1.4.2" class="anchored" data-anchor-id="c"><span class="header-section-number">3.1.4.2</span> C</h4>
+<p>This parameter is just relevant, if the parameter “Feature ranking method” is set to “Hybrid SVM”, “SVM” or “RFE-SVM”. C is a penalty constant (default: 100). Large C corresponds to large penalties for misclassification and resembles a hard margin classifier.</p>
+</section>
+<section id="reduction-factor" class="level4" data-number="3.1.4.3">
+<h4 data-number="3.1.4.3" class="anchored" data-anchor-id="reduction-factor"><span class="header-section-number">3.1.4.3</span> Reduction factor</h4>
+<p>This parameter is just relevant, if the parameter “Feature ranking method” is set to “Hybrid SVM” or “RFE-SVM”. It defines the factor by what the number of features will be reduced step by step during the ranking process (default: 1.414).</p>
+</section>
+<section id="number-of-top-anova-features" class="level4" data-number="3.1.4.4">
+<h4 data-number="3.1.4.4" class="anchored" data-anchor-id="number-of-top-anova-features"><span class="header-section-number">3.1.4.4</span> Number of top ANOVA features</h4>
+<p>This parameter is just relevant, if the parameter “Feature ranking method” is set to “MANOVA”. It defines how many of the selected features are top ANOVA features.</p>
+</section>
+<section id="side" class="level4" data-number="3.1.4.5">
+<h4 data-number="3.1.4.5" class="anchored" data-anchor-id="side"><span class="header-section-number">3.1.4.5</span> Side</h4>
+<p>This parameter is just relevant, if the parameter “Feature ranking method” is set to “One-sided t-test”. It defines the “Left” or “Right” side, where the null hypothesis can be rejected (default: Right).</p>
+</section>
+<section id="orthogonal-grouping" class="level4" data-number="3.1.4.6">
+<h4 data-number="3.1.4.6" class="anchored" data-anchor-id="orthogonal-grouping"><span class="header-section-number">3.1.4.6</span> Orthogonal grouping</h4>
+<p>This parameter is just relevant, if the parameter “Feature ranking method” is set to “Two-way ANOVA”. It defines the grouping of the data according to a given categorical column or row to distinguish the effects of the groups.</p>
+</section>
+<section id="min.-orthogonal-p-value" class="level4" data-number="3.1.4.7">
+<h4 data-number="3.1.4.7" class="anchored" data-anchor-id="min.-orthogonal-p-value"><span class="header-section-number">3.1.4.7</span> Min. orthogonal p-value</h4>
+<p>This parameter is just relevant, if the parameter “Feature ranking method” is set to “Two-way ANOVA”. Test results above this p-value are defined as orthogonal (default: 0).</p>
+</section>
+<section id="min.-interaction-p-value" class="level4" data-number="3.1.4.8">
+<h4 data-number="3.1.4.8" class="anchored" data-anchor-id="min.-interaction-p-value"><span class="header-section-number">3.1.4.8</span> Min. interaction p-value</h4>
+<p>This parameter is just relevant, if the parameter “Feature ranking method” is set to “Two-way ANOVA”. Test results above this p-value are defined as interacting, hence the effects of one group do not depend on the other group (default: 0).</p>
+</section>
+<section id="skip-if-orthog.-p-value-is-better" class="level4" data-number="3.1.4.9">
+<h4 data-number="3.1.4.9" class="anchored" data-anchor-id="skip-if-orthog.-p-value-is-better"><span class="header-section-number">3.1.4.9</span> Skip if orthog. P-value is better</h4>
+<p>This parameter is just relevant, if the parameter “Feature ranking method” is set to “Two-way ANOVA”. It defines whether features with an orthogonal p-value better than the given value in “Min. interaction p-value” are filtered out (default: unchecked).</p>
+</section>
+<section id="number-of-features" class="level4" data-number="3.1.4.10">
+<h4 data-number="3.1.4.10" class="anchored" data-anchor-id="number-of-features"><span class="header-section-number">3.1.4.10</span> Number of features</h4>
+<p>Defines how many features should be selected (default: 100).</p>
+</section>
+<section id="group-wise-feature-sel." class="level4" data-number="3.1.4.11">
+<h4 data-number="3.1.4.11" class="anchored" data-anchor-id="group-wise-feature-sel."><span class="header-section-number">3.1.4.11</span> Group-wise feature sel.</h4>
+<p>If checked, for each defined group in the data a different amount of features can be selected, which are then used for the classification (default: unchecked). The numbers can be defined either by typing in the text field in the form <span class="math inline">\([Group, number]\)</span> or by using the Edit button.</p>
+</section>
+</section>
+</section>
+<section id="classification-algorithm" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="classification-algorithm"><span class="header-section-number">3.2</span> Classification algorithm</h2>
+<p>Defines the algorithm that should be used for the classification (default: Support vector machine). The algorithm can be selected from a predefined list:</p>
+<ul>
+<li>Support vector machine</li>
+<li>Fisher LDA</li>
+<li>KNN</li>
+</ul>
+<section id="kernel" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="kernel"><span class="header-section-number">3.2.1</span> Kernel</h3>
+<p>This parameter is just relevant, if the parameter “Classification algorithm” is set to “Support vector machine”. It defines the kernel function that is used to classify items (default: linear). The kernel function can be selected from a predefined list:</p>
+<ul>
+<li>Linear: <latex> K(x,y) = x^Ty </latex></li>
+<li>RBF: <latex> K(x,y) = (-|x-y|^2) , &gt; 0 </latex></li>
+<li>Polynomial: <latex> K(x,y) = (x^Ty + r)^d , &gt; 0 </latex></li>
+<li>Sigmoid: <latex> K(x,y) = tanh(x^Ty + r) </latex></li>
+</ul>
+<p>Depending on the chosen function 1 to 4 parameters must be specified.</p>
+<section id="sigma" class="level4" data-number="3.2.1.1">
+<h4 data-number="3.2.1.1" class="anchored" data-anchor-id="sigma"><span class="header-section-number">3.2.1.1</span> Sigma</h4>
+<p>This parameter is just relevant, if “Kernel” is set to “RBF”. It defines the slope of the function (see formula above, default: 1).</p>
+</section>
+<section id="degree" class="level4" data-number="3.2.1.2">
+<h4 data-number="3.2.1.2" class="anchored" data-anchor-id="degree"><span class="header-section-number">3.2.1.2</span> Degree</h4>
+<p>This parameter is just relevant, if “Kernel” is set to “Polynomial”. It defines the degree of the polynom (see formula above, default: 3).</p>
+</section>
+<section id="gamma" class="level4" data-number="3.2.1.3">
+<h4 data-number="3.2.1.3" class="anchored" data-anchor-id="gamma"><span class="header-section-number">3.2.1.3</span> Gamma</h4>
+<p>This parameter is just relevant, if “Kernel” is set to “Polynomial” or “Sigmoid”. It defines the slope of the function (see formula above, default: 0.01).</p>
+</section>
+<section id="coef" class="level4" data-number="3.2.1.4">
+<h4 data-number="3.2.1.4" class="anchored" data-anchor-id="coef"><span class="header-section-number">3.2.1.4</span> Coef</h4>
+<p>This parameter is just relevant, if “Kernel” is set to “Polynomial” or “Sigmoid”. It defines a constant (see formula above, default: 0).</p>
+</section>
+<section id="c-1" class="level4" data-number="3.2.1.5">
+<h4 data-number="3.2.1.5" class="anchored" data-anchor-id="c-1"><span class="header-section-number">3.2.1.5</span> C</h4>
+<p>This parameter is just relevant, if the parameter “Classification algorithm” is set to “Support vector machine”. C is a penalty constant (default: 10). Large C corresponds to large penalties for misclassification and resembles a hard margin classifier.</p>
+</section>
+</section>
+<section id="distance" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="distance"><span class="header-section-number">3.2.2</span> Distance</h3>
+<p>This parameter is just relevant, if the parameter “Classification algorithm” is set to “KNN”. It defines the selected distance that will be used to assign the nearest neighbours to an item and therefore classify it (default: Euclidean). The distance can be selected from a predefined list:</p>
+<ul>
+<li>Euclidean</li>
+<li>L1</li>
+<li>Maximum</li>
+<li>Lp</li>
+<li>Pearson correlation</li>
+<li>Spearman correlation</li>
+<li>Cosine</li>
+<li>Canberra</li>
+</ul>
+</section>
+<section id="number-of-neighbours" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="number-of-neighbours"><span class="header-section-number">3.2.3</span> Number of neighbours</h3>
+<p>This parameter is just relevant, if the parameter “Classification algorithm” is set to “KNN”. It specifies the number of closest neighbours that are taken into account for the classification of an item (default: 5).</p>
+</section>
+</section>
+<section id="cross-validate-assigned-items" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="cross-validate-assigned-items"><span class="header-section-number">3.3</span> Cross-validate assigned items</h2>
+<p>If checked, cross-validation is applied to items that are already assigned to a class (default: checked).</p>
+</section>
+<section id="cross-validation-type" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="cross-validation-type"><span class="header-section-number">3.4</span> Cross-validation type</h2>
+<p>This parameter is just relevant, if the parameter “Cross-validate assigned items” is checked. It defines the type of cross-validation that should be applied to the data set (default: n-fold). The type can be selected from a predefined list:</p>
+<ul>
+<li>//Leave one out:// As many predictors are built as there are items in the data set. Thus for each predictor one item is left out to train the model and the predictor will be evaluated using the left out item. In the end the average prediction performance will be returned.</li>
+<li>//n-fold:// The items of the data set are split into n equally sized chunks. n predictors will be generated. In each of these prediction models the union of n-1 of these chunks are taken as the training set and the remaining chunk is the test set. In the end the average prediction performance will be returned.</li>
+<li>//Random sampling:// The number of predictors is specified by the “Number of repeats” parameter. The number of items taken out to form the test set (and not used for building the predictor) is specified by the “Test set percentage” parameter. In the end the average prediction performance will be returned.</li>
+</ul>
+<p>Depending on the cross-validation type 0 to 2 parameters have to specified.</p>
+<section id="n" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="n"><span class="header-section-number">3.4.1</span> n</h3>
+<p>This parameter is just relevant, if the parameter “Cross-validation type” is set to “n-fold”. It defines the number of partitions the data is divided into (default: 4).</p>
+</section>
+<section id="test-set-percentage" class="level3" data-number="3.4.2">
+<h3 data-number="3.4.2" class="anchored" data-anchor-id="test-set-percentage"><span class="header-section-number">3.4.2</span> Test set percentage</h3>
+<p>This parameter is just relevant, if the parameter “Cross-validation type” is set to “Random sampling”. It specifies the percentage of the data that is used for testing the trained model (default: 15). The remaining data is used for the training process.</p>
+</section>
+<section id="number-of-repeats" class="level3" data-number="3.4.3">
+<h3 data-number="3.4.3" class="anchored" data-anchor-id="number-of-repeats"><span class="header-section-number">3.4.3</span> Number of repeats</h3>
+<p>This parameter is just relevant, if the parameter “Cross-validation type” is set to “Random sampling”. It specifies how often the cross-validation process is repeated (default: 250). In every round the data is again divided according to the previously defined percentage.</p>
+</section>
+</section>
+<section id="predict-unassigned-items" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="predict-unassigned-items"><span class="header-section-number">3.5</span> Predict unassigned items</h2>
+<p>If checked, unassigned items in the data are predicted using the trained model, which is based on the assigned items (default: checked).</p>
+</section>
+<section id="number-of-threads" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="number-of-threads"><span class="header-section-number">3.6</span> Number of threads</h2>
+<p>Defines the number of threads that should be used for the process (default: 1). The number of threads is limited by number of available cores of the machine Perseus in running on.</p>
+</section>
+</section>
+<section id="parameter-window" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Parameter window</h1>
+<p>{{ :perseus:user:activities:matrixprocessing:learning:learning-classification-edited.png?direct |Perseus pop-up window: Learning -&gt; Classification (cross-validation and prediction)}}</p>
+</section>
+<section id="theoretical-background" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Theoretical background</h1>
+<section id="support-vector-machines" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="support-vector-machines"><span class="header-section-number">5.1</span> Support vector machines</h2>
+<p>Support vector machines (//SVMs//) were largely developed in the 1990s by Vapnik and co-workers on a basis of a separable bipartition problem at the AT &amp; T Bell Laboratories (see S. B. Kotsiantis [[http://citeseer.uark.edu:8080/citeseerx/viewdoc/summary?doi=10.1.1.95.9683|Supervised Machine Learning: A Review of Classification Techniques]]). //SVMs// are a family of data analysis algorithms, based on convex quadratic programming, whose successful use has been demonstrated in classification, regression and clustering problems. Thus, //SVMs// are now the state-of-the-art tools for non-linear input-output knowledge. The following section covers a brief and basic description of //SVMs//, but detailed explanations can be found in V. N. Vapniks [[http://books.google.de/books?hl=de&amp;lr=&amp;id=sna9BaxVbj8C&amp;oi=fnd&amp;pg=PR7&amp;dq=The+nature+of+statistical+learning&amp;ots=ooHfJTilf7&amp;sig=3RFGX9DS8mBTpceDxV-H7UJOhfw#v=onepage&amp;q=The%20nature%20of%20statistical%20learning&amp;f=false|The nature of statistical learning]], N. Cristianinis and J. Shawe-Taylors [[http://books.google.de/books?hl=de&amp;lr=&amp;id=_PXJn_cxv0AC&amp;oi=fnd&amp;pg=PR9&amp;dq=An+introduction+to+Support+Vector+Machines:+and+other+kernel-based+learning+methods&amp;ots=xRNl4BXoXe&amp;sig=isDnY5NnZWQNOccYO1C1z5c2o10#v=onepage&amp;q=An%20introduction%20to%20Support%20Vector%20Machines%3A%20and%20other%20kernel-based%20learning%20methods&amp;f=false|An introduction to support vector machines and other kernel-based learning methods]], V. N. Vapniks [[http://read.pudn.com/downloads161/ebook/733192/Statistical-Learning-Theory.pdf|Statistical Learning Theory]], V. N. Vapniks [[http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=788640|An overview of statistical learning theory]] and B. E. Bosers, I. M. Guyons, and V. N. Vapniks [[http://dl.acm.org/citation.cfm?doid=130385.130401|A training algorithm for optimal margin classifiers]].</p>
+<p>//SVMs// are a particular class of supervised learning methods that are well suited for analyses of data in high-dimensional feature spaces. They are computationally efficient and capable of detecting biologically-relevant signals. //SVMs// revolve around the notion of a //margin// - either side of a data separating linear decision boundary (//hyperplane//). Maximizing this //margin// and thereby creating the largest distance between two classes as well as between the //hyperplane// and the instances on either side, is the main task in training //SVMs// (see figure below). Thus, these models have a binary nature to separate classes, but can be extended to multi-class problems by reducing the problem to a set of multiple binary classification problems. The //hyperplane// is defined by: <block indent=""><block indent=""><block indent=""><block indent=""><block indent=""><block indent=""><block indent=""><block indent=""><block indent=""><block indent=""><block indent=""><block indent=""> <latex> D(x) &nbsp;= &nbsp;&lt;,x&gt; &nbsp;+ &nbsp;b </latex> </block></block></block></block></block></block></block></block></block></block></block></block> where //ω// is the weights vector and //b// is a bias value (or //−b// the threshold).</p>
+<p>In case an optimal separating //hyperplane// is found, data points on the //margin// are known as //support vectors// and the solution is a linear combination of them (red data points in figure below). Each new data point is then classified according to its optimal position relative to the model’s //hyperplane//. So the model complexity is unaffected by the number of features encountered in the training data, therefore //SVMs// are well suited to deal with learning tasks with a large number of features compared to the number of data points. In case no //hyperplane// can be found, the problem can be addressed using the so-called //soft margin//. The //margin// optimization constraints can be relaxed by allowing some misclassifications or //margin// violations in the training set, to get better generalization of the //SVM// than using a //hard margin//. The choice of appropriate penalties is mandatory: <block indent=""><block indent=""><block indent=""><block indent=""><block indent=""><block indent=""><block indent=""><block indent=""> <latex> <span class="math display">\[\begin{align}
+min_{w,b,\xi} ~&amp; \frac{1}{2} \ w^{T}w \ + \ C\sum_{i=1}^{l}\xi_{i} \\
+\text{subject to} ~&amp; y_{i}(w^{T}x_{i}+b) \ &lt; \ 1-\xi_{i} \ \ \text{and} \ \ \xi \geq 0
+\end{align}\]</span> </latex> </block></block></block></block></block></block></block></block> where //ω// is the weights vector, //b// is a bias value, //C// is a penalty constant, and //ξ// is a slack variable, which is the orthogonal distance between a data point and the //hyperplane//. Large //C// correspond to large penalties for misclassification and resemble a //hard margin// classifier, whereas //ξ// measures the degree of misclassification or //margin// violation. This is a good way to deal with outliers in the data set without destroying the model by tailoring it perfectly to the input data.</p>
+<p>Nevertheless, most real-world data sets involve separation problems that are linearly non-separable, which requires the definition of complex functions to build a good classifier. //SVMs// use kernels, a special class of functions to deal with such situations. Mapping the data points to a higher-dimensional space (transformed feature space) using kernels, enables the definition of a linear //hyperplane//, which results in a non-linear //hyperplane// in the original space. The //hyperplanes// in the higher-dimensional space are represented by all points defining a set, whose inner product with a vector is constant in that space. Training the classifier depends only on the data through dot products, which are possible to compute even at a high-dimension at low cost by applying the so-called //kernel trick//. The trick lies in working in an higher-dimensional space, without ever explicitly transforming the original data points into that space, but instead relying on algorithms that only need to compute inner products within that space. These algorithms are identical to kernels and can thus be cheaply computed in the original space. So, everything about linear cases can also be applied to non-linear ones using an appropriate kernel function. It is common practice to find the best suiting function by cross-validation. Some popular kernels, which are all included in Perseus, are: <block indent=""><block indent=""><block indent=""><block indent=""><block indent=""><block indent=""><block indent=""><block indent=""> <latex> <span class="math display">\[\begin{align}
+\text{linear:} \ K(x,y)         &amp;= x^{T}y  \\
+\text{sigmoid:} \ K(x,y)    &amp;= tanh(\gamma x^{T}y \ + \ r) \\
+\text{radial basis:} \ K(x,y)   &amp;= \exp(-\gamma|x \ - \ y|^{2}) , \ \gamma &gt; 0 \\
+\text{polynomial:} \ K(x,y)     &amp;= (\gamma x^{T}y \ + \ r)^{d}, \ \gamma &gt; 0
+\end{align}\]</span> </latex> </block></block></block></block></block></block></block></block> where //x// and //y// are two data points, //γ// is the slope, //d// is the degree of the polynom, and //r// is a constant.</p>
+<p>{{ perseus:user:activities:matrixprocessing:learning:svm.png?direct |}} <strong>Illustration of separating two classes using SVMs.</strong> Linear (A.) and non-linear (B.) perfect separation of two classes (green and orange) with a hyperplane (black) and maximal margin (blue and dotted gray lines). Support vectors defining the hyperplane are in red. No misclassifiactions or margin violations are included.</p>
+<p>For more information you can also consult [[http://en.wikipedia.org/wiki/Support_vector_machine|Wikipedia]].</p>
+<p>\ \ \</p>
+<p>==== Fisher’s linear discriminant analysis ==== Linear Discriminant Analysis (LDA), is a well-known classification technique that has been used successfully in many statistical pattern recognition problems. It was developed by R. A. Fisher, a professor of statistics at University College London, and is sometimes called Fisher Discriminant Analysis (FDA). Its first description was in 1936 and can be found in [[http://onlinelibrary.wiley.com/doi/10.1111/j.1469-1809.1936.tb02137.x/abstract;jsessionid=B987772120350C4E7E8866F341404E7B.f01t01|The use of multiple measurements in taxonomic problems]].</p>
+<p>The primary purpose of //LDA// is to separate samples of two or multiple distinct groups while preserving as much of the class discriminatory information as possible to classify new unseen instances. The approach of the //LDA // is to project all the data points into new space, normally of lower dimension, which maximizes the between-class separability while minimizing their within-class variability. So the goal is to find the best projection axes for separating the classes. In general the number of axes that can be computed by the //LDA// method is one less than the number of classes in the problem.</p>
+<p>{{ perseus:user:activities:matrixprocessing:learning:lda2.png?direct |}} <strong>Illustration of separating two classes using LDA.</strong> Classes are separated perfectly and the dimensionality of the problem has been reduced from two features (x1,x2) to only a scalar value y.</p>
+<p>For more information you can also consult [[http://en.wikipedia.org/wiki/Linear_discriminant_analysis|Wikipedia]].</p>
+<p>\ \ \ ==== k-nearest neighbors ==== K-Nearest Neighbors (kNN) is a simple //lazy learner// algorithm that stores all available data points and classifies new instances based on a similarity measure (e.g., distance functions). It corresponds to the group of supervised learning algorithms and has been used in statistical estimation and pattern recognition already in the beginning of 1970’s as a non-parametric technique. During the training phase the algorithm simply stores the data points including their class labels and all computation is deferred until the classification process. So //kNN// is based on the principle that instances that are in close proximity to another have similar properties. Thus, to classify new unclassified instances, one simply has to look at their k-nearest neighbors, to figure out the classification label. The class membership can be defined by a majority vote of the //k// closest neighbors or the neighbors can be ranked and weighted according to their distance to the new instance. A common weighting scheme consists in giving each neighbor a weight of 1/d, where d is the distance to the neighbor.</p>
+<p>{{ perseus:user:activities:matrixprocessing:learning:knn.png?direct&amp;300 |}} <strong>Illustration of classifying a new item using kNN.</strong> Using a majority vote of the k nearest neighbors, the defined k can change the assigned class of the red star. If k = 3 (purple circle) the star corresponds to the blue polygon class, because the three closest neighbors include two blue polygons and one green rectangle. Whereas, if k = 5 (black circle) the star is assigned to the green class, because the five closest neighbors include more green rectangles than blue polygons (three green rectangles vs.&nbsp;two blue polygons).</p>
+<p>For more information you can also consult [[http://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm|Wikipedia]].</p>
+
+
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-tusher2001" class="csl-entry" role="listitem">
+Tusher, Virginia Goss, Robert Tibshirani, and Gilbert Chu. 2001. <span>“Significance Analysis of Microarrays Applied to the Ionizing Radiation Response.”</span> <em>Proceedings of the National Academy of Sciences</em> 98 (9): 5116–21. <a href="https://doi.org/10.1073/pnas.091062498">https://doi.org/10.1073/pnas.091062498</a>.
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        for (let i = 0; i < 2; i++) {
+          container.appendChild(note.children[i].cloneNode(true));
+        }
+        return container.innerHTML
+      } else {
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>© 2023, created by and maintained by Cox lab</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

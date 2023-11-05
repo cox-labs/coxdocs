@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Cox Lab">
-<meta name="dcterms.date" content="2023-11-03">
+<meta name="dcterms.date" content="2023-11-02">
 
-<title>Profile plot</title>
+<title>Hierarchical clustering</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -144,7 +144,29 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general"><span class="header-section-number">1</span> General</a></li>
   <li><a href="#brief-description" id="toc-brief-description" class="nav-link" data-scroll-target="#brief-description"><span class="header-section-number">2</span> Brief description</a></li>
-  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters"><span class="header-section-number">3</span> Parameters</a></li>
+  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters"><span class="header-section-number">3</span> Parameters</a>
+  <ul>
+  <li><a href="#row-tree" id="toc-row-tree" class="nav-link" data-scroll-target="#row-tree"><span class="header-section-number">3.1</span> Row tree</a>
+  <ul class="collapse">
+  <li><a href="#distance" id="toc-distance" class="nav-link" data-scroll-target="#distance"><span class="header-section-number">3.1.1</span> Distance</a></li>
+  <li><a href="#linkage" id="toc-linkage" class="nav-link" data-scroll-target="#linkage"><span class="header-section-number">3.1.2</span> Linkage</a></li>
+  <li><a href="#constraint" id="toc-constraint" class="nav-link" data-scroll-target="#constraint"><span class="header-section-number">3.1.3</span> Constraint</a></li>
+  <li><a href="#preprocess-with-k-means" id="toc-preprocess-with-k-means" class="nav-link" data-scroll-target="#preprocess-with-k-means"><span class="header-section-number">3.1.4</span> Preprocess with k-means</a></li>
+  <li><a href="#number-of-clusters" id="toc-number-of-clusters" class="nav-link" data-scroll-target="#number-of-clusters"><span class="header-section-number">3.1.5</span> Number of clusters</a></li>
+  </ul></li>
+  <li><a href="#column-tree" id="toc-column-tree" class="nav-link" data-scroll-target="#column-tree"><span class="header-section-number">3.2</span> Column tree</a>
+  <ul class="collapse">
+  <li><a href="#distance-1" id="toc-distance-1" class="nav-link" data-scroll-target="#distance-1"><span class="header-section-number">3.2.1</span> Distance</a></li>
+  <li><a href="#linkage-1" id="toc-linkage-1" class="nav-link" data-scroll-target="#linkage-1"><span class="header-section-number">3.2.2</span> Linkage</a></li>
+  <li><a href="#constraint-1" id="toc-constraint-1" class="nav-link" data-scroll-target="#constraint-1"><span class="header-section-number">3.2.3</span> Constraint</a></li>
+  <li><a href="#preprocess-with-k-means-1" id="toc-preprocess-with-k-means-1" class="nav-link" data-scroll-target="#preprocess-with-k-means-1"><span class="header-section-number">3.2.4</span> Preprocess with k-means</a></li>
+  <li><a href="#number-of-clusters-1" id="toc-number-of-clusters-1" class="nav-link" data-scroll-target="#number-of-clusters-1"><span class="header-section-number">3.2.5</span> Number of clusters</a></li>
+  </ul></li>
+  <li><a href="#which-columns-to-use" id="toc-which-columns-to-use" class="nav-link" data-scroll-target="#which-columns-to-use"><span class="header-section-number">3.3</span> Which columns to use</a></li>
+  <li><a href="#use-for-clustering" id="toc-use-for-clustering" class="nav-link" data-scroll-target="#use-for-clustering"><span class="header-section-number">3.4</span> Use for clustering</a></li>
+  <li><a href="#display-in-heat-map-but-do-not-use-for-clustering" id="toc-display-in-heat-map-but-do-not-use-for-clustering" class="nav-link" data-scroll-target="#display-in-heat-map-but-do-not-use-for-clustering"><span class="header-section-number">3.5</span> Display in heat map but do not use for clustering</a></li>
+  </ul></li>
+  <li><a href="#parameter-window" id="toc-parameter-window" class="nav-link" data-scroll-target="#parameter-window"><span class="header-section-number">4</span> Parameter window</a></li>
   </ul>
 </nav>
     </div>
@@ -153,7 +175,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Profile plot</h1>
+<h1 class="title">Hierarchical clustering</h1>
 </div>
 
 
@@ -170,7 +192,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 3, 2023</p>
+      <p class="date">November 2, 2023</p>
     </div>
   </div>
   
@@ -185,13 +207,13 @@ ul.task-list li input[type="checkbox"] {
 <h1 data-number="1"><span class="header-section-number">1</span> General</h1>
 <ul>
 <li><strong>Type:</strong> - Matrix Analysis</li>
-<li><strong>Heading:</strong> - Visualization</li>
+<li><strong>Heading:</strong> - Clustering/PCA</li>
 <li><strong>Source code:</strong> not public.</li>
 </ul>
 </section>
 <section id="brief-description" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Brief description</h1>
-<p>Display each row of the matrix as a quantitative profile with each column defining a data point. Profiles can be queried by similarity to a reference profile.</p>
+<p>This activity performs hierarchical clustering of rows and/or columns and produces a visual heat map representation of the clustered matrix. Clustering can be performed with a choice of distances and linkages. This activity can also be used just to display your data in a heat map without performing clustering by deselecting row and column clustering.</p>
 <!-- This comment and the line above it must be preserved when editing this file!
 The recommended sections are these, but they may be changed on a case by case basis.
 ===== Detailed description =====
@@ -202,7 +224,109 @@ Make changes only below this line! -->
 </section>
 <section id="parameters" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Parameters</h1>
-<p>“Profile plot” has no parameters.</p>
+<section id="row-tree" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="row-tree"><span class="header-section-number">3.1</span> Row tree</h2>
+<p>If checked rows will be clustered and a tree (dendrogram) is generated (default: checked).</p>
+<section id="distance" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="distance"><span class="header-section-number">3.1.1</span> Distance</h3>
+<p>Selected distance that will be used for the clustering process (default: Euclidean). The distance can be selected from a predefined list:</p>
+<ul>
+<li>Euclidean</li>
+<li>L1</li>
+<li>Maximum</li>
+<li>Lp</li>
+<li>Pearson correlation</li>
+<li>Spearman correlation</li>
+<li>Cosine</li>
+<li>Canberra</li>
+</ul>
+</section>
+<section id="linkage" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="linkage"><span class="header-section-number">3.1.2</span> Linkage</h3>
+<p>Selected clustering method that will be applied (default: Average). It can be selected from a predefined list:</p>
+<ul>
+<li>Average</li>
+<li>Complete</li>
+<li>Single</li>
+</ul>
+</section>
+<section id="constraint" class="level3" data-number="3.1.3">
+<h3 data-number="3.1.3" class="anchored" data-anchor-id="constraint"><span class="header-section-number">3.1.3</span> Constraint</h3>
+<p>Selected constraint that should be preserved from the input data (default: None). The used constraint can be selected from a predefined list of constraints:</p>
+<ul>
+<li>None</li>
+<li>Preserve order</li>
+<li>Preserve order (periodic)</li>
+</ul>
+</section>
+<section id="preprocess-with-k-means" class="level3" data-number="3.1.4">
+<h3 data-number="3.1.4" class="anchored" data-anchor-id="preprocess-with-k-means"><span class="header-section-number">3.1.4</span> Preprocess with k-means</h3>
+<p>Specifies, whether the data should be pre-processed using k-means before applying clustering and generating a heatmap (default: checked).</p>
+</section>
+<section id="number-of-clusters" class="level3" data-number="3.1.5">
+<h3 data-number="3.1.5" class="anchored" data-anchor-id="number-of-clusters"><span class="header-section-number">3.1.5</span> Number of clusters</h3>
+<p>This parameter is just relevant, if the parameter “Preprocess with k-means” is checked. Defines the number of clusters that will be created by the k-means algorithm (default: 300).</p>
+</section>
+</section>
+<section id="column-tree" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="column-tree"><span class="header-section-number">3.2</span> Column tree</h2>
+<p>If checked, columns will be clustered and a tree (dendrogram) is generated (default: checked).</p>
+<section id="distance-1" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="distance-1"><span class="header-section-number">3.2.1</span> Distance</h3>
+<p>Selected distance that will be used for the clustering process (default: Euclidean). The distance can be selected from a predefined list:</p>
+<ul>
+<li>Euclidean</li>
+<li>L1</li>
+<li>Maximum</li>
+<li>Lp</li>
+<li>Pearson correlation</li>
+<li>Spearman correlation</li>
+</ul>
+</section>
+<section id="linkage-1" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="linkage-1"><span class="header-section-number">3.2.2</span> Linkage</h3>
+<p>Selected clustering method that will be applied (default: Average). It can be selected from a predefined list:</p>
+<ul>
+<li>Average</li>
+<li>Complete</li>
+<li>Single</li>
+</ul>
+</section>
+<section id="constraint-1" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="constraint-1"><span class="header-section-number">3.2.3</span> Constraint</h3>
+<p>Selected constraint that should be preserved from the input data (default: None). The used constraint can be selected from a predefined list of constraints:</p>
+<ul>
+<li>None</li>
+<li>Preserve order</li>
+<li>Preserve order (periodic)</li>
+<li>Preserve grouping</li>
+</ul>
+</section>
+<section id="preprocess-with-k-means-1" class="level3" data-number="3.2.4">
+<h3 data-number="3.2.4" class="anchored" data-anchor-id="preprocess-with-k-means-1"><span class="header-section-number">3.2.4</span> Preprocess with k-means</h3>
+<p>Specifies, whether the data should be pre-processed using k-means before applying clustering and generating a heatmap (default: checked).</p>
+</section>
+<section id="number-of-clusters-1" class="level3" data-number="3.2.5">
+<h3 data-number="3.2.5" class="anchored" data-anchor-id="number-of-clusters-1"><span class="header-section-number">3.2.5</span> Number of clusters</h3>
+<p>This parameter is just relevant, if the parameter “Preprocess with k-means” is checked. Defines the number of clusters that will be created by the k-means algorithm (default: 300).</p>
+</section>
+</section>
+<section id="which-columns-to-use" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="which-columns-to-use"><span class="header-section-number">3.3</span> Which columns to use</h2>
+<p>List of all expression/numerical columns in the data set (default: all numerical columns; the expression columns are selected see parameter “Use for clustering”).</p>
+</section>
+<section id="use-for-clustering" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="use-for-clustering"><span class="header-section-number">3.4</span> Use for clustering</h2>
+<p>Selected expression/numerical columns that should be used for the clustering (default: all expression columns are selected).</p>
+</section>
+<section id="display-in-heat-map-but-do-not-use-for-clustering" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="display-in-heat-map-but-do-not-use-for-clustering"><span class="header-section-number">3.5</span> Display in heat map but do not use for clustering</h2>
+<p>Selected expression/numerical columns that should be displayed in the output heat map, but are not used for the clustering (default: empty).</p>
+</section>
+</section>
+<section id="parameter-window" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Parameter window</h1>
+<p><img src="images/clustering-pca-hierachical_clustering-edited.png" class="img-fluid"></p>
 
 
 </section>

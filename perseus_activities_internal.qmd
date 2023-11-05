@@ -1,0 +1,370 @@
+---
+title: "Activities"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+
+<ifauth @internal>//You are a user associated with MPIB, so you are presumably
+using the internal version of Perseus, which has some features not available
+to the general public. These internal features are visible when you view this page,
+but not when an external user does so. They are marked with an asterisk (*).//</ifauth>
+
+<ifauth @bioinformatics>//You are also associated with the bioinformatics group.
+For you, developmental activities are also shown here and linked to whatever
+documentation might be available, even though they are not available in the software.
+They are marked with two asterisks (**).//</ifauth>
+
+Data processing in Perseus generally takes the form of loading a matrix of data
+and then applying a series of transformations to that matrix. These transformations
+are called “activities”. They are organized into a series of “Types”, and possibly
+a number of “Headings” under the Type.
+
+You can search this page for the name of the activity of interest, or you can browse
+the Type or Heading of interest using the Table of Contents on the right.
+
+===== Matrix Upload =====
+
+• [[perseus:user:activities:MatrixUpload:BinaryUpload|Binary upload]]\\
+• [[perseus:user:activities:MatrixUpload:CreateGeneList|Create gene list]]\\
+• [[perseus:user:activities:MatrixUpload:CreateRandomMatrix|Create random matrix]]\\
+• [[perseus:user:activities:MatrixUpload:GenericMatrixUpload|Generic matrix upload]]\\
+• [[perseus:user:activities:MatrixUpload:NgsUpload|Next generation sequencing data upload]]\\
+• [[perseus:user:activities:MatrixUpload:UnstructuredTxtUpload|Raw upload]]\\
+
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixUpload:AffymetrixCghDataUpload|Affymetrix CGH]]**\\</ifauth>
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixUpload:AgilentDataUpload|Agilent]]**\\</ifauth>
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixUpload:Sbml2Matrix|SBML to matrix]]**\\</ifauth>
+
+===== Matrix Export =====
+
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixExport:ArffWriter|.arff export]]**\\</ifauth>
+• [[perseus:user:activities:MatrixExport:TabSeparatedExport|Generic matrix export]]\\
+
+===== Matrix Analysis =====
+
+<ifauth @internal>==== ARACNe (Analysis) ====</ifauth>
+
+
+<ifauth @internal>• [[perseus:internal:activities:MatrixAnalysis:ARACNe:ARACNeClustering|CoExpression clustering]]*\\</ifauth>
+
+<ifauth @bioinformatics>==== Clustering ====
+</ifauth>
+
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixAnalysis:Clustering:FastCluster|fastcluster]]**\\</ifauth>
+
+==== Clustering/PCA ====
+
+
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixAnalysis:ClusteringPCA:Biclustering|Biclustering]]**\\</ifauth>
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixAnalysis:ClusteringPCA:FactorAnalysis|Factor analysis]]**\\</ifauth>
+• [[perseus:user:activities:MatrixAnalysis:ClusteringPCA:HierarchicalCluster|Hierarchical clustering]]\\
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixAnalysis:ClusteringPCA:IndependentComponentAnalysis|Independent component analysis]]**\\</ifauth>
+• [[perseus:user:activities:MatrixAnalysis:ClusteringPCA:PrincipalComponentAnalysis|Principal component analysis]]\\
+
+<ifauth @bioinformatics>==== Co-expression ====
+</ifauth>
+
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixAnalysis:Co-expression:PickSoftThreshold|Pick soft threshold]]**\\</ifauth>
+
+==== Misc. (Analysis) ====
+
+
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixAnalysis:Misc:EditMatrix|Edit matrix]]**\\</ifauth>
+<ifauth @internal>• [[perseus:internal:activities:MatrixAnalysis:Misc:MultiVolcanoAnalysis|Hawaii plot (multi-volcano)]]*\\</ifauth>
+• [[perseus:user:activities:MatrixAnalysis:Misc:NumericVennDiagram|Numeric venn diagram]]\\
+• [[perseus:user:activities:MatrixAnalysis:Misc:SelectRowsManually|Select rows manually]]\\
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixAnalysis:Misc:SequenceCorrelation|Sequence correlation]]**\\</ifauth>
+• [[perseus:user:activities:MatrixAnalysis:Misc:SequenceLogo|Sequence logos]]\\
+• [[perseus:user:activities:MatrixAnalysis:Misc:VolcanoPlotAnalysis|Volcano plot]]\\
+
+==== Visualization ====
+
+
+• [[perseus:user:activities:MatrixAnalysis:Visualization:ScatterPlot3DAnalysis|3D plot]]\\
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixAnalysis:Visualization:BoxPlotAnalysis|Box plot]]**\\</ifauth>
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixAnalysis:Visualization:ChartAnalysis|Charts]]**\\</ifauth>
+• [[perseus:user:activities:MatrixAnalysis:Visualization:Histogram|Histogram]]\\
+• [[perseus:user:activities:MatrixAnalysis:Visualization:MultiScatterAnalysis|Multi scatter plot]]\\
+• [[perseus:user:activities:MatrixAnalysis:Visualization:ProfilePlot|Profile plot]]\\
+• [[perseus:user:activities:MatrixAnalysis:Visualization:ScatterPlotAnalysis|Scatter plot]]\\
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixAnalysis:Visualization:TreeMapAnalysis|Tree map]]**\\</ifauth>
+
+===== Matrix MultiProcessing =====
+
+==== Basic (MultiProcessing) ====
+
+
+• [[perseus:user:activities:MatrixMultiProcessing:Basic:MatchingColumnsByName|Matching columns by name]]\\
+• [[perseus:user:activities:MatrixMultiProcessing:Basic:MatchingRowsByName|Matching rows by name]]\\
+• [[perseus:user:activities:MatrixMultiProcessing:Basic:ReplaceStrings|Replace strings]]\\
+<ifauth @internal>• [[perseus:internal:activities:MatrixMultiProcessing:Basic:VennMultiProcessing|Venn diagram]]*\\</ifauth>
+
+==== CI ====
+
+
+• [[perseus:user:activities:MatrixMultiProcessing:CI:AssertMatrixEqual|Assert matrix equals]]\\
+
+<ifauth @bioinformatics>==== Misc. (MultiProcessing) ====
+</ifauth>
+
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixMultiProcessing:Misc:MatchingByGenomePosition|Match by chromosomal location]]**\\</ifauth>
+
+===== Matrix Processing =====
+
+<ifauth @internal>==== AA sequence ====</ifauth>
+
+
+<ifauth @internal>• [[perseus:internal:activities:MatrixProcessing:AAsequence:GravyValue|GRAVY]]*\\</ifauth>
+<ifauth @internal>• [[perseus:internal:activities:MatrixProcessing:AAsequence:LoadSequencesFromFasta|Load sequences from fasta]]*\\</ifauth>
+
+<ifauth @internal>==== ARACNe (Processing) ====</ifauth>
+
+
+<ifauth @internal>• [[perseus:internal:activities:MatrixProcessing:ARACNe:ARACNeAdjacencyMatrix|Create adjacency matrix]]*\\</ifauth>
+
+<ifauth @bioinformatics>==== Add content ====
+</ifauth>
+
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Addcontent:IntActAnnotation|IntAct neighborhood]]**\\</ifauth>
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Addcontent:MousePhenotype|Mouse phenotype]]**\\</ifauth>
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Addcontent:AddOrthologs|Orthologs]]**\\</ifauth>
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Addcontent:MirnaTarget|miRNA targets]]**\\</ifauth>
+
+==== Annot. columns ====
+
+
+• [[perseus:user:activities:MatrixProcessing:Annotcolumns:OneDimAnnotationEnrichment|1D annotation enrichment]]\\
+• [[perseus:user:activities:MatrixProcessing:Annotcolumns:TwoDimAnnotationEnrichment|2D annotation enrichment]]\\
+• [[perseus:user:activities:MatrixProcessing:Annotcolumns:AddAnnotationToMatrix|Add annotation]]\\
+<ifauth @internal>• [[perseus:internal:activities:MatrixProcessing:Annotcolumns:AddSourceDatabase|Add search database]]*\\</ifauth>
+• [[perseus:user:activities:MatrixProcessing:Annotcolumns:AnnotationMatrix|Annotation matrix]]\\
+• [[perseus:user:activities:MatrixProcessing:Annotcolumns:AverageCategories|Average categories]]\\
+• [[perseus:user:activities:MatrixProcessing:Annotcolumns:CategoryCounting|Category counting]]\\
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Annotcolumns:ComplexCorrelation|Complex correlation]]**\\</ifauth>
+<ifauth @internal>• [[perseus:internal:activities:MatrixProcessing:Annotcolumns:AddProteinSequenceCounts|Count protein sequence features]]*\\</ifauth>
+• [[perseus:user:activities:MatrixProcessing:Annotcolumns:FisherExactTestProces|Fisher exact test]]\\
+• [[perseus:user:activities:MatrixProcessing:Annotcolumns:BackToBaseIdentifiers|To base identifiers]]\\
+
+==== Annot. rows ====
+
+
+• [[perseus:user:activities:MatrixProcessing:Annotrows:AverageGroups|Average groups]]\\
+• [[perseus:user:activities:MatrixProcessing:Annotrows:ManageCategoricalAnnotRow|Categorical annotation rows]]\\
+• [[perseus:user:activities:MatrixProcessing:Annotrows:JoinTermsInCategoricalRow|Join terms in categorical row]]\\
+• [[perseus:user:activities:MatrixProcessing:Annotrows:ManageNumericalAnnotRow|Numerical annotation rows]]\\
+<ifauth @internal>• [[perseus:internal:activities:MatrixProcessing:Annotrows:RegexCategoryRow|Regex category row]]*\\</ifauth>
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Annotrows:Regroup|Regroup -- Jan]]**\\</ifauth>
+
+==== Basic (Processing) ====
+
+
+• [[perseus:user:activities:MatrixProcessing:Basic:AddNoise|Add noise]]\\
+• [[perseus:user:activities:MatrixProcessing:Basic:CloneProcessing|Clone]]\\
+• [[perseus:user:activities:MatrixProcessing:Basic:ColumnCorrelations|Column correlation]]\\
+• [[perseus:user:activities:MatrixProcessing:Basic:CombineMainColumns|Combine main columns]]\\
+• [[perseus:user:activities:MatrixProcessing:Basic:CombineByIdentifiersProcessing|Combine rows by identifiers]]\\
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Basic:CreateNumericalColumn|Create numerical column]]**\\</ifauth>
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Basic:CreateNumericalRow|Create numerical row]]**\\</ifauth>
+• [[perseus:user:activities:MatrixProcessing:Basic:DensityEstimationProcessing|Density estimation]]\\
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Basic:FastPearsonCorrelations|Fast Pearson column correlation]]**\\</ifauth>
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Basic:ParameterDependentCorrelation|Parameter dependent correlation]]**\\</ifauth>
+• [[perseus:user:activities:MatrixProcessing:Basic:PerformanceCurves|Performance curves]]\\
+• [[perseus:user:activities:MatrixProcessing:Basic:Quantiles|Quantiles]]\\
+• [[perseus:user:activities:MatrixProcessing:Basic:RowCorrelations|Row correlation]]\\
+• [[perseus:user:activities:MatrixProcessing:Basic:SummaryStatisticsColumns|Summary statistics (columns)]]\\
+• [[perseus:user:activities:MatrixProcessing:Basic:SummaryStatisticsRows|Summary statistics (rows)]]\\
+• [[perseus:user:activities:MatrixProcessing:Basic:TransformationProc|Transform]]\\
+
+==== Clustering ====
+
+
+• [[perseus:user:activities:MatrixProcessing:Clustering:GenericClusteringProc|Generic clustering]]\\
+<ifauth @internal>• [[perseus:internal:activities:MatrixProcessing:Clustering:KernelPcaProc|Kernel PCA]]*\\</ifauth>
+<ifauth @internal>• [[perseus:internal:activities:MatrixProcessing:Clustering:KernelCanonicalCorrelationProc|Kernel canonical correlation]]*\\</ifauth>
+<ifauth @internal>• [[perseus:internal:activities:MatrixProcessing:Clustering:MotifClusteringProc|Motif clustering]]*\\</ifauth>
+<ifauth @internal>• [[perseus:internal:activities:MatrixProcessing:Clustering:PeptideClusteringProc|Peptide clustering]]*\\</ifauth>
+
+<ifauth @bioinformatics>==== Co-expression ====
+</ifauth>
+
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Co-expression:MatrixModuleEigengene|Module Eigengenes]]**\\</ifauth>
+
+<ifauth @bioinformatics>==== Filter ====
+</ifauth>
+
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Filter:FilterLabels|Filter labels]]**\\</ifauth>
+
+==== Filter columns ====
+
+
+• [[perseus:user:activities:MatrixProcessing:Filtercolumns:FilterCategoricalRow|Filter columns based on categorical row]]\\
+• [[perseus:user:activities:MatrixProcessing:Filtercolumns:FilterValidValuesColumns|Filter columns based on valid values]]\\
+
+==== Filter rows ====
+
+
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Filterrows:GroupedValidValueFilter|Filter grouped rows by valid values -- Jan]]**\\</ifauth>
+• [[perseus:user:activities:MatrixProcessing:Filterrows:FilterCategoricalColumn|Filter rows based on categorical column]]\\
+• [[perseus:user:activities:MatrixProcessing:Filterrows:FilterNumericalColumn|Filter rows based on numerical/main column]]\\
+• [[perseus:user:activities:MatrixProcessing:Filterrows:FilterRandomRows|Filter rows based on random sampling]]\\
+• [[perseus:user:activities:MatrixProcessing:Filterrows:FilterTextualColumn|Filter rows based on text column]]\\
+• [[perseus:user:activities:MatrixProcessing:Filterrows:FilterValidValuesRows|Filter rows based on valid values]]\\
+
+<ifauth @internal>==== Genome ====</ifauth>
+
+
+<ifauth @internal>• [[perseus:internal:activities:MatrixProcessing:Genome:AverageAlongChromosomes|Average along chromosomes]]*\\</ifauth>
+<ifauth @internal>• [[perseus:internal:activities:MatrixProcessing:Genome:AddGenomePosition|Create genome position]]*\\</ifauth>
+<ifauth @internal>• [[perseus:internal:activities:MatrixProcessing:Genome:GenomeAnalysis|Genome profiling]]*\\</ifauth>
+
+==== Imputation ====
+
+
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Imputation:BpcaImputation|BPCA imputation]]**\\</ifauth>
+<ifauth @internal>• [[perseus:internal:activities:MatrixProcessing:Imputation:KnnImputation|KNN imputation]]*\\</ifauth>
+• [[perseus:user:activities:MatrixProcessing:Imputation:ReplaceImputedByNan|Replace imputed values by NaN]]\\
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Imputation:ImputeSilacDoublets|Replace missing SILAC pair ratios]]**\\</ifauth>
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Imputation:ImputeSilacTriplets|Replace missing SILAC triplet ratios]]**\\</ifauth>
+• [[perseus:user:activities:MatrixProcessing:Imputation:ReplaceMissingByConstant|Replace missing values by constant]]\\
+• [[perseus:user:activities:MatrixProcessing:Imputation:ReplaceMissingFromGaussian|Replace missing values from normal distribution]]\\
+<ifauth @internal>• [[perseus:internal:activities:MatrixProcessing:Imputation:RowAverageImputation|Row average imputation]]*\\</ifauth>
+
+<ifauth @internal>==== Interaction ====</ifauth>
+
+
+<ifauth @internal>• [[perseus:internal:activities:MatrixProcessing:Interaction:InteractionDbAnnotation|Annotate from category row]]*\\</ifauth>
+
+==== Learning ====
+
+
+• [[perseus:user:activities:MatrixProcessing:Learning:ClassificationProcessing|Classification (cross-validation and prediction)]]\\
+• [[perseus:user:activities:MatrixProcessing:Learning:ClassificationFeatureSelection|Classification feature optimization]]\\
+• [[perseus:user:activities:MatrixProcessing:Learning:ClassificationParameterOptimization|Classification parameter optimization]]\\
+<ifauth @internal>• [[perseus:internal:activities:MatrixProcessing:Learning:RegressionProcessing|Regression (cross-validation and prediction)]]*\\</ifauth>
+<ifauth @internal>• [[perseus:internal:activities:MatrixProcessing:Learning:RegressionFeatureSelection|Regression feature optimization]]*\\</ifauth>
+<ifauth @internal>• [[perseus:internal:activities:MatrixProcessing:Learning:RegressionParameterOptimization|Regression parameter optimization]]*\\</ifauth>
+
+<ifauth @bioinformatics>==== Misc. (Processing) ====
+</ifauth>
+
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Misc:CreateGeneLists|Create gene lists]]**\\</ifauth>
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Misc:AssemblePeptides|Peptide assembly]]**\\</ifauth>
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Misc:SmallMolMasses|Small mol masses]]**\\</ifauth>
+
+<ifauth @bioinformatics>==== Modeling ====
+</ifauth>
+
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Modeling:SimmuneSimulationResultToMqOutput|Simulation results to MQ output]]**\\</ifauth>
+
+==== Modifications ====
+
+
+• [[perseus:user:activities:MatrixProcessing:Modifications:AddKnownSites|Add known sites]]\\
+• [[perseus:user:activities:MatrixProcessing:Modifications:AddLinearMotifs|Add linear motifs]]\\
+• [[perseus:user:activities:MatrixProcessing:Modifications:AddModificationCounts|Add modification counts]]\\
+• [[perseus:user:activities:MatrixProcessing:Modifications:AddRegulatorySites|Add regulatory sites]]\\
+• [[perseus:user:activities:MatrixProcessing:Modifications:AddSequenceFeatures|Add sequence features]]\\
+• [[perseus:user:activities:MatrixProcessing:Modifications:ExpandSiteTable|Expand site table]]\\
+• [[perseus:user:activities:MatrixProcessing:Modifications:KinaseSubstrateRelations|Kinase-substrate relations]]\\
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Modifications:SequenceWindowToVector|Sequence window conversion]]**\\</ifauth>
+• [[perseus:user:activities:MatrixProcessing:Modifications:ShortenMotifs|Shorten motif length]]\\
+
+==== Normalization ====
+
+
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Normalization:BackgroundSubtraction|Background subtraction]]**\\</ifauth>
+• [[perseus:user:activities:MatrixProcessing:Normalization:ClusterNorm|Cluster normalization]]\\
+• [[perseus:user:activities:MatrixProcessing:Normalization:Divide|Divide]]\\
+<ifauth @internal>• [[perseus:internal:activities:MatrixProcessing:Normalization:IntensityDependentNormalization2|Intensity-dependent normalization]]*\\</ifauth>
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Normalization:IntensityDependentNormalization|LOWESS normalization]]**\\</ifauth>
+• [[perseus:user:activities:MatrixProcessing:Normalization:NormalizeByColumn|Modify by column]]\\
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Normalization:NormalizeByGroup|Normalize by group -- Jan]]**\\</ifauth>
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Normalization:OptimalRotation|Optimal rotation]]**\\</ifauth>
+• [[perseus:user:activities:MatrixProcessing:Normalization:Rank|Rank]]\\
+• [[perseus:user:activities:MatrixProcessing:Normalization:ScaleToInterval|Scale to interval]]\\
+• [[perseus:user:activities:MatrixProcessing:Normalization:Subtract|Subtract]]\\
+• [[perseus:user:activities:MatrixProcessing:Normalization:SubtractRowCluster|Subtract row cluster]]\\
+• [[perseus:user:activities:MatrixProcessing:Normalization:UnZScore|Un-Z-score]]\\
+• [[perseus:user:activities:MatrixProcessing:Normalization:UnitVector|Unit vectors]]\\
+• [[perseus:user:activities:MatrixProcessing:Normalization:WidthAdjustment|Width adjustment]]\\
+• [[perseus:user:activities:MatrixProcessing:Normalization:ZScore|Z-score]]\\
+
+==== Outliers ====
+
+
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Outliers:ForwardReverseAnalysis|Forward-reverse analysis]]**\\</ifauth>
+<ifauth @internal>• [[perseus:internal:activities:MatrixProcessing:Outliers:MultiDimSignificance|Multidimensional significance]]*\\</ifauth>
+• [[perseus:user:activities:MatrixProcessing:Outliers:SignificanceA|Significance A]]\\
+• [[perseus:user:activities:MatrixProcessing:Outliers:SignificanceB|Significance B]]\\
+
+==== Quality ====
+
+
+• [[perseus:user:activities:MatrixProcessing:Quality:ConvertToNaN|Convert to NaN]]\\
+• [[perseus:user:activities:MatrixProcessing:Quality:CreateQualityMatrix|Create quality matrix]]\\
+• [[perseus:user:activities:MatrixProcessing:Quality:FilterQuality|Filter quality]]\\
+
+==== Rearrange ====
+
+
+• [[perseus:user:activities:MatrixProcessing:Rearrange:ChangeColumnType|Change column type]]\\
+<ifauth @internal>• [[perseus:internal:activities:MatrixProcessing:Rearrange:CollapseEvidenceFile|Collapse MaxQuant evidence File]]*\\</ifauth>
+<ifauth @internal>• [[perseus:internal:activities:MatrixProcessing:Rearrange:ColumnGroupingToMultipleRows|Column grouping to multiple rows]]*\\</ifauth>
+• [[perseus:user:activities:MatrixProcessing:Rearrange:CombineAnnotations|Combine annotations]]\\
+• [[perseus:user:activities:MatrixProcessing:Rearrange:CombineCategoricalColumns|Combine categorical columns]]\\
+• [[perseus:user:activities:MatrixProcessing:Rearrange:ConvertMultiNumeric|Convert multi-numeric column]]\\
+• [[perseus:user:activities:MatrixProcessing:Rearrange:DeHyphenateIds|De-hyphenate ids]]\\
+• [[perseus:user:activities:MatrixProcessing:Rearrange:DuplicateColumns|Duplicate columns]]\\
+• [[perseus:user:activities:MatrixProcessing:Rearrange:ExpandMultiNumeric|Expand multi-numeric and text columns]]\\
+• [[perseus:user:activities:MatrixProcessing:Rearrange:FillCategoricalColumn|Fill categorical columns]]\\
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Rearrange:MapColumnsToUniprot|Map columns to Uniprot -- Jan]]**\\</ifauth>
+<ifauth @internal>• [[perseus:internal:activities:MatrixProcessing:Rearrange:MatrixToList|Matrix to List]]*\\</ifauth>
+• [[perseus:user:activities:MatrixProcessing:Rearrange:ProcessTextColumns|Process text column]]\\
+• [[perseus:user:activities:MatrixProcessing:Rearrange:RemoveEmptyColumns|Remove empty columns]]\\
+• [[perseus:user:activities:MatrixProcessing:Rearrange:RenameColumns|Rename columns]]\\
+• [[perseus:user:activities:MatrixProcessing:Rearrange:RenameColumnsRegexp|Rename columns [reg. ex.]]]\\
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Rearrange:RenameColumnsFromFile|Rename columns from file -- Jan]]**\\</ifauth>
+• [[perseus:user:activities:MatrixProcessing:Rearrange:ReorderColumnsByNumAnnotationRow|Reorder columns by numerical annotation row]]\\
+• [[perseus:user:activities:MatrixProcessing:Rearrange:ReorderRemoveAnnotRows|Reorder/remove annotation rows]]\\
+• [[perseus:user:activities:MatrixProcessing:Rearrange:ReorderRemoveColumns|Reorder/remove columns]]\\
+• [[perseus:user:activities:MatrixProcessing:Rearrange:SearchTextColumns|Search text column]]\\
+• [[perseus:user:activities:MatrixProcessing:Rearrange:SortByColumn|Sort by column]]\\
+<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Rearrange:SortColumns|Sort columns -- Jan]]**\\</ifauth>
+• [[perseus:user:activities:MatrixProcessing:Rearrange:Transpose|Transpose]]\\
+• [[perseus:user:activities:MatrixProcessing:Rearrange:UniqueRows|Unique rows]]\\
+• [[perseus:user:activities:MatrixProcessing:Rearrange:UniqueValues|Unique values]]\\
+
+==== Tests ====
+
+
+<ifauth @internal>• [[perseus:internal:activities:MatrixProcessing:Tests:CorrelationTests|Correlation tests]]*\\</ifauth>
+<ifauth @internal>• [[perseus:internal:activities:MatrixProcessing:Tests:FourWayAnova|Four-way ANOVA]]*\\</ifauth>
+• [[perseus:user:activities:MatrixProcessing:Tests:MultipleSampleTestProcessing|Multiple-sample tests]]\\
+• [[perseus:user:activities:MatrixProcessing:Tests:OneSampleTestProcessing|One-sample tests]]\\
+• [[perseus:user:activities:MatrixProcessing:Tests:PostHocTests|Post hoc tests]]\\
+• [[perseus:user:activities:MatrixProcessing:Tests:ThreeWayAnova|Three-way ANOVA]]\\
+• [[perseus:user:activities:MatrixProcessing:Tests:TwoSampleTestProcessing|Two-sample tests]]\\
+• [[perseus:user:activities:MatrixProcessing:Tests:TwoWayAnova|Two-way ANOVA]]\\
+
+==== Time series ====
+
+
+• [[perseus:user:activities:MatrixProcessing:Timeseries:CyclicAnnotation|Cyclic annotation enrichment]]\\
+• [[perseus:user:activities:MatrixProcessing:Timeseries:PeriodicityAnalysis|Periodicity analysis]]\\
+• [[perseus:user:activities:MatrixProcessing:Timeseries:Periodogram|Periodogram]]\\
+• [[perseus:user:activities:MatrixProcessing:Timeseries:TimeSeriesOrdering|Time series ordering]]\\
+
+
+
+
+

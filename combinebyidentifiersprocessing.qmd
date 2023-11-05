@@ -1,0 +1,59 @@
+---
+title: "Combine rows by identifiers"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+---
+
+#General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Basic (Processing)
+-   **Source code:** [CombineByIdentifiersProcessing.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Basic/CombineByIdentifiersProcessing.cs)
+
+# Brief description
+
+Collapses multiple rows with same identifiers in the specified identifier column into a single row. For numeric rows it can be specified how multiple values should be summarized, e.g. by mean or median.
+
+Output: Matrix with respective rows collapsed.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## ID column
+
+Selected text column containing the IDs that are going to be clustered (default: first text column in the matrix)
+
+## Keep rows without ID
+
+If checked, rows without ID are kept and each as a separate row (default: unchecked).
+
+## Average type for expression columns
+
+Definition how numeric values in expression columns of clustered rows should be averaged (default: Median). The average operation can be selected from a predefined list:
+
+-   Sum
+-   Mean
+-   Median
+-   Maximum
+-   Minimum
+
+# Parameter window
+
+![](images/basic-combine_rows_by_identifiers-edited.png)

@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Cox Lab">
-<meta name="dcterms.date" content="2023-11-03">
+<meta name="dcterms.date" content="2023-10-26">
 
-<title>Profile plot</title>
+<title>Column Correlations</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -144,7 +144,13 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general"><span class="header-section-number">1</span> General</a></li>
   <li><a href="#brief-description" id="toc-brief-description" class="nav-link" data-scroll-target="#brief-description"><span class="header-section-number">2</span> Brief description</a></li>
-  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters"><span class="header-section-number">3</span> Parameters</a></li>
+  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters"><span class="header-section-number">3</span> Parameters</a>
+  <ul>
+  <li><a href="#type" id="toc-type" class="nav-link" data-scroll-target="#type"><span class="header-section-number">3.1</span> Type</a></li>
+  <li><a href="#rows" id="toc-rows" class="nav-link" data-scroll-target="#rows"><span class="header-section-number">3.2</span> Rows</a></li>
+  <li><a href="#columns" id="toc-columns" class="nav-link" data-scroll-target="#columns"><span class="header-section-number">3.3</span> Columns</a></li>
+  </ul></li>
+  <li><a href="#parameter-window" id="toc-parameter-window" class="nav-link" data-scroll-target="#parameter-window"><span class="header-section-number">4</span> Parameter window</a></li>
   </ul>
 </nav>
     </div>
@@ -153,7 +159,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Profile plot</h1>
+<h1 class="title">Column Correlations</h1>
 </div>
 
 
@@ -170,7 +176,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 3, 2023</p>
+      <p class="date">October 26, 2023</p>
     </div>
   </div>
   
@@ -184,14 +190,15 @@ ul.task-list li input[type="checkbox"] {
 <section id="general" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> General</h1>
 <ul>
-<li><strong>Type:</strong> - Matrix Analysis</li>
-<li><strong>Heading:</strong> - Visualization</li>
+<li><strong>Type:</strong> - Matrix Processing</li>
+<li><strong>Heading:</strong> - Basic (Processing)</li>
 <li><strong>Source code:</strong> not public.</li>
 </ul>
 </section>
 <section id="brief-description" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Brief description</h1>
-<p>Display each row of the matrix as a quantitative profile with each column defining a data point. Profiles can be queried by similarity to a reference profile.</p>
+<p>Correlation coefficients are calculated between the specified columns of the matrix.</p>
+<p>Output: A matrix containing the correlation coefficients.</p>
 <!-- This comment and the line above it must be preserved when editing this file!
 The recommended sections are these, but they may be changed on a case by case basis.
 ===== Detailed description =====
@@ -202,7 +209,48 @@ Make changes only below this line! -->
 </section>
 <section id="parameters" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Parameters</h1>
-<p>“Profile plot” has no parameters.</p>
+<section id="type" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="type"><span class="header-section-number">3.1</span> Type</h2>
+<p>Defines the measure of correlation that should be calculated between the selected columns (default: Pearson correlation). It can be selected from a list of correlation coefficients:</p>
+<ul>
+<li>Log2(Absence-presence enrichment factor)</li>
+<li>Absence-presence -Log10(p-value)</li>
+<li>Numbers of valid pairs</li>
+<li>Valid pairs percentage</li>
+<li>Pearson correlation</li>
+<li>-Log10(Pearson p-value)</li>
+<li>-Log10(Pearson p-value) [correlation]</li>
+<li>-Log10(Pearson p-value) [anti-correlation]</li>
+<li>R squared</li>
+<li>Spearman rank correlation</li>
+<li>-Log10(Spearman p-value)</li>
+<li>-Log10(Spearman p-value) [correlation]</li>
+<li>-Log10(Spearman p-value) [anti-correlation]</li>
+<li>Kendall rank correlation</li>
+<li>Distance correlation</li>
+<li>Mutual information</li>
+<li>Euclidean distance</li>
+<li>Manhattan distance</li>
+<li>Maximum distance</li>
+</ul>
+</section>
+<section id="rows" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="rows"><span class="header-section-number">3.2</span> Rows</h2>
+<p>Selected expression/numerical columns that will be the rows of the generated correlation matrix (default: all expression columns are selected).</p>
+</section>
+<section id="columns" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="columns"><span class="header-section-number">3.3</span> Columns</h2>
+<p>Selected expression/numerical columns that will be the columns of the generated correlation matrix (default: all expression columns are selected).</p>
+</section>
+</section>
+<section id="parameter-window" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Parameter window</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/basic-column_correlation-edited.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Perseus pop-up window: Basic -&gt; Column correlation</figcaption>
+</figure>
+</div>
 
 
 </section>
