@@ -1,0 +1,36 @@
+---
+title: "Reorder columns by numerical annotation row"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+csl: nature.csl
+---
+
+# General
+
+  * **Type:** - Matrix Processing
+  * **Heading:** - Rearrange
+  * **Source code:** [ReorderColumnsByNumAnnotationRow.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Rearrange/ReorderColumnsByNumAnnotationRow.cs)
+
+# Brief description
+
+The order of the columns as they appear in the matrix is changed according to the values in a numerical row in ascending order. This can be useful for displaying columns in a specific order in a heat map.
+
+Output: Same matrix but with columns in the new order implied by a numerical row.
+
+
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->

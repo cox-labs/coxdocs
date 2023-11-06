@@ -1,0 +1,49 @@
+---
+title: "Fill categorical columns"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+csl: nature.csl
+---
+
+# General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Rearrange
+-   **Source code:** not public.
+
+# Brief description
+
+Empty cells in the selected categorical columns will be filled with the given term
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Columns
+
+Selected categorical columns, whose empty cells should be filled with the defined "Value" (default: all categorical columns are selected).
+
+## Value
+
+The empty cells of the selected categorical columns will be filled with the defined value, which has to be typed in the predefined text field (default: empty).
+
+# Parameter window
+
+![](images/rearrange-fill_categorical_columns-edited.png)
+

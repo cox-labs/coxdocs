@@ -10,6 +10,8 @@ format:
     number-depth: 4
 editor: source
 date: today
+bibliography: references.bib
+csl: nature.csl
 ---
 
 ------------------------------------------------------------------------

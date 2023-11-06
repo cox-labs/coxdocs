@@ -11,6 +11,7 @@ format:
 editor: source
 date: today
 bibliography: references.bib
+csl: nature.csl
 ---
 
 
@@ -109,8 +110,8 @@ the Type or Heading of interest using the Table of Contents on the right.
 * [3D plot](docs/scatterplot3danalysis.html)
 * [Histogram](docs/histogram.html)
 * [Multi scatter plot](docs/multiscatteranalysis.html)
-* [Profile plot](ProfilePlot) [[perseus:user:activities:MatrixAnalysis:Visualization:|]]\\
-* [Scatter plot](docs/scatterplotanalysis.html) [[perseus:user:activities:MatrixAnalysis:Visualization:|]]\\
+* [Profile plot](docs/profileplot.html)
+* [Scatter plot](docs/scatterplotanalysis.html)
 
 <!-- 
 * [Tree map](TreeMapAnalysis) [[perseus:bioinformatics:activities:MatrixAnalysis:Visualization:|]]**\\</ifauth>
@@ -122,9 +123,9 @@ the Type or Heading of interest using the Table of Contents on the right.
 
 ## Basic (MultiProcessing)
 
-*[Matching columns by name](docs/matchingcolumnsbyname.html)
-*[Matching rows by name](docs/matchingrowsbyname.html)
-*[Replace strings](docs/replacestrings.html)
+* [Matching columns by name](docs/matchingcolumnsbyname.html)
+* [Matching rows by name](docs/matchingrowsbyname.html)
+* [Replace strings](docs/replacestrings.html)
 
 <!-- 
 *[Venn diagram](VennMultiProcessing) [[perseus:internal:activities:MatrixMultiProcessing:Basic:|]]
@@ -283,20 +284,17 @@ values from normal distribution]]\\
 ## Learning
 
 * [Classification (cross-validation and prediction](docs/classificationprocessing.html)
+* [Classification feature optimization](docs/ClassificationFeatureSelection.html)
+* [Classification parameter optimization](docs/ClassificationParameterOptimization.html)
+
+<!-- 
+* [Regression (cross-validation and prediction](RegressionProcessing) [[perseus:internal:activities:MatrixProcessing:Learning:|)]]*\\</ifauth>
+* [Regression feature optimization](RegressionFeatureSelection) [[perseus:internal:activities:MatrixProcessing:Learning:|]]*\\</ifauth>
+* [Regression parameter optimization](RegressionParameterOptimization) [[perseus:internal:activities:MatrixProcessing:Learning:|]]*\\</ifauth>
+-->
 
 
-
-
-
-* []()  [[perseus:user:activities:MatrixProcessing:Learning:ClassificationFeatureSelection|Classification feature optimization]]\\
-* []()  [[perseus:user:activities:MatrixProcessing:Learning:ClassificationParameterOptimization|Classification parameter optimization]]\\
-
-* []() [[perseus:internal:activities:MatrixProcessing:Learning:RegressionProcessing|Regression (cross-validation and prediction)]]*\\</ifauth>
-* []() [[perseus:internal:activities:MatrixProcessing:Learning:RegressionFeatureSelection|Regression feature optimization]]*\\</ifauth>
-* []() [[perseus:internal:activities:MatrixProcessing:Learning:RegressionParameterOptimization|Regression parameter optimization]]*\\</ifauth>
-
-
-
+<!-- 
 <ifauth @bioinformatics>==== Misc. (Processing) ====
 </ifauth>
 
@@ -308,84 +306,94 @@ values from normal distribution]]\\
 </ifauth>
 
 <ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Modeling:SimmuneSimulationResultToMqOutput|Simulation results to MQ output]]**\\</ifauth>
+-->
 
-==== Modifications ====
+## Modifications
 
+* [Add known sites](docs/addknownsites.html)
+* [Add linear motifs](docs/addlinearmotifs.html)
+* [Add modification counts](docs/addmodificationcounts.html)
+* [Add regulatory sites](docs/addregulatorysites.html)
+* [Add sequence features](docs/addsequencefeatures.html)
+* [Expand site table](docs/expandsitetable.html)
+* [Kinase-substrate relations](docs/kinasesubstraterelations.html)
+* [Shorten motif length](docs/shortenmotifs.html)
 
-• [[perseus:user:activities:MatrixProcessing:Modifications:AddKnownSites|Add known sites]]\\
-• [[perseus:user:activities:MatrixProcessing:Modifications:AddLinearMotifs|Add linear motifs]]\\
-• [[perseus:user:activities:MatrixProcessing:Modifications:AddModificationCounts|Add modification counts]]\\
-• [[perseus:user:activities:MatrixProcessing:Modifications:AddRegulatorySites|Add regulatory sites]]\\
-• [[perseus:user:activities:MatrixProcessing:Modifications:AddSequenceFeatures|Add sequence features]]\\
-• [[perseus:user:activities:MatrixProcessing:Modifications:ExpandSiteTable|Expand site table]]\\
-• [[perseus:user:activities:MatrixProcessing:Modifications:KinaseSubstrateRelations|Kinase-substrate relations]]\\
-<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Modifications:SequenceWindowToVector|Sequence window conversion]]**\\</ifauth>
-• [[perseus:user:activities:MatrixProcessing:Modifications:ShortenMotifs|Shorten motif length]]\\
+<!-- 
+* [Sequence window conversion](SequenceWindowToVector) [[perseus:bioinformatics:activities:MatrixProcessing:Modifications:|]]
+-->
 
-==== Normalization ====
-
-
-<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Normalization:BackgroundSubtraction|Background subtraction]]**\\</ifauth>
-• [[perseus:user:activities:MatrixProcessing:Normalization:ClusterNorm|Cluster normalization]]\\
-• [[perseus:user:activities:MatrixProcessing:Normalization:Divide|Divide]]\\
-<ifauth @internal>• [[perseus:internal:activities:MatrixProcessing:Normalization:IntensityDependentNormalization2|Intensity-dependent normalization]]*\\</ifauth>
-<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Normalization:IntensityDependentNormalization|LOWESS normalization]]**\\</ifauth>
-• [[perseus:user:activities:MatrixProcessing:Normalization:NormalizeByColumn|Modify by column]]\\
-<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Normalization:NormalizeByGroup|Normalize by group -- Jan]]**\\</ifauth>
-<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Normalization:OptimalRotation|Optimal rotation]]**\\</ifauth>
-• [[perseus:user:activities:MatrixProcessing:Normalization:Rank|Rank]]\\
-• [[perseus:user:activities:MatrixProcessing:Normalization:ScaleToInterval|Scale to interval]]\\
-• [[perseus:user:activities:MatrixProcessing:Normalization:Subtract|Subtract]]\\
-• [[perseus:user:activities:MatrixProcessing:Normalization:SubtractRowCluster|Subtract row cluster]]\\
-• [[perseus:user:activities:MatrixProcessing:Normalization:UnZScore|Un-Z-score]]\\
-• [[perseus:user:activities:MatrixProcessing:Normalization:UnitVector|Unit vectors]]\\
-• [[perseus:user:activities:MatrixProcessing:Normalization:WidthAdjustment|Width adjustment]]\\
-• [[perseus:user:activities:MatrixProcessing:Normalization:ZScore|Z-score]]\\
-
-==== Outliers ====
+## Normalization
 
 
-<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Outliers:ForwardReverseAnalysis|Forward-reverse analysis]]**\\</ifauth>
-<ifauth @internal>• [[perseus:internal:activities:MatrixProcessing:Outliers:MultiDimSignificance|Multidimensional significance]]*\\</ifauth>
-• [[perseus:user:activities:MatrixProcessing:Outliers:SignificanceA|Significance A]]\\
-• [[perseus:user:activities:MatrixProcessing:Outliers:SignificanceB|Significance B]]\\
+* [Cluster normalization](docs/ClusterNorm.html)
+* [Divide](docs/divide.html)
+* [Modify by column](docs/normalizebycolumn.html)
+* [Rank](docs/rank.html)
+* [Scale to interval](docs/scaletointerval.html)
+* [Subtract](docs/subtract.html)
+* [Subtract row cluster](docs/subtractrowcluster.html)
+* [Un-Z-score](docs/unzscore.html)
+* [Unit vectors](docs/unitvector.html)
+* [Width adjustment](docs/widthadjustment.html)
+* [Z-score](docs/zscore.html)
 
-==== Quality ====
+<!-- 
+* [Background subtraction](BackgroundSubtraction) [[perseus:bioinformatics:activities:MatrixProcessing:Normalization:|]]
+* [Intensity-dependent normalization](IntensityDependentNormalization2) [perseus:internal:activities:MatrixProcessing:Normalization:|]]
+* [LOWESS normalization](IntensityDependentNormalization) [[perseus:bioinformatics:activities:MatrixProcessing:Normalization:|]]
+* [Normalize by group](NormalizeByGroup) [[perseus:bioinformatics:activities:MatrixProcessing:Normalization:|]]
+* [Optimal rotation](OptimalRotation) [[perseus:bioinformatics:activities:MatrixProcessing:Normalization:|]]
+-->
 
+## Outliers
 
-• [[perseus:user:activities:MatrixProcessing:Quality:ConvertToNaN|Convert to NaN]]\\
-• [[perseus:user:activities:MatrixProcessing:Quality:CreateQualityMatrix|Create quality matrix]]\\
-• [[perseus:user:activities:MatrixProcessing:Quality:FilterQuality|Filter quality]]\\
+* [Significance A](docs/significancea.html)
+* [Significance B](docs/significanceb.html)
 
-==== Rearrange ====
+<!-- 
+* [Forward-reverse analysis](ForwardReverseAnalysis) [[perseus:bioinformatics:activities:MatrixProcessing:Outliers:|]]
+* [Multidimensional significance](MultiDimSignificance) [[perseus:internal:activities:MatrixProcessing:Outliers:|]]
+-->
 
+## Quality
 
-• [[perseus:user:activities:MatrixProcessing:Rearrange:ChangeColumnType|Change column type]]\\
-<ifauth @internal>• [[perseus:internal:activities:MatrixProcessing:Rearrange:CollapseEvidenceFile|Collapse MaxQuant evidence File]]*\\</ifauth>
-<ifauth @internal>• [[perseus:internal:activities:MatrixProcessing:Rearrange:ColumnGroupingToMultipleRows|Column grouping to multiple rows]]*\\</ifauth>
-• [[perseus:user:activities:MatrixProcessing:Rearrange:CombineAnnotations|Combine annotations]]\\
-• [[perseus:user:activities:MatrixProcessing:Rearrange:CombineCategoricalColumns|Combine categorical columns]]\\
-• [[perseus:user:activities:MatrixProcessing:Rearrange:ConvertMultiNumeric|Convert multi-numeric column]]\\
-• [[perseus:user:activities:MatrixProcessing:Rearrange:DeHyphenateIds|De-hyphenate ids]]\\
-• [[perseus:user:activities:MatrixProcessing:Rearrange:DuplicateColumns|Duplicate columns]]\\
-• [[perseus:user:activities:MatrixProcessing:Rearrange:ExpandMultiNumeric|Expand multi-numeric and text columns]]\\
-• [[perseus:user:activities:MatrixProcessing:Rearrange:FillCategoricalColumn|Fill categorical columns]]\\
-<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Rearrange:MapColumnsToUniprot|Map columns to Uniprot -- Jan]]**\\</ifauth>
-<ifauth @internal>• [[perseus:internal:activities:MatrixProcessing:Rearrange:MatrixToList|Matrix to List]]*\\</ifauth>
-• [[perseus:user:activities:MatrixProcessing:Rearrange:ProcessTextColumns|Process text column]]\\
-• [[perseus:user:activities:MatrixProcessing:Rearrange:RemoveEmptyColumns|Remove empty columns]]\\
-• [[perseus:user:activities:MatrixProcessing:Rearrange:RenameColumns|Rename columns]]\\
-• [[perseus:user:activities:MatrixProcessing:Rearrange:RenameColumnsRegexp|Rename columns [reg. ex.]]]\\
-<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Rearrange:RenameColumnsFromFile|Rename columns from file -- Jan]]**\\</ifauth>
-• [[perseus:user:activities:MatrixProcessing:Rearrange:ReorderColumnsByNumAnnotationRow|Reorder columns by numerical annotation row]]\\
-• [[perseus:user:activities:MatrixProcessing:Rearrange:ReorderRemoveAnnotRows|Reorder/remove annotation rows]]\\
-• [[perseus:user:activities:MatrixProcessing:Rearrange:ReorderRemoveColumns|Reorder/remove columns]]\\
-• [[perseus:user:activities:MatrixProcessing:Rearrange:SearchTextColumns|Search text column]]\\
-• [[perseus:user:activities:MatrixProcessing:Rearrange:SortByColumn|Sort by column]]\\
-<ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Rearrange:SortColumns|Sort columns -- Jan]]**\\</ifauth>
-• [[perseus:user:activities:MatrixProcessing:Rearrange:Transpose|Transpose]]\\
-• [[perseus:user:activities:MatrixProcessing:Rearrange:UniqueRows|Unique rows]]\\
-• [[perseus:user:activities:MatrixProcessing:Rearrange:UniqueValues|Unique values]]\\
+* [Convert to NaN](docs/converttonan.html)
+* [Create quality matrix](docs/createqualitymatrix.html)
+* [Filter quality](docs/filterquality.html)
+
+## Rearrange
+
+* [Change column type](docs/changecolumntype.html)
+* [Combine annotations](docs/combineannotations.html)
+* [Combine categorical columns](docs/combinecategoricalcolumns.html)
+* [Convert multi-numeric column](docs/convertmultinumeric.html)
+* [De-hyphenate ids](docs/dehyphenateids.html) 
+* [Duplicate columns](docs/duplicatecolumns.html)
+* [Expand multi-numeric and text columns](docs/expandmultinumeric.html)
+* [Fill categorical columns](docs/fillcategoricalcolumn.html)
+* [Process text column](docs/processtextcolumns.html)
+* [Remove empty columns](docs/removeemptycolumns.html)
+* [Rename columns](docs/renamecolumns.html)
+* [Rename columns \[reg. ex.\]](docs/renamecolumnsregexp.html)
+* [Reorder columns by numerical annotation row](docs/reordercolumnsbynumannotationrow.html)
+* [Reorder/remove annotation rows](docs/reorderremoveannotrows.html)
+* [remove columns](docs/reorderremoveannotrows.html)
+* [Search text column](docs/searchtextcolumns.html)
+* [Sort by column](docs/sortbycolumn.html)
+* [Transpose](docs/transpose.html)
+* [Unique rows](docs/uniquerows.html)
+* [Unique values](docs/uniquevalues.html)
+
+<!-- 
+* [Collapse MaxQuant evidence File](CollapseEvidenceFile) [[perseus:internal:activities:MatrixProcessing:Rearrange:|]]
+* [Column grouping to multiple rows](ColumnGroupingToMultipleRows) [[perseus:internal:activities:MatrixProcessing:Rearrange:|]]
+* [Map columns to Uniprot](MapColumnsToUniprot) [[perseus:bioinformatics:activities:MatrixProcessing:Rearrange:|]]
+* [Matrix to List](MatrixToList) [[perseus:internal:activities:MatrixProcessing:Rearrange:|]]
+* [Rename columns from file](RenameColumnsFromFile) [[perseus:bioinformatics:activities:MatrixProcessing:Rearrange:|]]
+* [Sort columns](SortColumns) [[perseus:bioinformatics:activities:MatrixProcessing:Rearrange:|]]
+-->
+
 
 ==== Tests ====
 

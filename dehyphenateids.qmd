@@ -1,0 +1,45 @@
+---
+title: "De-hyphenate ids"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+csl: nature.csl
+---
+
+# General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Rearrange
+-   **Source code:** [DeHyphenateIds.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Basic/DeHyphenateIds.cs)
+
+# Brief description
+
+Identifiers will be truncated at the occurence of hyphens.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Id column
+
+Selected text column containing the IDs, where the hyphens should be removed (default: first text column in the matrix).
+
+# Parameter window
+
+![](images/rearrange-de-hypenate_ids-edited.png)
+

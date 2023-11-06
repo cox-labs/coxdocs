@@ -1,0 +1,349 @@
+---
+title: "Classification parameter optimization"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+csl: nature.csl
+---
+
+# General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Learning
+-   **Source code:** not public.
+
+# Brief description
+
+The cross-validation performance is monitored as a function of one or two parameters of the classification or feature selection algorithms.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Items are in
+
+It specifies if the items that should be used for the cross-validation or the prediction can be found in "Columns" or "Rows" (default: Columns).
+
+### Classes
+
+Selected categorical row or column that contains the class of the items (default: first categorical row/column in the matrix).
+If items are in columns then the classes are in a categorical row, and if items are in rows the classes are in a categorical column.
+
+### Sub-classes
+
+This parameter is just relevant, if the parameter "Items are in" is set to "Columns".
+It specifies whether sub-classes should be taken into consideration for the classification process (default: `<None>`).
+
+## Classification algorithm
+
+Defines the algorithm that should be used for the classification (default: Support vector machine).
+The algorithm can be selected from a predefined list:
+
+-   Support vector machine
+-   Fisher LDA
+-   KNN
+
+### Kernel
+
+This parameter is just relevant, if the parameter "Classification algorithm" is set to "Support vector machine".
+It defines the kernel function that is used to classify items (default: linear).
+The kernel function can be selected from a predefined list:
+
+<latex> \begin{align}
+\text{Linear:} \ K(x,y) &= x^{T}y \\
+\text{RBF:}    \  K(x,y) &= \exp (-\sigma\|x-y\|^2) , \sigma \> 0 \\
+\text{Polynomial:} \ K(x,y) &= (\gamma x^{T}y + r)^d , \gamma \> 0 \\
+\text{Sigmoid:} \  K(x,y) &= tanh(\gamma x^{T}y + r) \\
+\end{align} </latex>
+
+Depending on the chosen function 1 to 4 parameters must be specified.
+
+#### Sigma
+
+This parameter is just relevant, if "Kernel" is set to "RBF".
+It defines the slope of the function (see formula above, default: 1).
+
+#### Degree
+
+This parameter is just relevant, if "Kernel" is set to "Polynomial".
+It defines the degree of the polynom (see formula above, default: 3).
+
+#### Gamma
+
+This parameter is just relevant, if "Kernel" is set to "Polynomial" or "Sigmoid".
+It defines the slope of the function (see formula above, default: 0.01).
+
+#### Coef
+
+This parameter is just relevant, if "Kernel" is set to "Polynomial" or "Sigmoid".
+It defines a constant (see formula above, default: 0).
+
+#### C
+
+This parameter is just relevant, if the parameter "Classification algorithm" is set to "Support vector machine".
+C is a penalty constant (default: 10).
+Large C corresponds to large penalties for misclassification and resembles a hard margin classifier.
+
+### Distance
+
+This parameter is just relevant, if the parameter "Classification algorithm" is set to "KNN".
+It defines the selected distance that will be used to assign the nearest neighbours to an item and therefore classify it (default: Euclidean).
+The distance can be selected from a predefined list:
+
+-   Euclidean
+-   L1
+-   Maximum
+-   Lp
+-   Pearson correlation
+-   Spearman correlation
+-   Cosine
+-   Canberra
+
+### Number of neighbours
+
+This parameter is just relevant, if the parameter "Classification algorithm" is set to "KNN".
+It specifies the number of closest neighbours that are taken into account for the classification of an item (default: 5).
+
+### Feature selection
+
+Defines whether feature selection should be applied by ranking and reducing the features before the classification process (default: None).
+
+### Feature ranking method
+
+This parameter is just relevant, if the parameter "Feature selection" is set to "From feature ranking".
+It specifies which features method will be used to rank the features (default: ANOVA).
+The method can be selected from a predefined list:
+
+-   ANOVA
+-   Hybrid SVM
+-   MANOVA
+-   One-sided t-test
+-   Two-way ANOVA
+-   SVM
+-   RFE-SVM
+-   Golub
+
+Depending on the ranking method up to 4 parameters can be specified.
+
+#### S0
+
+This parameter is just relevant, if the parameter "Feature ranking method" is set to "ANOVA", "Hybrid SVM", "One-sided t-test" or "MANOVA".
+It defines the artificial within groups variance and controls the relative importance of resulted test p-values and difference between means (default: 0).
+At s0=0 only the p-value matters, while at nonzero s0 also the difference of means plays a role.
+See [@tusher2001] for details.
+
+#### C
+
+This parameter is just relevant, if the parameter "Feature ranking method" is set to "Hybrid SVM", "SVM" or "RFE-SVM".
+C is a penalty constant (default: 100).
+Large C corresponds to large penalties for misclassification and resembles a hard margin classifier.
+
+#### Reduction factor
+
+This parameter is just relevant, if the parameter "Feature ranking method" is set to "Hybrid SVM" or "RFE-SVM".
+It defines the factor by what the number of features will be reduced step by step during the ranking process (default: 1.414).
+
+#### Number of top ANOVA features
+
+This parameter is just relevant, if the parameter "Feature ranking method" is set to "MANOVA".
+It defines how many of the selected features are top ANOVA features.
+
+#### Side
+
+This parameter is just relevant, if the parameter "Feature ranking method" is set to "One-sided t-test".
+It defines the "Left" or "Right" side, where the null hypothesis can be rejected (default: Right).
+
+#### Orthogonal grouping
+
+This parameter is just relevant, if the parameter "Feature ranking method" is set to "Two-way ANOVA".
+It defines the grouping of the data according to a given categorical column or row to distinguish the effects of the groups.
+
+#### Min. orthogonal p-value
+
+This parameter is just relevant, if the parameter "Feature ranking method" is set to "Two-way ANOVA".
+Test results above this p-value are defined as orthogonal (default: 0).
+
+#### Min. interaction p-value
+
+This parameter is just relevant, if the parameter "Feature ranking method" is set to "Two-way ANOVA".
+Test results above this p-value are defined as interacting, hence the effects of one group do not depend on the other group (default: 0).
+
+#### Skip if orthog. P-value is better
+
+This parameter is just relevant, if the parameter "Feature ranking method" is set to "Two-way ANOVA".
+It defines whether features with an orthogonal p-value better than the given value in "Min. interaction p-value" are filtered out (default: unchecked).
+
+#### Number of features
+
+Defines how many features should be selected (default: 100).
+
+#### Group-wise feature sel.
+
+If checked, for each defined group in the data a different amount of features can be selected, which are then used for the classification (default: unchecked).
+The numbers can be defined either by typing in the text field in the form \[Group,number\] or by using the Edit button.
+
+## Parameter scan type
+
+Defines whether a "One-dimensional scan" or a "Two-dimensional scan" should be applied (default: One-dimensional scan).
+A "One-dimensional scan" just scans through different parameter values of one parameter, whereas in a "Two-dimensional scan" two parameters can be chosen for which different values will be tested to find the optimal combination.
+
+### Parameter
+
+Selected parameter, for which different values should be used to figure out the best setting for the classification problem.
+The parameter can be selected from a predefined list including the parameters of the selected classification algorithm as well as the parameters of the selected feature ranking method (default: first parameter available of "Classification algorithm" and "Feature selection").
+
+### Number of values
+
+Defines the number of values that should be tested (default: 5).
+
+### Step size
+
+Defines the size by which the parameter should be increased step by step (default: 1).
+The operation how to increase the parameter values can be defined in "Step type".
+
+### Step type
+
+Specifies whether the value defined in "Step size" is added to the parameter value to calculate the new value for the parameter, or if the values are multiplied with each other to get the new parameter value (default: Additive).
+
+## Cross-validation type
+
+This parameter is just relevant, if the parameter "Cross-validate assigned items" is checked.
+It defines the type of cross-validation that should be applied to the data set (default: n-fold).
+The type can be selected from a predefined list:
+
+-   **Leave one out**: As many predictors are built as there are items in the data set. Thus for each predictor one item is left out to train the model and the predictor will be evaluated using the left out item. In the end the average prediction performance will be returned.
+-   **n-fold:** The items of the data set are split into n equally sized chunks. n predictors will be generated. In each of these prediction models the union of n-1 of these chunks are taken as the training set and the remaining chunk is the test set. In the end the average prediction performance will be returned.
+-   **Random sampling**: The number of predictors is specified by the "Number of repeats" parameter. The number of items taken out to form the test set (and not used for building the predictor) is specified by the "Test set percentage" parameter. In the end the average prediction performance will be returned.
+
+Depending on the cross-validation type 0 to 2 parameters have to specified:
+
+### n
+
+This parameter is just relevant, if the parameter "Cross-validation type" is set to "n-fold".
+It defines the number of partitions the data is divided into (default: 4).
+
+### Test set percentage
+
+This parameter is just relevant, if the parameter "Cross-validation type" is set to "Random sampling".
+It specifies the percentage of the data that is used for testing the trained model (default: 15).
+The remaining data is used for the training process.
+
+### Number of repeats
+
+This parameter is just relevant, if the parameter "Cross-validation type" is set to "Random sampling".
+It specifies how often the cross-validation process is repeated (default: 250).
+In every round the data is again divided according to the previously defined percentage.
+
+## Number of threads
+
+Defines the number of threads that should be used for the process (default: 1).
+The number of threads is limited by number of available cores of the machine Perseus in running on.
+
+# Parameter window
+
+![Classification parameter optimization](images/learning-classification-parameter_optimization-edited.png)
+
+
+# Theoretical background
+
+## Support vector machines
+
+Support vector machines (*SVMs*) were largely developed in the 1990s by Vapnik and co-workers on a basis of a separable bipartition problem at the AT & T Bell Laboratories (see [@Kotsiantis07]. *SVMs* are a family of data analysis algorithms, based on convex quadratic programming, whose successful use has been demonstrated in classification, regression and clustering problems. Thus, *SVMs* are now the state-of-the-art tools for non-linear input-output knowledge. The following section covers a brief and basic description of *SVMs*, but detailed explanations can be found in V. N. Vapniks [@vapnik2000], N. Cristianinis and J. Shawe-Taylors [@cristianini2000], V. N. Vapniks [@vapnik1998], V. N. Vapniks [@vapnik1999], B. E. Bosers, I. M. Guyons, and V. N. Vapniks [@boser1992].
+
+*SVMs* are a particular class of supervised learning methods that are well suited for analyses of data in high-dimensional feature spaces.
+They are computationally efficient and capable of detecting biologically-relevant signals.
+*SVMs* revolve around the notion of a *margin* - either side of a data separating linear decision boundary (*hyperplane*).
+Maximizing this *margin* and thereby creating the largest distance between two classes as well as between the *hyperplane* and the instances on either side, is the main task in training *SVMs* (see figure below).
+Thus, these models have a binary nature to separate classes, but can be extended to multi-class problems by reducing the problem to a set of multiple binary classification problems.
+The *hyperplane* is defined by:
+
+<latex> \begin{align} 
+D(x)  =  <\omega,x>  +  b 
+\end{align} </latex>
+
+where $ω$ is the weights vector and $b$ is a bias value (or $−b$ the threshold).
+
+In case an optimal separating *hyperplane* is found, data points on the *margin* are known as *support vectors* and the solution is a linear combination of them (red data points in figure below).
+Each new data point is then classified according to its optimal position relative to the model's *hyperplane*.
+So the model complexity is unaffected by the number of features encountered in the training data, therefore *SVMs* are well suited to deal with learning tasks with a large number of features compared to the number of data points.
+In case no *hyperplane* can be found, the problem can be addressed using the so-called *soft margin*.
+The *margin* optimization constraints can be relaxed by allowing some misclassifications or *margin* violations in the training set, to get better generalization of the *SVM* than using a *hard margin*.
+The choice of appropriate penalties is mandatory:
+
+<latex> \begin{align}
+min_{\omega,b,\xi} ~& \frac{1}{2} \ \omega^{T}\omega \ + \ C\sum_{i=1}^{l}\xi_{i} \\
+\text{subject to} ~& y_{i}(\omega^{T}x_{i}+b) \ < \ 1-\xi_{i} \ \ \text{and} \ \ \xi \geq 0 
+\end{align} </latex>
+
+where $\omega$ is the weights vector, $b$ is a bias value, $C$ is a penalty constant, and $\xi$ is a slack variable, which is the orthogonal distance between a data point and the *hyperplane*.
+Large *C* correspond to large penalties for misclassification and resemble a *hard margin* classifier, whereas $\xi$ measures the degree of misclassification or *margin* violation.
+This is a good way to deal with outliers in the data set without destroying the model by tailoring it perfectly to the input data.
+
+Nevertheless, most real-world data sets involve separation problems that are linearly non-separable, which requires the definition of complex functions to build a good classifier.
+*SVMs* use kernels, a special class of functions to deal with such situations.
+Mapping the data points to a higher-dimensional space (transformed feature space) using kernels, enables the definition of a linear *hyperplane*, which results in a non-linear *hyperplane* in the original space.
+The *hyperplanes* in the higher-dimensional space are represented by all points defining a set, whose inner product with a vector is constant in that space.
+Training the classifier depends only on the data through dot products, which are possible to compute even at a high-dimension at low cost by applying the so-called *kernel trick*.
+The trick lies in working in an higher-dimensional space, without ever explicitly transforming the original data points into that space, but instead relying on algorithms that only need to compute inner products within that space.
+These algorithms are identical to kernels and can thus be cheaply computed in the original space.
+So, everything about linear cases can also be applied to non-linear ones using an appropriate kernel function.
+It is common practice to find the best suiting function by cross-validation.
+Some popular kernels, which are all included in Perseus, are:
+
+<latex> \begin{align}
+\text{linear:} \ K(x,y)         &= x^{T}y  \\
+\text{sigmoid:} \ K(x,y)    &= tanh(\gamma x^{T}y \ + \ r) \\
+\text{radial basis:} \ K(x,y)   &= \exp(-\gamma|x \ - \ y|^{2}) , \ \gamma > 0 \\
+\text{polynomial:} \ K(x,y)     &= (\gamma x^{T}y \ + \ r)^{d}, \ \gamma > 0 
+\end{align} </latex>
+
+where $x$ and $y$ are two data points, $\gamma$ is the slope, $d$ is the degree of the polynom, and $r$ is a constant.
+
+![**Illustration of separating two classes using SVMs**. Linear (A.) and non-linear (B.) perfect separation of two classes (green and orange) with a hyperplane (black) and maximal margin (blue and dotted gray lines). Support vectors defining the hyperplane are in red. No misclassifiactions or margin violations are included.](images/svm.png)
+
+For more information you can also consult [Wikipedia](http://en.wikipedia.org/wiki/Support_vector_machine).
+
+## Fisher's linear discriminant analysis
+
+Linear Discriminant Analysis (LDA), is a well-known classification technique that has been used successfully in many statistical pattern recognition problems.
+It was developed by R.A.
+Fisher, a professor of statistics at University College London, and is sometimes called Fisher Discriminant Analysis (FDA).
+Its first description was in 1936 and can be found in [@fisher1936].
+
+The primary purpose of *LDA* is to separate samples of two or multiple distinct groups while preserving as much of the class discriminatory information as possible to classify new unseen instances.
+The approach of the *LDA* is to project all the data points into new space, normally of lower dimension, which maximizes the between-class separability while minimizing their within-class variability.
+So the goal is to find the best projection axes for separating the classes.
+In general the number of axes that can be computed by the *LDA* method is one less than the number of classes in the problem.
+
+![**Illustration of separating two classes using LDA.** Classes are separated perfectly and the dimensionality of the problem has been reduced from two features (x1,x2) to only a scalar value y.](images/lda2.png)
+
+For more information you can also consult [Wikipedia](http://en.wikipedia.org/wiki/Linear_discriminant_analysis).
+
+## k-nearest neighbors
+
+K-Nearest Neighbors (*kNN*) is a simple *lazy learner* algorithm that stores all available data points and classifies new instances based on a similarity measure (e.g., distance functions).
+It corresponds to the group of supervised learning algorithms and has been used in statistical estimation and pattern recognition already in the beginning of 1970's as a non-parametric technique.
+During the training phase the algorithm simply stores the data points including their class labels and all computation is deferred until the classification process.
+So *kNN* is based on the principle that instances that are in close proximity to another have similar properties.
+Thus, to classify new unclassified instances, one simply has to look at their k-nearest neighbors, to figure out the classification label.
+The class membership can be defined by a majority vote of the *k* closest neighbors or the neighbors can be ranked and weighted according to their distance to the new instance.
+A common weighting scheme consists in giving each neighbor a weight of 1/d, where d is the distance to the neighbor.
+
+![**Illustration of classifying a new item using kNN.** Using a majority vote of the k nearest neighbors, the defined k can change the assigned class of the red star. If k = 3 (purple circle) the star corresponds to the blue polygon class, because the three closest neighbors include two blue polygons and one green rectangle. Whereas, if k = 5 (black circle) the star is assigned to the green class, because the five closest neighbors include more green rectangles than blue polygons (three green rectangles vs. two blue polygons).](images/knn.png)
+
+For more information you can also consult [Wikipedia](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm).
