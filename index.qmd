@@ -8,7 +8,7 @@ format:
     toc-expand: false
     number-sections: true
     number-depth: 4
-editor: visual
+editor: source
 date: today
 ---
 
