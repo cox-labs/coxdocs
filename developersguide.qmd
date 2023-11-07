@@ -1,0 +1,101 @@
+---
+title: "Plugin Developers's Guide"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+csl: nature.csl
+---
+
+# Repository
+
+The code of the plugins is maintained at [the perseus-plugins repository](https://github.com/JurgenCox/perseus-plugins)
+
+If you do not need to examine or contribute to the source code, a more convenient portal with basic information about plugin development can be found at our [plug-In store](https://maxquant.net/perseus_plugins/),
+where the software can be downloaded after registration.
+
+These will unpack to a folder named `JurgenCox-perseus-plugins-6e9f957` (or similar). The c-sharp source code implementing the standard activities (i.e. plugins) are found in the folders under PerseusPluginLib.
+
+
+# API
+
+If you wish to program your own plugin, the api you need to program against is found under PerseusApi.Matrix. An activity/plugin must implement (currently) one of the five matrix activity interfaces, IMatrixAnalysis, IMatrixExport, IMatrixMultiProcessing, IMatrixProcessing, and IMatrixUpload. All of these are derived from IMatrixActivity, which is nothing more than a marker interface indicating activities that operate on IMatrixData. IActivity is a simple interface derived from INamedListItem with only three methods: 
+
+- `HasButton { get; }`
+- `int GetMaxThreads(Parameters parameters)`
+- `string Url { get; }`
+
+  * IMatrixData            : IData
+  * IMatrixActivity        : IActivity
+    * IMatrixAnalysis        : IMatrixActivity, IAnalysis
+    * IMatrixExport          : IMatrixActivity, IExport
+    * IMatrixMultiProcessing : IMatrixActivity, IMultiProcessing
+    * IMatrixProcessing      : IMatrixActivity, IProcessing
+    * IMatrixUpload          : IMatrixActivity, IUpload
+
+In contrast to the simplicity of the activity interfaces, the IMatrixData interface is very rich. Its documentation text reads,
+
+* The data structure representing an augmented data matrix which is the main data object that is flowing through
+the Perseus workflow. Note that plugin programmers are not supposed to write implementations of //IMatrixData//.
+The interface only serves to encapsulate the complexity of the implementation for the purpose of plugin programming.
+* The IMatrixData interface specifies 5 signatures of the void SetData method. Most of the parameters are the same in each signature. The ones which are not are written in bold.
+
+| string name |           |
+|-------------|-------------|
+| `List<string> expressionColumnNames` | `float[,] expressionValues` |
+| `List<string> stringColumnNames` | `List<string[]> stringColumns` |
+| `List<string> categoryColumnNames` | `List<string[][]> categoryColumns` |
+| `List<string> numericColumnNames` | `List<double[]> numericColumns` |
+| `List<string> multiNumericColumnNames` | `List<double[][]> multiNumericColumns` |
+
+| string name |              |
+|-------------|--------------|
+| `List<string> expressionColumnNames` | `float[,] expressionValues` |
+| `bool[,]`isImputed | |
+| `List<string> stringColumnNames` | `List<string[]> stringColumns` |
+| `List<string> categoryColumnNames` | `List<string[][]> categoryColumns` |
+| `List<string> numericColumnNames` | `List<double[]> numericColumns` |
+| `List<string> multiNumericColumnNames` | `List<double[][]> multiNumericColumns` |
+
+| string name |             |
+|---------------|-----------------|
+| `List<string> expressionColumnNames` | `float[,] expressionValues` |
+| `List<string> stringColumnNames` | `List<string[]> stringColumns` |
+| `List<string> categoryColumnNames` | `List<string[][]> categoryColumns` |
+| `List<string> numericColumnNames` | `List<double[]> numericColumns` |
+| `List<string> multiNumericColumnNames` | `List<double[][]> multiNumericColumns` |
+| `List<string> categoryRowNames` | `List<string[][]> categoryRows` |
+| `List<string> numericRowNames` | `List<double[]> numericRows` |
+
+| string name |                   |
+|-------------|-------------------|
+| `List<string> expressionColumnNames` | `float[,] expressionValues` |
+| `bool[,]` isImputed | |
+| `List<string> stringColumnNames` | `List<string[]> stringColumns` |
+| `List<string> categoryColumnNames` | `List<string[][]> categoryColumns` |
+| `List<string> numericColumnNames` | `List<double[]> numericColumns` |
+| `List<string> multiNumericColumnNames` | `List<double[][]> multiNumericColumns` |
+| `List<string> categoryRowNames` | `List<string[][]> categoryRows` |
+| `List<string> numericRowNames` | `List<double[]> numericRows` |
+
+| string name           | string description | |
+|---------------------|-------------|----------|
+| `List<string> expressionColumnNames` | `List<string> expressionColumnDescriptions` | `float[,] expressionValues` |
+| `bool[,]` isImputed | | |
+| `float[,] qualityValues` | `string qualityName` | `bool qualityBiggerIsBetter` |
+| `List<string> stringColumnNames` | `List<string> stringColumnDescriptions` | `List<string[]> stringColumns` |
+| `List<string> categoryColumnNames` | `List<string> categoryColumnDescriptions | List<string[][]> categoryColumns` |
+| `List<string> numericColumnNames` | `List<string> numericColumnDescriptions` | `List<double[]> numericColumns` |
+| `List<string> multiNumericColumnNames` | `List<string> multiNumericColumnDescriptions` | `List<double[][]> multiNumericColumns` |
+| `List<string> categoryRowNames` | `List<string> categoryRowDescriptions` | `List<string[][]> categoryRows` |
+| `List<string> numericRowNames` | ``List<string> numericRowDescriptions` | `List<double[]> numericRows` |
+
+The pattern is that a data matrix, in its simplest form, can have 5 types of columns: expression, string, category, numeric, and multinumeric. The List type of the column names, and, except for expressions, of the values, reflects the fact that there may be multiple columns of any given type. Since for any given column, each row has its own value, the values are lists (col) of arrays (row). Two value types, categories and multiNumeric, are lists of 2d arrays, because any given element (col,row) may have multiple categories or numbers. The 2d array nature of `isImputed` mirrors that of `expressionValues` because each entry for an expression has either been imputed or not.
+

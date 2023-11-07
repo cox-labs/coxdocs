@@ -1,0 +1,96 @@
+---
+title: "Proteomic ruler: Estimate copy numbers and concentrations"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+csl: nature.csl
+---
+
+
+If you arrived here directly, it is a good idea to read the [Proteomic ruler overview](docs/proteomicruler.html) first.
+
+# Description
+
+**Estimate copy numbers and annotations** scales _Intensity_ or _LFQ intensity_ data to absolute levels, such as copy numbers per cell or molar concentrations.
+You will need a number of annotation columns in order to perform the calculations, at least the _Sequence length_ and _Molecular weight_ of your proteins. You can either load them in from the proteinGroups.txt or use [Annotate proteins](docs/annotateproteins.html) to extract them from your fasta file directly.
+
+# Parameters
+
+Most of the parameters should be self-explanatory. Hover the mouse over the descriptions to get detailed help. The Plugin will pre-select the most useful parameters and auto-detect the correct input columns (if present in your matrix).
+
+## Input
+
+### Protein IDs
+
+Select the column containing your semicolon-separated protein group IDs (uniprot format). It is recommended to use the 'Majority protein IDs' when coming from MaxQuant.
+
+### Intensities
+
+Select a number of intensity columns as input for the absolute quantification. Each of them must represent a complete proteome (not individual fractions).
+
+* The default is to use the _Intensity xyz_ columns in the proteinGroups.txt coming from MaxQuant.
+* You can also work with _LFQ intensity xyz_ columns if you intend to compare resulting copy numbers across samples. Here, it is recommended to use '1' as min. LFQ ratio count in MaxQuant and to change the **averaging mode** (see below).
+* Do not use iBAQ values! These values are already normalized for protein size and using them as input will give you wrong results, as size-normalization will be applied again.
+
+### Logarithmized
+
+Specify whether the intensities are logarithmized in the selected _Intensities_ columns.
+
+### Averaging mode
+
+This parameter controls how different columns will be handled.
+
+* _All columns separately_: Each column will be treated independently. Any sample-to-sample normalization will be lost. Resulting copy numbers should only be compared within each sample, not across. This is useful if you want to analyse changes in cell sizes across conditions.
+* _Same normalization for all columns_: The plugin will calculate the total protein mass per cell for all columns and then use the median thereof as scaling factor for all columns. Any sample-to-sample normalization will be retained. Therefore, this setting is useful in when working with LFQ intensities that are normalized for comparability across samples. Note that any changes in cell size across samples will not be represented.
+* _Same normalization within groups_: as described for the previous option, but only within groups of samples.
+* _Average all columns_: Instead of reporting copy numbers for individual samples, only the median across all samples will be reported. This is useful if you are using a set of replicates as input.
+
+### Molecular masses
+
+Select the column containing the molecular masses of the proteins. This can either be the _Molecular weight_ column from the MaxQuant output or one of the columns mapped by the [Annotate proteins](docs/annotateproteins.html) function.
+
+### Detectability correction
+
+In its simplest form, the plugin will assume linearity between the Intensity values and the cumulative mass of each protein. In other words, the molecular mass of each protein serves as the correction factor if one wants to calculate copy numbers. Alternatively, one can use other detectability correction factors, such as the number of theoretical peptides. In contrast to the molecular mass, this takes the combination of sequence features and the protease into account.
+Theoretical peptides are not reported by MaxQuant directly, but can be calculated using [Annotate proteins](docs/annotateproteins.html).
+
+### Scaling mode
+
+There are two options of how to scale copy numbers globally:
+
+* The total protein amount per cell. In this case the total intensity will be considered proportional to the total protein amount per cell.
+* The histone proteomic ruler. Here, the cumulative histone amount will be considered proportional to the expected DNA amount per cell (calculated from the genome size and the user-defined ploidy.) Note that the organism will be auto-detected from the uniprot IDs.
+
+### Total cellular protein concentration
+
+Specify the total cellular protein concentration. This value is remarkably invariant across many cell types (typically between 200 and 300 g/l. If unknown, use the default value. This parameter is irrelevant for copy numbers, but will be used for concentration estimations.
+
+## Output
+
+You can select between different output columns and matrices:
+
+* Copy number per cell
+* Concentration [nM]
+* Relative abundance, calculated either as fraction of the cumulative mass of a protein to the total cumulative mass, or as the fraction of the cumulative number of molecules of one protein to the total number of protein molecules.
+* Copy number rank, with 1 representing the most highly abundant protein
+* Relative copy number rank, with values ranging from 0-1. This value is useful for 's curve' plots of rank vs. logarithmized copy numbers.
+* Sample summaries, either in the form of row annotations in the output matrix, or a separate matrix.
+
+
+# Quality control
+
+To get a feeling of whether your results are reasonable, you should inspect the sample summary matrix and have a look at the calculated total cellular protein amounts, number of molecules per cell or cell volumes (if you use the histone proteomic ruler) or the ploidies (if you scaled via the total cellular protein amount).
+
+[BioNumbers](https://bionumbers.hms.harvard.edu/keynumbers.aspx) is a good reference source.
+
+You can also [estimate the quantification accuracy of individual protein copy numbers or concentrations](docs/estimateaccuracy.html).
+
+

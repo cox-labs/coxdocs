@@ -1,0 +1,25 @@
+---
+title: "Plug Ins for Perseus"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+csl: nature.csl
+---
+
+The "out-of-the-box" version of Perseus already provides much functionality, but it can easily be extended further with plugins. Standard [activities](docs/perseus_activities.html) are implemented in the same way as plugins.
+
+# Plugin Store
+
+To browse a list of available plugins, visit our [Perseus Plugin Store](docs/perseuspluginstore.html) [[perseus:user:plugins:store|]].
+
+# Developer's Guide
+
+The developers guide is available on [plugintutorial on github](http://github.com/jdrudolph/plugintutorial).

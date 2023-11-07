@@ -1,0 +1,54 @@
+---
+title: "Plug-Ins Store"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+csl: nature.csl
+---
+
+You can extend the functionality of Perseus by installing plugins.
+To install a plugin, just download the plugin `.dll` file, copy it into the Perseus folder and restart the software.
+
+# Available Plugins {#sec-plugin-table}
+
+| Plugin Name | Developer | Download | Source Code | Compatibility |
+|-------------|------------------------|-------------|-------------|---------|
+| [Proteomic ruler](docs/proteomicruler.html) | Marco Hein | [v. 1.6.2](https://maxquant.net/download_asset/pluginproteomicruler/latest) | [gitHub](https://github.com/JurgenCox/perseus-plugins) | Perseus 2.0.11 |
+| [PluginInterop](https://github.com/jdrudolph/PluginInterop) | Jan Rudolph | [v. 1.6.15](https://maxquant.net/download_asset/plugininterop/latest) | [PluginInterop](https://github.com/cox-labs/PluginInterop) | Perseus 2.0.11 |
+| [DependentPeptides](https://github.com/cox-labs/PluginDependentPeptides) | Jan Rudolph | [v. 1.6.1](https://maxquant.net/download_asset/plugindependentpeptides/latest) | [PluginDependentPeptides](GitHub) | Perseus 2.0.11 |
+|[PluginUpperCase](https://github.com/jdrudolph/PluginUpperCase) | Jan Rudolph | [v. 1.6.0](https://maxquant.net/download_asset/pluginuppercase/latest) | [PluginUpperCase](https://github.com/jdrudolph/PluginUpperCase) | Perseus 2.0.11 |
+|[PluginPhoton](https://github.com/jdrudolph/photon) | Jan Rudolph | [v. 1.0](https://maxquant.net/download_asset/pluginphoton/latest) | [Photon](https://github.com/jdrudolph/photon) |Perseus 2.0.11 |
+|[PlugInMetis](https://github.com/JurgenCox/perseus-plugins) | Dr. Hamid Hamzeiy & Daniela Ferretti | [v. 1.6.6](https://maxquant.net/download_asset/pluginmetis/latest) | [github](https://github.com/JurgenCox/perseus-plugins) | Perseus 2.0.11 |
+
+
+<!--
+- Do we offer older version for download?
+- Are older version also compatible with the up-to-date version of Perseus?
+
+| ::: | ::: | {{perseus:user:plugins:proteomicruler:pluginproteomicruler_0.1.3.zip|v.0.1.3 (2014-10-02)}} | ::: | Perseus 1.5.0.30 - 1.5.0.31 |
+| ::: | ::: | {{perseus:user:plugins:proteomicruler:pluginproteomicruler_0.1.4.zip|v.0.1.4 (2014-12-10)}} | ::: | Perseus 1.5.1.16  |
+| ::: | ::: | {{perseus:user:plugins:pluginproteomicruler.zip|v.0.1.5 (2015-07-01)}} | ::: | Perseus 1.5.2.4 |
+| ::: | ::: | {{perseus:user:plugins:proteomicruler:pluginproteomicruler_0.1.6.zip|v.0.1.6 (2016-05-31)}} | ::: | Perseus 1.5.5.0 |
+...
+| ::: | ::: | {{perseus:user:plugins:plugininterop:plugininterop_1.6.0.1.zip|1.6.0.1 (2017-08-03)}} | ::: | ::: |
+| ::: | ::: | {{perseus:user:plugins:plugininterop:plugininterop_1.6.0.2.zip|1.6.0.2 (2017-10-18)}} | ::: | ::: |
+| ::: | ::: | {{perseus:user:plugins:plugininterop:plugininterop_1.6.1.0.zip|1.6.1.0 (2017-12-19)}} | ::: | Perseus 1.6.1.0 |
+...
+| ::: | ::: | {{perseus:user:plugins:plugindependentpeptides:plugindependentpeptides_1.6.0.1.zip|1.6.0.1 (2017-08-03)}} | ::: | ::: |
+| ::: | ::: | {{perseus:user:plugins:plugindependentpeptides:plugindependentpeptides_1.6.0.2.zip|1.6.0.2 (2017-08-10)}} | ::: | ::: |
+| ::: | ::: | {{perseus:user:plugins:plugindependentpeptides:plugindependentpeptides_1.6.1.0.zip|1.6.1.0 (2017-12-19)}} | ::: | Perseus 1.6.1.0 |
+
+-->
+
+# Developers
+
+If you want to develop and submit your own Perseus plugin, please read our [Plugin Developers's Guide](docs/developersguide.html).
+

@@ -1,0 +1,53 @@
+---
+title: "WGCNA"
+author: "Cox Lab"
+execute: 
+  eval: false
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+csl: nature.csl
+---
+
+## Weighted Gene Co-expression Network Analysis
+
+This package is provided through the R-language integration into Perseus and therefore requires R as well as the package itself to be installed in order to be used. Visit the [PluginInterop](https://github.com/jdrudolph/PluginInterop) and [PerseusR](https://github.com/jdrudolph/PerseusR) for additional technical information on the integration of R and Perseus.
+
+## Installation
+
+  * Download the R installer install it.
+  * Remember the R installation directory. If you do not know where you have installed R, check the default location `C:\Program Files\R\R-3.5.0\bin`, or search for `Rscript.exe`.
+  * Add R to your `Path` environment variable. Open the start menu and search for "environment variables", and select "Edit system environment variables".
+  * Find the `Path` variable in the editor and select `Edit`.
+  * Now we can add R to the `Path` by clicking `New` and entering the location of the `.../bin` folder of the R installation, e.g `C:\Program Files\R\R-3.5.0\bin`.
+  * In certain Windows version you might have to edit the `Path` directly. The `Path` consists of folder locations separated by ‘;’. Therefore, just append the installation location of R and the ‘;’ separator. No spaces or quotes are required. If the `Path` variable is not defined on your system, you can define it yourself.
+  * Check that R is installed correctly by opening `cmd.exe` from the start menu and entering `R` An R session should start.
+  * Inside the running R session, install the [WGCNA](https://cran.r-project.org/web/packages/WGCNA/index.html) and [PerseusR](https://github.com/jdrudolph/PerseusR) libraries by entering/pasting the following code **line-by-line**. 
+  When prompted for local install, type ‘yes’ twice and select a close-by server for the package download. 
+```{r}
+# | eval: false
+install.packages("BiocManager")
+BiocManager::install(c("WGCNA", "devtools"))
+library(devtools)
+install_github('jdrudolph/PerseusR')
+```
+  * You should now be able to load the `WGCNA` and `PerseusR` libraries by entering the following code. Upon loading, `WGCNA` will print some output, while `PerseusR` will not print any.
+```{r}
+# | eval: false
+library(WGCNA)
+library(PerseusR)
+```
+
+You are now ready to perform co-expression analysis from within Perseus.
+
+## WGCNA functions
+
+* [Soft-threshold](docs/softthreshold.html)
+* [Co-expression clustering](docs/coexpressionclustering.html)

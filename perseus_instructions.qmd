@@ -22,9 +22,9 @@ The Perseus software platform supports biological and biomedical researchers in 
 -   [Download and installation](perseus_download_guide.html)
 -   [User interface](perseus_user_intereface.html)
 -   [Activities](perseus_activities.html)
--   [Plug Ins](perseus_plugins.html)
--   [Tutorials](perseus_tutorials.html)
--   [Use cases](perseus_usecases.html)
+-   [Plug Ins](docs/perseus_plugins.html)
+-   [Tutorials](docs/docs/perseus_tutorials.html)
+-   [Use cases](perseus_usecases)
 -   [maxquant Bug reporting](https://github.com/cox-labs/CoxLab_Bug_Reporting)
 -   [Glossary](docs/Glossary.html)
 

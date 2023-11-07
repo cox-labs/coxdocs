@@ -1,0 +1,73 @@
+---
+title: "Proteomic ruler: Annotate proteins"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+csl: nature.csl
+---
+
+
+If you arrived here directly from Perseus, it is a good idea to read the [Proteomic ruler overview](docs/proteomicruler.html) first.
+
+For those that want to apply the proteomic ruler concept and are in a hurry: If you imported the columns _Sequence length_ and _Molecular weight_ of your proteinGroups.txt, you can skip this and directly [estimate copy numbers](docs/estimatecopynumbers.html).
+
+# Description
+
+**Annotate proteins** 
+
+extracts information from the UniProt fasta file that was used to process a dataset:
+
+  * Protein annotations from the UniProt fasta headers, e.g. Gene names, protein names, entry names.
+  * The sequence length and the molecular mass of the protein.
+  * The numbers of theoretical peptides from _in silico_ digestion of the protein with a number of different proteases.
+  * The occurrence of user-definable sequence features within the protein sequences.
+
+# Parameters
+
+Most of the parameters should be self-explanatory. Hover the mouse over the descriptions to get detailed help.
+The Plugin will pre-select the most useful parameters and auto-detect the correct input columns (if present in your matrix). These default parameters will cover everything needed to [estimate copy numbers](docs/estimatecopynumbers.html).
+
+## Input
+
+### Protein IDs
+
+Select the column containing your semicolon-separated protein group IDs (UniProt format). It is recommended to use the 'Majority protein IDs' when coming from MaxQuant
+
+### Fasta file
+
+Specify the uniprot fasta file you used to process your dataset. The plugin will parse this file and extract information from the header and the amino acid sequences.
+
+## Output
+
+As one often has more than one uniprot ID per protein group, you can specify whether you want to extract annotations and calculate sequence properties for the leading ID alone or for all IDs in the protein group.
+In case of text annotations, all annotations will be semicolon-separated.
+In case of numeric properties, the plugin will average over the list of sequence by reporting the median. 
+
+### Fasta header annotations
+
+* Entry name: e.g. _KAL1L_HUMAN_
+* Gene name, e.g. _KANSL1L_
+* Protein name (verbose), e.g. _KAT8 regulatory NSL complex subunit 1-like protein_
+* Protein name (consensus), e.g. _Isoform 2 of KAT8 regulatory NSL complex subunit 1-like protein_. The consensus protein names will be stripped of all _Isoform xy of_ prefixes and _(Fragment)_ suffixes.
+* Species, e.g. _Homo sapiens_
+
+### Numeric annotations
+
+* Sequence length
+* [Monoisotopic molecular mass](http://en.wikipedia.org/wiki/Monoisotopic_mass)
+* [Average molecular mass](http://en.wikipedia.org/wiki/Molecular_mass)
+
+### Calculate theoretical peptides
+
+The plugin will perform an _in-silico_ digestion of the protein sequences with the specified protease and report the number of theoretically expected peptides without miscleavages in the selected size range.
+### Count sequence features
+
+The plugin will count the number of occurrences of a given regular expression in the protein sequences. It is recommended to normalize this count by the sequence length if you want to average across all IDs.

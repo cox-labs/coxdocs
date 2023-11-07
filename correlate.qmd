@@ -1,0 +1,28 @@
+---
+title: "Correlate"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+csl: nature.csl
+---
+
+# Description
+
+Correlate annotation rows with the main columns of a matrix using the provided correlation function.
+
+# Output
+
+Matrix of correlations.
+
+## Combine with
+
+* [Average categories](docs/averagecategories.html)
+* [Co-expression clustering](docs/coexpressionclustering.html)

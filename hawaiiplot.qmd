@@ -1,0 +1,24 @@
+---
+title: "Hawaii plot"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+csl: nature.csl
+---
+
+# General
+
+  * **Type:** - Matrix Analysis
+
+# Brief description
+
+Visualize the results of a t-test in the form of multiple volcano plots. Determine significant data points with a permutation-based FDR calculation.
+

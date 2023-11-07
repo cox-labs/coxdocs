@@ -77,6 +77,7 @@ the Type or Heading of interest using the Table of Contents on the right.
 
 * [Hierarchical clustering](docs/hierarchicalcluster.html)
 * [Principal component analysis](docs/principalcomponentanalysis.html)
+* [Co-expression clustering](docs/coexpressionclustering.html)
 
 <!-- 
 * [Biclustering](Biclustering) [[perseus:bioinformatics:activities:MatrixAnalysis:ClusteringPCA:|]]
@@ -98,6 +99,7 @@ the Type or Heading of interest using the Table of Contents on the right.
 * [Select rows manually](docs/selectrowsmanually.html)
 * [Sequence logos](docs/sequencelogo.html)
 * [Volcano plot](docs/volcanoplotanalysis.html)
+* [Hawaii plot](docs/hawaiiplot.html)
 
 <!-- 
 * [Edit matrix](EditMatrix) [[perseus:bioinformatics:activities:MatrixAnalysis:Misc:|]]
@@ -126,6 +128,7 @@ the Type or Heading of interest using the Table of Contents on the right.
 * [Matching columns by name](docs/matchingcolumnsbyname.html)
 * [Matching rows by name](docs/matchingrowsbyname.html)
 * [Replace strings](docs/replacestrings.html)
+* [Row correlation](docs/rowcorrelation.html)
 
 <!-- 
 *[Venn diagram](VennMultiProcessing) [[perseus:internal:activities:MatrixMultiProcessing:Basic:|]]
@@ -395,25 +398,26 @@ values from normal distribution]]\\
 -->
 
 
-==== Tests ====
+## Tests
 
+* [Multiple-sample tests](docs/multiplesampletestprocessing.html)
+* [One-sample tests](docs/onesampletestprocessing.html)
+* [Post hoc tests](docs/posthoctests.html)
+* [Three-way ANOVA](docs/threewayanova.html)
+* [Two-sample tests](docs/twosampletestprocessing.html)
+* [Two-way ANOVA](docs/twowayanova.html)
 
-<ifauth @internal>• [[perseus:internal:activities:MatrixProcessing:Tests:CorrelationTests|Correlation tests]]*\\</ifauth>
-<ifauth @internal>• [[perseus:internal:activities:MatrixProcessing:Tests:FourWayAnova|Four-way ANOVA]]*\\</ifauth>
-• [[perseus:user:activities:MatrixProcessing:Tests:MultipleSampleTestProcessing|Multiple-sample tests]]\\
-• [[perseus:user:activities:MatrixProcessing:Tests:OneSampleTestProcessing|One-sample tests]]\\
-• [[perseus:user:activities:MatrixProcessing:Tests:PostHocTests|Post hoc tests]]\\
-• [[perseus:user:activities:MatrixProcessing:Tests:ThreeWayAnova|Three-way ANOVA]]\\
-• [[perseus:user:activities:MatrixProcessing:Tests:TwoSampleTestProcessing|Two-sample tests]]\\
-• [[perseus:user:activities:MatrixProcessing:Tests:TwoWayAnova|Two-way ANOVA]]\\
+<!--
+* [Correlation tests](CorrelationTests) [[perseus:internal:activities:MatrixProcessing:Tests:|]]
+* [Four-way ANOVA](FourWayAnova) [[perseus:internal:activities:MatrixProcessing:Tests:|]]
+-->
 
-==== Time series ====
+## Time series
 
-
-• [[perseus:user:activities:MatrixProcessing:Timeseries:CyclicAnnotation|Cyclic annotation enrichment]]\\
-• [[perseus:user:activities:MatrixProcessing:Timeseries:PeriodicityAnalysis|Periodicity analysis]]\\
-• [[perseus:user:activities:MatrixProcessing:Timeseries:Periodogram|Periodogram]]\\
-• [[perseus:user:activities:MatrixProcessing:Timeseries:TimeSeriesOrdering|Time series ordering]]\\
+* [Cyclic annotation enrichment](docs/cyclicannotation.html)
+* [Periodicity analysis](docs/periodicityanalysis.html)
+* [Periodogram](docs/periodogram.html)
+* [Time series ordering](docs/timeseriesordering.html)
 
 
 

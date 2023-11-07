@@ -1,0 +1,54 @@
+---
+title: "Time series ordering"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+csl: nature.csl
+---
+
+# General
+
+-   **Type:** - Matrix Processing
+-   **Heading:** - Time series
+-   **Source code:** not public.
+
+# Brief description
+
+Orders profiles in a time series by the time of occurrences of their maximum value.
+
+```{=html}
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+```
+# Parameters
+
+## Periodic
+
+If checked, the analyzed time series are periodic (default: unchecked).
+
+# Parameter window
+
+![](images/time_series-time_series_ordering-edited.png)
+
+# Examples
+
+## In-Vivo Quantitative Proteomics Reveals a Key Contribution of Post-Transcriptional Mechanisms to the Circadian Regulation of Liver Metabolism
+
+The algorithms were first applied in 2014 by Robles et. al. [@robles2014].
+
+**Abstract** 
+
+Circadian clocks are endogenous oscillators that drive the rhythmic expression of a broad array of genes, orchestrating metabolism and physiology. Recent evidence indicates that post-transcriptional and post-translational mechanisms play essential roles in modulating temporal gene expression for proper circadian function, particularly for the molecular mechanism of the clock. Due to technical limitations in large-scale, quantitative protein measurements, it remains unresolved to what extent the circadian clock regulates metabolism by driving rhythms of protein abundance. Therefore, we aimed to identify global circadian oscillations of the proteome in the mouse liver by applying in vivo SILAC mouse technology in combination with state of the art mass spectrometry. Among the 3000 proteins accurately quantified across two consecutive cycles, 6% showed circadian oscillations with a defined phase of expression. Interestingly, daily rhythms of one fifth of the liver proteins were not accompanied by changes at the transcript level. The oscillations of almost half of the cycling proteome were delayed by more than six hours with respect to the corresponding, rhythmic mRNA. Strikingly we observed that the length of the time lag between mRNA and protein cycles varies across the day. Our analysis revealed a high temporal coordination in the abundance of proteins involved in the same metabolic process, such as xenobiotic detoxification. Apart from liver specific metabolic pathways, we identified many other essential cellular processes in which protein levels are under circadian control, for instance vesicle trafficking and protein folding. Our large-scale proteomic analysis reveals thus that circadian post-transcriptional and post-translational mechanisms play a key role in the temporal orchestration of liver metabolism and physiology.

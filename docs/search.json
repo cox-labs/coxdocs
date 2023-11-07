@@ -522,14 +522,14 @@
     "href": "perseus_activities.html#clusteringpca",
     "title": "Activities",
     "section": "3.1 Clustering/PCA",
-    "text": "3.1 Clustering/PCA\n\nHierarchical clustering\nPrincipal component analysis"
+    "text": "3.1 Clustering/PCA\n\nHierarchical clustering\nPrincipal component analysis\nCo-expression clustering"
   },
   {
     "objectID": "perseus_activities.html#misc.-analysis",
     "href": "perseus_activities.html#misc.-analysis",
     "title": "Activities",
     "section": "3.2 Misc. (Analysis)",
-    "text": "3.2 Misc. (Analysis)\n\nNumeric venn diagram\nSelect rows manually\nSequence logos\nVolcano plot"
+    "text": "3.2 Misc. (Analysis)\n\nNumeric venn diagram\nSelect rows manually\nSequence logos\nVolcano plot\nHawaii plot"
   },
   {
     "objectID": "perseus_activities.html#visualization",
@@ -543,7 +543,7 @@
     "href": "perseus_activities.html#basic-multiprocessing",
     "title": "Activities",
     "section": "4.1 Basic (MultiProcessing)",
-    "text": "4.1 Basic (MultiProcessing)\n\nMatching columns by name\nMatching rows by name\nReplace strings"
+    "text": "4.1 Basic (MultiProcessing)\n\nMatching columns by name\nMatching rows by name\nReplace strings\nRow correlation"
   },
   {
     "objectID": "perseus_activities.html#ci",
@@ -641,7 +641,7 @@
     "href": "perseus_activities.html#rearrange",
     "title": "Activities",
     "section": "5.13 Rearrange",
-    "text": "5.13 Rearrange\n\nChange column type\nCombine annotations\nCombine categorical columns\nConvert multi-numeric column\nDe-hyphenate ids\nDuplicate columns\nExpand multi-numeric and text columns\nFill categorical columns\nProcess text column\nRemove empty columns\nRename columns\nRename columns [reg. ex.]\nReorder columns by numerical annotation row\nReorder/remove annotation rows\nremove columns\nSearch text column\nSort by column\nTranspose\nUnique rows\nUnique values\n\n\n==== Tests ====\n&lt;ifauthinternal?&gt;• [[perseus:internal:activities:MatrixProcessing:Tests:CorrelationTests|Correlation tests]]\\ &lt;ifauthinternal?&gt;• [[perseus:internal:activities:MatrixProcessing:Tests:FourWayAnova|Four-way ANOVA]]\\ • [[perseus:user:activities:MatrixProcessing:Tests:MultipleSampleTestProcessing|Multiple-sample tests]]\\ • [[perseus:user:activities:MatrixProcessing:Tests:OneSampleTestProcessing|One-sample tests]]\\ • [[perseus:user:activities:MatrixProcessing:Tests:PostHocTests|Post hoc tests]]\\ • [[perseus:user:activities:MatrixProcessing:Tests:ThreeWayAnova|Three-way ANOVA]]\\ • [[perseus:user:activities:MatrixProcessing:Tests:TwoSampleTestProcessing|Two-sample tests]]\\ • [[perseus:user:activities:MatrixProcessing:Tests:TwoWayAnova|Two-way ANOVA]]\\\n==== Time series ====\n• [[perseus:user:activities:MatrixProcessing:Timeseries:CyclicAnnotation|Cyclic annotation enrichment]]\\ • [[perseus:user:activities:MatrixProcessing:Timeseries:PeriodicityAnalysis|Periodicity analysis]]\\ • [[perseus:user:activities:MatrixProcessing:Timeseries:Periodogram|Periodogram]]\\ • [[perseus:user:activities:MatrixProcessing:Timeseries:TimeSeriesOrdering|Time series ordering]]\\"
+    "text": "5.13 Rearrange\n\nChange column type\nCombine annotations\nCombine categorical columns\nConvert multi-numeric column\nDe-hyphenate ids\nDuplicate columns\nExpand multi-numeric and text columns\nFill categorical columns\nProcess text column\nRemove empty columns\nRename columns\nRename columns [reg. ex.]\nReorder columns by numerical annotation row\nReorder/remove annotation rows\nremove columns\nSearch text column\nSort by column\nTranspose\nUnique rows\nUnique values"
   },
   {
     "objectID": "averagecategories.html",
@@ -3365,5 +3365,404 @@
     "title": "One-sample tests",
     "section": "",
     "text": "1 General\n\nType: - Matrix Processing\nHeading: - Tests\nSource code: not public.\n\n\n\n2 Brief description\nOne sample-test for determining if the mean is significantly different from a fixed value (typically 0).\nOutput: Two numerical columns are added, one containing the p-value, the other containing the difference between the mean and the fixed value (which is usually 0). In addition there is a categorical column added in which it is indicated by a ‘+’ when the row is significant with respect to the specified criteria."
+  },
+  {
+    "objectID": "posthoctests.html",
+    "href": "posthoctests.html",
+    "title": "Post hoc tests",
+    "section": "",
+    "text": "1 General =====\n\nType: - Matrix Processing\nHeading: - Tests\nSource code: not public.\n\n\n\n2 Brief description\nPost-hoc analysis is performed, e.g. on the significant findings of an ANOVA test."
+  },
+  {
+    "objectID": "perseus_activities.html#tests",
+    "href": "perseus_activities.html#tests",
+    "title": "Activities",
+    "section": "5.14 Tests",
+    "text": "5.14 Tests\n\nMultiple-sample tests\nOne-sample tests\nPost hoc tests\nThree-way ANOVA\nTwo-sample tests\nTwo-way ANOVA"
+  },
+  {
+    "objectID": "threewayanova.html",
+    "href": "threewayanova.html",
+    "title": "Three ways ANOVA",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Tests\nSource code: not public."
+  },
+  {
+    "objectID": "threewayanova.html#first-grouping",
+    "href": "threewayanova.html#first-grouping",
+    "title": "Three ways ANOVA",
+    "section": "3.1 First Grouping",
+    "text": "3.1 First Grouping\nSelected categorical row that defines the first grouping of columns that should be used in the test (default: first categorical row in the matrix)."
+  },
+  {
+    "objectID": "threewayanova.html#second-grouping",
+    "href": "threewayanova.html#second-grouping",
+    "title": "Three ways ANOVA",
+    "section": "3.2 Second Grouping",
+    "text": "3.2 Second Grouping\nSelected categorical row that defines the second grouping of columns that should be used in the test (default: first categorical row in the matrix)."
+  },
+  {
+    "objectID": "threewayanova.html#third-grouping",
+    "href": "threewayanova.html#third-grouping",
+    "title": "Three ways ANOVA",
+    "section": "3.3 Third Grouping",
+    "text": "3.3 Third Grouping\nSelected categorical row that defines the third grouping of columns that should be used in the test (default: first categorical row in the matrix)."
+  },
+  {
+    "objectID": "threewayanova.html#log10",
+    "href": "threewayanova.html#log10",
+    "title": "Three ways ANOVA",
+    "section": "3.4 -Log10",
+    "text": "3.4 -Log10\nIf checked, -Log10(test value) is reported in the output matrix (default). Otherwise the test-value is reported."
+  },
+  {
+    "objectID": "threewayanova.html#suffix",
+    "href": "threewayanova.html#suffix",
+    "title": "Three ways ANOVA",
+    "section": "3.5 Suffix",
+    "text": "3.5 Suffix\nThe entered suffix will be attached to newly generated columns (default: empty). That way columns from multiple runs of the test can be distinguished more easily."
+  },
+  {
+    "objectID": "cyclicannotation.html",
+    "href": "cyclicannotation.html",
+    "title": "Cyclic Annotation enrichment",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Time series\nSource code: not public."
+  },
+  {
+    "objectID": "cyclicannotation.html#phase-column",
+    "href": "cyclicannotation.html#phase-column",
+    "title": "Cyclic Annotation enrichment",
+    "section": "3.1 Phase column",
+    "text": "3.1 Phase column\nSelected numerical column that contains information about the phases of each protein (default: first numerical column in the matrix)."
+  },
+  {
+    "objectID": "cyclicannotation.html#benj.-hochb.-fdr",
+    "href": "cyclicannotation.html#benj.-hochb.-fdr",
+    "title": "Cyclic Annotation enrichment",
+    "section": "3.2 Benj. Hochb. FDR",
+    "text": "3.2 Benj. Hochb. FDR\nApplied Benjamini-Hochberg correction for multiple hypotheses testing to find significantly enriched annotation terms (default: 0.05)."
+  },
+  {
+    "objectID": "cyclicannotation.html#in-vivo-quantitative-proteomics-reveals-a-key-contribution-of-post-transcriptional-mechanisms-to-the-circadian-regulation-of-liver-metabolism",
+    "href": "cyclicannotation.html#in-vivo-quantitative-proteomics-reveals-a-key-contribution-of-post-transcriptional-mechanisms-to-the-circadian-regulation-of-liver-metabolism",
+    "title": "Cyclic Annotation enrichment",
+    "section": "5.1 In-Vivo Quantitative Proteomics Reveals a Key Contribution of Post-Transcriptional Mechanisms to the Circadian Regulation of Liver Metabolism",
+    "text": "5.1 In-Vivo Quantitative Proteomics Reveals a Key Contribution of Post-Transcriptional Mechanisms to the Circadian Regulation of Liver Metabolism\nThe algorithms were first applied in 2014 by Robles et. al.1.\nAbstract\nCircadian clocks are endogenous oscillators that drive the rhythmic expression of a broad array of genes, orchestrating metabolism and physiology. Recent evidence indicates that post-transcriptional and post-translational mechanisms play essential roles in modulating temporal gene expression for proper circadian function, particularly for the molecular mechanism of the clock. Due to technical limitations in large-scale, quantitative protein measurements, it remains unresolved to what extent the circadian clock regulates metabolism by driving rhythms of protein abundance. Therefore, we aimed to identify global circadian oscillations of the proteome in the mouse liver by applying in vivo SILAC mouse technology in combination with state of the art mass spectrometry. Among the 3000 proteins accurately quantified across two consecutive cycles, 6% showed circadian oscillations with a defined phase of expression. Interestingly, daily rhythms of one fifth of the liver proteins were not accompanied by changes at the transcript level. The oscillations of almost half of the cycling proteome were delayed by more than six hours with respect to the corresponding, rhythmic mRNA. Strikingly we observed that the length of the time lag between mRNA and protein cycles varies across the day. Our analysis revealed a high temporal coordination in the abundance of proteins involved in the same metabolic process, such as xenobiotic detoxification. Apart from liver specific metabolic pathways, we identified many other essential cellular processes in which protein levels are under circadian control, for instance vesicle trafficking and protein folding. Our large-scale proteomic analysis reveals thus that circadian post-transcriptional and post-translational mechanisms play a key role in the temporal orchestration of liver metabolism and physiology."
+  },
+  {
+    "objectID": "periodicityanalysis.html",
+    "href": "periodicityanalysis.html",
+    "title": "Periodicity analysis",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Time series\nSource code: not public."
+  },
+  {
+    "objectID": "periodicityanalysis.html#period",
+    "href": "periodicityanalysis.html#period",
+    "title": "Periodicity analysis",
+    "section": "3.1 Period",
+    "text": "3.1 Period\nDefines when a full period is passed (default: 24 according to hours of the day)."
+  },
+  {
+    "objectID": "periodicityanalysis.html#time-column",
+    "href": "periodicityanalysis.html#time-column",
+    "title": "Periodicity analysis",
+    "section": "3.2 Time column",
+    "text": "3.2 Time column\nSelected numerical row, which defines the time points (default: first numerical row). Proteins are listed in rows, whereas columns represent a specific point in time."
+  },
+  {
+    "objectID": "periodicityanalysis.html#separate-time-series",
+    "href": "periodicityanalysis.html#separate-time-series",
+    "title": "Periodicity analysis",
+    "section": "3.3 Separate time series",
+    "text": "3.3 Separate time series\nDefines whether separate time series analyses should be applied according to a pre-defined grouping, which is specified in a categorical row (default: &lt;None&gt;). It can be selected from a list including all available groupings of the matrix."
+  },
+  {
+    "objectID": "periodicityanalysis.html#sort-by",
+    "href": "periodicityanalysis.html#sort-by",
+    "title": "Periodicity analysis",
+    "section": "3.4 Sort by",
+    "text": "3.4 Sort by\nThis parameter is just relevant, if the parameter “Separate time series” is set to a grouping. It specifies, which group will be used for sorting."
+  },
+  {
+    "objectID": "periodicityanalysis.html#criterion",
+    "href": "periodicityanalysis.html#criterion",
+    "title": "Periodicity analysis",
+    "section": "3.5 Criterion",
+    "text": "3.5 Criterion\nDefines the function to what the periodic time series are compared to (default: Cosine fit). The function can be selected from a pre-defined list."
+  },
+  {
+    "objectID": "periodicityanalysis.html#fdr",
+    "href": "periodicityanalysis.html#fdr",
+    "title": "Periodicity analysis",
+    "section": "3.6 FDR",
+    "text": "3.6 FDR\nRows (proteins) with a test result below this value are reported as significant (default: 0.05)."
+  },
+  {
+    "objectID": "periodicityanalysis.html#number-of-randomizations",
+    "href": "periodicityanalysis.html#number-of-randomizations",
+    "title": "Periodicity analysis",
+    "section": "3.7 Number of randomizations",
+    "text": "3.7 Number of randomizations\nSpecifies the number of randomized periods (default: 1000)."
+  },
+  {
+    "objectID": "periodicityanalysis.html#preserve-grouping-in-randomizations",
+    "href": "periodicityanalysis.html#preserve-grouping-in-randomizations",
+    "title": "Periodicity analysis",
+    "section": "3.8 Preserve grouping in randomizations",
+    "text": "3.8 Preserve grouping in randomizations\nDefines, whether the grouping specified in a categorical row should be preserved in the randomizations (default: &lt;None&gt;). It can be selected from a list including all available groupings of the matrix."
+  },
+  {
+    "objectID": "periodicityanalysis.html#in-vivo-quantitative-proteomics-reveals-a-key-contribution-of-post-transcriptional-mechanisms-to-the-circadian-regulation-of-liver-metabolism",
+    "href": "periodicityanalysis.html#in-vivo-quantitative-proteomics-reveals-a-key-contribution-of-post-transcriptional-mechanisms-to-the-circadian-regulation-of-liver-metabolism",
+    "title": "Periodicity analysis",
+    "section": "5.1 In-Vivo Quantitative Proteomics Reveals a Key Contribution of Post-Transcriptional Mechanisms to the Circadian Regulation of Liver Metabolism",
+    "text": "5.1 In-Vivo Quantitative Proteomics Reveals a Key Contribution of Post-Transcriptional Mechanisms to the Circadian Regulation of Liver Metabolism\nThe algorithms were first applied in 2014 by Robles et. al.1.\nAbstract\nCircadian clocks are endogenous oscillators that drive the rhythmic expression of a broad array of genes, orchestrating metabolism and physiology. Recent evidence indicates that post-transcriptional and post-translational mechanisms play essential roles in modulating temporal gene expression for proper circadian function, particularly for the molecular mechanism of the clock. Due to technical limitations in large-scale, quantitative protein measurements, it remains unresolved to what extent the circadian clock regulates metabolism by driving rhythms of protein abundance. Therefore, we aimed to identify global circadian oscillations of the proteome in the mouse liver by applying in vivo SILAC mouse technology in combination with state of the art mass spectrometry. Among the 3000 proteins accurately quantified across two consecutive cycles, 6% showed circadian oscillations with a defined phase of expression. Interestingly, daily rhythms of one fifth of the liver proteins were not accompanied by changes at the transcript level. The oscillations of almost half of the cycling proteome were delayed by more than six hours with respect to the corresponding, rhythmic mRNA. Strikingly we observed that the length of the time lag between mRNA and protein cycles varies across the day. Our analysis revealed a high temporal coordination in the abundance of proteins involved in the same metabolic process, such as xenobiotic detoxification. Apart from liver specific metabolic pathways, we identified many other essential cellular processes in which protein levels are under circadian control, for instance vesicle trafficking and protein folding. Our large-scale proteomic analysis reveals thus that circadian post-transcriptional and post-translational mechanisms play a key role in the temporal orchestration of liver metabolism and physiology."
+  },
+  {
+    "objectID": "periodogram.html",
+    "href": "periodogram.html",
+    "title": "Periodogram",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Time series\nSource code: not public."
+  },
+  {
+    "objectID": "periodogram.html#time-column",
+    "href": "periodogram.html#time-column",
+    "title": "Periodogram",
+    "section": "3.1 Time column",
+    "text": "3.1 Time column\nSelected numerical row, which defines the time points (default: first numerical row). Proteins are listed in rows, whereas columns represent a specific point in time."
+  },
+  {
+    "objectID": "periodogram.html#separate-time-series",
+    "href": "periodogram.html#separate-time-series",
+    "title": "Periodogram",
+    "section": "3.2 Separate time series",
+    "text": "3.2 Separate time series\nSpecifies, if a periodogram should be calculated separately for each group of the defined grouping (default: &lt;None&gt;)."
+  },
+  {
+    "objectID": "periodogram.html#in-vivo-quantitative-proteomics-reveals-a-key-contribution-of-post-transcriptional-mechanisms-to-the-circadian-regulation-of-liver-metabolism",
+    "href": "periodogram.html#in-vivo-quantitative-proteomics-reveals-a-key-contribution-of-post-transcriptional-mechanisms-to-the-circadian-regulation-of-liver-metabolism",
+    "title": "Periodogram",
+    "section": "5.1 In-Vivo Quantitative Proteomics Reveals a Key Contribution of Post-Transcriptional Mechanisms to the Circadian Regulation of Liver Metabolism",
+    "text": "5.1 In-Vivo Quantitative Proteomics Reveals a Key Contribution of Post-Transcriptional Mechanisms to the Circadian Regulation of Liver Metabolism\nThe algorithms were first applied in 2014 by Robles et. al.1.\nAbstract\nCircadian clocks are endogenous oscillators that drive the rhythmic expression of a broad array of genes, orchestrating metabolism and physiology. Recent evidence indicates that post-transcriptional and post-translational mechanisms play essential roles in modulating temporal gene expression for proper circadian function, particularly for the molecular mechanism of the clock. Due to technical limitations in large-scale, quantitative protein measurements, it remains unresolved to what extent the circadian clock regulates metabolism by driving rhythms of protein abundance. Therefore, we aimed to identify global circadian oscillations of the proteome in the mouse liver by applying in vivo SILAC mouse technology in combination with state of the art mass spectrometry. Among the 3000 proteins accurately quantified across two consecutive cycles, 6% showed circadian oscillations with a defined phase of expression. Interestingly, daily rhythms of one fifth of the liver proteins were not accompanied by changes at the transcript level. The oscillations of almost half of the cycling proteome were delayed by more than six hours with respect to the corresponding, rhythmic mRNA. Strikingly we observed that the length of the time lag between mRNA and protein cycles varies across the day. Our analysis revealed a high temporal coordination in the abundance of proteins involved in the same metabolic process, such as xenobiotic detoxification. Apart from liver specific metabolic pathways, we identified many other essential cellular processes in which protein levels are under circadian control, for instance vesicle trafficking and protein folding. Our large-scale proteomic analysis reveals thus that circadian post-transcriptional and post-translational mechanisms play a key role in the temporal orchestration of liver metabolism and physiology."
+  },
+  {
+    "objectID": "timeseriesordering.html",
+    "href": "timeseriesordering.html",
+    "title": "Time series ordering",
+    "section": "",
+    "text": "Type: - Matrix Processing\nHeading: - Time series\nSource code: not public."
+  },
+  {
+    "objectID": "timeseriesordering.html#periodic",
+    "href": "timeseriesordering.html#periodic",
+    "title": "Time series ordering",
+    "section": "3.1 Periodic",
+    "text": "3.1 Periodic\nIf checked, the analyzed time series are periodic (default: unchecked)."
+  },
+  {
+    "objectID": "timeseriesordering.html#in-vivo-quantitative-proteomics-reveals-a-key-contribution-of-post-transcriptional-mechanisms-to-the-circadian-regulation-of-liver-metabolism",
+    "href": "timeseriesordering.html#in-vivo-quantitative-proteomics-reveals-a-key-contribution-of-post-transcriptional-mechanisms-to-the-circadian-regulation-of-liver-metabolism",
+    "title": "Time series ordering",
+    "section": "5.1 In-Vivo Quantitative Proteomics Reveals a Key Contribution of Post-Transcriptional Mechanisms to the Circadian Regulation of Liver Metabolism",
+    "text": "5.1 In-Vivo Quantitative Proteomics Reveals a Key Contribution of Post-Transcriptional Mechanisms to the Circadian Regulation of Liver Metabolism\nThe algorithms were first applied in 2014 by Robles et. al.1.\nAbstract\nCircadian clocks are endogenous oscillators that drive the rhythmic expression of a broad array of genes, orchestrating metabolism and physiology. Recent evidence indicates that post-transcriptional and post-translational mechanisms play essential roles in modulating temporal gene expression for proper circadian function, particularly for the molecular mechanism of the clock. Due to technical limitations in large-scale, quantitative protein measurements, it remains unresolved to what extent the circadian clock regulates metabolism by driving rhythms of protein abundance. Therefore, we aimed to identify global circadian oscillations of the proteome in the mouse liver by applying in vivo SILAC mouse technology in combination with state of the art mass spectrometry. Among the 3000 proteins accurately quantified across two consecutive cycles, 6% showed circadian oscillations with a defined phase of expression. Interestingly, daily rhythms of one fifth of the liver proteins were not accompanied by changes at the transcript level. The oscillations of almost half of the cycling proteome were delayed by more than six hours with respect to the corresponding, rhythmic mRNA. Strikingly we observed that the length of the time lag between mRNA and protein cycles varies across the day. Our analysis revealed a high temporal coordination in the abundance of proteins involved in the same metabolic process, such as xenobiotic detoxification. Apart from liver specific metabolic pathways, we identified many other essential cellular processes in which protein levels are under circadian control, for instance vesicle trafficking and protein folding. Our large-scale proteomic analysis reveals thus that circadian post-transcriptional and post-translational mechanisms play a key role in the temporal orchestration of liver metabolism and physiology."
+  },
+  {
+    "objectID": "perseus_activities.html#time-series",
+    "href": "perseus_activities.html#time-series",
+    "title": "Activities",
+    "section": "5.15 Time series",
+    "text": "5.15 Time series\n\nCyclic annotation enrichment\nPeriodicity analysis\nPeriodogram\nTime series ordering"
+  },
+  {
+    "objectID": "WGCNA.html",
+    "href": "WGCNA.html",
+    "title": "WGCNA",
+    "section": "",
+    "text": "This package is provided through the R-language integration into Perseus and therefore requires R as well as the package itself to be installed in order to be used. Visit the PluginInterop and PerseusR for additional technical information on the integration of R and Perseus."
+  },
+  {
+    "objectID": "WGCNA.html#weighted-gene-co-expression-network-analysis",
+    "href": "WGCNA.html#weighted-gene-co-expression-network-analysis",
+    "title": "WGCNA",
+    "section": "",
+    "text": "This package is provided through the R-language integration into Perseus and therefore requires R as well as the package itself to be installed in order to be used. Visit the PluginInterop and PerseusR for additional technical information on the integration of R and Perseus."
+  },
+  {
+    "objectID": "WGCNA.html#installation",
+    "href": "WGCNA.html#installation",
+    "title": "WGCNA",
+    "section": "2 Installation",
+    "text": "2 Installation\n\nDownload the R installer install it.\nRemember the R installation directory. If you do not know where you have installed R, check the default location C:\\Program Files\\R\\R-3.5.0\\bin, or search for Rscript.exe.\nAdd R to your Path environment variable. Open the start menu and search for “environment variables”, and select “Edit system environment variables”.\nFind the Path variable in the editor and select Edit.\nNow we can add R to the Path by clicking New and entering the location of the .../bin folder of the R installation, e.g C:\\Program Files\\R\\R-3.5.0\\bin.\nIn certain Windows version you might have to edit the Path directly. The Path consists of folder locations separated by ‘;’. Therefore, just append the installation location of R and the ‘;’ separator. No spaces or quotes are required. If the Path variable is not defined on your system, you can define it yourself.\nCheck that R is installed correctly by opening cmd.exe from the start menu and entering R An R session should start.\nInside the running R session, install the WGCNA and PerseusR libraries by entering/pasting the following code line-by-line. When prompted for local install, type ‘yes’ twice and select a close-by server for the package download.\n\n\n# | eval: false\ninstall.packages(\"BiocManager\")\nBiocManager::install(c(\"WGCNA\", \"devtools\"))\nlibrary(devtools)\ninstall_github('jdrudolph/PerseusR')\n\n\nYou should now be able to load the WGCNA and PerseusR libraries by entering the following code. Upon loading, WGCNA will print some output, while PerseusR will not print any.\n\n\n# | eval: false\nlibrary(WGCNA)\nlibrary(PerseusR)\n\nYou are now ready to perform co-expression analysis from within Perseus."
+  },
+  {
+    "objectID": "WGCNA.html#wgcna-functions",
+    "href": "WGCNA.html#wgcna-functions",
+    "title": "WGCNA",
+    "section": "3 WGCNA functions",
+    "text": "3 WGCNA functions\n\nSoft-threshold\nCo-expression clustering"
+  },
+  {
+    "objectID": "coexpressionclustering.html",
+    "href": "coexpressionclustering.html",
+    "title": "Co-expression clustering",
+    "section": "",
+    "text": "This analysis is provided through the R-language integration into Perseus and therefore requires R as well as the WGCNA package to be installed. Visit WGCNA1 page for more information and installation instructions.\nMore information about co-expression clustering can be found at the following resources:\n\nofficial WGCNA tutorials.\nNetwork analysis with WGCNA\nWGCNA - RNA-seq\n\n\n1 Description\nThe co-expression network is created using the defined correlation function. The determined power is applied to the network (see Soft-threshold for more info). Topological overlap distance is used to create the hierarchical clustering dendrogram. The co-expression modules are determined using the dynamic tree-cut method. For each module, a module eigengene is reported, with its name corresponding to the color of the cluster.\n\n\n2 Output\n\nHierarchical clustering heatmap with a dendrogram and automatic cluster assignments.\nMatrix of module eigengenes that represent a cluster. See Correlate for identifying clusters that correlate with clinical/phenotype data.\n\n\n\n\n\n\nReferences\n\n1. Langfelder, P. & Horvath, S. WGCNA: an R package for weighted correlation network analysis. BMC Bioinformatics 9, (2008)."
+  },
+  {
+    "objectID": "softthreshold.html",
+    "href": "softthreshold.html",
+    "title": "Soft threshold",
+    "section": "",
+    "text": "This activity is provided through the R-language integration into Perseus and therefore requires R as well as the WGCNA package to be installed. See WGCNA for more information and installation instructions.\nSoft-thresholding is covered by official WGCNA tutorials. Unfortunately, the tutorial is not online anymore.\nBut one possible option is the discussion on Bioconductor.org\n\n1 Description\nFind the best power parameter for co-expression analysis. The goal is to find a network with good scale-free fit.\n\n\n2 Output\nThe output matrix contains properties of co-expression networks constructed for each choice of the power parameter. It is best explored by plotting power against the other properties in a scatter plot. Select the lowest power with a high scale-free fit index SFT.R.sq for the analysis."
+  },
+  {
+    "objectID": "correlate.html",
+    "href": "correlate.html",
+    "title": "Correlate",
+    "section": "",
+    "text": "Correlate annotation rows with the main columns of a matrix using the provided correlation function."
+  },
+  {
+    "objectID": "correlate.html#combine-with",
+    "href": "correlate.html#combine-with",
+    "title": "Correlate",
+    "section": "2.1 Combine with",
+    "text": "2.1 Combine with\n\nAverage categories\nCo-expression clustering"
+  },
+  {
+    "objectID": "hawaiiplot.html",
+    "href": "hawaiiplot.html",
+    "title": "Hawaii plot",
+    "section": "",
+    "text": "1 General\n\nType: - Matrix Analysis\n\n\n\n2 Brief description\nVisualize the results of a t-test in the form of multiple volcano plots. Determine significant data points with a permutation-based FDR calculation."
+  },
+  {
+    "objectID": "rowcorrelation.html",
+    "href": "rowcorrelation.html",
+    "title": "Row correlation",
+    "section": "",
+    "text": "1 General\n\nType: - Matrix MultiProcessing\n\n\n\n2 Brief description\nCalculate correlation coefficients between the row in two matrices with the same columns. Useful for e.g. calculating kME values in co-expression analysis workflow."
+  },
+  {
+    "objectID": "perseuspluginstore.html",
+    "href": "perseuspluginstore.html",
+    "title": "Plug-Ins Store",
+    "section": "",
+    "text": "You can extend the functionality of Perseus by installing plugins. To install a plugin, just download the plugin .dll file, copy it into the Perseus folder and restart the software.\n\n1 Available Plugins\n\n\n\nPlugin Name\nDeveloper\nDownload\nSource Code\nCompatibility\n\n\n\n\nProteomic ruler\nMarco Hein\nv. 1.6.2\ngitHub\nPerseus 2.0.11\n\n\nPluginInterop\nJan Rudolph\nv. 1.6.15\nPluginInterop\nPerseus 2.0.11\n\n\nDependentPeptides\nJan Rudolph\nv. 1.6.1\nPluginDependentPeptides\nPerseus 2.0.11\n\n\nPluginUpperCase\nJan Rudolph\nv. 1.6.0\nPluginUpperCase\nPerseus 2.0.11\n\n\nPluginPhoton\nJan Rudolph\nv. 1.0\nPhoton\nPerseus 2.0.11\n\n\nPlugInMetis\nDr. Hamid Hamzeiy & Daniela Ferretti\nv. 1.6.6\ngithub\nPerseus 2.0.11\n\n\n\n\n\n\n2 Developers\nIf you want to develop and submit your own Perseus plugin, please read our Plugin Developers’s Guide."
+  },
+  {
+    "objectID": "perseus_plugins.html",
+    "href": "perseus_plugins.html",
+    "title": "Plug Ins for Perseus",
+    "section": "",
+    "text": "The “out-of-the-box” version of Perseus already provides much functionality, but it can easily be extended further with plugins. Standard activities are implemented in the same way as plugins.\n\n1 Plugin Store\nTo browse a list of available plugins, visit our Perseus Plugin Store [[perseus:user:plugins:store|]].\n\n\n2 Developer’s Guide\nThe developers guide is available on plugintutorial on github."
+  },
+  {
+    "objectID": "proteomicruler.html",
+    "href": "proteomicruler.html",
+    "title": "Proteomic Ruler",
+    "section": "",
+    "text": "This Perseus plugin implements computational strategies for absolute protein quantification without spike-in standards. The concept was published by Wiśniewski et al.1 and builds on earlier work by Wiśniewski et al.2.\nUsually, determining copy numbers of proteins per cell requires the use of spike-in standards in combination with cell counting and accurate protein concentration measurements.\nIn a nutshell, the idea of the ‘proteomic ruler’ is to use a natural standard instead: Histones. Histones are wrapped around DNA at a defined ratio of ~1:1 (DNA mass/histone mass). The amount of DNA per cell is a function of genome size and ploidy and one usually has good prior knowledge of these factors. Moreover, the total protein concentration is remarkably similar in most cell types, around 200-300 g/l. One can use this to estimate not only copy numbers per cell, but also absolute protein concentrations.\n\n\n1 Requirements\nIf you want to use the proteomic ruler plugin on your dataset, you will need a deep, eukaryotic, whole proteome dataset from a nucleated cell type with known ploidy. It is important that you lysed the cells completely and that no cellular fraction was lost during sample preparation. In particular, the chromatin fraction must be included. Reasonably deep proteome coverage is required. From a depth 12,000+ peptides on, we found that the ratio of histone intensity to total intensity flattens out, assuring overall scaling accuracy. However, deeper coverage will be needed to obtain accurate copy numbers of most individual proteins.\nIf you fractionated your sample, make sure that your fractionation method does not underrepresent histones. We successfully tested SAX, SCX and in-gel fractionation, whereas isoelectric focusing (OFF-gel) fractions tends to underrepresent basic histone peptides, leading to a scaling bias.\nFor technical reasons, this plugin requires that you searched your data against a recent Uniprot fasta file. The plugin currently supports H. sapiens, M. musculus, D. melanogaster, C. elegans, S. cerevisiae and S. pombe.\n\n\n2 Installation\nAs with other Perseus plugins, installation is really easy:\n\nDownload the plugin .dll that is compatible with your Perseus version.\nCopy the .dll into the main Perseus folder.\nRestart Perseus.exe.\nYou should then see a new menu item ‘Proteomic ruler’ in the processing section.\n\n\n\n3 Usage\nImport the proteinGroups.txt of your dataset into Perseus. Make sure to import the following columns:\n\nIntensity (or LFQ intensity) columns as expression columns\nPeptides, unique, razor + unique peptides as numerical columns\nProtein IDs, Majority protein IDs as text columns\nSequence length, Molecular weight as numerical columns (optional)\n\nThe proteomic ruler plugin comes with three functions that should be executed in this order:\n\nAnnotate proteins\nEstimate copy numbers and concentrations\nEstimate absolute protein quantification accuracy\n\n\n\n\n\n\nReferences\n\n1. Wiśniewski, J. R., Hein, M. Y., Cox, J. & Mann, M. A “Proteomic Ruler” for Protein Copy Number and Concentration Estimation without Spike-in Standards. Molecular & Cellular Proteomics 13, 3497–3506 (2014).\n\n\n2. Wiśniewski, J. R. et al. Extensive quantitative remodeling of the proteome between normal colon tissue and adenocarcinoma. Molecular Systems Biology 8, (2012)."
+  },
+  {
+    "objectID": "developersguide.html",
+    "href": "developersguide.html",
+    "title": "Plugin Developers’s Guide",
+    "section": "",
+    "text": "1 Repository\nThe code of the plugins is maintained at the perseus-plugins repository\nIf you do not need to examine or contribute to the source code, a more convenient portal with basic information about plugin development can be found at our plug-In store, where the software can be downloaded after registration.\nThese will unpack to a folder named JurgenCox-perseus-plugins-6e9f957 (or similar). The c-sharp source code implementing the standard activities (i.e. plugins) are found in the folders under PerseusPluginLib.\n\n\n2 API\nIf you wish to program your own plugin, the api you need to program against is found under PerseusApi.Matrix. An activity/plugin must implement (currently) one of the five matrix activity interfaces, IMatrixAnalysis, IMatrixExport, IMatrixMultiProcessing, IMatrixProcessing, and IMatrixUpload. All of these are derived from IMatrixActivity, which is nothing more than a marker interface indicating activities that operate on IMatrixData. IActivity is a simple interface derived from INamedListItem with only three methods:\n\nHasButton { get; }\nint GetMaxThreads(Parameters parameters)\nstring Url { get; }\n\nIMatrixData : IData\nIMatrixActivity : IActivity\n\nIMatrixAnalysis : IMatrixActivity, IAnalysis\nIMatrixExport : IMatrixActivity, IExport\nIMatrixMultiProcessing : IMatrixActivity, IMultiProcessing\nIMatrixProcessing : IMatrixActivity, IProcessing\nIMatrixUpload : IMatrixActivity, IUpload\n\n\n\nIn contrast to the simplicity of the activity interfaces, the IMatrixData interface is very rich. Its documentation text reads,\n\nThe data structure representing an augmented data matrix which is the main data object that is flowing through the Perseus workflow. Note that plugin programmers are not supposed to write implementations of //IMatrixData//. The interface only serves to encapsulate the complexity of the implementation for the purpose of plugin programming.\nThe IMatrixData interface specifies 5 signatures of the void SetData method. Most of the parameters are the same in each signature. The ones which are not are written in bold.\n\n\n\n\n\n\n\n\nstring name\n\n\n\n\n\nList&lt;string&gt; expressionColumnNames\nfloat[,] expressionValues\n\n\nList&lt;string&gt; stringColumnNames\nList&lt;string[]&gt; stringColumns\n\n\nList&lt;string&gt; categoryColumnNames\nList&lt;string[][]&gt; categoryColumns\n\n\nList&lt;string&gt; numericColumnNames\nList&lt;double[]&gt; numericColumns\n\n\nList&lt;string&gt; multiNumericColumnNames\nList&lt;double[][]&gt; multiNumericColumns\n\n\n\n\n\n\n\n\n\n\nstring name\n\n\n\n\n\nList&lt;string&gt; expressionColumnNames\nfloat[,] expressionValues\n\n\nbool[,]isImputed\n\n\n\nList&lt;string&gt; stringColumnNames\nList&lt;string[]&gt; stringColumns\n\n\nList&lt;string&gt; categoryColumnNames\nList&lt;string[][]&gt; categoryColumns\n\n\nList&lt;string&gt; numericColumnNames\nList&lt;double[]&gt; numericColumns\n\n\nList&lt;string&gt; multiNumericColumnNames\nList&lt;double[][]&gt; multiNumericColumns\n\n\n\n\n\n\n\n\n\n\nstring name\n\n\n\n\n\nList&lt;string&gt; expressionColumnNames\nfloat[,] expressionValues\n\n\nList&lt;string&gt; stringColumnNames\nList&lt;string[]&gt; stringColumns\n\n\nList&lt;string&gt; categoryColumnNames\nList&lt;string[][]&gt; categoryColumns\n\n\nList&lt;string&gt; numericColumnNames\nList&lt;double[]&gt; numericColumns\n\n\nList&lt;string&gt; multiNumericColumnNames\nList&lt;double[][]&gt; multiNumericColumns\n\n\nList&lt;string&gt; categoryRowNames\nList&lt;string[][]&gt; categoryRows\n\n\nList&lt;string&gt; numericRowNames\nList&lt;double[]&gt; numericRows\n\n\n\n\n\n\n\n\n\n\nstring name\n\n\n\n\n\nList&lt;string&gt; expressionColumnNames\nfloat[,] expressionValues\n\n\nbool[,] isImputed\n\n\n\nList&lt;string&gt; stringColumnNames\nList&lt;string[]&gt; stringColumns\n\n\nList&lt;string&gt; categoryColumnNames\nList&lt;string[][]&gt; categoryColumns\n\n\nList&lt;string&gt; numericColumnNames\nList&lt;double[]&gt; numericColumns\n\n\nList&lt;string&gt; multiNumericColumnNames\nList&lt;double[][]&gt; multiNumericColumns\n\n\nList&lt;string&gt; categoryRowNames\nList&lt;string[][]&gt; categoryRows\n\n\nList&lt;string&gt; numericRowNames\nList&lt;double[]&gt; numericRows\n\n\n\n\n\n\n\n\n\n\n\nstring name\nstring description\n\n\n\n\n\nList&lt;string&gt; expressionColumnNames\nList&lt;string&gt; expressionColumnDescriptions\nfloat[,] expressionValues\n\n\nbool[,] isImputed\n\n\n\n\nfloat[,] qualityValues\nstring qualityName\nbool qualityBiggerIsBetter\n\n\nList&lt;string&gt; stringColumnNames\nList&lt;string&gt; stringColumnDescriptions\nList&lt;string[]&gt; stringColumns\n\n\nList&lt;string&gt; categoryColumnNames\nList&lt;string&gt; categoryColumnDescriptions | List&lt;string[][]&gt; categoryColumns\n\n\n\nList&lt;string&gt; numericColumnNames\nList&lt;string&gt; numericColumnDescriptions\nList&lt;double[]&gt; numericColumns\n\n\nList&lt;string&gt; multiNumericColumnNames\nList&lt;string&gt; multiNumericColumnDescriptions\nList&lt;double[][]&gt; multiNumericColumns\n\n\nList&lt;string&gt; categoryRowNames\nList&lt;string&gt; categoryRowDescriptions\nList&lt;string[][]&gt; categoryRows\n\n\nList&lt;string&gt; numericRowNames\n`List&lt;string&gt; numericRowDescriptions\nList&lt;double[]&gt; numericRows\n\n\n\nThe pattern is that a data matrix, in its simplest form, can have 5 types of columns: expression, string, category, numeric, and multinumeric. The List type of the column names, and, except for expressions, of the values, reflects the fact that there may be multiple columns of any given type. Since for any given column, each row has its own value, the values are lists (col) of arrays (row). Two value types, categories and multiNumeric, are lists of 2d arrays, because any given element (col,row) may have multiple categories or numbers. The 2d array nature of isImputed mirrors that of expressionValues because each entry for an expression has either been imputed or not."
+  },
+  {
+    "objectID": "annotateproteins.html",
+    "href": "annotateproteins.html",
+    "title": "Proteomic ruler: Annotate proteins",
+    "section": "",
+    "text": "If you arrived here directly from Perseus, it is a good idea to read the Proteomic ruler overview first.\nFor those that want to apply the proteomic ruler concept and are in a hurry: If you imported the columns Sequence length and Molecular weight of your proteinGroups.txt, you can skip this and directly estimate copy numbers."
+  },
+  {
+    "objectID": "annotateproteins.html#input",
+    "href": "annotateproteins.html#input",
+    "title": "Proteomic ruler: Annotate proteins",
+    "section": "2.1 Input",
+    "text": "2.1 Input\n\n2.1.1 Protein IDs\nSelect the column containing your semicolon-separated protein group IDs (UniProt format). It is recommended to use the ‘Majority protein IDs’ when coming from MaxQuant\n\n\n2.1.2 Fasta file\nSpecify the uniprot fasta file you used to process your dataset. The plugin will parse this file and extract information from the header and the amino acid sequences."
+  },
+  {
+    "objectID": "annotateproteins.html#output",
+    "href": "annotateproteins.html#output",
+    "title": "Proteomic ruler: Annotate proteins",
+    "section": "2.2 Output",
+    "text": "2.2 Output\nAs one often has more than one uniprot ID per protein group, you can specify whether you want to extract annotations and calculate sequence properties for the leading ID alone or for all IDs in the protein group. In case of text annotations, all annotations will be semicolon-separated. In case of numeric properties, the plugin will average over the list of sequence by reporting the median.\n\n2.2.1 Fasta header annotations\n\nEntry name: e.g. KAL1L_HUMAN\nGene name, e.g. KANSL1L\nProtein name (verbose), e.g. KAT8 regulatory NSL complex subunit 1-like protein\nProtein name (consensus), e.g. Isoform 2 of KAT8 regulatory NSL complex subunit 1-like protein. The consensus protein names will be stripped of all Isoform xy of prefixes and (Fragment) suffixes.\nSpecies, e.g. Homo sapiens\n\n\n\n2.2.2 Numeric annotations\n\nSequence length\nMonoisotopic molecular mass\nAverage molecular mass\n\n\n\n2.2.3 Calculate theoretical peptides\nThe plugin will perform an in-silico digestion of the protein sequences with the specified protease and report the number of theoretically expected peptides without miscleavages in the selected size range. ### Count sequence features\nThe plugin will count the number of occurrences of a given regular expression in the protein sequences. It is recommended to normalize this count by the sequence length if you want to average across all IDs."
+  },
+  {
+    "objectID": "estimatecopynumbers.html",
+    "href": "estimatecopynumbers.html",
+    "title": "Proteomic ruler: Estimate copy numbers and concentrations",
+    "section": "",
+    "text": "If you arrived here directly, it is a good idea to read the Proteomic ruler overview first."
+  },
+  {
+    "objectID": "estimatecopynumbers.html#input",
+    "href": "estimatecopynumbers.html#input",
+    "title": "Proteomic ruler: Estimate copy numbers and concentrations",
+    "section": "2.1 Input",
+    "text": "2.1 Input\n\n2.1.1 Protein IDs\nSelect the column containing your semicolon-separated protein group IDs (uniprot format). It is recommended to use the ‘Majority protein IDs’ when coming from MaxQuant.\n\n\n2.1.2 Intensities\nSelect a number of intensity columns as input for the absolute quantification. Each of them must represent a complete proteome (not individual fractions).\n\nThe default is to use the Intensity xyz columns in the proteinGroups.txt coming from MaxQuant.\nYou can also work with LFQ intensity xyz columns if you intend to compare resulting copy numbers across samples. Here, it is recommended to use ‘1’ as min. LFQ ratio count in MaxQuant and to change the averaging mode (see below).\nDo not use iBAQ values! These values are already normalized for protein size and using them as input will give you wrong results, as size-normalization will be applied again.\n\n\n\n2.1.3 Logarithmized\nSpecify whether the intensities are logarithmized in the selected Intensities columns.\n\n\n2.1.4 Averaging mode\nThis parameter controls how different columns will be handled.\n\nAll columns separately: Each column will be treated independently. Any sample-to-sample normalization will be lost. Resulting copy numbers should only be compared within each sample, not across. This is useful if you want to analyse changes in cell sizes across conditions.\nSame normalization for all columns: The plugin will calculate the total protein mass per cell for all columns and then use the median thereof as scaling factor for all columns. Any sample-to-sample normalization will be retained. Therefore, this setting is useful in when working with LFQ intensities that are normalized for comparability across samples. Note that any changes in cell size across samples will not be represented.\nSame normalization within groups: as described for the previous option, but only within groups of samples.\nAverage all columns: Instead of reporting copy numbers for individual samples, only the median across all samples will be reported. This is useful if you are using a set of replicates as input.\n\n\n\n2.1.5 Molecular masses\nSelect the column containing the molecular masses of the proteins. This can either be the Molecular weight column from the MaxQuant output or one of the columns mapped by the Annotate proteins function.\n\n\n2.1.6 Detectability correction\nIn its simplest form, the plugin will assume linearity between the Intensity values and the cumulative mass of each protein. In other words, the molecular mass of each protein serves as the correction factor if one wants to calculate copy numbers. Alternatively, one can use other detectability correction factors, such as the number of theoretical peptides. In contrast to the molecular mass, this takes the combination of sequence features and the protease into account. Theoretical peptides are not reported by MaxQuant directly, but can be calculated using Annotate proteins.\n\n\n2.1.7 Scaling mode\nThere are two options of how to scale copy numbers globally:\n\nThe total protein amount per cell. In this case the total intensity will be considered proportional to the total protein amount per cell.\nThe histone proteomic ruler. Here, the cumulative histone amount will be considered proportional to the expected DNA amount per cell (calculated from the genome size and the user-defined ploidy.) Note that the organism will be auto-detected from the uniprot IDs.\n\n\n\n2.1.8 Total cellular protein concentration\nSpecify the total cellular protein concentration. This value is remarkably invariant across many cell types (typically between 200 and 300 g/l. If unknown, use the default value. This parameter is irrelevant for copy numbers, but will be used for concentration estimations."
+  },
+  {
+    "objectID": "estimatecopynumbers.html#output",
+    "href": "estimatecopynumbers.html#output",
+    "title": "Proteomic ruler: Estimate copy numbers and concentrations",
+    "section": "2.2 Output",
+    "text": "2.2 Output\nYou can select between different output columns and matrices:\n\nCopy number per cell\nConcentration [nM]\nRelative abundance, calculated either as fraction of the cumulative mass of a protein to the total cumulative mass, or as the fraction of the cumulative number of molecules of one protein to the total number of protein molecules.\nCopy number rank, with 1 representing the most highly abundant protein\nRelative copy number rank, with values ranging from 0-1. This value is useful for ‘s curve’ plots of rank vs. logarithmized copy numbers.\nSample summaries, either in the form of row annotations in the output matrix, or a separate matrix."
+  },
+  {
+    "objectID": "estimateaccuracy.html",
+    "href": "estimateaccuracy.html",
+    "title": "Proteomic ruler: Estimate absolute protein quantification accuracy",
+    "section": "",
+    "text": "If you arrived here directly, it is a good idea to read the Proteomic ruler overview first."
+  },
+  {
+    "objectID": "estimateaccuracy.html#total-number-of-peptides-select",
+    "href": "estimateaccuracy.html#total-number-of-peptides-select",
+    "title": "Proteomic ruler: Estimate absolute protein quantification accuracy",
+    "section": "2.1 Total number of peptides Select",
+    "text": "2.1 Total number of peptides Select\nThe Peptides column of the MaxQuant output table."
+  },
+  {
+    "objectID": "estimateaccuracy.html#unique-razor-peptides",
+    "href": "estimateaccuracy.html#unique-razor-peptides",
+    "title": "Proteomic ruler: Estimate absolute protein quantification accuracy",
+    "section": "2.2 Unique + razor peptides",
+    "text": "2.2 Unique + razor peptides\nSelect the Unique + razor peptides column of the MaxQuant output table."
+  },
+  {
+    "objectID": "estimateaccuracy.html#sequence-length",
+    "href": "estimateaccuracy.html#sequence-length",
+    "title": "Proteomic ruler: Estimate absolute protein quantification accuracy",
+    "section": "2.3 Sequence length",
+    "text": "2.3 Sequence length\nSelect either the Sequence length column of the MaxQuant output table or the corresponding annotation column generated by Annotate proteins."
+  },
+  {
+    "objectID": "estimateaccuracy.html#number-of-theoretical-peptides",
+    "href": "estimateaccuracy.html#number-of-theoretical-peptides",
+    "title": "Proteomic ruler: Estimate absolute protein quantification accuracy",
+    "section": "2.4 Number of theoretical peptides",
+    "text": "2.4 Number of theoretical peptides\nSelect the corresponding annotation column generated by Annotate proteins."
+  },
+  {
+    "objectID": "estimateaccuracy.html#confidence-class-thresholds",
+    "href": "estimateaccuracy.html#confidence-class-thresholds",
+    "title": "Proteomic ruler: Estimate absolute protein quantification accuracy",
+    "section": "2.5 Confidence class thresholds",
+    "text": "2.5 Confidence class thresholds\nFor the high and medium confidence class, specify the following thresholds. Every protein that does not fulfill the criteria for high or medium accuracy will be classified as low accuracy.\n\nMin. peptides: The minimum number of detected peptides.\nMin. razor fraction: The minimum ratio of razor+unique/total peptides.\nMin. theoretical peptides per 100 amino acids."
+  },
+  {
+    "objectID": "perseus_tutorials.html",
+    "href": "perseus_tutorials.html",
+    "title": "Tutorials",
+    "section": "",
+    "text": "Videos of the lectures and tutorials given at the different MaxQuant Summer Schools in the past years can all be found in our YouTube channel:\nolder Lectures:\n\nPerseus and statistics 01 - Lecture by Juergen Cox\nPerseus and statistics 02 - Lecture by Tami Geiger\nPerseus and statistics 03 - Lecture by Stefka Tyanova"
   }
 ]

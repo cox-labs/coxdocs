@@ -1,0 +1,24 @@
+---
+title: "Row correlation"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+csl: nature.csl
+---
+
+# General
+
+  * **Type:** - Matrix MultiProcessing
+
+# Brief description
+
+
+Calculate correlation coefficients between the row in two matrices with the same columns. Useful for e.g. calculating kME values in co-expression analysis workflow.

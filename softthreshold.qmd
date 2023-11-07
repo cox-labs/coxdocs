@@ -1,0 +1,31 @@
+---
+title: "Soft threshold"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+csl: nature.csl
+---
+
+This activity is provided through the `R`-language integration into Perseus and therefore requires `R` as well as the `WGCNA` package to be installed. See [WGCNA](docs/WGCNA.html) for more information and installation instructions.
+
+Soft-thresholding is covered by [~~official WGCNA tutorials~~](https://labs.genetics.ucla.edu/horvath/htdocs/CoexpressionNetwork/Rpackages/WGCNA/Tutorials/index.html). Unfortunately, the tutorial is not online anymore. 
+
+But one possible option is the discussion on [Bioconductor.org](https://support.bioconductor.org/p/87024/)
+
+# Description
+
+Find the best `power` parameter for co-expression analysis. The goal is to find a network with good scale-free fit.
+
+# Output
+
+The output matrix contains properties of co-expression networks constructed for each choice of the
+`power` parameter. It is best explored by plotting `power` against the other properties in
+a scatter plot. Select the lowest `power` with a high scale-free fit index `SFT.R.sq` for the analysis.
