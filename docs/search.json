@@ -3764,5 +3764,131 @@
     "title": "Tutorials",
     "section": "",
     "text": "Videos of the lectures and tutorials given at the different MaxQuant Summer Schools in the past years can all be found in our YouTube channel:\nolder Lectures:\n\nPerseus and statistics 01 - Lecture by Juergen Cox\nPerseus and statistics 02 - Lecture by Tami Geiger\nPerseus and statistics 03 - Lecture by Stefka Tyanova"
+  },
+  {
+    "objectID": "interactions.html",
+    "href": "interactions.html",
+    "title": "Label-free interaction data",
+    "section": "",
+    "text": "For the here shown use case Perseus 1.5.1.6 was used."
+  },
+  {
+    "objectID": "interactions.html#loading",
+    "href": "interactions.html#loading",
+    "title": "Label-free interaction data",
+    "section": "2.1 Loading",
+    "text": "2.1 Loading\nLoad the file “proteinGroups.txt” from the “combined/txt” folder of the MaxQuant output. Load Generic matrix upload is denoted by the green arrow on the top left corner of the Perseus window or load the file using the drag and drop function of Perseus.\n\nMake sure to load the six LFQ intensities as main columns, which correspond to three repeats of a pulldown and three controls."
+  },
+  {
+    "objectID": "interactions.html#filtering",
+    "href": "interactions.html#filtering",
+    "title": "Label-free interaction data",
+    "section": "2.2 Filtering",
+    "text": "2.2 Filtering\nAfter loading the matrix, we filter out the reverse proteins and the proteins that are only identified by site. The contaminants are deliberately not filtered out to show some things later. The filtering is done using the function Processing → Filter rows → Filter rows based on categorical column, because both the “Reverse” column and the “Only identified by site” column are categorical.\n\nFirst, we filter out the reverse hits. Reverse hits are indicated by a “+” in the “Reverse” column, so to filter out these hits all rows containing a “+” will be removed from the matrix. To do so the column “Reverse” needs to be selected, “+” is the value we are looking for and is selected by default. No further changes are necessary, because we want to remove the matching rows from the matrix. This results in a matrix, where the value in the “Reverse” column of all rows is empty.\n\nSecond, we filter out the hits that are only identified by site. These are indicated by a “+” in the “Only identified by site” column, so to filter out these hits all rows containing a “+” will be removed from the matrix. To do so the column “Only identified by site” needs to be selected, “+” is the value we are looking for and is selected by default. No further changes are necessary, because we want to remove the matching rows from the matrix. This results in a matrix, where the value in the “Only identified by site” column of all rows are empty."
+  },
+  {
+    "objectID": "interactions.html#transformation",
+    "href": "interactions.html#transformation",
+    "title": "Label-free interaction data",
+    "section": "2.3 Transformation",
+    "text": "2.3 Transformation\nTo gain better behavior of the data in statistical tests and also in imputation, normally distributed data is advantageous. Therefore we logarithmize the data using Processing → Basic → Transform.\n\nSince the default formula is \\(log_2(x)\\) and all expression columns are selected, nothing needs to be changed.\n\nTo verify, if the data is now more or less normally distributed, we plot histograms of each intensity column separately with Analysis → Visualization → Histogram.\n\n\nThe results will be displayed in an extra tab on the same matrix containing the histogram functionalities. And indeed the intensities are each more or less normally distributed."
+  },
+  {
+    "objectID": "interactions.html#grouping-of-samples",
+    "href": "interactions.html#grouping-of-samples",
+    "title": "Label-free interaction data",
+    "section": "2.4 Grouping of samples",
+    "text": "2.4 Grouping of samples\nBefore filtering the data for valid values, we group the samples according to replicates using Processing → Annot. rows → Categorical annotation rows.\n\nYou can leave the name of the grouping to the default value “Group1” and just shorten the rest of the column names according to replicates. Also giving each group a different name is possible, this is a matter of taste."
+  },
+  {
+    "objectID": "interactions.html#filtering-according-to-groups",
+    "href": "interactions.html#filtering-according-to-groups",
+    "title": "Label-free interaction data",
+    "section": "2.5 Filtering according to groups",
+    "text": "2.5 Filtering according to groups\nIdentifications with just one reported intensity are usually not very useful for further analyses. This is why we filter for valid values with Processing → Filter rows → Filter rows based on valid values.\n\nWe want to have “3” valid values “in at least one group”, because interaction partners without any background affinity would not appear in the control, but should still appear with three valid values in the actual pulldown."
+  },
+  {
+    "objectID": "interactions.html#imputation",
+    "href": "interactions.html#imputation",
+    "title": "Label-free interaction data",
+    "section": "2.6 Imputation",
+    "text": "2.6 Imputation\nThen we impute missing values from normal distribution with Processing → Imputation → Replace missing values from normal distribution.\n\nThe imputation function will look at the distribution of values, assuming that they are normally distributed and calculates width and center of the distribution. Then Perseus will shrink the distributions to a factor of “0.3” (width), shift it down by “1.8” (down shift) standard deviations and simulate some random values that make up values to fill up the missing values. Also we take the whole matrix (mode).\n\nUsing histograms as before Analysis → Visualization → Histogram, we are able to look at the distributions of the imputed values. Therefore we generate histograms for all LFQ intensity columns. The results will be displayed in an extra tab on the same matrix containing the histogram functionalities as before. It is important that the imputed values do not form a separate normal distribution, start around the same point in the replicates and are narrower than the distributions of the measured values."
+  },
+  {
+    "objectID": "interactions.html#multi-scatter-plot",
+    "href": "interactions.html#multi-scatter-plot",
+    "title": "Label-free interaction data",
+    "section": "3.1 Multi-scatter plot",
+    "text": "3.1 Multi-scatter plot\nTo be sure, that the experiment worked one can use multi-scatter plots with Analysis → Visualization → Multi scatter plot to analyze the correlation between the samples.\n\nTherefore we have to plot all six samples against each other.\n\nWe can observe, that the Pearson correlation (calculation option highlighted by a red rectangle) is good between the samples. Also that the correlation within the groups is a bit higher than between the groups of replicates."
+  },
+  {
+    "objectID": "interactions.html#hierarchical-clustering",
+    "href": "interactions.html#hierarchical-clustering",
+    "title": "Label-free interaction data",
+    "section": "3.2 Hierarchical clustering",
+    "text": "3.2 Hierarchical clustering\nAnother option to figure out, if the experiment worked is hierarchical clustering in Analysis → Clustering/PCA → Hierarchical clustering.\n\nSince we just have six known samples, we are not interested in the column tree. So we are more curious about the intensity profile of all the samples. The results will be displayed in an extra tab on the same matrix containing the hierarchical clustering functionalities.\n\nThe default color gradient is from green (low values) to red (high values), which is very nice for ratios, but for intensities another color gradient could be used, which is called “rainbow gradient”. It goes from dark cold colors to bright warm colors. To change it click on the “change color gradient” button in the “Clustering” tab (highlighted by a red rectangle) and the current gradient will be displayed in a pop-up window.\n\nTo change the colors just click on the position in the gradient you want to change and select a color in the “Color” window that pops up until you have the gradient you desire.\n\nAt first glance all the samples look more or less the same, which is good. But, if we take a closer look at the top of the heatmap, we can find a group of proteins that show distinct behavior between the groups. To figure out which proteins these are we have to zoom in by holding the left mouse key and dragging. And what we can see is that the highlighted cluster of proteins belong mainly to anaphase promoting complex.\n\nNow we can investigate the behavior of the contaminants, since we deliberately did not filter them in the beginning. To highlight them we have to click on the “Configure row names” button in the “Clustering” tab\n\nand change “Row color bar” to “Contaminant”.\n\nThis results in an additional column on the left hand side of the heatmap, where contaminants are highlighted in blue (the rest is grey). These contaminants do not behave like a contaminant and are thus potential interaction partners."
+  },
+  {
+    "objectID": "interactions.html#two-sample-t-test",
+    "href": "interactions.html#two-sample-t-test",
+    "title": "Label-free interaction data",
+    "section": "4.1 Two sample t-test",
+    "text": "4.1 Two sample t-test\nNow we want to find the interactors using Processing → Tests → Two-samples tests.\n\nThe T-test assumes that you have equal variance within the groups of replicates. s0 is in essence a minimal fold change, which means even if a protein gives you a very good p-value in case the fold change is below that value (s0) it won’t be significant. As a rule of thumb we use s0 = 2 and FDR = 0.01, what usually gives nice results. This results in a new matrix with additional columns: “t-test Significant”, “-Log t-test p-value”, “t-test Difference” and “test statistic”."
+  },
+  {
+    "objectID": "interactions.html#scatter-plot",
+    "href": "interactions.html#scatter-plot",
+    "title": "Label-free interaction data",
+    "section": "4.2 Scatter plot",
+    "text": "4.2 Scatter plot\nNow to view the interactors we have to generate a scatter plot Analysis → Visualization → Scatter plot.\n\nSo we have to plot the columns against each other. This results in an extra tab on the same matrix containing the scatter plot functionalities.\n\nWe are interested in the “t-test Difference” vs. “-Log t-test p-value” (highlighted by a blue rectangle). Then select “t-test Significant” in the “Categories” tab and show the “Gene Names” of these hits (highlighted by green rectangles). Since we used “both” sides in the significance test, we are able to find significant hits on both sides.\n\nIt is important to keep in mind that there is no universal s0 and FDR parameter value that guarantees good results. One has to optimize the values for every experiment. This optimization process is covered in the following section."
+  },
+  {
+    "objectID": "interactions.html#volcano-plot",
+    "href": "interactions.html#volcano-plot",
+    "title": "Label-free interaction data",
+    "section": "4.3 Volcano plot",
+    "text": "4.3 Volcano plot\nThe volcano plot is the unified function of the two sample t-test and the scatter plot with the additional option to easily optimize the s0 and FDR parameter. So to identify and visualize the interactors in one step use Analysis → Misc. → Volcano plot.\n\nAs in the two sample t-test one has to specify the grouping that should be used for the significance test, which test should be applied and the parameters of the test. Since we have just one grouping and want to use the t-test we just have to change s0 to 2 and FDR to 0.01. This results in an extra tab on the same matrix containing the volcano plot functionalities.\n\nThe results are shown in a volcano plot with the cutoff curve indicating which hits are significant. To highlight the test significant hits we have to select “t-test Significant” in the “Categories” tab and choose “Gene Names” as labels (highlighted by green rectangles). Also other cutoff parameters, s0 and FDR, can be applied by typing in the new chosen values (blue rectangle). Don’t forget to refresh the plot (red rectangle)."
+  },
+  {
+    "objectID": "interactions.html#profile-plot",
+    "href": "interactions.html#profile-plot",
+    "title": "Label-free interaction data",
+    "section": "4.4 Profile plot",
+    "text": "4.4 Profile plot\nAnother option to find and visualize interactors is to use Analysis → Visualization → Profile plot. This function has no input parameters and the results are shown in an extra tab on the same matrix containing the profile plot functionalities.\n\nFirst we have to search for the bait protein CDC23 and get its profile. This is achieved by clicking the right mouse button in the “Profiles” tab (orange rectangle in the figure at the end), selecting “Find…” and searching for “CDC23” in the whole table.\n\nThen go to the “Reference profile” tab (green rectangle) and search for the 20 next neighbors (red rectangle) and press the start button (blue rectangle). If you go now back to the “Profiles plot” (orange rectangle) the selected proteins are at the top of the matrix and are waiting to be investigated."
+  },
+  {
+    "objectID": "modifications.html",
+    "href": "modifications.html",
+    "title": "Label-free phospho data",
+    "section": "",
+    "text": "For the here shown use case Perseus 1.5.1.6 was used."
+  },
+  {
+    "objectID": "modifications.html#loading",
+    "href": "modifications.html#loading",
+    "title": "Label-free phospho data",
+    "section": "2.1 Loading",
+    "text": "2.1 Loading\nLoad the file “Phospho (STY)Sites.txt” from the “combined/txt” folder of the MaxQuant output. Load → Generic matrix upload is denoted by the green arrow on the top left corner of the Perseus window or load the file using the drag and drop function of Perseus.\n\nMake sure to load the following 42 columns as main columns:\n\nIntensity C1_1, Intensity C1_2, Intensity C1_3,\nIntensity C2_1, Intensity C2_2, Intensity C2_3,\nIntensity C3_1, Intensity C3_2, Intensity C3_3,\nIntensity C4_1, Intensity C4_2, Intensity C4_3,\nIntensity C5_1, Intensity C5_2, Intensity C5_3,\nIntensity C6_1, Intensity C6_2, Intensity C6_3,\nIntensity E15_1_1, Intensity E15_1_2, Intensity E15_1_3,\nIntensity E15_2_1, Intensity E15_2_2, Intensity E15_2_3,\nIntensity E15_3_1, Intensity E15_3_2, Intensity E15_3_3,\nIntensity E15_4_1, Intensity E15_4_2, Intensity E15_4_3,\nIntensity N1_1, Intensity N1_2, Intensity N1_3,\nIntensity N2_1, Intensity N2_2, Intensity N2_3,\nIntensity N3_1, Intensity N3_2, Intensity N3_3,\nIntensity N4_1, Intensity N4_2, Intensity N4_3\n\nAlso make sure that the “Localization prob” is loaded as numerical column. (Only the global one, not one for each sample.)\nComment: After each applied operation a new matrix will be generated. Every matrix that you are creating can be saved with Export → Generic matrix export and re-imported later with Load → Generic matrix upload."
+  },
+  {
+    "objectID": "modifications.html#transformation",
+    "href": "modifications.html#transformation",
+    "title": "Label-free phospho data",
+    "section": "2.2 Transformation",
+    "text": "2.2 Transformation\nNow we want to rearrange the main data. Currently, the different number of phosphorylations per peptide are formatted as separate columns. We want to have only one column per sample, and three rows per site instead. This is accomplished by Processing → Modifications → Expand site table. The function has no parameters.\n{{ perseus:user:use_cases:phospho-04-expand_site_table-edited.png?direct |}}\nIf you check the number of rows and the number of main columns in the two matrices before and after this step, you can see that the number of rows are tripled, whereas the number of main columns is one third. Also a categorical column called “Multiplicity” is generated, which contains information about the phosphorylation of the peptides (single, double, triply phosphorylated).\nNow we proceed with the standard data processing steps and take the logarithm of values in the main columns with Processing → Basic → Transform.\n{{ perseus:user:use_cases:phospho-05-transform-edited.png?direct |}}\nSince the default formula is \\(log_2(x)\\) and all main columns are selected, nothing needs to be changed.\n{{ perseus:user:use_cases:phospho-05-transform-parameter_window.png?direct |}}"
+  },
+  {
+    "objectID": "modifications.html#renaming-columns",
+    "href": "modifications.html#renaming-columns",
+    "title": "Label-free phospho data",
+    "section": "4.1 Renaming columns",
+    "text": "4.1 Renaming columns\nNext, we are doing some cosmetics by shortening the names of the main columns and remove the prefix “Intensity” with Processing → Rearrange → Rename columns [reg. ex.].\n\nThe regular expression that you may use to remove the repetitive part of the name is “Intensity (.*)”. The general concept of regular expressions can be found under http://en.wikipedia.org/wiki/Regular_expression. If you already know generally how regular expressions work, you may only need to glance at this Quick Reference or at an even quicker Cheat Sheet. This results in a matrix, where the names of the main columns are the replica.\n\nIf you want to rename the columns manually without the help of regular expressions you can use Processing → Rearrange → Rename columns.\n\nThen you can type the new names in the predefined text field."
+  },
+  {
+    "objectID": "perseus_usecases.html",
+    "href": "perseus_usecases.html",
+    "title": "Persues use cases",
+    "section": "",
+    "text": "1 Use cases\nThis section provides some cases to demonstrate how to work on Perseus for typical workflows.\n\nLabel-free interaction data\nLabel-free phospho data\nSILAC data [perseus:user:use_cases:|]]"
   }
 ]
