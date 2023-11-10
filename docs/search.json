@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "perseus_usecases.html",
+    "href": "perseus_usecases.html",
+    "title": "Persues use cases",
+    "section": "",
+    "text": "1 Use cases\nThis section provides some cases to demonstrate how to work on Perseus for typical workflows.\n\nLabel-free interaction data\nLabel-free phospho data\nSILAC data"
+  },
+  {
+    "objectID": "perseus_instructions.html",
+    "href": "perseus_instructions.html",
+    "title": "Perseus",
+    "section": "",
+    "text": "The Perseus software platform supports biological and biomedical researchers in interpreting protein quantification, interaction and post-translational modification data. Perseus contains a comprehensive portfolio of statistical tools for high-dimensional omics data analysis covering normalization, pattern recognition, time-series analysis, cross-omics comparisons and multiple-hypothesis testing (for an overview see Figure 1). A machine learning module supports the classification and validation of patient groups for diagnosis and prognosis, and it also detects predictive protein signatures. Central to Perseus is a user-friendly, interactive workflow environment that provides complete documentation of computational methods used in a publication(Tyanova, Temu, and Cox 2016)."
+  },
+  {
+    "objectID": "perseus_instructions.html#report-a-bug",
+    "href": "perseus_instructions.html#report-a-bug",
+    "title": "Perseus",
+    "section": "4.1 Report a bug",
+    "text": "4.1 Report a bug\nFor question we would love to hear from you under Contact"
+  },
+  {
+    "objectID": "silac.html",
+    "href": "silac.html",
+    "title": "SILAC data",
+    "section": "",
+    "text": "For the here shown use case Perseus 1.5.1.6 was used."
+  },
+  {
+    "objectID": "silac.html#loading",
+    "href": "silac.html#loading",
+    "title": "SILAC data",
+    "section": "2.1 Loading",
+    "text": "2.1 Loading\nLoad the file “proteinGroups.txt” from the “combined/txt” folder of the MaxQuant output. Load → Generic matrix upload is denoted by the green arrow on the top left corner of the Perseus window or load the file using the drag and drop function of Perseus.\n\nMake sure you select the 9 “Ratio H/L Normalized …” columns as main columns. Also make sure you understand what is meant by the column types “Main”, “Categorical”, “Numerical”, “Multi-numerical” and “Text”.\nComment: After each applied operation a new matrix will be generated. Every matrix that you are creating can be saved with Export → Generic matrix export and re-imported later with Load → Generic matrix upload."
+  },
+  {
+    "objectID": "silac.html#filtering",
+    "href": "silac.html#filtering",
+    "title": "SILAC data",
+    "section": "2.2 Filtering",
+    "text": "2.2 Filtering\nAfter loading the matrix, we filter out the reverse proteins and the proteins that are only identified by site. This is done by using the function Processing → Filter rows → Filter rows based on categorical column, because both the “Reverse” column and the “Only identified by site” column are categorical.\n\nFirst, we filter out the reverse hits. Reverse hits are indicated by a “+” in the “Reverse” column, so to filter out these hits all rows containing a “+” will be removed from the matrix. Therefore, the column “Reverse” needs to be selected, “+” is the value we are looking for and is selected by default. No further changes need to be applied, because we want to remove the matching rows from the matrix. This results in a matrix, where the value in the “Reverse” column of all rows is empty.\n\nSecond, we filter out the hits that are only identified by site. The column “Only identified by site” has two values, TRUE and FALSE. Thus all rows containing TRUE are filtered out. Therefore, “Only identified by site” has to be selected as column and TRUE is the value of interest, which is selected by clicking on TRUE on the left hand side and using the button in the middle with the arrow to the right on it. Deselection works by using the button with the arrow to the left. No further changes are necessary, because we want to remove the matching rows from the matrix. This results in a matrix, where all rows contain the value FALSE in the column “Only identified by site”.\n\nThe next step is to filter out all rows with less than six valid intensity values of all nine (i.e. being not NaN). Therefore we use Processing → Filter rows → Filter rows based on valid values.\n\nThe required percentage of valid values per row may differ from study to study. In some cases, having valid values only in one of several replicate groups might be a significant finding and these kind of rows should possibly not be discarded. The filter can also be applied to each column group separately. (How to create column groups or categorical annotation rows you will learn in a few steps.) Now we just want to be certain that each row contains at least six of the nine intensity values."
+  },
+  {
+    "objectID": "silac.html#ratio-transformation",
+    "href": "silac.html#ratio-transformation",
+    "title": "SILAC data",
+    "section": "2.3 Ratio transformation",
+    "text": "2.3 Ratio transformation\nBecause the actual sample is in the light SILAC channel and the reference is in the heavy channel, we need to invert the ratios using Processing → Basic → Transform.\n\nTo invert the ratios the formula \\(1/x\\) has to be typed in the transformation type field. No further changes are necessary, because we want to apply the transformation to all main columns, which are selected by default.\n\nThen the ratios will be logarithmized by using the function Processing → Basic → Transform again.\n\nNow the transformation function we are going to use is \\(log_2(x)\\), which is the default setting. The transformation should also be applied to all main columns, which are selected by default."
+  },
+  {
+    "objectID": "silac.html#renaming-columns",
+    "href": "silac.html#renaming-columns",
+    "title": "SILAC data",
+    "section": "2.4 Renaming columns",
+    "text": "2.4 Renaming columns\nThe main column names “Ratio H/L Normalized …” are a bit bulky. So we rename the main columns with the help of regular expressions and the function Processing → Rearrange → Rename columns [Reg.ex.].\n\nThe regular expression that you may use to remove the repetitive part of the name is “Ratio H/L Normalized (.*)”. The general concept of regular expressions can be found under http://en.wikipedia.org/wiki/Regular_expression. If you already know generally how regular expressions work, you may only need to glance at this Quick Reference or at an even quicker Cheat Sheet.\nThis results in a matrix, where the column names of the ratios are a combination of the cell line and the replica.\n\nIf you want to rename the columns manually without the help of regular expressions you can use Processing → Rearrange → Rename columns.\n\nThen you can type the new names in the predefined text field."
+  }
+]

@@ -20,13 +20,7 @@ This section provides some cases to demonstrate how to work on Perseus for typic
 
 * [Label-free interaction data](docs/interactions.html)
 * [Label-free phospho data](docs/modifications.html)
-<<<<<<< Updated upstream
-* [SILAC data](silac) [perseus:user:use_cases:|]]
-=======
 * [SILAC data](docs/silac.html)
->>>>>>> Stashed changes
-
-
 
 <!-- Internal users can find one more use case: 
 
