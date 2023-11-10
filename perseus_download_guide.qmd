@@ -8,7 +8,7 @@ format:
     toc-expand: false
     number-sections: true
     number-depth: 4
-editor: visual
+editor: source
 date: today
 bibliography: references.bib
 ---
@@ -25,7 +25,8 @@ Simply download from [our MQ home page](https://maxquant.org/perseus/) and unpac
 
 Supported operation system versions (64 bit is required) are Windows 10 or 11 or Windows Server 2016, 2019, 2022.
 
-**Install .NET Framework 4.7.2 or higher** - To find out whether you already have it, follow the instructions on [How to Determine Which .NET Framework Versions Are Installed](http://msdn.microsoft.com/en-us/library/hh925568%28v=vs.110%29.aspx#net_b). If you need to, you can download the software and get installation instructions at the [Microsoft Download Center](http://www.microsoft.com/en-us/download/details.aspx?id=30653).
+**Install .NET Framework 4.7.2 or higher** - To find out whether you already have it, follow the instructions on [How to Determine Which .NET Framework Versions Are Installed](http://msdn.microsoft.com/en-us/library/hh925568%28v=vs.110%29.aspx#net_b).
+If you need to, you can download the software and get installation instructions at the [Microsoft Download Center](http://www.microsoft.com/en-us/download/details.aspx?id=30653).
 
 ## Running
 

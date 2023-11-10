@@ -14,7 +14,7 @@ bibliography: references.bib
 csl: nature.csl
 ---
 
-
+```{=html}
 <!-- 
 <ifauth @internal>//You are a user associated with MPIB, so you are presumably
 using the internal version of Perseus, which has some features not available
@@ -26,40 +26,41 @@ For you, developmental activities are also shown here and linked to whatever
 documentation might be available, even though they are not available in the software.
 They are marked with two asterisks (**).//</ifauth>
  -->
+```
+Data processing in Perseus generally takes the form of loading a matrix of data and then applying a series of transformations to that matrix.
+These transformations are called "activities".
+They are organized into a series of "Types", and possibly a number of "Headings" under the Type.
 
-Data processing in Perseus generally takes the form of loading a matrix of data
-and then applying a series of transformations to that matrix. These transformations
-are called “activities”. They are organized into a series of “Types”, and possibly
-a number of “Headings” under the Type.
-
-You can search this page for the name of the activity of interest, or you can browse
-the Type or Heading of interest using the Table of Contents on the right.
+You can search this page for the name of the activity of interest, or you can browse the Type or Heading of interest using the Table of Contents on the right.
 
 # Matrix Upload
 
-* [Binary upload](docs/binaryupload.html)
-* [Create gene list](docs/creategenelist.html)
-* [Create random matrix](docs/createrandommatrix.html)
-* [Generic matrix upload](docs/genericmatrixupload.html)
-* [Next generation sequencing data upload](docs/ngsupload.html)
-* [Raw upload](docs/unstructuredtxtupload.html) 
+-   [Binary upload](docs/binaryupload.html)
+-   [Create gene list](docs/creategenelist.html)
+-   [Create random matrix](docs/createrandommatrix.html)
+-   [Generic matrix upload](docs/genericmatrixupload.html)
+-   [Next generation sequencing data upload](docs/ngsupload.html)
+-   [Raw upload](docs/unstructuredtxtupload.html)
 
+```{=html}
 <!-- 
 * [Affymetrix CGH](AffymetrixCghDataUpload) [[perseus:bioinformatics:activities:MatrixUpload:|]]
 * [Agilent](AgilentDataUpload) [[perseus:bioinformatics:activities:MatrixUpload:|]]
 * [SBML to matrix](Sbml2Matrix) [[perseus:bioinformatics:activities:MatrixUpload:|]]
  -->
-
+```
 # Matrix Export
 
-* [Generic matrix export](docs/tabseparatedexport.html)
+-   [Generic matrix export](docs/tabseparatedexport.html)
 
+```{=html}
 <!-- 
 * [.arff export](ArffWriter) [[perseus:bioinformatics:activities:MatrixExport:|]]
  -->
-
+```
 # Matrix Analysis
 
+```{=html}
 <!--
 ## ARACNe (Analysis)
 
@@ -72,80 +73,86 @@ the Type or Heading of interest using the Table of Contents on the right.
 
 * [fastcluster](FastCluster) [[perseus:bioinformatics:activities:MatrixAnalysis:Clustering:|]]
  -->
- 
+```
 ## Clustering/PCA
 
-* [Hierarchical clustering](docs/hierarchicalcluster.html)
-* [Principal component analysis](docs/principalcomponentanalysis.html)
-* [Co-expression clustering](docs/coexpressionclustering.html)
+-   [Hierarchical clustering](docs/hierarchicalcluster.html)
+-   [Principal component analysis](docs/principalcomponentanalysis.html)
+-   [Co-expression clustering](docs/coexpressionclustering.html)
 
+```{=html}
 <!-- 
 * [Biclustering](Biclustering) [[perseus:bioinformatics:activities:MatrixAnalysis:ClusteringPCA:|]]
 * [Factor analysis](FactorAnalysis) [[perseus:bioinformatics:activities:MatrixAnalysis:ClusteringPCA:|]]
 * [Independent component analysis](IndependentComponentAnalysis) [[perseus:bioinformatics:activities:MatrixAnalysis:ClusteringPCA:|]]
  -->
-
+```
+```{=html}
 <!-- 
 # Co-expression
 </ifauth>
 
 * [Pick soft threshold](PickSoftThreshold) [[perseus:bioinformatics:activities:MatrixAnalysis:Co-expression]]
  -->
- 
+```
 ## Misc. (Analysis)
 
+-   [Numeric venn diagram](docs/numericvenndiagram.html)
+-   [Select rows manually](docs/selectrowsmanually.html)
+-   [Sequence logos](docs/sequencelogo.html)
+-   [Volcano plot](docs/volcanoplotanalysis.html)
+-   [Hawaii plot](docs/hawaiiplot.html)
 
-* [Numeric venn diagram](docs/numericvenndiagram.html)
-* [Select rows manually](docs/selectrowsmanually.html)
-* [Sequence logos](docs/sequencelogo.html)
-* [Volcano plot](docs/volcanoplotanalysis.html)
-* [Hawaii plot](docs/hawaiiplot.html)
-
+```{=html}
 <!-- 
 * [Edit matrix](EditMatrix) [[perseus:bioinformatics:activities:MatrixAnalysis:Misc:|]]
 * [Hawaii plot (multi-volcano)](MultiVolcanoAnalysis) [[perseus:internal:activities:MatrixAnalysis:Misc:|]]
 * [Sequence correlation](SequenceCorrelation) [[perseus:bioinformatics:activities:MatrixAnalysis:Misc:|]]
  -->
- 
+```
 ## Visualization
 
-* [3D plot](docs/scatterplot3danalysis.html)
-* [Histogram](docs/histogram.html)
-* [Multi scatter plot](docs/multiscatteranalysis.html)
-* [Profile plot](docs/profileplot.html)
-* [Scatter plot](docs/scatterplotanalysis.html)
+-   [3D plot](docs/scatterplot3danalysis.html)
+-   [Histogram](docs/histogram.html)
+-   [Multi scatter plot](docs/multiscatteranalysis.html)
+-   [Profile plot](docs/profileplot.html)
+-   [Scatter plot](docs/scatterplotanalysis.html)
 
+```{=html}
 <!-- 
 * [Tree map](TreeMapAnalysis) [[perseus:bioinformatics:activities:MatrixAnalysis:Visualization:|]]**\\</ifauth>
 * [Box plot](BoxPlotAnalysis) [[perseus:bioinformatics:activities:MatrixAnalysis:Visualization:|]]**\\</ifauth>
 * [Charts](ChartAnalysis) [[perseus:bioinformatics:activities:MatrixAnalysis:Visualization:|]]**\\</ifauth>
  -->
-
+```
 # Matrix MultiProcessing
 
 ## Basic (MultiProcessing)
 
-* [Matching columns by name](docs/matchingcolumnsbyname.html)
-* [Matching rows by name](docs/matchingrowsbyname.html)
-* [Replace strings](docs/replacestrings.html)
-* [Row correlation](docs/rowcorrelation.html)
+-   [Matching columns by name](docs/matchingcolumnsbyname.html)
+-   [Matching rows by name](docs/matchingrowsbyname.html)
+-   [Replace strings](docs/replacestrings.html)
+-   [Row correlation](docs/rowcorrelation.html)
 
+```{=html}
 <!-- 
 *[Venn diagram](VennMultiProcessing) [[perseus:internal:activities:MatrixMultiProcessing:Basic:|]]
 -->
-
+```
 ## CI
 
-* [Assert matrix equals](docs/assertmatrixequal.html)
+-   [Assert matrix equals](docs/assertmatrixequal.html)
 
+```{=html}
 <!--  
 ## Misc. (MultiProcessing)
 
 *[Match by chromosomal location](MatchingByGenomePosition) [[perseus:bioinformatics:activities:MatrixMultiProcessing:Misc:|]]
 -->
-
+```
 # Matrix Processing
 
+```{=html}
 <!-- 
 ## AA sequence
 
@@ -163,98 +170,106 @@ the Type or Heading of interest using the Table of Contents on the right.
 * [Orthologs](AddOrthologs) [[perseus:bioinformatics:activities:MatrixProcessing:Addcontent:|]]
 * [miRNA targets](MirnaTarget) [[perseus:bioinformatics:activities:MatrixProcessing:Addcontent:|]]
 -->
-
+```
 ## Annot. columns
 
-* [1D annotation enrichment](docs/onedimannotationenrichment.html)
-* [2D annotation enrichment](docs/twodimannotationenrichment.html)
-* [Add annotation](docs/addannotationtomatrix.html)
-* [Annotation matrix](docs/addannotationtomatrix.html)
-* [Average categories](docs/averagecategories.html)
-* [Category counting](docs/categorycounting.html)
-* [Fisher exact test](docs/fisherexacttestproces.html)
-* [To base identifiers](docs/backtobaseidentifiers.html)
+-   [1D annotation enrichment](docs/onedimannotationenrichment.html)
+-   [2D annotation enrichment](docs/twodimannotationenrichment.html)
+-   [Add annotation](docs/addannotationtomatrix.html)
+-   [Annotation matrix](docs/addannotationtomatrix.html)
+-   [Average categories](docs/averagecategories.html)
+-   [Category counting](docs/categorycounting.html)
+-   [Fisher exact test](docs/fisherexacttestproces.html)
+-   [To base identifiers](docs/backtobaseidentifiers.html)
 
+```{=html}
 <!-- 
 * [Add search database](AddSourceDatabase) [[perseus:internal:activities:MatrixProcessing:Annotcolumns:|]]
 * [ComplexCorrelation](ComplexCorrelation) [[perseus:bioinformatics:activities:MatrixProcessing:Annotcolumns:]]
 * [Count protein sequence features](AddProteinSequenceCounts) [[perseus:internal:activities:MatrixProcessing:Annotcolumns:|]]
 -->
-
+```
 ## Annot. rows
 
-* [Average groups](docs/averagegroups.html)
-* [Categorical annotation rows](docs/managecategoricalannotrow.html)
-* [Join terms in categorical row](docs/jointermsincategoricalrow.html)
-* [Numerical annotation rows](docs/managenumericalannotrow.html)
+-   [Average groups](docs/averagegroups.html)
+-   [Categorical annotation rows](docs/managecategoricalannotrow.html)
+-   [Join terms in categorical row](docs/jointermsincategoricalrow.html)
+-   [Numerical annotation rows](docs/managenumericalannotrow.html)
 
+```{=html}
 <!-- 
 * [Regex category row](RegexCategoryRow) [[perseus:internal:activities:MatrixProcessing:Annotrows:|]]
 * [Regroup](Regroup) [[perseus:bioinformatics:activities:MatrixProcessing:Annotrows:|]]
 -->
-
+```
 ## Basic (Processing)
 
-* [Add noise](docs/addnoise.html)
-* [Clone](docs/cloneprocessing.html)
-* [Column correlation](docs/columncorrelations.html)
-* [Combine main columns](docs/combinemaincolumns.html)
-* [Combine rows by identifiers](docs/combinebyidentifiersprocessing.html)
-* [Density estimation](docs/densityestimationprocessing.html)
-* [Performance curves](docs/performancecurves.html)
-* [Quantiles](docs/quantiles.html)
-* [Row correlation](docs/rowcorrelations.html)
-* [Summary statistics (columns)](docs/summarystatisticscolumns.html)
-* [Summary statistics (rows)](docs/summarystatisticsrows.html)
-* [Transform](docs/transformationproc.html)
+-   [Add noise](docs/addnoise.html)
+-   [Clone](docs/cloneprocessing.html)
+-   [Column correlation](docs/columncorrelations.html)
+-   [Combine main columns](docs/combinemaincolumns.html)
+-   [Combine rows by identifiers](docs/combinebyidentifiersprocessing.html)
+-   [Density estimation](docs/densityestimationprocessing.html)
+-   [Performance curves](docs/performancecurves.html)
+-   [Quantiles](docs/quantiles.html)
+-   [Row correlation](docs/rowcorrelations.html)
+-   [Summary statistics (columns)](docs/summarystatisticscolumns.html)
+-   [Summary statistics (rows)](docs/summarystatisticsrows.html)
+-   [Transform](docs/transformationproc.html)
 
+```{=html}
 <!-- 
 * [Create numerical column](CreateNumericalColumn) [[perseus:bioinformatics:activities:MatrixProcessing:Basic:|]]
 * [Create numerical row](CreateNumericalRow) [[perseus:bioinformatics:activities:MatrixProcessing:Basic:|]]
 * [Fast Pearson column correlation](FastPearsonCorrelations) [[perseus:bioinformatics:activities:MatrixProcessing:Basic:|]]
 * [Parameter dependent correlation](ParameterDependentCorrelation) [[perseus:bioinformatics:activities:MatrixProcessing:Basic:|]]
 -->
-
+```
 ## Clustering
 
-* [Generic clustering](docs/genericclusteringproc.html)
+-   [Generic clustering](docs/genericclusteringproc.html)
 
+```{=html}
 <!-- 
 * [Kernel PCA](KernelPcaProc) [[perseus:internal:activities:MatrixProcessing:Clustering:|]]
 * [Kernel canonical correlation](KernelCanonicalCorrelationProc) [[perseus:internal:activities:MatrixProcessing:Clustering:|]]
 * [Motif clustering](MotifClusteringProc) [[perseus:internal:activities:MatrixProcessing:Clustering:|]]
 * [Peptide clustering](PeptideClusteringProc) [[perseus:internal:activities:MatrixProcessing:Clustering:|]]
 -->
-
+```
+```{=html}
 <!-- 
 ## Co-expression
 
 * [Module Eigengenes](MatrixModuleEigengene) [[perseus:bioinformatics:activities:MatrixProcessing:Co-expression:|]]
 -->
-
+```
+```{=html}
 <!-- 
 ## Filter
 
 * [Filter labels](FilterLabels) [[perseus:bioinformatics:activities:MatrixProcessing:Filter:|]]
---> 
-
+-->
+```
 ## Filter columns
 
-* [Filter columns based on categorical row](docs/filtercategoricalrow.html)
-* [Filter columns based on valid values](docs/filtervalidvaluescolumns.html)
+-   [Filter columns based on categorical row](docs/filtercategoricalrow.html)
+-   [Filter columns based on valid values](docs/filtervalidvaluescolumns.html)
 
 ## Filter rows
 
-* [Filter rows based on categorical column](docs/filtercategoricalcolumn.html)
-* [Filter rows based on numerical/main column](docs/filternumericalcolumn.html)
-* [Filter rows based on random sampling](docs/filterrandomrows.html)
-* [Filter rows based on text column](docs/filtertextualcolumn.html)
-* [Filter rows based on valid values](docs/filtervalidvaluesrows.html)
+-   [Filter rows based on categorical column](docs/filtercategoricalcolumn.html)
+-   [Filter rows based on numerical/main column](docs/filternumericalcolumn.html)
+-   [Filter rows based on random sampling](docs/filterrandomrows.html)
+-   [Filter rows based on text column](docs/filtertextualcolumn.html)
+-   [Filter rows based on valid values](docs/filtervalidvaluesrows.html)
 
+```{=html}
 <!-- 
 * [Filter grouped rows by valid values](GroupedValidValueFilter) [[perseus:bioinformatics:activities:MatrixProcessing:Filterrows]]
 -->
-
+```
+```{=html}
 <!-- 
 # Genome
 
@@ -262,13 +277,14 @@ the Type or Heading of interest using the Table of Contents on the right.
 * [Create genome position](AddGenomePosition) [[perseus:internal:activities:MatrixProcessing:Genome:|]]
 * [Genome profiling](GenomeAnalysis) [[perseus:internal:activities:MatrixProcessing:Genome:|]]
 -->
-
+```
 ## Imputation
 
-* [Replace missing values by constant](docs/replacemissingbyconstant.html)
-* [Replace missing ](docs/replacemissingfromgaussian.html)
-* [Replace imputed values by NaN](docs/replaceimputedbynan.html)
+-   [Replace missing values by constant](docs/replacemissingbyconstant.html)
+-   [Replace missing](docs/replacemissingfromgaussian.html)
+-   [Replace imputed values by NaN](docs/replaceimputedbynan.html)
 
+```{=html}
 <!-- 
 * [BPCA imputation](BpcaImputation) [[perseus:bioinformatics:activities:MatrixProcessing:Imputation:|]]
 * [KNN imputation](KnnImputation) [[perseus:internal:activities:MatrixProcessing:Imputation:|]]
@@ -277,26 +293,28 @@ the Type or Heading of interest using the Table of Contents on the right.
 values from normal distribution]]\\
 * [Row average imputation](RowAverageImputation) [[perseus:internal:activities:MatrixProcessing:Imputation:|]]
 -->
-
+```
+```{=html}
 <!-- 
 ##  Interaction
 
 * [Annotate from category row](InteractionDbAnnotation) [[perseus:internal:activities:MatrixProcessing:Interaction:|]]
 -->
-
+```
 ## Learning
 
-* [Classification (cross-validation and prediction](docs/classificationprocessing.html)
-* [Classification feature optimization](docs/ClassificationFeatureSelection.html)
-* [Classification parameter optimization](docs/ClassificationParameterOptimization.html)
+-   [Classification (cross-validation and prediction](docs/classificationprocessing.html)
+-   [Classification feature optimization](docs/ClassificationFeatureSelection.html)
+-   [Classification parameter optimization](docs/ClassificationParameterOptimization.html)
 
+```{=html}
 <!-- 
 * [Regression (cross-validation and prediction](RegressionProcessing) [[perseus:internal:activities:MatrixProcessing:Learning:|)]]*\\</ifauth>
 * [Regression feature optimization](RegressionFeatureSelection) [[perseus:internal:activities:MatrixProcessing:Learning:|]]*\\</ifauth>
 * [Regression parameter optimization](RegressionParameterOptimization) [[perseus:internal:activities:MatrixProcessing:Learning:|]]*\\</ifauth>
 -->
-
-
+```
+```{=html}
 <!-- 
 <ifauth @bioinformatics>==== Misc. (Processing) ====
 </ifauth>
@@ -310,37 +328,38 @@ values from normal distribution]]\\
 
 <ifauth @bioinformatics>• [[perseus:bioinformatics:activities:MatrixProcessing:Modeling:SimmuneSimulationResultToMqOutput|Simulation results to MQ output]]**\\</ifauth>
 -->
-
+```
 ## Modifications
 
-* [Add known sites](docs/addknownsites.html)
-* [Add linear motifs](docs/addlinearmotifs.html)
-* [Add modification counts](docs/addmodificationcounts.html)
-* [Add regulatory sites](docs/addregulatorysites.html)
-* [Add sequence features](docs/addsequencefeatures.html)
-* [Expand site table](docs/expandsitetable.html)
-* [Kinase-substrate relations](docs/kinasesubstraterelations.html)
-* [Shorten motif length](docs/shortenmotifs.html)
+-   [Add known sites](docs/addknownsites.html)
+-   [Add linear motifs](docs/addlinearmotifs.html)
+-   [Add modification counts](docs/addmodificationcounts.html)
+-   [Add regulatory sites](docs/addregulatorysites.html)
+-   [Add sequence features](docs/addsequencefeatures.html)
+-   [Expand site table](docs/expandsitetable.html)
+-   [Kinase-substrate relations](docs/kinasesubstraterelations.html)
+-   [Shorten motif length](docs/shortenmotifs.html)
 
+```{=html}
 <!-- 
 * [Sequence window conversion](SequenceWindowToVector) [[perseus:bioinformatics:activities:MatrixProcessing:Modifications:|]]
 -->
-
+```
 ## Normalization
 
+-   [Cluster normalization](docs/ClusterNorm.html)
+-   [Divide](docs/divide.html)
+-   [Modify by column](docs/normalizebycolumn.html)
+-   [Rank](docs/rank.html)
+-   [Scale to interval](docs/scaletointerval.html)
+-   [Subtract](docs/subtract.html)
+-   [Subtract row cluster](docs/subtractrowcluster.html)
+-   [Un-Z-score](docs/unzscore.html)
+-   [Unit vectors](docs/unitvector.html)
+-   [Width adjustment](docs/widthadjustment.html)
+-   [Z-score](docs/zscore.html)
 
-* [Cluster normalization](docs/ClusterNorm.html)
-* [Divide](docs/divide.html)
-* [Modify by column](docs/normalizebycolumn.html)
-* [Rank](docs/rank.html)
-* [Scale to interval](docs/scaletointerval.html)
-* [Subtract](docs/subtract.html)
-* [Subtract row cluster](docs/subtractrowcluster.html)
-* [Un-Z-score](docs/unzscore.html)
-* [Unit vectors](docs/unitvector.html)
-* [Width adjustment](docs/widthadjustment.html)
-* [Z-score](docs/zscore.html)
-
+```{=html}
 <!-- 
 * [Background subtraction](BackgroundSubtraction) [[perseus:bioinformatics:activities:MatrixProcessing:Normalization:|]]
 * [Intensity-dependent normalization](IntensityDependentNormalization2) [perseus:internal:activities:MatrixProcessing:Normalization:|]]
@@ -348,46 +367,48 @@ values from normal distribution]]\\
 * [Normalize by group](NormalizeByGroup) [[perseus:bioinformatics:activities:MatrixProcessing:Normalization:|]]
 * [Optimal rotation](OptimalRotation) [[perseus:bioinformatics:activities:MatrixProcessing:Normalization:|]]
 -->
-
+```
 ## Outliers
 
-* [Significance A](docs/significancea.html)
-* [Significance B](docs/significanceb.html)
+-   [Significance A](docs/significancea.html)
+-   [Significance B](docs/significanceb.html)
 
+```{=html}
 <!-- 
 * [Forward-reverse analysis](ForwardReverseAnalysis) [[perseus:bioinformatics:activities:MatrixProcessing:Outliers:|]]
 * [Multidimensional significance](MultiDimSignificance) [[perseus:internal:activities:MatrixProcessing:Outliers:|]]
 -->
-
+```
 ## Quality
 
-* [Convert to NaN](docs/converttonan.html)
-* [Create quality matrix](docs/createqualitymatrix.html)
-* [Filter quality](docs/filterquality.html)
+-   [Convert to NaN](docs/converttonan.html)
+-   [Create quality matrix](docs/createqualitymatrix.html)
+-   [Filter quality](docs/filterquality.html)
 
 ## Rearrange
 
-* [Change column type](docs/changecolumntype.html)
-* [Combine annotations](docs/combineannotations.html)
-* [Combine categorical columns](docs/combinecategoricalcolumns.html)
-* [Convert multi-numeric column](docs/convertmultinumeric.html)
-* [De-hyphenate ids](docs/dehyphenateids.html) 
-* [Duplicate columns](docs/duplicatecolumns.html)
-* [Expand multi-numeric and text columns](docs/expandmultinumeric.html)
-* [Fill categorical columns](docs/fillcategoricalcolumn.html)
-* [Process text column](docs/processtextcolumns.html)
-* [Remove empty columns](docs/removeemptycolumns.html)
-* [Rename columns](docs/renamecolumns.html)
-* [Rename columns \[reg. ex.\]](docs/renamecolumnsregexp.html)
-* [Reorder columns by numerical annotation row](docs/reordercolumnsbynumannotationrow.html)
-* [Reorder/remove annotation rows](docs/reorderremoveannotrows.html)
-* [remove columns](docs/reorderremoveannotrows.html)
-* [Search text column](docs/searchtextcolumns.html)
-* [Sort by column](docs/sortbycolumn.html)
-* [Transpose](docs/transpose.html)
-* [Unique rows](docs/uniquerows.html)
-* [Unique values](docs/uniquevalues.html)
+-   [Change column type](docs/changecolumntype.html)
+-   [Combine annotations](docs/combineannotations.html)
+-   [Combine categorical columns](docs/combinecategoricalcolumns.html)
+-   [Convert multi-numeric column](docs/convertmultinumeric.html)
+-   [De-hyphenate ids](docs/dehyphenateids.html)
+-   [Duplicate columns](docs/duplicatecolumns.html)
+-   [Expand multi-numeric and text columns](docs/expandmultinumeric.html)
+-   [Fill categorical columns](docs/fillcategoricalcolumn.html)
+-   [Process text column](docs/processtextcolumns.html)
+-   [Remove empty columns](docs/removeemptycolumns.html)
+-   [Rename columns](docs/renamecolumns.html)
+-   [Rename columns \[reg. ex.\]](docs/renamecolumnsregexp.html)
+-   [Reorder columns by numerical annotation row](docs/reordercolumnsbynumannotationrow.html)
+-   [Reorder/remove annotation rows](docs/reorderremoveannotrows.html)
+-   [remove columns](docs/reorderremoveannotrows.html)
+-   [Search text column](docs/searchtextcolumns.html)
+-   [Sort by column](docs/sortbycolumn.html)
+-   [Transpose](docs/transpose.html)
+-   [Unique rows](docs/uniquerows.html)
+-   [Unique values](docs/uniquevalues.html)
 
+```{=html}
 <!-- 
 * [Collapse MaxQuant evidence File](CollapseEvidenceFile) [[perseus:internal:activities:MatrixProcessing:Rearrange:|]]
 * [Column grouping to multiple rows](ColumnGroupingToMultipleRows) [[perseus:internal:activities:MatrixProcessing:Rearrange:|]]
@@ -396,30 +417,25 @@ values from normal distribution]]\\
 * [Rename columns from file](RenameColumnsFromFile) [[perseus:bioinformatics:activities:MatrixProcessing:Rearrange:|]]
 * [Sort columns](SortColumns) [[perseus:bioinformatics:activities:MatrixProcessing:Rearrange:|]]
 -->
-
-
+```
 ## Tests
 
-* [Multiple-sample tests](docs/multiplesampletestprocessing.html)
-* [One-sample tests](docs/onesampletestprocessing.html)
-* [Post hoc tests](docs/posthoctests.html)
-* [Three-way ANOVA](docs/threewayanova.html)
-* [Two-sample tests](docs/twosampletestprocessing.html)
-* [Two-way ANOVA](docs/twowayanova.html)
+-   [Multiple-sample tests](docs/multiplesampletestprocessing.html)
+-   [One-sample tests](docs/onesampletestprocessing.html)
+-   [Post hoc tests](docs/posthoctests.html)
+-   [Three-way ANOVA](docs/threewayanova.html)
+-   [Two-sample tests](docs/twosampletestprocessing.html)
+-   [Two-way ANOVA](docs/twowayanova.html)
 
+```{=html}
 <!--
 * [Correlation tests](CorrelationTests) [[perseus:internal:activities:MatrixProcessing:Tests:|]]
 * [Four-way ANOVA](FourWayAnova) [[perseus:internal:activities:MatrixProcessing:Tests:|]]
 -->
-
+```
 ## Time series
 
-* [Cyclic annotation enrichment](docs/cyclicannotation.html)
-* [Periodicity analysis](docs/periodicityanalysis.html)
-* [Periodogram](docs/periodogram.html)
-* [Time series ordering](docs/timeseriesordering.html)
-
-
-
-
-
+-   [Cyclic annotation enrichment](docs/cyclicannotation.html)
+-   [Periodicity analysis](docs/periodicityanalysis.html)
+-   [Periodogram](docs/periodogram.html)
+-   [Time series ordering](docs/timeseriesordering.html)

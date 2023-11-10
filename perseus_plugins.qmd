@@ -18,7 +18,7 @@ The "out-of-the-box" version of Perseus already provides much functionality, but
 
 # Plugin Store
 
-To browse a list of available plugins, visit our [Perseus Plugin Store](docs/perseuspluginstore.html) [[perseus:user:plugins:store|]].
+To browse a list of available plugins, visit our [Perseus Plugin Store](docs/perseuspluginstore.html).
 
 # Developer's Guide
 
