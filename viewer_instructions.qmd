@@ -29,7 +29,7 @@ To run MaxQuant with its Viewer module, you will need .NET framework 4.5. If you
 -   [Trouble shooting](troubleshooting.html)
 -   [Google groups](https://groups.google.com/g/maxquant-list?pli=1)
 -   [maxquant Bug reporting](https://github.com/cox-labs/CoxLab_Bug_Reporting)
--   [Glossary](docs/Glossary.html)
+-   [Glossary](Glossary.html)
 
 You can find raw files and processed data to test the Viewer (v. 1.5.2.8) [here](https://datashare.biochem.mpg.de/s/nOJZoCv8Y4FZMQH).
 

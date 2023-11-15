@@ -15,9 +15,9 @@ csl: nature.csl
 ---
 
 
-If you arrived here directly from Perseus, it is a good idea to read the [Proteomic ruler overview](docs/proteomicruler.html) first.
+If you arrived here directly from Perseus, it is a good idea to read the [Proteomic ruler overview](proteomicruler.html) first.
 
-For those that want to apply the proteomic ruler concept and are in a hurry: If you imported the columns _Sequence length_ and _Molecular weight_ of your proteinGroups.txt, you can skip this and directly [estimate copy numbers](docs/estimatecopynumbers.html).
+For those that want to apply the proteomic ruler concept and are in a hurry: If you imported the columns _Sequence length_ and _Molecular weight_ of your proteinGroups.txt, you can skip this and directly [estimate copy numbers](estimatecopynumbers.html).
 
 # Description
 
@@ -33,7 +33,7 @@ extracts information from the UniProt fasta file that was used to process a data
 # Parameters
 
 Most of the parameters should be self-explanatory. Hover the mouse over the descriptions to get detailed help.
-The Plugin will pre-select the most useful parameters and auto-detect the correct input columns (if present in your matrix). These default parameters will cover everything needed to [estimate copy numbers](docs/estimatecopynumbers.html).
+The Plugin will pre-select the most useful parameters and auto-detect the correct input columns (if present in your matrix). These default parameters will cover everything needed to [estimate copy numbers](estimatecopynumbers.html).
 
 ## Input
 

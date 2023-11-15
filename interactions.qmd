@@ -24,7 +24,7 @@ This is label-free data for the identification of interactions. It consists of t
 
 ## Loading
 
-Load the file "proteinGroups.txt" from the "combined/txt" folder of the MaxQuant output. [Load Generic matrix upload](docs/genericmatrixupload.html) is denoted by the green arrow on the top left corner of the Perseus window or load the file using the drag and drop function of Perseus.
+Load the file "proteinGroups.txt" from the "combined/txt" folder of the MaxQuant output. [Load Generic matrix upload](genericmatrixupload.html) is denoted by the green arrow on the top left corner of the Perseus window or load the file using the drag and drop function of Perseus.
 
 ![](images/interaction-01-load-edited.png)
 
@@ -32,7 +32,7 @@ Make sure to load the six LFQ intensities as main columns, which correspond to t
 
 ## Filtering
 
-After loading the matrix, we filter out the reverse proteins and the proteins that are only identified by site. The contaminants are deliberately not filtered out to show some things later. The filtering is done using the function [Processing → Filter rows → Filter rows based on categorical column](docs/filtercategoricalcolumn.html), because both the "Reverse" column and the "Only identified by site" column are categorical.
+After loading the matrix, we filter out the reverse proteins and the proteins that are only identified by site. The contaminants are deliberately not filtered out to show some things later. The filtering is done using the function [Processing → Filter rows → Filter rows based on categorical column](filtercategoricalcolumn.html), because both the "Reverse" column and the "Only identified by site" column are categorical.
 
 ![](images/interaction-02-filtering-edited.png)
 
@@ -46,7 +46,7 @@ Second, we filter out the hits that are only identified by site. These are indic
 
 ## Transformation
 
-To gain better behavior of the data in statistical tests and also in imputation, normally distributed data is advantageous. Therefore we logarithmize the data using [Processing → Basic → Transform](docs/transformationproc.html).
+To gain better behavior of the data in statistical tests and also in imputation, normally distributed data is advantageous. Therefore we logarithmize the data using [Processing → Basic → Transform](transformationproc.html).
 
 ![](images/interaction-03-transformation-edited.png)
 
@@ -54,7 +54,7 @@ Since the default formula is $log_2(x)$ and all expression columns are selected,
 
 ![](images/interaction-03-transformation-parameter_window.png)
 
-To verify, if the data is now more or less normally distributed, we plot histograms of each intensity column separately with [Analysis → Visualization → Histogram](docs/histogram.html).
+To verify, if the data is now more or less normally distributed, we plot histograms of each intensity column separately with [Analysis → Visualization → Histogram](histogram.html).
 
 ![](images/interaction-03-transformation-histogram-edited.png)
 
@@ -66,7 +66,7 @@ The results will be displayed in an extra tab on the same matrix containing the 
 
 ## Grouping of samples
 
-Before filtering the data for valid values, we group the samples according to replicates using [Processing → Annot. rows → Categorical annotation rows](docs/createcategoricalannotrow.html).
+Before filtering the data for valid values, we group the samples according to replicates using [Processing → Annot. rows → Categorical annotation rows](createcategoricalannotrow.html).
 
 ![](images/interaction-04-grouping-edited.png)
 
@@ -76,7 +76,7 @@ You can leave the name of the grouping to the default value "Group1" and just sh
 
 ## Filtering according to groups
 
-Identifications with just one reported intensity are usually not very useful for further analyses. This is why we filter for valid values with [Processing → Filter rows → Filter rows based on valid values](docs/filtervalidvaluesrows.html).
+Identifications with just one reported intensity are usually not very useful for further analyses. This is why we filter for valid values with [Processing → Filter rows → Filter rows based on valid values](filtervalidvaluesrows.html).
 
 ![](images/interaction-05-filtering-edited.png)
 
@@ -86,7 +86,7 @@ We want to have "3" valid values "in at least one group", because interaction pa
 
 ## Imputation
 
-Then we impute missing values from normal distribution with [Processing → Imputation → Replace missing values from normal distribution](docs/replacemissingfromgaussian.html).
+Then we impute missing values from normal distribution with [Processing → Imputation → Replace missing values from normal distribution](replacemissingfromgaussian.html).
 
 ![](images/interaction-06-imputation-edited.png)
 
@@ -94,7 +94,7 @@ The imputation function will look at the distribution of values, assuming that t
 
 ![](images/interaction-06-imputation-parameter_window.png)
 
-Using histograms as before [Analysis → Visualization → Histogram](docs/histogram.html), we are able to look at the distributions of the imputed values. Therefore we generate histograms for all LFQ intensity columns. The results will be displayed in an extra tab on the same matrix containing the histogram functionalities as before. It is important that the imputed values do not form a separate normal distribution, start around the same point in the replicates and are narrower than the distributions of the measured values.
+Using histograms as before [Analysis → Visualization → Histogram](histogram.html), we are able to look at the distributions of the imputed values. Therefore we generate histograms for all LFQ intensity columns. The results will be displayed in an extra tab on the same matrix containing the histogram functionalities as before. It is important that the imputed values do not form a separate normal distribution, start around the same point in the replicates and are narrower than the distributions of the measured values.
 
 ![](images/interaction-06-imputation-histogram-plot-edited.png)
 
@@ -102,7 +102,7 @@ Using histograms as before [Analysis → Visualization → Histogram](docs/histo
 
 ## Multi-scatter plot
 
-To be sure, that the experiment worked one can use multi-scatter plots with [Analysis → Visualization → Multi scatter plot](docs/multiscatteranalysis.html) to analyze the correlation between the samples.
+To be sure, that the experiment worked one can use multi-scatter plots with [Analysis → Visualization → Multi scatter plot](multiscatteranalysis.html) to analyze the correlation between the samples.
 
 ![](images/interaction-07-multi-scatter-edited.png)
 
@@ -116,7 +116,7 @@ We can observe, that the Pearson correlation (calculation option highlighted by 
 
 ## Hierarchical clustering
 
-Another option to figure out, if the experiment worked is hierarchical clustering in [Analysis → Clustering/PCA → Hierarchical clustering](docs/hierarchicalcluster.html).
+Another option to figure out, if the experiment worked is hierarchical clustering in [Analysis → Clustering/PCA → Hierarchical clustering](hierarchicalcluster.html).
 
 ![](images/interaction-08-hierachical_clustering-edited.png)
 
@@ -155,7 +155,7 @@ Remove the imputed values again  export row clustering (matrix has the order 
 
 ## Two sample t-test
 
-Now we want to find the interactors using [Processing → Tests → Two-samples tests](docs/twosampletestprocessing.html).
+Now we want to find the interactors using [Processing → Tests → Two-samples tests](twosampletestprocessing.html).
 
 ![](images/interaction-09-two_sample_test-edited.png)
 
@@ -165,7 +165,7 @@ The T-test assumes that you have equal variance within the groups of replicates.
 
 ## Scatter plot
 
-Now to view the interactors we have to generate a scatter plot [Analysis → Visualization → Scatter plot](docs/scatterplotanalysis.html).
+Now to view the interactors we have to generate a scatter plot [Analysis → Visualization → Scatter plot](scatterplotanalysis.html).
 
 ![](images/interaction-10-scatter_plot-edited.png)
 
@@ -181,7 +181,7 @@ It is important to keep in mind that there is no universal s0 and FDR parameter 
 
 ## Volcano plot
 
-The volcano plot is the unified function of the two sample t-test and the scatter plot with the additional option to easily optimize the s0 and FDR parameter. So to identify and visualize the interactors in one step use [Analysis → Misc. → Volcano plot](docs/volcanoplotanalysis.html).
+The volcano plot is the unified function of the two sample t-test and the scatter plot with the additional option to easily optimize the s0 and FDR parameter. So to identify and visualize the interactors in one step use [Analysis → Misc. → Volcano plot](volcanoplotanalysis.html).
 
 ![](images/interaction-10-volcano_plot-edited.png)
 
@@ -195,7 +195,7 @@ The results are shown in a volcano plot with the cutoff curve indicating which h
 
 ## Profile plot
 
-Another option to find and visualize interactors is to use [Analysis → Visualization → Profile plot](docs/profileplot.html). This function has no input parameters and the results are shown in an extra tab on the same matrix containing the profile plot functionalities.
+Another option to find and visualize interactors is to use [Analysis → Visualization → Profile plot](profileplot.html). This function has no input parameters and the results are shown in an extra tab on the same matrix containing the profile plot functionalities.
 
 ![](images/interaction-11-profile_plot-edited.png)
 

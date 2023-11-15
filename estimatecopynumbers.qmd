@@ -15,12 +15,12 @@ csl: nature.csl
 ---
 
 
-If you arrived here directly, it is a good idea to read the [Proteomic ruler overview](docs/proteomicruler.html) first.
+If you arrived here directly, it is a good idea to read the [Proteomic ruler overview](proteomicruler.html) first.
 
 # Description
 
 **Estimate copy numbers and annotations** scales _Intensity_ or _LFQ intensity_ data to absolute levels, such as copy numbers per cell or molar concentrations.
-You will need a number of annotation columns in order to perform the calculations, at least the _Sequence length_ and _Molecular weight_ of your proteins. You can either load them in from the proteinGroups.txt or use [Annotate proteins](docs/annotateproteins.html) to extract them from your fasta file directly.
+You will need a number of annotation columns in order to perform the calculations, at least the _Sequence length_ and _Molecular weight_ of your proteins. You can either load them in from the proteinGroups.txt or use [Annotate proteins](annotateproteins.html) to extract them from your fasta file directly.
 
 # Parameters
 
@@ -55,12 +55,12 @@ This parameter controls how different columns will be handled.
 
 ### Molecular masses
 
-Select the column containing the molecular masses of the proteins. This can either be the _Molecular weight_ column from the MaxQuant output or one of the columns mapped by the [Annotate proteins](docs/annotateproteins.html) function.
+Select the column containing the molecular masses of the proteins. This can either be the _Molecular weight_ column from the MaxQuant output or one of the columns mapped by the [Annotate proteins](annotateproteins.html) function.
 
 ### Detectability correction
 
 In its simplest form, the plugin will assume linearity between the Intensity values and the cumulative mass of each protein. In other words, the molecular mass of each protein serves as the correction factor if one wants to calculate copy numbers. Alternatively, one can use other detectability correction factors, such as the number of theoretical peptides. In contrast to the molecular mass, this takes the combination of sequence features and the protease into account.
-Theoretical peptides are not reported by MaxQuant directly, but can be calculated using [Annotate proteins](docs/annotateproteins.html).
+Theoretical peptides are not reported by MaxQuant directly, but can be calculated using [Annotate proteins](annotateproteins.html).
 
 ### Scaling mode
 
@@ -91,6 +91,6 @@ To get a feeling of whether your results are reasonable, you should inspect the 
 
 [BioNumbers](https://bionumbers.hms.harvard.edu/keynumbers.aspx) is a good reference source.
 
-You can also [estimate the quantification accuracy of individual protein copy numbers or concentrations](docs/estimateaccuracy.html).
+You can also [estimate the quantification accuracy of individual protein copy numbers or concentrations](estimateaccuracy.html).
 
 

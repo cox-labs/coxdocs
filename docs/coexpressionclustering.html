@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Cox Lab">
-<meta name="dcterms.date" content="2023-11-10">
+<meta name="dcterms.date" content="2023-11-15">
 
 <title>Co-expression clustering</title>
 <style>
@@ -188,7 +188,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 10, 2023</p>
+      <p class="date">November 15, 2023</p>
     </div>
   </div>
   
@@ -199,22 +199,22 @@ div.csl-indent {
 
 </header>
 
-<p>This analysis is provided through the <code>R</code>-language integration into Perseus and therefore requires <code>R</code> as well as the <code>WGCNA</code> package to be installed. Visit <a href="docs/WGCNA.html">WGCNA</a><span class="citation" data-cites="langfelder2008"><sup><a href="#ref-langfelder2008" role="doc-biblioref">1</a></sup></span> page for more information and installation instructions.</p>
+<p>This analysis is provided through the <code>R</code>-language integration into Perseus and therefore requires <code>R</code> as well as the <code>WGCNA</code> package to be installed. Visit <a href="WGCNA.html">WGCNA</a><span class="citation" data-cites="langfelder2008"><sup><a href="#ref-langfelder2008" role="doc-biblioref">1</a></sup></span> page for more information and installation instructions.</p>
 <p>More information about co-expression clustering can be found at the following resources:</p>
 <ul>
-<li><a href="https://labs.genetics.ucla.edu/horvath/htdocs/CoexpressionNetwork/Rpackages/WGCNA/Tutorials/index.html"><del>official WGCNA tutorials</del></a>.</li>
+<li><a href="https://labs.genetics.ucla.edu/horvath/htCoexpressionNetwork/Rpackages/WGCNA/Tutorials/index.html"><del>official WGCNA tutorials</del></a>.</li>
 <li><a href="https://bioinformaticsworkbook.org/tutorials/wgcna.html#gsc.tab=0">Network analysis with WGCNA</a></li>
 <li><a href="https://alexslemonade.github.io/refinebio-examples/04-advanced-topics/network-analysis_rnaseq_01_wgcna.html">WGCNA - RNA-seq</a></li>
 </ul>
 <section id="description" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Description</h1>
-<p>The co-expression network is created using the defined correlation function. The determined power is applied to the network (see <a href="docs/softthreshold.html">Soft-threshold</a> for more info). Topological overlap distance is used to create the hierarchical clustering dendrogram. The co-expression modules are determined using the dynamic tree-cut method. For each module, a module eigengene is reported, with its name corresponding to the color of the cluster.</p>
+<p>The co-expression network is created using the defined correlation function. The determined power is applied to the network (see <a href="softthreshold.html">Soft-threshold</a> for more info). Topological overlap distance is used to create the hierarchical clustering dendrogram. The co-expression modules are determined using the dynamic tree-cut method. For each module, a module eigengene is reported, with its name corresponding to the color of the cluster.</p>
 </section>
 <section id="output" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Output</h1>
 <ul>
 <li>Hierarchical clustering heatmap with a dendrogram and automatic cluster assignments.</li>
-<li>Matrix of module eigengenes that represent a cluster. See <a href="docs/correlate.html">Correlate</a> for identifying clusters that correlate with clinical/phenotype data.</li>
+<li>Matrix of module eigengenes that represent a cluster. See <a href="correlate.html">Correlate</a> for identifying clusters that correlate with clinical/phenotype data.</li>
 </ul>
 
 

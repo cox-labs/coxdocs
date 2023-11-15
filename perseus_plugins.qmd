@@ -14,11 +14,11 @@ bibliography: references.bib
 csl: nature.csl
 ---
 
-The "out-of-the-box" version of Perseus already provides much functionality, but it can easily be extended further with plugins. Standard [activities](docs/perseus_activities.html) are implemented in the same way as plugins.
+The "out-of-the-box" version of Perseus already provides much functionality, but it can easily be extended further with plugins. Standard [activities](perseus_activities.html) are implemented in the same way as plugins.
 
 # Plugin Store
 
-To browse a list of available plugins, visit our [Perseus Plugin Store](docs/perseuspluginstore.html).
+To browse a list of available plugins, visit our [Perseus Plugin Store](perseuspluginstore.html).
 
 # Developer's Guide
 

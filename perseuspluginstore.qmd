@@ -21,7 +21,7 @@ To install a plugin, just download the plugin `.dll` file, copy it into the Pers
 
 | Plugin Name | Developer | Download | Source Code | Compatibility |
 |-------------|------------------------|-------------|-------------|---------|
-| [Proteomic ruler](docs/proteomicruler.html) | Marco Hein | [v. 1.6.2](https://maxquant.net/download_asset/pluginproteomicruler/latest) | [gitHub](https://github.com/JurgenCox/perseus-plugins) | Perseus 2.0.11 |
+| [Proteomic ruler](proteomicruler.html) | Marco Hein | [v. 1.6.2](https://maxquant.net/download_asset/pluginproteomicruler/latest) | [gitHub](https://github.com/JurgenCox/perseus-plugins) | Perseus 2.0.11 |
 | [PluginInterop](https://github.com/jdrudolph/PluginInterop) | Jan Rudolph | [v. 1.6.15](https://maxquant.net/download_asset/plugininterop/latest) | [PluginInterop](https://github.com/cox-labs/PluginInterop) | Perseus 2.0.11 |
 | [DependentPeptides](https://github.com/cox-labs/PluginDependentPeptides) | Jan Rudolph | [v. 1.6.1](https://maxquant.net/download_asset/plugindependentpeptides/latest) | [PluginDependentPeptides](GitHub) | Perseus 2.0.11 |
 |[PluginUpperCase](https://github.com/jdrudolph/PluginUpperCase) | Jan Rudolph | [v. 1.6.0](https://maxquant.net/download_asset/pluginuppercase/latest) | [PluginUpperCase](https://github.com/jdrudolph/PluginUpperCase) | Perseus 2.0.11 |
@@ -50,5 +50,5 @@ To install a plugin, just download the plugin `.dll` file, copy it into the Pers
 
 # Developers
 
-If you want to develop and submit your own Perseus plugin, please read our [Plugin Developers's Guide](docs/developersguide.html).
+If you want to develop and submit your own Perseus plugin, please read our [Plugin Developers's Guide](developersguide.html).
 

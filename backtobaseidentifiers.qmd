@@ -21,7 +21,7 @@ bibliography: references.bib
 
 # Brief description
 
-This activity does the inverse of the [Add annotation](docs/addannotationtomatrix.html) activity. Any of the columns that can be created by the [Add annotation](docs/addannotationtomatrix.html) activity can be mapped back to the base identifiers (typically UniProt ids).
+This activity does the inverse of the [Add annotation](addannotationtomatrix.html) activity. Any of the columns that can be created by the [Add annotation](addannotationtomatrix.html) activity can be mapped back to the base identifiers (typically UniProt ids).
 
 ```{=html}
 <!-- This comment and the line above it must be preserved when editing this file!

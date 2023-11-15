@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Cox Lab">
-<meta name="dcterms.date" content="2023-11-10">
+<meta name="dcterms.date" content="2023-11-15">
 
 <title>Proteomic ruler: Estimate copy numbers and concentrations</title>
 <style>
@@ -184,7 +184,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 10, 2023</p>
+      <p class="date">November 15, 2023</p>
     </div>
   </div>
   
@@ -195,10 +195,10 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>If you arrived here directly, it is a good idea to read the <a href="docs/proteomicruler.html">Proteomic ruler overview</a> first.</p>
+<p>If you arrived here directly, it is a good idea to read the <a href="proteomicruler.html">Proteomic ruler overview</a> first.</p>
 <section id="description" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Description</h1>
-<p><strong>Estimate copy numbers and annotations</strong> scales <em>Intensity</em> or <em>LFQ intensity</em> data to absolute levels, such as copy numbers per cell or molar concentrations. You will need a number of annotation columns in order to perform the calculations, at least the <em>Sequence length</em> and <em>Molecular weight</em> of your proteins. You can either load them in from the proteinGroups.txt or use <a href="docs/annotateproteins.html">Annotate proteins</a> to extract them from your fasta file directly.</p>
+<p><strong>Estimate copy numbers and annotations</strong> scales <em>Intensity</em> or <em>LFQ intensity</em> data to absolute levels, such as copy numbers per cell or molar concentrations. You will need a number of annotation columns in order to perform the calculations, at least the <em>Sequence length</em> and <em>Molecular weight</em> of your proteins. You can either load them in from the proteinGroups.txt or use <a href="annotateproteins.html">Annotate proteins</a> to extract them from your fasta file directly.</p>
 </section>
 <section id="parameters" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Parameters</h1>
@@ -234,11 +234,11 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="molecular-masses" class="level3" data-number="2.1.5">
 <h3 data-number="2.1.5" class="anchored" data-anchor-id="molecular-masses"><span class="header-section-number">2.1.5</span> Molecular masses</h3>
-<p>Select the column containing the molecular masses of the proteins. This can either be the <em>Molecular weight</em> column from the MaxQuant output or one of the columns mapped by the <a href="docs/annotateproteins.html">Annotate proteins</a> function.</p>
+<p>Select the column containing the molecular masses of the proteins. This can either be the <em>Molecular weight</em> column from the MaxQuant output or one of the columns mapped by the <a href="annotateproteins.html">Annotate proteins</a> function.</p>
 </section>
 <section id="detectability-correction" class="level3" data-number="2.1.6">
 <h3 data-number="2.1.6" class="anchored" data-anchor-id="detectability-correction"><span class="header-section-number">2.1.6</span> Detectability correction</h3>
-<p>In its simplest form, the plugin will assume linearity between the Intensity values and the cumulative mass of each protein. In other words, the molecular mass of each protein serves as the correction factor if one wants to calculate copy numbers. Alternatively, one can use other detectability correction factors, such as the number of theoretical peptides. In contrast to the molecular mass, this takes the combination of sequence features and the protease into account. Theoretical peptides are not reported by MaxQuant directly, but can be calculated using <a href="docs/annotateproteins.html">Annotate proteins</a>.</p>
+<p>In its simplest form, the plugin will assume linearity between the Intensity values and the cumulative mass of each protein. In other words, the molecular mass of each protein serves as the correction factor if one wants to calculate copy numbers. Alternatively, one can use other detectability correction factors, such as the number of theoretical peptides. In contrast to the molecular mass, this takes the combination of sequence features and the protease into account. Theoretical peptides are not reported by MaxQuant directly, but can be calculated using <a href="annotateproteins.html">Annotate proteins</a>.</p>
 </section>
 <section id="scaling-mode" class="level3" data-number="2.1.7">
 <h3 data-number="2.1.7" class="anchored" data-anchor-id="scaling-mode"><span class="header-section-number">2.1.7</span> Scaling mode</h3>
@@ -270,7 +270,7 @@ ul.task-list li input[type="checkbox"] {
 <h1 data-number="3"><span class="header-section-number">3</span> Quality control</h1>
 <p>To get a feeling of whether your results are reasonable, you should inspect the sample summary matrix and have a look at the calculated total cellular protein amounts, number of molecules per cell or cell volumes (if you use the histone proteomic ruler) or the ploidies (if you scaled via the total cellular protein amount).</p>
 <p><a href="https://bionumbers.hms.harvard.edu/keynumbers.aspx">BioNumbers</a> is a good reference source.</p>
-<p>You can also <a href="docs/estimateaccuracy.html">estimate the quantification accuracy of individual protein copy numbers or concentrations</a>.</p>
+<p>You can also <a href="estimateaccuracy.html">estimate the quantification accuracy of individual protein copy numbers or concentrations</a>.</p>
 
 
 </section>

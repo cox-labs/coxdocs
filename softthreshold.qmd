@@ -14,9 +14,9 @@ bibliography: references.bib
 csl: nature.csl
 ---
 
-This activity is provided through the `R`-language integration into Perseus and therefore requires `R` as well as the `WGCNA` package to be installed. See [WGCNA](docs/WGCNA.html) for more information and installation instructions.
+This activity is provided through the `R`-language integration into Perseus and therefore requires `R` as well as the `WGCNA` package to be installed. See [WGCNA](WGCNA.html) for more information and installation instructions.
 
-Soft-thresholding is covered by [~~official WGCNA tutorials~~](https://labs.genetics.ucla.edu/horvath/htdocs/CoexpressionNetwork/Rpackages/WGCNA/Tutorials/index.html). Unfortunately, the tutorial is not online anymore. 
+Soft-thresholding is covered by [~~official WGCNA tutorials~~](https://labs.genetics.ucla.edu/horvath/htCoexpressionNetwork/Rpackages/WGCNA/Tutorials/index.html). Unfortunately, the tutorial is not online anymore. 
 
 But one possible option is the discussion on [Bioconductor.org](https://support.bioconductor.org/p/87024/)
 

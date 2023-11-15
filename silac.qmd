@@ -37,19 +37,19 @@ The files "20070522_NH_Orbi2_HelaEpo_01.RAW" and "20070522_NH_Orbi2_HelaEpo_02.R
 ## Loading
 
 Load the file "proteinGroups.txt" from the "combined/txt" folder of the MaxQuant output.
-[Load → Generic matrix upload](docs/genericmatrixupload.html) is denoted by the green arrow on the top left corner of the Perseus window or load the file using the drag and drop function of Perseus.
+[Load → Generic matrix upload](genericmatrixupload.html) is denoted by the green arrow on the top left corner of the Perseus window or load the file using the drag and drop function of Perseus.
 
 ![](images/silac-01-generic_matrix_upload-edited.png)
 
 Make sure you select the 9 "Ratio H/L Normalized ..." columns as main columns.
 Also make sure you understand what is meant by the column types "Main", "Categorical", "Numerical", "Multi-numerical" and "Text".
 
-*Comment: After each applied operation a new matrix will be generated. Every matrix that you are creating can be saved with [Export → Generic matrix export](docs/tabseparatedexport.html) and re-imported later with [Load → Generic matrix upload](docs/genericmatrixupload.html).*
+*Comment: After each applied operation a new matrix will be generated. Every matrix that you are creating can be saved with [Export → Generic matrix export](tabseparatedexport.html) and re-imported later with [Load → Generic matrix upload](genericmatrixupload.html).*
 
 ## Filtering
 
 After loading the matrix, we filter out the reverse proteins and the proteins that are only identified by site.
-This is done by using the function [Processing → Filter rows → Filter rows based on categorical column](docs/filtercategoricalcolumn.html), because both the "Reverse" column and the "Only identified by site" column are categorical.
+This is done by using the function [Processing → Filter rows → Filter rows based on categorical column](filtercategoricalcolumn.html), because both the "Reverse" column and the "Only identified by site" column are categorical.
 
 ![](images/silac-02-filter_categorical_column-edited.png)
 
@@ -72,7 +72,7 @@ This results in a matrix, where all rows contain the value FALSE in the column "
 ![](images/silac-02-filter_categorical_column-only_identified_by_site-01.png)
 
 The next step is to filter out all rows with less than six valid intensity values of all nine (i.e. being not NaN).
-Therefore we use [Processing → Filter rows → Filter rows based on valid values](docs/filtervalidvaluesrows.html).
+Therefore we use [Processing → Filter rows → Filter rows based on valid values](filtervalidvaluesrows.html).
 
 ![](images/silac-05-filter_valid_values-edited.png)
 
@@ -94,7 +94,7 @@ No further changes are necessary, because we want to apply the transformation to
 
 ![](images/silac-03-transformation-param_window.png)
 
-Then the ratios will be logarithmized by using the function [Processing → Basic → Transform](docs/transformationproc.html) again.
+Then the ratios will be logarithmized by using the function [Processing → Basic → Transform](transformationproc.html) again.
 
 ![](images/silac-04-logarithmize-edited.png)
 
@@ -106,7 +106,7 @@ The transformation should also be applied to all main columns, which are selecte
 ## Renaming columns
 
 The main column names "Ratio H/L Normalized ..." are a bit bulky.
-So we rename the main columns with the help of regular expressions and the function [Processing → Rearrange → Rename columns \[Reg.ex.\]](docs/renamecolumnsregexp.html).
+So we rename the main columns with the help of regular expressions and the function [Processing → Rearrange → Rename columns \[Reg.ex.\]](renamecolumnsregexp.html).
 
 ![](images/silac-06-renaming_regex-edited.png)
 
@@ -118,7 +118,7 @@ This results in a matrix, where the column names of the ratios are a combination
 
 ![](images/silac-06-renaming_regex-parameter_window.png)
 
-If you want to rename the columns manually without the help of regular expressions you can use [Processing → Rearrange → Rename columns](docs/renamecolumns.html).
+If you want to rename the columns manually without the help of regular expressions you can use [Processing → Rearrange → Rename columns](renamecolumns.html).
 
 ![](images/silac-06-renaming_manually-edited.png)
 
@@ -128,7 +128,7 @@ Then you can type the new names in the predefined text field.
 
 # Add annotation
 
-In [Processing → Annot.columns → Add annotation](docs/addannotationtomatrix.html) are several options for adding annotations to your data.
+In [Processing → Annot.columns → Add annotation](addannotationtomatrix.html) are several options for adding annotations to your data.
 You can select from any annotation file that is present in the "Perseus/conf/annotations/" folder.
 
 ![](images/silac-07-add_annotation-edited.png)
@@ -155,7 +155,7 @@ Now the matrix is filtered, transformed and everything is added that we want, so
 # Scatter plot
 
 Now we plot some replicates against each other.
-Therefore open a scatter plot with [Analysis → Visualization → Scatter plot](docs/scatterplotanalysis.html).
+Therefore open a scatter plot with [Analysis → Visualization → Scatter plot](scatterplotanalysis.html).
 
 ![](images/silac-08-scatter_plot-edited.png)
 
@@ -179,7 +179,7 @@ Each of the three tabs has their own buttons, where the functionality of each bu
 
 When there are many data points in a scatter plot it is often difficult to see where the majority of points are located.
 This situation can be improved by coloring the data points by the local point density.
-Estimate the density for two columns with [Processing → Basic → Density estimation](docs/densityestimationprocessing.html).
+Estimate the density for two columns with [Processing → Basic → Density estimation](densityestimationprocessing.html).
 
 ![](images/silac-09-density_scatter_plot-edited.png)
 
@@ -206,7 +206,7 @@ The color gradient can be changed in the scatter plot tab by clicking the button
 
 # Multi scatter plot
 
-Open a multi scatter plot using [Analysis → Visualization → Multi scatter plot](docs/multiscatteranalysis.html).
+Open a multi scatter plot using [Analysis → Visualization → Multi scatter plot](multiscatteranalysis.html).
 
 ![](images/silac-10-multi-scatter_plot-edited.png)
 
@@ -228,7 +228,7 @@ To explore a specific scatter plot in more detail you can click on it and see it
 
 # Histogram
 
-Open a histogram using [Analysis → Visualization → Histogram](docs/histogram.html).
+Open a histogram using [Analysis → Visualization → Histogram](histogram.html).
 
 ![](images/silac-11-histogram-edited.png)
 
@@ -249,7 +249,7 @@ If we switch to logarithmic fillings (button highlighted by the red rectangle) w
 ![](images/silac-11-histogram-plot_log-edited.png)
 
 In case the distributions are shifted towards left/right and the peak is not on zero, we have to normalize the values.
-For instance try normalizing the data by subtracting the median from each distribution with [Processing → Normalization → Subtract](docs/subtract.html) and check what changed by looking at the resulting histograms.
+For instance try normalizing the data by subtracting the median from each distribution with [Processing → Normalization → Subtract](subtract.html) and check what changed by looking at the resulting histograms.
 
 ![](images/silac-11-normalize_subtract-edited.png)
 
@@ -263,7 +263,7 @@ Afterwards open another histogram.
 
 # Profile plot
 
-Open a profile plot with [Analysis → Visualization → Profile plot](docs/profileplot.html).
+Open a profile plot with [Analysis → Visualization → Profile plot](profileplot.html).
 The function has no parameters and the results will be displayed in an extra tab on the same matrix containing the profile plot functionalities.
 
 ![](images/silac-12-profile_plot-edited.png)
@@ -293,7 +293,7 @@ Once you have found an interesting selection of proteins it can be exported (e.g
 
 # 3D scatter plot
 
-Open a 3D scatter plot with [Analysis → Visualization → 3D plot](docs/scatterplot3danalysis.html).
+Open a 3D scatter plot with [Analysis → Visualization → 3D plot](scatterplot3danalysis.html).
 The function has no parameters and the results will be displayed in an extra tab on the same matrix containing the 3D scatter plot functionalities.
 
 ![](images/silac-13-3d_scatter_plot-edited.png)
@@ -308,7 +308,7 @@ If nothing happens you might have to hit the "Refresh" button in the upper left 
 
 Now we want to find out which proteins are differentially regulated between the cell lines.
 For this we have to define the grouping of samples into replicate groups.
-Go to [Processing → Annot.rows → Categorical annotation rows](docs/createcategoricalannotrow.html).
+Go to [Processing → Annot.rows → Categorical annotation rows](createcategoricalannotrow.html).
 
 ![](images/silac-14-grouping-edited.png)
 
@@ -321,13 +321,13 @@ In case you have more samples another opportunity is to use the Action "Create f
 
 ![](images/silac-14-grouping-parameter_window2.png)
 
-If you export the data now using x[Export → Generic matrix export](docs/tabseparatedexport.html) and re-import it later with [Load → Generic matrix upload](docs/genericmatrixupload.html), the grouping is still defined.
+If you export the data now using x[Export → Generic matrix export](tabseparatedexport.html) and re-import it later with [Load → Generic matrix upload](genericmatrixupload.html), the grouping is still defined.
 
 # Numeric Venn diagram
 
 On an unrelated note, we might be interested in the number of protein identifications we have in each sample (or in each cell line), how many of these are common to all samples and how many are unique for each sample.
 For simplicity we say now that a protein is present in a sample if there is a valid value for the ratio and we say that it is absent if the ratio is "NaN".
-Since we are here only interested in absence/presence in a certain cell line and not so much in single replicates, we first average ratios within groups using [Processing → Annot.rows → Average groups](docs/averagegroups.html).
+Since we are here only interested in absence/presence in a certain cell line and not so much in single replicates, we first average ratios within groups using [Processing → Annot.rows → Average groups](averagegroups.html).
 
 ![](images/silac-15-venn_diagram-average_groups-edited.png)
 
@@ -335,7 +335,7 @@ Since our matrix just contains one categorical row, the default parameters can b
 
 ![](images/silac-15-venn_diagram-average_groups-parameter_window.png)
 
-Then when performing [Analysis → Misc.→ Numeric venn diagram](docs/numericvenndiagram.html) you will get some statistical information about the occurrence of proteins in the different cell lines.
+Then when performing [Analysis → Misc.→ Numeric venn diagram](numericvenndiagram.html) you will get some statistical information about the occurrence of proteins in the different cell lines.
 The results will be displayed in an extra tab on the same matrix containing the venn diagram functionalities.
 
 ![](images/silac-15-venn_diagram-edited-01.png)
@@ -354,7 +354,7 @@ For the analysis the IDs on which the enrichment should be based on as well as t
 
 # ANOVA
 
-To find out which proteins are differentially regulated between the cell lines go back to the matrix before "averaging within groups" and apply [Processing → Tests → Multiple-samples tests](docs/multiplesampletestprocessing.html).
+To find out which proteins are differentially regulated between the cell lines go back to the matrix before "averaging within groups" and apply [Processing → Tests → Multiple-samples tests](multiplesampletestprocessing.html).
 We select "Multiple-samples tests" because there are more than two cell line groups to compare.
 In case you wanted to compare only one or two samples you would use the respective t-test.
 
@@ -374,7 +374,7 @@ Two columns are added, one numerical column containing the -log(p-values) and on
 # Enrichment, Fisher exact test
 
 Now we want to know, if certain pathways or GO terms are over-represented in the proteins that are significantly changing between the cell lines.
-For this we can use the Fisher exact test in [Processing → Annot.columns → Fisher exact test](docs/fisherexacttestproces.html).
+For this we can use the Fisher exact test in [Processing → Annot.columns → Fisher exact test](fisherexacttestproces.html).
 
 ![](images/silac-17-enrichment_fisher_exact_test-edited.png)
 
@@ -393,7 +393,7 @@ You can also apply the Fisher exact test immediately on the numerical column con
 
 First go to the matrix before averaging groups.
 Then as a preparation for the hierarchical clustering we first normalize the rows of the matrix.
-Use [Processing → Normalization → Z-score](docs/zscore.html).
+Use [Processing → Normalization → Z-score](zscore.html).
 
 ![](images/silac-18-hierarchical_clustering-z-score-edited.png)
 
@@ -402,7 +402,7 @@ This will shift the mean of each row to 0 and bring the standard deviation to 1.
 
 ![](images/silac-18-hierarchical_clustering-z-score-parameter_window.png)
 
-Now perform hierarchical clustering of rows and columns using [Analysis → Clustering/PCA → Hierarchical clustering](docs/hierarchicalcluster.html).
+Now perform hierarchical clustering of rows and columns using [Analysis → Clustering/PCA → Hierarchical clustering](hierarchicalcluster.html).
 
 ![](images/silac-18-hierarchical_clustering-edited.png)
 
@@ -432,14 +432,14 @@ Explore the display options and the icon bar on top of the cluster heat map.
 
 In order to perform principal component analysis (PCA), all cells of the matrix have to contain valid values.
 One way to achieve this is to perform imputation, here we choose another method.
-We filter for valid values using [Processing → Filter rows → Filter rows based on valid values](docs/filtervalidvaluesrows.html) such that every row contains nine valid values.
+We filter for valid values using [Processing → Filter rows → Filter rows based on valid values](filtervalidvaluesrows.html) such that every row contains nine valid values.
 Go to the data matrix before Z-scoring and perform this valid value filtering.
 
 ![](images/silac-19-pca-filtering-edited.png)
 
 ![](images/silac-19-pca-parameter_window.png)
 
-Then perform PCA with [Analysis → Clustering/PCA → Principal component analysis](docs/principalcomponentanalysis.html) and explore the results.
+Then perform PCA with [Analysis → Clustering/PCA → Principal component analysis](principalcomponentanalysis.html) and explore the results.
 The results will be displayed in an extra tab on the same matrix containing the principal component functionalities.
 
 ![](images/silac-19-pca-edited.png)

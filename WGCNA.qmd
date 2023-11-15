@@ -49,5 +49,5 @@ You are now ready to perform co-expression analysis from within Perseus.
 
 ## WGCNA functions
 
-* [Soft-threshold](docs/softthreshold.html)
-* [Co-expression clustering](docs/coexpressionclustering.html)
+* [Soft-threshold](softthreshold.html)
+* [Co-expression clustering](coexpressionclustering.html)

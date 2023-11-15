@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Cox Lab">
-<meta name="dcterms.date" content="2023-11-10">
+<meta name="dcterms.date" content="2023-11-15">
 
 <title>SILAC data</title>
 <style>
@@ -209,7 +209,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 10, 2023</p>
+      <p class="date">November 15, 2023</p>
     </div>
   </div>
   
@@ -233,20 +233,20 @@ The files "20070522_NH_Orbi2_HelaEpo_01.RAW" and "20070522_NH_Orbi2_HelaEpo_02.R
 <h1 data-number="2"><span class="header-section-number">2</span> Data preparation</h1>
 <section id="loading" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="loading"><span class="header-section-number">2.1</span> Loading</h2>
-<p>Load the file “proteinGroups.txt” from the “combined/txt” folder of the MaxQuant output. <a href="docs/genericmatrixupload.html">Load → Generic matrix upload</a> is denoted by the green arrow on the top left corner of the Perseus window or load the file using the drag and drop function of Perseus.</p>
+<p>Load the file “proteinGroups.txt” from the “combined/txt” folder of the MaxQuant output. <a href="genericmatrixupload.html">Load → Generic matrix upload</a> is denoted by the green arrow on the top left corner of the Perseus window or load the file using the drag and drop function of Perseus.</p>
 <p><img src="images/silac-01-generic_matrix_upload-edited.png" class="img-fluid"></p>
 <p>Make sure you select the 9 “Ratio H/L Normalized …” columns as main columns. Also make sure you understand what is meant by the column types “Main”, “Categorical”, “Numerical”, “Multi-numerical” and “Text”.</p>
-<p><em>Comment: After each applied operation a new matrix will be generated. Every matrix that you are creating can be saved with <a href="docs/tabseparatedexport.html">Export → Generic matrix export</a> and re-imported later with <a href="docs/genericmatrixupload.html">Load → Generic matrix upload</a>.</em></p>
+<p><em>Comment: After each applied operation a new matrix will be generated. Every matrix that you are creating can be saved with <a href="tabseparatedexport.html">Export → Generic matrix export</a> and re-imported later with <a href="genericmatrixupload.html">Load → Generic matrix upload</a>.</em></p>
 </section>
 <section id="filtering" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="filtering"><span class="header-section-number">2.2</span> Filtering</h2>
-<p>After loading the matrix, we filter out the reverse proteins and the proteins that are only identified by site. This is done by using the function <a href="docs/filtercategoricalcolumn.html">Processing → Filter rows → Filter rows based on categorical column</a>, because both the “Reverse” column and the “Only identified by site” column are categorical.</p>
+<p>After loading the matrix, we filter out the reverse proteins and the proteins that are only identified by site. This is done by using the function <a href="filtercategoricalcolumn.html">Processing → Filter rows → Filter rows based on categorical column</a>, because both the “Reverse” column and the “Only identified by site” column are categorical.</p>
 <p><img src="images/silac-02-filter_categorical_column-edited.png" class="img-fluid"></p>
 <p>First, we filter out the reverse hits. Reverse hits are indicated by a “+” in the “Reverse” column, so to filter out these hits all rows containing a “+” will be removed from the matrix. Therefore, the column “Reverse” needs to be selected, “+” is the value we are looking for and is selected by default. No further changes need to be applied, because we want to remove the matching rows from the matrix. This results in a matrix, where the value in the “Reverse” column of all rows is empty.</p>
 <p><img src="images/silac-02-filter_categorical_column-reverse.png" class="img-fluid"></p>
 <p>Second, we filter out the hits that are only identified by site. The column “Only identified by site” has two values, TRUE and FALSE. Thus all rows containing TRUE are filtered out. Therefore, “Only identified by site” has to be selected as column and TRUE is the value of interest, which is selected by clicking on TRUE on the left hand side and using the button in the middle with the arrow to the right on it. Deselection works by using the button with the arrow to the left. No further changes are necessary, because we want to remove the matching rows from the matrix. This results in a matrix, where all rows contain the value FALSE in the column “Only identified by site”.</p>
 <p><img src="images/silac-02-filter_categorical_column-only_identified_by_site-01.png" class="img-fluid"></p>
-<p>The next step is to filter out all rows with less than six valid intensity values of all nine (i.e.&nbsp;being not NaN). Therefore we use <a href="docs/filtervalidvaluesrows.html">Processing → Filter rows → Filter rows based on valid values</a>.</p>
+<p>The next step is to filter out all rows with less than six valid intensity values of all nine (i.e.&nbsp;being not NaN). Therefore we use <a href="filtervalidvaluesrows.html">Processing → Filter rows → Filter rows based on valid values</a>.</p>
 <p><img src="images/silac-05-filter_valid_values-edited.png" class="img-fluid"></p>
 <p>The required percentage of valid values per row may differ from study to study. In some cases, having valid values only in one of several replicate groups might be a significant finding and these kind of rows should possibly not be discarded. The filter can also be applied to each column group separately. (How to create column groups or categorical annotation rows you will learn in a few steps.) Now we just want to be certain that each row contains at least six of the nine intensity values.</p>
 <p><img src="images/silac-05-filter_valid_values-parameter_window.png" class="img-fluid"></p>
@@ -257,19 +257,19 @@ The files "20070522_NH_Orbi2_HelaEpo_01.RAW" and "20070522_NH_Orbi2_HelaEpo_02.R
 <p><img src="images/silac-03-transformation-edited.png" class="img-fluid"></p>
 <p>To invert the ratios the formula <span class="math inline">\(1/x\)</span> has to be typed in the transformation type field. No further changes are necessary, because we want to apply the transformation to all main columns, which are selected by default.</p>
 <p><img src="images/silac-03-transformation-param_window.png" class="img-fluid"></p>
-<p>Then the ratios will be logarithmized by using the function <a href="docs/transformationproc.html">Processing → Basic → Transform</a> again.</p>
+<p>Then the ratios will be logarithmized by using the function <a href="transformationproc.html">Processing → Basic → Transform</a> again.</p>
 <p><img src="images/silac-04-logarithmize-edited.png" class="img-fluid"></p>
 <p>Now the transformation function we are going to use is <span class="math inline">\(log_2(x)\)</span>, which is the default setting. The transformation should also be applied to all main columns, which are selected by default.</p>
 <p><img src="images/silac-04-logarithmize-parameter_window.png" class="img-fluid"></p>
 </section>
 <section id="renaming-columns" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="renaming-columns"><span class="header-section-number">2.4</span> Renaming columns</h2>
-<p>The main column names “Ratio H/L Normalized …” are a bit bulky. So we rename the main columns with the help of regular expressions and the function <a href="docs/renamecolumnsregexp.html">Processing → Rearrange → Rename columns [Reg.ex.]</a>.</p>
+<p>The main column names “Ratio H/L Normalized …” are a bit bulky. So we rename the main columns with the help of regular expressions and the function <a href="renamecolumnsregexp.html">Processing → Rearrange → Rename columns [Reg.ex.]</a>.</p>
 <p><img src="images/silac-06-renaming_regex-edited.png" class="img-fluid"></p>
 <p>The regular expression that you may use to remove the repetitive part of the name is “Ratio H/L Normalized (.*)”. The general concept of regular expressions can be found under <a href="http://en.wikipedia.org/wiki/Regular_expression" class="uri">http://en.wikipedia.org/wiki/Regular_expression</a>. If you already know generally how regular expressions work, you may only need to glance at this <a href="http://msdn.microsoft.com/en-us/library/az24scfc.aspx">Quick Reference</a> or at an even quicker <a href="http://www.mikesdotnetting.com/Article/46/CSharp-Regular-Expressions-Cheat-Sheet">Cheat Sheet</a>.</p>
 <p>This results in a matrix, where the column names of the ratios are a combination of the cell line and the replica.</p>
 <p><img src="images/silac-06-renaming_regex-parameter_window.png" class="img-fluid"></p>
-<p>If you want to rename the columns manually without the help of regular expressions you can use <a href="docs/renamecolumns.html">Processing → Rearrange → Rename columns</a>.</p>
+<p>If you want to rename the columns manually without the help of regular expressions you can use <a href="renamecolumns.html">Processing → Rearrange → Rename columns</a>.</p>
 <p><img src="images/silac-06-renaming_manually-edited.png" class="img-fluid"></p>
 <p>Then you can type the new names in the predefined text field.</p>
 <p><img src="images/silac-06-renaming_manually-parameter_window.png" class="img-fluid"></p>
@@ -277,7 +277,7 @@ The files "20070522_NH_Orbi2_HelaEpo_01.RAW" and "20070522_NH_Orbi2_HelaEpo_02.R
 </section>
 <section id="add-annotation" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Add annotation</h1>
-<p>In <a href="docs/addannotationtomatrix.html">Processing → Annot.columns → Add annotation</a> are several options for adding annotations to your data. You can select from any annotation file that is present in the “Perseus/conf/annotations/” folder.</p>
+<p>In <a href="addannotationtomatrix.html">Processing → Annot.columns → Add annotation</a> are several options for adding annotations to your data. You can select from any annotation file that is present in the “Perseus/conf/annotations/” folder.</p>
 <p><img src="images/silac-07-add_annotation-edited.png" class="img-fluid"></p>
 <p>The standard way of obtaining the latest main annotation, containing: GO, KEGG, Pfam, GSEA, Keywords, CORUM and many other terms found in UniProt is by downloading the mainPerseusAnnot.txt.gz file from dropbox. This is an easy four step process:</p>
 <ul>
@@ -293,7 +293,7 @@ The files "20070522_NH_Orbi2_HelaEpo_01.RAW" and "20070522_NH_Orbi2_HelaEpo_02.R
 </section>
 <section id="scatter-plot" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> Scatter plot</h1>
-<p>Now we plot some replicates against each other. Therefore open a scatter plot with <a href="docs/scatterplotanalysis.html">Analysis → Visualization → Scatter plot</a>.</p>
+<p>Now we plot some replicates against each other. Therefore open a scatter plot with <a href="scatterplotanalysis.html">Analysis → Visualization → Scatter plot</a>.</p>
 <p><img src="images/silac-08-scatter_plot-edited.png" class="img-fluid"></p>
 <p>Then we plot different replicas against each other. For that we have to select “Columns” as “Matrix access”, which means that scatter plots between the columns will be calculated. This results in an extra tab on the same matrix containing the scatter plot functionalities.</p>
 <p><img src="images/silac-08-scatter_plot-parameter_window.png" class="img-fluid"></p>
@@ -307,7 +307,7 @@ The files "20070522_NH_Orbi2_HelaEpo_01.RAW" and "20070522_NH_Orbi2_HelaEpo_02.R
 </section>
 <section id="density-scatter-plot" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> Density scatter plot</h1>
-<p>When there are many data points in a scatter plot it is often difficult to see where the majority of points are located. This situation can be improved by coloring the data points by the local point density. Estimate the density for two columns with <a href="docs/densityestimationprocessing.html">Processing → Basic → Density estimation</a>.</p>
+<p>When there are many data points in a scatter plot it is often difficult to see where the majority of points are located. This situation can be improved by coloring the data points by the local point density. Estimate the density for two columns with <a href="densityestimationprocessing.html">Processing → Basic → Density estimation</a>.</p>
 <p><img src="images/silac-09-density_scatter_plot-edited.png" class="img-fluid"></p>
 <p>Decide for two columns that you want to plot. No further changes are necessary. This results in an additional column containing the density estimate.</p>
 <p><img src="images/silac-09-density_scatter_plot-parameter_window-03.png" class="img-fluid"></p>
@@ -320,7 +320,7 @@ The files "20070522_NH_Orbi2_HelaEpo_01.RAW" and "20070522_NH_Orbi2_HelaEpo_02.R
 </section>
 <section id="multi-scatter-plot" class="level1" data-number="6">
 <h1 data-number="6"><span class="header-section-number">6</span> Multi scatter plot</h1>
-<p>Open a multi scatter plot using <a href="docs/multiscatteranalysis.html">Analysis → Visualization → Multi scatter plot</a>.</p>
+<p>Open a multi scatter plot using <a href="multiscatteranalysis.html">Analysis → Visualization → Multi scatter plot</a>.</p>
 <p><img src="images/silac-10-multi-scatter_plot-edited.png" class="img-fluid"></p>
 <p>We want to plot all samples against each other. So no further changes are necessary, because all main columns are selected by default. The results will be displayed in an extra tab on the same matrix containing the multi scatter plot functionalities.</p>
 <p><img src="images/silac-10-multi-scatter_plot-parameter_window.png" class="img-fluid"></p>
@@ -329,7 +329,7 @@ The files "20070522_NH_Orbi2_HelaEpo_01.RAW" and "20070522_NH_Orbi2_HelaEpo_02.R
 </section>
 <section id="histogram" class="level1" data-number="7">
 <h1 data-number="7"><span class="header-section-number">7</span> Histogram</h1>
-<p>Open a histogram using <a href="docs/histogram.html">Analysis → Visualization → Histogram</a>.</p>
+<p>Open a histogram using <a href="histogram.html">Analysis → Visualization → Histogram</a>.</p>
 <p><img src="images/silac-11-histogram-edited.png" class="img-fluid"></p>
 <p>The log ratios of each sample are separately represented as histograms. Therefore, nothing needs to be changed in the parameters, because all main columns (samples) are selected by default. The results will be displayed in an extra tab on the same matrix containing the histogram functionalities.</p>
 <p><img src="images/silac-11-histogram-parameter_window.png" class="img-fluid"></p>
@@ -337,7 +337,7 @@ The files "20070522_NH_Orbi2_HelaEpo_01.RAW" and "20070522_NH_Orbi2_HelaEpo_02.R
 <p><img src="images/silac-11-histogram-plot.png" class="img-fluid"></p>
 <p>If we switch to logarithmic fillings (button highlighted by the red rectangle) we are able to see the selected points better.</p>
 <p><img src="images/silac-11-histogram-plot_log-edited.png" class="img-fluid"></p>
-<p>In case the distributions are shifted towards left/right and the peak is not on zero, we have to normalize the values. For instance try normalizing the data by subtracting the median from each distribution with <a href="docs/subtract.html">Processing → Normalization → Subtract</a> and check what changed by looking at the resulting histograms.</p>
+<p>In case the distributions are shifted towards left/right and the peak is not on zero, we have to normalize the values. For instance try normalizing the data by subtracting the median from each distribution with <a href="subtract.html">Processing → Normalization → Subtract</a> and check what changed by looking at the resulting histograms.</p>
 <p><img src="images/silac-11-normalize_subtract-edited.png" class="img-fluid"></p>
 <p>Set the parameter “Matrix access” to “Columns”.</p>
 <p><img src="images/silac-11-normalize_subtract-parameter_window.png" class="img-fluid"></p>
@@ -346,7 +346,7 @@ The files "20070522_NH_Orbi2_HelaEpo_01.RAW" and "20070522_NH_Orbi2_HelaEpo_02.R
 </section>
 <section id="profile-plot" class="level1" data-number="8">
 <h1 data-number="8"><span class="header-section-number">8</span> Profile plot</h1>
-<p>Open a profile plot with <a href="docs/profileplot.html">Analysis → Visualization → Profile plot</a>. The function has no parameters and the results will be displayed in an extra tab on the same matrix containing the profile plot functionalities.</p>
+<p>Open a profile plot with <a href="profileplot.html">Analysis → Visualization → Profile plot</a>. The function has no parameters and the results will be displayed in an extra tab on the same matrix containing the profile plot functionalities.</p>
 <p><img src="images/silac-12-profile_plot-edited.png" class="img-fluid"></p>
 <p>Again you have tables with individual data points and categories where you can manipulate the properties of the lines. In addition there is the “Reference profile” tab. Here you can define what would be the shape of an expression profile of interest manually by shifting the profile points (red) up/down. Then you can retrieve those proteins (default: 10) whose expression profiles have the highest similarity or correlation to the reference profile by clicking on the “Select neighbours” button on upper left corner of the “Reference profile” tab (highlighted by the red rectangle).</p>
 <p><img src="images/silac-12-profile_plot-plot_reference_tab-edited.png" class="img-fluid"></p>
@@ -359,28 +359,28 @@ The files "20070522_NH_Orbi2_HelaEpo_01.RAW" and "20070522_NH_Orbi2_HelaEpo_02.R
 </section>
 <section id="d-scatter-plot" class="level1" data-number="9">
 <h1 data-number="9"><span class="header-section-number">9</span> 3D scatter plot</h1>
-<p>Open a 3D scatter plot with <a href="docs/scatterplot3danalysis.html">Analysis → Visualization → 3D plot</a>. The function has no parameters and the results will be displayed in an extra tab on the same matrix containing the 3D scatter plot functionalities.</p>
+<p>Open a 3D scatter plot with <a href="scatterplot3danalysis.html">Analysis → Visualization → 3D plot</a>. The function has no parameters and the results will be displayed in an extra tab on the same matrix containing the 3D scatter plot functionalities.</p>
 <p><img src="images/silac-13-3d_scatter_plot-edited.png" class="img-fluid"></p>
 <p>This is similar to the conventional scatter plot, just that you can plot three columns against each other. Also here one can color points, either directly, by categories or by another numerical column, which can result in quite appealing plots. If nothing happens you might have to hit the “Refresh” button in the upper left corner of the “3D plot” tab (highlighted by a red rectangle).</p>
 <p><img src="images/silac-13-3d_scatter_plot-plot-edited.png" class="img-fluid"></p>
 </section>
 <section id="grouping-of-samples" class="level1" data-number="10">
 <h1 data-number="10"><span class="header-section-number">10</span> Grouping of samples</h1>
-<p>Now we want to find out which proteins are differentially regulated between the cell lines. For this we have to define the grouping of samples into replicate groups. Go to <a href="docs/createcategoricalannotrow.html">Processing → Annot.rows → Categorical annotation rows</a>.</p>
+<p>Now we want to find out which proteins are differentially regulated between the cell lines. For this we have to define the grouping of samples into replicate groups. Go to <a href="createcategoricalannotrow.html">Processing → Annot.rows → Categorical annotation rows</a>.</p>
 <p><img src="images/silac-14-grouping-edited.png" class="img-fluid"></p>
 <p>Create three groups according to the replicates. The categorical column is named “Cell line” and the groups have the names of the cell lines, which are defined manually.</p>
 <p><img src="images/silac-14-grouping-parameter_window.png" class="img-fluid"></p>
 <p>In case you have more samples another opportunity is to use the Action “Create from experiment name”, which just works if the experiments are named properly.</p>
 <p><img src="images/silac-14-grouping-parameter_window2.png" class="img-fluid"></p>
-<p>If you export the data now using x<a href="docs/tabseparatedexport.html">Export → Generic matrix export</a> and re-import it later with <a href="docs/genericmatrixupload.html">Load → Generic matrix upload</a>, the grouping is still defined.</p>
+<p>If you export the data now using x<a href="tabseparatedexport.html">Export → Generic matrix export</a> and re-import it later with <a href="genericmatrixupload.html">Load → Generic matrix upload</a>, the grouping is still defined.</p>
 </section>
 <section id="numeric-venn-diagram" class="level1" data-number="11">
 <h1 data-number="11"><span class="header-section-number">11</span> Numeric Venn diagram</h1>
-<p>On an unrelated note, we might be interested in the number of protein identifications we have in each sample (or in each cell line), how many of these are common to all samples and how many are unique for each sample. For simplicity we say now that a protein is present in a sample if there is a valid value for the ratio and we say that it is absent if the ratio is “NaN”. Since we are here only interested in absence/presence in a certain cell line and not so much in single replicates, we first average ratios within groups using <a href="docs/averagegroups.html">Processing → Annot.rows → Average groups</a>.</p>
+<p>On an unrelated note, we might be interested in the number of protein identifications we have in each sample (or in each cell line), how many of these are common to all samples and how many are unique for each sample. For simplicity we say now that a protein is present in a sample if there is a valid value for the ratio and we say that it is absent if the ratio is “NaN”. Since we are here only interested in absence/presence in a certain cell line and not so much in single replicates, we first average ratios within groups using <a href="averagegroups.html">Processing → Annot.rows → Average groups</a>.</p>
 <p><img src="images/silac-15-venn_diagram-average_groups-edited.png" class="img-fluid"></p>
 <p>Since our matrix just contains one categorical row, the default parameters can be used.</p>
 <p><img src="images/silac-15-venn_diagram-average_groups-parameter_window.png" class="img-fluid"></p>
-<p>Then when performing <a href="docs/numericvenndiagram.html">Analysis → Misc.→ Numeric venn diagram</a> you will get some statistical information about the occurrence of proteins in the different cell lines. The results will be displayed in an extra tab on the same matrix containing the venn diagram functionalities.</p>
+<p>Then when performing <a href="numericvenndiagram.html">Analysis → Misc.→ Numeric venn diagram</a> you will get some statistical information about the occurrence of proteins in the different cell lines. The results will be displayed in an extra tab on the same matrix containing the venn diagram functionalities.</p>
 <p><img src="images/silac-15-venn_diagram-edited-01.png" class="img-fluid"></p>
 <!--
 # missing picture
@@ -391,7 +391,7 @@ The files "20070522_NH_Orbi2_HelaEpo_01.RAW" and "20070522_NH_Orbi2_HelaEpo_02.R
 </section>
 <section id="anova" class="level1" data-number="12">
 <h1 data-number="12"><span class="header-section-number">12</span> ANOVA</h1>
-<p>To find out which proteins are differentially regulated between the cell lines go back to the matrix before “averaging within groups” and apply <a href="docs/multiplesampletestprocessing.html">Processing → Tests → Multiple-samples tests</a>. We select “Multiple-samples tests” because there are more than two cell line groups to compare. In case you wanted to compare only one or two samples you would use the respective t-test.</p>
+<p>To find out which proteins are differentially regulated between the cell lines go back to the matrix before “averaging within groups” and apply <a href="multiplesampletestprocessing.html">Processing → Tests → Multiple-samples tests</a>. We select “Multiple-samples tests” because there are more than two cell line groups to compare. In case you wanted to compare only one or two samples you would use the respective t-test.</p>
 <p><img src="images/silac-16-anova-edited.png" class="img-fluid"></p>
 <p>An important parameter in the parameter panel is “Use for truncation”. Here you can choose whether the truncation should be based on the p-values, if the Benjamini Hochberg correction for multiple hypothesis testing should be applied, or if a permutation-based FDR is calculated. As an example, if you select “Permutation-based FDR” and use 0.01 as a threshold value it would mean that there are 1% false positives among the proteins that the ANOVA test finds as significantly regulated.</p>
 <p><img src="images/silac-16-anova-parameter_window.png" class="img-fluid"></p>
@@ -400,7 +400,7 @@ The files "20070522_NH_Orbi2_HelaEpo_01.RAW" and "20070522_NH_Orbi2_HelaEpo_02.R
 </section>
 <section id="enrichment-fisher-exact-test" class="level1" data-number="13">
 <h1 data-number="13"><span class="header-section-number">13</span> Enrichment, Fisher exact test</h1>
-<p>Now we want to know, if certain pathways or GO terms are over-represented in the proteins that are significantly changing between the cell lines. For this we can use the Fisher exact test in <a href="docs/fisherexacttestproces.html">Processing → Annot.columns → Fisher exact test</a>.</p>
+<p>Now we want to know, if certain pathways or GO terms are over-represented in the proteins that are significantly changing between the cell lines. For this we can use the Fisher exact test in <a href="fisherexacttestproces.html">Processing → Annot.columns → Fisher exact test</a>.</p>
 <p><img src="images/silac-17-enrichment_fisher_exact_test-edited.png" class="img-fluid"></p>
 <p>It will test the terms in one column, in our case the column indicating ANOVA significance, if they correlate with terms from other categorical columns (e.g.&nbsp;KEGG pathways).</p>
 <p><img src="images/silac-17-enrichment_fisher_exact_test-parameter_window.png" class="img-fluid"></p>
@@ -409,11 +409,11 @@ The files "20070522_NH_Orbi2_HelaEpo_01.RAW" and "20070522_NH_Orbi2_HelaEpo_02.R
 </section>
 <section id="hierarchical-clustering" class="level1" data-number="14">
 <h1 data-number="14"><span class="header-section-number">14</span> Hierarchical clustering</h1>
-<p>First go to the matrix before averaging groups. Then as a preparation for the hierarchical clustering we first normalize the rows of the matrix. Use <a href="docs/zscore.html">Processing → Normalization → Z-score</a>.</p>
+<p>First go to the matrix before averaging groups. Then as a preparation for the hierarchical clustering we first normalize the rows of the matrix. Use <a href="zscore.html">Processing → Normalization → Z-score</a>.</p>
 <p><img src="images/silac-18-hierarchical_clustering-z-score-edited.png" class="img-fluid"></p>
 <p>to perform Z-scoring of each row. This will shift the mean of each row to 0 and bring the standard deviation to 1.</p>
 <p><img src="images/silac-18-hierarchical_clustering-z-score-parameter_window.png" class="img-fluid"></p>
-<p>Now perform hierarchical clustering of rows and columns using <a href="docs/hierarchicalcluster.html">Analysis → Clustering/PCA → Hierarchical clustering</a>.</p>
+<p>Now perform hierarchical clustering of rows and columns using <a href="hierarchicalcluster.html">Analysis → Clustering/PCA → Hierarchical clustering</a>.</p>
 <p><img src="images/silac-18-hierarchical_clustering-edited.png" class="img-fluid"></p>
 <p>You can use the default parameters. The results will be displayed in an extra tab on the same matrix containing the hierarchical clustering functionalities.</p>
 <p><img src="images/silac-18-hierarchical_clustering-parameter_window.png" class="img-fluid"></p>
@@ -425,10 +425,10 @@ The files "20070522_NH_Orbi2_HelaEpo_01.RAW" and "20070522_NH_Orbi2_HelaEpo_02.R
 </section>
 <section id="principal-component-analysis" class="level1" data-number="15">
 <h1 data-number="15"><span class="header-section-number">15</span> Principal component analysis</h1>
-<p>In order to perform principal component analysis (PCA), all cells of the matrix have to contain valid values. One way to achieve this is to perform imputation, here we choose another method. We filter for valid values using <a href="docs/filtervalidvaluesrows.html">Processing → Filter rows → Filter rows based on valid values</a> such that every row contains nine valid values. Go to the data matrix before Z-scoring and perform this valid value filtering.</p>
+<p>In order to perform principal component analysis (PCA), all cells of the matrix have to contain valid values. One way to achieve this is to perform imputation, here we choose another method. We filter for valid values using <a href="filtervalidvaluesrows.html">Processing → Filter rows → Filter rows based on valid values</a> such that every row contains nine valid values. Go to the data matrix before Z-scoring and perform this valid value filtering.</p>
 <p><img src="images/silac-19-pca-filtering-edited.png" class="img-fluid"></p>
 <p><img src="images/silac-19-pca-parameter_window.png" class="img-fluid"></p>
-<p>Then perform PCA with <a href="docs/principalcomponentanalysis.html">Analysis → Clustering/PCA → Principal component analysis</a> and explore the results. The results will be displayed in an extra tab on the same matrix containing the principal component functionalities.</p>
+<p>Then perform PCA with <a href="principalcomponentanalysis.html">Analysis → Clustering/PCA → Principal component analysis</a> and explore the results. The results will be displayed in an extra tab on the same matrix containing the principal component functionalities.</p>
 <p><img src="images/silac-19-pca-edited.png" class="img-fluid"></p>
 <p><img src="images/silac-19-pca-parameter_window-01.png" class="img-fluid"></p>
 <p>The result contains the visual output of the PCA, which shows that the three cell lines are perfectly separated (upper left window - blue rectangle). The replicates of each cell line built a cluster. Color, size and shape of initially defined groups (“Categories” tab) or all data points (“Points” tab) can be manipulated in the upper right window (green rectangle). To figure out, which are the proteins that drive the separation of the cell lines, we have to look more closely into the plot in the lower left window (orange rectangle). First select the proteins/data points of interest and have a look at the “Point” tab of the lower right window (purple rectangle). Since we ticked the enrichment checkbox when applying the PCA, we can find the enrichment results in the “Categories” tab of the lower right window.</p>

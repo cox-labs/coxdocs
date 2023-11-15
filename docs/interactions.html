@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Cox Lab">
-<meta name="dcterms.date" content="2023-11-10">
+<meta name="dcterms.date" content="2023-11-15">
 
 <title>Label-free interaction data</title>
 <style>
@@ -191,7 +191,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 10, 2023</p>
+      <p class="date">November 15, 2023</p>
     </div>
   </div>
   
@@ -211,13 +211,13 @@ ul.task-list li input[type="checkbox"] {
 <h1 data-number="2"><span class="header-section-number">2</span> Data preparation</h1>
 <section id="loading" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="loading"><span class="header-section-number">2.1</span> Loading</h2>
-<p>Load the file “proteinGroups.txt” from the “combined/txt” folder of the MaxQuant output. <a href="docs/genericmatrixupload.html">Load Generic matrix upload</a> is denoted by the green arrow on the top left corner of the Perseus window or load the file using the drag and drop function of Perseus.</p>
+<p>Load the file “proteinGroups.txt” from the “combined/txt” folder of the MaxQuant output. <a href="genericmatrixupload.html">Load Generic matrix upload</a> is denoted by the green arrow on the top left corner of the Perseus window or load the file using the drag and drop function of Perseus.</p>
 <p><img src="images/interaction-01-load-edited.png" class="img-fluid"></p>
 <p>Make sure to load the six LFQ intensities as main columns, which correspond to three repeats of a pulldown and three controls.</p>
 </section>
 <section id="filtering" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="filtering"><span class="header-section-number">2.2</span> Filtering</h2>
-<p>After loading the matrix, we filter out the reverse proteins and the proteins that are only identified by site. The contaminants are deliberately not filtered out to show some things later. The filtering is done using the function <a href="docs/filtercategoricalcolumn.html">Processing → Filter rows → Filter rows based on categorical column</a>, because both the “Reverse” column and the “Only identified by site” column are categorical.</p>
+<p>After loading the matrix, we filter out the reverse proteins and the proteins that are only identified by site. The contaminants are deliberately not filtered out to show some things later. The filtering is done using the function <a href="filtercategoricalcolumn.html">Processing → Filter rows → Filter rows based on categorical column</a>, because both the “Reverse” column and the “Only identified by site” column are categorical.</p>
 <p><img src="images/interaction-02-filtering-edited.png" class="img-fluid"></p>
 <p>First, we filter out the reverse hits. Reverse hits are indicated by a “+” in the “Reverse” column, so to filter out these hits all rows containing a “+” will be removed from the matrix. To do so the column “Reverse” needs to be selected, “+” is the value we are looking for and is selected by default. No further changes are necessary, because we want to remove the matching rows from the matrix. This results in a matrix, where the value in the “Reverse” column of all rows is empty.</p>
 <p><img src="images/interaction-02-filtering-reverse-parameter_window.png" class="img-fluid"></p>
@@ -226,11 +226,11 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="transformation" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="transformation"><span class="header-section-number">2.3</span> Transformation</h2>
-<p>To gain better behavior of the data in statistical tests and also in imputation, normally distributed data is advantageous. Therefore we logarithmize the data using <a href="docs/transformationproc.html">Processing → Basic → Transform</a>.</p>
+<p>To gain better behavior of the data in statistical tests and also in imputation, normally distributed data is advantageous. Therefore we logarithmize the data using <a href="transformationproc.html">Processing → Basic → Transform</a>.</p>
 <p><img src="images/interaction-03-transformation-edited.png" class="img-fluid"></p>
 <p>Since the default formula is <span class="math inline">\(log_2(x)\)</span> and all expression columns are selected, nothing needs to be changed.</p>
 <p><img src="images/interaction-03-transformation-parameter_window.png" class="img-fluid"></p>
-<p>To verify, if the data is now more or less normally distributed, we plot histograms of each intensity column separately with <a href="docs/histogram.html">Analysis → Visualization → Histogram</a>.</p>
+<p>To verify, if the data is now more or less normally distributed, we plot histograms of each intensity column separately with <a href="histogram.html">Analysis → Visualization → Histogram</a>.</p>
 <p><img src="images/interaction-03-transformation-histogram-edited.png" class="img-fluid"></p>
 <p><img src="images/interaction-03-transformation-histogram-parameter_window.png" class="img-fluid"></p>
 <p>The results will be displayed in an extra tab on the same matrix containing the histogram functionalities. And indeed the intensities are each more or less normally distributed.</p>
@@ -238,25 +238,25 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="grouping-of-samples" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="grouping-of-samples"><span class="header-section-number">2.4</span> Grouping of samples</h2>
-<p>Before filtering the data for valid values, we group the samples according to replicates using <a href="docs/createcategoricalannotrow.html">Processing → Annot. rows → Categorical annotation rows</a>.</p>
+<p>Before filtering the data for valid values, we group the samples according to replicates using <a href="createcategoricalannotrow.html">Processing → Annot. rows → Categorical annotation rows</a>.</p>
 <p><img src="images/interaction-04-grouping-edited.png" class="img-fluid"></p>
 <p>You can leave the name of the grouping to the default value “Group1” and just shorten the rest of the column names according to replicates. Also giving each group a different name is possible, this is a matter of taste.</p>
 <p><img src="images/interaction-04-grouping-parameter_window.png" class="img-fluid"></p>
 </section>
 <section id="filtering-according-to-groups" class="level2" data-number="2.5">
 <h2 data-number="2.5" class="anchored" data-anchor-id="filtering-according-to-groups"><span class="header-section-number">2.5</span> Filtering according to groups</h2>
-<p>Identifications with just one reported intensity are usually not very useful for further analyses. This is why we filter for valid values with <a href="docs/filtervalidvaluesrows.html">Processing → Filter rows → Filter rows based on valid values</a>.</p>
+<p>Identifications with just one reported intensity are usually not very useful for further analyses. This is why we filter for valid values with <a href="filtervalidvaluesrows.html">Processing → Filter rows → Filter rows based on valid values</a>.</p>
 <p><img src="images/interaction-05-filtering-edited.png" class="img-fluid"></p>
 <p>We want to have “3” valid values “in at least one group”, because interaction partners without any background affinity would not appear in the control, but should still appear with three valid values in the actual pulldown.</p>
 <p><img src="images/interaction-05-filtering-parameter_window.png" class="img-fluid"></p>
 </section>
 <section id="imputation" class="level2" data-number="2.6">
 <h2 data-number="2.6" class="anchored" data-anchor-id="imputation"><span class="header-section-number">2.6</span> Imputation</h2>
-<p>Then we impute missing values from normal distribution with <a href="docs/replacemissingfromgaussian.html">Processing → Imputation → Replace missing values from normal distribution</a>.</p>
+<p>Then we impute missing values from normal distribution with <a href="replacemissingfromgaussian.html">Processing → Imputation → Replace missing values from normal distribution</a>.</p>
 <p><img src="images/interaction-06-imputation-edited.png" class="img-fluid"></p>
 <p>The imputation function will look at the distribution of values, assuming that they are normally distributed and calculates width and center of the distribution. Then Perseus will shrink the distributions to a factor of “0.3” (width), shift it down by “1.8” (down shift) standard deviations and simulate some random values that make up values to fill up the missing values. Also we take the whole matrix (mode).</p>
 <p><img src="images/interaction-06-imputation-parameter_window.png" class="img-fluid"></p>
-<p>Using histograms as before <a href="docs/histogram.html">Analysis → Visualization → Histogram</a>, we are able to look at the distributions of the imputed values. Therefore we generate histograms for all LFQ intensity columns. The results will be displayed in an extra tab on the same matrix containing the histogram functionalities as before. It is important that the imputed values do not form a separate normal distribution, start around the same point in the replicates and are narrower than the distributions of the measured values.</p>
+<p>Using histograms as before <a href="histogram.html">Analysis → Visualization → Histogram</a>, we are able to look at the distributions of the imputed values. Therefore we generate histograms for all LFQ intensity columns. The results will be displayed in an extra tab on the same matrix containing the histogram functionalities as before. It is important that the imputed values do not form a separate normal distribution, start around the same point in the replicates and are narrower than the distributions of the measured values.</p>
 <p><img src="images/interaction-06-imputation-histogram-plot-edited.png" class="img-fluid"></p>
 </section>
 </section>
@@ -264,7 +264,7 @@ ul.task-list li input[type="checkbox"] {
 <h1 data-number="3"><span class="header-section-number">3</span> Experimental quality check</h1>
 <section id="multi-scatter-plot" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="multi-scatter-plot"><span class="header-section-number">3.1</span> Multi-scatter plot</h2>
-<p>To be sure, that the experiment worked one can use multi-scatter plots with <a href="docs/multiscatteranalysis.html">Analysis → Visualization → Multi scatter plot</a> to analyze the correlation between the samples.</p>
+<p>To be sure, that the experiment worked one can use multi-scatter plots with <a href="multiscatteranalysis.html">Analysis → Visualization → Multi scatter plot</a> to analyze the correlation between the samples.</p>
 <p><img src="images/interaction-07-multi-scatter-edited.png" class="img-fluid"></p>
 <p>Therefore we have to plot all six samples against each other.</p>
 <p><img src="images/interaction-07-multi-scatter-parameter_window.png" class="img-fluid"></p>
@@ -273,7 +273,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="hierarchical-clustering" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="hierarchical-clustering"><span class="header-section-number">3.2</span> Hierarchical clustering</h2>
-<p>Another option to figure out, if the experiment worked is hierarchical clustering in <a href="docs/hierarchicalcluster.html">Analysis → Clustering/PCA → Hierarchical clustering</a>.</p>
+<p>Another option to figure out, if the experiment worked is hierarchical clustering in <a href="hierarchicalcluster.html">Analysis → Clustering/PCA → Hierarchical clustering</a>.</p>
 <p><img src="images/interaction-08-hierachical_clustering-edited.png" class="img-fluid"></p>
 <p>Since we just have six known samples, we are not interested in the column tree. So we are more curious about the intensity profile of all the samples. The results will be displayed in an extra tab on the same matrix containing the hierarchical clustering functionalities.</p>
 <p><img src="images/interaction-08-hierachical_clustering-parameter_window.png" class="img-fluid"></p>
@@ -297,14 +297,14 @@ Remove the imputed values again  export row clustering (matrix has the order 
 <h1 data-number="4"><span class="header-section-number">4</span> Identifying interactors</h1>
 <section id="two-sample-t-test" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="two-sample-t-test"><span class="header-section-number">4.1</span> Two sample t-test</h2>
-<p>Now we want to find the interactors using <a href="docs/twosampletestprocessing.html">Processing → Tests → Two-samples tests</a>.</p>
+<p>Now we want to find the interactors using <a href="twosampletestprocessing.html">Processing → Tests → Two-samples tests</a>.</p>
 <p><img src="images/interaction-09-two_sample_test-edited.png" class="img-fluid"></p>
 <p>The T-test assumes that you have equal variance within the groups of replicates. s0 is in essence a minimal fold change, which means even if a protein gives you a very good p-value in case the fold change is below that value (s0) it won’t be significant. As a rule of thumb we use s0 = 2 and FDR = 0.01, what usually gives nice results. This results in a new matrix with additional columns: “t-test Significant”, “-Log t-test p-value”, “t-test Difference” and “test statistic”.</p>
 <p><img src="images/interaction-09-two_sample_test-parameter_window.png" class="img-fluid"></p>
 </section>
 <section id="scatter-plot" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="scatter-plot"><span class="header-section-number">4.2</span> Scatter plot</h2>
-<p>Now to view the interactors we have to generate a scatter plot <a href="docs/scatterplotanalysis.html">Analysis → Visualization → Scatter plot</a>.</p>
+<p>Now to view the interactors we have to generate a scatter plot <a href="scatterplotanalysis.html">Analysis → Visualization → Scatter plot</a>.</p>
 <p><img src="images/interaction-10-scatter_plot-edited.png" class="img-fluid"></p>
 <p>So we have to plot the columns against each other. This results in an extra tab on the same matrix containing the scatter plot functionalities.</p>
 <p><img src="images/interaction-10-volcano_plot-parameter_window.png" class="img-fluid"></p>
@@ -314,7 +314,7 @@ Remove the imputed values again  export row clustering (matrix has the order 
 </section>
 <section id="volcano-plot" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="volcano-plot"><span class="header-section-number">4.3</span> Volcano plot</h2>
-<p>The volcano plot is the unified function of the two sample t-test and the scatter plot with the additional option to easily optimize the s0 and FDR parameter. So to identify and visualize the interactors in one step use <a href="docs/volcanoplotanalysis.html">Analysis → Misc. → Volcano plot</a>.</p>
+<p>The volcano plot is the unified function of the two sample t-test and the scatter plot with the additional option to easily optimize the s0 and FDR parameter. So to identify and visualize the interactors in one step use <a href="volcanoplotanalysis.html">Analysis → Misc. → Volcano plot</a>.</p>
 <p><img src="images/interaction-10-volcano_plot-edited.png" class="img-fluid"></p>
 <p>As in the two sample t-test one has to specify the grouping that should be used for the significance test, which test should be applied and the parameters of the test. Since we have just one grouping and want to use the t-test we just have to change s0 to 2 and FDR to 0.01. This results in an extra tab on the same matrix containing the volcano plot functionalities.</p>
 <p><img src="images/interaction-10-volcano_plot-parameter_window-01.png" class="img-fluid"></p>
@@ -323,7 +323,7 @@ Remove the imputed values again  export row clustering (matrix has the order 
 </section>
 <section id="profile-plot" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="profile-plot"><span class="header-section-number">4.4</span> Profile plot</h2>
-<p>Another option to find and visualize interactors is to use <a href="docs/profileplot.html">Analysis → Visualization → Profile plot</a>. This function has no input parameters and the results are shown in an extra tab on the same matrix containing the profile plot functionalities.</p>
+<p>Another option to find and visualize interactors is to use <a href="profileplot.html">Analysis → Visualization → Profile plot</a>. This function has no input parameters and the results are shown in an extra tab on the same matrix containing the profile plot functionalities.</p>
 <p><img src="images/interaction-11-profile_plot-edited.png" class="img-fluid"></p>
 <p>First we have to search for the bait protein CDC23 and get its profile. This is achieved by clicking the right mouse button in the “Profiles” tab (orange rectangle in the figure at the end), selecting “Find…” and searching for “CDC23” in the whole table.</p>
 <p><img src="images/interaction-11-profile_plot-find.png" class="img-fluid"></p>

@@ -36,7 +36,7 @@ Make changes only below this line! -->
 
 ## Filter method
 
-Defines the filter method that will be applied to the values in the expression columns (default: From quality matrix). If "From quality matrix" is selected, the filtering is just based on the previously [created quality matrix](docs/createqualitymatrix.html) and a threshold must be specified (see parameter window A). If "Compare main to quality matrix" is chosen, the values of the two matrices are compared to each other in the way it is specified in "Values should be" (see parameter window B).
+Defines the filter method that will be applied to the values in the expression columns (default: From quality matrix). If "From quality matrix" is selected, the filtering is just based on the previously [created quality matrix](createqualitymatrix.html) and a threshold must be specified (see parameter window A). If "Compare main to quality matrix" is chosen, the values of the two matrices are compared to each other in the way it is specified in "Values should be" (see parameter window B).
 
 ### Threshold
 

@@ -14,20 +14,20 @@ bibliography: references.bib
 csl: nature.csl
 ---
 
-This analysis is provided through the `R`-language integration into Perseus and therefore requires `R` as well as the `WGCNA` package to be installed. Visit [WGCNA](docs/WGCNA.html) [@langfelder2008] page for more information and installation instructions.
+This analysis is provided through the `R`-language integration into Perseus and therefore requires `R` as well as the `WGCNA` package to be installed. Visit [WGCNA](WGCNA.html) [@langfelder2008] page for more information and installation instructions.
 
 More information about co-expression clustering can be found at the following resources:
 
--   [~~official WGCNA tutorials~~](https://labs.genetics.ucla.edu/horvath/htdocs/CoexpressionNetwork/Rpackages/WGCNA/Tutorials/index.html).
+-   [~~official WGCNA tutorials~~](https://labs.genetics.ucla.edu/horvath/htCoexpressionNetwork/Rpackages/WGCNA/Tutorials/index.html).
 -   [Network analysis with WGCNA](https://bioinformaticsworkbook.org/tutorials/wgcna.html#gsc.tab=0)
 -   [WGCNA - RNA-seq](https://alexslemonade.github.io/refinebio-examples/04-advanced-topics/network-analysis_rnaseq_01_wgcna.html)
 
 # Description
 
-The co-expression network is created using the defined correlation function. The determined power is applied to the network (see [Soft-threshold](docs/softthreshold.html) for more info). 
+The co-expression network is created using the defined correlation function. The determined power is applied to the network (see [Soft-threshold](softthreshold.html) for more info). 
 Topological overlap distance is used to create the hierarchical clustering dendrogram. The co-expression modules are determined using the dynamic tree-cut method. For each module, a module eigengene is reported, with its name corresponding to the color of the cluster.
 
 # Output
 
 * Hierarchical clustering heatmap with a dendrogram and automatic cluster assignments. 
-* Matrix of module eigengenes that represent a cluster. See [Correlate](docs/correlate.html) for identifying clusters that correlate with clinical/phenotype data.
+* Matrix of module eigengenes that represent a cluster. See [Correlate](correlate.html) for identifying clusters that correlate with clinical/phenotype data.

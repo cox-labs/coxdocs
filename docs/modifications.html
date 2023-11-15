@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Cox Lab">
-<meta name="dcterms.date" content="2023-11-10">
+<meta name="dcterms.date" content="2023-11-15">
 
 <title>Label-free phospho data</title>
 <style>
@@ -207,7 +207,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 10, 2023</p>
+      <p class="date">November 15, 2023</p>
     </div>
   </div>
   
@@ -230,7 +230,7 @@ div.csl-indent {
 <h1 data-number="2"><span class="header-section-number">2</span> Data preparation</h1>
 <section id="loading" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="loading"><span class="header-section-number">2.1</span> Loading</h2>
-<p>Load the file “Phospho (STY)Sites.txt” from the “combined/txt” folder of the MaxQuant output. <a href="docs/genericmatrixupload.html">Load → Generic matrix upload</a> is denoted by the green arrow on the top left corner of the Perseus window or load the file using the drag and drop function of Perseus.</p>
+<p>Load the file “Phospho (STY)Sites.txt” from the “combined/txt” folder of the MaxQuant output. <a href="genericmatrixupload.html">Load → Generic matrix upload</a> is denoted by the green arrow on the top left corner of the Perseus window or load the file using the drag and drop function of Perseus.</p>
 <p><img src="images/phospho-01-generic_matrix_upload-edited.png" class="img-fluid"></p>
 <p>Make sure to load the following 42 columns as <strong>main</strong> columns:</p>
 <ul>
@@ -250,38 +250,38 @@ div.csl-indent {
 <li>Intensity N4_1, Intensity N4_2, Intensity N4_3</li>
 </ul>
 <p>Also make sure that the “Localization prob” is loaded as <strong>numerical</strong> column. (Only the global one, not one for each sample.)</p>
-<p><em>Comment:</em> <em>After each applied operation a new matrix will be generated. Every matrix that you are creating can be saved with <a href="docs/tabseparatedexport.html">Export → Generic matrix export</a> and re-imported later with <a href="docs/genericmatrixupload.html">Load → Generic matrix upload</a>.</em></p>
+<p><em>Comment:</em> <em>After each applied operation a new matrix will be generated. Every matrix that you are creating can be saved with <a href="tabseparatedexport.html">Export → Generic matrix export</a> and re-imported later with <a href="genericmatrixupload.html">Load → Generic matrix upload</a>.</em></p>
 </section>
 </section>
 <section id="filtering" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Filtering</h1>
-<p>After loading the matrix, we filter out the reverse (decoy) database hits, the contaminants and the proteins with a localization probability <span class="math inline">\(&lt;0.75\)</span>. Both the “Reverse” column and the “Contaminant” column are categorical. Therefore we use <a href="docs/filtercategoricalcolumn.html">Processing → Filter rows → Filter rows based on categorical column</a>.</p>
+<p>After loading the matrix, we filter out the reverse (decoy) database hits, the contaminants and the proteins with a localization probability <span class="math inline">\(&lt;0.75\)</span>. Both the “Reverse” column and the “Contaminant” column are categorical. Therefore we use <a href="filtercategoricalcolumn.html">Processing → Filter rows → Filter rows based on categorical column</a>.</p>
 <p><img src="images/phospho-03-filter_categorical_column-edited.png" class="img-fluid"></p>
 <p>First, we filter out the reverse hits. Reverse hits are indicated by a “+” in the “Reverse” column, so to filter out these hits all rows containing a “+” will be removed from the matrix. To do so the column “Reverse” needs to be selected, “+” is the value we are looking for and is selected by default. No further changes are necessary, because we want to remove the matching rows from the matrix. This results in a matrix, where the value in the “Reverse” column of all rows is empty.</p>
 <p><img src="images/phospho-03-filter_categorical_column-parameter_window-reverse.png" class="img-fluid"></p>
 <p>Then, we filter out the contaminants. Contaminants are indicated by a “+” in the “Contaminant” column, so to filter out these hits all rows containing a “+” will be removed from the matrix. To do so the column “Contaminant” needs to be selected, “+” is the value we are looking for and is selected by default. No further changes are necessary, because we want to remove the matching rows from the matrix. This results in a matrix, where the value in the “Contaminant” column of all rows are empty.</p>
 <p><img src="images/phospho-03-filter_categorical_column-parameter_window-contaminant.png" class="img-fluid"></p>
-<p>Then we filter the site table to retain only these sites that have a localization probability <span class="math inline">\(&gt;0.75\)</span>. Therefore we use <a href="docs/filternumericalcolumn.html">Processing → Filter rows → Filter rows based on numerical/main column</a>.</p>
+<p>Then we filter the site table to retain only these sites that have a localization probability <span class="math inline">\(&gt;0.75\)</span>. Therefore we use <a href="filternumericalcolumn.html">Processing → Filter rows → Filter rows based on numerical/main column</a>.</p>
 <p><img src="images/phospho-02-filter_num_column-edited.png" class="img-fluid"></p>
 <p>For that filtering process we are just using the “Localization probability” column, one relation and have to specify the relation as shown in the screenshot below.</p>
 <p><img src="images/phospho-02-filter_num_column-parameter_window.png" class="img-fluid"></p>
 </section>
 <section id="transformation" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> Transformation</h1>
-<p>Now we want to rearrange the main data. Currently, the different number of phosphorylations per peptide are formatted as separate columns. We want to have only one column per sample, and three rows per site instead. This is accomplished by <a href="docs/expandsitetable.html">Processing → Modifications → Expand site table</a>. The function has no parameters.</p>
+<p>Now we want to rearrange the main data. Currently, the different number of phosphorylations per peptide are formatted as separate columns. We want to have only one column per sample, and three rows per site instead. This is accomplished by <a href="expandsitetable.html">Processing → Modifications → Expand site table</a>. The function has no parameters.</p>
 <p><img src="images/phospho-04-expand_site_table-edited.png" class="img-fluid"></p>
 <p>If you check the number of rows and the number of main columns in the two matrices before and after this step, you can see that the number of rows are tripled, whereas the number of main columns is one third. Also a categorical column called “Multiplicity” is generated, which contains information about the phosphorylation of the peptides (single, double, triply phosphorylated).</p>
-<p>Now we proceed with the standard data processing steps and take the logarithm of values in the main columns with <a href="docs/transformationproc.html">Processing → Basic → Transform</a>.</p>
+<p>Now we proceed with the standard data processing steps and take the logarithm of values in the main columns with <a href="transformationproc.html">Processing → Basic → Transform</a>.</p>
 <p><img src="images/phospho-05-transform-edited.png" class="img-fluid"></p>
 <p>Since the default formula is <span class="math inline">\(log_2(x)\)</span> and all main columns are selected, nothing needs to be changed.</p>
 <p><img src="images/phospho-05-transform-parameter_window.png" class="img-fluid"></p>
 <section id="renaming-columns" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="renaming-columns"><span class="header-section-number">4.1</span> Renaming columns</h2>
-<p>Next, we are doing some cosmetics by shortening the names of the main columns and remove the prefix “Intensity” with <a href="docs/renamecolumnsregexp.html">Processing → Rearrange → Rename columns [reg. ex.]</a>.</p>
+<p>Next, we are doing some cosmetics by shortening the names of the main columns and remove the prefix “Intensity” with <a href="renamecolumnsregexp.html">Processing → Rearrange → Rename columns [reg. ex.]</a>.</p>
 <p><img src="images/phospho-06-rename-regex-edited.png" class="img-fluid"></p>
 <p>The regular expression that you may use to remove the repetitive part of the name is “Intensity (.*)”. The general concept of regular expressions can be found under <a href="http://en.wikipedia.org/wiki/Regular_expression" class="uri">http://en.wikipedia.org/wiki/Regular_expression</a>. If you already know generally how regular expressions work, you may only need to glance at this <a href="http://msdn.microsoft.com/en-us/library/az24scfc.aspx">Quick Reference</a> or at an even quicker <a href="http://www.mikesdotnetting.com/Article/46/CSharp-Regular-Expressions-Cheat-Sheet">Cheat Sheet</a>. This results in a matrix, where the names of the main columns are the replica.</p>
 <p><img src="images/phospho-06-rename-regex-parameter_window.png" class="img-fluid"></p>
-<p>If you want to rename the columns manually without the help of regular expressions you can use <a href="docs/renamecolumns.html">Processing → Rearrange → Rename columns</a>.</p>
+<p>If you want to rename the columns manually without the help of regular expressions you can use <a href="renamecolumns.html">Processing → Rearrange → Rename columns</a>.</p>
 <p><img src="images/phospho-06-rename-manually-edited-01.png" class="img-fluid"></p>
 <p>Then you can type the new names in the predefined text field.</p>
 <p><img src="images/phospho-06-rename-manually-parameter_window-02.png" class="img-fluid"></p>
@@ -289,7 +289,7 @@ div.csl-indent {
 </section>
 <section id="add-annotation" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> Add annotation</h1>
-<p>Now we add protein annotations with <a href="docs/addannotationtomatrix.html">Processing → Annot. columns → Add annotation</a>. There are several options for adding annotations to your data. You can select from any annotation file that is present in the “Perseus/conf/annotations/” folder.</p>
+<p>Now we add protein annotations with <a href="addannotationtomatrix.html">Processing → Annot. columns → Add annotation</a>. There are several options for adding annotations to your data. You can select from any annotation file that is present in the “Perseus/conf/annotations/” folder.</p>
 <p><img src="images/phospho-07-add_annotation-edited.png" class="img-fluid"></p>
 <p>The standard way of obtaining the latest main annotation, containing: GO, KEGG, Pfam, GSEA, Keywords, CORUM and many other terms found in UniProt is by downloading the mainPerseusAnnot.txt.gz file from dropbox. This is an easy four step process:</p>
 <ul>
@@ -305,28 +305,28 @@ div.csl-indent {
 <section id="add-modifications" class="level1" data-number="6">
 <h1 data-number="6"><span class="header-section-number">6</span> Add modifications</h1>
 <p>After adding protein specific annotations, we are now adding sequence specific annotations. Therefore we first have to download the files called “Kinase_Substrate_Dataset.gz” and “Phosphorylation_site_dataset.gz” from <a href="http://www.phosphosite.org/staticDownloads.do">PhosphoSitePlus</a>, unzip them and put them in the “Perseus/conf/PSP” folder. Now we can add the information to our identified sites.</p>
-<p>First, we add site-specific sequence features with <a href="docs/addsequencefeatures.html">Processing → Modifications → Add sequence features</a>. Therefore we have to define the “Proteins” column containing the Uniprot identifiers and the position of the modification within proteins (“Position within protein”). This results in matrix with a lot of additional columns containing sequence specific information like zinc-finger region or signal peptide.</p>
+<p>First, we add site-specific sequence features with <a href="addsequencefeatures.html">Processing → Modifications → Add sequence features</a>. Therefore we have to define the “Proteins” column containing the Uniprot identifiers and the position of the modification within proteins (“Position within protein”). This results in matrix with a lot of additional columns containing sequence specific information like zinc-finger region or signal peptide.</p>
 <p><img src="images/phospho-08-modifications-add_sequence_features-edited.png" class="img-fluid"></p>
 <p><img src="images/phospho-08-modifications-add_sequence_features-parameter_window.png" class="img-fluid"></p>
-<p>Second, we add linear motifs utilizing the Sequence window of the modification, which you can find in the text column called “Sequence window”. Hence we use the function <a href="docs/addlinearmotifs.html">Processing → Modifications → Add linear motifs</a>. The results will be displayed in the column “Motifs” in the resulting matrix. The motifs derive from the “motifs.txt” file located in the “Perseus/conf” folder. In case you have additional motifs that should be searched in the identified sites, you can edit the “motifs.txt” file.</p>
+<p>Second, we add linear motifs utilizing the Sequence window of the modification, which you can find in the text column called “Sequence window”. Hence we use the function <a href="addlinearmotifs.html">Processing → Modifications → Add linear motifs</a>. The results will be displayed in the column “Motifs” in the resulting matrix. The motifs derive from the “motifs.txt” file located in the “Perseus/conf” folder. In case you have additional motifs that should be searched in the identified sites, you can edit the “motifs.txt” file.</p>
 <p><img src="images/phospho-08-modifications-add_linear_motif-edited.png" class="img-fluid"></p>
 <p><img src="images/phospho-08-modifications-add_known_sites-parameter_window.png" class="img-fluid"></p>
-<p>Third, we add known sites with <a href="docs/addknownsites.html">Processing → Modifications → Add known sites</a>. We are interested in phosphorylation and define them as “Modification”. Also we have to define the column, which contains the Uniprot identifier (“Uniprot column”) and the column containing the sequence window.</p>
+<p>Third, we add known sites with <a href="addknownsites.html">Processing → Modifications → Add known sites</a>. We are interested in phosphorylation and define them as “Modification”. Also we have to define the column, which contains the Uniprot identifier (“Uniprot column”) and the column containing the sequence window.</p>
 <p><img src="images/phospho-08-modifications-add_known_sites-edited.png" class="img-fluid"></p>
 <p><img src="images/phospho-08-modifications-add_known_sites-parameter_window-01.png" class="img-fluid"></p>
-<p>And last but not least, we add known kinase-substrate relations with the function <a href="docs/kinasesubstraterelations.html">Processing → Modifications → Kinase-substrate relations</a>. For that we specify the column containing the Uniprot identifier (“Uniprot column”) and the one containing the sequence window.</p>
+<p>And last but not least, we add known kinase-substrate relations with the function <a href="kinasesubstraterelations.html">Processing → Modifications → Kinase-substrate relations</a>. For that we specify the column containing the Uniprot identifier (“Uniprot column”) and the one containing the sequence window.</p>
 <p><img src="images/phospho-08-modifications-kinase-substrate_relations-edited.png" class="img-fluid"></p>
 <p><img src="images/phospho-08-modifications-kinase-substrate_relations-parameter_window.png" class="img-fluid"></p>
 </section>
 <section id="grouping-of-samples" class="level1" data-number="7">
 <h1 data-number="7"><span class="header-section-number">7</span> Grouping of samples</h1>
-<p>Define a sample grouping according to C, E15 and N using <a href="docs/createcategoricalannotrow.html">Processing → Annotation rows → Categorical annotation rows</a>.</p>
+<p>Define a sample grouping according to C, E15 and N using <a href="createcategoricalannotrow.html">Processing → Annotation rows → Categorical annotation rows</a>.</p>
 <p><img src="images/phospho-09-categorical_annotation_rows-edited.png" class="img-fluid"></p>
 <p>You can leave the name of the grouping to the default value “Group1” and just shorten the rest of the column names to the same prefix. Also giving each group a different name is possible, this is a matter of taste.</p>
 <p><img src="images/phospho-09-categorical_annotation_rows-parameter_window.png" class="img-fluid"></p>
 <p>Also this is a good time to save a backup matrix <a href="tabseparatedexport">Export → Generic matrix export</a>.</p>
 <p><img src="images/phospho-10-generic_matrix_export-edited.png" class="img-fluid"></p>
-<p>Next, rows without any valid values in the main columns won’t be particularly useful for quantitative analysis, therefore we can remove them by filtering <a href="docs/filtervalidvaluesrows.html">Processing → Filter rows → Filter rows based on valid values</a>.</p>
+<p>Next, rows without any valid values in the main columns won’t be particularly useful for quantitative analysis, therefore we can remove them by filtering <a href="filtervalidvaluesrows.html">Processing → Filter rows → Filter rows based on valid values</a>.</p>
 <p><img src="images/phospho-11-filter_valid_values-edited.png" class="img-fluid"></p>
 <p>There are different filtering strategies available. Think about what kind of valid value filtering makes most sense for this kind of data. Now that we have created sample grouping, we can take advantage of these groups for filtering purposes. So we want in at least one group 4 valid values. This makes particularly sense, because we are interested in the cases where one stimulus results in a lot of phospho sites in comparison to the control or the other stimulus.</p>
 <p>And just as a comment, the fact that we have 4 replicas of each stimulus makes our filtering strategy quite strict and we are very certain about the identification after this filtering step.</p>
@@ -335,13 +335,13 @@ div.csl-indent {
 </section>
 <section id="histogram" class="level1" data-number="8">
 <h1 data-number="8"><span class="header-section-number">8</span> Histogram</h1>
-<p>Now let’s look at some histograms of the data. Use <a href="docs/histogram.html">Analysis → Visualization → Histogram</a>.</p>
+<p>Now let’s look at some histograms of the data. Use <a href="histogram.html">Analysis → Visualization → Histogram</a>.</p>
 <p><img src="images/phospho-12-histogram-edited.png" class="img-fluid"></p>
 <p>Each sample is separately represented by a histogram. Therefore, nothing needs to be changed in the parameters, because all main columns (samples) are selected by default. The results will be displayed in an extra tab on the same matrix containing the histogram functionalities.</p>
 <p><img src="images/phospho-12-histogram-parameter_window.png" class="img-fluid"></p>
 <p>This can be useful to visualize the spread of the data and to determine, if the data might benefit from some normalization. Also histograms of sub-categories can be displayed by selecting one row (category) in the “Categories” table on the right side. Here the sub-category “anatomical structure morphogenesis” is highlighted in orange, but also individual points can be selected in the “Points” table to see where they are located in all histograms. In this case the data is well centered and does not need to be normalized.</p>
 <p><img src="images/phospho-12-histogram-plot.png" class="img-fluid"></p>
-<p>Nevertheless, for demonstration, you could subtract the median of each column with <a href="docs/subtract.html">Processing → Normalization → Subtract</a>.</p>
+<p>Nevertheless, for demonstration, you could subtract the median of each column with <a href="subtract.html">Processing → Normalization → Subtract</a>.</p>
 <p><img src="images/phospho-12-histogram-normalization_subtract-edited.png" class="img-fluid"></p>
 <p>Set the parameter “Matrix access” to “Columns”.</p>
 <p><img src="images/phospho-12-histogram-normalization_subtract-parameter_window.png" class="img-fluid"></p>
@@ -350,7 +350,7 @@ div.csl-indent {
 </section>
 <section id="multi-scatter-plot" class="level1" data-number="9">
 <h1 data-number="9"><span class="header-section-number">9</span> Multi scatter plot</h1>
-<p>Now open a scatter plot or a multi scatter plot to see, if you are happy with the correlation between replicates. Here we use a multi scatter plot <a href="docs/multiscatteranalysis.html">Analysis → Visualization → Multi scatter plot</a>, because it gives us a great overview in one figure. Also correlation coefficients can be calculated for each plot. Before you do this remind yourself that this is label free data, which may calibrate your expectations to low values.</p>
+<p>Now open a scatter plot or a multi scatter plot to see, if you are happy with the correlation between replicates. Here we use a multi scatter plot <a href="multiscatteranalysis.html">Analysis → Visualization → Multi scatter plot</a>, because it gives us a great overview in one figure. Also correlation coefficients can be calculated for each plot. Before you do this remind yourself that this is label free data, which may calibrate your expectations to low values.</p>
 <p><img src="images/phospho-13-multi-scatter-plot-edited.png" class="img-fluid"></p>
 <p>We want to plot all samples against each other. So no further changes are necessary, because all main columns are selected by default. The results will be displayed in an extra tab on the same matrix containing the multi scatter plot functionalities.</p>
 <p><img src="images/phospho-13-multi-scatter-plot-parameter_window.png" class="img-fluid"></p>
@@ -359,16 +359,16 @@ div.csl-indent {
 </section>
 <section id="imputation" class="level1" data-number="10">
 <h1 data-number="10"><span class="header-section-number">10</span> Imputation</h1>
-<p>It is recommended to impute missing values after filtering, thus we don’t have any missing values in the data for further analyses. Therefore use <a href="docs/replacemissingfromgaussian.html">Processing → Imputation → Replace missing values from normal distribution</a>.</p>
+<p>It is recommended to impute missing values after filtering, thus we don’t have any missing values in the data for further analyses. Therefore use <a href="replacemissingfromgaussian.html">Processing → Imputation → Replace missing values from normal distribution</a>.</p>
 <p><img src="images/phospho-14-imputation-edited.png" class="img-fluid"></p>
 <p>We want to replace missing values in all columns (replicates) separately, which are the default values. Also the default values for “Width” and “Down shift” are fine. To find the optimal values you can check different values for the “Down shift” and the “Width” parameter and view your results in the histograms.</p>
 <p><img src="images/phospho-14-imputation-parameter_window.png" class="img-fluid"></p>
-<p>Plot a histogram using <a href="docs/histogram.html">Analysis → Visualization → Histogram</a> to view the results of the imputation. After selecting “Selection from imputation” in “Plots” tab of the “Histogram” tab (red rectangle), the imputed values are highlighted in orange in each histogram. We can see that these values are down shifted and their distribution is narrower, but their overall shape is the same one as the shape of the column we imputed. The assumption here is that the sites that we weren’t able to identify using the matching between runs algorithm are most likely low abundant in the sample and should therefore be on the lower end of the distribution.</p>
+<p>Plot a histogram using <a href="histogram.html">Analysis → Visualization → Histogram</a> to view the results of the imputation. After selecting “Selection from imputation” in “Plots” tab of the “Histogram” tab (red rectangle), the imputed values are highlighted in orange in each histogram. We can see that these values are down shifted and their distribution is narrower, but their overall shape is the same one as the shape of the column we imputed. The assumption here is that the sites that we weren’t able to identify using the matching between runs algorithm are most likely low abundant in the sample and should therefore be on the lower end of the distribution.</p>
 <p><img src="images/phospho-14-imputation-histograms-edited.png" class="img-fluid"></p>
 </section>
 <section id="anova" class="level1" data-number="11">
 <h1 data-number="11"><span class="header-section-number">11</span> ANOVA</h1>
-<p>To find sites that are changing between the three groups we perform an ANOVA test with <a href="docs/multiplesampletestprocessing.html">Processing → Tests → Multiple samples</a>. We select “Multiple-samples tests”, because there are more than two groups to compare. In case you wanted to compare only one or two samples you would use the respective t-test.</p>
+<p>To find sites that are changing between the three groups we perform an ANOVA test with <a href="multiplesampletestprocessing.html">Processing → Tests → Multiple samples</a>. We select “Multiple-samples tests”, because there are more than two groups to compare. In case you wanted to compare only one or two samples you would use the respective t-test.</p>
 <p><img src="images/phospho-15-anova-edited.png" class="img-fluid"></p>
 <p>An important parameter in the parameter panel is “Use for truncation”. Here you can choose whether the truncation should be based on the p-values, if the Benjamini Hochberg correction for multiple hypothesis testing should be applied, or if a permutation-based FDR is calculated. As an example, if you select “Permutation-based FDR” and use 0.01 as a threshold value it would mean that there are 1% false positives among the proteins that the ANOVA test finds as significantly regulated.</p>
 <p><img src="images/phospho-15-anova-parameter_window.png" class="img-fluid"></p>
@@ -377,7 +377,7 @@ div.csl-indent {
 </section>
 <section id="enrichment-fisher-exact-test" class="level1" data-number="12">
 <h1 data-number="12"><span class="header-section-number">12</span> Enrichment, Fisher exact test</h1>
-<p>Now check which annotation terms are enriched in the changing sites. For this we use a Fisher exact test <a href="docs/fisherexacttestproces.html">Processing → Annot. columns → Fisher exact test</a>.</p>
+<p>Now check which annotation terms are enriched in the changing sites. For this we use a Fisher exact test <a href="fisherexacttestproces.html">Processing → Annot. columns → Fisher exact test</a>.</p>
 <p><img src="images/phospho-16-fisher-edited.png" class="img-fluid"></p>
 <p>Select the “ANOVA significant” column. It is important here to select “Proteins” for the “Relative enrichment” parameter. It means that multiple sites on the same protein are counted only once in the enrichment calculations. This prevents an enrichment from becoming significant simply due to the presence of multiple phosphorylation sites on a single protein.</p>
 <p><img src="images/phospho-16-fisher-parameter_window.png" class="img-fluid"></p>
@@ -390,11 +390,11 @@ div.csl-indent {
 <p><img src="images/phospho-17-clustering-filtering-edited-01.png" class="img-fluid"></p>
 <p>Significant ANOVA hits are indicated by a “+” in the “ANOVA Significant” column, so to retain these hits all rows containing a “+” will be kept. Therefore, the column “ANOVA Significant” needs to be selected, “+” is the value we are looking for and is selected by default. For the “Mode” parameter we have to select “Keep matching rows”. This results in a matrix, where the value in the “ANOVA Significant” column of all rows contain a “+”.</p>
 <p><img src="images/phospho-17-clustering-filtering-parameter_window.png" class="img-fluid"></p>
-<p>Second we are performing Z-scoring of rows with <a href="docs/zscore.html">Processing → Normalization → Z-score</a>.</p>
+<p>Second we are performing Z-scoring of rows with <a href="zscore.html">Processing → Normalization → Z-score</a>.</p>
 <p><img src="images/phospho-17-zscore-edited.png" class="img-fluid"></p>
 <p>The default parameters are fine for the example shown here. This will shift the mean of each row to 0 and bring the standard deviation to 1.</p>
 <p><img src="images/phospho-17-zscore-parameter_window.png" class="img-fluid"></p>
-<p>And finally we use hierarchical clustering <a href="docs/hierarchicalcluster.html">Analysis → Clustering/PCA → Hierarchical clustering</a> to visualize the cluster of the data.</p>
+<p>And finally we use hierarchical clustering <a href="hierarchicalcluster.html">Analysis → Clustering/PCA → Hierarchical clustering</a> to visualize the cluster of the data.</p>
 <p><img src="images/phospho-17-hierachical_clustering-edited.png" class="img-fluid"></p>
 <p>with the default parameters, since the right columns are selected.</p>
 <p><img src="images/phospho-17-hierachical_clustering-parameter_window.png" class="img-fluid"></p>
@@ -402,7 +402,7 @@ div.csl-indent {
 <p><img src="images/phospho-17-hierachical_clustering-column_tree.png" class="img-fluid"></p>
 <p>Considering the row tree, we have to zoom in by holding the left mouse key and dragging, to find a cluster of interest. To select a cluster click on the root of a sub tree and information about this cluster will be displayed in the windows next to the heatmap. The top right window contains the size of the cluster (blue rectangle). The window in the middle contains the profiles of the proteins within the cluster (green rectangle). And the window at the lower right enables enrichment analysis of the cluster by clicking on the button in the upper left corner of that window (orange rectangle). Since we analyze phospho data, which means we are interested in site specific enrichment, it is important that we use “Proteins” for the “Relative enrichment” parameter (red rectangle in the orange box). It means that multiple sites on the same protein are counted only once in the enrichment calculations. This prevents an enrichment from becoming significant simply due to the presence of multiple phosphorylation sites on a single protein.</p>
 <p><img src="images/phospho-17-hierachical_clustering-row_tree-edited.png" class="img-fluid"></p>
-<p>There are many more ways to further explore the data. If you have time try e.g.&nbsp;<a href="docs/principalcomponentanalysis.html">Analysis → Clustering/PCA → Principal component analysis</a>. Note that principal component analysis is best done without prior z-scoring of the data.</p>
+<p>There are many more ways to further explore the data. If you have time try e.g.&nbsp;<a href="principalcomponentanalysis.html">Analysis → Clustering/PCA → Principal component analysis</a>. Note that principal component analysis is best done without prior z-scoring of the data.</p>
 
 
 

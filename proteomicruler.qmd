@@ -35,7 +35,7 @@ For technical reasons, this plugin requires that you searched your data against 
 
 As with other Perseus plugins, installation is really easy: 
 
-- Download the [plugin .dll](docs/perseuspluginstore.html#sec-plugin-table) that is compatible with your Perseus version. 
+- Download the [plugin .dll](perseuspluginstore.html#sec-plugin-table) that is compatible with your Perseus version. 
 - Copy the .dll into the main Perseus folder. 
 - Restart Perseus.exe. 
 - You should then see a new menu item 'Proteomic ruler' in the processing section.
@@ -51,6 +51,6 @@ Import the proteinGroups.txt of your dataset into Perseus. Make sure to import t
 
 The proteomic ruler plugin comes with three functions that should be executed in this order: 
 
-* [Annotate proteins](docs/annotateproteins.html) 
-* [Estimate copy numbers and concentrations](docs/estimatecopynumbers.html)
-* [Estimate absolute protein quantification accuracy](docs/estimateaccuracy.html)
+* [Annotate proteins](annotateproteins.html) 
+* [Estimate copy numbers and concentrations](estimatecopynumbers.html)
+* [Estimate absolute protein quantification accuracy](estimateaccuracy.html)

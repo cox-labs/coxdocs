@@ -39,7 +39,7 @@ Make changes only below this line! -->
 ## Matrix access
 
 Specifies whether the un-z-scoring is performed on the rows or columns (default: Rows).
-The selection depends on what was used before in [the normalization process](docs/zscore.html).
+The selection depends on what was used before in [the normalization process](zscore.html).
 
 ## Mean
 
