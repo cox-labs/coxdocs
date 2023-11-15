@@ -35,12 +35,12 @@ You can search this page for the name of the activity of interest, or you can br
 
 # Matrix Upload
 
--   [Binary upload](binaryupload.html)
--   [Create gene list](creategenelist.html)
--   [Create random matrix](createrandommatrix.html)
--   [Generic matrix upload](genericmatrixupload.html)
--   [Next generation sequencing data upload](ngsupload.html)
--   [Raw upload](unstructuredtxtupload.html)
+-   [Binary upload](docs/binaryupload.html)
+-   [Create gene list](docs/creategenelist.html)
+-   [Create random matrix](docs/createrandommatrix.html)
+-   [Generic matrix upload](docs/genericmatrixupload.html)
+-   [Next generation sequencing data upload](docs/ngsupload.html)
+-   [Raw upload](docs/unstructuredtxtupload.html)
 
 ```{=html}
 <!-- 
@@ -51,7 +51,7 @@ You can search this page for the name of the activity of interest, or you can br
 ```
 # Matrix Export
 
--   [Generic matrix export](tabseparatedexport.html)
+-   [Generic matrix export](docs/tabseparatedexport.html)
 
 ```{=html}
 <!-- 
@@ -76,9 +76,9 @@ You can search this page for the name of the activity of interest, or you can br
 ```
 ## Clustering/PCA
 
--   [Hierarchical clustering](hierarchicalcluster.html)
--   [Principal component analysis](principalcomponentanalysis.html)
--   [Co-expression clustering](coexpressionclustering.html)
+-   [Hierarchical clustering](docs/hierarchicalcluster.html)
+-   [Principal component analysis](docs/principalcomponentanalysis.html)
+-   [Co-expression clustering](docs/coexpressionclustering.html)
 
 ```{=html}
 <!-- 
@@ -97,11 +97,11 @@ You can search this page for the name of the activity of interest, or you can br
 ```
 ## Misc. (Analysis)
 
--   [Numeric venn diagram](numericvenndiagram.html)
--   [Select rows manually](selectrowsmanually.html)
--   [Sequence logos](sequencelogo.html)
--   [Volcano plot](volcanoplotanalysis.html)
--   [Hawaii plot](hawaiiplot.html)
+-   [Numeric venn diagram](docs/numericvenndiagram.html)
+-   [Select rows manually](docs/selectrowsmanually.html)
+-   [Sequence logos](docs/sequencelogo.html)
+-   [Volcano plot](docs/volcanoplotanalysis.html)
+-   [Hawaii plot](docs/hawaiiplot.html)
 
 ```{=html}
 <!-- 
@@ -112,11 +112,11 @@ You can search this page for the name of the activity of interest, or you can br
 ```
 ## Visualization
 
--   [3D plot](scatterplot3danalysis.html)
--   [Histogram](histogram.html)
--   [Multi scatter plot](multiscatteranalysis.html)
--   [Profile plot](profileplot.html)
--   [Scatter plot](scatterplotanalysis.html)
+-   [3D plot](docs/scatterplot3danalysis.html)
+-   [Histogram](docs/histogram.html)
+-   [Multi scatter plot](docs/multiscatteranalysis.html)
+-   [Profile plot](docs/profileplot.html)
+-   [Scatter plot](docs/scatterplotanalysis.html)
 
 ```{=html}
 <!-- 
@@ -129,10 +129,10 @@ You can search this page for the name of the activity of interest, or you can br
 
 ## Basic (MultiProcessing)
 
--   [Matching columns by name](matchingcolumnsbyname.html)
--   [Matching rows by name](matchingrowsbyname.html)
--   [Replace strings](replacestrings.html)
--   [Row correlation](rowcorrelation.html)
+-   [Matching columns by name](docs/matchingcolumnsbyname.html)
+-   [Matching rows by name](docs/matchingrowsbyname.html)
+-   [Replace strings](docs/replacestrings.html)
+-   [Row correlation](docs/rowcorrelation.html)
 
 ```{=html}
 <!-- 
@@ -141,7 +141,7 @@ You can search this page for the name of the activity of interest, or you can br
 ```
 ## CI
 
--   [Assert matrix equals](assertmatrixequal.html)
+-   [Assert matrix equals](docs/assertmatrixequal.html)
 
 ```{=html}
 <!--  
@@ -173,14 +173,14 @@ You can search this page for the name of the activity of interest, or you can br
 ```
 ## Annot. columns
 
--   [1D annotation enrichment](onedimannotationenrichment.html)
--   [2D annotation enrichment](twodimannotationenrichment.html)
--   [Add annotation](addannotationtomatrix.html)
--   [Annotation matrix](addannotationtomatrix.html)
--   [Average categories](averagecategories.html)
--   [Category counting](categorycounting.html)
--   [Fisher exact test](fisherexacttestproces.html)
--   [To base identifiers](backtobaseidentifiers.html)
+-   [1D annotation enrichment](docs/onedimannotationenrichment.html)
+-   [2D annotation enrichment](docs/twodimannotationenrichment.html)
+-   [Add annotation](docs/addannotationtomatrix.html)
+-   [Annotation matrix](docs/addannotationtomatrix.html)
+-   [Average categories](docs/averagecategories.html)
+-   [Category counting](docs/categorycounting.html)
+-   [Fisher exact test](docs/fisherexacttestproces.html)
+-   [To base identifiers](docs/backtobaseidentifiers.html)
 
 ```{=html}
 <!-- 
@@ -191,10 +191,10 @@ You can search this page for the name of the activity of interest, or you can br
 ```
 ## Annot. rows
 
--   [Average groups](averagegroups.html)
--   [Categorical annotation rows](managecategoricalannotrow.html)
--   [Join terms in categorical row](jointermsincategoricalrow.html)
--   [Numerical annotation rows](managenumericalannotrow.html)
+-   [Average groups](docs/averagegroups.html)
+-   [Categorical annotation rows](docs/managecategoricalannotrow.html)
+-   [Join terms in categorical row](docs/jointermsincategoricalrow.html)
+-   [Numerical annotation rows](docs/managenumericalannotrow.html)
 
 ```{=html}
 <!-- 
@@ -204,18 +204,18 @@ You can search this page for the name of the activity of interest, or you can br
 ```
 ## Basic (Processing)
 
--   [Add noise](addnoise.html)
--   [Clone](cloneprocessing.html)
--   [Column correlation](columncorrelations.html)
--   [Combine main columns](combinemaincolumns.html)
--   [Combine rows by identifiers](combinebyidentifiersprocessing.html)
--   [Density estimation](densityestimationprocessing.html)
--   [Performance curves](performancecurves.html)
--   [Quantiles](quantiles.html)
--   [Row correlation](rowcorrelations.html)
--   [Summary statistics (columns)](summarystatisticscolumns.html)
--   [Summary statistics (rows)](summarystatisticsrows.html)
--   [Transform](transformationproc.html)
+-   [Add noise](docs/addnoise.html)
+-   [Clone](docs/cloneprocessing.html)
+-   [Column correlation](docs/columncorrelations.html)
+-   [Combine main columns](docs/combinemaincolumns.html)
+-   [Combine rows by identifiers](docs/combinebyidentifiersprocessing.html)
+-   [Density estimation](docs/densityestimationprocessing.html)
+-   [Performance curves](docs/performancecurves.html)
+-   [Quantiles](docs/quantiles.html)
+-   [Row correlation](docs/rowcorrelations.html)
+-   [Summary statistics (columns)](docs/summarystatisticscolumns.html)
+-   [Summary statistics (rows)](docs/summarystatisticsrows.html)
+-   [Transform](docs/transformationproc.html)
 
 ```{=html}
 <!-- 
@@ -227,7 +227,7 @@ You can search this page for the name of the activity of interest, or you can br
 ```
 ## Clustering
 
--   [Generic clustering](genericclusteringproc.html)
+-   [Generic clustering](docs/genericclusteringproc.html)
 
 ```{=html}
 <!-- 
@@ -253,16 +253,16 @@ You can search this page for the name of the activity of interest, or you can br
 ```
 ## Filter columns
 
--   [Filter columns based on categorical row](filtercategoricalrow.html)
--   [Filter columns based on valid values](filtervalidvaluescolumns.html)
+-   [Filter columns based on categorical row](docs/filtercategoricalrow.html)
+-   [Filter columns based on valid values](docs/filtervalidvaluescolumns.html)
 
 ## Filter rows
 
--   [Filter rows based on categorical column](filtercategoricalcolumn.html)
--   [Filter rows based on numerical/main column](filternumericalcolumn.html)
--   [Filter rows based on random sampling](filterrandomrows.html)
--   [Filter rows based on text column](filtertextualcolumn.html)
--   [Filter rows based on valid values](filtervalidvaluesrows.html)
+-   [Filter rows based on categorical column](docs/filtercategoricalcolumn.html)
+-   [Filter rows based on numerical/main column](docs/filternumericalcolumn.html)
+-   [Filter rows based on random sampling](docs/filterrandomrows.html)
+-   [Filter rows based on text column](docs/filtertextualcolumn.html)
+-   [Filter rows based on valid values](docs/filtervalidvaluesrows.html)
 
 ```{=html}
 <!-- 
@@ -280,9 +280,9 @@ You can search this page for the name of the activity of interest, or you can br
 ```
 ## Imputation
 
--   [Replace missing values by constant](replacemissingbyconstant.html)
--   [Replace missing](replacemissingfromgaussian.html)
--   [Replace imputed values by NaN](replaceimputedbynan.html)
+-   [Replace missing values by constant](docs/replacemissingbyconstant.html)
+-   [Replace missing](docs/replacemissingfromgaussian.html)
+-   [Replace imputed values by NaN](docs/replaceimputedbynan.html)
 
 ```{=html}
 <!-- 
@@ -303,9 +303,9 @@ values from normal distribution]]\\
 ```
 ## Learning
 
--   [Classification (cross-validation and prediction](classificationprocessing.html)
--   [Classification feature optimization](ClassificationFeatureSelection.html)
--   [Classification parameter optimization](ClassificationParameterOptimization.html)
+-   [Classification (cross-validation and prediction](docs/classificationprocessing.html)
+-   [Classification feature optimization](docs/ClassificationFeatureSelection.html)
+-   [Classification parameter optimization](docs/ClassificationParameterOptimization.html)
 
 ```{=html}
 <!-- 
@@ -331,14 +331,14 @@ values from normal distribution]]\\
 ```
 ## Modifications
 
--   [Add known sites](addknownsites.html)
--   [Add linear motifs](addlinearmotifs.html)
--   [Add modification counts](addmodificationcounts.html)
--   [Add regulatory sites](addregulatorysites.html)
--   [Add sequence features](addsequencefeatures.html)
--   [Expand site table](expandsitetable.html)
--   [Kinase-substrate relations](kinasesubstraterelations.html)
--   [Shorten motif length](shortenmotifs.html)
+-   [Add known sites](docs/addknownsites.html)
+-   [Add linear motifs](docs/addlinearmotifs.html)
+-   [Add modification counts](docs/addmodificationcounts.html)
+-   [Add regulatory sites](docs/addregulatorysites.html)
+-   [Add sequence features](docs/addsequencefeatures.html)
+-   [Expand site table](docs/expandsitetable.html)
+-   [Kinase-substrate relations](docs/kinasesubstraterelations.html)
+-   [Shorten motif length](docs/shortenmotifs.html)
 
 ```{=html}
 <!-- 
@@ -347,17 +347,17 @@ values from normal distribution]]\\
 ```
 ## Normalization
 
--   [Cluster normalization](ClusterNorm.html)
--   [Divide](divide.html)
--   [Modify by column](normalizebycolumn.html)
--   [Rank](rank.html)
--   [Scale to interval](scaletointerval.html)
--   [Subtract](subtract.html)
--   [Subtract row cluster](subtractrowcluster.html)
--   [Un-Z-score](unzscore.html)
--   [Unit vectors](unitvector.html)
--   [Width adjustment](widthadjustment.html)
--   [Z-score](zscore.html)
+-   [Cluster normalization](docs/ClusterNorm.html)
+-   [Divide](docs/divide.html)
+-   [Modify by column](docs/normalizebycolumn.html)
+-   [Rank](docs/rank.html)
+-   [Scale to interval](docs/scaletointerval.html)
+-   [Subtract](docs/subtract.html)
+-   [Subtract row cluster](docs/subtractrowcluster.html)
+-   [Un-Z-score](docs/unzscore.html)
+-   [Unit vectors](docs/unitvector.html)
+-   [Width adjustment](docs/widthadjustment.html)
+-   [Z-score](docs/zscore.html)
 
 ```{=html}
 <!-- 
@@ -370,8 +370,8 @@ values from normal distribution]]\\
 ```
 ## Outliers
 
--   [Significance A](significancea.html)
--   [Significance B](significanceb.html)
+-   [Significance A](docs/significancea.html)
+-   [Significance B](docs/significanceb.html)
 
 ```{=html}
 <!-- 
@@ -381,32 +381,32 @@ values from normal distribution]]\\
 ```
 ## Quality
 
--   [Convert to NaN](converttonan.html)
--   [Create quality matrix](createqualitymatrix.html)
--   [Filter quality](filterquality.html)
+-   [Convert to NaN](docs/converttonan.html)
+-   [Create quality matrix](docs/createqualitymatrix.html)
+-   [Filter quality](docs/filterquality.html)
 
 ## Rearrange
 
--   [Change column type](changecolumntype.html)
--   [Combine annotations](combineannotations.html)
--   [Combine categorical columns](combinecategoricalcolumns.html)
--   [Convert multi-numeric column](convertmultinumeric.html)
--   [De-hyphenate ids](dehyphenateids.html)
--   [Duplicate columns](duplicatecolumns.html)
--   [Expand multi-numeric and text columns](expandmultinumeric.html)
--   [Fill categorical columns](fillcategoricalcolumn.html)
--   [Process text column](processtextcolumns.html)
--   [Remove empty columns](removeemptycolumns.html)
--   [Rename columns](renamecolumns.html)
--   [Rename columns \[reg. ex.\]](renamecolumnsregexp.html)
--   [Reorder columns by numerical annotation row](reordercolumnsbynumannotationrow.html)
--   [Reorder/remove annotation rows](reorderremoveannotrows.html)
--   [remove columns](reorderremoveannotrows.html)
--   [Search text column](searchtextcolumns.html)
--   [Sort by column](sortbycolumn.html)
--   [Transpose](transpose.html)
--   [Unique rows](uniquerows.html)
--   [Unique values](uniquevalues.html)
+-   [Change column type](docs/changecolumntype.html)
+-   [Combine annotations](docs/combineannotations.html)
+-   [Combine categorical columns](docs/combinecategoricalcolumns.html)
+-   [Convert multi-numeric column](docs/convertmultinumeric.html)
+-   [De-hyphenate ids](docs/dehyphenateids.html)
+-   [Duplicate columns](docs/duplicatecolumns.html)
+-   [Expand multi-numeric and text columns](docs/expandmultinumeric.html)
+-   [Fill categorical columns](docs/fillcategoricalcolumn.html)
+-   [Process text column](docs/processtextcolumns.html)
+-   [Remove empty columns](docs/removeemptycolumns.html)
+-   [Rename columns](docs/renamecolumns.html)
+-   [Rename columns \[reg. ex.\]](docs/renamecolumnsregexp.html)
+-   [Reorder columns by numerical annotation row](docs/reordercolumnsbynumannotationrow.html)
+-   [Reorder/remove annotation rows](docs/reorderremoveannotrows.html)
+-   [remove columns](docs/reorderremoveannotrows.html)
+-   [Search text column](docs/searchtextcolumns.html)
+-   [Sort by column](docs/sortbycolumn.html)
+-   [Transpose](docs/transpose.html)
+-   [Unique rows](docs/uniquerows.html)
+-   [Unique values](docs/uniquevalues.html)
 
 ```{=html}
 <!-- 
@@ -420,12 +420,12 @@ values from normal distribution]]\\
 ```
 ## Tests
 
--   [Multiple-sample tests](multiplesampletestprocessing.html)
--   [One-sample tests](onesampletestprocessing.html)
--   [Post hoc tests](posthoctests.html)
--   [Three-way ANOVA](threewayanova.html)
--   [Two-sample tests](twosampletestprocessing.html)
--   [Two-way ANOVA](twowayanova.html)
+-   [Multiple-sample tests](docs/multiplesampletestprocessing.html)
+-   [One-sample tests](docs/onesampletestprocessing.html)
+-   [Post hoc tests](docs/posthoctests.html)
+-   [Three-way ANOVA](docs/threewayanova.html)
+-   [Two-sample tests](docs/twosampletestprocessing.html)
+-   [Two-way ANOVA](docs/twowayanova.html)
 
 ```{=html}
 <!--
@@ -435,7 +435,7 @@ values from normal distribution]]\\
 ```
 ## Time series
 
--   [Cyclic annotation enrichment](cyclicannotation.html)
--   [Periodicity analysis](periodicityanalysis.html)
--   [Periodogram](periodogram.html)
--   [Time series ordering](timeseriesordering.html)
+-   [Cyclic annotation enrichment](docs/cyclicannotation.html)
+-   [Periodicity analysis](docs/periodicityanalysis.html)
+-   [Periodogram](docs/periodogram.html)
+-   [Time series ordering](docs/timeseriesordering.html)

@@ -13,12 +13,12 @@ date: today
 bibliography: references.bib
 ---
 
-# General
+# General =====
 
   * **Type:** - Matrix Upload
   * **Source code:** [CreateGeneList.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Load/CreateGeneList.cs)
 
-# Brief description
+===== Brief description =====
 
 Start with a list of all protein-coding genes from an organism.
 
