@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Cox Lab">
-<meta name="dcterms.date" content="2023-11-15">
+<meta name="dcterms.date" content="2023-11-10">
 
-<title>Persues use cases</title>
+<title>Process text column</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -142,7 +142,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#use-cases" id="toc-use-cases" class="nav-link active" data-scroll-target="#use-cases"><span class="header-section-number">1</span> Use cases</a></li>
+  <li><a href="#parameters" id="toc-parameters" class="nav-link active" data-scroll-target="#parameters"><span class="header-section-number">1</span> Parameters</a>
+  <ul>
+  <li><a href="#columns" id="toc-columns" class="nav-link" data-scroll-target="#columns"><span class="header-section-number">1.1</span> Columns</a></li>
+  <li><a href="#regular-expression" id="toc-regular-expression" class="nav-link" data-scroll-target="#regular-expression"><span class="header-section-number">1.2</span> Regular expression</a></li>
+  <li><a href="#replacement-string" id="toc-replacement-string" class="nav-link" data-scroll-target="#replacement-string"><span class="header-section-number">1.3</span> Replacement string</a></li>
+  <li><a href="#keep-original-columns" id="toc-keep-original-columns" class="nav-link" data-scroll-target="#keep-original-columns"><span class="header-section-number">1.4</span> Keep original columns</a></li>
+  <li><a href="#strings-separated-by-semicolons-are-independent" id="toc-strings-separated-by-semicolons-are-independent" class="nav-link" data-scroll-target="#strings-separated-by-semicolons-are-independent"><span class="header-section-number">1.5</span> Strings separated by semicolons are independent</a></li>
+  </ul></li>
+  <li><a href="#parameter-window" id="toc-parameter-window" class="nav-link" data-scroll-target="#parameter-window"><span class="header-section-number">2</span> Parameter window</a></li>
   </ul>
 </nav>
     </div>
@@ -151,7 +159,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Persues use cases</h1>
+<h1 class="title">Process text column</h1>
 </div>
 
 
@@ -168,7 +176,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 15, 2023</p>
+      <p class="date">November 10, 2023</p>
     </div>
   </div>
   
@@ -179,18 +187,103 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="use-cases" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Use cases</h1>
-<p>This section provides some cases to demonstrate how to work on Perseus for typical workflows.</p>
+<p>===== General =====</p>
 <ul>
-<li><a href="docs/interactions.html">Label-free interaction data</a></li>
-<li><a href="docs/modifications.html">Label-free phospho data</a></li>
-<li><a href="docs/silac.html">SILAC data</a></li>
+<li><strong>Type:</strong> - Matrix Processing</li>
+<li><strong>Heading:</strong> - Rearrange</li>
+<li><strong>Source code:</strong> <a href="https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Rearrange/ProcessTextColumns.cs">ProcessTextColumns.cs</a></li>
 </ul>
-<!-- Internal users can find one more use case: 
-
-* [Basic label-free data](labelfree) [[perseus:internal:use_cases:|]]
--->
+<p>===== Brief description =====</p>
+<p>Values in string columns can be manipulated according to a regular expression.</p>
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+<section id="parameters" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Parameters</h1>
+<section id="columns" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="columns"><span class="header-section-number">1.1</span> Columns</h2>
+<p>Selected text columns, whose values should be manipulated by the defined regular expression (default: no columns are selected).</p>
+</section>
+<section id="regular-expression" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="regular-expression"><span class="header-section-number">1.2</span> Regular expression</h2>
+<p>Specified regular expression that is applied to the selected text columns (default: “^([^;]+)”).</p>
+<p>A regular expression is a sequence of characters that forms a search pattern with a special syntax. A good general introduction can be found, as always, on <a href="http://en.wikipedia.org/wiki/Regular_expression">Wikipedia</a>. If you already know generally how regular expressions work, you may only need to glance at <a href="http://msdn.microsoft.com/en-us/library/az24scfc.aspx">the quick reference</a> or at <a href="http://www.mikesdotnetting.com/Article/46/CSharp-Regular-Expressions-Cheat-Sheet">an even quicker one</a>.</p>
+<p>Here are a few examples:</p>
+<table class="table">
+<colgroup>
+<col style="width: 36%">
+<col style="width: 63%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Regular expression</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>^([^;]+)</td>
+<td>Select all the characters from the beginning of the line, up to but not including the first semicolon. This is the default.</td>
+</tr>
+<tr class="even">
+<td>TAG <em>=</em> ([^,; ]*)</td>
+<td>Look for the first instance of “TAG =”, with any amount of whitespace (or none) around the equal sign, and return what follows after the whitespace until a comma or semicolon is reached.</td>
+</tr>
+<tr class="odd">
+<td>([ACTG]+)</td>
+<td>return the first string consisting only of the letters A, C, T, and G.</td>
+</tr>
+<tr class="even">
+<td>(20[01][0-9]-[01][0-9]-[0-3][0-9])</td>
+<td>Select a date between 2000 and 2019 of the form 2014-08-19.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="replacement-string" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="replacement-string"><span class="header-section-number">1.3</span> Replacement string</h2>
+<p>You can provide a replacement string here for more flexibility. Leave empty if unsure.</p>
+<p>Examples:</p>
+<table class="table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 76%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Regular expression</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>$1</td>
+<td>Replace the original string with the first capture group, i.e.&nbsp;the part of the original string inside the first parentheses ’‘(..)’’.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="keep-original-columns" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="keep-original-columns"><span class="header-section-number">1.4</span> Keep original columns</h2>
+<p>If checked, the original columns are retained unchanged, and new columns are appended to hold the results (default: unchecked). The name of a new column is created by appending underscores to the name of the original column until it is unique. If this box is not checked, then the strings in the original columns are overwritten by the results.</p>
+</section>
+<section id="strings-separated-by-semicolons-are-independent" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="strings-separated-by-semicolons-are-independent"><span class="header-section-number">1.5</span> Strings separated by semicolons are independent</h2>
+<p>If checked, each string is split into substrings at the semicolons, and the regular expression is applied independently to each substring (default: unchecked). The results are separated by semicolons and concatenated into a single string, which is returned. This is useful for columns where any row may contain multiple entries. If not checked, the string is evaluated as a whole and the only first match returned.</p>
+</section>
+</section>
+<section id="parameter-window" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Parameter window</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/rearrange-process_text_column-edited.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Process text column</figcaption>
+</figure>
+</div>
 
 
 </section>

@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Cox Lab">
-<meta name="dcterms.date" content="2023-11-15">
+<meta name="dcterms.date" content="2023-11-10">
 
-<title>Persues use cases</title>
+<title>Filter rows based on text column</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -142,7 +142,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#use-cases" id="toc-use-cases" class="nav-link active" data-scroll-target="#use-cases"><span class="header-section-number">1</span> Use cases</a></li>
+  <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general"><span class="header-section-number">1</span> General</a></li>
+  <li><a href="#brief-description" id="toc-brief-description" class="nav-link" data-scroll-target="#brief-description"><span class="header-section-number">2</span> Brief description</a></li>
+  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters"><span class="header-section-number">3</span> Parameters</a>
+  <ul>
+  <li><a href="#column" id="toc-column" class="nav-link" data-scroll-target="#column"><span class="header-section-number">3.1</span> Column</a></li>
+  <li><a href="#search-string" id="toc-search-string" class="nav-link" data-scroll-target="#search-string"><span class="header-section-number">3.2</span> Search string</a></li>
+  <li><a href="#match-case" id="toc-match-case" class="nav-link" data-scroll-target="#match-case"><span class="header-section-number">3.3</span> Match case</a></li>
+  <li><a href="#match-whole-word" id="toc-match-whole-word" class="nav-link" data-scroll-target="#match-whole-word"><span class="header-section-number">3.4</span> Match whole word</a></li>
+  <li><a href="#mode" id="toc-mode" class="nav-link" data-scroll-target="#mode"><span class="header-section-number">3.5</span> Mode</a></li>
+  <li><a href="#filter-mode" id="toc-filter-mode" class="nav-link" data-scroll-target="#filter-mode"><span class="header-section-number">3.6</span> Filter mode</a></li>
+  </ul></li>
+  <li><a href="#parameter-window" id="toc-parameter-window" class="nav-link" data-scroll-target="#parameter-window"><span class="header-section-number">4</span> Parameter window</a></li>
   </ul>
 </nav>
     </div>
@@ -151,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Persues use cases</h1>
+<h1 class="title">Filter rows based on text column</h1>
 </div>
 
 
@@ -168,7 +179,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 15, 2023</p>
+      <p class="date">November 10, 2023</p>
     </div>
   </div>
   
@@ -179,18 +190,56 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="use-cases" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Use cases</h1>
-<p>This section provides some cases to demonstrate how to work on Perseus for typical workflows.</p>
+<section id="general" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> General</h1>
 <ul>
-<li><a href="docs/interactions.html">Label-free interaction data</a></li>
-<li><a href="docs/modifications.html">Label-free phospho data</a></li>
-<li><a href="docs/silac.html">SILAC data</a></li>
+<li><strong>Type:</strong> - Matrix Processing</li>
+<li><strong>Heading:</strong> - Filter rows</li>
+<li><strong>Source code:</strong> <a href="https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Filter/FilterTextualColumn.cs">FilterTextualColumn.cs</a></li>
 </ul>
-<!-- Internal users can find one more use case: 
-
-* [Basic label-free data](labelfree) [[perseus:internal:use_cases:|]]
--->
+</section>
+<section id="brief-description" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Brief description</h1>
+<p>Only those rows are kept that have a value in the textual column that matches the search string.</p>
+<p>Output: The filtered matrix.</p>
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+</section>
+<section id="parameters" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Parameters</h1>
+<section id="column" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="column"><span class="header-section-number">3.1</span> Column</h2>
+<p>Selected text column the filtering is based on (default: first text column in the matrix).</p>
+</section>
+<section id="search-string" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="search-string"><span class="header-section-number">3.2</span> Search string</h2>
+<p>Specified text string that should be searched in the previously defined text column (default: empty).</p>
+</section>
+<section id="match-case" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="match-case"><span class="header-section-number">3.3</span> Match case</h2>
+<p>If checked, the cells of the text column will be searched for a matching substring (default: unchecked). The results will be in a new generated categorical column called “Search: original column name”. “+” indicates, whether a match was successful.</p>
+</section>
+<section id="match-whole-word" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="match-whole-word"><span class="header-section-number">3.4</span> Match whole word</h2>
+<p>If checked, the text column will be searched to match the whole word of the specified term (default: checked). The results will be in a new generated categorical column called “Search: original column name”. “+” indicates, whether a match was successful.</p>
+</section>
+<section id="mode" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="mode"><span class="header-section-number">3.5</span> Mode</h2>
+<p>The rows with the selected values will be kept/discarded depending on the selected “Mode” (default: “Remove matching rows”). If “Remove matching rows” is selected, rows having the values will be removed while all other rows will be kept. If “Keep matching rows” is selected, the opposite will happen.</p>
+</section>
+<section id="filter-mode" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="filter-mode"><span class="header-section-number">3.6</span> Filter mode</h2>
+<p>The “Filter mode” defines, whether the input matrix will be reduced (“Reduce matrix” = default) or a new categorical column called “Filter” will be generated containing the categories “Keep” and “Discard” (“Filter mode” = “Add categorical column”).</p>
+</section>
+</section>
+<section id="parameter-window" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Parameter window</h1>
+<p><img src="images/filter_rows-filter_rows_based_on_text_column-edited.png" class="img-fluid"></p>
 
 
 </section>

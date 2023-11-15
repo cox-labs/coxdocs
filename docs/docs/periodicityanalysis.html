@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Cox Lab">
-<meta name="dcterms.date" content="2023-11-15">
+<meta name="dcterms.date" content="2023-11-10">
 
-<title>Persues use cases</title>
+<title>Periodicity analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,7 +22,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -142,7 +161,24 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#use-cases" id="toc-use-cases" class="nav-link active" data-scroll-target="#use-cases"><span class="header-section-number">1</span> Use cases</a></li>
+  <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general"><span class="header-section-number">1</span> General</a></li>
+  <li><a href="#brief-description" id="toc-brief-description" class="nav-link" data-scroll-target="#brief-description"><span class="header-section-number">2</span> Brief description</a></li>
+  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters"><span class="header-section-number">3</span> Parameters</a>
+  <ul>
+  <li><a href="#period" id="toc-period" class="nav-link" data-scroll-target="#period"><span class="header-section-number">3.1</span> Period</a></li>
+  <li><a href="#time-column" id="toc-time-column" class="nav-link" data-scroll-target="#time-column"><span class="header-section-number">3.2</span> Time column</a></li>
+  <li><a href="#separate-time-series" id="toc-separate-time-series" class="nav-link" data-scroll-target="#separate-time-series"><span class="header-section-number">3.3</span> Separate time series</a></li>
+  <li><a href="#sort-by" id="toc-sort-by" class="nav-link" data-scroll-target="#sort-by"><span class="header-section-number">3.4</span> Sort by</a></li>
+  <li><a href="#criterion" id="toc-criterion" class="nav-link" data-scroll-target="#criterion"><span class="header-section-number">3.5</span> Criterion</a></li>
+  <li><a href="#fdr" id="toc-fdr" class="nav-link" data-scroll-target="#fdr"><span class="header-section-number">3.6</span> FDR</a></li>
+  <li><a href="#number-of-randomizations" id="toc-number-of-randomizations" class="nav-link" data-scroll-target="#number-of-randomizations"><span class="header-section-number">3.7</span> Number of randomizations</a></li>
+  <li><a href="#preserve-grouping-in-randomizations" id="toc-preserve-grouping-in-randomizations" class="nav-link" data-scroll-target="#preserve-grouping-in-randomizations"><span class="header-section-number">3.8</span> Preserve grouping in randomizations</a></li>
+  </ul></li>
+  <li><a href="#parameter-window" id="toc-parameter-window" class="nav-link" data-scroll-target="#parameter-window"><span class="header-section-number">4</span> Parameter window</a></li>
+  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples"><span class="header-section-number">5</span> Examples</a>
+  <ul>
+  <li><a href="#in-vivo-quantitative-proteomics-reveals-a-key-contribution-of-post-transcriptional-mechanisms-to-the-circadian-regulation-of-liver-metabolism" id="toc-in-vivo-quantitative-proteomics-reveals-a-key-contribution-of-post-transcriptional-mechanisms-to-the-circadian-regulation-of-liver-metabolism" class="nav-link" data-scroll-target="#in-vivo-quantitative-proteomics-reveals-a-key-contribution-of-post-transcriptional-mechanisms-to-the-circadian-regulation-of-liver-metabolism"><span class="header-section-number">5.1</span> In-Vivo Quantitative Proteomics Reveals a Key Contribution of Post-Transcriptional Mechanisms to the Circadian Regulation of Liver Metabolism</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -151,7 +187,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Persues use cases</h1>
+<h1 class="title">Periodicity analysis</h1>
 </div>
 
 
@@ -168,7 +204,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 15, 2023</p>
+      <p class="date">November 10, 2023</p>
     </div>
   </div>
   
@@ -179,23 +215,82 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="use-cases" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Use cases</h1>
-<p>This section provides some cases to demonstrate how to work on Perseus for typical workflows.</p>
+<section id="general" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> General</h1>
 <ul>
-<li><a href="docs/interactions.html">Label-free interaction data</a></li>
-<li><a href="docs/modifications.html">Label-free phospho data</a></li>
-<li><a href="docs/silac.html">SILAC data</a></li>
+<li><strong>Type:</strong> - Matrix Processing</li>
+<li><strong>Heading:</strong> - Time series</li>
+<li><strong>Source code:</strong> not public.</li>
 </ul>
-<!-- Internal users can find one more use case: 
+</section>
+<section id="brief-description" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Brief description</h1>
+<p>Test if profiles are periodic. The period length is set to a fixed value by the user.</p>
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+</section>
+<section id="parameters" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Parameters</h1>
+<section id="period" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="period"><span class="header-section-number">3.1</span> Period</h2>
+<p>Defines when a full period is passed (default: 24 according to hours of the day).</p>
+</section>
+<section id="time-column" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="time-column"><span class="header-section-number">3.2</span> Time column</h2>
+<p>Selected numerical row, which defines the time points (default: first numerical row). Proteins are listed in rows, whereas columns represent a specific point in time.</p>
+</section>
+<section id="separate-time-series" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="separate-time-series"><span class="header-section-number">3.3</span> Separate time series</h2>
+<p>Defines whether separate time series analyses should be applied according to a pre-defined grouping, which is specified in a categorical row (default: <code>&lt;None&gt;</code>). It can be selected from a list including all available groupings of the matrix.</p>
+</section>
+<section id="sort-by" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="sort-by"><span class="header-section-number">3.4</span> Sort by</h2>
+<p>This parameter is just relevant, if the parameter “Separate time series” is set to a grouping. It specifies, which group will be used for sorting.</p>
+</section>
+<section id="criterion" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="criterion"><span class="header-section-number">3.5</span> Criterion</h2>
+<p>Defines the function to what the periodic time series are compared to (default: Cosine fit). The function can be selected from a pre-defined list.</p>
+</section>
+<section id="fdr" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="fdr"><span class="header-section-number">3.6</span> FDR</h2>
+<p>Rows (proteins) with a test result below this value are reported as significant (default: 0.05).</p>
+</section>
+<section id="number-of-randomizations" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="number-of-randomizations"><span class="header-section-number">3.7</span> Number of randomizations</h2>
+<p>Specifies the number of randomized periods (default: 1000).</p>
+</section>
+<section id="preserve-grouping-in-randomizations" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="preserve-grouping-in-randomizations"><span class="header-section-number">3.8</span> Preserve grouping in randomizations</h2>
+<p>Defines, whether the grouping specified in a categorical row should be preserved in the randomizations (default: <code>&lt;None&gt;</code>). It can be selected from a list including all available groupings of the matrix.</p>
+</section>
+</section>
+<section id="parameter-window" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Parameter window</h1>
+<p><img src="images/time_series-periodicity_analysis-edited.png" class="img-fluid"></p>
+</section>
+<section id="examples" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Examples</h1>
+<section id="in-vivo-quantitative-proteomics-reveals-a-key-contribution-of-post-transcriptional-mechanisms-to-the-circadian-regulation-of-liver-metabolism" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="in-vivo-quantitative-proteomics-reveals-a-key-contribution-of-post-transcriptional-mechanisms-to-the-circadian-regulation-of-liver-metabolism"><span class="header-section-number">5.1</span> In-Vivo Quantitative Proteomics Reveals a Key Contribution of Post-Transcriptional Mechanisms to the Circadian Regulation of Liver Metabolism</h2>
+<p>The algorithms were first applied in 2014 by Robles et. al.<span class="citation" data-cites="robles2014"><sup><a href="#ref-robles2014" role="doc-biblioref">1</a></sup></span>.</p>
+<p><strong>Abstract</strong></p>
+<p>Circadian clocks are endogenous oscillators that drive the rhythmic expression of a broad array of genes, orchestrating metabolism and physiology. Recent evidence indicates that post-transcriptional and post-translational mechanisms play essential roles in modulating temporal gene expression for proper circadian function, particularly for the molecular mechanism of the clock. Due to technical limitations in large-scale, quantitative protein measurements, it remains unresolved to what extent the circadian clock regulates metabolism by driving rhythms of protein abundance. Therefore, we aimed to identify global circadian oscillations of the proteome in the mouse liver by applying in vivo SILAC mouse technology in combination with state of the art mass spectrometry. Among the 3000 proteins accurately quantified across two consecutive cycles, 6% showed circadian oscillations with a defined phase of expression. Interestingly, daily rhythms of one fifth of the liver proteins were not accompanied by changes at the transcript level. The oscillations of almost half of the cycling proteome were delayed by more than six hours with respect to the corresponding, rhythmic mRNA. Strikingly we observed that the length of the time lag between mRNA and protein cycles varies across the day. Our analysis revealed a high temporal coordination in the abundance of proteins involved in the same metabolic process, such as xenobiotic detoxification. Apart from liver specific metabolic pathways, we identified many other essential cellular processes in which protein levels are under circadian control, for instance vesicle trafficking and protein folding. Our large-scale proteomic analysis reveals thus that circadian post-transcriptional and post-translational mechanisms play a key role in the temporal orchestration of liver metabolism and physiology.</p>
 
-* [Basic label-free data](labelfree) [[perseus:internal:use_cases:|]]
--->
 
 
 </section>
+</section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-line-spacing="2" role="list">
+<div id="ref-robles2014" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">Robles, M. S., Cox, J. &amp; Mann, M. <a href="https://doi.org/10.1371/journal.pgen.1004047">In-Vivo Quantitative Proteomics Reveals a Key Contribution of Post-Transcriptional Mechanisms to the Circadian Regulation of Liver Metabolism</a>. <em>PLoS Genetics</em> <strong>10</strong>, e1004047 (2014).</div>
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

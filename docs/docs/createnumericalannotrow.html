@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Cox Lab">
-<meta name="dcterms.date" content="2023-11-15">
+<meta name="dcterms.date" content="2023-11-10">
 
-<title>Persues use cases</title>
+<title>Numerical annotation rows</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -142,7 +142,37 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#use-cases" id="toc-use-cases" class="nav-link active" data-scroll-target="#use-cases"><span class="header-section-number">1</span> Use cases</a></li>
+  <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general"><span class="header-section-number">1</span> General</a>
+  <ul>
+  <li><a href="#brief-description" id="toc-brief-description" class="nav-link" data-scroll-target="#brief-description"><span class="header-section-number">1.1</span> Brief description</a></li>
+  </ul></li>
+  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters"><span class="header-section-number">2</span> Parameters</a>
+  <ul>
+  <li><a href="#action" id="toc-action" class="nav-link" data-scroll-target="#action"><span class="header-section-number">2.1</span> Action</a>
+  <ul class="collapse">
+  <li><a href="#create" id="toc-create" class="nav-link" data-scroll-target="#create"><span class="header-section-number">2.1.1</span> Create</a>
+  <ul class="collapse">
+  <li><a href="#row-name" id="toc-row-name" class="nav-link" data-scroll-target="#row-name"><span class="header-section-number">2.1.1.1</span> Row name</a></li>
+  <li><a href="#here-column-1-column-12" id="toc-here-column-1-column-12" class="nav-link" data-scroll-target="#here-column-1-column-12"><span class="header-section-number">2.1.1.2</span> Here: Column 1 … Column 12</a></li>
+  </ul></li>
+  <li><a href="#edit" id="toc-edit" class="nav-link" data-scroll-target="#edit"><span class="header-section-number">2.1.2</span> Edit</a>
+  <ul class="collapse">
+  <li><a href="#numerical-row" id="toc-numerical-row" class="nav-link" data-scroll-target="#numerical-row"><span class="header-section-number">2.1.2.1</span> Numerical row</a></li>
+  <li><a href="#here-column-1column-12" id="toc-here-column-1column-12" class="nav-link" data-scroll-target="#here-column-1column-12"><span class="header-section-number">2.1.2.2</span> Here: Column 1…Column 12</a></li>
+  </ul></li>
+  <li><a href="#rename" id="toc-rename" class="nav-link" data-scroll-target="#rename"><span class="header-section-number">2.1.3</span> Rename</a>
+  <ul class="collapse">
+  <li><a href="#numerical-row-1" id="toc-numerical-row-1" class="nav-link" data-scroll-target="#numerical-row-1"><span class="header-section-number">2.1.3.1</span> Numerical row</a></li>
+  <li><a href="#new-name" id="toc-new-name" class="nav-link" data-scroll-target="#new-name"><span class="header-section-number">2.1.3.2</span> New name</a></li>
+  <li><a href="#new-description" id="toc-new-description" class="nav-link" data-scroll-target="#new-description"><span class="header-section-number">2.1.3.3</span> New description</a></li>
+  </ul></li>
+  <li><a href="#delete" id="toc-delete" class="nav-link" data-scroll-target="#delete"><span class="header-section-number">2.1.4</span> Delete</a>
+  <ul class="collapse">
+  <li><a href="#numerical-row-2" id="toc-numerical-row-2" class="nav-link" data-scroll-target="#numerical-row-2"><span class="header-section-number">2.1.4.1</span> Numerical row</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#parameter-window" id="toc-parameter-window" class="nav-link" data-scroll-target="#parameter-window"><span class="header-section-number">3</span> Parameter window</a></li>
   </ul>
 </nav>
     </div>
@@ -151,7 +181,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Persues use cases</h1>
+<h1 class="title">Numerical annotation rows</h1>
 </div>
 
 
@@ -168,7 +198,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 15, 2023</p>
+      <p class="date">November 10, 2023</p>
     </div>
   </div>
   
@@ -179,18 +209,87 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="use-cases" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Use cases</h1>
-<p>This section provides some cases to demonstrate how to work on Perseus for typical workflows.</p>
+<section id="general" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> General</h1>
 <ul>
-<li><a href="docs/interactions.html">Label-free interaction data</a></li>
-<li><a href="docs/modifications.html">Label-free phospho data</a></li>
-<li><a href="docs/silac.html">SILAC data</a></li>
+<li><strong>Type:</strong> - Matrix Processing</li>
+<li><strong>Heading:</strong> - Annot. rows</li>
+<li><strong>Source code:</strong> <a href="https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Group/CreateNumericalAnnotRow.cs">CreateNumericalAnnotRow.cs</a></li>
 </ul>
-<!-- Internal users can find one more use case: 
-
-* [Basic label-free data](labelfree) [[perseus:internal:use_cases:|]]
--->
+<section id="brief-description" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="brief-description"><span class="header-section-number">1.1</span> Brief description</h2>
+<p>Add or edit numerical annotation rows. This could for instance define the times of samples for time series data.</p>
+<p>Output: Same matrix with numerical annotation row added or modified.</p>
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+</section>
+</section>
+<section id="parameters" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Parameters</h1>
+<section id="action" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="action"><span class="header-section-number">2.1</span> Action</h2>
+<p>Defines the action that should be applied to a numerical annotation row (default: Create). The action can be selected from a predefined list:</p>
+<ul>
+<li>Create</li>
+<li>Edit</li>
+<li>Rename</li>
+<li>Delete</li>
+</ul>
+<p>Each of the above listed options has different parameters, which are explained below in more detail and grouped according to the action.</p>
+<section id="create" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="create"><span class="header-section-number">2.1.1</span> Create</h3>
+<section id="row-name" class="level4" data-number="2.1.1.1">
+<h4 data-number="2.1.1.1" class="anchored" data-anchor-id="row-name"><span class="header-section-number">2.1.1.1</span> Row name</h4>
+<p>This parameter is just relevant, if “Action” is set to “Create”. It defines the name of the new generated numerical annotation row (default: Quantity1).</p>
+</section>
+<section id="here-column-1-column-12" class="level4" data-number="2.1.1.2">
+<h4 data-number="2.1.1.2" class="anchored" data-anchor-id="here-column-1-column-12"><span class="header-section-number">2.1.1.2</span> Here: Column 1 … Column 12</h4>
+<p>This parameter is just relevant, if “Action” is set to “Create”. For each of the expression columns in the matrix the numerical value of that column in the numerical annotation row can be specified (default: each expression column has an own numerical group indicated by a number).</p>
+</section>
+</section>
+<section id="edit" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2" class="anchored" data-anchor-id="edit"><span class="header-section-number">2.1.2</span> Edit</h3>
+<section id="numerical-row" class="level4" data-number="2.1.2.1">
+<h4 data-number="2.1.2.1" class="anchored" data-anchor-id="numerical-row"><span class="header-section-number">2.1.2.1</span> Numerical row</h4>
+<p>This parameter is just relevant, if “Action” is set to “Edit”. It specifies the selected numerical row that should be edited (default: first numerical column in the matrix).</p>
+</section>
+<section id="here-column-1column-12" class="level4" data-number="2.1.2.2">
+<h4 data-number="2.1.2.2" class="anchored" data-anchor-id="here-column-1column-12"><span class="header-section-number">2.1.2.2</span> Here: Column 1…Column 12</h4>
+<p>This parameter is just relevant, if “Action” is set to “Edit”. For each of the expression columns in the matrix the value in the numerical row can be edited by typing into the defined text field after the column name (default: numerical value of each expression column in that row).</p>
+</section>
+</section>
+<section id="rename" class="level3" data-number="2.1.3">
+<h3 data-number="2.1.3" class="anchored" data-anchor-id="rename"><span class="header-section-number">2.1.3</span> Rename</h3>
+<section id="numerical-row-1" class="level4" data-number="2.1.3.1">
+<h4 data-number="2.1.3.1" class="anchored" data-anchor-id="numerical-row-1"><span class="header-section-number">2.1.3.1</span> Numerical row</h4>
+<p>This parameter is just relevant, if “Action” is set to “Rename”. It specifies the selected numerical row that should be renamed (default: first numerical row in the matrix).</p>
+</section>
+<section id="new-name" class="level4" data-number="2.1.3.2">
+<h4 data-number="2.1.3.2" class="anchored" data-anchor-id="new-name"><span class="header-section-number">2.1.3.2</span> New name</h4>
+<p>This parameter is just relevant, if “Action” is set to “Rename”. It defines the new name of the numerical row (default: empty).</p>
+</section>
+<section id="new-description" class="level4" data-number="2.1.3.3">
+<h4 data-number="2.1.3.3" class="anchored" data-anchor-id="new-description"><span class="header-section-number">2.1.3.3</span> New description</h4>
+<p>This parameter is just relevant, if “Action” is set to “Rename”. It defines the new description of the numerical row (default: empty).</p>
+</section>
+</section>
+<section id="delete" class="level3" data-number="2.1.4">
+<h3 data-number="2.1.4" class="anchored" data-anchor-id="delete"><span class="header-section-number">2.1.4</span> Delete</h3>
+<section id="numerical-row-2" class="level4" data-number="2.1.4.1">
+<h4 data-number="2.1.4.1" class="anchored" data-anchor-id="numerical-row-2"><span class="header-section-number">2.1.4.1</span> Numerical row</h4>
+<p>This parameter is just relevant, if “Action” is set to “Delete”. It specifies the selected categorical row that should be deleted (default: first category row in the matrix).</p>
+</section>
+</section>
+</section>
+</section>
+<section id="parameter-window" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Parameter window</h1>
+<p><img src="images/annot.rows-numerical_annotation_rows-edited.png" class="img-fluid"></p>
 
 
 </section>

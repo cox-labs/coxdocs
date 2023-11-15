@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Cox Lab">
-<meta name="dcterms.date" content="2023-11-15">
+<meta name="dcterms.date" content="2023-11-10">
 
-<title>Persues use cases</title>
+<title>Combine Expression Columns</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,6 +67,8 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -142,7 +144,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#use-cases" id="toc-use-cases" class="nav-link active" data-scroll-target="#use-cases"><span class="header-section-number">1</span> Use cases</a></li>
+  <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general"><span class="header-section-number">1</span> General</a></li>
+  <li><a href="#brief-description" id="toc-brief-description" class="nav-link" data-scroll-target="#brief-description"><span class="header-section-number">2</span> Brief description</a></li>
+  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters"><span class="header-section-number">3</span> Parameters</a>
+  <ul>
+  <li><a href="#operation" id="toc-operation" class="nav-link" data-scroll-target="#operation"><span class="header-section-number">3.1</span> Operation</a></li>
+  <li><a href="#x" id="toc-x" class="nav-link" data-scroll-target="#x"><span class="header-section-number">3.2</span> x</a></li>
+  <li><a href="#y" id="toc-y" class="nav-link" data-scroll-target="#y"><span class="header-section-number">3.3</span> y</a></li>
+  <li><a href="#keep-original-columns" id="toc-keep-original-columns" class="nav-link" data-scroll-target="#keep-original-columns"><span class="header-section-number">3.4</span> Keep original columns</a></li>
+  </ul></li>
+  <li><a href="#parameter-window" id="toc-parameter-window" class="nav-link" data-scroll-target="#parameter-window"><span class="header-section-number">4</span> Parameter window</a></li>
   </ul>
 </nav>
     </div>
@@ -151,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Persues use cases</h1>
+<h1 class="title">Combine Expression Columns</h1>
 </div>
 
 
@@ -168,7 +179,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 15, 2023</p>
+      <p class="date">November 10, 2023</p>
     </div>
   </div>
   
@@ -179,18 +190,53 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="use-cases" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Use cases</h1>
-<p>This section provides some cases to demonstrate how to work on Perseus for typical workflows.</p>
+<section id="general" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> General</h1>
 <ul>
-<li><a href="docs/interactions.html">Label-free interaction data</a></li>
-<li><a href="docs/modifications.html">Label-free phospho data</a></li>
-<li><a href="docs/silac.html">SILAC data</a></li>
+<li><strong>Type:</strong> - Matrix Processing</li>
+<li><strong>Heading:</strong> - Basic (Processing)</li>
+<li><strong>Source code:</strong> not public.</li>
 </ul>
-<!-- Internal users can find one more use case: 
-
-* [Basic label-free data](labelfree) [[perseus:internal:use_cases:|]]
--->
+</section>
+<section id="brief-description" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Brief description</h1>
+<p>Pairs of columns are combined into single columns. Please make sure that the numbers of columns that are selected in the ‘x’ and ‘y’ boxes are equal.</p>
+<p>Output: Expression columns are exchanged by the new combined columns. The original columns are also kept in the output, if ‘Keep original columns’ is checked.</p>
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+</section>
+<section id="parameters" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Parameters</h1>
+<section id="operation" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="operation"><span class="header-section-number">3.1</span> Operation</h2>
+<p>Specifies the operation (default: <span class="math inline">\(x-y\)</span>), how a pair of columns should be combined into a single column. Numbers with <span class="math inline">\(.\)</span> as decimal point, <span class="math inline">\(+\)</span>, <span class="math inline">\(-\)</span>, <span class="math inline">\(*\)</span>, <span class="math inline">\(/\)</span> and ^ as well as scientific notation (e.g.&nbsp;<span class="math inline">\(5.4e{-12}\)</span>) can be used. A set of predefined functions are also available, whose argument has to be enclosed by round brackets, e.g.&nbsp;<span class="math inline">\(sin(2*x-y)\)</span>.</p>
+</section>
+<section id="x" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="x"><span class="header-section-number">3.2</span> x</h2>
+<p>Selected expression columns that are the first partners of pairs of columns (default: no expression columns are selected). The number of selected columns in the “x” and “y” field must be the same.</p>
+</section>
+<section id="y" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="y"><span class="header-section-number">3.3</span> y</h2>
+<p>Selected expression columns that are the second partners of pairs of columns (default: no expression columns are selected). The number of selected columns in the “x” and “y” field must be the same.</p>
+</section>
+<section id="keep-original-columns" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="keep-original-columns"><span class="header-section-number">3.4</span> Keep original columns</h2>
+<p>If checked the original columns will be retained in the output matrix (default: checked).</p>
+</section>
+</section>
+<section id="parameter-window" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Parameter window</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/basic-combine_expression_columns-edited.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Perseus pop-up window: Basic -&gt; Combine expression columns</figcaption>
+</figure>
+</div>
 
 
 </section>

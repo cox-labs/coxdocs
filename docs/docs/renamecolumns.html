@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Cox Lab">
-<meta name="dcterms.date" content="2023-11-15">
+<meta name="dcterms.date" content="2023-11-10">
 
-<title>Persues use cases</title>
+<title>Rename Columns</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -142,7 +142,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#use-cases" id="toc-use-cases" class="nav-link active" data-scroll-target="#use-cases"><span class="header-section-number">1</span> Use cases</a></li>
+  <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general"><span class="header-section-number">1</span> General</a></li>
+  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters"><span class="header-section-number">2</span> Parameters</a></li>
+  <li><a href="#parameter-window" id="toc-parameter-window" class="nav-link" data-scroll-target="#parameter-window"><span class="header-section-number">3</span> Parameter window</a></li>
   </ul>
 </nav>
     </div>
@@ -151,7 +153,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Persues use cases</h1>
+<h1 class="title">Rename Columns</h1>
 </div>
 
 
@@ -168,7 +170,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 15, 2023</p>
+      <p class="date">November 10, 2023</p>
     </div>
   </div>
   
@@ -179,18 +181,32 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="use-cases" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Use cases</h1>
-<p>This section provides some cases to demonstrate how to work on Perseus for typical workflows.</p>
+<!-- This comment and the line above it must be preserved when editing this file!
+The recommended sections are these, but they may be changed on a case by case basis.
+===== Detailed description =====
+===== Parameters =====
+===== Theoretical background =====
+===== Examples =====
+Make changes only below this line! -->
+<section id="general" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> General</h1>
 <ul>
-<li><a href="docs/interactions.html">Label-free interaction data</a></li>
-<li><a href="docs/modifications.html">Label-free phospho data</a></li>
-<li><a href="docs/silac.html">SILAC data</a></li>
+<li><strong>Type:</strong> - Matrix Processing</li>
+<li><strong>Heading:</strong> - Rearrange</li>
+<li><strong>Source code:</strong> <a href="https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Rearrange/RenameColumns.cs">RenameColumns.cs</a></li>
 </ul>
-<!-- Internal users can find one more use case: 
-
-* [Basic label-free data](labelfree) [[perseus:internal:use_cases:|]]
--->
+<p>===== Brief description =====</p>
+<p>New names can be specified for each expression column. The new names are typed in explicitly.</p>
+<p>Output: Same matrix but with the new expression column names.</p>
+</section>
+<section id="parameters" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Parameters</h1>
+<p>For each column in the matrix regardless of the type, the name can be changed manually by typing the new name for the column in the predefined text field.</p>
+</section>
+<section id="parameter-window" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Parameter window</h1>
+<p><img src="images/rearrange-rename_columns-edited.png" class="img-fluid"></p>
+<p>{{perseus:user:activities:matrixprocessing:rearrange:rearrange-rename_columns-edited.png?direct|Perseus pop-up window: Rearrange -&gt; Rename columns}}</p>
 
 
 </section>
