@@ -1,0 +1,31 @@
+---
+title: "Cox Docs"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+csl: nature.csl
+---
+
+------------------------------------------------------------------------
+
+Welcome to coxdocs.org, the home of the documentation for
+
+-   [MaxQuant](maxquant_instructions.html)
+-   [Perseus](perseus_instructions.html)
+-   [Andromeda](andromeda_instructions.html)
+
+------------------------------------------------------------------------
+
+| 
+
+::: watermarked
+<img src="Figures/coxlab_logo2.png" alt="Photo"/>
+:::
