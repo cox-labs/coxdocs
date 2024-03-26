@@ -1,7 +1,7 @@
 ---
-title: "Principle component analysis"
+title: "principal component analysis"
 author: "Cox Lab"
-format: 
+format:
   html:
     toc: true
     toc-depth: 4
@@ -60,4 +60,3 @@ This parameter is just relevant, if the parameter "Category enrichment in compon
 # Parameter window
 
 ![](images/clustering-pca-principal_component_analysis-edited.png)
-
