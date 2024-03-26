@@ -2979,7 +2979,7 @@
     "href": "perseus_activities.html#basic-multiprocessing",
     "title": "Activities",
     "section": "4.1 Basic (MultiProcessing)",
-    "text": "4.1 Basic (MultiProcessing)\n\nMatching columns by name\nMatching rows by name\nReplace strings\nRow correlation"
+    "text": "4.1 Basic (MultiProcessing)\n\nMatching columns by name\nMatching rows by name\nReplace strings\nRow correlation\nChange column names"
   },
   {
     "objectID": "perseus_activities.html#ci",
@@ -3911,5 +3911,33 @@
     "title": "One-sample tests",
     "section": "",
     "text": "1 General\n\nType: - Matrix Processing\nHeading: - Tests\nSource code: not public.\n\n\n\n2 Brief description\nOne sample-test for determining if the mean is significantly different from a fixed value (typically 0).\nOutput: Two numerical columns are added, one containing the p-value, the other containing the difference between the mean and the fixed value (which is usually 0). In addition there is a categorical column added in which it is indicated by a ‘+’ when the row is significant with respect to the specified criteria."
+  },
+  {
+    "objectID": "changecolumnnames.html",
+    "href": "changecolumnnames.html",
+    "title": "Change Column Names",
+    "section": "",
+    "text": "Type: - Matrix MultiProcessing\nHeading: - Basic (MultiProcessing)\nSource code: ChangeColumnNames.cs"
+  },
+  {
+    "objectID": "changecolumnnames.html#columns-in-matrix-1-to-be-edited",
+    "href": "changecolumnnames.html#columns-in-matrix-1-to-be-edited",
+    "title": "Change Column Names",
+    "section": "3.1 Columns in matrix 1 to be edited",
+    "text": "3.1 Columns in matrix 1 to be edited\nThe column in the first matrix in which strings will be replaced according to the key-value table specified in matrix 2."
+  },
+  {
+    "objectID": "changecolumnnames.html#keys-in-matrix-2",
+    "href": "changecolumnnames.html#keys-in-matrix-2",
+    "title": "Change Column Names",
+    "section": "3.2 Keys in matrix 2",
+    "text": "3.2 Keys in matrix 2\nThe keys for the replacement table."
+  },
+  {
+    "objectID": "changecolumnnames.html#values-in-matrix-2",
+    "href": "changecolumnnames.html#values-in-matrix-2",
+    "title": "Change Column Names",
+    "section": "3.3 Values in matrix 2",
+    "text": "3.3 Values in matrix 2\nThe values for the replacement table."
   }
 ]

@@ -1,0 +1,38 @@
+---
+title: "Change Column Names"
+author: "Cox Lab"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: false
+    number-sections: true
+    number-depth: 4
+editor: source
+date: today
+bibliography: references.bib
+csl: nature.csl
+---
+
+# General
+
+  * **Type:**    - Matrix MultiProcessing
+  * **Heading:** - Basic (MultiProcessing)
+  * **Source code:** [ChangeColumnNames.cs](https://github.com/JurgenCox/perseus-plugins/blob/master/PerseusPluginLib/Join/ChangeColumnNames.cs)
+
+# Brief description
+
+Replace column names based a table. The first matrix contains the columns that will be edited while the second matrix is used to define the key-value table. 
+Output: Same as first input matrix except that the selected text columns have been edited.
+
+# Parameters
+
+## Columns in matrix 1 to be edited
+
+The column in the first matrix in which strings will be replaced according to the key-value table specified in matrix 2.
+
+## Keys in matrix 2
+The keys for the replacement table.
+
+## Values in matrix 2
+The values for the replacement table.

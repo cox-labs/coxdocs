@@ -133,6 +133,7 @@ You can search this page for the name of the activity of interest, or you can br
 -   [Matching rows by name](matchingrowsbyname.html)
 -   [Replace strings](replacestrings.html)
 -   [Row correlation](rowcorrelation.html)
+-   [Change column names](changecolumnnames.html)
 
 ```{=html}
 <!-- 
