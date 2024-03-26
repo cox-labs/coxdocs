@@ -1,5 +1,5 @@
 ---
-title: "principal component analysis"
+title: "Principal component analysis"
 author: "Cox Lab"
 format:
   html:

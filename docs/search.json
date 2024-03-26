@@ -1052,14 +1052,14 @@
   {
     "objectID": "principalcomponentanalysis.html",
     "href": "principalcomponentanalysis.html",
-    "title": "principal component analysis",
+    "title": "Principal component analysis",
     "section": "",
     "text": "Type: - Matrix Analysis\nHeading: - Clustering/PCA\nSource code: not public."
   },
   {
     "objectID": "principalcomponentanalysis.html#category-enrichment-in-components",
     "href": "principalcomponentanalysis.html#category-enrichment-in-components",
-    "title": "principal component analysis",
+    "title": "Principal component analysis",
     "section": "3.1 Category enrichment in components",
     "text": "3.1 Category enrichment in components\nSpecifies, whether each term in all categorical columns will be tested for enrichment at high or low values in the loadings for the first few components (default: unchecked).\n\n3.1.1 Number of components\nThis parameter is just relevant, if the parameter “Category enrichment in components” is checked. It specifies the number of principal components that will be used for the transformation (default: 5).\n\n\n3.1.2 Cutoff method\nThis parameter is just relevant, if the parameter “Category enrichment in components” is checked. It defines the method that is used to calculate the cutoff of potential principal components (default: Benjamini-Hochberg FDR) . The method can be selected from a predefined list:\n\nBenjamini-Hochberg FDR\np-value\n\n\n\n3.1.3 Threshold\nThis parameter is just relevant, if the parameter “Category enrichment in components” is checked. It defines the threshold value of the previously specified used cutoff method (default: 0.05).\n\n\n3.1.4 Relative enrichment\nThis parameter is just relevant, if the parameter “Category enrichment in components” is checked. It defines, which categorical column will be used to group rows in the enrichment test (default: &lt;None&gt;). All rows having the same identifier will be counted as one entity in the enrichment test. The main application is for posttranslational modification sites. Then one should select here protein or gene identifiers. This will make sure that multiple sites from the same protein (or gene) are counted only once for the enrichment analysis."
   },
