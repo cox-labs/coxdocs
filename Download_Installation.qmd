@@ -73,7 +73,7 @@ sudo dpkg -i packages-microsoft-prod.deb
 sudo apt-get update; \
 sudo apt-get install -y apt-transport-https && \
 sudo apt-get update && \
-sudo apt-get install -y dotnet-sdk-2.1
+sudo apt-get install -y dotnet-sdk-7.0
 ```
 
 -   **Edit mqpar.xml file**
@@ -82,19 +82,19 @@ Currently we highly recommend to preconfigure the `mqpar.xml` file in MaxQuant G
 You can also use a programmatic way to change that.
 
 ``` bash
-dotnet MaxQuant/bin/MaxQuantCmd.exe --changeFolder=new_mqpar.xml <new folder with fasta files> <new folder with raw files> old_mqpar.xml
+dotnet MaxQuant/bin/MaxQuantCmd.dll --changeFolder=new_mqpar.xml <new folder with fasta files> <new folder with raw files> old_mqpar.xml
 ```
 
 However if you feel familiar with a structure of `mqpar.xml`, you may create a template of `mqpar.xml` and edit it directly.
 
 ``` bash
-dotnet MaxQuant/bin/MaxQuantCmd.exe --create new_mqpar.xml
+dotnet MaxQuant/bin/MaxQuantCmd.dll --create new_mqpar.xml
 ```
 
 -   **Run MaxQuant**
 
 ``` bash
-dotnet MaxQuant/bin/MaxQuantCmd.exe mqpar.xml
+dotnet MaxQuant/bin/MaxQuantCmd.dll mqpar.xml
 ```
 
 # Hardware requirements

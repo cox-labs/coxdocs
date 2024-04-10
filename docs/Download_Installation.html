@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Cox Lab">
-<meta name="dcterms.date" content="2024-03-18">
+<meta name="dcterms.date" content="2024-04-10">
 
 <title>Download &amp; Installation</title>
 <style>
@@ -215,7 +215,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 18, 2024</p>
+      <p class="date">April 10, 2024</p>
     </div>
   </div>
   
@@ -265,18 +265,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get update<span class="kw">;</span> <span class="dt">\</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get install <span class="at">-y</span> apt-transport-https <span class="kw">&amp;&amp;</span> <span class="dt">\</span></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get update <span class="kw">&amp;&amp;</span> <span class="dt">\</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get install <span class="at">-y</span> dotnet-sdk-2.1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get install <span class="at">-y</span> dotnet-sdk-7.0</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li><strong>Edit mqpar.xml file</strong></li>
 </ul>
 <p>Currently we highly recommend to preconfigure the <code>mqpar.xml</code> file in MaxQuant GUI. After transferring the file on Linux machine, do not forget to update file addresses accordingly. You can also use a programmatic way to change that.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">dotnet</span> MaxQuant/bin/MaxQuantCmd.exe <span class="at">--changeFolder</span><span class="op">=</span>new_mqpar.xml <span class="op">&lt;</span>new folder with fasta files<span class="op">&gt;</span> <span class="op">&lt;</span>new folder with raw files<span class="op">&gt;</span> old_mqpar.xml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">dotnet</span> MaxQuant/bin/MaxQuantCmd.dll <span class="at">--changeFolder</span><span class="op">=</span>new_mqpar.xml <span class="op">&lt;</span>new folder with fasta files<span class="op">&gt;</span> <span class="op">&lt;</span>new folder with raw files<span class="op">&gt;</span> old_mqpar.xml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>However if you feel familiar with a structure of <code>mqpar.xml</code>, you may create a template of <code>mqpar.xml</code> and edit it directly.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">dotnet</span> MaxQuant/bin/MaxQuantCmd.exe <span class="at">--create</span> new_mqpar.xml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">dotnet</span> MaxQuant/bin/MaxQuantCmd.dll <span class="at">--create</span> new_mqpar.xml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li><strong>Run MaxQuant</strong></li>
 </ul>
-<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">dotnet</span> MaxQuant/bin/MaxQuantCmd.exe mqpar.xml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">dotnet</span> MaxQuant/bin/MaxQuantCmd.dll mqpar.xml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
 <section id="hardware-requirements" class="level1" data-number="3">
