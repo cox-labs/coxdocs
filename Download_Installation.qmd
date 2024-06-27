@@ -127,7 +127,7 @@ mamba activate dotnet7
 dotnet --version
 ```
 
-### Scripted installtion using Microsoft ressources.
+### Scripted installation using Microsoft ressources.
 
 One can also follows Microsofts' instruction to install the (optional) latest version of`.NET` by following the script [here](https://dotnet.microsoft.com/en-us/download/dotnet/8.0).
 
