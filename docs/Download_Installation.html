@@ -231,7 +231,12 @@ window.Quarto = {
   <li><a href="#running" id="toc-running" class="nav-link" data-scroll-target="#running"><span class="header-section-number">2</span> Running</a>
   <ul>
   <li><a href="#sec-mq-windows" id="toc-sec-mq-windows" class="nav-link" data-scroll-target="#sec-mq-windows"><span class="header-section-number">2.1</span> MaxQuant on Windows</a></li>
-  <li><a href="#maxquant-on-linux" id="toc-maxquant-on-linux" class="nav-link" data-scroll-target="#maxquant-on-linux"><span class="header-section-number">2.2</span> MaxQuant on Linux</a></li>
+  <li><a href="#maxquant-on-linux" id="toc-maxquant-on-linux" class="nav-link" data-scroll-target="#maxquant-on-linux"><span class="header-section-number">2.2</span> MaxQuant on Linux</a>
+  <ul class="collapse">
+  <li><a href="#global-installtion-on-ubuntu-using-sudo-permissions" id="toc-global-installtion-on-ubuntu-using-sudo-permissions" class="nav-link" data-scroll-target="#global-installtion-on-ubuntu-using-sudo-permissions"><span class="header-section-number">2.2.1</span> Global installtion on Ubuntu using <code>sudo</code> permissions</a></li>
+  <li><a href="#local-installtion-using-the-conda-environment" id="toc-local-installtion-using-the-conda-environment" class="nav-link" data-scroll-target="#local-installtion-using-the-conda-environment"><span class="header-section-number">2.2.2</span> local installtion using the <code>conda</code> environment</a></li>
+  <li><a href="#scripted-installtion-using-microsoft-ressources." id="toc-scripted-installtion-using-microsoft-ressources." class="nav-link" data-scroll-target="#scripted-installtion-using-microsoft-ressources."><span class="header-section-number">2.2.3</span> Scripted installtion using Microsoft ressources.</a></li>
+  </ul></li>
   </ul></li>
   <li><a href="#hardware-requirements" id="toc-hardware-requirements" class="nav-link" data-scroll-target="#hardware-requirements"><span class="header-section-number">3</span> Hardware requirements</a>
   <ul>
@@ -294,7 +299,8 @@ window.Quarto = {
 <p>or run the following command in the terminal (Win+R -&gt; <code>cmd</code>):</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">dotnat</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>If you need to, you can download the software and get installation instructions at the <a href="https://dotnet.microsoft.com/en-us/download/dotnet/7.0">for .NET 7.0 here</a>.</p>
-<p>.NET 3.1 and older version are not supported anymore.</p>
+<p><del>.NET 3.1 and older version are not supported anymore.</del></p>
+<p>MaxQuant now works with .NET &gt;= 7.0.4</p>
 <ul>
 <li><p><strong>Run MaxQuant GUI</strong> Double click on <code>MaxQuant.exe</code> in the <code>MaxQuant</code> folder and specify your RAW files, experimental design and fasta files.</p></li>
 <li><p><strong>Start MaxQuant</strong> Click on the <code>Start</code> button.</p></li>
@@ -309,6 +315,8 @@ window.Quarto = {
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">dotnet</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>If you see at least version <span class="math inline">\(7.0.407\)</span>, then everything is ready to start MaxQuant.</p>
 <p>Otherwise you need to follow the installation instructions at <a href="https://dotnet.microsoft.com/en-us/download/dotnet/7.0">.NET Core SDK 7.0</a> for your operating system.</p>
+<section id="global-installtion-on-ubuntu-using-sudo-permissions" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="global-installtion-on-ubuntu-using-sudo-permissions"><span class="header-section-number">2.2.1</span> Global installtion on Ubuntu using <code>sudo</code> permissions</h3>
 <p>Ubuntu 22.04 (for example)</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb <span class="at">-O</span> packages-microsoft-prod.deb</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> dpkg <span class="at">-i</span> packages-microsoft-prod.deb</span>
@@ -316,6 +324,9 @@ window.Quarto = {
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get install <span class="at">-y</span> apt-transport-https <span class="kw">&amp;&amp;</span> <span class="dt">\</span></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get update <span class="kw">&amp;&amp;</span> <span class="dt">\</span></span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get install <span class="at">-y</span> dotnet-sdk-7.0</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="local-installtion-using-the-conda-environment" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="local-installtion-using-the-conda-environment"><span class="header-section-number">2.2.2</span> local installtion using the <code>conda</code> environment</h3>
 <p>An alternative installation method, which might work better, if no <code>sudo</code> rights are available for the user would be to use the <code>conda</code> <span class="citation" data-cites="anaconda">(<a href="#ref-anaconda" role="doc-biblioref"><span>“Anaconda Software Distribution”</span> 2020</a>)</span> environment.</p>
 <p>Depending on your architecture, the user must choose between the x86 and the Arm installation scripts. Both can be downloaded from the <a href="https://repo.anaconda.com/miniconda/">anaconda repository</a> using the <code>wget</code> command.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Or use conda to install an environment</span></span>
@@ -347,6 +358,9 @@ window.Quarto = {
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ex">mamba</span> activate dotnet7</span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co">#To test that we do have `dotnet`</span></span>
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="ex">dotnet</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="scripted-installtion-using-microsoft-ressources." class="level3" data-number="2.2.3">
+<h3 data-number="2.2.3" class="anchored" data-anchor-id="scripted-installtion-using-microsoft-ressources."><span class="header-section-number">2.2.3</span> Scripted installtion using Microsoft ressources.</h3>
 <p>One can also follows Microsofts’ instruction to install the (optional) latest version of<code>.NET</code> by following the script <a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0">here</a>.</p>
 <p>A manual install has more options to choose from using the <code>dotnet-install</code> script from the <a href="https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-install-script">.NET page</a>.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://dot.net/v1/dotnet-install.sh <span class="at">-O</span> dotnet-install.sh</span>
@@ -367,6 +381,7 @@ window.Quarto = {
 <li><strong>Run MaxQuant</strong></li>
 </ul>
 <div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">dotnet</span> MaxQuant/bin/MaxQuantCmd.dll mqpar.xml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
 </section>
 </section>
 <section id="hardware-requirements" class="level1" data-number="3">

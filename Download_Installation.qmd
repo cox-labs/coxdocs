@@ -44,7 +44,10 @@ dotnat --version
 
 If you need to, you can download the software and get installation instructions at the [for .NET 7.0 here](https://dotnet.microsoft.com/en-us/download/dotnet/7.0).
 
-.NET 3.1 and older version are not supported anymore.
+~~.NET 3.1 and older version are not supported anymore.~~
+
+MaxQuant now works with .NET >= 7.0.4
+
 
 -   **Run MaxQuant GUI** Double click on `MaxQuant.exe` in the `MaxQuant` folder and specify your RAW files, experimental design and fasta files.
 
@@ -64,6 +67,8 @@ If you see at least version $7.0.407$, then everything is ready to start MaxQuan
 
 Otherwise you need to follow the installation instructions at [.NET Core SDK 7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) for your operating system.
 
+### Global installtion on Ubuntu using `sudo` permissions
+
 Ubuntu 22.04 (for example)
 
 ``` bash
@@ -74,6 +79,8 @@ sudo apt-get install -y apt-transport-https && \
 sudo apt-get update && \
 sudo apt-get install -y dotnet-sdk-7.0
 ```
+
+### local installtion using the `conda` environment
 
 An alternative installation method, which might work better, if no `sudo` rights are available for the user would be to use the `conda` [@anaconda] environment.
 
@@ -120,6 +127,7 @@ mamba activate dotnet7
 dotnet --version
 ```
 
+### Scripted installtion using Microsoft ressources.
 
 One can also follows Microsofts' instruction to install the (optional) latest version of`.NET` by following the script [here](https://dotnet.microsoft.com/en-us/download/dotnet/8.0).
 
