@@ -1,6 +1,7 @@
 ---
 title: "Download & Installation"
 author: "Cox Lab"
+engine: knitr
 format:
   html:
     toc: true
@@ -10,6 +11,7 @@ format:
     number-depth: 4
 editor: visual
 date: today
+bibliography: references.bib
 execute:
   eval: false
 ---
@@ -50,10 +52,7 @@ If you need to, you can download the software and get installation instructions 
 
 ## MaxQuant on Linux
 
-We are supporting MaxQuant on Ubuntu 20.04 or higher, but MaxQuant should also work on another distribution of Linux.
-You may run MaxQuant using Graphical User Interface.
-In this case, you should install Mono and follow instructions in @sec-mq-windows for **MaxQuant on Windows** starting from second point.
-This tutorial is focused on running MaxQuant using command line.
+We are supporting MaxQuant on Ubuntu 20.04 or higher, but MaxQuant should also work on nother distributions of Linux. You may run MaxQuant using Graphical User Interface. In this case, you should install Mono and follow instructions in @sec-mq-windows for **MaxQuant on Windows** starting from second point. This tutorial is focused on running MaxQuant using command line.
 
 -   **Install .NET Core 7.0** To find out whether you already have it, type in the command line
 
@@ -76,10 +75,72 @@ sudo apt-get update && \
 sudo apt-get install -y dotnet-sdk-7.0
 ```
 
+An alternative installation method, which might work better, if no `sudo` rights are available for the user would be to use the `conda` [@anaconda] environment.
+
+Depending on your architecture, the user must choose between the x86 and the Arm installation scripts. Both can be downloaded from the [anaconda repository](https://repo.anaconda.com/miniconda/) using the `wget` command.
+
+```bash
+# Or use conda to install an environment
+## get the installer 
+mkdir -p ~/miniconda3
+# for 64x-bit 86x architecture
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
+# for 64-bit arm architecture
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh -O ~/miniconda3/miniconda.sh
+
+### You'll only need one the above two scripts!!!
+
+# Install the conda base env
+bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+rm -rf ~/miniconda3/miniconda.sh
+```
+
+Before one can use the `conda` environment in your shell, it must be initialized and the session restarted. Another tip would be to install the mamba package, but **this is only opitional** and is not needed, if you're using conda on a regular basis. (If you do, you probably already installed mamba 😀).
+
+```bash
+# initialize conda on bash 
+~/miniconda3/bin/conda init bash
+~/miniconda3/bin/conda init zsh
+# logging out and back in again
+conda install conda-forge::mamba
+mamba init 
+#Here again, one must log out and back in again for mamba to be active. 
+```
+
+Now, using the `mamba`command one can create a new environment for `dotnet`. One can either choose a specific version for `dotnet` or by omiting the version number, the atest available version on the anaconda repository will be installed. You can search [here](https://anaconda.org/search?q=dotnet) for possible versions. 
+
+Before you can use the tool, you must activate the environment. Last check to see if the installation was successful, one can check for the available `dotnet` version.
+
+```bash
+#Now we create `dotnet` env
+# create the dotnet env
+mamba create -n dotnet7 conda-forge::dotnet=7.0.404 
+mamba activate dotnet7
+#To test that we do have `dotnet`
+dotnet --version
+```
+
+
+One can also follows Microsofts' instruction to install the (optional) latest version of`.NET` by following the script [here](https://dotnet.microsoft.com/en-us/download/dotnet/8.0).
+
+A manual install has more options to choose from using the `dotnet-install` script from the [.NET page](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-install-script).
+
+
+```bash
+wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh
+chmod +x ./dotnet-install.sh
+./dotnet-install.sh --channel 7.0
+```
+
+possible important options here are:
+
+- `--channel` - use this to ask for a specific version and/or subversion
+- `--version` - install a specific version
+- `--install-dir` - use this to specify the path to the installation directory. 
+
 -   **Edit mqpar.xml file**
 
-Currently we highly recommend to preconfigure the `mqpar.xml` file in MaxQuant GUI. After transferring the file on Linux machine, do not forget to update file addresses accordingly.
-You can also use a programmatic way to change that.
+Currently we highly recommend to preconfigure the `mqpar.xml` file in MaxQuant GUI. After transferring the file on Linux machine, do not forget to update file addresses accordingly. You can also use a programmatic way to change that.
 
 ``` bash
 dotnet MaxQuant/bin/MaxQuantCmd.dll --changeFolder=new_mqpar.xml <new folder with fasta files> <new folder with raw files> old_mqpar.xml
@@ -103,8 +164,7 @@ dotnet MaxQuant/bin/MaxQuantCmd.dll mqpar.xml
 -   4 GB RAM per thread that is executed in parallel is required.
 -   There is no upper limit on the number of cores. Whatever you can fit into a shared memory machine will work as long as the disk performance scales up with it.
 
-Here we list some example hardware configurations that we are using in the lab and that we are quite happy with.
-These are mere examples and there is no reason to prefer specific vendors or brands.
+Here we list some example hardware configurations that we are using in the lab and that we are quite happy with. These are mere examples and there is no reason to prefer specific vendors or brands.
 
 ### Dell PowerEdge R820 (Intel)
 

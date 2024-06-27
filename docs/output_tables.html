@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.315">
+<meta name="generator" content="quarto-1.4.555">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Cox Lab">
-<meta name="dcterms.date" content="2024-03-18">
+<meta name="dcterms.date" content="2024-06-27">
 
 <title>Output Tables</title>
 <style>
@@ -47,12 +47,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
   "keyboard-shortcut": [
     "f",
     "/",
     "s"
   ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -61,6 +62,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -75,7 +77,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
@@ -179,7 +181,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 18, 2024</p>
+      <p class="date">June 27, 2024</p>
     </div>
   </div>
   
@@ -190,12 +192,13 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+
 <p>MaxQuant produces multiple Output tables:</p>
 <section id="summary-table" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="summary-table"><span class="header-section-number">1</span> Summary Table</h2>
 <p>The summary file contains summary information for all the raw files processed with a single MaxQuant run. The summary information consists of some MaxQuant parameters, information of the raw file contents, and statistics on the peak detection. Based on this file a quick overview can be gathered on the quality of the data in the raw file.</p>
 <p>The last row in this file contains the summary information for each column on each of the processed files.</p>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 31%">
 <col style="width: 68%">
@@ -494,7 +497,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="evidence-table" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="evidence-table"><span class="header-section-number">2</span> Evidence Table</h2>
 <p>The evidence file combines all the information about the identified peptides and normally is the only file required for processing the results. Additional information about the peptides, modifications, proteins, etc. can be found in the other files by unique identifier linkage.</p>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 31%">
 <col style="width: 68%">
@@ -889,7 +892,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="peptide-table" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="peptide-table"><span class="header-section-number">3</span> Peptide Table</h2>
 <p>The peptides table contains information on the identified peptides in the processed raw-files.</p>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 31%">
 <col style="width: 68%">
@@ -1355,7 +1358,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="modification-specific-peptide-table" class="level2" data-number="4">
 <h2 data-number="4" class="anchored" data-anchor-id="modification-specific-peptide-table"><span class="header-section-number">4</span> Modification-Specific Peptide Table</h2>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 31%">
 <col style="width: 68%">
@@ -1801,7 +1804,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="site-table" class="level2" data-number="5">
 <h2 data-number="5" class="anchored" data-anchor-id="site-table"><span class="header-section-number">5</span> Site Table</h2>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 31%">
 <col style="width: 68%">
@@ -2572,7 +2575,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="protein-groups" class="level2" data-number="6">
 <h2 data-number="6" class="anchored" data-anchor-id="protein-groups"><span class="header-section-number">6</span> Protein Groups</h2>
 <p>The Protein Groups table contains information on the identified proteins in the processed raw-files. Each single row contains the group of proteins that could be reconstructed from a set of peptides.</p>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 31%">
 <col style="width: 68%">
@@ -3142,7 +3145,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="all-peptides" class="level2" data-number="7">
 <h2 data-number="7" class="anchored" data-anchor-id="all-peptides"><span class="header-section-number">7</span> All Peptides</h2>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 31%">
 <col style="width: 68%">
@@ -3601,7 +3604,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="msscans-table" class="level2" data-number="8">
 <h2 data-number="8" class="anchored" data-anchor-id="msscans-table"><span class="header-section-number">8</span> msScans Table</h2>
 <p>The msScans table contains information about the full scans, which can be used to verify data quality and generated useful statistics about the interaction between the samples and LC.</p>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 31%">
 <col style="width: 68%">
@@ -3755,7 +3758,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="mzrange-table" class="level2" data-number="9">
 <h2 data-number="9" class="anchored" data-anchor-id="mzrange-table"><span class="header-section-number">9</span> MzRange Table</h2>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 31%">
 <col style="width: 68%">
@@ -3841,7 +3844,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="msms-scans-table" class="level2" data-number="10">
 <h2 data-number="10" class="anchored" data-anchor-id="msms-scans-table"><span class="header-section-number">10</span> ms/ms Scans Table</h2>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 31%">
 <col style="width: 68%">
@@ -4167,7 +4170,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="msms-table" class="level2" data-number="11">
 <h2 data-number="11" class="anchored" data-anchor-id="msms-table"><span class="header-section-number">11</span> ms/ms Table</h2>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 31%">
 <col style="width: 68%">
@@ -4450,7 +4453,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="aif-msms-table" class="level2" data-number="12">
 <h2 data-number="12" class="anchored" data-anchor-id="aif-msms-table"><span class="header-section-number">12</span> AIF ms/ms Table</h2>
 <p>====== AIF MS/MS ======</p>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 31%">
 <col style="width: 68%">
@@ -4684,6 +4687,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -4718,7 +4739,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -4733,15 +4758,28 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    if (id.startsWith('sec-')) {
+    if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
         }
         return container.innerHTML
       } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -4750,7 +4788,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      return note.innerHTML;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -4792,6 +4838,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
       }
     }, function(instance) {
     });
@@ -4867,7 +4936,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     window.addEventListener(
       "resize",
       throttle(() => {
-        console.log("RESIZE");
         elRect = undefined;
         if (selectedAnnoteEl) {
           selectCodeLines(selectedAnnoteEl);
