@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Cox Lab">
-<meta name="dcterms.date" content="2024-06-27">
+<meta name="dcterms.date" content="2024-07-02">
 
 <title>Download &amp; Installation</title>
 <style>
@@ -237,6 +237,8 @@ window.Quarto = {
   <li><a href="#local-installtion-using-the-conda-environment" id="toc-local-installtion-using-the-conda-environment" class="nav-link" data-scroll-target="#local-installtion-using-the-conda-environment"><span class="header-section-number">2.2.2</span> local installtion using the <code>conda</code> environment</a></li>
   <li><a href="#scripted-installation-using-microsoft-ressources." id="toc-scripted-installation-using-microsoft-ressources." class="nav-link" data-scroll-target="#scripted-installation-using-microsoft-ressources."><span class="header-section-number">2.2.3</span> Scripted installation using Microsoft ressources.</a></li>
   </ul></li>
+  <li><a href="#edit-mqpar.xml-file" id="toc-edit-mqpar.xml-file" class="nav-link" data-scroll-target="#edit-mqpar.xml-file"><span class="header-section-number">2.3</span> Edit mqpar.xml file</a></li>
+  <li><a href="#run-maxquant" id="toc-run-maxquant" class="nav-link" data-scroll-target="#run-maxquant"><span class="header-section-number">2.4</span> Run MaxQuant</a></li>
   </ul></li>
   <li><a href="#hardware-requirements" id="toc-hardware-requirements" class="nav-link" data-scroll-target="#hardware-requirements"><span class="header-section-number">3</span> Hardware requirements</a>
   <ul>
@@ -269,7 +271,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">June 27, 2024</p>
+      <p class="date">July 2, 2024</p>
     </div>
   </div>
   
@@ -368,20 +370,29 @@ window.Quarto = {
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="ex">./dotnet-install.sh</span> <span class="at">--channel</span> 7.0</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>possible important options here are:</p>
 <ul>
-<li><p><code>--channel</code> - use this to ask for a specific version and/or subversion</p></li>
-<li><p><code>--version</code> - install a specific version</p></li>
-<li><p><code>--install-dir</code> - use this to specify the path to the installation directory.</p></li>
-<li><p><strong>Edit mqpar.xml file</strong></p></li>
+<li><code>--channel</code> - use this to ask for a specific version and/or subversion</li>
+<li><code>--version</code> - install a specific version</li>
+<li><code>--install-dir</code> - use this to specify the path to the installation directory.</li>
 </ul>
-<p>Currently we highly recommend to preconfigure the <code>mqpar.xml</code> file in MaxQuant GUI. After transferring the file on Linux machine, do not forget to update file addresses accordingly. You can also use a programmatic way to change that.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">dotnet</span> MaxQuant/bin/MaxQuantCmd.dll <span class="at">--changeFolder</span><span class="op">=</span>new_mqpar.xml <span class="op">&lt;</span>new folder with fasta files<span class="op">&gt;</span> <span class="op">&lt;</span>new folder with raw files<span class="op">&gt;</span> old_mqpar.xml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>However if you feel familiar with a structure of <code>mqpar.xml</code>, you may create a template of <code>mqpar.xml</code> and edit it directly.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">dotnet</span> MaxQuant/bin/MaxQuantCmd.dll <span class="at">--create</span> new_mqpar.xml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ul>
-<li><strong>Run MaxQuant</strong></li>
-</ul>
-<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">dotnet</span> MaxQuant/bin/MaxQuantCmd.dll mqpar.xml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We also added a script for an automated installation of the .NET which can be also downloaded <a href="Install_dotnet.sh">here</a>. Running the script will ask the user for a download location, where, for now, .NET version 8.0.302 will be installed. This version was needed due to a bug in Perseus.</p>
+<p>After downloading the script it needs to be made executable and can be ran as such:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> <span class="at">-x</span> Install_dotnet.sh</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sh</span> Install_dotnet.sh INSTALLATION_PATH/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This will download the .NET installation script from Microsoft and will install the tool at the given path. no <code>sudo</code> rights are needed.</p>
 </section>
+</section>
+<section id="edit-mqpar.xml-file" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="edit-mqpar.xml-file"><span class="header-section-number">2.3</span> Edit mqpar.xml file</h2>
+<p>Currently we highly recommend to preconfigure the <code>mqpar.xml</code> file in MaxQuant GUI. After transferring the file on Linux machine, do not forget to update file addresses accordingly. You can also use a programmatic way to change that.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">dotnet</span> MaxQuant/bin/MaxQuantCmd.dll <span class="at">--changeFolder</span><span class="op">=</span>new_mqpar.xml <span class="op">&lt;</span>new folder with fasta files<span class="op">&gt;</span> <span class="op">&lt;</span>new folder with raw files<span class="op">&gt;</span> old_mqpar.xml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>However if you feel familiar with a structure of <code>mqpar.xml</code>, you may create a template of <code>mqpar.xml</code> and edit it directly.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">dotnet</span> MaxQuant/bin/MaxQuantCmd.dll <span class="at">--create</span> new_mqpar.xml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="run-maxquant" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="run-maxquant"><span class="header-section-number">2.4</span> Run MaxQuant</h2>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">dotnet</span> MaxQuant/bin/MaxQuantCmd.dll mqpar.xml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
 <section id="hardware-requirements" class="level1" data-number="3">

@@ -146,7 +146,19 @@ possible important options here are:
 - `--version` - install a specific version
 - `--install-dir` - use this to specify the path to the installation directory. 
 
--   **Edit mqpar.xml file**
+We also added a script for an automated installation of the .NET which can be also downloaded [here](Install_dotnet.sh). Running the script will ask the user for a download location, where, for now, .NET version 8.0.302 will be installed. This version was needed due to a bug in Perseus.  
+
+After downloading the script it needs to be made executable and can be ran as such:
+
+```{bash}
+chmod -x Install_dotnet.sh
+sh Install_dotnet.sh INSTALLATION_PATH/
+```
+
+This will download the .NET installation script from Microsoft and will install the tool at the given path. no `sudo` rights are needed. 
+
+
+## Edit mqpar.xml file
 
 Currently we highly recommend to preconfigure the `mqpar.xml` file in MaxQuant GUI. After transferring the file on Linux machine, do not forget to update file addresses accordingly. You can also use a programmatic way to change that.
 
@@ -160,7 +172,7 @@ However if you feel familiar with a structure of `mqpar.xml`, you may create a t
 dotnet MaxQuant/bin/MaxQuantCmd.dll --create new_mqpar.xml
 ```
 
--   **Run MaxQuant**
+##  Run MaxQuant
 
 ``` bash
 dotnet MaxQuant/bin/MaxQuantCmd.dll mqpar.xml
