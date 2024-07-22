@@ -181,7 +181,6 @@ If you want to use (predicted) libraries use this command:
 dotnet MaxQuant/bin/MaxQuantCmd.dll old_mqpar.xml --changeFolder new_mqpar.xml <new folder with fasta files> <new folder with raw files> <new folder with libraries> 
 ```
 
-``` bash
 However if you feel familiar with a structure of `mqpar.xml`, you may create a template of `mqpar.xml` and edit it directly.
 
 ``` bash
