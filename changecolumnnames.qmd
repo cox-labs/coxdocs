@@ -22,7 +22,7 @@ csl: nature.csl
 
 # Brief description
 
-Replace column names based a table. The first matrix contains the columns that will be edited while the second matrix is used to define the key-value table. 
+Replace column names based on a table. The first matrix contains the columns that will be edited while the second matrix is used to define the key-value table. 
 Output: Same as first input matrix except that the selected text columns have been edited.
 
 # Parameters
