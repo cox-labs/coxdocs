@@ -42,7 +42,7 @@ or run the following command in the terminal (Win+R -\> `cmd`):
 dotnet --version
 ```
 
-If you need to, you can download the software and get installation instructions at the [for .NET 8.0 here](https://dotnet.microsoft.com/en-us/download/dotnet/8.0).
+If you need to, you can download the software and get installation instructions  e.g. [for .NET 8.0 here](https://dotnet.microsoft.com/en-us/download/dotnet/8.0).
 
 ~~.NET 3.1 and older version are not supported anymore.~~
 
@@ -169,14 +169,17 @@ no `sudo` rights are needed.
 
 ## Edit mqpar.xml file
 
-Currently we highly recommend to preconfigure the `mqpar.xml` file in MaxQuant GUI. After transferring the file on Linux machine, do not forget to update file addresses accordingly.
-You can also use a programmatic way to change that. If you use on-the fly prediction use this command: 
+Currently we highly recommend to pre-configure the `mqpar.xml` file in MaxQuant GUI. After transferring the file on Linux machine, do not forget to update file addresses accordingly.
+You can also use a programmatic way to change that. 
+
+If you use on-the fly prediction use this command: 
 
 ``` bash
 dotnet MaxQuant/bin/MaxQuantCmd.dll old_mqpar.xml --changeFolder new_mqpar.xml <new folder with fasta files> <new folder with raw files> 
 ```
 
-If you want to use (predicted) libraries use this command:
+If you use predicted libraries, you need to also add the path to the saved libraries, so use this command:
+
 ``` bash
 dotnet MaxQuant/bin/MaxQuantCmd.dll old_mqpar.xml --changeFolder new_mqpar.xml <new folder with fasta files> <new folder with raw files> <new folder with libraries> 
 ```
