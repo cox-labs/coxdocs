@@ -28,9 +28,9 @@ Please choose your operating system to view how to run MaxQuant.
 
 ## MaxQuant on Windows {#sec-mq-windows}
 
-Supported operation system versions (64 bit is required) are Windows 10 or 11 or Windows Server 2016, 2019, 2022.
+Supported operation system versions (64-bit is required) are Windows 10 or 11 or Windows Server 2016, 2019, 2022.
 
--   **Install .NET Core 8.0 or higher**: To find out whether you already have it, you can either open the following path. We reccomend using version 8.0.302 at least, as it solves some bugs with the GUI.
+-   **Install .NET Core 8.0 or higher**: To find out whether you already have it, you can either open the following path. We recommend using version 8.0.302 at least, as it solves some bugs with the GUI.
 
 ```{bash}
 C:\Program Files\dotnet\sdk
@@ -44,7 +44,7 @@ dotnet --version
 
 If you need to, you can download the software and get installation instructions  e.g. [for .NET 8.0 here](https://dotnet.microsoft.com/en-us/download/dotnet/8.0).
 
-~~.NET 3.1 and older version are not supported anymore.~~
+~~.NET 3.1 and older versions are not supported anymore.~~
 
 MaxQuant now works with .NET \>= 8.0.302
 
@@ -57,7 +57,7 @@ MaxQuant now works with .NET \>= 8.0.302
 We are supporting MaxQuant on Ubuntu 20.04 or higher, but MaxQuant should also work on other distributions of Linux.
 ~~You may run MaxQuant using Graphical User Interface~~. MaxQuant on Linux doesn't support the use of a GUI at the moment. We're planning to make it available in future versions, [so stay tuned to our newletter](https://maxquant.org/newsletter/), where we'll inform our users about new updates.  
 
-This tutorial is focused on running MaxQuant using command line.
+This tutorial is focused on running MaxQuant using the command-line.
 
 -   **Install .NET Core 8.0** To find out whether you already have it, type in the command line
 
@@ -69,7 +69,7 @@ If you see at least version $8.0.302$, then everything is ready to start MaxQuan
 
 Otherwise you need to follow the installation instructions at [.NET Core SDK 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) for your operating system.
 
-### Global installtion on Ubuntu using `sudo` permissions
+### Global installation on Ubuntu using `sudo` permissions
 
 Ubuntu 22.04 (for example)
 
@@ -82,7 +82,7 @@ sudo apt-get update && \
 sudo apt-get install -y dotnet-sdk-8.0
 ```
 
-### local installtion using the `conda` environment
+### local installation using the `conda` environment
 
 An alternative installation method, which might work better, if no `sudo` rights are available for the user would be to use the `conda` [@anaconda] environment.
 
@@ -106,7 +106,7 @@ rm -rf ~/miniconda3/miniconda.sh
 ```
 
 Before one can use the `conda` environment in your shell, it must be initialized and the session restarted.
-Another tip would be to install the mamba package, but **this is only opitional** and is not needed, if you're using conda on a regular basis.
+Another tip would be to install the mamba package, but **this is only optional** and is not needed, if you're using conda on a regular basis.
 (If you do, you probably already installed mamba 😀).
 
 ``` bash
@@ -120,7 +120,7 @@ mamba init
 ```
 
 Now, using the `mamba`command one can create a new environment for `dotnet`.
-One can either choose a specific version for `dotnet` or by omiting the version number, the atest available version on the anaconda repository will be installed.
+One can either choose a specific version for `dotnet` or by omitting the version number, the latest available version on the anaconda repository will be installed.
 You can search [here](https://anaconda.org/search?q=dotnet) for possible versions.
 
 Before you can use the tool, you must activate the environment.
@@ -135,9 +135,9 @@ mamba activate dotnet8
 dotnet --version
 ```
 
-### Scripted installation using Microsoft ressources.
+### Scripted installation using Microsoft resources.
 
-One can also follows Microsofts' instruction to install the (optional) latest version of`.NET` by following the script [here](https://dotnet.microsoft.com/en-us/download/dotnet/8.0).
+One can also follows Microsoft's instruction to install the (optional) latest version of`.NET` by following the script [here](https://dotnet.microsoft.com/en-us/download/dotnet/8.0).
 
 A manual install has more options to choose from using the `dotnet-install` script from the [.NET page](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-install-script).
 
@@ -147,17 +147,17 @@ chmod +x ./dotnet-install.sh
 ./dotnet-install.sh --channel 8.0
 ```
 
-possible important options here are:
+Possible important options here are:
 
 -   `--channel` - use this to ask for a specific version and/or subversion
 -   `--version` - install a specific version
 -   `--install-dir` - use this to specify the path to the installation directory.
 
-We also added a script for an automated installation of the .NET which can be also downloaded [here](Install_dotnet.sh).
+We also added a script for an automated installation of the .NET which can also be downloaded [here](Install_dotnet.sh).
 Running the script will ask the user for a download location, where, for now, .NET version 8.0.302 will be installed.
 This version was needed due to a bug in Perseus.
 
-After downloading the script it needs to be made executable and can be ran as such:
+After downloading the script it needs to be made executable and can be run as such:
 
 ```{bash}
 chmod -x Install_dotnet.sh
@@ -174,11 +174,17 @@ You can also use a programmatic way to change that.
 
 If you use on-the fly prediction use this command: 
 
+If you use on-the-fly prediction use this command:
+
 ``` bash
 dotnet MaxQuant/bin/MaxQuantCmd.dll old_mqpar.xml --changeFolder new_mqpar.xml <new folder with fasta files> <new folder with raw files> 
 ```
 
+<<<<<<< Updated upstream
 If you use predicted libraries, you need to also add the path to the saved libraries, so use this command:
+=======
+If you use predicted libraries, you also need to add the path to the saved libraries, so use this command:
+>>>>>>> Stashed changes
 
 ``` bash
 dotnet MaxQuant/bin/MaxQuantCmd.dll old_mqpar.xml --changeFolder new_mqpar.xml <new folder with fasta files> <new folder with raw files> <new folder with libraries> 
@@ -246,4 +252,4 @@ These are mere examples and there is no reason to prefer specific vendors or bra
 
 ------------------------------------------------------------------------
 
-For question or problems with the installation we would love to hear from you under [Contact](contact.html).
+For questions or problems with the installation we would love to hear from you under [Contact](contact.html).
