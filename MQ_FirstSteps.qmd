@@ -85,4 +85,4 @@ That's how easy it can be!
 
 ------------------------------------------------------------------------
 
-For question or problems with the running MqxQuant we would love to hear from you under [Contact](contact.html).
+For question or problems with the running MaxQuant we would love to hear from you under [Contact](contact.html).
