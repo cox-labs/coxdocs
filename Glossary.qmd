@@ -21,7 +21,7 @@ bibliography: references.bib
 csl: nature.csl
 ---
 
-```{r}
+``` 
 
 # install.packages("devtools")
 #install.packages("glossary")
@@ -42,7 +42,7 @@ library(glossary)
 
 ===== F =====
 
-```{r}
+``` 
 glossary_reset()
 # add a definition to the table
 i <- glossary("FDR", def = "False Discovery Rate", path = NULL)
@@ -57,7 +57,7 @@ glossary_table() # show table as kable
 
 ===== I =====
 
-```{r}
+``` 
 glossary_reset()
 # add a definition to the table
 i <- glossary("iBAQ", def = "Intensity Based Absolute Quantification", path = NULL)
@@ -73,7 +73,7 @@ glossary_table() # show table as kable
 
 ===== L =====
 
-```{r}
+``` 
 glossary_reset()
 # add a definition to the table
 i <- glossary("LFQ", def = "Label-free quantification", path = NULL)
@@ -83,7 +83,7 @@ glossary_table() # show table as kable
 
 ===== M =====
 
-```{r}
+``` 
 glossary_reset()
 # add a definition to the table
 i <- glossary("MALDI", def = "Matrix-assisted laser desorption/ionization", path = NULL)
@@ -97,7 +97,7 @@ glossary_table() # show table as kable
 
 ===== P =====
 
-```{r}
+``` 
 glossary_reset()
 # add a definition to the table
 i <- glossary("PAGE", def = "Polyacrylamide gel electrophoresis", path = NULL)
@@ -112,7 +112,7 @@ glossary_table() # show table as kable
 
 ===== S =====
 
-```{r}
+``` 
 glossary_reset()
 # add a definition to the table
 i <- glossary("SDS", def = "sodium dodecyl sulfate", path = NULL)
@@ -124,7 +124,7 @@ glossary_table() # show table as kable
 
 ===== T =====
 
-```{r}
+``` 
 glossary_reset()
 # add a definition to the table
 i <- glossary("TMT", def = "Tandem mass tag", path = NULL)
