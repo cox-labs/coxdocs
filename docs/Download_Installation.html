@@ -22,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -189,7 +223,7 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="99">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="-1">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
@@ -263,9 +297,9 @@ window.Quarto = {
 <ul>
 <li><strong>Install .NET Core 8.0 or higher</strong>: To find out whether you already have it, you can either open the following path. We recommend using version 8.0.302 at least, as it solves some bugs with the GUI.</li>
 </ul>
-<pre><code>C:\Program Files\dotnet\sdk</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">C:\Program</span> Files<span class="dt">\d</span>otnet<span class="dt">\s</span>dk</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>or run the following command in the terminal (Win+R -&gt; <code>cmd</code>):</p>
-<pre><code>dotnet --version</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">dotnet</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>If you need to, you can download the software and get installation instructions e.g.&nbsp;<a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0">for .NET 8.0 here</a>.</p>
 <p><del>.NET 3.1 and older versions are not supported anymore.</del></p>
 <p>MaxQuant now works with .NET &gt;= 8.0.302</p>
@@ -281,60 +315,60 @@ window.Quarto = {
 <ul>
 <li><strong>Install .NET Core 8.0</strong> To find out whether you already have it, type in the command line</li>
 </ul>
-<pre><code>dotnet --version</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">dotnet</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>If you see at least version <span class="math inline">\(8.0.302\)</span>, then everything is ready to start MaxQuant.</p>
 <p>Otherwise you need to follow the installation instructions at <a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0">.NET Core SDK 8.0</a> for your operating system.</p>
 <section id="global-installation-on-ubuntu-using-sudo-permissions" class="level3" data-number="2.2.1">
 <h3 data-number="2.2.1" class="anchored" data-anchor-id="global-installation-on-ubuntu-using-sudo-permissions"><span class="header-section-number">2.2.1</span> Global installation on Ubuntu using <code>sudo</code> permissions</h3>
 <p>Ubuntu 22.04 (for example)</p>
-<pre><code>wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-sudo dpkg -i packages-microsoft-prod.deb
-sudo apt-get update; \
-sudo apt-get install -y apt-transport-https &amp;&amp; \
-sudo apt-get update &amp;&amp; \
-sudo apt-get install -y dotnet-sdk-8.0</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb <span class="at">-O</span> packages-microsoft-prod.deb</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> dpkg <span class="at">-i</span> packages-microsoft-prod.deb</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get update<span class="kw">;</span> <span class="dt">\</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get install <span class="at">-y</span> apt-transport-https <span class="kw">&amp;&amp;</span> <span class="dt">\</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get update <span class="kw">&amp;&amp;</span> <span class="dt">\</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get install <span class="at">-y</span> dotnet-sdk-8.0</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="local-installation-using-the-conda-environment" class="level3" data-number="2.2.2">
 <h3 data-number="2.2.2" class="anchored" data-anchor-id="local-installation-using-the-conda-environment"><span class="header-section-number">2.2.2</span> local installation using the <code>conda</code> environment</h3>
-<p>An alternative installation method, which might work better, if no <code>sudo</code> rights are available for the user would be to use the <code>conda</code> <span class="citation" data-cites="anaconda">(<a href="#ref-anaconda" role="doc-biblioref"><span>“Anaconda Software Distribution”</span> 2020</a>)</span> environment.</p>
+<p>An alternative installation method, which might work better, if no <code>sudo</code> rights are available for the user would be to use the <code>conda</code><span class="citation" data-cites="anaconda"><sup><a href="#ref-anaconda" role="doc-biblioref">1</a></sup></span> environment.</p>
 <p>Depending on your architecture, the user must choose between the x86 and the Arm installation scripts. Both can be downloaded from the <a href="https://repo.anaconda.com/miniconda/">anaconda repository</a> using the <code>wget</code> command.</p>
-<pre><code># Or use conda to install an environment
-## get the installer 
-mkdir -p ~/miniconda3
-# for 64x-bit 86x architecture
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
-# for 64-bit arm architecture
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh -O ~/miniconda3/miniconda.sh
-
-### You'll only need one the above two scripts!!!
-
-# Install the conda base env
-bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
-rm -rf ~/miniconda3/miniconda.sh</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Or use conda to install an environment</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co">## get the installer </span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/miniconda3</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># for 64x-bit 86x architecture</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh <span class="at">-O</span> ~/miniconda3/miniconda.sh</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># for 64-bit arm architecture</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh <span class="at">-O</span> ~/miniconda3/miniconda.sh</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co">### You'll only need one the above two scripts!!!</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Install the conda base env</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> ~/miniconda3/miniconda.sh <span class="at">-b</span> <span class="at">-u</span> <span class="at">-p</span> ~/miniconda3</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-rf</span> ~/miniconda3/miniconda.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Before one can use the <code>conda</code> environment in your shell, it must be initialized and the session restarted. Another tip would be to install the mamba package, but <strong>this is only optional</strong> and is not needed, if you’re using conda on a regular basis. (If you do, you probably already installed mamba 😀).</p>
-<pre><code># initialize conda on bash 
-~/miniconda3/bin/conda init bash
-~/miniconda3/bin/conda init zsh
-# logging out and back in again
-conda install conda-forge::mamba
-mamba init 
-#Here again, one must log out and back in again for mamba to be active. </code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># initialize conda on bash </span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">~/miniconda3/bin/conda</span> init bash</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ex">~/miniconda3/bin/conda</span> init zsh</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># logging out and back in again</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install conda-forge::mamba</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="ex">mamba</span> init </span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co">#Here again, one must log out and back in again for mamba to be active. </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Now, using the <code>mamba</code>command one can create a new environment for <code>dotnet</code>. One can either choose a specific version for <code>dotnet</code> or by omitting the version number, the latest available version on the anaconda repository will be installed. You can search <a href="https://anaconda.org/search?q=dotnet">here</a> for possible versions.</p>
 <p>Before you can use the tool, you must activate the environment. Last check to see if the installation was successful, one can check for the available <code>dotnet</code> version.</p>
-<pre><code>#Now we create `dotnet` env
-# create the dotnet env
-mamba create -n dotnet8 conda-forge::dotnet=8.0.302
-mamba activate dotnet8
-#To test that we do have `dotnet`
-dotnet --version</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Now we create `dotnet` env</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co"># create the dotnet env</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ex">mamba</span> create <span class="at">-n</span> dotnet8 conda-forge::dotnet=8.0.302</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ex">mamba</span> activate dotnet8</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co">#To test that we do have `dotnet`</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="ex">dotnet</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="scripted-installation-using-microsoft-resources." class="level3" data-number="2.2.3">
 <h3 data-number="2.2.3" class="anchored" data-anchor-id="scripted-installation-using-microsoft-resources."><span class="header-section-number">2.2.3</span> Scripted installation using Microsoft resources.</h3>
 <p>One can also follows Microsoft’s instruction to install the (optional) latest version of<code>.NET</code> by following the script <a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0">here</a>.</p>
 <p>A manual install has more options to choose from using the <code>dotnet-install</code> script from the <a href="https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-install-script">.NET page</a>.</p>
-<pre><code>wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh
-chmod +x ./dotnet-install.sh
-./dotnet-install.sh --channel 8.0</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://dot.net/v1/dotnet-install.sh <span class="at">-O</span> dotnet-install.sh</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> +x ./dotnet-install.sh</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="ex">./dotnet-install.sh</span> <span class="at">--channel</span> 8.0</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Possible important options here are:</p>
 <ul>
 <li><code>--channel</code> - use this to ask for a specific version and/or subversion</li>
@@ -343,8 +377,8 @@ chmod +x ./dotnet-install.sh
 </ul>
 <p>We also added a script for an automated installation of the .NET which can also be downloaded <a href="Install_dotnet.sh">here</a>. Running the script will ask the user for a download location, where, for now, .NET version 8.0.302 will be installed. This version was needed due to a bug in Perseus.</p>
 <p>After downloading the script it needs to be made executable and can be run as such:</p>
-<pre><code>chmod -x Install_dotnet.sh
-sh Install_dotnet.sh INSTALLATION_PATH/</code></pre>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> <span class="at">-x</span> Install_dotnet.sh</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sh</span> Install_dotnet.sh INSTALLATION_PATH/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This will download the .NET installation script from Microsoft and will install the tool at the given path. no <code>sudo</code> rights are needed.</p>
 </section>
 </section>
@@ -353,15 +387,15 @@ sh Install_dotnet.sh INSTALLATION_PATH/</code></pre>
 <p>Currently we highly recommend to pre-configure the <code>mqpar.xml</code> file in MaxQuant GUI. After transferring the file on Linux machine, do not forget to update file addresses accordingly. You can also use a programmatic way to change that.</p>
 <p>If you use on-the fly prediction use this command:</p>
 <p>If you use on-the-fly prediction use this command:</p>
-<pre><code>dotnet MaxQuant/bin/MaxQuantCmd.dll old_mqpar.xml --changeFolder new_mqpar.xml &lt;new folder with fasta files&gt; &lt;new folder with raw files&gt; </code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">dotnet</span> MaxQuant/bin/MaxQuantCmd.dll old_mqpar.xml <span class="at">--changeFolder</span> new_mqpar.xml <span class="op">&lt;</span>new folder with fasta files<span class="op">&gt;</span> <span class="op">&lt;</span>new folder with raw files<span class="op">&gt;</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; Updated upstream If you use predicted libraries, you need to also add the path to the saved libraries, so use this command: ======= If you use predicted libraries, you also need to add the path to the saved libraries, so use this command: &gt;&gt;&gt;&gt;&gt;&gt;&gt; Stashed changes</p>
-<pre><code>dotnet MaxQuant/bin/MaxQuantCmd.dll old_mqpar.xml --changeFolder new_mqpar.xml &lt;new folder with fasta files&gt; &lt;new folder with raw files&gt; &lt;new folder with libraries&gt; </code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">dotnet</span> MaxQuant/bin/MaxQuantCmd.dll old_mqpar.xml <span class="at">--changeFolder</span> new_mqpar.xml <span class="op">&lt;</span>new folder with fasta files<span class="op">&gt;</span> <span class="op">&lt;</span>new folder with raw files<span class="op">&gt;</span> <span class="op">&lt;</span>new folder with libraries<span class="op">&gt;</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>However if you feel familiar with a structure of <code>mqpar.xml</code>, you may create a template of <code>mqpar.xml</code> and edit it directly.</p>
-<pre><code>dotnet MaxQuant/bin/MaxQuantCmd.dll --create new_mqpar.xml</code></pre>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">dotnet</span> MaxQuant/bin/MaxQuantCmd.dll <span class="at">--create</span> new_mqpar.xml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="run-maxquant" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="run-maxquant"><span class="header-section-number">2.4</span> Run MaxQuant</h2>
-<pre><code>dotnet MaxQuant/bin/MaxQuantCmd.dll mqpar.xml</code></pre>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">dotnet</span> MaxQuant/bin/MaxQuantCmd.dll mqpar.xml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
 <section id="hardware-requirements" class="level1" data-number="3">
@@ -424,9 +458,9 @@ sh Install_dotnet.sh INSTALLATION_PATH/</code></pre>
 </section>
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" data-line-spacing="2" role="list">
 <div id="ref-anaconda" class="csl-entry" role="listitem">
-<span>“Anaconda Software Distribution.”</span> 2020. <em>Anaconda Documentation</em>. Anaconda Inc. <a href="https://docs.anaconda.com/">https://docs.anaconda.com/</a>.
+<div class="csl-left-margin">1. </div><div class="csl-right-inline"><a href="https://docs.anaconda.com/">Anaconda software distribution</a>. <em>Anaconda Documentation</em> (2020).</div>
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
