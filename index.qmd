@@ -8,8 +8,10 @@ format:
     toc-expand: false
     number-sections: true
     number-depth: 4
-editor: visual
+editor: source
 date: today
+bibliography: references.bib
+csl: nature.csl
 ---
 
 ------------------------------------------------------------------------
@@ -25,5 +27,5 @@ Welcome to coxdocs.org, the home of the documentation for
 | 
 
 ::: watermarked
-<img src="advanced/coxlab_logo2.png" alt="Photo"/>
+<img src="Figures/coxlab_logo2.png" alt="Photo"/>
 :::

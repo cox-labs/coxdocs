@@ -9,7 +9,6 @@ footer[role="contentinfo"] {
     position: fixed;
     bottom: 0;
 }
-
 .watermarked {
   position: relative;
   left: 30px;
@@ -26,3 +25,4 @@ footer[role="contentinfo"] {
   font-size: 500%;
   color: #00407d;
 }
+
