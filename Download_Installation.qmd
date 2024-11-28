@@ -32,13 +32,13 @@ Supported operation system versions (64-bit is required) are Windows 10 or 11 or
 
 -   **Install .NET Core 8.0 or higher**: To find out whether you already have it, you can either open the following path. We recommend using version 8.0.302 at least, as it solves some bugs with the GUI.
 
-``` bash
+```
 C:\Program Files\dotnet\sdk
 ```
 
 or run the following command in the terminal (Win+R -\> `cmd`):
 
-``` bash
+```
 dotnet --version
 ```
 
@@ -61,7 +61,7 @@ This tutorial is focused on running MaxQuant using the command-line.
 
 -   **Install .NET Core 8.0** To find out whether you already have it, type in the command line
 
-``` bash
+```
 dotnet --version
 ```
 
@@ -73,7 +73,7 @@ Otherwise you need to follow the installation instructions at [.NET Core SDK 8.0
 
 Ubuntu 22.04 (for example)
 
-``` bash
+``` 
 wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 sudo apt-get update; \
@@ -89,7 +89,7 @@ An alternative installation method, which might work better, if no `sudo` rights
 Depending on your architecture, the user must choose between the x86 and the Arm installation scripts.
 Both can be downloaded from the [anaconda repository](https://repo.anaconda.com/miniconda/) using the `wget` command.
 
-``` bash
+```
 # Or use conda to install an environment
 ## get the installer 
 mkdir -p ~/miniconda3
@@ -109,7 +109,7 @@ Before one can use the `conda` environment in your shell, it must be initialized
 Another tip would be to install the mamba package, but **this is only optional** and is not needed, if you're using conda on a regular basis.
 (If you do, you probably already installed mamba 😀).
 
-``` bash
+```
 # initialize conda on bash 
 ~/miniconda3/bin/conda init bash
 ~/miniconda3/bin/conda init zsh
@@ -126,7 +126,7 @@ You can search [here](https://anaconda.org/search?q=dotnet) for possible version
 Before you can use the tool, you must activate the environment.
 Last check to see if the installation was successful, one can check for the available `dotnet` version.
 
-``` bash
+```
 #Now we create `dotnet` env
 # create the dotnet env
 mamba create -n dotnet8 conda-forge::dotnet=8.0.302
@@ -141,7 +141,7 @@ One can also follows Microsoft's instruction to install the (optional) latest ve
 
 A manual install has more options to choose from using the `dotnet-install` script from the [.NET page](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-install-script).
 
-``` bash
+```
 wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh
 chmod +x ./dotnet-install.sh
 ./dotnet-install.sh --channel 8.0
@@ -159,7 +159,7 @@ This version was needed due to a bug in Perseus.
 
 After downloading the script it needs to be made executable and can be run as such:
 
-``` bash
+```
 chmod -x Install_dotnet.sh
 sh Install_dotnet.sh INSTALLATION_PATH/
 ```
@@ -176,7 +176,7 @@ If you use on-the fly prediction use this command:
 
 If you use on-the-fly prediction use this command:
 
-``` bash
+```
 dotnet MaxQuant/bin/MaxQuantCmd.dll old_mqpar.xml --changeFolder new_mqpar.xml <new folder with fasta files> <new folder with raw files> 
 ```
 
@@ -186,19 +186,19 @@ If you use predicted libraries, you need to also add the path to the saved libra
 If you use predicted libraries, you also need to add the path to the saved libraries, so use this command:
 >>>>>>> Stashed changes
 
-``` bash
+```
 dotnet MaxQuant/bin/MaxQuantCmd.dll old_mqpar.xml --changeFolder new_mqpar.xml <new folder with fasta files> <new folder with raw files> <new folder with libraries> 
 ```
 
 However if you feel familiar with a structure of `mqpar.xml`, you may create a template of `mqpar.xml` and edit it directly.
 
-``` bash
+``` 
 dotnet MaxQuant/bin/MaxQuantCmd.dll --create new_mqpar.xml
 ```
 
 ## Run MaxQuant
 
-``` bash
+``` 
 dotnet MaxQuant/bin/MaxQuantCmd.dll mqpar.xml
 ```
 
