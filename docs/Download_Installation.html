@@ -297,9 +297,7 @@ window.Quarto = {
 <ul>
 <li><strong>Install .NET Core 8.0 or higher</strong>: To find out whether you already have it, you can either open the following path. We recommend using version 8.0.302 at least, as it solves some bugs with the GUI.</li>
 </ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">C:\Program</span> Files<span class="dt">\d</span>otnet<span class="dt">\s</span>dk</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">C:\Program</span> Files<span class="dt">\d</span>otnet<span class="dt">\s</span>dk</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>or run the following command in the terminal (Win+R -&gt; <code>cmd</code>):</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">dotnet</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>If you need to, you can download the software and get installation instructions e.g.&nbsp;<a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0">for .NET 8.0 here</a>.</p>
@@ -379,10 +377,8 @@ window.Quarto = {
 </ul>
 <p>We also added a script for an automated installation of the .NET which can also be downloaded <a href="Install_dotnet.sh">here</a>. Running the script will ask the user for a download location, where, for now, .NET version 8.0.302 will be installed. This version was needed due to a bug in Perseus.</p>
 <p>After downloading the script it needs to be made executable and can be run as such:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> <span class="at">-x</span> Install_dotnet.sh</span>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> <span class="at">-x</span> Install_dotnet.sh</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sh</span> Install_dotnet.sh INSTALLATION_PATH/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <p>This will download the .NET installation script from Microsoft and will install the tool at the given path. no <code>sudo</code> rights are needed.</p>
 </section>
 </section>

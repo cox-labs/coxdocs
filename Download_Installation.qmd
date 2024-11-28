@@ -32,7 +32,7 @@ Supported operation system versions (64-bit is required) are Windows 10 or 11 or
 
 -   **Install .NET Core 8.0 or higher**: To find out whether you already have it, you can either open the following path. We recommend using version 8.0.302 at least, as it solves some bugs with the GUI.
 
-```{bash}
+``` bash
 C:\Program Files\dotnet\sdk
 ```
 
@@ -159,7 +159,7 @@ This version was needed due to a bug in Perseus.
 
 After downloading the script it needs to be made executable and can be run as such:
 
-```{bash}
+``` bash
 chmod -x Install_dotnet.sh
 sh Install_dotnet.sh INSTALLATION_PATH/
 ```
