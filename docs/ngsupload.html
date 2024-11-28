@@ -22,40 +22,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -476,20 +442,19 @@ Figure&nbsp;9: Comparing HTSeq-counts against Perseus
 </figcaption>
 </figure>
 </div>
-<p><code>HTSeq-count</code> <span class="citation" data-cites="anders2014">(<a href="#ref-anders2014" role="doc-biblioref">Anders, Pyl, and Huber 2014</a>)</span> is part of the HTSeq suite, a python library to facilitate and represent data, such as genomic coordinates, sequences, sequencing reads, alignments, gene model information and variant calls. <code>htseq-count</code> can be used to pre-processes RNA-Seq data for differential expression analysis by counting the overlap of reads with genes. To recreate the plot, one can download the data table below <span class="citation" data-cites="downloadthis">(<a href="#ref-downloadthis" role="doc-biblioref">Mattioni Maturana 2022</a>)</span></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># remotes::install_github("fmmattioni/downloadthis")</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(downloadthis)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">download_file</span>(</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">path =</span> <span class="st">"htseqvsperseus.table.rar"</span>,</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">output_name =</span> <span class="st">"HTSeq vs. Persues Table"</span>,</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">button_label =</span> <span class="st">"Download data table"</span>,</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">button_type =</span> <span class="st">"info"</span>,</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">has_icon =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">icon =</span> <span class="st">"fa fa-save"</span>,</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">self_contained =</span> <span class="cn">FALSE</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<p><code>HTSeq-count</code> <span class="citation" data-cites="anders2014">(<a href="#ref-anders2014" role="doc-biblioref">Anders, Pyl, and Huber 2014</a>)</span> is part of the HTSeq suite, a python library to facilitate and represent data, such as genomic coordinates, sequences, sequencing reads, alignments, gene model information and variant calls. <code>htseq-count</code> can be used to pre-processes RNA-Seq data for differential expression analysis by counting the overlap of reads with genes. To recreate the plot, one can download the <a href="htseqvsperseus.table.rar">data table</a> below <span class="citation" data-cites="downloadthis">(<a href="#ref-downloadthis" role="doc-biblioref">Mattioni Maturana 2022</a>)</span></p>
+<pre><code>
+# remotes::install_github("fmmattioni/downloadthis")
+library(downloadthis)
+download_file(
+  path = "htseqvsperseus.table.rar",
+  output_name = "HTSeq vs. Persues Table",
+  button_label = "Download data table",
+  button_type = "info",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  self_contained = FALSE
+)</code></pre>
 <!-- ==== Parameters specific for "Chromatin IP" experiment ====
 The most popular way to deal with Chromatin IP experiment is sequence relatively small part of a read - enough for unique alignment - and already in silico extend such read until expected length.
 {{ :user:activities:matrixupload:chipseqextend.png?500 |}}
