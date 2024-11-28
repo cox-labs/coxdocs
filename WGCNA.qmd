@@ -31,18 +31,22 @@ This package is provided through the R-language integration into Perseus and the
   * Check that R is installed correctly by opening `cmd.exe` from the start menu and entering `R` An R session should start.
   * Inside the running R session, install the [WGCNA](https://cran.r-project.org/web/packages/WGCNA/index.html) and [PerseusR](https://github.com/jdrudolph/PerseusR) libraries by entering/pasting the following code **line-by-line**. 
   When prompted for local install, type ‘yes’ twice and select a close-by server for the package download. 
-```{r}
-# | eval: false
+  
+```
+
 install.packages("BiocManager")
 BiocManager::install(c("WGCNA", "devtools"))
 library(devtools)
 install_github('jdrudolph/PerseusR')
+
 ```
   * You should now be able to load the `WGCNA` and `PerseusR` libraries by entering the following code. Upon loading, `WGCNA` will print some output, while `PerseusR` will not print any.
-```{r}
-# | eval: false
+  
+```
+
 library(WGCNA)
 library(PerseusR)
+
 ```
 
 You are now ready to perform co-expression analysis from within Perseus.
