@@ -1,9 +1,9 @@
 ---
 title: "Download & Installation"
 author: "Cox Lab"
-execute: 
+execute:
   eval: false
-format: 
+format:
   html:
     toc: true
     toc-depth: 4
@@ -18,238 +18,169 @@ csl: nature.csl
 
 # Download
 
-Downloading and using the software is free of charge.
-
-Simply download from [here](https://maxquant.org/) and unpack the compressed file `MaxQuant.zip`.
+Downloading and using the software is free of charge.  
+Simply download from [MaxQuant.org](https://maxquant.org/) and unpack the compressed file `MaxQuant.zip`.
 
 # Running
 
-Please choose your operating system to view how to run MaxQuant.
+Choose your operating system to see how to run MaxQuant.
+
+**Supported Operating Systems (64-bit):**  
+
+- Windows 10  
+- Windows 11  
+- Windows Server 2016–2025
+- Ubuntu 20.04 or newer
 
 ## MaxQuant on Windows {#sec-mq-windows}
 
-Supported operation system versions (64-bit is required) are Windows 10 or 11 or Windows Server 2016, 2019, 2022.
+**Install .NET Desktop Runtime 8.0**
 
--   **Install .NET Core 8.0 or higher**: To find out whether you already have it, you can either open the following path. We recommend using version 8.0.302 at least, as it solves some bugs with the GUI.
+Check if it's already installed (Win+R -\> `cmd`):
 
-``` bash
-C:\Program Files\dotnet\sdk
+```bash
+dotnet --list-runtimes
 ```
 
-or run the following command in the terminal (Win+R -\> `cmd`):
+If you need to install or update .NET, follow the instructions provided by [Microsoft for .NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0).
 
-``` bash
-dotnet --version
-```
+MaxQuant requires .NET >= 8.0.302.
 
-If you need to, you can download the software and get installation instructions  e.g. [for .NET 8.0 here](https://dotnet.microsoft.com/en-us/download/dotnet/8.0).
+**Running MaxQuant**  
 
-~~.NET 3.1 and older versions are not supported anymore.~~
-
-MaxQuant now works with .NET \>= 8.0.302
-
--   **Run MaxQuant GUI** Double click on `MaxQuant.exe` in the `MaxQuant` folder and specify your RAW files, experimental design and fasta files.
-
--   **Start MaxQuant** Click on the `Start` button.
+- **GUI Mode:** Double-click `MaxQuant.exe` inside the `MaxQuant` folder. Specify your RAW files, experimental design, and FASTA files.  
+- **Start Analysis:** Click the `Start` button.
 
 ## MaxQuant on Linux
 
-We are supporting MaxQuant on Ubuntu 20.04 or higher, but MaxQuant should also work on other distributions of Linux.
-~~You may run MaxQuant using Graphical User Interface~~. MaxQuant on Linux doesn't support the use of a GUI at the moment. We're planning to make it available in future versions, [so stay tuned to our newletter](https://maxquant.org/newsletter/), where we'll inform our users about new updates.  
+MaxQuant is supported on Ubuntu 20.04 or newer, but it should also work on other distributions. Currently, MaxQuant on Linux does **not** have a GUI; only command-line usage is supported. A GUI may be offered in future releases. [Subscribe to our newsletter](https://maxquant.org/newsletter/) for updates.
 
-This tutorial is focused on running MaxQuant using the command-line.
+This tutorial focuses on command-line usage.
 
--   **Install .NET Core 8.0** To find out whether you already have it, type in the command line
+**Install .NET Runtime 8.0**
 
-``` bash
-dotnet --version
+Check if .NET 8.0 is installed:
+
+```bash
+dotnet --list-runtimes
 ```
 
-If you see at least version $8.0.302$, then everything is ready to start MaxQuant.
+If you see version `8.0.302` or newer, you're all set. Otherwise, follow the [official .NET installation instructions](https://learn.microsoft.com/en-us/dotnet/core/install/linux?WT.mc_id=dotnet-35129-website) for your distribution.
 
-Otherwise you need to follow the installation instructions at [.NET Core SDK 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) for your operating system.
+### Global Installation on Ubuntu (with `sudo` privileges)
 
-### Global installation on Ubuntu using `sudo` permissions
+For example, on Ubuntu 22.04:
 
-Ubuntu 22.04 (for example)
-
-``` bash
-wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-sudo dpkg -i packages-microsoft-prod.deb
-sudo apt-get update; \
-sudo apt-get install -y apt-transport-https && \
+```bash
 sudo apt-get update && \
-sudo apt-get install -y dotnet-sdk-8.0
+sudo apt-get install -y dotnet-runtime-8.0
 ```
 
-### local installation using the `conda` environment
+### Local Installation using `conda` (No `sudo` required)
 
-An alternative installation method, which might work better, if no `sudo` rights are available for the user would be to use the `conda` [@anaconda] environment.
+If you lack `sudo` privileges, you can install .NET via `conda` [@anaconda].
 
-Depending on your architecture, the user must choose between the x86 and the Arm installation scripts.
-Both can be downloaded from the [anaconda repository](https://repo.anaconda.com/miniconda/) using the `wget` command.
+1. **Download and Install Conda:**
+   ```bash
+   # Get the installer
+   mkdir -p ~/miniconda3
+   wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-$(arch).sh -O ~/miniconda3/miniconda.sh
 
-``` bash
-# Or use conda to install an environment
-## get the installer 
-mkdir -p ~/miniconda3
-# for 64x-bit 86x architecture
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
-# for 64-bit arm architecture
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh -O ~/miniconda3/miniconda.sh
+   # Install Conda
+   bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+   rm ~/miniconda3/miniconda.sh
+   ```
 
-### You'll only need one the above two scripts!!!
+2. **Initialize Conda in Your Shell:**
+   ```bash
+   ~/miniconda3/bin/conda init bash
+   source ~/.bashrc
+   ```
 
-# Install the conda base env
-bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
-rm -rf ~/miniconda3/miniconda.sh
-```
+3. **Create a Conda Environment with .NET:**
+   ```bash
+   conda create -y -n dotnet8 conda-forge::dotnet-runtime=8
+   conda activate dotnet8
+   ```
 
-Before one can use the `conda` environment in your shell, it must be initialized and the session restarted.
-Another tip would be to install the mamba package, but **this is only optional** and is not needed, if you're using conda on a regular basis.
-(If you do, you probably already installed mamba 😀).
+### Scripted Installation Using Microsoft Resources
 
-``` bash
-# initialize conda on bash 
-~/miniconda3/bin/conda init bash
-~/miniconda3/bin/conda init zsh
-# logging out and back in again
-conda install conda-forge::mamba
-mamba init 
-#Here again, one must log out and back in again for mamba to be active. 
-```
+You can also install .NET using the official Microsoft `dotnet-install` script:
 
-Now, using the `mamba`command one can create a new environment for `dotnet`.
-One can either choose a specific version for `dotnet` or by omitting the version number, the latest available version on the anaconda repository will be installed.
-You can search [here](https://anaconda.org/search?q=dotnet) for possible versions.
-
-Before you can use the tool, you must activate the environment.
-Last check to see if the installation was successful, one can check for the available `dotnet` version.
-
-``` bash
-#Now we create `dotnet` env
-# create the dotnet env
-mamba create -n dotnet8 conda-forge::dotnet=8.0.302
-mamba activate dotnet8
-#To test that we do have `dotnet`
-dotnet --version
-```
-
-### Scripted installation using Microsoft resources.
-
-One can also follows Microsoft's instruction to install the (optional) latest version of`.NET` by following the script [here](https://dotnet.microsoft.com/en-us/download/dotnet/8.0).
-
-A manual install has more options to choose from using the `dotnet-install` script from the [.NET page](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-install-script).
-
-``` bash
+```bash
 wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh
 chmod +x ./dotnet-install.sh
-./dotnet-install.sh --channel 8.0
+./dotnet-install.sh --channel 8.0 --runtime dotnet
 ```
 
-Possible important options here are:
+**Important options:**
 
--   `--channel` - use this to ask for a specific version and/or subversion
--   `--version` - install a specific version
--   `--install-dir` - use this to specify the path to the installation directory.
+- `--channel`: Specify a .NET channel or version (e.g., `8.0`).
+- `--version`: Install a specific version.
+- `--install-dir`: Specify the installation directory.
 
-We also added a script for an automated installation of the .NET which can also be downloaded [here](Install_dotnet.sh).
-Running the script will ask the user for a download location, where, for now, .NET version 8.0.302 will be installed.
-This version was needed due to a bug in Perseus.
+We also provide a helper script [Install_dotnet.sh](Install_dotnet.sh) for automated installation of .NET 8.0.302. This version was chosen due to a bug in Perseus requiring that version.
 
-After downloading the script it needs to be made executable and can be run as such:
+After downloading `Install_dotnet.sh`, make it executable and run it:
 
-``` bash
-chmod -x Install_dotnet.sh
+```bash
+chmod +x Install_dotnet.sh
 sh Install_dotnet.sh INSTALLATION_PATH/
 ```
 
-This will download the .NET installation script from Microsoft and will install the tool at the given path.
-no `sudo` rights are needed.
+This will install .NET at the specified path without requiring `sudo` privileges.
 
-## Edit mqpar.xml file
+## Editing the `mqpar.xml` File
 
-Currently we highly recommend to pre-configure the `mqpar.xml` file in MaxQuant GUI. After transferring the file on Linux machine, do not forget to update file addresses accordingly.
-You can also use a programmatic way to change that. 
+We recommend pre-configuring the `mqpar.xml` file using the MaxQuant GUI on Windows. After transferring it to a Linux machine, update the file paths accordingly. You can also update paths programmatically.
 
-If you use on-the fly prediction use this command: 
+- **If using on-the-fly prediction:**
+  ```bash
+  dotnet MaxQuant/bin/MaxQuantCmd.dll old_mqpar.xml --changeFolder new_mqpar.xml <new_fasta_folder> <new_raw_folder>
+  ```
 
-If you use on-the-fly prediction use this command:
+- **If using predicted libraries:**
+  ```bash
+  dotnet MaxQuant/bin/MaxQuantCmd.dll old_mqpar.xml --changeFolder new_mqpar.xml <new_fasta_folder> <new_raw_folder> <new_library_folder>
+  ```
 
-``` bash
-dotnet MaxQuant/bin/MaxQuantCmd.dll old_mqpar.xml --changeFolder new_mqpar.xml <new folder with fasta files> <new folder with raw files> 
-```
-
-<<<<<<< Updated upstream
-If you use predicted libraries, you need to also add the path to the saved libraries, so use this command:
-=======
-If you use predicted libraries, you also need to add the path to the saved libraries, so use this command:
->>>>>>> Stashed changes
-
-``` bash
-dotnet MaxQuant/bin/MaxQuantCmd.dll old_mqpar.xml --changeFolder new_mqpar.xml <new folder with fasta files> <new folder with raw files> <new folder with libraries> 
-```
-
-However if you feel familiar with a structure of `mqpar.xml`, you may create a template of `mqpar.xml` and edit it directly.
-
-``` bash
+If you are familiar with `mqpar.xml` structure, you can create and edit a template directly:
+```bash
 dotnet MaxQuant/bin/MaxQuantCmd.dll --create new_mqpar.xml
 ```
 
-## Run MaxQuant
+## Running MaxQuant
 
-``` bash
+Once everything is set up:
+```bash
 dotnet MaxQuant/bin/MaxQuantCmd.dll mqpar.xml
 ```
 
-# Hardware requirements
+# Hardware Requirements
 
--   4 GB RAM minimum.
--   4 GB RAM per thread that is executed in parallel is required.
--   There is no upper limit on the number of cores. Whatever you can fit into a shared memory machine will work as long as the disk performance scales up with it.
+### Minimum Entry-Level Configuration
+- x86_64 CPU
+- At least 8 GB of RAM
+- Add 4 GB of RAM for each additional MaxQuant processing thread
 
-Here we list some example hardware configurations that we are using in the lab and that we are quite happy with.
-These are mere examples and there is no reason to prefer specific vendors or brands.
+### Recommended Standard Configuration
+- Modern Intel Core or AMD Ryzen CPU
+- 64 GB RAM
+- 2 TB NVMe SSD (or larger)
 
-### Dell PowerEdge R820 (Intel)
+## Real-World Examples
 
--   4x Intel® Xeon® E5-4640 2.40GHz, 20M Cache, 8.0GT/s QPI, Turbo, 8C, 95W
--   128GB Memory for 4CPU (16x8GB RDIMM, 1600 MHz, Standard Volt, Dual Rank, x4)
--   PERC H710p integrated RAID Controller, 1GB NV Cache
--   6x 900GB, SAS 6Gbps, 2.5-in, 10K RPM Hard Drive (Hot Plug)
--   RAID-0
--   OS: Microsoft Windows Server 2012 Standard
+### Single-User Workstation
+- CPU: AMD Ryzen 9 9950X (16 cores)
+- Memory: 96 GB DDR5-6000 (2x 48 GB)
+- Storage: WD_BLACK SN850X NVMe SSD 4TB
 
-### Standard PC
+### Small Multi-User Server
+- CPU: AMD Epyc 9334 (32 cores)
+- Memory: 384 GB DDR5-4800 (12x 32 GB)
+- OS/Software Storage: Samsung PM9A3 NVMe SSD 1.92 TB (2x in HW-RAID1)
+- Temporary Data Storage: Solidigm D5-P5336 NVMe SSD 15.36TB (2x in SW-RAID1)
 
--   Processor: Intel® Core i7-2600 Processor (8M Cache,3.40 GHz)
--   OS: English original Windows® 7 Professional(64-Bit)
--   RAM: 16GB (4X4GB) 1333 MHz DDR3 Non-ECC 489916 1 \[370-20205\] 3
--   Primary Hard Drive: 256GB SSD Solid State Drive
--   Additional Hard Drive: 2TB (7.2k rpm) Serial ATA II with NCQ and 16MB Data Burst Cache
--   Graphics card: 512MB AMD Radeon HD 6350
--   USB 3.0: USB 3.0 PCI-Card
--   To improve the processing speed the SSD can also be used exclusively for MaxQuant
--   USB 3.0 convenient for fast file transfer, 500MByte/s (USB 2.0 = 60MByte/s)
--   Hard drives can of course be larger depending on the respective sizes of your projects and wallet.
+---
 
-### 'Monster' PC
-
--   Coolermaster HAF 922 Black Tower Case
--   2 x Front USB 2.0 and Audio ports
--   750W EPS12V Quiet power supply
--   Additional Red LED 200mm Case Fans
--   Asus Sabertooth P67 Intel i7 Skt1155ATX motherboard With 2 x 16x 2.0 PCI-Express slot, 3 x PCI-e x1 slot, SATAIII 4 x DDR3 memory slots, Audio, 10/100/1000 LAN, SATAII, & USB 3.0/USB 2.0 ports
--   Intel i7 2600K 3.4GHz Quad Core 8MB cache Skt1155 Unlocked processor
--   Corsair Vengeance 32GB (4 x 8GB) DDR3 1866MHz Quad Channel memory
--   Western Digital 500GB Caviar Black SATAIII disk drive
--   1GB Nvidia Geforce GT430 PCI-e x16 2.0 graphics card
--   Black DVD+/- R RW Dual Layer drive
--   LSI 9260-8i 8port SAS 6Gb/s PCI-Express RAID controller
--   Battery Backup for RAID controller
--   2 x Crucial 512MB Solid State Disks
--   Thanks to Peter McHardy for assembling this configuration
-
-------------------------------------------------------------------------
-
-For questions or problems with the installation we would love to hear from you under [Contact](contact.html).
+If you have questions or encounter problems with the installation, please [contact us](contact.html).
